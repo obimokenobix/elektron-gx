@@ -1,10 +1,13 @@
 # Baut Elektron GX auf einem echten Windows-Rechner von GitHub und veröffentlicht
-# Installer + Update-Dateien als Release, sobald ein Versions-Tag (z. B. v2.0.1) hochgeladen wird.
+# Installer + Update-Dateien als Release – automatisch, sobald in package.json
+# eine neue Versionsnummer steht (oder per Hand über "Run workflow").
 name: Release
 
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths: ['package.json']
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,23 +18,44 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Version lesen
+        id: ver
+        shell: bash
+        run: |
+          V=$(node -p "require('./package.json').version")
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          if gh release view "v$V" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - uses: actions/setup-node@v4
+        if: steps.ver.outputs.exists == 'false'
         with:
           node-version: 22
           cache: npm
 
       - name: Abhängigkeiten installieren
+        if: steps.ver.outputs.exists == 'false'
         run: npm ci
 
       - name: Windows-Installer bauen
+        if: steps.ver.outputs.exists == 'false'
         run: npx electron-builder --win --publish never
 
       - name: Release veröffentlichen
+        if: steps.ver.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
-          name: Elektron GX ${{ github.ref_name }}
+          tag_name: v${{ steps.ver.outputs.version }}
+          target_commitish: ${{ github.sha }}
+          name: Elektron GX ${{ steps.ver.outputs.version }}
+          make_latest: true
           body: |
-            **Installieren:** `Elektron-GX-Setup-….exe` herunterladen und starten.
+            **Installieren:** `Elektron-GX-Setup-${{ steps.ver.outputs.version }}.exe` herunterladen und starten.
             Windows SmartScreen fragt evtl. nach → „Weitere Informationen“ → „Trotzdem ausführen“.
 
             Bereits installierte Browser aktualisieren sich automatisch.
