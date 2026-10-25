@@ -265,7 +265,7 @@ function renderToolbar() {
   $('#forward').disabled = !n.canGoForward;
   $('#reload').classList.toggle('loading', !!n.loading);
   $('#reload').title = n.loading ? 'Laden abbrechen' : 'Neu laden (F5)';
-  if (document.activeElement !== address) address.value = n.url || '';
+  if (!(document.hasFocus() && document.activeElement === address)) address.value = n.url || '';
   $('#secure').classList.toggle('on', !!n.secure && !!n.url);
   const z = $('#zoom');
   z.classList.toggle('show', n.zoom && n.zoom !== 100);
@@ -290,11 +290,17 @@ function renderToolbar() {
   dl.querySelector('.prog').style.strokeDashoffset = d.progress != null ? String(100 - d.progress * 100) : '';
   dl.title = d.active ? `${d.active} Download${d.active > 1 ? 's' : ''} läuft – Strg+J` : 'Downloads (Strg+J)';
 
+  // Erweiterungen: Symbole für den aktiven Tab anzeigen
+  const acts = $('#ext-actions');
+  if (acts && n.wcId && !n.private) acts.setAttribute('tab', String(n.wcId));
+  if (acts) acts.style.display = n.private ? 'none' : '';
+
   // Update
   const u = state.update || {};
   $('#update-pill').hidden = u.state !== 'ready';
 }
 $('#dl-btn').addEventListener('click', () => gx.cmd('openInternal', 'downloads'));
+$('#ext-btn').addEventListener('click', () => gx.cmd('openInternal', 'extensions'));
 $('#update-pill').addEventListener('click', () => gx.cmd('updateInstall'));
 
 gx.on('focus-address', () => { address.focus(); address.select(); });

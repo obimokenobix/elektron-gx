@@ -26,7 +26,9 @@ Chromium-basierter Browser (Electron) mit Gaming-Funktionen im Stil von Opera GX
 - **Vorschläge in der Adressleiste** aus Lesezeichen, Verlauf und Google
 - **Suchen auf der Seite** (Strg+F), **Downloads-Übersicht** mit Fortschritt, **private Tabs**
 - **PDF-Anzeige** und **Rechtschreibprüfung** (Deutsch/Englisch)
-- **Automatische Updates** über einen Ordner auf deiner Webseite; als Standardbrowser auswählbar
+- **Chrome-Erweiterungen** aus dem Chrome Web Store (Symbole in der Leiste, Popups, Rechtsklick-Einträge, automatische Updates), Verwaltung unter `elektron://start/extensions.html`
+- **Claude und ChatGPT** in der Seitenleiste
+- **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
 ## Tastenkürzel
 
@@ -74,7 +76,7 @@ Neue Chromium-Sicherheitsupdates kommen durch eine neuere Electron-Version: `npm
 ## Grenzen
 
 - Netflix, Disney+ und andere DRM-Dienste funktionieren nicht (kein Widevine in Electron).
-- Keine Chrome-Erweiterungen aus dem Web Store.
+- Sehr umfangreiche Chrome-Erweiterungen (z. B. mit eigener Seitenleiste) laufen evtl. nur teilweise.
 - Die App ist nicht signiert – Windows SmartScreen fragt bei der Installation nach.
 - Kein Passwort-Manager und keine Synchronisierung zwischen Geräten.
 
@@ -82,6 +84,7 @@ Neue Chromium-Sicherheitsupdates kommen durch eine neuere Electron-Version: `npm
 
 - `main.js` – Hauptprozess: Fenster, Tabs, Limiter, Gaming-Modus, Werbeblocker, Updates
 - `store.js` – Lesezeichen, Verlauf, Downloads (JSON im Benutzerordner)
+- `extensions.js` – Chrome-Erweiterungen und Chrome Web Store
 - `installer.nsh` – Registrierung als Browser bei Windows
 - `preload-ui.js` – sichere Brücke zwischen Oberfläche und Hauptprozess
 - `preload-float.js`, `ui/float.*` – Leiste der schwebenden Fenster

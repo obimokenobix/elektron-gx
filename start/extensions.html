@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: crx:; style-src 'self'; script-src 'self'">
+  <title>Erweiterungen</title>
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="extensions.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="page">
+      <h1>Erweiterungen</h1>
+      <div class="spacer"></div>
+      <button class="btn primary" id="store" type="button">Chrome Web Store öffnen</button>
+    </header>
+    <div class="toolbar">
+      <button class="btn" id="update" type="button">Alle aktualisieren</button>
+      <button class="btn" id="unpacked" type="button">Entpackte Erweiterung laden …</button>
+    </div>
+    <p class="notice" id="notice" hidden></p>
+
+    <div class="group-title">Installiert</div>
+    <div class="ext-grid" id="installed"></div>
+
+    <div class="group-title">Beliebt</div>
+    <div class="ext-grid suggest" id="popular"></div>
+
+    <p class="hint">Erweiterungen kommen aus dem Chrome Web Store und funktionieren in Elektron GX wie in Chrome.
+      Einige sehr umfangreiche Erweiterungen nutzen Chrome-Funktionen, die es hier nicht gibt – sie laufen dann nur teilweise.
+      Claude und ChatGPT findest du außerdem direkt in der Seitenleiste links.</p>
+  </div>
+  <script src="internal.js"></script>
+  <script src="extensions.js"></script>
+</body>
+</html>

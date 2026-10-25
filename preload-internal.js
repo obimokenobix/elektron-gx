@@ -9,7 +9,7 @@ if (location.protocol === 'elektron:') {
   contextBridge.exposeInMainWorld('elektron', {
     invoke: (name, ...args) => ipcRenderer.invoke('internal', name, ...args),
     on: (channel, fn) => {
-      if (!['downloads-changed', 'bookmarks-changed', 'history-changed'].includes(channel)) return;
+      if (!['downloads-changed', 'bookmarks-changed', 'history-changed', 'extensions-changed'].includes(channel)) return;
       ipcRenderer.on('internal:' + channel, (_e, data) => fn(data));
     }
   });

@@ -6,7 +6,7 @@ process.on('uncaughtException', (e) => { console.error('UNCAUGHT', e && e.stack 
  * Gaming-Modus, Werbeblocker, Downloads, Berechtigungen.
  */
 const {
-  app, BaseWindow, WebContentsView, ipcMain, session, Menu, dialog,
+  app, BaseWindow, WebContentsView, ipcMain, session, Menu, MenuItem, dialog,
   protocol, shell, clipboard, net
 } = require('electron');
 const path = require('path');
@@ -14,6 +14,7 @@ const fs = require('fs');
 const os = require('os');
 const { pathToFileURL } = require('url');
 const { createStore } = require('./store');
+const extmod = require('./extensions');
 
 const APP_NAME = 'Elektron GX';
 const PARTITION = 'persist:elektron';
@@ -32,6 +33,8 @@ const RAIL_W = 52;
 const PANEL_W = 380;
 
 const WEB_PANELS = {
+  claude: 'https://claude.ai/new',
+  chatgpt: 'https://chatgpt.com/',
   discord: 'https://discord.com/app',
   twitch: 'https://www.twitch.tv/',
   youtube: 'https://www.youtube.com/',
@@ -132,6 +135,8 @@ let stats = { ram: 0, cpu: 0 };
 let cpuOver = 0;
 let quitting = false;
 let downloadSeq = 1;
+let markWindowReady;
+const windowReady = new Promise(r => { markWindowReady = r; });
 let split = null;              // { a, b, ratio, geo } – zwei Tabs nebeneinander
 let splitDragging = false;
 const floatsByBar = new Map(); // webContents-ID der Fensterleiste -> schwebendes Fenster
@@ -209,6 +214,7 @@ function snapshot() {
       secure: a.url.startsWith('https:') || a.url.startsWith('elektron:'),
       zoom: wc ? Math.round(Math.pow(1.2, wc.getZoomLevel()) * 100) : 100,
       private: !!a.private,
+      wcId: wc ? wc.id : null,
       bookmarked: /^(https?|file):/i.test(a.url) && !!store.findBookmark(a.url),
       canBookmark: /^(https?|file):/i.test(a.url)
     } : null,
@@ -343,6 +349,7 @@ function spawnView(tab) {
   tab.frozen = false;
   tab.crashed = false;
   wireWebContents(view.webContents, tab);
+  if (!tab.private) extmod.addTab(view.webContents);
   applyNetLimit(view.webContents);
   return view;
 }
@@ -397,6 +404,7 @@ function activateTab(id) {
   }
   layout();
   if (tab.frozen) setFrozen(tab, false);
+  if (tab.view && !tab.private) extmod.selectTab(tab.view.webContents);
   if (tab.url.startsWith(HOME) && !tab.url.startsWith('elektron://start/error')) focusAddress();
   else if (tab.view) tab.view.webContents.focus();
   pushState();
@@ -730,7 +738,7 @@ function wireWebContents(wc, tab) {
         }
       };
     }
-    if (/^(https?|elektron):/i.test(url)) createTab(url, { activate: disposition !== 'background-tab' });
+    if (/^(https?|elektron|chrome-extension):/i.test(url)) createTab(url, { activate: disposition !== 'background-tab', private: !!(tab && tab.private) });
     return { action: 'deny' };
   });
 
@@ -859,7 +867,14 @@ function showContextMenu(wc, p, tab) {
   if (!tab) {
     t.push({ type: 'separator' }, { label: 'Panel schließen', click: () => togglePanel(panel) });
   }
-  Menu.buildFromTemplate(t).popup({ window: win });
+  const menu = Menu.buildFromTemplate(t);
+  // Einträge von Erweiterungen (z. B. "Mit … übersetzen") oben einfügen
+  const extItems = tab && !tab.private ? extmod.contextMenuItems(wc, p) : [];
+  if (extItems.length) {
+    menu.insert(0, new MenuItem({ type: 'separator' }));
+    for (let i = extItems.length - 1; i >= 0; i--) menu.insert(0, extItems[i]);
+  }
+  menu.popup({ window: win });
 }
 
 // ------------------------------------------------------------------ Tastenkürzel
@@ -1211,6 +1226,8 @@ function showMainMenu() {
     { label: settings.showBookmarkBar ? 'Lesezeichenleiste ausblenden' : 'Lesezeichenleiste anzeigen', accelerator: 'CmdOrCtrl+Shift+B', click: () => setSetting('showBookmarkBar', !settings.showBookmarkBar) },
     { label: 'Verlauf', accelerator: 'CmdOrCtrl+H', click: () => openInternal('history') },
     { label: 'Downloads', accelerator: 'CmdOrCtrl+J', click: () => openInternal('downloads') },
+    { label: 'Erweiterungen', click: () => openInternal('extensions') },
+    { label: 'Chrome Web Store', click: () => extmod.openStore('') },
     { label: 'Auf der Seite suchen …', accelerator: 'CmdOrCtrl+F', enabled: !!wc, click: openFind },
     { label: 'Seite drucken …', enabled: !!wc, click: () => wc && wc.print() },
     { label: 'Entwicklertools', accelerator: 'F12', enabled: !!wc, click: () => wc && wc.toggleDevTools() },
@@ -1293,7 +1310,7 @@ ipcMain.on('ui:cmd', (e, name, ...args) => {
       if (d) shell.showItemInFolder(d.path);
       break;
     }
-    case 'openInternal': if (['bookmarks', 'history', 'downloads'].includes(args[0])) openInternal(args[0]); break;
+    case 'openInternal': if (['bookmarks', 'history', 'downloads', 'extensions'].includes(args[0])) openInternal(args[0]); break;
     case 'privateTab': createTab(HOME, { private: true }); break;
     case 'bmToggle': toggleBookmark(); break;
     case 'bmOpen': openBookmark(String(args[0]), args[1]); break;
@@ -1556,6 +1573,12 @@ function importBookmarks(src) {
   }
 }
 
+// ------------------------------------------------------------------ Erweiterungen
+function extensionsChanged() {
+  pushState();
+  for (const wc of internalPages('elektron://start/extensions')) wc.send('internal:extensions-changed');
+}
+
 // ------------------------------------------------------------------ Eigene Seiten
 function openInternal(page) {
   const url = `elektron://start/${page}.html`;
@@ -1594,6 +1617,12 @@ ipcMain.handle('internal', async (e, name, ...args) => {
     case 'downloads.remove': store.removeDownload(String(args[0])); broadcastDownloads(); return true;
     case 'downloads.clear': store.clearDownloads(); broadcastDownloads(); return true;
     case 'downloads.folder': shell.openPath(app.getPath('downloads')); return true;
+    case 'ext.list': return extmod.list();
+    case 'ext.remove': return extmod.remove(String(args[0]));
+    case 'ext.loadUnpacked': return extmod.loadUnpacked();
+    case 'ext.update': await extmod.updateAll(); return true;
+    case 'ext.store': extmod.openStore(args[0] ? String(args[0]) : ''); return true;
+    case 'ext.options': if (/^chrome-extension:\/\//.test(String(args[0]))) createTab(String(args[0])); return true;
   }
   throw new Error('unbekannt: ' + name);
 });
@@ -1809,7 +1838,8 @@ function createWindow() {
   uiView = new WebContentsView({
     webPreferences: {
       preload: path.join(__dirname, 'preload-ui.js'),
-      contextIsolation: true, sandbox: true, nodeIntegration: false
+      // eigene, lokale Oberfläche: ohne Sandbox, damit die Erweiterungs-Leiste geladen werden kann
+      contextIsolation: true, sandbox: false, nodeIntegration: false
     }
   });
   uiView.setBackgroundColor('#0b0b0f');
@@ -1868,10 +1898,23 @@ app.on('second-instance', (e, argv) => {
   createTab(parseLaunchArg(argv) || HOME);
 });
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
   Menu.setApplicationMenu(null);
   setupSession();
+  try {
+    await extmod.init({
+      session: mainSes,
+      win: () => win,
+      createTab: async (url, active) => { await windowReady; return createTab(url || HOME, { activate: active }); },
+      activateByWc: (wc) => { const t = tabs.find(x => x.view && x.view.webContents === wc); if (t) activateTab(t.id); },
+      closeByWc: (wc) => { const t = tabs.find(x => x.view && x.view.webContents === wc); if (t) closeTab(t.id); },
+      tabInfo: (wc) => tabs.find(x => x.view && x.view.webContents === wc) || null,
+      toast: (text) => toast(text),
+      changed: () => extensionsChanged()
+    });
+  } catch (e) { console.warn('Erweiterungen:', e.message); }
   createWindow();
+  markWindowReady();
   initAdblock();
   setupUpdater();
   setInterval(tick, 1000);
@@ -1923,6 +1966,28 @@ app.whenReady().then(() => {
         fs.writeFileSync(f, Buffer.alloc(3 * 1024 * 1024, 7));
         mainSes.downloadURL(pathToFileURL(f).toString());
         setTimeout(() => { console.log('DLTEST', JSON.stringify(store.downloads().slice(0, 1))); openInternal('downloads'); }, 2500);
+      }
+      if (process.env.ELEKTRON_TEST === 'ext') {
+        mainSes.extensions.loadExtension(process.env.ELEKTRON_TESTEXT).then(async (e) => {
+          console.log('EXT loaded', e.id, e.name);
+          openInternal('extensions');
+          setTimeout(async () => {
+            const srv = require('http').createServer((q, r) => { r.setHeader('content-type', 'text/html; charset=utf-8'); r.end('<!doctype html><title>Testseite</title><body style="font:20px sans-serif;padding:40px">Testseite für Erweiterungen</body>'); }).listen(0, '127.0.0.1');
+            await new Promise(r => srv.once('listening', r));
+            const t = createTab('http://127.0.0.1:' + srv.address().port + '/', { activate: true });
+            setTimeout(async () => {
+              const v = await t.view.webContents.executeJavaScript("document.documentElement.getAttribute('data-test-ext')").catch(e => 'ERR ' + e.message);
+              console.log('CONTENT-SCRIPT', v);
+              const r = await uiView.webContents.executeJavaScript("(() => { const l = document.getElementById('ext-actions'); const b = l && l.shadowRoot && l.shadowRoot.querySelector('.action'); return JSON.stringify({ list: !!l, actions: l && l.shadowRoot ? l.shadowRoot.querySelectorAll('.action').length : -1 }); })()");
+              console.log('ACTIONS', r);
+              await uiView.webContents.executeJavaScript("document.getElementById('ext-actions').shadowRoot.querySelector('.action').click()");
+              setTimeout(() => showContextMenu(t.view.webContents, { x: 300, y: 300, editFlags: {}, mediaType: 'none', selectionText: '', linkURL: '', isEditable: false, pageURL: t.url, frameURL: '' }, t), 2500);
+            }, 2000);
+          }, 1500);
+        }).catch(e => console.log('EXT error', e.message));
+      }
+      if (process.env.ELEKTRON_TEST === 'extpage') {
+        mainSes.extensions.loadExtension(process.env.ELEKTRON_TESTEXT).then(() => openInternal('extensions')).catch(() => {});
       }
       if (process.env.ELEKTRON_TEST === 'privacy') {
         togglePanel('gx');

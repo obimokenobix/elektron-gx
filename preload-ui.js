@@ -11,3 +11,10 @@ contextBridge.exposeInMainWorld('gx', {
   },
   platform: process.platform
 });
+
+// Leiste mit den Symbolen der installierten Erweiterungen (<browser-action-list>)
+try {
+  require('electron-chrome-extensions/browser-action').injectBrowserAction();
+} catch (e) {
+  console.warn('Erweiterungs-Leiste nicht verfügbar:', e.message);
+}
