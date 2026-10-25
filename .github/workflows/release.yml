@@ -1,0 +1,41 @@
+# Baut Elektron GX auf einem echten Windows-Rechner von GitHub und veröffentlicht
+# Installer + Update-Dateien als Release, sobald ein Versions-Tag (z. B. v2.0.1) hochgeladen wird.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Abhängigkeiten installieren
+        run: npm ci
+
+      - name: Windows-Installer bauen
+        run: npx electron-builder --win --publish never
+
+      - name: Release veröffentlichen
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Elektron GX ${{ github.ref_name }}
+          body: |
+            **Installieren:** `Elektron-GX-Setup-….exe` herunterladen und starten.
+            Windows SmartScreen fragt evtl. nach → „Weitere Informationen“ → „Trotzdem ausführen“.
+
+            Bereits installierte Browser aktualisieren sich automatisch.
+          files: |
+            dist/*.exe
+            dist/*.blockmap
+            dist/latest.yml

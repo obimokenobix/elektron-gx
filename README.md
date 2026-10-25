@@ -63,10 +63,10 @@ npm run dist:win     # Windows-Installer in dist\ erzeugen
 
 ## Updates veröffentlichen
 
-1. In `package.json` die Versionsnummer erhöhen (z. B. 2.0.0 → 2.0.1) und `npm run dist:win` ausführen.
-2. Auf GitHub ein neues Release anlegen (Tag z. B. `v2.0.1`) und aus `dist\` diese drei Dateien anhängen:
-   `latest.yml`, `Elektron-GX-Setup-<version>.exe`, `Elektron-GX-Setup-<version>.exe.blockmap`
-3. Fertig – installierte Browser finden das Update innerhalb von 4 Stunden (oder sofort über „Nach Updates suchen“).
+1. In `package.json` die Versionsnummer erhöhen (z. B. 2.0.0 → 2.0.1) und committen.
+2. Einen passenden Tag hochladen: `git tag v2.0.1 && git push origin v2.0.1`
+3. GitHub baut den Installer automatisch auf Windows (`.github/workflows/release.yml`) und veröffentlicht ihn als Release.
+4. Fertig – installierte Browser finden das Update innerhalb von 4 Stunden (oder sofort über „Nach Updates suchen“).
 
 Die Update-Adresse (`releases/latest/download/`) steht in `update.json` und lässt sich in GX Control → Updates ändern.
 Die Webseite liegt im Ordner `docs/` und wird über GitHub Pages veröffentlicht: https://obimokenobix.github.io/elektron-gx/
