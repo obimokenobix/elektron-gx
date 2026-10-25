@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data:; style-src 'self'; script-src 'self'; form-action https://www.google.com">
+  <title>Neuer Tab</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="start.css">
+</head>
+<body>
+  <div class="glow"></div>
+  <main>
+    <header class="top">
+      <div class="clock"><span id="time">--:--</span><small id="date"></small></div>
+    </header>
+
+    <section class="hero">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/><path class="e" d="M29 25h31v10H39v10h19v10H39v10h21v10H29z"/><path class="b" d="M72 24L61 50h8l-6 26 16-32h-8l6-20z"/></svg>
+      </div>
+      <h1>Elektron <span>GX</span></h1>
+      <p id="greeting">Bereit zum Zocken?</p>
+      <form class="search" action="https://www.google.com/search" method="get" autocomplete="off">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input name="q" id="q" placeholder="Mit Google suchen" autofocus>
+        <kbd>Enter</kbd>
+      </form>
+    </section>
+
+    <section class="dials-wrap">
+      <div class="dials-head">
+        <h2>Schnellzugriff</h2>
+        <button id="edit" type="button">Bearbeiten</button>
+      </div>
+      <div id="dials"></div>
+      <form id="add" hidden autocomplete="off">
+        <input id="add-name" placeholder="Name" maxlength="24" required>
+        <input id="add-url" placeholder="Adresse, z. B. roblox.com" required>
+        <button type="submit">Hinzufügen</button>
+        <button type="button" id="reset">Standard wiederherstellen</button>
+      </form>
+    </section>
+  </main>
+  <footer>Strg+Umschalt+G startet den Gaming-Modus · Strg+T neuer Tab · F11 Vollbild</footer>
+  <script src="start.js"></script>
+</body>
+</html>

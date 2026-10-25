@@ -1,0 +1,25 @@
+ELEKTRON GX 2.0 – DER GAMING-BROWSER
+====================================
+
+INSTALLIEREN
+1. "Elektron-GX-Setup-2.0.0.exe" doppelklicken.
+2. Windows SmartScreen meldet evtl. "Der Computer wurde durch Windows geschützt"
+   -> "Weitere Informationen" -> "Trotzdem ausführen" (die App ist nicht signiert).
+3. Installationsordner wählen -> Fertig. Verknüpfung liegt auf dem Desktop.
+
+ALS STANDARDBROWSER
+Menü (⋮) -> "Als Standardbrowser festlegen …" -> in Windows "Elektron GX" wählen.
+
+WICHTIGE TASTEN
+Strg+T neuer Tab · Strg+Umschalt+N privater Tab · Strg+D Lesezeichen
+Strg+H Verlauf · Strg+J Downloads · Strg+F auf der Seite suchen
+Strg+Umschalt+G Gaming-Modus · Strg+Umschalt+S Split-Screen
+Strg+Umschalt+F schwebendes Fenster · Strg+Umschalt+P Video ausklappen
+
+UPDATES
+GX Control -> Updates: Adresse deines Update-Ordners eintragen.
+Neue Versionen werden dann automatisch geladen und beim nächsten Start installiert.
+
+HINWEISE
+- Netflix/Disney+ laufen nicht (kein DRM-Modul). Dafür Edge oder Chrome nehmen.
+- Deine Daten liegen in %APPDATA%\Elektron GX

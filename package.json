@@ -1,0 +1,88 @@
+{
+  "name": "elektron-gx",
+  "productName": "Elektron GX",
+  "version": "2.0.0",
+  "description": "Elektron GX – der Gaming-Browser",
+  "main": "main.js",
+  "author": "Elektron",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "@ghostery/adblocker-electron": "^2.20.1",
+    "electron-updater": "^6.8.11"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "resedit": "^3.1.0"
+  },
+  "build": {
+    "appId": "at.elektron.gx",
+    "productName": "Elektron GX",
+    "copyright": "© 2026 Elektron",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "store.js",
+      "preload-ui.js",
+      "preload-float.js",
+      "preload-internal.js",
+      "preload-suggest.js",
+      "update.json",
+      "ui/**",
+      "start/**",
+      "assets/**",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "electronLanguages": [
+      "de",
+      "en-US"
+    ],
+    "compression": "maximum",
+    "afterPack": "scripts/after-pack.js",
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Elektron GX",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "artifactName": "Elektron-GX-Setup-${version}.exe",
+      "deleteAppDataOnUninstall": false,
+      "include": "installer.nsh",
+      "runAfterFinish": true
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://github.com/obimokenobix/elektron-gx/releases/latest/download/"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/obimokenobix/elektron-gx.git"
+  },
+  "homepage": "https://obimokenobix.github.io/elektron-gx/"
+}

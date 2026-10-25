@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data:; style-src 'self'; script-src 'self'">
+  <title>Lesezeichen</title>
+  <link rel="stylesheet" href="internal.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="page">
+      <h1>Lesezeichen</h1>
+      <div class="spacer"></div>
+      <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" placeholder="Lesezeichen durchsuchen"></label>
+    </header>
+    <div class="toolbar">
+      <button class="btn" id="imp-edge" type="button">Aus Edge importieren</button>
+      <button class="btn" id="imp-chrome" type="button">Aus Chrome importieren</button>
+      <button class="btn" id="imp-opera" type="button">Aus Opera GX importieren</button>
+    </div>
+    <p class="notice" id="notice" hidden></p>
+    <div class="list" id="list"></div>
+  </div>
+  <script src="internal.js"></script>
+  <script src="bookmarks.js"></script>
+</body>
+</html>

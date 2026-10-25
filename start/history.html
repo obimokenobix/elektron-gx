@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data:; style-src 'self'; script-src 'self'">
+  <title>Verlauf</title>
+  <link rel="stylesheet" href="internal.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="page">
+      <h1>Verlauf</h1>
+      <div class="spacer"></div>
+      <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" placeholder="Verlauf durchsuchen" autofocus></label>
+    </header>
+    <div class="toolbar">
+      <button class="btn danger" data-clear="3600000" type="button">Letzte Stunde löschen</button>
+      <button class="btn danger" data-clear="86400000" type="button">Letzte 24 Stunden löschen</button>
+      <button class="btn danger" data-clear="0" type="button">Gesamten Verlauf löschen</button>
+    </div>
+    <div id="out"></div>
+  </div>
+  <script src="internal.js"></script>
+  <script src="history.js"></script>
+</body>
+</html>

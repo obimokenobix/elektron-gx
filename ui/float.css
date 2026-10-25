@@ -1,0 +1,21 @@
+:root { --accent: #ff2b4e; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0b0f; color: #ececf2;
+  font: 12px/1 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; user-select: none; }
+.bar {
+  height: 30px; display: flex; align-items: center; gap: 4px; padding: 0 4px 0 8px;
+  border-top: 2px solid var(--accent); -webkit-app-region: drag;
+}
+.fav { width: 16px; height: 16px; flex: none; display: grid; place-items: center; }
+.fav img { width: 14px; height: 14px; border-radius: 3px; }
+#title { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #c9c9d4; }
+button, .opacity { -webkit-app-region: no-drag; }
+button { width: 24px; height: 22px; border: 0; border-radius: 6px; background: none; color: #9a9aab; display: grid; place-items: center; cursor: pointer; }
+button:hover { background: #24242e; color: #fff; }
+button.on { color: var(--accent); }
+button.danger:hover { background: #c42b3c; color: #fff; }
+svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.opacity { display: flex; align-items: center; gap: 4px; color: #9a9aab; padding: 0 4px; }
+.opacity input { width: 64px; height: 3px; -webkit-appearance: none; appearance: none; background: #2a2a35; border-radius: 3px; outline: 0; }
+.opacity input::-webkit-slider-thumb { -webkit-appearance: none; width: 11px; height: 11px; border-radius: 50%; background: #fff; border: 2px solid var(--accent); }
+@media (max-width: 330px) { .opacity, #pip { display: none; } }

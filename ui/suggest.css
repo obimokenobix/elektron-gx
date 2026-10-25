@@ -1,0 +1,21 @@
+:root { --accent: #ff2b4e; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent;
+  font: 13px/1.3 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; color: #ececf2; user-select: none; }
+#list {
+  list-style: none; margin: 0; padding: 4px; height: 100%;
+  background: #15151c; border: 1px solid #2f2f3b; border-radius: 0 0 12px 12px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .5);
+}
+li { display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: 8px; cursor: pointer; }
+li.sel { background: color-mix(in srgb, var(--accent) 20%, transparent); }
+li .ic { width: 18px; height: 18px; flex: none; display: grid; place-items: center; color: #8a8a9b; }
+li .ic img { width: 16px; height: 16px; border-radius: 3px; }
+li .ic svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+li .ic.star svg { fill: var(--accent); stroke: var(--accent); }
+li .t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+li .t b { font-weight: 600; }
+li .u { color: #7d7d90; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; font-size: 12px; }
+li .u::before { content: "– "; }
+li .u:empty { display: none; }
+li .main { display: flex; align-items: baseline; gap: 6px; min-width: 0; flex: 1; }
