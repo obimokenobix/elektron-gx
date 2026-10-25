@@ -1232,6 +1232,10 @@ function showMainMenu() {
     { label: 'Seite drucken …', enabled: !!wc, click: () => wc && wc.print() },
     { label: 'Entwicklertools', accelerator: 'F12', enabled: !!wc, click: () => wc && wc.toggleDevTools() },
     { type: 'separator' },
+    { label: 'Elektron GX weiterempfehlen', click: () => {
+      clipboard.writeText('https://obimokenobix.github.io/elektron-gx/');
+      toast('Link kopiert – schick ihn an deine Freunde!');
+    } },
     { label: 'Browserdaten löschen', click: clearBrowsingData },
     { label: 'Nach Updates suchen', click: () => { if (panel !== 'gx') togglePanel('gx'); checkUpdates(true); } },
     ...(process.platform === 'win32' ? [{ label: 'Als Standardbrowser festlegen …', click: () => shell.openExternal('ms-settings:defaultapps?registeredAppUser=Elektron%20GX') }] : []),

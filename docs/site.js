@@ -25,3 +25,18 @@ document.querySelectorAll('.tabs button').forEach((b) => {
     document.getElementById('dl-meta2').textContent = meta;
   } catch { /* Fallback: Link auf die Release-Seite bleibt */ }
 })();
+
+// Link kopieren (auf dem Handy: das normale Teilen-Menü)
+document.getElementById('copy-link').addEventListener('click', async (e) => {
+  const url = 'https://obimokenobix.github.io/elektron-gx/';
+  try {
+    if (navigator.share && /Android|iPhone|iPad/i.test(navigator.userAgent)) {
+      await navigator.share({ title: 'Elektron GX', text: 'Der kostenlose Gaming-Browser für Windows', url });
+      return;
+    }
+    await navigator.clipboard.writeText(url);
+    e.target.textContent = 'Kopiert!';
+    e.target.classList.add('done');
+    setTimeout(() => { e.target.textContent = 'Link kopieren'; e.target.classList.remove('done'); }, 2000);
+  } catch { /* abgebrochen */ }
+});

@@ -1,6 +1,14 @@
 # Elektron GX – der Gaming-Browser
 
-Chromium-basierter Browser (Electron) mit Gaming-Funktionen im Stil von Opera GX.
+![Elektron GX](docs/img/og.png)
+
+**Kostenloser Browser für PC-Gamer auf Chromium-Basis.** Gaming-Modus, RAM-/CPU-/Netzwerk-Limiter, Split-Screen, schwebende Fenster, Werbeblocker inkl. YouTube, Chrome-Erweiterungen, Claude & ChatGPT in der Seitenleiste.
+
+**[⬇ Download für Windows](https://obimokenobix.github.io/elektron-gx/)** · [Alle Versionen](https://github.com/obimokenobix/elektron-gx/releases)
+
+| Split-Screen | Schwebendes Fenster |
+| --- | --- |
+| ![Split-Screen](docs/img/split.webp) | ![Schwebendes Fenster](docs/img/float.webp) |
 
 ## Funktionen
 
