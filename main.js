@@ -2371,10 +2371,13 @@ app.whenReady().then(async () => {
   await Promise.race([extReady, new Promise(r => setTimeout(r, 1500))]);
   // Starttest für die automatische Veröffentlichung: läuft der Browser wirklich?
   if (process.env.ELEKTRON_SMOKE) {
-    setTimeout(() => {
+    setTimeout(async () => {
       const t = activeTab();
+      // Wurde die Oberfläche wirklich gezeichnet? (Tabs vorhanden und sichtbar)
+      let uiOk = false;
+      try { uiOk = await uiView.webContents.executeJavaScript("(() => { const e = document.querySelector('#tabs .tab'); return !!e && e.getBoundingClientRect().width > 20 && getComputedStyle(document.body).display !== 'none'; })()"); } catch {}
       const res = {
-        ok: !!(win && uiView && !uiView.webContents.isDestroyed() && /index\.html$/.test(uiView.webContents.getURL()) && t && t.view),
+        ok: !!(uiOk && win && t && t.view), uiOk,
         tab: t && t.view ? t.view.webContents.getURL() : null,
         chrome: process.versions.chrome, app: app.getVersion(), packaged: app.isPackaged
       };

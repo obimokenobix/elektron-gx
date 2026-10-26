@@ -8,7 +8,7 @@ const EXPECT = {
   EnableNodeCliInspectArguments: false,
   EnableEmbeddedAsarIntegrityValidation: true,
   OnlyLoadAppFromAsar: true,
-  GrantFileProtocolExtraPrivileges: false
+  GrantFileProtocolExtraPrivileges: true // die Browser-Oberfläche wird als Datei geladen
 };
 getCurrentFuseWire(process.argv[2]).then((wire) => {
   let bad = 0;
