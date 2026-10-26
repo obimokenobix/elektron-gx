@@ -1932,7 +1932,7 @@ app.whenReady().then(async () => {
       if (process.env.ELEKTRON_TEST === 'gx') togglePanel('gx');
       if (process.env.ELEKTRON_TEST === 'gaming') { togglePanel('gx'); setGamingMode(true); }
       if (process.env.ELEKTRON_TEST === 'split') { startSplit(tabs[tabs.length - 2].id); setSplitRatio(0.55); }
-      if (process.env.ELEKTRON_TEST === 'float') { startSplit(tabs[tabs.length - 2].id); floatTab(tabs[1].id); }
+      if (process.env.ELEKTRON_TEST === 'float') { startSplit(tabs[tabs.length - 2].id); const ft = createTab(HOME, { activate: false }); setTimeout(() => floatTab(ft.id), 800); }
       if (process.env.ELEKTRON_TEST === 'v2' || process.env.ELEKTRON_TEST === 'v2b') {
         for (const [u, t] of [['https://store.steampowered.com/', 'Steam'], ['https://www.twitch.tv/', 'Twitch'],
           ['https://www.youtube.com/', 'YouTube'], ['https://play.geforcenow.com/', 'GeForce NOW'],
@@ -1991,7 +1991,7 @@ app.whenReady().then(async () => {
         }).catch(e => console.log('EXT error', e.message));
       }
       if (process.env.ELEKTRON_TEST === 'extpage') {
-        mainSes.extensions.loadExtension(process.env.ELEKTRON_TESTEXT).then(() => openInternal('extensions')).catch(() => {});
+        mainSes.extensions.loadExtension(process.env.ELEKTRON_TESTEXT).catch(() => {}).finally(() => openInternal('extensions'));
       }
       if (process.env.ELEKTRON_TEST === 'privacy') {
         togglePanel('gx');
