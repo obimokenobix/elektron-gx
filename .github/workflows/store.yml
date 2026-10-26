@@ -6,6 +6,9 @@ name: Microsoft Store
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   appx:
     runs-on: windows-latest
@@ -22,3 +25,17 @@ jobs:
         with:
           name: Elektron-GX-Microsoft-Store
           path: dist/*.appx
+      - name: Version lesen
+        id: ver
+        shell: bash
+        run: echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+      # Zusätzlich als Vorab-Release ablegen, damit das Paket mit einem einfachen Link herunterladbar ist
+      # (Vorab-Releases zählen nicht als "neueste Version" – die Update-Funktion bleibt unberührt)
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: store-${{ steps.ver.outputs.version }}
+          name: Microsoft-Store-Paket ${{ steps.ver.outputs.version }}
+          body: Nur zum Hochladen im Microsoft Partner Center – nicht zum direkten Installieren. Den normalen Installer gibt es unter "Latest".
+          prerelease: true
+          target_commitish: ${{ github.sha }}
+          files: dist/*.appx
