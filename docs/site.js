@@ -1,7 +1,7 @@
 'use strict';
 // Bildergalerie
 const shot = document.getElementById('shot');
-const labels = { split: 'Split-Screen', float: 'Schwebendes Fenster', v2b: 'Adressleiste mit Vorschlägen und Verlauf', gaming: 'GX Control mit Gaming-Modus' };
+const labels = { split: 'Split-Screen', float: 'Schwebendes Fenster', v2b: 'Adressleiste mit Vorschlägen und Verlauf', gaming: 'GX Control mit Gaming-Modus', start: 'Startseite mit Steam-Spielen', design: 'Design-Einstellungen', reader: 'Lesemodus' };
 document.querySelectorAll('.tabs button').forEach((b) => {
   b.addEventListener('click', () => {
     document.querySelectorAll('.tabs button').forEach((x) => x.classList.toggle('on', x === b));

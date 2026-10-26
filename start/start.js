@@ -80,11 +80,83 @@ function tick() {
   $('#date').textContent = now.toLocaleDateString('de-AT', { weekday: 'long', day: 'numeric', month: 'long' });
   const h = now.getHours();
   if (document.body.classList.contains('private')) return;
-  $('#greeting').textContent =
-    h < 5 ? 'Noch eine Runde? Es ist mitten in der Nacht.' :
-    h < 11 ? 'Guten Morgen – bereit zum Zocken?' :
-    h < 18 ? 'Bereit zum Zocken?' :
-    'Guten Abend – Zeit für eine Session.';
+  const normal = document.body.classList.contains('style-normal');
+  $('#greeting').textContent = normal
+    ? (h < 5 ? 'Gute Nacht' : h < 11 ? 'Guten Morgen' : h < 18 ? 'Schönen Tag' : 'Guten Abend')
+    : (h < 5 ? 'Noch eine Runde? Es ist mitten in der Nacht.' :
+      h < 11 ? 'Guten Morgen – bereit zum Zocken?' :
+      h < 18 ? 'Bereit zum Zocken?' :
+      'Guten Abend – Zeit für eine Session.');
+}
+
+// ---------------------------------------------------------------- Aussehen (Stil, Farbe, Hintergrund)
+const api = window.elektron;
+const BG_IMAGES = ['nebel', 'galaxie', 'berge', 'aurora', 'wellen'];
+function applyLook(look) {
+  if (!look) return;
+  const b = document.body;
+  document.documentElement.style.setProperty('--accent', look.accent);
+  b.classList.toggle('style-normal', look.style === 'normal');
+  for (const c of [...b.classList]) if (c.startsWith('bg-')) b.classList.remove(c);
+  b.classList.add('bg-' + look.background);
+  let img = '';
+  if (BG_IMAGES.includes(look.background)) img = `url(bg/${look.background}.webp)`;
+  if (look.background === 'eigenes') img = `url(user-bg?v=${look.bgVersion || 0})`;
+  b.style.setProperty('--bg-image', img || 'none');
+  $('#foot').textContent = look.style === 'normal'
+    ? 'Strg+T neuer Tab · Strg+D Lesezeichen · Strg+H Verlauf · F11 Vollbild'
+    : 'Strg+Umschalt+G startet den Gaming-Modus · Strg+T neuer Tab · F11 Vollbild';
+  if (!b.classList.contains('private')) document.title = look.style === 'normal' ? 'Neuer Tab' : 'Neuer Tab';
+  tick();
+  loadGames(look.style);
+}
+
+// ---------------------------------------------------------------- Steam-Spiele
+let gamesLoaded = false, allGames = [], showAll = false;
+async function loadGames(style) {
+  const wrap = $('#games-wrap');
+  if (style === 'normal' || document.body.classList.contains('private') || !api) { wrap.hidden = true; return; }
+  if (!gamesLoaded) {
+    gamesLoaded = true;
+    try { allGames = await api.invoke('steam.games'); } catch { allGames = []; }
+  }
+  wrap.hidden = !allGames.length;
+  renderGames();
+}
+function renderGames() {
+  const box = $('#games');
+  box.replaceChildren();
+  const list = showAll ? allGames : allGames.slice(0, 6);
+  for (const g of list) {
+    const a = document.createElement('button');
+    a.type = 'button';
+    a.className = 'game';
+    let h = 0; for (const c of g.name) h = (h * 31 + c.charCodeAt(0)) % 360;
+    a.style.setProperty('--hue', h);
+    a.dataset.initial = (g.name.match(/[A-Za-z0-9]/) || ['?'])[0].toUpperCase();
+    a.title = `${g.name} starten`;
+    const img = new Image();
+    img.alt = '';
+    img.loading = 'lazy';
+    img.src = `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/header.jpg`;
+    img.onerror = () => img.remove();
+    const name = document.createElement('span');
+    name.textContent = g.name;
+    const play = document.createElement('i');
+    play.textContent = '▶';
+    a.append(img, name, play);
+    a.addEventListener('click', () => api.invoke('steam.play', g.appid));
+    box.appendChild(a);
+  }
+  const more = $('#games-more');
+  more.hidden = allGames.length <= 6;
+  more.textContent = showAll ? 'Weniger anzeigen' : `Alle ${allGames.length} anzeigen`;
+}
+$('#games-more').addEventListener('click', () => { showAll = !showAll; renderGames(); });
+
+if (api) {
+  api.invoke('look').then(applyLook).catch(() => {});
+  api.on('look-changed', applyLook);
 }
 
 render();

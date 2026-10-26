@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: https:; media-src https:; style-src 'self'; script-src 'self'">
+  <title>Lesemodus</title>
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="reader.css">
+</head>
+<body>
+  <div class="bar">
+    <a id="orig" href="#">← Originalseite</a>
+    <div class="spacer"></div>
+    <button type="button" id="smaller" title="Schrift kleiner">A−</button>
+    <button type="button" id="bigger" title="Schrift größer">A+</button>
+    <button type="button" id="theme" title="Hell / Dunkel">Hell / Dunkel</button>
+  </div>
+  <article id="art">
+    <p class="site" id="site"></p>
+    <h1 id="title"></h1>
+    <p class="by" id="by"></p>
+    <div id="content"></div>
+  </article>
+  <script src="reader.js"></script>
+</body>
+</html>

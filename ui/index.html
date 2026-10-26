@@ -31,6 +31,7 @@
       <span id="secure" title="Sichere Verbindung"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
       <input id="address" spellcheck="false" placeholder="Mit Google suchen oder Adresse eingeben">
       <button type="button" id="zoom" title="Zoom zurücksetzen (Strg+0)"></button>
+      <button type="button" id="reader" title="Lesemodus (F9)"><svg viewBox="0 0 24 24"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></svg></button>
       <button type="button" id="star" title="Lesezeichen hinzufügen (Strg+D)"><svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg></button>
       <span id="shield" title="Werbeblocker"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><b id="shield-count"></b></span>
     </form>
@@ -59,6 +60,9 @@
       <button id="dl-btn" class="icon-btn" title="Downloads (Strg+J)" hidden>
         <svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>
         <svg class="ring" viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="16"/><circle class="prog" cx="18" cy="18" r="16" pathLength="100"/></svg>
+      </button>
+      <button id="shot" class="icon-btn" title="Screenshot (Strg+Umschalt+X) – Rechtsklick: ganze Seite">
+        <svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></svg>
       </button>
       <button id="pip" class="icon-btn" title="Video ausklappen – Bild-in-Bild (Strg+Umschalt+P)">
         <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><rect x="12" y="11" width="7" height="6" rx="1" class="fill"/></svg>
@@ -136,6 +140,20 @@
           <div class="meter-top"><span>CPU</span><b id="m-cpu">–</b></div>
           <canvas id="c-cpu" height="56"></canvas>
           <small id="m-cpu-limit">kein Limit</small>
+        </div>
+      </div>
+      <div class="hwcards" id="hwcards" hidden>
+        <div class="hw" id="hw-gpu" hidden>
+          <div class="hw-top"><span>GRAFIKKARTE</span><b id="gpu-util">–</b></div>
+          <div class="hw-name" id="gpu-name"></div>
+          <div class="hw-bar"><i id="gpu-bar"></i></div>
+          <div class="hw-facts"><span id="gpu-temp"></span><span id="gpu-mem"></span><span id="gpu-power"></span></div>
+        </div>
+        <div class="hw" id="hw-pc">
+          <div class="hw-top"><span>GANZER PC</span><b id="pc-cpu">–</b></div>
+          <div class="hw-name" id="pc-name"></div>
+          <div class="hw-bar"><i id="pc-bar"></i></div>
+          <div class="hw-facts"><span id="pc-ram"></span></div>
         </div>
       </div>
       <div class="tabcounts">
@@ -262,6 +280,15 @@
         </div>
       </div>
 
+      <div class="card">
+        <h2>Sichern &amp; Wiederherstellen</h2>
+        <p>Lesezeichen und Einstellungen als Datei speichern – z. B. für einen neuen PC.</p>
+        <div class="row-btns">
+          <button class="ghost-btn" id="backup">Sichern …</button>
+          <button class="ghost-btn" id="restore">Wiederherstellen …</button>
+        </div>
+      </div>
+
       <h3>Leistung <span class="tag">Neustart</span></h3>
       <div class="card">
         <div class="row">
@@ -296,8 +323,35 @@
 
       <h3>Design</h3>
       <div class="card">
+        <h2>Browser-Stil</h2>
+        <p>Gaming mit allen Extras – oder ein ruhiger, normaler Browser. Jederzeit umschaltbar.</p>
+        <div class="seg" data-setting="style">
+          <button data-v="gaming">🎮 Gaming</button><button data-v="normal">Normal</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Hintergrund der Startseite</h2>
+        <div class="bgs" id="bgs">
+          <button data-bg="neon" class="bgt neon" title="Neon-Raster"><span>Neon</span></button>
+          <button data-bg="schlicht" class="bgt plain" title="Schlicht"><span>Schlicht</span></button>
+          <button data-bg="nebel" class="bgt" title="Nebel"><img src="../start/bg/thumb-nebel.webp" alt=""><span>Nebel</span></button>
+          <button data-bg="galaxie" class="bgt" title="Galaxie"><img src="../start/bg/thumb-galaxie.webp" alt=""><span>Galaxie</span></button>
+          <button data-bg="berge" class="bgt" title="Retro-Berge"><img src="../start/bg/thumb-berge.webp" alt=""><span>Retro</span></button>
+          <button data-bg="aurora" class="bgt" title="Polarlicht"><img src="../start/bg/thumb-aurora.webp" alt=""><span>Polarlicht</span></button>
+          <button data-bg="wellen" class="bgt" title="Wellen"><img src="../start/bg/thumb-wellen.webp" alt=""><span>Wellen</span></button>
+          <button data-bg="eigenes" class="bgt own" title="Eigenes Bild"><span>Eigenes Bild …</span></button>
+        </div>
+      </div>
+      <div class="card">
         <h2>Akzentfarbe</h2>
         <div id="swatches"></div>
+      </div>
+      <div class="card">
+        <h2>KI in der Seitenleiste</h2>
+        <p>Für Rechtsklick → „Seite zusammenfassen“ und „Erklären“.</p>
+        <div class="seg" data-setting="preferredAI">
+          <button data-v="claude">Claude</button><button data-v="chatgpt">ChatGPT</button>
+        </div>
       </div>
 
       <p class="about" id="about"></p>

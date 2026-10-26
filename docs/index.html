@@ -70,7 +70,7 @@
         <article>
           <i><svg viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0"/><path d="M12 13l4-5"/><circle cx="12" cy="13.5" r="1.4"/></svg></i>
           <h3>GX Control</h3>
-          <p>Live-Anzeige von RAM und CPU, dazu Limiter für Arbeitsspeicher, Prozessor und Bandbreite – damit dein Ping stabil bleibt.</p>
+          <p>Live-Anzeige von RAM, CPU und Grafikkarte (Auslastung, Temperatur, VRAM), dazu Limiter für Arbeitsspeicher, Prozessor und Bandbreite – damit dein Ping stabil bleibt.</p>
         </article>
         <article>
           <i><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16"/></svg></i>
@@ -90,12 +90,27 @@
         <article>
           <i><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7"/><path d="M21 4v5h-5"/><path d="M3 20v-5h5"/><path d="M21 12a9 9 0 0 1-15 6.7"/></svg></i>
           <h3>Seitenleiste mit KI</h3>
-          <p>Claude, ChatGPT, Discord, Twitch, YouTube und WhatsApp immer griffbereit. Dein Discord-Sprachkanal läuft weiter, auch wenn die Leiste zu ist.</p>
+          <p>Claude, ChatGPT, Discord, Twitch, YouTube und WhatsApp immer griffbereit. Rechtsklick → Seite zusammenfassen, Text erklären oder übersetzen.</p>
         </article>
         <article>
           <i><svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg></i>
           <h3>Chrome-Erweiterungen</h3>
           <p>Bitwarden, Dark Reader, Avast &amp; Co. direkt aus dem Chrome Web Store. Dazu Lesezeichen, Verlauf, Downloads, private Tabs und PDF-Anzeige.</p>
+        </article>
+        <article>
+          <i><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10 9.5v5l4-2.5z"/></svg></i>
+          <h3>Deine Steam-Spiele</h3>
+          <p>Die Startseite zeigt deine installierten Steam-Spiele. Ein Klick – und das Spiel startet. Dazu 8 Hintergründe oder dein eigenes Bild.</p>
+        </article>
+        <article>
+          <i><svg viewBox="0 0 24 24"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg></i>
+          <h3>Screenshots &amp; Lesemodus</h3>
+          <p>Strg+Umschalt+X macht einen Screenshot – auch von der ganzen Seite – und kopiert ihn direkt für Discord. F9 zeigt Artikel ohne Werbung.</p>
+        </article>
+        <article>
+          <i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 0 1 0 18" fill="currentColor" opacity=".25"/></svg></i>
+          <h3>Gaming oder Normal</h3>
+          <p>Ein Schalter in den Einstellungen macht aus Elektron GX einen ruhigen Alltags-Browser – und wieder zurück.</p>
         </article>
         <article>
           <i><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></i>
@@ -108,13 +123,16 @@
     <section id="bilder" class="gallery">
       <h2>So sieht er aus</h2>
       <div class="tabs" role="tablist">
-        <button class="on" data-shot="split" role="tab">Split-Screen</button>
+        <button class="on" data-shot="start" role="tab">Startseite &amp; Spiele</button>
+        <button data-shot="split" role="tab">Split-Screen</button>
         <button data-shot="float" role="tab">Schwebendes Fenster</button>
         <button data-shot="v2b" role="tab">Adressleiste &amp; Verlauf</button>
         <button data-shot="gaming" role="tab">GX Control</button>
+        <button data-shot="design" role="tab">Design</button>
+        <button data-shot="reader" role="tab">Lesemodus</button>
       </div>
       <figure class="shot">
-        <img id="shot" src="img/split.webp" alt="Elektron GX im Split-Screen" width="1400" height="900" loading="lazy">
+        <img id="shot" src="img/start.webp" alt="Startseite von Elektron GX mit Steam-Spielen" width="1400" height="900" loading="lazy">
       </figure>
     </section>
 

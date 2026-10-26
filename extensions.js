@@ -119,7 +119,7 @@ async function init(opts) {
         session: ses, autoUpdate: true, loadExtensions: true,
         allowUnpackedExtensions: false, beforeInstall: confirmInstall
       }),
-      new Promise(r => setTimeout(r, 4000))
+      new Promise(r => setTimeout(r, 2500))
     ]);
   } catch (e) { console.warn('Chrome Web Store:', e.message); }
 

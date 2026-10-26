@@ -43,6 +43,19 @@
 - **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Malwarebytes Browser Guard, Bitwarden, optional Avast) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
+**Neu in 2.4**
+
+- **Browser-Stil umschaltbar**: Gaming (alle Extras) oder Normal (ruhig, blau, ohne Gaming-Anzeigen) – Menü oder GX Control → Design
+- **8 Hintergründe** für die Startseite (Neon, Schlicht, Nebel, Galaxie, Retro, Polarlicht, Wellen, eigenes Bild)
+- **Deine Steam-Spiele** auf der Startseite, Start mit einem Klick
+- **Grafikkarten-Anzeige** in GX Control (Auslastung, Temperatur, VRAM, Watt) über `nvidia-smi` bei NVIDIA-Karten
+- **Screenshots** (Strg+Umschalt+X, auch ganze Seite) – gespeichert unter Bilder\Elektron GX und in die Zwischenablage kopiert
+- **Lesemodus** (F9 oder Buch-Symbol): nur Text, ohne Werbung und Menüs
+- **KI per Rechtsklick**: Seite zusammenfassen, Markiertes erklären (Claude oder ChatGPT)
+- **Übersetzen** von Seiten und markiertem Text (Google Übersetzer)
+- **Sichern & Wiederherstellen** von Lesezeichen, Schnellzugriff und Einstellungen als Datei
+- **Schnelleres Laden**: Verbindung wird schon beim Zeigen auf einen Link aufgebaut, Erweiterungen laden parallel zum Fenster
+
 ## Tastenkürzel
 
 | Kürzel | Aktion |
@@ -58,6 +71,8 @@
 | Strg+Umschalt+S | Split-Screen |
 | Strg+Umschalt+F | Tab als schwebendes Fenster |
 | Strg+Umschalt+P | Video ausklappen (Bild-in-Bild) |
+| Strg+Umschalt+X | Screenshot |
+| F9 | Lesemodus |
 | Strg+Umschalt+N | Privater Tab |
 | Strg+D / Strg+Umschalt+B / Strg+Umschalt+O | Lesezeichen setzen / Leiste ein-aus / verwalten |
 | Strg+H / Strg+J | Verlauf / Downloads |

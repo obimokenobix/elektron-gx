@@ -6,7 +6,7 @@ process.on('uncaughtException', (e) => { console.error('UNCAUGHT', e && e.stack 
  * Gaming-Modus, Werbeblocker, Downloads, Berechtigungen.
  */
 const {
-  app, BaseWindow, WebContentsView, ipcMain, session, Menu, MenuItem, dialog,
+  app, BaseWindow, WebContentsView, ipcMain, session, Menu, MenuItem, dialog, nativeImage,
   protocol, shell, clipboard, net
 } = require('electron');
 const path = require('path');
@@ -16,8 +16,11 @@ const { pathToFileURL } = require('url');
 const { createStore } = require('./store');
 const extmod = require('./extensions');
 const protect = require('./protect');
+const extras = require('./extras');
 
 const APP_NAME = 'Elektron GX';
+const T0 = Date.now();
+const perf = (label) => { if (process.env.ELEKTRON_PERF) console.log(`PERF ${label} ${Date.now() - T0}ms`); };
 const PARTITION = 'persist:elektron';
 const PRIVATE_PARTITION = 'elektron-private'; // ohne "persist:" = nur im Arbeitsspeicher
 const HOME = 'elektron://start/';
@@ -55,6 +58,11 @@ const DEFAULTS = {
   autoPip: true,
   showBookmarkBar: true,
   welcomeDone: false,
+  style: 'gaming',          // 'gaming' | 'normal'
+  accentNormal: '#3b82f6',
+  background: 'neon',       // neon | schlicht | nebel | galaxie | berge | aurora | wellen | eigenes
+  bgVersion: 0,
+  preferredAI: 'claude',
   welcomeVersion: 0,
   httpsOnly: true,
   phishingProtect: true,
@@ -175,7 +183,7 @@ function toURL(text) {
 
 function displayURL(url) {
   if (!url) return '';
-  if (/^elektron:\/\/start\/(error|blocked|insecure)\.html/.test(url)) {
+  if (/^elektron:\/\/start\/(error|blocked|insecure|reader)\.html/.test(url)) {
     try { return new URL(url).searchParams.get('u') || ''; } catch { return ''; }
   }
   if (url.startsWith('elektron://start')) return '';
@@ -215,7 +223,7 @@ function snapshot() {
     splitDragging,
     nav: a ? {
       url: displayURL(a.url),
-      isStart: a.url.startsWith('elektron://start') && !/^elektron:\/\/start\/(error|blocked|insecure)\.html/.test(a.url),
+      isStart: a.url.startsWith('elektron://start') && !/^elektron:\/\/start\/(error|blocked|insecure|reader)\.html/.test(a.url),
       warning: /^elektron:\/\/start\/blocked\.html/.test(a.url) ? 'danger' : /^elektron:\/\/start\/insecure\.html/.test(a.url) || /^http:/i.test(a.url) ? 'insecure' : null,
       canGoBack: wc ? wc.navigationHistory.canGoBack() : false,
       canGoForward: wc ? wc.navigationHistory.canGoForward() : false,
@@ -236,7 +244,9 @@ function snapshot() {
     immersive: immersive(),
     adblockReady: !!blocker,
     settings: {
-      accent: settings.accent,
+      accent: accentNow(),
+      style: settings.style, background: settings.background, bgVersion: settings.bgVersion,
+      hasUserBg: !!userBgFile(), preferredAI: settings.preferredAI,
       ramLimit: settings.ramLimit, cpuLimit: settings.cpuLimit, netLimit: settings.netLimit,
       adblock: settings.adblock, ytSkip: settings.ytSkip,
       camera: settings.camera, mic: settings.mic, autoPip: settings.autoPip,
@@ -645,7 +655,7 @@ function layoutFloat(f) {
 function sendFloatInfo(f) {
   if (!f || !alive(f.bar.webContents)) return;
   f.bar.webContents.send('info', {
-    title: f.tab.title, favicon: f.tab.favicon, accent: settings.accent,
+    title: f.tab.title, favicon: f.tab.favicon, accent: accentNow(),
     opacity: Math.round(f.win.getOpacity() * 100), pinned: f.pinned
   });
   try { f.win.setTitle(f.tab.title || APP_NAME); } catch {}
@@ -757,6 +767,16 @@ function wireWebContents(wc, tab) {
   wc.on('before-input-event', (e, input) => { if (handleShortcut(input)) e.preventDefault(); });
   wc.on('context-menu', (e, p) => showContextMenu(wc, p, tab));
   wc.on('dom-ready', () => injectYouTubeSkipper(wc));
+  // Schneller: Verbindung zum Ziel schon aufbauen, während die Maus auf einem Link liegt
+  let lastPre = '';
+  wc.on('update-target-url', (e, url) => {
+    if (!url || !/^https?:/i.test(url)) return;
+    let origin = '';
+    try { origin = new URL(url).origin; } catch { return; }
+    if (origin === lastPre) return;
+    lastPre = origin;
+    try { wc.session.preconnect({ url: origin, numSockets: 1 }); } catch {}
+  });
 
   if (!tab) return; // Seitenleisten-Panel
 
@@ -795,6 +815,7 @@ function wireWebContents(wc, tab) {
     pushState();
   });
   wc.on('did-finish-load', () => {
+    if (!wc.__perfDone) { wc.__perfDone = true; perf('first-page ' + wc.getURL().slice(0, 40)); }
     if (wc.getURL().startsWith('elektron://start')) applyAccentToStart(wc);
   });
   wc.on('did-fail-load', (e, code, desc, url, isMain) => {
@@ -825,9 +846,52 @@ function wireWebContents(wc, tab) {
   });
 }
 
+const BACKGROUNDS = ['neon', 'schlicht', 'nebel', 'galaxie', 'berge', 'aurora', 'wellen', 'eigenes'];
+const accentNow = () => (settings.style === 'normal' ? settings.accentNormal : settings.accent);
+function lookInfo() {
+  return { accent: accentNow(), style: settings.style, background: settings.background, bgVersion: settings.bgVersion };
+}
 function applyAccentToStart(wc) {
   if (!alive(wc)) return;
-  wc.executeJavaScript(`document.documentElement.style.setProperty('--accent', ${JSON.stringify(settings.accent)})`).catch(() => {});
+  wc.send('internal:look-changed', lookInfo());
+}
+function lookChanged() {
+  for (const t of tabs) if (t.view && alive(t.view.webContents) && t.url.startsWith('elektron://start')) applyAccentToStart(t.view.webContents);
+  for (const f of floatsByBar.values()) sendFloatInfo(f);
+  pushState();
+}
+function userBgFile() {
+  try {
+    const f = fs.readdirSync(app.getPath('userData')).find(n => /^hintergrund\.(png|jpe?g|webp|gif)$/i.test(n));
+    return f ? path.join(app.getPath('userData'), f) : null;
+  } catch { return null; }
+}
+async function chooseBackground() {
+  const r = await dialog.showOpenDialog(win, {
+    title: 'Eigenes Hintergrundbild wählen',
+    filters: [{ name: 'Bilder', extensions: ['jpg', 'jpeg', 'png', 'webp', 'gif'] }],
+    properties: ['openFile']
+  });
+  if (r.canceled || !r.filePaths[0]) return;
+  const src = r.filePaths[0];
+  if (fs.statSync(src).size > 25 * 1024 * 1024) { toast('Das Bild ist zu groß (max. 25 MB)'); return; }
+  const old = userBgFile();
+  if (old) try { fs.unlinkSync(old); } catch {}
+  fs.copyFileSync(src, path.join(app.getPath('userData'), 'hintergrund' + path.extname(src).toLowerCase()));
+  settings.background = 'eigenes';
+  settings.bgVersion = Date.now();
+  saveSettings();
+  lookChanged();
+}
+function setStyle(style) {
+  if (!['gaming', 'normal'].includes(style) || settings.style === style) return;
+  settings.style = style;
+  if (style === 'normal' && gamingMode) setGamingMode(false);
+  if (style === 'normal' && settings.background === 'neon') settings.background = 'schlicht';
+  if (style === 'gaming' && settings.background === 'schlicht') settings.background = 'neon';
+  saveSettings();
+  lookChanged();
+  toast(style === 'normal' ? 'Normaler Browser – Gaming-Elemente sind ausgeblendet' : 'Gaming-Browser ist zurück 🎮');
 }
 
 function showContextMenu(wc, p, tab) {
@@ -867,9 +931,25 @@ function showContextMenu(wc, p, tab) {
   } else if (p.selectionText && p.selectionText.trim()) {
     const s = p.selectionText.trim();
     const short = s.length > 28 ? s.slice(0, 28) + '…' : s;
+    const aiName = settings.preferredAI === 'chatgpt' ? 'ChatGPT' : 'Claude';
     t.push(
       { label: 'Kopieren', click: () => wc.copy() },
       { label: `Mit Google suchen: „${short}“`, click: () => createTab('https://www.google.com/search?q=' + encodeURIComponent(s)) },
+      { label: `Mit ${aiName} erklären`, click: () => openAI('Erkläre mir das bitte einfach und auf Deutsch:\n\n' + s.slice(0, 3000)) },
+      { label: 'Übersetzen', click: () => translateText(s) },
+      { type: 'separator' }
+    );
+  }
+  if (tab && /^https?:/i.test(wc.getURL()) && !p.isEditable && !p.linkURL && !(p.selectionText && p.selectionText.trim())) {
+    const aiName = settings.preferredAI === 'chatgpt' ? 'ChatGPT' : 'Claude';
+    t.push(
+      { label: `Seite mit ${aiName} zusammenfassen`, click: () => aiAboutPage(tab, 'summary') },
+      { label: 'Seite auf Deutsch übersetzen', click: () => translatePage(tab) },
+      { label: 'Lesemodus', click: () => readerMode() },
+      { label: 'Screenshot', submenu: [
+        { label: 'Sichtbarer Bereich', click: () => screenshot(false) },
+        { label: 'Ganze Seite', click: () => screenshot(true) }
+      ] },
       { type: 'separator' }
     );
   }
@@ -902,11 +982,13 @@ function handleShortcut(input) {
   const wc = tab && tab.view && alive(tab.view.webContents) ? tab.view.webContents : null;
 
   if (ctrl && input.shift && k === 't') { reopenClosed(); return true; }
-  if (ctrl && input.shift && k === 'g') { setGamingMode(!gamingMode); return true; }
+  if (ctrl && input.shift && k === 'g') { if (settings.style === 'gaming') setGamingMode(!gamingMode); return true; }
   if (ctrl && input.shift && k === 's') { toggleSplit(); return true; }
   if (ctrl && input.shift && k === 'p') { pipTab(activeTab()); return true; }
   if (ctrl && input.shift && k === 'f') { if (activeId != null) floatTab(activeId); return true; }
   if (ctrl && input.shift && k === 'n') { createTab(HOME, { private: true }); return true; }
+  if (ctrl && input.shift && k === 'x') { screenshot(false); return true; }
+  if (k === 'F9') { readerMode(); return true; }
   if (ctrl && input.shift && k === 'b') { setSetting('showBookmarkBar', !settings.showBookmarkBar); return true; }
   if (ctrl && input.shift && k === 'o') { openInternal('bookmarks'); return true; }
   if (ctrl && input.shift && k === 'Delete') { openInternal('history'); return true; }
@@ -995,6 +1077,8 @@ function setGamingMode(on) {
   pushState();
 }
 
+let hwTick = 0;
+let lastHw = null;
 function tick() {
   if (!win || win.isDestroyed()) return;
   let metrics;
@@ -1042,8 +1126,12 @@ function tick() {
     lowerPriority(metrics);
   }
 
+  if (panel === 'gx' && settings.style === 'gaming' && (++hwTick % 2 === 0)) {
+    extras.hardware().then(hw => { lastHw = hw; }).catch(() => {});
+  }
   if (uiView && alive(uiView.webContents)) {
     uiView.webContents.send('stats', {
+      hw: panel === 'gx' && settings.style === 'gaming' ? lastHw : null,
       ram: ramMB, cpu, cores,
       tabs: tabs.length,
       frozen: tabs.filter(t => t.frozen).length,
@@ -1228,10 +1316,19 @@ function setSetting(key, value) {
   switch (key) {
     case 'accent':
       if (typeof value === 'string' && /^#[0-9a-f]{6}$/i.test(value)) {
-        settings.accent = value;
-        for (const t of tabs) if (t.view && t.url.startsWith('elektron://start')) applyAccentToStart(t.view.webContents);
+        if (settings.style === 'normal') settings.accentNormal = value; else settings.accent = value;
+        lookChanged();
       }
       break;
+    case 'style': setStyle(String(value)); return;
+    case 'background':
+      if (BACKGROUNDS.includes(value)) {
+        if (value === 'eigenes' && !userBgFile()) { chooseBackground(); return; }
+        settings.background = value;
+        lookChanged();
+      }
+      break;
+    case 'preferredAI': if (['claude', 'chatgpt'].includes(value)) settings.preferredAI = value; break;
     case 'ramLimit.enabled': settings.ramLimit.enabled = !!value; break;
     case 'ramLimit.mb': settings.ramLimit.mb = clamp(value, 512, 32768); break;
     case 'cpuLimit.enabled': settings.cpuLimit.enabled = !!value; cpuOver = 0; break;
@@ -1296,8 +1393,11 @@ function showMainMenu() {
     { label: 'Zoom zurücksetzen', accelerator: 'CmdOrCtrl+0', click: () => setZoom(0) },
     { label: 'Vollbild', accelerator: 'F11', click: () => setUserFullscreen(!userFullscreen) },
     { type: 'separator' },
-    { label: gamingMode ? 'Gaming-Modus ausschalten' : 'Gaming-Modus einschalten', accelerator: 'CmdOrCtrl+Shift+G', click: () => setGamingMode(!gamingMode) },
-    { label: 'GX Control', click: () => togglePanel('gx') },
+    ...(settings.style === 'gaming' ? [
+      { label: gamingMode ? 'Gaming-Modus ausschalten' : 'Gaming-Modus einschalten', accelerator: 'CmdOrCtrl+Shift+G', click: () => setGamingMode(!gamingMode) }
+    ] : []),
+    { label: settings.style === 'gaming' ? 'GX Control' : 'Einstellungen', click: () => togglePanel('gx') },
+    { label: settings.style === 'gaming' ? 'Zum normalen Browser wechseln' : 'Zum Gaming-Browser wechseln', click: () => setStyle(settings.style === 'gaming' ? 'normal' : 'gaming') },
     { type: 'separator' },
     { label: split ? 'Split-Screen beenden' : 'Split-Screen', accelerator: 'CmdOrCtrl+Shift+S', click: () => toggleSplit() },
     { label: 'Video ausklappen (Bild-in-Bild)', accelerator: 'CmdOrCtrl+Shift+P', enabled: !!wc, click: () => pipTab(t) },
@@ -1314,6 +1414,13 @@ function showMainMenu() {
     { label: 'Auf der Seite suchen …', accelerator: 'CmdOrCtrl+F', enabled: !!wc, click: openFind },
     { label: 'Seite drucken …', enabled: !!wc, click: () => wc && wc.print() },
     { label: 'Entwicklertools', accelerator: 'F12', enabled: !!wc, click: () => wc && wc.toggleDevTools() },
+    { type: 'separator' },
+    { label: 'Screenshot (sichtbarer Bereich)', accelerator: 'CmdOrCtrl+Shift+X', enabled: !!wc, click: () => screenshot(false) },
+    { label: 'Screenshot (ganze Seite)', enabled: !!wc, click: () => screenshot(true) },
+    { label: 'Lesemodus', enabled: !!wc, click: () => readerMode() },
+    { type: 'separator' },
+    { label: 'Lesezeichen & Einstellungen sichern …', click: backupData },
+    { label: 'Sicherung wiederherstellen …', click: restoreData },
     { type: 'separator' },
     { label: 'Elektron GX weiterempfehlen', click: () => {
       clipboard.writeText('https://obimokenobix.github.io/elektron-gx/');
@@ -1398,6 +1505,12 @@ ipcMain.on('ui:cmd', (e, name, ...args) => {
       break;
     }
     case 'openInternal': if (['bookmarks', 'history', 'downloads', 'extensions', 'welcome'].includes(args[0])) openInternal(args[0]); break;
+    case 'chooseBg': chooseBackground(); break;
+    case 'screenshot': screenshot(!!args[0]); break;
+    case 'reader': readerMode(); break;
+    case 'showFile': if (typeof args[0] === 'string' && fs.existsSync(args[0])) shell.showItemInFolder(args[0]); break;
+    case 'backup': backupData(); break;
+    case 'restore': restoreData(); break;
     case 'privateTab': createTab(HOME, { private: true }); break;
     case 'bmToggle': toggleBookmark(); break;
     case 'bmOpen': openBookmark(String(args[0]), args[1]); break;
@@ -1481,6 +1594,10 @@ function configureSession(ses) {
     const u = new URL(req.url);
     if (u.hostname !== 'start') return new Response('Nicht gefunden', { status: 404 });
     let rel = decodeURIComponent(u.pathname);
+    if (rel === '/user-bg') {
+      const f = userBgFile();
+      return f ? net.fetch(pathToFileURL(f).toString()) : new Response('', { status: 404 });
+    }
     if (rel === '/' || rel === '') rel = '/index.html';
     const file = path.normalize(path.join(startDir, rel));
     if (!file.startsWith(startDir + path.sep)) return new Response('Verboten', { status: 403 });
@@ -1691,6 +1808,136 @@ function extensionsChanged() {
   for (const wc of internalPages('elektron://start/extensions')) wc.send('internal:extensions-changed');
 }
 
+// ------------------------------------------------------------------ Screenshot
+async function screenshot(full) {
+  const t = activeTab();
+  if (!t || !t.view) return;
+  const wc = t.view.webContents;
+  let img;
+  try {
+    if (full) {
+      ensureDebugger(wc);
+      const m = await wc.debugger.sendCommand('Page.getLayoutMetrics');
+      const size = m.cssContentSize || m.contentSize;
+      const h = Math.min(Math.ceil(size.height), 16000);
+      const r = await wc.debugger.sendCommand('Page.captureScreenshot', {
+        format: 'png', captureBeyondViewport: true,
+        clip: { x: 0, y: 0, width: Math.ceil(size.width), height: h, scale: 1 }
+      });
+      img = nativeImage.createFromBuffer(Buffer.from(r.data, 'base64'));
+    } else {
+      img = await wc.capturePage();
+    }
+  } catch (e) {
+    toast('Screenshot hat nicht geklappt');
+    return;
+  }
+  const dir = path.join(app.getPath('pictures'), 'Elektron GX');
+  fs.mkdirSync(dir, { recursive: true });
+  const stamp = new Date().toISOString().slice(0, 19).replace('T', ' ').replace(/:/g, '-');
+  const file = path.join(dir, `Screenshot ${stamp}.png`);
+  fs.writeFileSync(file, img.toPNG());
+  try { if (typeof clipboard.writeImage === 'function') clipboard.writeImage(img); else clipboard.write({ image: img }); } catch {}
+  toast('Screenshot kopiert – mit Strg+V in Discord einfügen', { action: 'Im Ordner zeigen', cmd: 'showFile', arg: file });
+}
+
+// ------------------------------------------------------------------ KI (Claude / ChatGPT in der Seitenleiste)
+function openAI(prompt) {
+  const ai = settings.preferredAI === 'chatgpt' ? 'chatgpt' : 'claude';
+  const url = ai === 'chatgpt'
+    ? 'https://chatgpt.com/?q=' + encodeURIComponent(prompt)
+    : 'https://claude.ai/new?q=' + encodeURIComponent(prompt);
+  if (panel !== 'web:' + ai) togglePanel('web:' + ai);
+  const v = panelViews.get(ai);
+  if (v && alive(v.webContents)) v.webContents.loadURL(url);
+}
+
+async function aiAboutPage(tab, mode) {
+  if (!tab || !tab.view) return;
+  const wc = tab.view.webContents;
+  let text = '';
+  try {
+    text = await wc.executeJavaScriptInIsolatedWorld(998, [{ code: `(() => {
+      const el = document.querySelector('article, main, [role=main]') || document.body;
+      return (el ? el.innerText : '').replace(/\\s+/g, ' ').trim().slice(0, 1800);
+    })()` }]);
+  } catch {}
+  const head = mode === 'explain'
+    ? 'Erkläre mir einfach und auf Deutsch, worum es auf dieser Webseite geht.'
+    : 'Fasse diese Webseite kurz und auf Deutsch zusammen – die wichtigsten Punkte als Liste.';
+  openAI(`${head}\nTitel: ${wc.getTitle()}\nAdresse: ${wc.getURL()}\n\nText (Auszug):\n${text}`);
+}
+
+// ------------------------------------------------------------------ Übersetzen
+function translatePage(tab) {
+  if (!tab || !/^https?:/i.test(tab.url)) return;
+  navigate('https://translate.google.com/translate?sl=auto&tl=de&u=' + encodeURIComponent(tab.url));
+}
+function translateText(text) {
+  createTab('https://translate.google.com/?sl=auto&tl=de&op=translate&text=' + encodeURIComponent(text.slice(0, 4000)));
+}
+
+// ------------------------------------------------------------------ Lesemodus
+const readerArticles = new Map();
+let readerSeq = 1;
+let readabilitySrc = null;
+async function readerMode() {
+  const t = activeTab();
+  if (!t || !t.view || !/^https?:/i.test(t.url)) return;
+  const wc = t.view.webContents;
+  try {
+    if (!readabilitySrc) readabilitySrc = fs.readFileSync(require.resolve('@mozilla/readability/Readability.js'), 'utf8');
+    const art = await wc.executeJavaScriptInIsolatedWorld(997, [{ code: readabilitySrc + `
+      ;(() => { try { const r = new Readability(document.cloneNode(true)).parse();
+        return r && r.content && r.length > 400 ? { title: r.title, byline: r.byline, site: r.siteName, content: r.content } : null;
+      } catch (e) { return null; } })()` }]);
+    if (!art) { toast('Für diese Seite gibt es keinen Lesemodus'); return; }
+    const id = 'r' + (readerSeq++);
+    readerArticles.set(id, { ...art, url: wc.getURL() });
+    if (readerArticles.size > 30) readerArticles.delete(readerArticles.keys().next().value);
+    wc.loadURL(`elektron://start/reader.html?id=${id}&u=${encodeURIComponent(wc.getURL())}`);
+  } catch (e) {
+    toast('Für diese Seite gibt es keinen Lesemodus');
+  }
+}
+
+// ------------------------------------------------------------------ Sichern & Wiederherstellen
+const BACKUP_KEYS = ['accent', 'accentNormal', 'style', 'background', 'preferredAI', 'ramLimit', 'cpuLimit', 'netLimit',
+  'adblock', 'ytSkip', 'camera', 'mic', 'autoPip', 'showBookmarkBar', 'freezeOnMinimize', 'restoreSession',
+  'httpsOnly', 'phishingProtect', 'scanDownloads'];
+async function backupData() {
+  const r = await dialog.showSaveDialog(win, {
+    title: 'Lesezeichen und Einstellungen sichern',
+    defaultPath: path.join(app.getPath('documents'), `Elektron-GX-Sicherung-${new Date().toISOString().slice(0, 10)}.json`),
+    filters: [{ name: 'Elektron-GX-Sicherung', extensions: ['json'] }]
+  });
+  if (r.canceled || !r.filePath) return;
+  const data = { app: 'Elektron GX', version: 1, created: new Date().toISOString(),
+    bookmarks: store.bookmarks().map(b => ({ url: b.url, title: b.title })),
+    settings: Object.fromEntries(BACKUP_KEYS.map(k => [k, settings[k]])) };
+  fs.writeFileSync(r.filePath, JSON.stringify(data, null, 2));
+  toast('Sicherung gespeichert', { action: 'Im Ordner zeigen', cmd: 'showFile', arg: r.filePath });
+}
+async function restoreData() {
+  const r = await dialog.showOpenDialog(win, {
+    title: 'Sicherung wiederherstellen', properties: ['openFile'],
+    filters: [{ name: 'Elektron-GX-Sicherung', extensions: ['json'] }]
+  });
+  if (r.canceled || !r.filePaths[0]) return;
+  try {
+    const data = JSON.parse(fs.readFileSync(r.filePaths[0], 'utf8'));
+    if (data.app !== 'Elektron GX') throw new Error('keine Elektron-GX-Sicherung');
+    const added = store.importBookmarks(Array.isArray(data.bookmarks) ? data.bookmarks : []);
+    for (const k of BACKUP_KEYS) if (data.settings && k in data.settings && typeof data.settings[k] === typeof DEFAULTS[k]) settings[k] = data.settings[k];
+    saveSettings();
+    bookmarksChanged();
+    lookChanged();
+    toast(`Wiederhergestellt: ${added} neue Lesezeichen und deine Einstellungen`);
+  } catch (e) {
+    toast('Diese Datei konnte nicht gelesen werden');
+  }
+}
+
 // ------------------------------------------------------------------ Eigene Seiten
 function openInternal(page) {
   const url = `elektron://start/${page}.html`;
@@ -1739,6 +1986,15 @@ ipcMain.handle('internal', async (e, name, ...args) => {
       if (h) allowHttp.add(h);
       return true;
     }
+    case 'look': return lookInfo();
+    case 'steam.games': return extras.steamGames();
+    case 'steam.play': {
+      const id = String(args[0]);
+      if (/^\d{1,10}$/.test(id)) shell.openExternal('steam://rungameid/' + id);
+      return true;
+    }
+    case 'reader.get': return readerArticles.get(String(args[0])) || null;
+    case 'look.chooseBg': chooseBackground(); return true;
     case 'ext.list': return extmod.list();
     case 'welcome.state': return Object.keys(extmod.RECOMMENDED).map(id => ({ id, installed: extmod.isInstalled(id) }));
     case 'welcome.install': return extmod.installRecommended(String(args[0]));
@@ -1830,7 +2086,7 @@ function showSuggest() {
   if (!suggest.open) { win.contentView.addChildView(suggestView); suggest.open = true; }
   suggestView.setVisible(true);
   suggestView.webContents.send('items', {
-    items: suggest.items, selected: suggest.selected, query: suggest.query, accent: settings.accent
+    items: suggest.items, selected: suggest.selected, query: suggest.query, accent: accentNow()
   });
 }
 
@@ -1977,6 +2233,7 @@ function createWindow() {
   uiView.webContents.on('will-navigate', (e) => e.preventDefault());
   uiView.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
   uiView.webContents.once('dom-ready', () => {
+    perf('ui-shown');
     win.show();
     ensureSuggestView();
     pushState();
@@ -2026,9 +2283,13 @@ app.on('second-instance', (e, argv) => {
 });
 
 app.whenReady().then(async () => {
+  perf('ready');
   Menu.setApplicationMenu(null);
   setupSession();
-  try {
+  // Fenster sofort zeigen – Erweiterungen laden parallel im Hintergrund (schnellerer Start)
+  createWindow();
+  markWindowReady();
+  const extReady = (async () => { try {
     await extmod.init({
       session: mainSes,
       win: () => win,
@@ -2040,8 +2301,13 @@ app.whenReady().then(async () => {
       changed: () => extensionsChanged()
     });
   } catch (e) { console.warn('Erweiterungen:', e.message); }
-  createWindow();
-  markWindowReady();
+    // Tabs, die schon vor den Erweiterungen offen waren, nachträglich anmelden
+    for (const t of tabs) if (t.view && !t.private && alive(t.view.webContents)) extmod.addTab(t.view.webContents);
+    const at = activeTab();
+    if (at && at.view && !at.private) extmod.selectTab(at.view.webContents);
+    perf('extensions-ready');
+  })();
+  await Promise.race([extReady, new Promise(r => setTimeout(r, 1500))]);
   // Willkommensseite: beim ersten Start und einmal nach Updates mit neuen Empfehlungen (Version 2: Malwarebytes)
   if (!process.env.ELEKTRON_TEST && (!settings.welcomeDone || ((settings.welcomeVersion || 0) < 2 && !extmod.isInstalled('ihcjicgdanjaechkgeegckofjjedodee')))) {
     openInternal('welcome');
@@ -2150,6 +2416,32 @@ app.whenReady().then(async () => {
         require('http').createServer((q, r) => { hits.push(q.headers.host + q.url); r.setHeader('content-type', 'text/html'); r.end('<!doctype html><title>Ad-Test</title><script src="http://ads.doubleclick.net:8766/tag/js/gpt.js"></script><img src="http://tracker-friendly.example:8766/ok.png">'); }).listen(8766, '127.0.0.1');
         setTimeout(() => navigate('http://127.0.0.1:8766/'), 6000);
         setTimeout(() => console.log('ADTEST adblock=' + !!blocker, JSON.stringify(hits)), 10000);
+      }
+      if (process.env.ELEKTRON_TEST === 'look') {
+        settings.style = 'gaming'; settings.background = 'berge'; lookChanged();
+        togglePanel('gx');
+        setTimeout(() => uiView.webContents.executeJavaScript("document.getElementById('hwcards').scrollIntoView(); "), 3000);
+      }
+      if (process.env.ELEKTRON_TEST === 'look2') {
+        settings.style = 'gaming'; settings.background = 'aurora'; lookChanged();
+        togglePanel('gx');
+        setTimeout(() => uiView.webContents.executeJavaScript("document.querySelector('[data-setting=style]').scrollIntoView()"), 1500);
+      }
+      if (process.env.ELEKTRON_TEST === 'startbg') {
+        settings.style = 'gaming'; settings.background = process.env.BG || 'berge'; lookChanged();
+        createTab();
+      }
+      if (process.env.ELEKTRON_TEST === 'shot') {
+        createTab(); setTimeout(() => screenshot(true).then(() => console.log('SHOT OK')).catch(e => console.log('SHOT ERR', e)), 4000);
+      }
+      if (process.env.ELEKTRON_TEST === 'normal') {
+        settings.style = 'gaming'; setStyle('normal'); createTab();
+      }
+      if (process.env.ELEKTRON_TEST === 'reader') {
+        const para = 'Elektron GX ist ein kostenloser Browser für Gamer. Er friert Hintergrund-Tabs ein, blockiert Werbung und schützt vor Betrugsseiten. ';
+        require('http').createServer((q, r) => { r.setHeader('content-type', 'text/html; charset=utf-8'); r.end(`<!doctype html><title>Testartikel</title><body><nav>Menü · Start · Kontakt · Werbung</nav><div class="ad">WERBUNG!!!</div><article><h1>So spielt man schneller</h1><p class="byline">Von Max Muster</p>${'<p>' + para.repeat(4) + '</p>'.repeat(1)}<h2>Zweiter Abschnitt</h2><p>${para.repeat(5)}</p><p>${para.repeat(3)}</p></article><aside>Seitenleiste mit Links</aside></body>`); }).listen(8767, '127.0.0.1');
+        navigate('http://127.0.0.1:8767/artikel');
+        setTimeout(() => readerMode(), 3000);
       }
       if (process.env.ELEKTRON_TEST === 'privacy') {
         togglePanel('gx');

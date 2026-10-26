@@ -366,3 +366,45 @@ browser-action-list::part(badge) { font-size: 9px; border-radius: 4px; }
 #notsecure.danger { background: rgba(220, 38, 38, .2); color: #f87171; }
 body.warn-insecure #notsecure, body.warn-danger #notsecure { display: flex; }
 body.warn-insecure #secure, body.warn-danger #secure { display: none; }
+
+/* ---------------------------------------------------------------- Hardware */
+.hwcards { display: grid; gap: 10px; margin-top: 10px; }
+.hwcards[hidden], .hw[hidden] { display: none; }
+.hw { background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.hw-top { display: flex; justify-content: space-between; align-items: baseline; }
+.hw-top span { font-size: 10.5px; letter-spacing: .1em; color: var(--text-3); font-weight: 600; }
+.hw-top b { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.hw-name { color: var(--text-2); font-size: 12px; margin: 2px 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hw-bar { height: 6px; border-radius: 6px; background: var(--bg-3); overflow: hidden; }
+.hw-bar i { display: block; height: 100%; width: 0; background: var(--accent); box-shadow: 0 0 8px var(--accent); transition: width .6s; }
+.hw-facts { display: flex; gap: 12px; margin-top: 7px; color: var(--text-2); font-size: 12px; font-variant-numeric: tabular-nums; }
+.hw-facts .hot { color: #fb923c; }
+
+/* ---------------------------------------------------------------- Hintergrund-Auswahl */
+.bgs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; }
+.bgt { position: relative; aspect-ratio: 16 / 9; border-radius: 9px; overflow: hidden; border: 2px solid var(--line); padding: 0; background: #0b0b0f; }
+.bgt img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bgt span { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 4px 3px; font-size: 10px; font-weight: 600; color: #fff;
+  background: linear-gradient(transparent, rgba(0,0,0,.8)); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bgt.neon { background-color: #0b0b0f; background-image: radial-gradient(circle at 50% 0, color-mix(in srgb, var(--accent) 45%, transparent), transparent 70%),
+  linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: auto, 8px 8px, 8px 8px; }
+.bgt.plain { background: #101015; }
+.bgt.own { background: repeating-linear-gradient(45deg, #17171e 0 6px, #1d1d26 6px 12px); }
+.bgt.own span { background: none; top: 0; display: grid; place-items: center; padding: 0 4px; font-size: 10.5px; }
+.bgt:hover { border-color: var(--text-3); }
+.bgt.active { border-color: var(--accent); box-shadow: 0 0 10px var(--accent-glow); }
+
+/* ---------------------------------------------------------------- Lesemodus, Screenshot */
+#reader { width: 26px; height: 26px; border-radius: 7px; display: none; place-items: center; color: var(--text-3); }
+#reader:hover { background: var(--bg-3); color: var(--text); }
+body.can-read #reader { display: grid; }
+
+/* ---------------------------------------------------------------- Normaler Stil */
+body.style-normal { --bg-0: #121318; --bg-1: #17181e; --bg-2: #1c1d24; --bg-3: #272833; --line: #2b2c36; }
+body.style-normal .hud, body.style-normal #gaming, body.style-normal .gaming-card,
+body.style-normal .hwcards, body.style-normal #rail-gaming-only { display: none !important; }
+body.style-normal #brand img { filter: none; }
+body.style-normal .tab.active::after { box-shadow: none; }
+body.style-normal .rail-btn.active::before, body.style-normal .panel-head h1::after { box-shadow: none; }
+body.style-normal .switch input:checked + i, body.style-normal .seg button.active, body.style-normal .accent-btn,
+body.style-normal .pill-btn.on, body.style-normal #omnibox:focus-within { box-shadow: none; }

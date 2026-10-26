@@ -280,6 +280,7 @@ function renderToolbar() {
   star.classList.toggle('on', !!n.bookmarked);
   star.title = n.bookmarked ? 'Lesezeichen entfernen (Strg+D)' : 'Lesezeichen hinzufügen (Strg+D)';
   document.body.classList.toggle('is-private', !!n.private);
+  document.body.classList.toggle('can-read', /^https?:/i.test(n.url || '') && !n.warning);
   document.body.classList.toggle('warn-insecure', n.warning === 'insecure');
   document.body.classList.toggle('warn-danger', n.warning === 'danger');
   const ns = $('#notsecure');
@@ -305,6 +306,16 @@ function renderToolbar() {
   $('#update-pill').hidden = u.state !== 'ready';
 }
 $('#dl-btn').addEventListener('click', () => gx.cmd('openInternal', 'downloads'));
+$('#shot').addEventListener('click', () => gx.cmd('screenshot', false));
+$('#shot').addEventListener('contextmenu', (e) => { e.preventDefault(); gx.cmd('screenshot', true); });
+$('#reader').addEventListener('click', () => gx.cmd('reader'));
+$('#backup').addEventListener('click', () => gx.cmd('backup'));
+$('#restore').addEventListener('click', () => gx.cmd('restore'));
+document.querySelectorAll('.bgt').forEach(b => b.addEventListener('click', () => {
+  const bg = b.dataset.bg;
+  if (bg === 'eigenes' && (!state.settings.hasUserBg || state.settings.background === 'eigenes')) gx.cmd('chooseBg');
+  else gx.cmd('setSetting', 'background', bg);
+}));
 $('#ext-btn').addEventListener('click', () => gx.cmd('openInternal', 'extensions'));
 $('#update-pill').addEventListener('click', () => gx.cmd('updateInstall'));
 
@@ -491,6 +502,16 @@ $('#update-install').addEventListener('click', () => gx.cmd('updateInstall'));
 $('#update-url-save').addEventListener('click', () => gx.cmd('setSetting', 'updateUrl', $('#update-url').value.trim()));
 $('#update-url').addEventListener('keydown', (e) => { if (e.key === 'Enter') gx.cmd('setSetting', 'updateUrl', $('#update-url').value.trim()); });
 
+function renderStyle() {
+  const normal = state.settings.style === 'normal';
+  document.body.classList.toggle('style-normal', normal);
+  $('.panel-head h1').textContent = normal ? 'Einstellungen' : 'GX Control';
+  $('.panel-head p').textContent = normal ? 'Alles, was du an Elektron GX einstellen kannst.' : 'Halte den Browser klein, damit dein Spiel die Leistung bekommt.';
+  const gxBtn = document.querySelector('.rail-btn[data-panel="gx"]');
+  if (gxBtn) gxBtn.title = normal ? 'Einstellungen' : 'GX Control';
+  document.querySelectorAll('.bgt').forEach(b => b.classList.toggle('active', b.dataset.bg === state.settings.background));
+}
+
 function renderProtect() {
   const p = state.protect || {};
   const l = p.lists || {};
@@ -619,6 +640,7 @@ gx.on('stats', (st) => {
     ? `Blockiert Werbung, Tracker, Popups und Cookie-Banner – bisher ${st.blocked.toLocaleString('de-AT')} Anfragen gestoppt.`
     : 'Blockiert Werbung, Tracker, Werbe-Popups und Cookie-Banner.';
   if (!state || state.panel !== 'gx') return;
+  renderHw(st.hw);
   $('#m-ram').textContent = fmtMB(st.ram);
   $('#m-cpu').textContent = st.cpu.toFixed(1).replace('.', ',') + ' %';
   $('#n-tabs').textContent = st.tabs;
@@ -628,6 +650,29 @@ gx.on('stats', (st) => {
   drawSpark($('#c-ram'), hist.ram, Math.max(...hist.ram, 256), s.ramLimit.enabled ? s.ramLimit.mb : 0);
   drawSpark($('#c-cpu'), hist.cpu, Math.max(...hist.cpu, 10), s.cpuLimit.enabled ? s.cpuLimit.percent : 0);
 });
+
+// ---------------------------------------------------------------- Hardware
+function renderHw(hw) {
+  const box = $('#hwcards');
+  box.hidden = !hw;
+  if (!hw) return;
+  const g = hw.gpu;
+  $('#hw-gpu').hidden = !g;
+  if (g) {
+    $('#gpu-util').textContent = g.util != null ? Math.round(g.util) + ' %' : '–';
+    $('#gpu-name').textContent = (g.name || '').replace(/^NVIDIA\s+/, '');
+    $('#gpu-bar').style.width = (g.util || 0) + '%';
+    const t = $('#gpu-temp');
+    t.textContent = g.temp != null ? Math.round(g.temp) + ' °C' : '';
+    t.classList.toggle('hot', g.temp >= 80);
+    $('#gpu-mem').textContent = g.memUsed != null ? `${(g.memUsed / 1024).toFixed(1).replace('.', ',')}/${(g.memTotal / 1024).toFixed(0)} GB VRAM` : '';
+    $('#gpu-power').textContent = g.power != null ? Math.round(g.power) + ' W' : '';
+  }
+  $('#pc-cpu').textContent = hw.cpu != null ? Math.round(hw.cpu) + ' %' : '–';
+  $('#pc-name').textContent = (hw.cpuName || '').replace(/\(R\)|\(TM\)|CPU|@.*$/g, '').replace(/\s+/g, ' ').trim();
+  $('#pc-bar').style.width = (hw.cpu || 0) + '%';
+  $('#pc-ram').textContent = `RAM ${fmtMB(hw.ramUsed)} von ${fmtMB(hw.ramTotal)}`;
+}
 
 // ---------------------------------------------------------------- Zustand
 gx.on('state', (s) => {
@@ -642,4 +687,5 @@ gx.on('state', (s) => {
   renderBookmarkBar();
   renderUpdates();
   renderProtect();
+  renderStyle();
 });

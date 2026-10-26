@@ -105,3 +105,48 @@ footer { position: relative; text-align: center; padding: 14px 16px 18px; color:
 body.private { --accent: #a855f7; }
 body.private .glow { background: radial-gradient(closest-side, rgba(124, 58, 237, .28), transparent); }
 body.private #greeting { color: #d8b4fe; }
+
+/* ---------------------------------------------------------------- Hintergründe */
+body { --bg-image: none; }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--bg-image) center / cover no-repeat;
+}
+body:not(.bg-neon) { background-image: none; }
+body:not(.bg-neon) .glow { display: none; }
+body.bg-nebel::after, body.bg-galaxie::after, body.bg-berge::after, body.bg-aurora::after, body.bg-wellen::after, body.bg-eigenes::after {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(8, 8, 11, .25), rgba(8, 8, 11, .55) 55%, rgba(8, 8, 11, .8));
+}
+body.bg-schlicht { background-color: #101015; }
+.dial, .search { backdrop-filter: blur(10px); }
+
+/* ---------------------------------------------------------------- Normaler Stil */
+body.style-normal { --bg: #111318; }
+body.style-normal h1 { font-weight: 700; letter-spacing: 0; }
+body.style-normal h1 span { color: var(--text); text-shadow: none; font-weight: 400; }
+body.style-normal .logo { filter: none; }
+body.style-normal .search:focus-within { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent); }
+body.style-normal .dial:hover { box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+body.style-normal .dial::before { display: none; }
+
+/* ---------------------------------------------------------------- Steam-Spiele */
+.games-wrap { padding-bottom: 28px; }
+.games-wrap[hidden] { display: none; }
+#games { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.game {
+  position: relative; display: block; padding: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; cursor: pointer;
+  background: rgba(21,21,28,.88); aspect-ratio: 460 / 215; color: var(--text); font: inherit; text-align: left;
+  transition: transform .15s, border-color .15s, box-shadow .15s;
+}
+.game::before { content: attr(data-initial); position: absolute; inset: 0; display: grid; place-items: center; padding-bottom: 18px;
+  font: 800 46px/1 "Segoe UI", system-ui, sans-serif; color: hsla(var(--hue, 0), 80%, 75%, .55);
+  background: linear-gradient(135deg, hsla(var(--hue, 0), 70%, 32%, .9), hsla(calc(var(--hue, 0) + 40), 60%, 14%, .95)); }
+.game img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.game span { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 12px 9px; font-size: 13px; font-weight: 600;
+  background: linear-gradient(transparent, rgba(0,0,0,.85)); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.game i { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%;
+  display: grid; place-items: center; font-style: normal; font-size: 16px; color: #fff; background: var(--accent);
+  box-shadow: 0 0 18px var(--accent); opacity: 0; transform: scale(.8); transition: all .15s; }
+.game:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+.game:hover i { opacity: 1; transform: scale(1); }

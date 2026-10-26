@@ -1,0 +1,24 @@
+body { --rs: 19px; background: #121216; }
+body.light { background: #f6f2ea; color: #1f1d1a; --text-2: #4a453e; --text-3: #7a7266; --line: #e2dccf; }
+.bar { position: sticky; top: 0; max-width: 100%; box-sizing: border-box; display: flex; align-items: center; gap: 6px; padding: 10px 18px; background: inherit; border-bottom: 1px solid var(--line); z-index: 1; }
+.bar a { color: var(--text-2); text-decoration: none; font-size: 14px; }
+.bar a:hover { color: var(--accent); }
+.bar .spacer { flex: 1; }
+.bar button { min-width: 38px; height: 32px; border-radius: 8px; border: 1px solid var(--line); background: none; color: inherit; font: 600 14px/1 "Segoe UI", system-ui, sans-serif; padding: 0 10px; cursor: pointer; }
+.bar button:hover { border-color: var(--accent); }
+#art { width: min(720px, 100% - 40px); margin: 0 auto; padding: 40px 0 120px; font: var(--rs)/1.75 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+.site { margin: 0 0 8px; color: var(--accent); font: 700 13px/1.4 "Segoe UI", system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+h1 { margin: 0 0 10px; font: 800 clamp(28px, 4vw, 40px)/1.2 "Segoe UI", system-ui, sans-serif; }
+.by { margin: 0 0 30px; color: var(--text-3); font: 14px/1.5 "Segoe UI", system-ui, sans-serif; }
+#content img, #content video, #content figure { max-width: 100%; height: auto; border-radius: 8px; }
+#content figure { margin: 24px 0; }
+#content figcaption { color: var(--text-3); font-size: .8em; }
+#content a { color: var(--accent); }
+#content pre, #content code { font-family: ui-monospace, Consolas, monospace; font-size: .85em; }
+#content pre { overflow-x: auto; padding: 14px; border-radius: 8px; background: rgba(127,127,127,.12); }
+#content blockquote { margin: 20px 0; padding-left: 18px; border-left: 3px solid var(--accent); color: var(--text-2); }
+#content h2, #content h3 { font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.3; margin-top: 1.6em; }
+#content table { border-collapse: collapse; width: 100%; font-size: .85em; }
+#content td, #content th { border: 1px solid var(--line); padding: 6px 8px; }
+#content article, #content section { margin: 0; padding: 0; }
+#content > div > h1:first-child, #content > h1:first-child { font: 700 1.5em/1.3 "Segoe UI", system-ui, sans-serif; }
