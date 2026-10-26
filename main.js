@@ -15,6 +15,7 @@ const os = require('os');
 const { pathToFileURL } = require('url');
 const { createStore } = require('./store');
 const extmod = require('./extensions');
+const protect = require('./protect');
 
 const APP_NAME = 'Elektron GX';
 const PARTITION = 'persist:elektron';
@@ -54,6 +55,10 @@ const DEFAULTS = {
   autoPip: true,
   showBookmarkBar: true,
   welcomeDone: false,
+  welcomeVersion: 0,
+  httpsOnly: true,
+  phishingProtect: true,
+  scanDownloads: true,
   autoUpdate: true,
   updateUrl: '',
   freezeOnMinimize: true,
@@ -109,6 +114,8 @@ if (settings.unlockFps) {
   app.commandLine.appendSwitch('disable-frame-rate-limit');
   app.commandLine.appendSwitch('disable-gpu-vsync');
 }
+
+if (process.env.ELEKTRON_HOSTMAP) app.commandLine.appendSwitch('host-resolver-rules', process.env.ELEKTRON_HOSTMAP);
 
 protocol.registerSchemesAsPrivileged([
   { scheme: 'elektron', privileges: { standard: true, secure: true, supportFetchAPI: true } }
@@ -168,7 +175,7 @@ function toURL(text) {
 
 function displayURL(url) {
   if (!url) return '';
-  if (url.startsWith('elektron://start/error')) {
+  if (/^elektron:\/\/start\/(error|blocked|insecure)\.html/.test(url)) {
     try { return new URL(url).searchParams.get('u') || ''; } catch { return ''; }
   }
   if (url.startsWith('elektron://start')) return '';
@@ -208,7 +215,8 @@ function snapshot() {
     splitDragging,
     nav: a ? {
       url: displayURL(a.url),
-      isStart: a.url.startsWith('elektron://start') && !a.url.startsWith('elektron://start/error'),
+      isStart: a.url.startsWith('elektron://start') && !/^elektron:\/\/start\/(error|blocked|insecure)\.html/.test(a.url),
+      warning: /^elektron:\/\/start\/blocked\.html/.test(a.url) ? 'danger' : /^elektron:\/\/start\/insecure\.html/.test(a.url) || /^http:/i.test(a.url) ? 'insecure' : null,
       canGoBack: wc ? wc.navigationHistory.canGoBack() : false,
       canGoForward: wc ? wc.navigationHistory.canGoForward() : false,
       loading: a.loading,
@@ -221,6 +229,7 @@ function snapshot() {
     } : null,
     bookmarks: settings.showBookmarkBar ? store.bookmarks().slice(0, 60).map(b => ({ id: b.id, title: b.title, url: b.url })) : [],
     downloads: downloadSummary(),
+    protect: { lists: protect.status(), defender: !!protect.defenderPath() },
     update,
     panel,
     gamingMode,
@@ -232,6 +241,7 @@ function snapshot() {
       adblock: settings.adblock, ytSkip: settings.ytSkip,
       camera: settings.camera, mic: settings.mic, autoPip: settings.autoPip,
       showBookmarkBar: settings.showBookmarkBar, autoUpdate: settings.autoUpdate,
+      httpsOnly: settings.httpsOnly, phishingProtect: settings.phishingProtect, scanDownloads: settings.scanDownloads,
       updateUrl: effectiveUpdateUrl(),
       freezeOnMinimize: settings.freezeOnMinimize,
       clearOnExit: settings.clearOnExit, restoreSession: settings.restoreSession,
@@ -743,6 +753,7 @@ function wireWebContents(wc, tab) {
     return { action: 'deny' };
   });
 
+  try { wc.setWebRTCIPHandlingPolicy('default_public_interface_only'); } catch {}
   wc.on('before-input-event', (e, input) => { if (handleShortcut(input)) e.preventDefault(); });
   wc.on('context-menu', (e, p) => showContextMenu(wc, p, tab));
   wc.on('dom-ready', () => injectYouTubeSkipper(wc));
@@ -770,6 +781,8 @@ function wireWebContents(wc, tab) {
   wc.on('did-start-loading', () => { tab.loading = true; pushState(); });
   wc.on('did-stop-loading', () => { tab.loading = false; pushState(); });
   wc.on('did-navigate', (e, url) => {
+    if (/^https:/i.test(url)) upgraded.delete(wc.id);
+    pendingBlock.delete(wc.id);
     tab.url = url;
     tab.favicon = url.startsWith('elektron:') ? null : tab.favicon;
     if (!tab.private) store.addVisit(url, wc.getTitle());
@@ -785,7 +798,9 @@ function wireWebContents(wc, tab) {
     if (wc.getURL().startsWith('elektron://start')) applyAccentToStart(wc);
   });
   wc.on('did-fail-load', (e, code, desc, url, isMain) => {
-    if (!isMain || code === -3 || url.startsWith('elektron:')) return;
+    if (!isMain) return;
+    if (handleProtectedFailure(wc, code, url)) return;
+    if (code === -3 || url.startsWith('elektron:')) return;
     const err = `elektron://start/error.html?u=${encodeURIComponent(url)}&c=${code}&d=${encodeURIComponent(desc)}`;
     wc.loadURL(err);
   });
@@ -1128,6 +1143,7 @@ function enableAdblockOn(ses) {
   ipcMain.removeHandler('@ghostery/adblocker/is-mutation-observer-enabled');
   try { blocker.enableBlockingInSession(ses); adblockSessions.add(ses); }
   catch (e) { console.warn('Werbeblocker-Sitzung:', e.message); }
+  installRequestFilter(ses);
 }
 function enableAdblockAll() {
   enableAdblockOn(mainSes);
@@ -1136,12 +1152,75 @@ function enableAdblockAll() {
 function disableAdblockAll() {
   for (const ses of adblockSessions) { try { blocker.disableBlockingInSession(ses); } catch {} }
   adblockSessions.clear();
+  reinstallRequestFilters();
 }
 
 function setAdblock(on) {
   settings.adblock = on;
   if (blocker) { if (on) enableAdblockAll(); else disableAdblockAll(); }
   else if (on) initAdblock();
+  reinstallRequestFilters();
+}
+
+// ------------------------------------------------------------------ Schutz: Phishing-/Malware-Sperre und HTTPS
+// Electron erlaubt nur EINEN onBeforeRequest-Listener pro Sitzung – daher prüft dieser Filter zuerst
+// auf gefährliche Seiten und HTTPS und gibt danach an den Werbeblocker weiter.
+const pendingBlock = new Map();   // webContents-ID -> { url, kind }
+const upgraded = new Map();       // webContents-ID -> ursprüngliche http-Adresse
+const allowDanger = new Set();    // Hosts, die der Nutzer trotz Warnung öffnen will (bis zum Neustart)
+const allowHttp = new Set();      // Hosts, die nur unverschlüsselt erreichbar sind und erlaubt wurden
+
+function hostOf(url) { try { return new URL(url).hostname.toLowerCase(); } catch { return ''; } }
+
+function requestFilter(ses) {
+  return (details, cb) => {
+    const type = details.resourceType;
+    const url = details.url;
+    if ((type === 'mainFrame' || type === 'subFrame') && /^https?:/i.test(url)) {
+      const host = hostOf(url);
+      if (settings.phishingProtect && !allowDanger.has(host)) {
+        const kind = protect.check(url);
+        if (kind) {
+          if (type === 'mainFrame' && details.webContentsId) pendingBlock.set(details.webContentsId, { url, kind });
+          countBlocked();
+          return cb({ cancel: true });
+        }
+      }
+      if (type === 'mainFrame' && settings.httpsOnly && /^http:/i.test(url) && !protect.isLocalHost(host) && !allowHttp.has(host)) {
+        if (details.webContentsId) upgraded.set(details.webContentsId, url);
+        return cb({ redirectURL: 'https:' + url.slice(5) });
+      }
+    }
+    if (blocker && adblockSessions.has(ses)) return blocker.onBeforeRequest(details, cb);
+    cb({});
+  };
+}
+
+function installRequestFilter(ses) {
+  if (!ses) return;
+  ses.webRequest.onBeforeRequest({ urls: ['<all_urls>'] }, requestFilter(ses));
+}
+
+function reinstallRequestFilters() {
+  installRequestFilter(mainSes);
+  if (privateSes) installRequestFilter(privateSes);
+}
+
+// Wird bei einem fehlgeschlagenen Laden im Hauptrahmen aufgerufen; true = selbst behandelt
+function handleProtectedFailure(wc, code, url) {
+  const blocked = pendingBlock.get(wc.id);
+  if (blocked && code === -20) {
+    pendingBlock.delete(wc.id);
+    wc.loadURL(`elektron://start/blocked.html?u=${encodeURIComponent(blocked.url)}&k=${blocked.kind}`);
+    return true;
+  }
+  const original = upgraded.get(wc.id);
+  if (original && /^https:/i.test(url) && hostOf(url) === hostOf(original) && ![-3, -105, -106, -20].includes(code)) {
+    upgraded.delete(wc.id);
+    wc.loadURL(`elektron://start/insecure.html?u=${encodeURIComponent(original)}&c=${code}`);
+    return true;
+  }
+  return false;
 }
 
 // ------------------------------------------------------------------ Einstellungen aus der UI
@@ -1161,6 +1240,9 @@ function setSetting(key, value) {
     case 'netLimit.kbs': settings.netLimit.kbs = clamp(value, 64, 1024 * 1024); if (settings.netLimit.enabled) allWebContents().forEach(applyNetLimit); break;
     case 'adblock': setAdblock(!!value); break;
     case 'ytSkip': settings.ytSkip = !!value; break;
+    case 'httpsOnly': settings.httpsOnly = !!value; break;
+    case 'phishingProtect': settings.phishingProtect = !!value; break;
+    case 'scanDownloads': settings.scanDownloads = !!value; break;
     case 'showBookmarkBar': settings.showBookmarkBar = !!value; hideSuggest(); layout(); break;
     case 'autoUpdate': settings.autoUpdate = !!value; break;
     case 'updateUrl': {
@@ -1409,6 +1491,7 @@ function configureSession(ses) {
   try { ses.setSpellCheckerLanguages(['de-DE', 'en-US']); } catch {}
   ses.setPermissionRequestHandler(handlePermission);
   ses.on('will-download', onWillDownload);
+  installRequestFilter(ses);
 }
 
 function setupSession() {
@@ -1428,6 +1511,13 @@ function ensurePrivateSession() {
 let dlBroadcastTimer = null;
 
 function onWillDownload(e, item) {
+  const danger = settings.phishingProtect ? protect.check(item.getURL()) : null;
+  if (danger && !allowDanger.has(hostOf(item.getURL()))) {
+    item.cancel();
+    countBlocked();
+    toast(`Download blockiert: ${hostOf(item.getURL())} verteilt bekannte Schadsoftware`);
+    return;
+  }
   const dir = app.getPath('downloads');
   const name = item.getFilename() || 'download';
   const ext = path.extname(name);
@@ -1457,10 +1547,27 @@ function onWillDownload(e, item) {
       state: st, received: item.getReceivedBytes(),
       total: item.getTotalBytes() || item.getReceivedBytes(), speed: 0
     }, true);
-    if (st === 'completed') toast(`Download fertig: ${rec.name}`, { action: 'Im Ordner zeigen', cmd: 'openDownload', arg: id });
-    else if (st === 'failed') toast(`Download fehlgeschlagen: ${rec.name}`);
+    if (st === 'completed') {
+      if (settings.scanDownloads && protect.defenderPath()) scanDownload(id, rec.name, item.getSavePath());
+      else toast(`Download fertig: ${rec.name}`, { action: 'Im Ordner zeigen', cmd: 'openDownload', arg: id });
+    } else if (st === 'failed') toast(`Download fehlgeschlagen: ${rec.name}`);
     broadcastDownloads();
   });
+  broadcastDownloads();
+}
+
+async function scanDownload(id, name, file) {
+  store.updateDownload(id, { scan: 'scanning' }, true);
+  broadcastDownloads();
+  const result = await protect.scanFile(file);
+  if (result === 'threat') {
+    store.updateDownload(id, { scan: 'threat', state: 'virus' }, true);
+    toast(`Virus gefunden in ${name} – Windows Defender hat die Datei entfernt`);
+  } else {
+    store.updateDownload(id, { scan: result }, true);
+    toast(result === 'clean' ? `${name} ist fertig – kein Virus gefunden` : `Download fertig: ${name}`,
+      { action: 'Im Ordner zeigen', cmd: 'openDownload', arg: id });
+  }
   broadcastDownloads();
 }
 
@@ -1622,10 +1729,20 @@ ipcMain.handle('internal', async (e, name, ...args) => {
     case 'downloads.remove': store.removeDownload(String(args[0])); broadcastDownloads(); return true;
     case 'downloads.clear': store.clearDownloads(); broadcastDownloads(); return true;
     case 'downloads.folder': shell.openPath(app.getPath('downloads')); return true;
+    case 'protect.allow': {
+      const h = hostOf(String(args[0]));
+      if (h) allowDanger.add(h);
+      return true;
+    }
+    case 'protect.allowHttp': {
+      const h = hostOf(String(args[0]));
+      if (h) allowHttp.add(h);
+      return true;
+    }
     case 'ext.list': return extmod.list();
     case 'welcome.state': return Object.keys(extmod.RECOMMENDED).map(id => ({ id, installed: extmod.isInstalled(id) }));
     case 'welcome.install': return extmod.installRecommended(String(args[0]));
-    case 'welcome.done': settings.welcomeDone = true; saveSettings(); return true;
+    case 'welcome.done': settings.welcomeDone = true; settings.welcomeVersion = 2; saveSettings(); return true;
     case 'welcome.store': extmod.openStore(String(args[0] || '')); return true;
     case 'ext.remove': return extmod.remove(String(args[0]));
     case 'ext.loadUnpacked': return extmod.loadUnpacked();
@@ -1775,6 +1892,7 @@ function setUpdate(patch) {
 }
 
 function setupUpdater() {
+  if (process.windowsStore) { setUpdate({ state: 'store' }); return; } // Updates kommen über den Microsoft Store
   if (!app.isPackaged || process.platform !== 'win32') { setUpdate({ state: 'dev' }); return; }
   try {
     ({ autoUpdater } = require('electron-updater'));
@@ -1924,8 +2042,12 @@ app.whenReady().then(async () => {
   } catch (e) { console.warn('Erweiterungen:', e.message); }
   createWindow();
   markWindowReady();
-  if (!settings.welcomeDone && !process.env.ELEKTRON_TEST) openInternal('welcome');
+  // Willkommensseite: beim ersten Start und einmal nach Updates mit neuen Empfehlungen (Version 2: Malwarebytes)
+  if (!process.env.ELEKTRON_TEST && (!settings.welcomeDone || ((settings.welcomeVersion || 0) < 2 && !extmod.isInstalled('ihcjicgdanjaechkgeegckofjjedodee')))) {
+    openInternal('welcome');
+  }
   initAdblock();
+  protect.start((url, opts) => net.fetch(url, opts));
   setupUpdater();
   setInterval(tick, 1000);
   if (process.env.ELEKTRON_TEST) {
@@ -2005,6 +2127,29 @@ app.whenReady().then(async () => {
           const t = activeTab();
           t.view.webContents.executeJavaScript("document.getElementById('go').click()");
         }, 1500);
+      }
+      if (process.env.ELEKTRON_TEST === 'phish') {
+        protect.addTestHost('phishing', 'evil-login.example');
+        navigate('https://evil-login.example/konto/login');
+        setTimeout(() => console.log('PHISH-URL', activeTab().view.webContents.getURL()), 3000);
+      }
+      if (process.env.ELEKTRON_TEST === 'http' || process.env.ELEKTRON_TEST === 'http2') {
+        require('http').createServer((q, r) => { r.setHeader('content-type', 'text/html; charset=utf-8'); r.end('<!doctype html><title>Alte Seite</title><body style="font:22px sans-serif;padding:40px">Unverschlüsselte Testseite</body>'); }).listen(8765, '127.0.0.1');
+        navigate('http://insecure.test:8765/');
+        setTimeout(async () => {
+          const wc = activeTab().view.webContents;
+          console.log('HTTP-STEP1', wc.getURL());
+          if (process.env.ELEKTRON_TEST === 'http2') {
+            await wc.executeJavaScript("document.getElementById('proceed').click()");
+            setTimeout(() => console.log('HTTP-STEP2', wc.getURL(), activeTab().title), 2500);
+          }
+        }, 7000);
+      }
+      if (process.env.ELEKTRON_TEST === 'adtest') {
+        let hits = [];
+        require('http').createServer((q, r) => { hits.push(q.headers.host + q.url); r.setHeader('content-type', 'text/html'); r.end('<!doctype html><title>Ad-Test</title><script src="http://ads.doubleclick.net:8766/tag/js/gpt.js"></script><img src="http://tracker-friendly.example:8766/ok.png">'); }).listen(8766, '127.0.0.1');
+        setTimeout(() => navigate('http://127.0.0.1:8766/'), 6000);
+        setTimeout(() => console.log('ADTEST adblock=' + !!blocker, JSON.stringify(hits)), 10000);
       }
       if (process.env.ELEKTRON_TEST === 'privacy') {
         togglePanel('gx');

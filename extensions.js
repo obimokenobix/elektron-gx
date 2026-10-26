@@ -199,6 +199,7 @@ async function loadUnpacked() {
 
 // Empfohlene Erweiterungen (Willkommensseite) – nur diese IDs dürfen direkt installiert werden
 const RECOMMENDED = {
+  ihcjicgdanjaechkgeegckofjjedodee: 'Malwarebytes Browser Guard',
   nngceckbapebfimnlniiiahkandclblb: 'Bitwarden',
   gomekmidlodglbbmalcneegieacbdmki: 'Avast Online Security & Privacy'
 };

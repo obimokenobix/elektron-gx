@@ -1,0 +1,24 @@
+# Baut das Paket für den Microsoft Store (.appx) – per Hand starten unter Actions → "Microsoft Store" → "Run workflow".
+# Vorher in package.json unter build.appx die Werte aus dem Partner Center eintragen:
+#   identityName, publisher (CN=…), publisherDisplayName
+name: Microsoft Store
+
+on:
+  workflow_dispatch:
+
+jobs:
+  appx:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Store-Paket bauen
+        run: npx electron-builder --win appx --publish never
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Elektron-GX-Microsoft-Store
+          path: dist/*.appx

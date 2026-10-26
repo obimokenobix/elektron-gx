@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'">
+  <title>Keine sichere Verbindung</title>
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="warn.css">
+</head>
+<body class="insecure">
+  <div class="box">
+    <div class="sign"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg></div>
+    <h1>Diese Seite ist nicht verschlüsselt</h1>
+    <div class="host" id="host"></div>
+    <p>Die Seite unterstützt keine sichere Verbindung (HTTPS). Andere im selben Netzwerk – etwa in einem öffentlichen WLAN – könnten mitlesen, was du hier siehst und eingibst.</p>
+    <p><b>Gib hier keine Passwörter, Bank- oder Kartendaten ein.</b></p>
+    <div class="actions">
+      <button class="btn primary big" id="back" type="button">Zurück</button>
+      <button class="btn big" id="proceed" type="button">Unverschlüsselt öffnen</button>
+    </div>
+    <p class="src">HTTPS-Modus · in GX Control unter „Schutz“ abschaltbar</p>
+  </div>
+  <script src="warn.js"></script>
+</body>
+</html>

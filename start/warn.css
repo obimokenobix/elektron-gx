@@ -1,0 +1,22 @@
+body { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+body.danger { background: radial-gradient(900px 500px at 50% 0%, rgba(220, 38, 38, .28), transparent 70%), #120708; }
+body.insecure { background: radial-gradient(900px 500px at 50% 0%, rgba(245, 158, 11, .2), transparent 70%), #0f0c07; }
+.box { width: min(640px, 100%); text-align: center; }
+.sign { width: 92px; height: 92px; margin: 0 auto 18px; border-radius: 26px; display: grid; place-items: center; }
+.danger .sign { background: #dc2626; box-shadow: 0 0 40px rgba(220, 38, 38, .55); }
+.insecure .sign { background: #d97706; box-shadow: 0 0 40px rgba(217, 119, 6, .45); }
+.sign svg { width: 52px; height: 52px; fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+h1 { margin: 0 0 12px; font-size: 30px; font-weight: 800; }
+.host { display: inline-block; margin: 0 0 18px; padding: 6px 12px; border-radius: 8px; background: rgba(255,255,255,.07); font: 600 15px/1.4 ui-monospace, Consolas, monospace; word-break: break-all; }
+p { color: var(--text-2); font-size: 15.5px; line-height: 1.6; margin: 0 auto 10px; max-width: 560px; }
+ul { text-align: left; color: var(--text-2); font-size: 14.5px; line-height: 1.7; margin: 14px auto 0; max-width: 480px; }
+.actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+.btn.big { height: 46px; padding: 0 24px; font-size: 15px; border-radius: 12px; }
+.danger .btn.primary { background: #dc2626; border-color: #dc2626; box-shadow: none; }
+.insecure .btn.primary { background: #d97706; border-color: #d97706; }
+details { margin-top: 26px; color: var(--text-3); font-size: 13.5px; }
+details summary { cursor: pointer; }
+details p { font-size: 13.5px; color: var(--text-3); margin-top: 10px; }
+.risk { margin-top: 12px; background: none; border: 0; color: #f87171; text-decoration: underline; font: inherit; font-size: 13.5px; cursor: pointer; }
+.insecure .risk { color: #fbbf24; }
+.src { margin-top: 20px; font-size: 12px; color: var(--text-3); }

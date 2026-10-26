@@ -1,0 +1,68 @@
+# Holt jeden Tag die neueste Electron-Version (Chromium-Sicherheitsupdates) innerhalb der
+# aktuellen Hauptversion, erhöht die Versionsnummer von Elektron GX und startet den Release-Build.
+# Alle installierten Browser bekommen das Update danach automatisch.
+name: Chromium-Sicherheitsupdates
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Neueste Electron-Version prüfen
+        id: check
+        run: |
+          CUR=$(node -p "require('./package-lock.json').packages['node_modules/electron'].version")
+          MAJOR=${CUR%%.*}
+          LATEST=$(npm view "electron@^$MAJOR" version --json | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const v=JSON.parse(d);const a=Array.isArray(v)?v:[v];console.log(a.filter(x=>!x.includes('-')).pop())})")
+          NEWEST=$(npm view electron dist-tags.latest)
+          echo "Aktuell: $CUR · neueste $MAJOR.x: $LATEST · neueste überhaupt: $NEWEST"
+          echo "current=$CUR" >> "$GITHUB_OUTPUT"
+          echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
+          echo "newest=$NEWEST" >> "$GITHUB_OUTPUT"
+          if [ "$LATEST" != "$CUR" ]; then echo "update=true" >> "$GITHUB_OUTPUT"; else echo "update=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Electron aktualisieren und Version erhöhen
+        if: steps.check.outputs.update == 'true'
+        run: |
+          npm install --save-dev --save-exact --ignore-scripts "electron@${{ steps.check.outputs.latest }}"
+          npm version patch --no-git-tag-version
+          V=$(node -p "require('./package.json').version")
+          git config user.name "Elektron"
+          git config user.email "noreply@users.noreply.github.com"
+          git commit -am "Sicherheitsupdate $V: Electron ${{ steps.check.outputs.latest }}"
+          git push
+
+      - name: Release-Build starten
+        if: steps.check.outputs.update == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run release.yml --ref main
+
+      - name: Hinweis bei neuer Hauptversion
+        if: steps.check.outputs.newest != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CUR_MAJOR=$(echo "${{ steps.check.outputs.current }}" | cut -d. -f1)
+          NEW_MAJOR=$(echo "${{ steps.check.outputs.newest }}" | cut -d. -f1)
+          if [ "$NEW_MAJOR" -gt "$((CUR_MAJOR + 1))" ]; then
+            TITLE="Neue Electron-Hauptversion $NEW_MAJOR verfügbar"
+            if ! gh issue list --state open --search "$TITLE in:title" --json number -q '.[0].number' | grep -q .; then
+              gh issue create --title "$TITLE" --body "Elektron GX nutzt Electron $CUR_MAJOR. Electron unterstützt nur die drei neuesten Hauptversionen mit Sicherheitsupdates – bitte auf Electron $NEW_MAJOR umsteigen und testen."
+            fi
+          fi

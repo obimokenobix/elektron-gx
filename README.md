@@ -36,7 +36,11 @@
 - **PDF-Anzeige** und **Rechtschreibprüfung** (Deutsch/Englisch)
 - **Chrome-Erweiterungen** aus dem Chrome Web Store (Symbole in der Leiste, Popups, Rechtsklick-Einträge, automatische Updates), Verwaltung unter `elektron://start/extensions.html`
 - **Claude und ChatGPT** in der Seitenleiste
-- **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Bitwarden, Avast Online Security) zum Ankreuzen
+- **Phishing- und Malware-Schutz** mit öffentlichen Sperrlisten (Phishing.Database, URLhaus), Warnseite, auch für Downloads
+- **Nur-HTTPS-Modus** mit Warnseite für unverschlüsselte Seiten
+- **Virenscan für Downloads** mit dem eingebauten Microsoft Defender
+- **Automatische Chromium-Sicherheitsupdates** (`.github/workflows/chromium-update.yml`, täglich)
+- **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Malwarebytes Browser Guard, Bitwarden, optional Avast) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
 ## Tastenkürzel
@@ -100,3 +104,10 @@ Neue Chromium-Sicherheitsupdates kommen durch eine neuere Electron-Version: `npm
 - `ui/` – Browser-Oberfläche (Tabs, Adressleiste, Seitenleiste, GX Control)
 - `start/` – Startseite und Fehlerseite (`elektron://start/`)
 - `assets/` – Logo und Icons
+
+## Microsoft Store
+
+1. Kostenloses Entwicklerkonto unter https://storedeveloper.microsoft.com anlegen und den Namen „Elektron GX“ reservieren.
+2. Im Partner Center unter *Produktidentität* die Werte *Package/Identity/Name*, *Package/Identity/Publisher* und *PublisherDisplayName* in `package.json` → `build.appx` eintragen (`identityName`, `publisher`, `publisherDisplayName`).
+3. Auf GitHub unter *Actions → Microsoft Store → Run workflow* das Paket bauen und die `.appx` aus den Artefakten im Partner Center hochladen.
+4. Datenschutz-Adresse für den Store: https://obimokenobix.github.io/elektron-gx/datenschutz.html

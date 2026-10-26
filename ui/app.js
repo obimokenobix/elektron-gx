@@ -280,6 +280,11 @@ function renderToolbar() {
   star.classList.toggle('on', !!n.bookmarked);
   star.title = n.bookmarked ? 'Lesezeichen entfernen (Strg+D)' : 'Lesezeichen hinzufügen (Strg+D)';
   document.body.classList.toggle('is-private', !!n.private);
+  document.body.classList.toggle('warn-insecure', n.warning === 'insecure');
+  document.body.classList.toggle('warn-danger', n.warning === 'danger');
+  const ns = $('#notsecure');
+  ns.classList.toggle('danger', n.warning === 'danger');
+  ns.textContent = n.warning === 'danger' ? 'Gefährlich' : 'Nicht sicher';
 
   // Downloads-Knopf
   const d = state.downloads || {};
@@ -486,12 +491,25 @@ $('#update-install').addEventListener('click', () => gx.cmd('updateInstall'));
 $('#update-url-save').addEventListener('click', () => gx.cmd('setSetting', 'updateUrl', $('#update-url').value.trim()));
 $('#update-url').addEventListener('keydown', (e) => { if (e.key === 'Enter') gx.cmd('setSetting', 'updateUrl', $('#update-url').value.trim()); });
 
+function renderProtect() {
+  const p = state.protect || {};
+  const l = p.lists || {};
+  const n = (l.phishing ? l.phishing.count : 0) + (l.malware ? l.malware.count : 0);
+  $('#protect-info').textContent = n
+    ? `Blockiert ${n.toLocaleString('de-AT')} bekannte Betrugs- und Virenseiten. Die Liste wird alle 6 Stunden aktualisiert.`
+    : 'Blockiert bekannte Betrugsseiten und Seiten, die Viren verteilen. Die Liste wird gerade geladen …';
+  $('#scan-info').textContent = p.defender
+    ? 'Jede heruntergeladene Datei wird mit dem Windows Defender geprüft.'
+    : 'Prüft Downloads mit dem Windows Defender (auf diesem PC nicht verfügbar).';
+}
+
 function renderUpdates() {
   const u = state.update || {};
   const v = state.versions;
   const texts = {
     idle: `Version ${v.app} · Chromium ${v.chrome}`,
     dev: `Version ${v.app} · Updates gibt es in der installierten Windows-Version.`,
+    store: `Version ${v.app} · Updates kommen automatisch über den Microsoft Store.`,
     nourl: `Version ${v.app} · Noch keine Update-Adresse eingetragen.`,
     checking: 'Suche nach Updates …',
     current: `Version ${v.app} ist aktuell.`,
@@ -623,4 +641,5 @@ gx.on('state', (s) => {
   renderSplit();
   renderBookmarkBar();
   renderUpdates();
+  renderProtect();
 });
