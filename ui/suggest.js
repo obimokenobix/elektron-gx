@@ -28,7 +28,7 @@ suggestApi.onItems(({ items, selected, query, accent }) => {
     else if (it.kind === 'bookmark') ic.innerHTML = ICON.star;
     else {
       const img = new Image();
-      img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host(it.url))}&sz=32`;
+      img.src = `favicon?host=${encodeURIComponent(host(it.url))}`;
       img.onerror = () => { ic.innerHTML = ICON.history; };
       ic.appendChild(img);
     }

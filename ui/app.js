@@ -270,9 +270,10 @@ function renderToolbar() {
   const z = $('#zoom');
   z.classList.toggle('show', n.zoom && n.zoom !== 100);
   z.textContent = (n.zoom || 100) + ' %';
+  address.placeholder = `Mit ${state.settings.searchEngineName || 'Google'} suchen oder Adresse eingeben`;
   const sh = $('#shield');
   sh.classList.toggle('on', state.settings.adblock && state.adblockReady);
-  sh.title = state.settings.adblock ? (state.adblockReady ? 'Werbeblocker aktiv' : 'Werbeblocker lädt Filterlisten …') : 'Werbeblocker aus';
+  sh.title = 'Schutz für diese Seite (klicken)';
   const g = $('#gaming');
   g.classList.toggle('on', state.gamingMode);
   const star = $('#star');
@@ -346,7 +347,7 @@ function renderBookmarkBar() {
     btn.dataset.id = b.id;
     btn.title = `${b.title}\n${b.url}`;
     const img = new Image();
-    img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostOf(b.url))}&sz=32`;
+    img.src = `favicon?host=${encodeURIComponent(hostOf(b.url))}`;
     img.onerror = () => { const s = document.createElement('span'); s.className = 'letter'; s.textContent = (hostOf(b.url)[0] || '?').toUpperCase(); img.replaceWith(s); requestAnimationFrame(fitBookmarks); };
     img.onload = () => requestAnimationFrame(fitBookmarks);
     const t = document.createElement('span');
@@ -450,7 +451,7 @@ gx.on('toast', ({ text, action, cmd, arg }) => {
 document.querySelectorAll('.rail-btn.site').forEach(btn => {
   const img = new Image();
   img.alt = '';
-  img.src = `https://www.google.com/s2/favicons?domain=${btn.dataset.domain}&sz=64`;
+  img.src = `favicon?host=${encodeURIComponent(btn.dataset.domain)}`;
   img.onerror = () => { btn.innerHTML = `<span class="letter">${btn.dataset.letter}</span>`; };
   btn.appendChild(img);
 });
@@ -530,6 +531,9 @@ function renderProtect() {
     ['Sicheres DNS', !!st.secureDns],
     ['Fremd-Cookies blockiert', !!st.blockThirdPartyCookies, p.cookiesBlocked ? `${p.cookiesBlocked.toLocaleString('de-AT')} Tracking-Cookies abgewehrt` : ''],
     ['Fingerprint-Schutz', !!st.fingerprintProtect],
+    ['Links werden gesäubert', !!st.cleanLinks, p.linksCleaned ? `${p.linksCleaned.toLocaleString('de-AT')} Tracking-Links entschärft` : ''],
+    ['IP-Adresse bei WebRTC versteckt', !!st.webrtcProtect],
+    ['„Nicht verkaufen“-Signal (GPC)', !!st.gpc],
     ['Downloads werden geprüft', !!st.scanDownloads && !!p.defender, p.defender ? '' : 'Windows Defender nicht gefunden'],
     ['Programm gehärtet', !!p.hardened, p.hardened ? '' : 'nur in der installierten Version']
   ];
@@ -664,7 +668,8 @@ gx.on('stats', (st) => {
   if (hist.cpu.length > HIST_LEN) hist.cpu.shift();
   $('#hud-cpu').textContent = st.cpu.toFixed(st.cpu < 10 ? 1 : 0).replace('.', ',') + ' %';
   $('#hud-ram').textContent = fmtMB(st.ram);
-  $('#shield-count').textContent = st.blocked ? (st.blocked > 9999 ? Math.round(st.blocked / 1000) + 'k' : st.blocked) : '';
+  $('#shield-count').textContent = st.tabBlocked ? (st.tabBlocked > 999 ? Math.round(st.tabBlocked / 1000) + 'k' : st.tabBlocked) : '';
+  $('#shield').classList.toggle('off-site', !!st.shieldOff);
   $('#adblock-info').textContent = st.blocked
     ? `Blockiert Werbung, Tracker, Popups und Cookie-Banner – bisher ${st.blocked.toLocaleString('de-AT')} Anfragen gestoppt.`
     : 'Blockiert Werbung, Tracker, Werbe-Popups und Cookie-Banner.';
@@ -718,3 +723,5 @@ gx.on('state', (s) => {
   renderProtect();
   renderStyle();
 });
+
+$('#shield').addEventListener('click', () => gx.cmd('shieldMenu'));

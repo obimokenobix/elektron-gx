@@ -116,6 +116,10 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 #shield { display: flex; align-items: center; gap: 4px; padding: 0 6px; height: 24px; border-radius: 6px; color: var(--text-3); font-size: 11.5px; }
 #shield svg { width: 15px; height: 15px; }
 #shield.on { color: var(--accent); }
+#shield { cursor: pointer; }
+#shield:hover { background: rgba(255,255,255,.08); }
+#shield.off-site { color: var(--text-3); opacity: .7; }
+#shield.off-site svg { stroke-dasharray: 3 2; }
 #shield b { font-weight: 600; font-variant-numeric: tabular-nums; }
 
 #toast {
@@ -423,3 +427,5 @@ body.style-normal .pill-btn.on, body.style-normal #omnibox:focus-within { box-sh
 .sec-list li::before { content: "✓"; grid-row: span 2; font-weight: 800; color: #22c55e; }
 .sec-list li.off::before { content: "✕"; color: #ef4444; }
 .sec-list li small { grid-column: 2; font-size: 11.5px; color: var(--text-3, #8a8a96); }
+
+.seg.seg4 button { font-size: 12px; padding-left: 4px; padding-right: 4px; }

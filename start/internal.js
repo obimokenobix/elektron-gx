@@ -22,7 +22,7 @@ window.ui = (() => {
     const h = host(url);
     const img = new Image();
     img.alt = '';
-    img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(h)}&sz=32`;
+    img.src = `favicon?host=${encodeURIComponent(h)}`;
     img.onerror = () => { box.textContent = (h[0] || '?').toUpperCase(); };
     box.appendChild(img);
     return box;

@@ -66,7 +66,63 @@ function isThirdParty(topUrl, reqUrl) {
   return true;
 }
 
+// ---------------------------------------------------------------- Links säubern
+// Tracking-Anhänge, an denen Werbefirmen erkennen, woher du kommst
+const STRIP_PARAMS = new Set([
+  'fbclid', 'gclid', 'gclsrc', 'dclid', 'gbraid', 'wbraid', 'msclkid', 'mc_eid', 'igshid', 'igsh', 'yclid',
+  '_hsenc', '_hsmi', '__hssc', '__hstc', '__hsfp', 'hsctatracking', 'mkt_tok', 'oly_anon_id', 'oly_enc_id',
+  'vero_id', 'vero_conv', 'ttclid', 'twclid', 'li_fat_id', 'rb_clickid', '_openstat', 'srsltid', 'epik',
+  'ga_source', 'ga_medium', 'ga_campaign', 'ga_content', 'ga_term', 'wickedid', 'irclickid', 'ncid', 'sc_cid'
+]);
+const STRIP_PREFIX = ['utm_', 'pk_campaign', 'mtm_'];
+// Nur auf bestimmten Seiten: Teilen-Kennungen
+const STRIP_BY_SITE = { 'youtube.com': ['si', 'pp'], 'youtu.be': ['si'], 'spotify.com': ['si'], 'instagram.com': ['igsh', 'igshid'] };
+
+// Umleitungs-Tracker: Der eigentliche Link steckt im Parameter – direkt dorthin springen
+function bounceTarget(u) {
+  const h = u.hostname.toLowerCase();
+  const q = (k) => u.searchParams.get(k);
+  let t = null;
+  if (/(^|\.)google\.[a-z.]+$/.test(h) && u.pathname === '/url') t = q('q') || q('url');
+  else if ((h === 'l.facebook.com' || h === 'lm.facebook.com') && u.pathname === '/l.php') t = q('u');
+  else if (h === 'l.instagram.com') t = q('u');
+  else if (/(^|\.)youtube\.com$/.test(h) && u.pathname === '/redirect') t = q('q');
+  else if (h === 'out.reddit.com') t = q('url');
+  else if (h === 'away.vk.com' && u.pathname === '/away.php') t = q('to');
+  else if (h === 't.umblr.com' && u.pathname === '/redirect') t = q('z');
+  else if (h === 'href.li') t = u.search.slice(1);
+  // AMP-Seiten über Google → Originalseite
+  else if (/(^|\.)google\.[a-z.]+$/.test(h) && u.pathname.startsWith('/amp/s/')) t = 'https://' + u.pathname.slice(7) + u.search;
+  if (!t) return null;
+  try { const n = new URL(t); return /^https?:$/.test(n.protocol) ? n : null; } catch { return null; }
+}
+
+/** Gibt die gesäuberte Adresse zurück oder null, wenn nichts zu ändern ist. */
+function cleanUrl(url) {
+  let u;
+  try { u = new URL(url); } catch { return null; }
+  if (!/^https?:$/.test(u.protocol)) return null;
+  let changed = false;
+  for (let i = 0; i < 3; i++) {
+    const n = bounceTarget(u);
+    if (!n) break;
+    u = n; changed = true;
+  }
+  if (u.search) {
+    const site = registrable(u.hostname.toLowerCase());
+    const extra = STRIP_BY_SITE[site] || [];
+    for (const k of [...u.searchParams.keys()]) {
+      const kl = k.toLowerCase();
+      if (STRIP_PARAMS.has(kl) || STRIP_PREFIX.some(p => kl.startsWith(p)) || extra.includes(kl)) { u.searchParams.delete(k); changed = true; }
+    }
+  }
+  if (!changed) return null;
+  let out = u.toString();
+  if (out.endsWith('?')) out = out.slice(0, -1);
+  return out === url ? null : out;
+}
+
 // Sicheres DNS: Quad9 (Schweiz) – verschlüsselt DNS-Anfragen und sperrt bekannte Schadsoftware-Domains
 const DOH_SERVERS = ['https://dns.quad9.net/dns-query'];
 
-module.exports = { isThirdParty, siteOf, DOH_SERVERS };
+module.exports = { isThirdParty, siteOf, cleanUrl, DOH_SERVERS };

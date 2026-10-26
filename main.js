@@ -1,5 +1,6 @@
 'use strict';
 process.on('uncaughtException', (e) => { console.error('UNCAUGHT', e && e.stack || e); });
+process.on('unhandledRejection', (e) => { console.error('UNHANDLED', e && e.stack || e); });
 /*
  * Elektron GX – der Gaming-Browser
  * Hauptprozess: Fenster, Tabs, Seitenleiste, GX-Control (RAM-/CPU-/Netzwerk-Limiter),
@@ -17,6 +18,7 @@ const { createStore } = require('./store');
 const extmod = require('./extensions');
 const protect = require('./protect');
 const privacy = require('./privacy');
+const favicons = require('./favicons');
 const extras = require('./extras');
 
 const APP_NAME = 'Elektron GX';
@@ -71,6 +73,12 @@ const DEFAULTS = {
   secureDns: true,
   blockThirdPartyCookies: true,
   fingerprintProtect: true,
+  cleanLinks: true,
+  searchEngine: 'google',   // google | duckduckgo | brave | startpage
+  searchSuggest: true,
+  gpc: true,
+  webrtcProtect: true,
+  preconnect: true,
   autoUpdate: true,
   updateUrl: '',
   freezeOnMinimize: true,
@@ -79,6 +87,7 @@ const DEFAULTS = {
   highPerfGpu: true,
   unlockFps: false,
   blockedTotal: 0,
+  siteShields: {},        // Ausnahmen pro Seite: { 'beispiel.de': { adblock: false, cookies: false, fp: false } }
   permissions: {},
   lastSession: null
 };
@@ -130,8 +139,32 @@ if (settings.unlockFps) {
 if (process.env.ELEKTRON_HOSTMAP) app.commandLine.appendSwitch('host-resolver-rules', process.env.ELEKTRON_HOSTMAP);
 
 protocol.registerSchemesAsPrivileged([
-  { scheme: 'elektron', privileges: { standard: true, secure: true, supportFetchAPI: true } }
+  { scheme: 'elektron', privileges: { standard: true, secure: true, supportFetchAPI: true } },
+  // Die Browser-Oberfläche selbst (Tabs, Adressleiste) – eigenes Protokoll statt file://
+  { scheme: 'elektron-ui', privileges: { standard: true, secure: true } }
 ]);
+
+const UI_DIR = path.join(__dirname, 'ui');
+let uiProtocolReady = false;
+function setupUiProtocol() {
+  if (uiProtocolReady) return;
+  uiProtocolReady = true;
+  // ui/… und die gemeinsam genutzten Bilder (assets/, start/bg/) – sonst nichts
+  const ROOTS = [UI_DIR, path.join(__dirname, 'assets'), path.join(__dirname, 'start', 'bg')];
+  session.defaultSession.protocol.handle('elektron-ui', async (req) => {
+    const u = new URL(req.url);
+    if (u.hostname !== 'app') return new Response('Nicht gefunden', { status: 404 });
+    const rel = decodeURIComponent(u.pathname);
+    if (rel === '/favicon') return favicons.response(req.url);
+    const candidates = [path.normalize(path.join(UI_DIR, rel)), path.normalize(path.join(__dirname, rel))];
+    for (const file of candidates) {
+      if (!ROOTS.some(r => file.startsWith(r + path.sep))) continue;
+      try { return await net.fetch(pathToFileURL(file).toString()); } catch {}
+    }
+    return new Response('Nicht gefunden', { status: 404 });
+  });
+}
+const uiUrl = (name) => 'elektron-ui://app/' + name;
 
 if (!app.requestSingleInstanceLock()) {
   app.quit();
@@ -182,7 +215,7 @@ function toURL(text) {
   if (/^localhost(:\d+)?(\/.*)?$/i.test(text)) return 'http://' + text;
   if (/^\d{1,3}(\.\d{1,3}){3}(:\d+)?(\/.*)?$/.test(text)) return 'http://' + text;
   if (!/\s/.test(text) && /^[^\s/]+\.[a-z]{2,}(:\d+)?(\/.*)?$/i.test(text)) return 'https://' + text;
-  return 'https://www.google.com/search?q=' + encodeURIComponent(text);
+  return searchUrl(text);
 }
 
 function displayURL(url) {
@@ -241,7 +274,7 @@ function snapshot() {
     } : null,
     bookmarks: settings.showBookmarkBar ? store.bookmarks().slice(0, 60).map(b => ({ id: b.id, title: b.title, url: b.url })) : [],
     downloads: downloadSummary(),
-    protect: { lists: protect.status(), defender: !!protect.defenderPath(), cookiesBlocked, hardened: app.isPackaged },
+    protect: { lists: protect.status(), defender: !!protect.defenderPath(), cookiesBlocked, linksCleaned, hardened: app.isPackaged },
     update,
     panel,
     gamingMode,
@@ -257,6 +290,8 @@ function snapshot() {
       showBookmarkBar: settings.showBookmarkBar, autoUpdate: settings.autoUpdate,
       httpsOnly: settings.httpsOnly, phishingProtect: settings.phishingProtect, scanDownloads: settings.scanDownloads,
       secureDns: settings.secureDns, blockThirdPartyCookies: settings.blockThirdPartyCookies, fingerprintProtect: settings.fingerprintProtect,
+      searchEngine: settings.searchEngine, searchEngineName: engine().name, searchSuggest: settings.searchSuggest,
+      cleanLinks: settings.cleanLinks, gpc: settings.gpc, webrtcProtect: settings.webrtcProtect, preconnect: settings.preconnect,
       updateUrl: effectiveUpdateUrl(),
       freezeOnMinimize: settings.freezeOnMinimize,
       clearOnExit: settings.clearOnExit, restoreSession: settings.restoreSession,
@@ -323,6 +358,11 @@ async function setFrozen(tab, frozen, reason) {
   } catch { /* sichtbare Seiten lassen sich nicht einfrieren */ }
 }
 
+// WebRTC (Video-Chat-Technik) darf die lokale/echte IP-Adresse nicht verraten – auch nicht hinter einem VPN
+function applyWebRtcPolicy(wc) {
+  try { if (wc && !wc.isDestroyed()) wc.setWebRTCIPHandlingPolicy(settings.webrtcProtect ? 'default_public_interface_only' : 'default'); } catch {}
+}
+
 async function applyNetLimit(wc) {
   if (!alive(wc)) return;
   const on = settings.netLimit.enabled;
@@ -360,6 +400,7 @@ function newTabView(isPrivate = false) {
       sandbox: true,
       nodeIntegration: false,
       backgroundThrottling: true,
+      nodeIntegrationInSubFrames: true, // nur damit der Schutz (preload-internal.js) auch in iframes läuft – Node bleibt aus (Sandbox)
       spellcheck: true,
       plugins: true // eingebauter PDF-Viewer
     }
@@ -448,6 +489,7 @@ function closeTab(id) {
   if (!tab.url.startsWith(HOME)) closedStack.push({ url: tab.url, title: tab.title, index: idx });
   if (closedStack.length > 25) closedStack.shift();
   tabs.splice(idx, 1);
+  setTimeout(() => forgetIfUnused(tab.url), 1500);
   if (inSplit(id)) {
     const other = split.a === id ? split.b : split.a;
     split = null;
@@ -615,7 +657,7 @@ function floatTab(id) {
     webPreferences: { preload: path.join(__dirname, 'preload-float.js'), contextIsolation: true, sandbox: true }
   });
   bar.setBackgroundColor('#0b0b0f');
-  bar.webContents.loadFile(path.join(__dirname, 'ui', 'float.html'));
+  bar.webContents.loadURL(uiUrl('float.html'));
   bar.webContents.on('will-navigate', (e) => e.preventDefault());
 
   try { win.contentView.removeChildView(tab.view); } catch {}
@@ -752,6 +794,8 @@ function setUserFullscreen(on) {
 
 // ------------------------------------------------------------------ WebContents verdrahten (Tabs & Seitenleiste)
 function wireWebContents(wc, tab) {
+  // Schild-Zähler pro Seite zurücksetzen, sobald eine neue Seite geladen wird
+  if (tab) wc.on('did-start-navigation', (d) => { if (d.isMainFrame && !d.isSameDocument) { tab.shieldAds = 0; tab.shieldCookies = 0; } });
   wc.setWindowOpenHandler(({ url, disposition }) => {
     if (isAdPopup(url, wc.getURL())) { countBlocked(); return { action: 'deny' }; }
     if (disposition === 'new-window') {
@@ -772,10 +816,11 @@ function wireWebContents(wc, tab) {
   wc.on('before-input-event', (e, input) => { if (handleShortcut(input)) e.preventDefault(); });
   wc.on('context-menu', (e, p) => showContextMenu(wc, p, tab));
   wc.on('dom-ready', () => injectYouTubeSkipper(wc));
+  applyWebRtcPolicy(wc);
   // Schneller: Verbindung zum Ziel schon aufbauen, während die Maus auf einem Link liegt
   let lastPre = '';
   wc.on('update-target-url', (e, url) => {
-    if (!url || !/^https?:/i.test(url)) return;
+    if (!url || !/^https?:/i.test(url) || !settings.preconnect || (tab && tab.private)) return;
     let origin = '';
     try { origin = new URL(url).origin; } catch { return; }
     if (origin === lastPre) return;
@@ -800,6 +845,7 @@ function wireWebContents(wc, tab) {
   });
   wc.on('page-favicon-updated', (e, favs) => {
     tab.favicon = favs && favs[0] ? favs[0] : null;
+    if (tab.favicon && !tab.private) favicons.remember(wc.getURL(), tab.favicon);
     if (tab.floating) sendFloatInfo(tab.floating);
     pushState();
   });
@@ -808,7 +854,9 @@ function wireWebContents(wc, tab) {
   wc.on('did-navigate', (e, url) => {
     if (/^https:/i.test(url)) upgraded.delete(wc.id);
     pendingBlock.delete(wc.id);
+    const prevUrl = tab.url;
     tab.url = url;
+    if (siteKey(prevUrl) !== siteKey(url)) setTimeout(() => forgetIfUnused(prevUrl), 1500);
     tab.favicon = url.startsWith('elektron:') ? null : tab.favicon;
     if (!tab.private) store.addVisit(url, wc.getTitle());
     pushState();
@@ -854,7 +902,7 @@ function wireWebContents(wc, tab) {
 const BACKGROUNDS = ['neon', 'schlicht', 'nebel', 'galaxie', 'berge', 'aurora', 'wellen', 'eigenes'];
 const accentNow = () => (settings.style === 'normal' ? settings.accentNormal : settings.accent);
 function lookInfo() {
-  return { accent: accentNow(), style: settings.style, background: settings.background, bgVersion: settings.bgVersion };
+  return { accent: accentNow(), style: settings.style, background: settings.background, bgVersion: settings.bgVersion, search: { name: engine().name, url: engine().url } };
 }
 function applyAccentToStart(wc) {
   if (!alive(wc)) return;
@@ -939,7 +987,7 @@ function showContextMenu(wc, p, tab) {
     const aiName = settings.preferredAI === 'chatgpt' ? 'ChatGPT' : 'Claude';
     t.push(
       { label: 'Kopieren', click: () => wc.copy() },
-      { label: `Mit Google suchen: „${short}“`, click: () => createTab('https://www.google.com/search?q=' + encodeURIComponent(s)) },
+      { label: `Mit ${engine().name} suchen: „${short}“`, click: () => createTab(searchUrl(s)) },
       { label: `Mit ${aiName} erklären`, click: () => openAI('Erkläre mir das bitte einfach und auf Deutsch:\n\n' + s.slice(0, 3000)) },
       { label: 'Übersetzen', click: () => translateText(s) },
       { type: 'separator' }
@@ -1141,7 +1189,9 @@ function tick() {
       tabs: tabs.length,
       frozen: tabs.filter(t => t.frozen).length,
       sleeping: tabs.filter(t => t.discarded).length,
-      blocked: settings.blockedTotal
+      blocked: settings.blockedTotal,
+      tabBlocked: (() => { const a = activeTab(); return a ? (a.shieldAds || 0) + (a.shieldCookies || 0) : 0; })(),
+      shieldOff: (() => { const a = activeTab(); return !!a && /^https?:/i.test(a.url) && !(shieldOn(a.url, 'adblock') && shieldOn(a.url, 'cookies') && shieldOn(a.url, 'fp')); })()
     });
   }
 }
@@ -1168,9 +1218,97 @@ async function initAdblock() {
   }
 }
 
-function countBlocked() {
+function tabByWcId(id) { return id ? tabs.find(t => t.view && !t.view.webContents.isDestroyed() && t.view.webContents.id === id) : null; }
+function countBlocked(request) {
   settings.blockedTotal++;
+  const t = request && tabByWcId(request.tabId);
+  if (t) t.shieldAds = (t.shieldAds || 0) + 1;
   saveSettings();
+}
+
+// ------------------------------------------------------------------ Schutz pro Seite (Schild in der Adressleiste)
+function siteKey(url) { return privacy.siteOf(url) || ''; }
+function shieldOn(url, what) {
+  const k = siteKey(url);
+  const e = k && settings.siteShields ? settings.siteShields[k] : null;
+  return !(e && e[what] === false);
+}
+function setSiteShield(url, what, on) {
+  const k = siteKey(url);
+  if (!k) return;
+  const all = settings.siteShields || (settings.siteShields = {});
+  const e = { ...(all[k] || {}) };
+  for (const w of (what === 'all' ? ['adblock', 'cookies', 'fp'] : [what])) { if (on) delete e[w]; else e[w] = false; }
+  if (Object.keys(e).length) all[k] = e; else delete all[k];
+  saveSettings();
+  const t = activeTab();
+  if (t && t.view && alive(t.view.webContents)) t.view.webContents.reload();
+  pushState();
+}
+function siteFlag(url, what) {
+  const k = siteKey(url);
+  const e = k && settings.siteShields ? settings.siteShields[k] : null;
+  return !!(e && e[what] === true);
+}
+function setSiteFlag(url, what, on) {
+  const k = siteKey(url);
+  if (!k) return;
+  const all = settings.siteShields || (settings.siteShields = {});
+  const e = { ...(all[k] || {}) };
+  if (on) e[what] = true; else delete e[what];
+  if (Object.keys(e).length) all[k] = e; else delete all[k];
+  saveSettings();
+  const t = activeTab();
+  if (what === 'noJs' && t && t.view && alive(t.view.webContents)) t.view.webContents.reload();
+  pushState();
+}
+// „Seite beim Schließen vergessen“: Cookies und Website-Daten löschen, sobald kein Tab mehr auf der Seite ist
+async function forgetIfUnused(url) {
+  if (!/^https?:/i.test(url || '') || !siteFlag(url, 'forget') || !mainSes) return;
+  const site = siteKey(url);
+  if (tabs.some(t => !t.private && siteKey(t.url) === site)) return;
+  try {
+    const cookies = await mainSes.cookies.get({ domain: site });
+    for (const c of cookies) {
+      const host = c.domain.replace(/^\./, '');
+      await mainSes.cookies.remove(`http${c.secure ? 's' : ''}://${host}${c.path || '/'}`, c.name).catch(() => {});
+    }
+    for (const o of [`https://${site}`, `https://www.${site}`, `http://${site}`]) {
+      await mainSes.clearStorageData({ origin: o, storages: ['localstorage', 'indexdb', 'serviceworkers', 'cachestorage', 'websql', 'filesystem'] }).catch(() => {});
+    }
+    toast(`${site} wurde vergessen – Cookies und Website-Daten gelöscht`);
+  } catch {}
+}
+
+function showShieldMenu() {
+  const t = activeTab();
+  const url = t ? t.url : '';
+  const site = /^https?:/i.test(url) ? siteKey(url) : '';
+  const items = [];
+  if (site) {
+    const ads = t.shieldAds || 0, ck = t.shieldCookies || 0;
+    const ad = shieldOn(url, 'adblock'), co = shieldOn(url, 'cookies'), fp = shieldOn(url, 'fp');
+    items.push(
+      { label: `Schutz für ${site}`, enabled: false },
+      { label: `${ads} Werbung/Tracker blockiert · ${ck} Tracking-Cookie${ck === 1 ? '' : 's'} abgewehrt`, enabled: false },
+      { type: 'separator' },
+      { label: 'Werbe- und Tracker-Blocker', type: 'checkbox', checked: settings.adblock && ad, enabled: settings.adblock, click: () => setSiteShield(url, 'adblock', !ad) },
+      { label: 'Fremd-Cookies blockieren', type: 'checkbox', checked: settings.blockThirdPartyCookies && co, enabled: settings.blockThirdPartyCookies, click: () => setSiteShield(url, 'cookies', !co) },
+      { label: 'Schutz vor Fingerprinting', type: 'checkbox', checked: settings.fingerprintProtect && fp, enabled: settings.fingerprintProtect, click: () => setSiteShield(url, 'fp', !fp) },
+      { type: 'separator' },
+      { label: 'JavaScript auf dieser Seite blockieren', type: 'checkbox', checked: siteFlag(url, 'noJs'), click: () => setSiteFlag(url, 'noJs', !siteFlag(url, 'noJs')) },
+      { label: 'Seite beim Schließen vergessen (Cookies löschen)', type: 'checkbox', checked: siteFlag(url, 'forget'), click: () => setSiteFlag(url, 'forget', !siteFlag(url, 'forget')) },
+      { type: 'separator' },
+      (ad && co && fp)
+        ? { label: 'Seite funktioniert nicht? Schutz hier ausschalten', click: () => setSiteShield(url, 'all', false) }
+        : { label: 'Schutz für diese Seite wieder einschalten', click: () => setSiteShield(url, 'all', true) },
+      { type: 'separator' }
+    );
+  } else {
+    items.push({ label: 'Auf dieser Seite gibt es nichts zu blockieren', enabled: false }, { type: 'separator' });
+  }
+  items.push({ label: 'Alle Schutz-Einstellungen …', click: () => { if (panel !== 'gx') togglePanel('gx'); setTimeout(() => uiView.webContents.executeJavaScript("document.querySelector('.seccheck') && document.querySelector('.seccheck').scrollIntoView({behavior:'smooth'})").catch(() => {}), 300); } });
+  Menu.buildFromTemplate(items).popup({ window: win });
 }
 
 // Werbe-Popups und Weiterleitungen beim Öffnen neuer Fenster/Tabs abfangen
@@ -1236,6 +1374,16 @@ function enableAdblockOn(ses) {
   ipcMain.removeHandler('@ghostery/adblocker/is-mutation-observer-enabled');
   try { blocker.enableBlockingInSession(ses); adblockSessions.add(ses); }
   catch (e) { console.warn('Werbeblocker-Sitzung:', e.message); }
+  // Kosmetische Filter (Werbeflächen ausblenden) auch pro Seite abschaltbar
+  try {
+    ipcMain.removeHandler('@ghostery/adblocker/inject-cosmetic-filters');
+    ipcMain.handle('@ghostery/adblocker/inject-cosmetic-filters', (event, url, msg) => {
+      let top = url;
+      try { top = event.sender.getURL() || url; } catch {}
+      if (!blocker || !shieldOn(top, 'adblock')) return undefined;
+      return blocker.onInjectCosmeticFilters(event, url, msg);
+    });
+  } catch {}
   installRequestFilter(ses);
 }
 function enableAdblockAll() {
@@ -1279,18 +1427,26 @@ function requestFilter(ses) {
           return cb({ cancel: true });
         }
       }
+      if (type === 'mainFrame' && settings.cleanLinks && details.method === 'GET') {
+        const clean = privacy.cleanUrl(url);
+        if (clean) { linksCleaned++; return cb({ redirectURL: clean }); }
+      }
       if (type === 'mainFrame' && settings.httpsOnly && /^http:/i.test(url) && !protect.isLocalHost(host) && !allowHttp.has(host)) {
         if (details.webContentsId) upgraded.set(details.webContentsId, url);
         return cb({ redirectURL: 'https:' + url.slice(5) });
       }
     }
-    if (blocker && adblockSessions.has(ses)) return blocker.onBeforeRequest(details, cb);
+    if (blocker && adblockSessions.has(ses)) {
+      if (type !== 'mainFrame' && !shieldOn(topUrlOf(details), 'adblock')) return cb({});
+      return blocker.onBeforeRequest(details, cb);
+    }
     cb({});
   };
 }
 
 // ------------------------------------------------------------------ Tracking-Schutz: Fremd-Cookies blockieren
 let cookiesBlocked = 0;
+let linksCleaned = 0;
 function topUrlOf(details) {
   try { const f = details.frame; if (f && f.top && f.top.url) return f.top.url; } catch {}
   try { const wc = details.webContents || (details.webContentsId && wcModule.fromId(details.webContentsId)); if (wc && !wc.isDestroyed()) return wc.getURL(); } catch {}
@@ -1299,26 +1455,41 @@ function topUrlOf(details) {
 function stripThirdParty(details) {
   if (!settings.blockThirdPartyCookies || details.resourceType === 'mainFrame') return false;
   const top = topUrlOf(details);
-  return !!top && privacy.isThirdParty(top, details.url);
+  return !!top && shieldOn(top, 'cookies') && privacy.isThirdParty(top, details.url);
+}
+function countCookie(details) {
+  cookiesBlocked++;
+  const t = tabByWcId(details.webContentsId);
+  if (t) t.shieldCookies = (t.shieldCookies || 0) + 1;
 }
 function sendHeadersFilter() {
   return (details, cb) => {
     const h = details.requestHeaders;
+    let changed = false;
     if (stripThirdParty(details)) {
-      let changed = false;
-      for (const k of Object.keys(h)) if (k.toLowerCase() === 'cookie') { delete h[k]; changed = true; }
-      if (changed) { cookiesBlocked++; return cb({ requestHeaders: h }); }
+      let removed = false;
+      for (const k of Object.keys(h)) if (k.toLowerCase() === 'cookie') { delete h[k]; removed = true; }
+      if (removed) { countCookie(details); changed = true; }
     }
-    cb({});
+    // Global Privacy Control: „Meine Daten nicht verkaufen oder weitergeben“
+    if (settings.gpc && /^https?:/i.test(details.url)) { h['Sec-GPC'] = '1'; changed = true; }
+    cb(changed ? { requestHeaders: h } : {});
   };
 }
 function headersFilter(ses) {
   return (details, cb) => {
     let changed = false;
     const h = details.responseHeaders || {};
+    // JavaScript für diese Seite blockieren (zusätzliche Sicherheitsregel, die alle Skripte verbietet)
+    const rt = details.resourceType;
+    if ((rt === 'mainFrame' && siteFlag(details.url, 'noJs')) || (rt === 'subFrame' && siteFlag(topUrlOf(details), 'noJs'))) {
+      const key = Object.keys(h).find(k => k.toLowerCase() === 'content-security-policy') || 'Content-Security-Policy';
+      h[key] = [...(h[key] || []), "script-src 'none'"];
+      changed = true;
+    }
     if (stripThirdParty(details)) {
       for (const k of Object.keys(h)) if (k.toLowerCase() === 'set-cookie') { delete h[k]; changed = true; }
-      if (changed) cookiesBlocked++;
+      if (changed) countCookie(details);
     }
     if (blocker && adblockSessions.has(ses)) {
       return blocker.onHeadersReceived(details, (r) => cb(r && r.responseHeaders ? r : (changed ? { responseHeaders: h } : {})));
@@ -1396,6 +1567,12 @@ function setSetting(key, value) {
     case 'secureDns': settings.secureDns = !!value; applyDns(); break;
     case 'blockThirdPartyCookies': settings.blockThirdPartyCookies = !!value; break;
     case 'fingerprintProtect': settings.fingerprintProtect = !!value; break;
+    case 'cleanLinks': settings.cleanLinks = !!value; break;
+    case 'searchEngine': if (SEARCH_ENGINES[value]) { settings.searchEngine = value; lookChanged(); } break;
+    case 'searchSuggest': settings.searchSuggest = !!value; break;
+    case 'gpc': settings.gpc = !!value; break;
+    case 'webrtcProtect': settings.webrtcProtect = !!value; allWebContents().forEach(applyWebRtcPolicy); break;
+    case 'preconnect': settings.preconnect = !!value; break;
     case 'showBookmarkBar': settings.showBookmarkBar = !!value; hideSuggest(); layout(); break;
     case 'autoUpdate': settings.autoUpdate = !!value; break;
     case 'updateUrl': {
@@ -1563,6 +1740,7 @@ ipcMain.on('ui:cmd', (e, name, ...args) => {
     case 'openInternal': if (['bookmarks', 'history', 'downloads', 'extensions', 'welcome'].includes(args[0])) openInternal(args[0]); break;
     case 'chooseBg': chooseBackground(); break;
     case 'screenshot': screenshot(!!args[0]); break;
+    case 'shieldMenu': showShieldMenu(); break;
     case 'reader': readerMode(); break;
     case 'showFile': if (typeof args[0] === 'string' && fs.existsSync(args[0])) shell.showItemInFolder(args[0]); break;
     case 'backup': backupData(); break;
@@ -1654,6 +1832,7 @@ function configureSession(ses) {
       const f = userBgFile();
       return f ? net.fetch(pathToFileURL(f).toString()) : new Response('', { status: 404 });
     }
+    if (rel === '/favicon') return favicons.response(req.url);
     if (rel === '/' || rel === '') rel = '/index.html';
     const file = path.normalize(path.join(startDir, rel));
     if (!file.startsWith(startDir + path.sep)) return new Response('Verboten', { status: 403 });
@@ -1671,6 +1850,7 @@ function setupSession() {
   app.userAgentFallback = cleanUserAgent(app.userAgentFallback);
   mainSes = session.fromPartition(PARTITION);
   configureSession(mainSes);
+  favicons.init({ dir: path.join(app.getPath('userData'), 'favicons'), fetch: (u, o) => mainSes.fetch(u, o), isLocalHost: protect.isLocalHost });
 }
 
 function ensurePrivateSession() {
@@ -1960,7 +2140,7 @@ async function readerMode() {
 // ------------------------------------------------------------------ Sichern & Wiederherstellen
 const BACKUP_KEYS = ['accent', 'accentNormal', 'style', 'background', 'preferredAI', 'ramLimit', 'cpuLimit', 'netLimit',
   'adblock', 'ytSkip', 'camera', 'mic', 'autoPip', 'showBookmarkBar', 'freezeOnMinimize', 'restoreSession',
-  'httpsOnly', 'phishingProtect', 'scanDownloads', 'secureDns', 'blockThirdPartyCookies', 'fingerprintProtect'];
+  'httpsOnly', 'phishingProtect', 'scanDownloads', 'secureDns', 'blockThirdPartyCookies', 'fingerprintProtect', 'cleanLinks', 'gpc', 'webrtcProtect', 'preconnect', 'searchEngine', 'searchSuggest'];
 async function backupData() {
   const r = await dialog.showSaveDialog(win, {
     title: 'Lesezeichen und Einstellungen sichern',
@@ -2002,9 +2182,30 @@ function openInternal(page) {
   else createTab(url);
 }
 
+// AMP-Seiten (abgespeckte Google-Kopien) → Originalseite laden
+const deampDone = new Map(); // webContents-ID -> zuletzt umgeleitete Adresse (gegen Schleifen)
+ipcMain.on('deamp', (e, canonical) => {
+  if (!settings.cleanLinks) return;
+  const wc = e.sender;
+  if (!e.senderFrame || e.senderFrame !== wc.mainFrame) return;
+  if (!tabs.some(t => t.view && t.view.webContents === wc)) return;
+  let target;
+  try { target = new URL(String(canonical)); } catch { return; }
+  if (!/^https?:$/.test(target.protocol)) return;
+  const cur = wc.getURL();
+  if (target.href === cur || deampDone.get(wc.id) === cur) return;
+  deampDone.set(wc.id, target.href);
+  linksCleaned++;
+  wc.loadURL(target.href);
+});
+
 // Fingerprint-Schutz: Einstellungen für das Seiten-Skript (preload-internal.js)
 const FP_SEED = Math.floor(Math.random() * 0x7fffffff);
-ipcMain.on('fp-config', (e) => { e.returnValue = { on: !!settings.fingerprintProtect, seed: FP_SEED }; });
+ipcMain.on('fp-config', (e) => {
+  let top = '';
+  try { top = (e.senderFrame && e.senderFrame.top && e.senderFrame.top.url) || e.sender.getURL(); } catch {}
+  e.returnValue = { on: !!settings.fingerprintProtect && shieldOn(top, 'fp'), seed: FP_SEED, gpc: !!settings.gpc, deamp: !!settings.cleanLinks };
+});
 
 ipcMain.handle('internal', async (e, name, ...args) => {
   const from = e.senderFrame ? e.senderFrame.url : '';
@@ -2096,13 +2297,22 @@ function ensureSuggestView() {
     webPreferences: { preload: path.join(__dirname, 'preload-suggest.js'), contextIsolation: true, sandbox: true }
   });
   suggestView.setBackgroundColor('#00000000');
-  suggestView.webContents.loadFile(path.join(__dirname, 'ui', 'suggest.html'));
+  suggestView.webContents.loadURL(uiUrl('suggest.html'));
   suggestView.webContents.on('did-finish-load', () => { if (suggest.open) showSuggest(); });
   suggestView.setVisible(false);
   win.contentView.addChildView(suggestView);
 }
 
-function googleSearch(q) { return 'https://www.google.com/search?q=' + encodeURIComponent(q); }
+// ------------------------------------------------------------------ Suchmaschinen
+const SEARCH_ENGINES = {
+  google: { name: 'Google', url: 'https://www.google.com/search?q=', suggest: 'https://suggestqueries.google.com/complete/search?client=firefox&hl=de&q=' },
+  duckduckgo: { name: 'DuckDuckGo', url: 'https://duckduckgo.com/?q=', suggest: 'https://duckduckgo.com/ac/?type=list&q=' },
+  brave: { name: 'Brave Search', url: 'https://search.brave.com/search?q=', suggest: 'https://search.brave.com/api/suggest?q=' },
+  startpage: { name: 'Startpage', url: 'https://www.startpage.com/sp/search?query=', suggest: null }
+};
+function engine() { return SEARCH_ENGINES[settings.searchEngine] || SEARCH_ENGINES.google; }
+function searchUrl(q) { return engine().url + encodeURIComponent(q); }
+function googleSearch(q) { return searchUrl(q); }
 
 function baseSuggestItems(q) {
   const target = toURL(q);
@@ -2123,10 +2333,13 @@ async function updateSuggest(query, rect) {
   suggest.selected = 0;
   showSuggest();
   const t = activeTab();
-  if (t && t.private) return; // private Tabs: keine Eingaben an Google schicken
+  if (t && t.private) return; // private Tabs: keine Eingaben an die Suchmaschine schicken
+  const eng = engine();
+  if (!settings.searchSuggest || !eng.suggest) return;
   try {
-    const res = await mainSes.fetch('https://suggestqueries.google.com/complete/search?client=firefox&hl=de&q=' + encodeURIComponent(q.trim()));
-    const data = await res.json();
+    const res = await mainSes.fetch(eng.suggest + encodeURIComponent(q.trim()));
+    let data = await res.json();
+    if (Array.isArray(data) && data.length && data[0] && typeof data[0] === 'object' && 'phrase' in data[0]) data = [q, data.map(x => x.phrase)];
     if (seq !== suggest.seq || !suggest.open) return;
     const lower = q.trim().toLowerCase();
     const extra = (Array.isArray(data[1]) ? data[1] : [])
@@ -2287,7 +2500,8 @@ function createWindow() {
   });
   uiView.setBackgroundColor('#0b0b0f');
   win.contentView.addChildView(uiView);
-  uiView.webContents.loadFile(path.join(__dirname, 'ui', 'index.html'));
+  uiView.webContents.on('did-fail-load', (_e, code, desc, url) => console.error('UI-LADEFEHLER', code, desc, url));
+  uiView.webContents.loadURL(uiUrl('index.html'));
   if (process.env.ELEKTRON_DEBUG) uiView.webContents.on('console-message', (e) => console.log('[ui]', e.level, e.message, e.lineNumber));
   uiView.webContents.on('before-input-event', (e, input) => { if (handleShortcut(input)) e.preventDefault(); });
   uiView.webContents.on('will-navigate', (e) => e.preventDefault());
@@ -2347,6 +2561,7 @@ app.whenReady().then(async () => {
   applyDns();
   Menu.setApplicationMenu(null);
   setupSession();
+  setupUiProtocol();
   // Fenster sofort zeigen – Erweiterungen laden parallel im Hintergrund (schnellerer Start)
   createWindow();
   markWindowReady();
@@ -2403,7 +2618,7 @@ app.whenReady().then(async () => {
       if (process.env.ELEKTRON_TEST === 'gx') togglePanel('gx');
       if (process.env.ELEKTRON_TEST === 'gaming') { togglePanel('gx'); setGamingMode(true); }
       if (process.env.ELEKTRON_TEST === 'split') { startSplit(tabs[tabs.length - 2].id); setSplitRatio(0.55); }
-      if (process.env.ELEKTRON_TEST === 'float') { startSplit(tabs[tabs.length - 2].id); const ft = createTab(HOME, { activate: false }); setTimeout(() => floatTab(ft.id), 800); }
+      if (process.env.ELEKTRON_TEST === 'float') { startSplit(tabs[tabs.length - 2].id); const ft = createTab(HOME, { activate: false }); setTimeout(() => floatTab(ft.id), 800); setTimeout(async () => { for (const f of floatsByBar.values()) console.log('FLOAT-BAR', f.bar.webContents.getURL(), await f.bar.webContents.executeJavaScript('document.querySelector("#fav") ? document.querySelector("#fav").naturalWidth : -1')); }, 6000); }
       if (process.env.ELEKTRON_TEST === 'v2' || process.env.ELEKTRON_TEST === 'v2b') {
         for (const [u, t] of [['https://store.steampowered.com/', 'Steam'], ['https://www.twitch.tv/', 'Twitch'],
           ['https://www.youtube.com/', 'YouTube'], ['https://play.geforcenow.com/', 'GeForce NOW'],
@@ -2502,7 +2717,7 @@ app.whenReady().then(async () => {
       if (process.env.ELEKTRON_TEST === 'look2') {
         settings.style = 'gaming'; settings.background = 'aurora'; lookChanged();
         togglePanel('gx');
-        setTimeout(() => uiView.webContents.executeJavaScript("document.querySelector('[data-setting=style]').scrollIntoView()"), 1500);
+        setTimeout(() => uiView.webContents.executeJavaScript("document.querySelector('[data-setting=searchEngine]').scrollIntoView()"), 1500);
       }
       if (process.env.ELEKTRON_TEST === 'startbg') {
         settings.style = 'gaming'; settings.background = process.env.BG || 'berge'; lookChanged();
@@ -2521,7 +2736,7 @@ app.whenReady().then(async () => {
         http.createServer((q, r) => {
           r.setHeader('content-type', 'text/html; charset=utf-8');
           r.end(`<!doctype html><body style="font:16px sans-serif;background:#111;color:#eee;padding:20px"><h2>Sicherheits-Test</h2>
-<img src="http://localhost:8771/set" width=1 height=1>
+<img src="http://localhost:8771/set" width=1 height=1><script src="http://ads.doubleclick.net:8771/tag/js/gpt.js"></script><img src="http://ads.doubleclick.net:8771/pixel.gif">
 <div id=o></div><iframe id=f style="width:600px;height:60px;border:1px solid #555"></iframe>
 <script>
 function hash(s){let h=0;for(let i=0;i<s.length;i++)h=Math.imul(31,h)+s.charCodeAt(i)|0;return (h>>>0).toString(16)}
@@ -2535,11 +2750,40 @@ setTimeout(()=>{document.getElementById('f').src='http://localhost:8771/check'},
         }).listen(8770, '127.0.0.1');
         settings.blockThirdPartyCookies = process.env.TPC !== '0';
         settings.fingerprintProtect = process.env.FP !== '0';
+        settings.siteShields = process.env.SITEOFF ? { '127.0.0.1': { adblock: false, cookies: false, fp: false } } : {};
         createTab('http://127.0.0.1:8770/');
+        if (process.env.SHIELDMENU) setTimeout(() => showShieldMenu(), 6000);
       }
       if (process.env.ELEKTRON_TEST === 'sec') {
         togglePanel('gx');
         setTimeout(() => uiView.webContents.executeJavaScript("document.querySelector('.seccheck').scrollIntoView()"), 2500);
+      }
+      if (process.env.ELEKTRON_TEST === 'links') {
+        require('http').createServer((q, r) => {
+          console.log('LINK-REQ', q.url, 'gpc=' + (q.headers['sec-gpc'] || '-'));
+          r.setHeader('content-type', 'text/html; charset=utf-8');
+          if (q.url.startsWith('/amp')) return r.end('<!doctype html><html amp><head><link rel="canonical" href="http://127.0.0.1:8772/original"></head><body>AMP-Version</body></html>');
+          r.end(`<!doctype html><body style="font:18px sans-serif;background:#111;color:#eee;padding:20px"><h2>Seite: ${q.url}</h2><p>GPC: <b id=g></b></p><script>document.getElementById('g').textContent=navigator.globalPrivacyControl</script></body>`);
+        }).listen(8772, '127.0.0.1');
+        const t1 = createTab('http://127.0.0.1:8772/page?utm_source=newsletter&fbclid=abc&id=1');
+        setTimeout(() => createTab('http://127.0.0.1:8772/amp/artikel'), 2500);
+        setTimeout(() => { const t = activeTab(); console.log('LINK-FINAL', t.view.webContents.getURL(), 'webrtc=' + t1.view.webContents.getWebRTCIPHandlingPolicy()); }, 7000);
+      }
+      if (process.env.ELEKTRON_TEST === 'jsforget') {
+        settings.siteShields = { '127.0.0.1': { noJs: true, forget: true } };
+        require('http').createServer((q, r) => {
+          r.setHeader('content-type', 'text/html; charset=utf-8');
+          r.setHeader('set-cookie', 'sitzung=geheim; Path=/; Max-Age=3600');
+          r.end('<!doctype html><body style="font:18px sans-serif;background:#111;color:#eee;padding:20px"><h2 id=h>JavaScript ist AUS</h2><script>document.getElementById("h").textContent="JavaScript läuft"</script></body>');
+        }).listen(8773, '127.0.0.1');
+        const tj = createTab('http://127.0.0.1:8773/');
+        setTimeout(async () => {
+          const before = await mainSes.cookies.get({ domain: '127.0.0.1' });
+          const txt = await tj.view.webContents.executeJavaScript('document.getElementById("h").textContent');
+          console.log('JSF text=' + txt, 'cookies-vorher=' + before.length);
+          closeTab(tj.id);
+          setTimeout(async () => { const after = await mainSes.cookies.get({ domain: '127.0.0.1' }); console.log('JSF cookies-nachher=' + after.length); }, 3000);
+        }, 4000);
       }
       if (process.env.ELEKTRON_TEST === 'normal') {
         settings.style = 'gaming'; setStyle('normal'); createTab();

@@ -266,6 +266,30 @@
       </div>
       <div class="card">
         <div class="row">
+          <div><h2>Links säubern</h2><p>Entfernt Tracking-Anhänge wie utm_, fbclid und gclid, überspringt Umleitungs-Tracker von Google und Facebook und öffnet AMP-Seiten im Original.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="cleanLinks"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><h2>IP-Adresse bei WebRTC verstecken</h2><p>Webseiten können über Video-Chat-Technik deine lokale IP-Adresse nicht mehr auslesen – auch nicht hinter einem VPN.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="webrtcProtect"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><h2>„Nicht verkaufen“-Signal (GPC)</h2><p>Sagt jeder Webseite per Global Privacy Control, dass deine Daten nicht verkauft oder weitergegeben werden dürfen.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="gpc"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><h2>Links vorladen</h2><p>Baut die Verbindung schon auf, wenn die Maus auf einem Link liegt – schneller, aber die Seite sieht deine IP-Adresse schon vor dem Klick.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="preconnect"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
           <div><h2>YouTube-Werbung überspringen</h2><p>Videowerbung wird stummgeschaltet und sofort übersprungen, Werbeflächen verschwinden.</p></div>
           <label class="switch"><input type="checkbox" data-setting="ytSkip"><i></i></label>
         </div>
@@ -371,6 +395,17 @@
       <div class="card">
         <h2>Akzentfarbe</h2>
         <div id="swatches"></div>
+      </div>
+      <div class="card">
+        <h2>Suchmaschine</h2>
+        <p>DuckDuckGo, Brave Search und Startpage speichern keine Profile von dir. Startpage zeigt Google-Ergebnisse ohne Tracking.</p>
+        <div class="seg seg4" data-setting="searchEngine">
+          <button data-v="google">Google</button><button data-v="duckduckgo">DuckDuckGo</button><button data-v="brave">Brave</button><button data-v="startpage">Startpage</button>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <div><p>Suchvorschläge beim Tippen in die Adressleiste (werden an die Suchmaschine geschickt)</p></div>
+          <label class="switch"><input type="checkbox" data-setting="searchSuggest"><i></i></label>
+        </div>
       </div>
       <div class="card">
         <h2>KI in der Seitenleiste</h2>

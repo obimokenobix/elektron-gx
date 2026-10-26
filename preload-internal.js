@@ -115,6 +115,25 @@ function fpShield(seed) {
   patchMethod(window.WebGLRenderingContext && WebGLRenderingContext.prototype, 'getParameter', glParam);
   patchMethod(window.WebGL2RenderingContext && WebGL2RenderingContext.prototype, 'getParameter', glParam);
 
+  // --- Audio: winziges, unhörbares Rauschen bei der Analyse (gegen Audio-Fingerprinting)
+  const AB = window.AudioBuffer && AudioBuffer.prototype;
+  const touched = new WeakSet();
+  patchMethod(AB, 'getChannelData', () => (target, self, args) => {
+    const data = Reflect.apply(target, self, args);
+    if (!touched.has(data) && self.length < 200000) { // nur kurze Puffer, wie sie Fingerprinter nutzen
+      touched.add(data);
+      for (let k = 0; k < 24; k++) { const i = rand(100 + k) % data.length; data[i] += ((rand(200 + k) & 1) ? 1 : -1) * 1e-7; }
+    }
+    return data;
+  });
+  const AN = window.AnalyserNode && AnalyserNode.prototype;
+  patchMethod(AN, 'getFloatFrequencyData', () => (target, self, args) => {
+    const r = Reflect.apply(target, self, args);
+    const arr = args[0];
+    if (arr && arr.length) for (let k = 0; k < 8; k++) { const i = rand(300 + k) % arr.length; arr[i] += ((rand(400 + k) & 1) ? 1 : -1) * 1e-4; }
+    return r;
+  });
+
   // --- Hardware-Werte vereinheitlichen
   const NP = window.Navigator && Navigator.prototype;
   patchGetter(NP, 'hardwareConcurrency', 8);
@@ -126,5 +145,23 @@ if (location.protocol === 'https:' || location.protocol === 'http:') {
   try { cfg = ipcRenderer.sendSync('fp-config'); } catch {}
   if (cfg && cfg.on && typeof contextBridge.executeInMainWorld === 'function') {
     try { contextBridge.executeInMainWorld({ func: fpShield, args: [cfg.seed] }); } catch (e) { console.warn('fp', e && e.message); }
+  }
+  // Global Privacy Control: Webseiten sehen „nicht verkaufen / weitergeben“
+  if (cfg && cfg.gpc && typeof contextBridge.executeInMainWorld === 'function') {
+    try {
+      contextBridge.executeInMainWorld({ func: () => {
+        try { Object.defineProperty(Navigator.prototype, 'globalPrivacyControl', { get: () => true, configurable: true, enumerable: true }); } catch {}
+      } });
+    } catch {}
+  }
+  // AMP-Seiten: zur Originalseite wechseln (nur im Hauptfenster der Seite)
+  if (cfg && cfg.deamp && window.top === window) {
+    document.addEventListener('DOMContentLoaded', () => {
+      const html = document.documentElement;
+      if (!html || !(html.hasAttribute('amp') || html.hasAttribute('\u26A1'))) return;
+      const link = document.querySelector('link[rel="canonical"]');
+      const href = link && link.href;
+      if (href && /^https?:/.test(href) && href !== location.href) ipcRenderer.send('deamp', href);
+    });
   }
 }

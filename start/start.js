@@ -35,7 +35,7 @@ function render() {
     ico.className = 'ico';
     const img = new Image();
     img.alt = '';
-    img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host(d.url))}&sz=64`;
+    img.src = `favicon?host=${encodeURIComponent(host(d.url))}`;
     img.onerror = () => { ico.textContent = (d.name[0] || '?').toUpperCase(); };
     ico.appendChild(img);
     const txt = document.createElement('span');
@@ -92,6 +92,7 @@ function tick() {
 // ---------------------------------------------------------------- Aussehen (Stil, Farbe, Hintergrund)
 const api = window.elektron;
 const BG_IMAGES = ['nebel', 'galaxie', 'berge', 'aurora', 'wellen'];
+let searchBase = 'https://www.google.com/search?q=';
 function applyLook(look) {
   if (!look) return;
   const b = document.body;
@@ -103,6 +104,7 @@ function applyLook(look) {
   if (BG_IMAGES.includes(look.background)) img = `url(bg/${look.background}.webp)`;
   if (look.background === 'eigenes') img = `url(user-bg?v=${look.bgVersion || 0})`;
   b.style.setProperty('--bg-image', img || 'none');
+  if (look.search) { searchBase = look.search.url; $('#q').placeholder = `Mit ${look.search.name} suchen`; }
   $('#foot').textContent = look.style === 'normal'
     ? 'Strg+T neuer Tab · Strg+D Lesezeichen · Strg+H Verlauf · F11 Vollbild'
     : 'Strg+Umschalt+G startet den Gaming-Modus · Strg+T neuer Tab · F11 Vollbild';
@@ -171,3 +173,10 @@ if (new URLSearchParams(location.search).get('private')) {
   g.textContent = 'Privater Tab – Verlauf, Cookies und Logins verschwinden, sobald du alle privaten Tabs schließt.';
   clearInterval(window.__greetTimer);
 }
+
+// Suche mit der gewählten Suchmaschine
+document.querySelector('form.search').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const q = $('#q').value.trim();
+  if (q) location.href = searchBase + encodeURIComponent(q);
+});

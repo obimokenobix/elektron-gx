@@ -43,6 +43,18 @@
 - **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Malwarebytes Browser Guard, Bitwarden, optional Avast) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
+**Neu in 2.6 – Datenschutz**
+
+- **Schild in der Adressleiste**: zeigt pro Seite, was blockiert wurde; Werbeblocker, Fremd-Cookies und Fingerprint-Schutz pro Seite abschaltbar; **JavaScript pro Seite blockieren**; **Seite beim Schließen vergessen** (Cookies und Website-Daten löschen)
+- **Links säubern**: entfernt utm_, fbclid, gclid & Co., überspringt Umleitungs-Tracker (Google, Facebook, Instagram, YouTube, Reddit …), öffnet AMP-Seiten im Original (`privacy.js`)
+- **WebRTC-IP-Schutz**: Webseiten sehen deine lokale IP-Adresse nicht (auch hinter VPN)
+- **Global Privacy Control** (`Sec-GPC: 1` und `navigator.globalPrivacyControl`)
+- **Stärkerer Fingerprint-Schutz**: zusätzlich Audio, und jetzt auch in eingebetteten Frames (iframes)
+- **Website-Symbole ohne Google** (`favicons.js`): direkt von der Seite, mit Zwischenspeicher
+- **Suchmaschine wählbar**: Google, DuckDuckGo, Brave Search, Startpage; Suchvorschläge abschaltbar
+- **Links vorladen abschaltbar** (in privaten Tabs immer aus)
+- **Oberfläche über eigenes Protokoll** (`elektron-ui://`) – Datei-Sonderrechte (Fuse) wieder aus
+
 **Neu in 2.5 – Sicherheit**
 
 - **Sicherheits-Check** in GX Control: zeigt auf einen Blick, welche Schutzfunktionen aktiv sind
