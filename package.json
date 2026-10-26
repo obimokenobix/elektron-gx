@@ -1,8 +1,8 @@
 {
   "name": "elektron-gx",
-  "productName": "Elektron GX",
-  "version": "2.7.0",
-  "description": "Elektron GX – der Gaming-Browser",
+  "productName": "Elektron",
+  "version": "3.0.0",
+  "description": "Elektron – der Gaming-Browser",
   "main": "main.js",
   "author": "Elektron",
   "license": "MIT",
@@ -24,7 +24,7 @@
   },
   "build": {
     "appId": "at.elektron.gx",
-    "productName": "Elektron GX",
+    "productName": "Elektron",
     "copyright": "© 2026 Elektron",
     "directories": {
       "output": "dist"
@@ -38,6 +38,7 @@
       "privacy.js",
       "favicons.js",
       "lookalike.js",
+      "flows.js",
       "preload-ui.js",
       "preload-float.js",
       "preload-internal.js",
@@ -82,11 +83,11 @@
       "perMachine": false,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Elektron GX",
+      "shortcutName": "Elektron",
       "installerIcon": "assets/icon.ico",
       "uninstallerIcon": "assets/icon.ico",
       "installerHeaderIcon": "assets/icon.ico",
-      "artifactName": "Elektron-GX-Setup-${version}.exe",
+      "artifactName": "Elektron-Setup-${version}.exe",
       "deleteAppDataOnUninstall": false,
       "include": "installer.nsh",
       "runAfterFinish": true

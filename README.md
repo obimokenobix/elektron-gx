@@ -1,6 +1,6 @@
-# Elektron GX – der Gaming-Browser
+# Elektron – der Gaming-Browser
 
-![Elektron GX](docs/img/og.png)
+![Elektron](docs/img/og.png)
 
 **Kostenloser Browser für PC-Gamer auf Chromium-Basis.** Gaming-Modus, RAM-/CPU-/Netzwerk-Limiter, Split-Screen, schwebende Fenster, Werbeblocker inkl. YouTube, Chrome-Erweiterungen, Claude & ChatGPT in der Seitenleiste.
 
@@ -43,6 +43,13 @@
 - **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Malwarebytes Browser Guard, Bitwarden, optional Avast) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
+**Neu in 3.0 – Elektron Studio und neuer Name**
+
+- Der Browser heißt jetzt **Elektron** (Daten bleiben im bisherigen Ordner `%APPDATA%\Elektron GX`, Updates laufen nahtlos weiter)
+- **Elektron Studio** (Strg+Umschalt+E, `start/studio.html`): Node-Editor wie in Unreal Engine
+  - **Shader & Bilder**: Bild aus dem Internet oder vom PC, Verlauf, Rauschen, Muster, Plasma → Effekte (Helligkeit, Farbton, Unschärfe, Pixel, Glitch, Wellen, Neon-Kanten, Kaleidoskop …) → Mischen/Maske → eigener GLSL-Shader → Live-Vorschau (WebGL 2), als PNG speichern oder als Startseiten-Hintergrund setzen
+  - **Abläufe** (wie Blueprints): Auslöser (Start, Seite geöffnet, Uhrzeit, Intervall, Strg+Alt+1–9, Gaming-Modus, Download) → Bedingungen → Aktionen (Tab öffnen, Gaming-Modus, Werbeblocker, Hinweis, Ton, Screenshot, Seitenleiste, Hintergrund, Stil, Warten …); läuft im Hauptprozess (`flows.js`), nur eingebaute, sichere Aktionen
+
 **Neu in 2.7 – Datenschutz und Sicherheit**
 
 - **DuckDuckGo als Standard-Suche** (einmalige Umstellung mit Hinweis und „Zurück zu Google“)
@@ -81,7 +88,7 @@
 - **8 Hintergründe** für die Startseite (Neon, Schlicht, Nebel, Galaxie, Retro, Polarlicht, Wellen, eigenes Bild)
 - **Deine Steam-Spiele** auf der Startseite, Start mit einem Klick
 - **Grafikkarten-Anzeige** in GX Control (Auslastung, Temperatur, VRAM, Watt) über `nvidia-smi` bei NVIDIA-Karten
-- **Screenshots** (Strg+Umschalt+X, auch ganze Seite) – gespeichert unter Bilder\Elektron GX und in die Zwischenablage kopiert
+- **Screenshots** (Strg+Umschalt+X, auch ganze Seite) – gespeichert unter Bilder\Elektron und in die Zwischenablage kopiert
 - **Lesemodus** (F9 oder Buch-Symbol): nur Text, ohne Werbung und Menüs
 - **KI per Rechtsklick**: Seite zusammenfassen, Markiertes erklären (Claude oder ChatGPT)
 - **Übersetzen** von Seiten und markiertem Text (Google Übersetzer)
@@ -154,7 +161,7 @@ Neue Chromium-Sicherheitsupdates kommen durch eine neuere Electron-Version: `npm
 
 ## Microsoft Store
 
-1. Kostenloses Entwicklerkonto unter https://storedeveloper.microsoft.com anlegen und den Namen „Elektron GX“ reservieren.
+1. Kostenloses Entwicklerkonto unter https://storedeveloper.microsoft.com anlegen und den Namen „Elektron“ reservieren.
 2. Im Partner Center unter *Produktidentität* die Werte *Package/Identity/Name*, *Package/Identity/Publisher* und *PublisherDisplayName* in `package.json` → `build.appx` eintragen (`identityName`, `publisher`, `publisherDisplayName`).
 3. Auf GitHub unter *Actions → Microsoft Store → Run workflow* das Paket bauen und die `.appx` aus den Artefakten im Partner Center hochladen.
 4. Datenschutz-Adresse für den Store: https://obimokenobix.github.io/elektron-gx/datenschutz.html

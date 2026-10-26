@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>Elektron Studio</title>
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="studio/studio.css">
+</head>
+<body>
+  <header class="st-top">
+    <div class="st-brand"><b>Elektron</b> Studio</div>
+    <nav class="st-tabs" role="tablist">
+      <button type="button" class="on" data-mode="shader" role="tab">Shader &amp; Bilder</button>
+      <button type="button" data-mode="flows" role="tab">Abläufe</button>
+    </nav>
+    <div class="st-spacer"></div>
+    <div class="st-tools" id="tools-shader">
+      <button class="btn" id="sh-new" type="button" title="Neues, leeres Bild">Neu</button>
+      <button class="btn" id="sh-example" type="button">Beispiel</button>
+      <button class="btn" id="sh-export" type="button" title="Graph als Datei speichern">Exportieren</button>
+      <button class="btn" id="sh-import" type="button" title="Graph-Datei laden">Importieren</button>
+    </div>
+    <div class="st-tools" id="tools-flows" hidden>
+      <label class="st-switch"><input type="checkbox" id="fl-enabled" checked><span>Abläufe aktiv</span></label>
+      <button class="btn" id="fl-example" type="button">Beispiel</button>
+      <button class="btn" id="fl-export" type="button">Exportieren</button>
+      <button class="btn" id="fl-import" type="button">Importieren</button>
+      <span class="st-saved" id="fl-saved"></span>
+    </div>
+    <input type="file" id="file-import" accept=".json,application/json" hidden>
+    <input type="file" id="file-image" accept="image/*" hidden>
+  </header>
+
+  <main class="st-main" id="mode-shader">
+    <div class="st-graph" id="graph-shader"></div>
+    <aside class="st-preview">
+      <div class="st-canvas"><canvas id="preview" width="640" height="360"></canvas></div>
+      <div class="st-err" id="sh-error" hidden></div>
+      <div class="st-row">
+        <select id="sh-aspect" title="Seitenverhältnis der Vorschau">
+          <option value="16:9">16 : 9</option><option value="1:1">1 : 1</option><option value="9:16">9 : 16</option><option value="21:9">21 : 9</option>
+        </select>
+        <label class="st-switch small"><input type="checkbox" id="sh-anim" checked><span>Animation</span></label>
+      </div>
+      <button class="btn primary" id="sh-png" type="button">Als Bild speichern (PNG)</button>
+      <button class="btn" id="sh-bg" type="button">Als Startseiten-Hintergrund setzen</button>
+      <p class="st-help">
+        <b>So geht's:</b> Rechtsklick oder Leertaste fügt Nodes hinzu. Zieh vom Punkt rechts an einem Node zu einem Punkt links am nächsten.
+        Alles, was am Ende in <b>Ausgabe</b> ankommt, siehst du oben. Bilder aus dem Internet: Rechtsklick auf ein Bild → „Bildadresse kopieren“ und im Node einfügen.
+      </p>
+    </aside>
+  </main>
+
+  <main class="st-main" id="mode-flows" hidden>
+    <div class="st-graph" id="graph-flows"></div>
+    <aside class="st-preview">
+      <h3>Abläufe</h3>
+      <p class="st-help">
+        Ein Ablauf beginnt mit einem <b class="tg">Auslöser</b> (rot) – z. B. „Wenn eine Seite geöffnet wird“.
+        Verbinde den weißen Pfeil mit <b class="ac">Aktionen</b> (blau) oder <b class="co">Bedingungen</b> (lila).
+        Änderungen werden automatisch gespeichert und sind sofort aktiv.
+      </p>
+      <p class="st-help">Zum Ausprobieren: Knopf <b>▶ Jetzt testen</b> an einem Auslöser.</p>
+      <div class="st-log" id="fl-log"></div>
+    </aside>
+  </main>
+
+  <script src="studio/graph.js"></script>
+  <script src="studio/shader.js"></script>
+  <script src="studio/flows.js"></script>
+  <script src="studio/studio.js"></script>
+</body>
+</html>

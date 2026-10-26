@@ -1,5 +1,5 @@
 'use strict';
-/* Elektron GX – Browser-Oberfläche */
+/* Elektron – Browser-Oberfläche */
 const $ = (s) => document.querySelector(s);
 /* global gx – kommt aus preload-ui.js */
 
@@ -507,7 +507,7 @@ function renderStyle() {
   const normal = state.settings.style === 'normal';
   document.body.classList.toggle('style-normal', normal);
   $('.panel-head h1').textContent = normal ? 'Einstellungen' : 'GX Control';
-  $('.panel-head p').textContent = normal ? 'Alles, was du an Elektron GX einstellen kannst.' : 'Halte den Browser klein, damit dein Spiel die Leistung bekommt.';
+  $('.panel-head p').textContent = normal ? 'Alles, was du an Elektron einstellen kannst.' : 'Halte den Browser klein, damit dein Spiel die Leistung bekommt.';
   const gxBtn = document.querySelector('.rail-btn[data-panel="gx"]');
   if (gxBtn) gxBtn.title = normal ? 'Einstellungen' : 'GX Control';
   document.querySelectorAll('.bgt').forEach(b => b.classList.toggle('active', b.dataset.bg === state.settings.background));
@@ -620,7 +620,7 @@ function renderPanel() {
   $('#restart').hidden = !state.needsRestart;
   sw.querySelectorAll('.swatch').forEach(b => b.classList.toggle('active', b.dataset.color.toLowerCase() === s.accent.toLowerCase()));
   const v = state.versions;
-  $('#about').textContent = `Elektron GX ${v.app} · Chromium ${v.chrome}`;
+  $('#about').textContent = `Elektron ${v.app} · Chromium ${v.chrome}`;
 }
 
 // ---------------------------------------------------------------- Statistik & Diagramme

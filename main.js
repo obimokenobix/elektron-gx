@@ -2,7 +2,7 @@
 process.on('uncaughtException', (e) => { console.error('UNCAUGHT', e && e.stack || e); });
 process.on('unhandledRejection', (e) => { console.error('UNHANDLED', e && e.stack || e); });
 /*
- * Elektron GX – der Gaming-Browser
+ * Elektron – der Gaming-Browser
  * Hauptprozess: Fenster, Tabs, Seitenleiste, GX-Control (RAM-/CPU-/Netzwerk-Limiter),
  * Gaming-Modus, Werbeblocker, Downloads, Berechtigungen.
  */
@@ -14,15 +14,18 @@ const path = require('path');
 const fs = require('fs');
 const os = require('os');
 const { pathToFileURL } = require('url');
+// Der Browser hieß früher „Elektron GX“ – Lesezeichen, Verlauf und Einstellungen bleiben im bisherigen Ordner
+try { app.setPath('userData', path.join(app.getPath('appData'), 'Elektron GX')); } catch {}
 const { createStore } = require('./store');
 const extmod = require('./extensions');
 const protect = require('./protect');
 const privacy = require('./privacy');
 const favicons = require('./favicons');
 const lookalike = require('./lookalike');
+const flows = require('./flows');
 const extras = require('./extras');
 
-const APP_NAME = 'Elektron GX';
+const APP_NAME = 'Elektron';
 const T0 = Date.now();
 const perf = (label) => { if (process.env.ELEKTRON_PERF) console.log(`PERF ${label} ${Date.now() - T0}ms`); };
 const PARTITION = 'persist:elektron';
@@ -90,6 +93,8 @@ const DEFAULTS = {
   unlockFps: false,
   maxSecurity: false,      // V8 ohne JIT (wie Edge „Verstärkte Sicherheit“) – sicherer, aber langsamer
   blockedTotal: 0,
+  flows: null,            // Abläufe aus dem Elektron Studio
+  flowsEnabled: true,
   siteShields: {},        // Ausnahmen pro Seite: { 'beispiel.de': { adblock: false, cookies: false, fp: false } }
   permissions: {},
   lastSession: null
@@ -246,7 +251,7 @@ function displayURL(url) {
 }
 
 function cleanUserAgent(ua) {
-  return ua.replace(/\s+Electron\/\S+/i, '').replace(/\s+elektron-gx\/\S+/i, '').replace(/\s+Elektron GX\/\S+/i, '');
+  return ua.replace(/\s+Electron\/\S+/i, '').replace(/\s+elektron-gx\/\S+/i, '').replace(/\s+Elektron GX\/\S+/i, '').replace(/\s+Elektron\/\S+/i, '');
 }
 
 let stateQueued = false;
@@ -875,6 +880,7 @@ function wireWebContents(wc, tab) {
     const prevUrl = tab.url;
     tab.url = url;
     if (siteKey(prevUrl) !== siteKey(url)) setTimeout(() => forgetIfUnused(prevUrl), 1500);
+    if (!tab.private && /^https?:/i.test(url)) flows.event('page', { url });
     tab.favicon = url.startsWith('elektron:') ? null : tab.favicon;
     if (!tab.private) store.addVisit(url, wc.getTitle());
     pushState();
@@ -1059,6 +1065,8 @@ function handleShortcut(input) {
   if (ctrl && input.shift && k === 'f') { if (activeId != null) floatTab(activeId); return true; }
   if (ctrl && input.shift && k === 'n') { createTab(HOME, { private: true }); return true; }
   if (ctrl && input.shift && k === 'x') { screenshot(false); return true; }
+  if (ctrl && input.shift && k === 'e') { openInternal('studio'); return true; }
+  if (ctrl && input.alt && !input.shift && /^[1-9]$/.test(k)) { flows.event('key', { key: k }); return true; }
   if (k === 'F9') { readerMode(); return true; }
   if (ctrl && input.shift && k === 'b') { setSetting('showBookmarkBar', !settings.showBookmarkBar); return true; }
   if (ctrl && input.shift && k === 'o') { openInternal('bookmarks'); return true; }
@@ -1146,6 +1154,7 @@ function setGamingMode(on) {
     toast('Gaming-Modus aus');
   }
   pushState();
+  flows.event('gaming', { on: !!on });
 }
 
 let hwTick = 0;
@@ -1682,6 +1691,7 @@ function showMainMenu() {
     { label: 'Verlauf', accelerator: 'CmdOrCtrl+H', click: () => openInternal('history') },
     { label: 'Downloads', accelerator: 'CmdOrCtrl+J', click: () => openInternal('downloads') },
     { label: 'Erweiterungen', click: () => openInternal('extensions') },
+    { label: 'Elektron Studio (Shader & Abläufe)', accelerator: 'CmdOrCtrl+Shift+E', click: () => openInternal('studio') },
     { label: 'Chrome Web Store', click: () => extmod.openStore('') },
     { label: 'Auf der Seite suchen …', accelerator: 'CmdOrCtrl+F', enabled: !!wc, click: openFind },
     { label: 'Seite drucken …', enabled: !!wc, click: () => wc && wc.print() },
@@ -1694,7 +1704,7 @@ function showMainMenu() {
     { label: 'Lesezeichen & Einstellungen sichern …', click: backupData },
     { label: 'Sicherung wiederherstellen …', click: restoreData },
     { type: 'separator' },
-    { label: 'Elektron GX weiterempfehlen', click: () => {
+    { label: 'Elektron weiterempfehlen', click: () => {
       clipboard.writeText('https://obimokenobix.github.io/elektron-gx/');
       toast('Link kopiert – schick ihn an deine Freunde!');
     } },
@@ -1942,6 +1952,7 @@ function onWillDownload(e, item) {
     }, true);
     if (st === 'completed') {
       markFromInternet(item.getSavePath(), item.getURL(), item.getReferrer && item.getReferrer());
+      flows.event('download', { name: rec.name });
       if (settings.scanDownloads && protect.defenderPath()) scanDownload(id, rec.name, item.getSavePath());
       else toast(`Download fertig: ${rec.name}`, { action: 'Im Ordner zeigen', cmd: 'openDownload', arg: id });
     } else if (st === 'failed') toast(`Download fehlgeschlagen: ${rec.name}`);
@@ -2119,7 +2130,7 @@ async function screenshot(full) {
     toast('Screenshot hat nicht geklappt');
     return;
   }
-  const dir = path.join(app.getPath('pictures'), 'Elektron GX');
+  const dir = path.join(app.getPath('pictures'), 'Elektron');
   fs.mkdirSync(dir, { recursive: true });
   const stamp = new Date().toISOString().slice(0, 19).replace('T', ' ').replace(/:/g, '-');
   const file = path.join(dir, `Screenshot ${stamp}.png`);
@@ -2195,11 +2206,11 @@ const BACKUP_KEYS = ['accent', 'accentNormal', 'style', 'background', 'preferred
 async function backupData() {
   const r = await dialog.showSaveDialog(win, {
     title: 'Lesezeichen und Einstellungen sichern',
-    defaultPath: path.join(app.getPath('documents'), `Elektron-GX-Sicherung-${new Date().toISOString().slice(0, 10)}.json`),
-    filters: [{ name: 'Elektron-GX-Sicherung', extensions: ['json'] }]
+    defaultPath: path.join(app.getPath('documents'), `Elektron-Sicherung-${new Date().toISOString().slice(0, 10)}.json`),
+    filters: [{ name: 'Elektron-Sicherung', extensions: ['json'] }]
   });
   if (r.canceled || !r.filePath) return;
-  const data = { app: 'Elektron GX', version: 1, created: new Date().toISOString(),
+  const data = { app: 'Elektron', version: 1, created: new Date().toISOString(),
     bookmarks: store.bookmarks().map(b => ({ url: b.url, title: b.title })),
     settings: Object.fromEntries(BACKUP_KEYS.map(k => [k, settings[k]])) };
   fs.writeFileSync(r.filePath, JSON.stringify(data, null, 2));
@@ -2208,12 +2219,12 @@ async function backupData() {
 async function restoreData() {
   const r = await dialog.showOpenDialog(win, {
     title: 'Sicherung wiederherstellen', properties: ['openFile'],
-    filters: [{ name: 'Elektron-GX-Sicherung', extensions: ['json'] }]
+    filters: [{ name: 'Elektron-Sicherung', extensions: ['json'] }]
   });
   if (r.canceled || !r.filePaths[0]) return;
   try {
     const data = JSON.parse(fs.readFileSync(r.filePaths[0], 'utf8'));
-    if (data.app !== 'Elektron GX') throw new Error('keine Elektron-GX-Sicherung');
+    if (data.app !== 'Elektron' && data.app !== 'Elektron GX') throw new Error('keine Elektron-Sicherung');
     const added = store.importBookmarks(Array.isArray(data.bookmarks) ? data.bookmarks : []);
     for (const k of BACKUP_KEYS) if (data.settings && k in data.settings && typeof data.settings[k] === typeof DEFAULTS[k]) settings[k] = data.settings[k];
     saveSettings();
@@ -2226,6 +2237,77 @@ async function restoreData() {
 }
 
 // ------------------------------------------------------------------ Eigene Seiten
+// ------------------------------------------------------------------ Elektron Studio
+// Bilder aus dem Internet für den Shader-Editor laden (ohne Cookies, nur echte Bilder, max. 25 MB)
+async function studioFetchImage(url) {
+  let u;
+  try { u = new URL(url); } catch { return { ok: false, error: 'Ungültige Adresse' }; }
+  if (!/^https?:$/.test(u.protocol)) return { ok: false, error: 'Nur http- und https-Adressen' };
+  if (protect.isLocalHost(u.hostname) && !process.env.ELEKTRON_TEST) return { ok: false, error: 'Lokale Adressen sind nicht erlaubt' };
+  if (settings.phishingProtect && protect.check(u.href)) return { ok: false, error: 'Diese Seite steht auf der Liste gefährlicher Seiten' };
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), 20000);
+  try {
+    const res = await mainSes.fetch(u.href, { signal: ctl.signal, credentials: 'omit' });
+    if (!res.ok) return { ok: false, error: `Server antwortet mit Fehler ${res.status}` };
+    const len = Number(res.headers.get('content-length') || 0);
+    if (len > 25 * 1024 * 1024) return { ok: false, error: 'Bild ist zu groß (max. 25 MB)' };
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length > 25 * 1024 * 1024) return { ok: false, error: 'Bild ist zu groß (max. 25 MB)' };
+    const type = imageType(buf) || '';
+    if (!type) return { ok: false, error: 'Unter dieser Adresse liegt kein Bild (Tipp: Rechtsklick auf ein Bild → „Bildadresse kopieren“)' };
+    return { ok: true, dataUrl: `data:${type};base64,${buf.toString('base64')}` };
+  } catch (e) {
+    return { ok: false, error: e.name === 'AbortError' ? 'Zeitüberschreitung beim Laden' : 'Bild konnte nicht geladen werden' };
+  } finally { clearTimeout(timer); }
+}
+function imageType(buf) {
+  if (buf.length < 12) return null;
+  if (buf[0] === 0x89 && buf[1] === 0x50) return 'image/png';
+  if (buf[0] === 0xff && buf[1] === 0xd8) return 'image/jpeg';
+  if (buf[0] === 0x47 && buf[1] === 0x49) return 'image/gif';
+  if (buf.slice(0, 4).toString() === 'RIFF' && buf.slice(8, 12).toString() === 'WEBP') return 'image/webp';
+  if (buf.slice(4, 12).toString().startsWith('ftypavif')) return 'image/avif';
+  if (buf[0] === 0x42 && buf[1] === 0x4d) return 'image/bmp';
+  return null;
+}
+// Fertiges Studio-Bild als Startseiten-Hintergrund
+function studioSetBackground(dataUrl) {
+  const m = /^data:image\/png;base64,([A-Za-z0-9+/=]+)$/.exec(dataUrl);
+  if (!m) return false;
+  const buf = Buffer.from(m[1], 'base64');
+  if (buf.length > 60 * 1024 * 1024 || imageType(buf) !== 'image/png') return false;
+  const dir = app.getPath('userData');
+  try {
+    for (const f of fs.readdirSync(dir)) if (/^hintergrund\./i.test(f)) fs.unlinkSync(path.join(dir, f));
+    fs.writeFileSync(path.join(dir, 'hintergrund.png'), buf);
+  } catch { return false; }
+  settings.background = 'eigenes';
+  settings.bgVersion = (settings.bgVersion || 0) + 1;
+  saveSettings();
+  lookChanged();
+  return true;
+}
+// Was die Abläufe im Browser tun dürfen
+function setupFlows() {
+  flows.init({
+    openTab: (url, activate) => createTab(url, { activate }),
+    isGaming: () => gamingMode,
+    setGaming: (on) => { if (!!on !== gamingMode) setGamingMode(!!on); },
+    setAdblock: (on) => { if (!!on !== settings.adblock) { setAdblock(!!on); pushState(); } },
+    toast: (text) => toast(text),
+    muteAll: (mute) => { for (const t of tabs) if (t.view && alive(t.view.webContents)) { t.muted = mute; t.view.webContents.setAudioMuted(mute); } pushState(); },
+    screenshot: (full) => screenshot(full),
+    reader: () => readerMode(),
+    closeActive: () => { const t = activeTab(); if (t) closeTab(t.id); },
+    openPanel: (which) => { const name = which === 'gx' ? 'gx' : 'web:' + which; if (which === 'gx' || WEB_PANELS[which]) { if (panel !== name) togglePanel(name); } },
+    setBackground: (bg) => { if (BACKGROUNDS.includes(bg)) setSetting('background', bg); },
+    setStyle: (st) => { if (settings.style !== st) setStyle(st); },
+    activeUrl: () => { const t = activeTab(); return t ? t.url : ''; }
+  });
+  flows.setGraph(settings.flows || { nodes: [], links: [] }, settings.flowsEnabled !== false);
+}
+
 function openInternal(page) {
   const url = `elektron://start/${page}.html`;
   const ex = tabs.find(t => t.url.startsWith(url) && !t.private);
@@ -2307,6 +2389,16 @@ ipcMain.handle('internal', async (e, name, ...args) => {
     }
     case 'reader.get': return readerArticles.get(String(args[0])) || null;
     case 'look.chooseBg': chooseBackground(); return true;
+    case 'studio.fetchImage': return studioFetchImage(String(args[0] || ''));
+    case 'studio.setBackground': return studioSetBackground(String(args[0] || ''));
+    case 'flows.get': return { graph: settings.flows || { nodes: [], links: [] }, enabled: settings.flowsEnabled !== false };
+    case 'flows.save': {
+      settings.flows = flows.setGraph(args[0], args[1] !== false);
+      settings.flowsEnabled = args[1] !== false;
+      saveSettings();
+      return true;
+    }
+    case 'flows.test': return flows.test(String(args[0] || ''));
     case 'ext.list': return extmod.list();
     case 'welcome.state': return Object.keys(extmod.RECOMMENDED).map(id => ({ id, installed: extmod.isInstalled(id) }));
     case 'welcome.install': return extmod.installRecommended(String(args[0]));
@@ -2635,6 +2727,8 @@ app.whenReady().then(async () => {
     perf('extensions-ready');
   })();
   await Promise.race([extReady, new Promise(r => setTimeout(r, 1500))]);
+  setupFlows();
+  setTimeout(() => flows.event('start'), 1500);
   if (searchSwitchedNotice) setTimeout(() => toast('Mehr Datenschutz: Du suchst jetzt mit DuckDuckGo statt Google', { action: 'Zurück zu Google', cmd: 'searchGoogle' }), 4000);
   // Starttest für die automatische Veröffentlichung: läuft der Browser wirklich?
   if (process.env.ELEKTRON_SMOKE) {
@@ -2840,6 +2934,63 @@ setTimeout(()=>{document.getElementById('f').src='http://localhost:8771/check'},
       }
       if (process.env.ELEKTRON_TEST === 'lookalike') {
         createTab('http://paypa1.com/login');
+      }
+      if (process.env.ELEKTRON_TEST === 'studio') {
+        if (process.env.STUDIO_IMG) require('http').createServer((q, r) => { r.setHeader('content-type', 'image/png'); r.end(fs.readFileSync(process.env.STUDIO_IMG)); }).listen(8775, '127.0.0.1');
+        if (process.env.STUDIO_IMG) setTimeout(() => {
+          const t = activeTab();
+          t.view.webContents.executeJavaScript(`loadShader({ nodes: [
+            { id: 'img', type: 'image_url', x: 40, y: 120, params: { url: 'http://127.0.0.1:8775/bild.png', fit: 'cover' } },
+            { id: 'k', type: 'kaleido', x: 340, y: 60, params: { seg: 8, spin: 0 } },
+            { id: 'e', type: 'edges', x: 340, y: 300, params: { amt: 4, c: '#00e5ff', keep: 0.3 } },
+            { id: 'm', type: 'mix', x: 600, y: 160, params: { mode: 'add', amt: 0.8 } },
+            { id: 'o', type: 'output', x: 860, y: 160, params: {} }],
+            links: [{ from: { node: 'img', port: 'out' }, to: { node: 'k', port: 'in' } }, { from: { node: 'img', port: 'out' }, to: { node: 'e', port: 'in' } },
+              { from: { node: 'k', port: 'out' }, to: { node: 'm', port: 'a' } }, { from: { node: 'e', port: 'out' }, to: { node: 'm', port: 'b' } }, { from: { node: 'm', port: 'out' }, to: { node: 'o', port: 'in' } }] }); true`).catch(e => console.log('IMG-ERR', e.message));
+        }, 3000);
+        if (process.env.STUDIO_MODE === 'flows') {
+          settings.flows = null; flows.setGraph({ nodes: [], links: [] }, true);
+          require('http').createServer((q, r) => { r.setHeader('content-type', 'text/html'); r.end('<title>Twitch-Test</title><h1>twitch</h1>'); }).listen(8776, '127.0.0.1');
+          setTimeout(async () => {
+            const t = activeTab();
+            await t.view.webContents.executeJavaScript("document.getElementById('fl-example').click(); true");
+            setTimeout(() => {
+              console.log('FLOW-SAVED nodes=' + (settings.flows ? settings.flows.nodes.length : 0));
+              createTab('http://127.0.0.1:8776/twitch.tv/stream');
+              setTimeout(() => { console.log('FLOW-RESULT gaming=' + gamingMode); activateTab(t.id); }, 2500);
+            }, 1500);
+          }, 3500);
+        }
+        if (process.env.STUDIO_MENU) setTimeout(() => {
+          activeTab().view.webContents.executeJavaScript("(() => { const g = document.getElementById('graph-shader'); g.dispatchEvent(new MouseEvent('contextmenu', { bubbles: true, clientX: 420, clientY: 520 })); const s = document.querySelector('.g-msearch'); s.value = 'bild'; s.dispatchEvent(new Event('input')); return true; })()");
+        }, 3500);
+        if (process.env.STUDIO_ALL) setTimeout(async () => {
+          const t = activeTab();
+          const res = await t.view.webContents.executeJavaScript(`(() => {
+            const SS = window.ShaderStudio; const out = [];
+            const r = new SS.Renderer(document.createElement('canvas'));
+            const variants = [['pattern', { kind: 'checker' }], ['pattern', { kind: 'stripes' }], ['pattern', { kind: 'dots' }], ['pattern', { kind: 'hex' }], ['transform', { tile: true }], ['gradient', { mode: 'radial' }], ['mask', { inv: true }], ['image_url', { fit: 'contain' }],
+              ...['add', 'multiply', 'screen', 'overlay', 'difference'].map(m => ['mix', { mode: m }]), ['glsl', { code: 'return vec4(sampleA(uv + 0.1).rgb * b.rgb, 1.0);' }], ['glsl', { code: 'this is broken' }]];
+            for (const [type, extra] of variants) {
+              const def = SS.CATALOG[type]; const params = {}; for (const p of def.params || []) params[p.key] = p.default; Object.assign(params, extra);
+              const g = { nodes: [{ id: 'g', type: 'gradient', params: { c1: '#000000', c2: '#ffffff', mode: 'linear', angle: 90 } }, { id: 'x', type, params }, { id: 'o', type: 'output', params: {} }],
+                links: [{ from: { node: 'x', port: 'out' }, to: { node: 'o', port: 'in' } }] };
+              for (const p of def.inputs || []) g.links.push({ from: { node: 'g', port: 'out' }, to: { node: 'x', port: p.name } });
+              try { const c = SS.compile(g); r.use(c); r.draw(64, 36, 1); out.push(type + JSON.stringify(extra) + ':ok'); } catch (e) { const c = SS.compile(g); out.push(type + JSON.stringify(extra) + ':FEHLER node=' + SS.errorNode(c, e.message) + ' ' + String(e.message).split(String.fromCharCode(10))[0].slice(0, 120)); }
+            }
+            for (const [type, def] of Object.entries(SS.CATALOG)) {
+              if (type === 'output') continue;
+              const params = {}; for (const p of def.params || []) params[p.key] = p.default;
+              const g = { nodes: [{ id: 'g', type: 'gradient', params: { c1: '#000000', c2: '#ffffff', mode: 'linear', angle: 90 } }, { id: 'x', type, params }, { id: 'o', type: 'output', params: {} }],
+                links: [{ from: { node: 'x', port: 'out' }, to: { node: 'o', port: 'in' } }] };
+              for (const p of def.inputs || []) g.links.push({ from: { node: 'g', port: 'out' }, to: { node: 'x', port: p.name } });
+              try { const c = SS.compile(g); r.use(c); r.draw(64, 36, 1); out.push(type + ':ok'); } catch (e) { out.push(type + ':FEHLER ' + String(e.message).slice(0, 200)); }
+            }
+            return out.join(' | ');
+          })()`);
+          console.log('STUDIO-ALL', res);
+        }, 5000);
+        createTab('elektron://start/studio.html' + (process.env.STUDIO_MODE ? '?mode=' + process.env.STUDIO_MODE : ''));
       }
       if (process.env.ELEKTRON_TEST === 'normal') {
         settings.style = 'gaming'; setStyle('normal'); createTab();

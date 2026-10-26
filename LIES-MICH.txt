@@ -2,13 +2,13 @@ ELEKTRON GX 2.0 – DER GAMING-BROWSER
 ====================================
 
 INSTALLIEREN
-1. "Elektron-GX-Setup-2.0.0.exe" doppelklicken.
+1. "Elektron-Setup-2.0.0.exe" doppelklicken.
 2. Windows SmartScreen meldet evtl. "Der Computer wurde durch Windows geschützt"
    -> "Weitere Informationen" -> "Trotzdem ausführen" (die App ist nicht signiert).
 3. Installationsordner wählen -> Fertig. Verknüpfung liegt auf dem Desktop.
 
 ALS STANDARDBROWSER
-Menü (⋮) -> "Als Standardbrowser festlegen …" -> in Windows "Elektron GX" wählen.
+Menü (⋮) -> "Als Standardbrowser festlegen …" -> in Windows "Elektron" wählen.
 
 WICHTIGE TASTEN
 Strg+T neuer Tab · Strg+Umschalt+N privater Tab · Strg+D Lesezeichen

@@ -1,6 +1,6 @@
 'use strict';
 /*
- * Elektron GX – Erweiterungen (Chrome-Erweiterungen aus dem Chrome Web Store)
+ * Elektron – Erweiterungen (Chrome-Erweiterungen aus dem Chrome Web Store)
  * Nutzt electron-chrome-extensions (chrome.tabs, Popups, Kontextmenüs …)
  * und electron-chrome-web-store (Installieren & automatisch aktualisieren).
  */
@@ -63,7 +63,7 @@ async function confirmInstall(details) {
     buttons: ['Hinzufügen', 'Abbrechen'],
     defaultId: 0, cancelId: 1,
     title: 'Erweiterung hinzufügen',
-    message: `„${name}“ zu Elektron GX hinzufügen?`,
+    message: `„${name}“ zu Elektron hinzufügen?`,
     detail: perms.length ? 'Die Erweiterung kann:\n• ' + perms.join('\n• ') : 'Die Erweiterung braucht keine besonderen Berechtigungen.',
     icon: details.icon && !details.icon.isEmpty() ? details.icon.resize({ width: 64 }) : undefined
   });

@@ -1,4 +1,4 @@
-# Baut Elektron GX auf einem echten Windows-Rechner von GitHub und veröffentlicht
+# Baut Elektron auf einem echten Windows-Rechner von GitHub und veröffentlicht
 # Installer + Update-Dateien als Release – automatisch, sobald in package.json
 # eine neue Versionsnummer steht (oder per Hand über "Run workflow").
 name: Release
@@ -50,11 +50,11 @@ jobs:
         if: steps.ver.outputs.exists == 'false'
         shell: pwsh
         run: |
-          node scripts/check-fuses.js "dist/win-unpacked/Elektron GX.exe"
+          node scripts/check-fuses.js "dist/win-unpacked/Elektron.exe"
           if ($LASTEXITCODE -ne 0) { throw "Sicherheits-Schalter fehlen" }
           $out = Join-Path $env:RUNNER_TEMP 'smoke.json'
           $env:ELEKTRON_SMOKE = $out
-          $p = Start-Process -FilePath "dist/win-unpacked/Elektron GX.exe" -PassThru
+          $p = Start-Process -FilePath "dist/win-unpacked/Elektron.exe" -PassThru
           if (-not $p.WaitForExit(120000)) { Stop-Process -Id $p.Id -Force; throw 'Browser hat sich nicht beendet (Zeitüberschreitung)' }
           if (-not (Test-Path $out)) { throw 'Browser ist nicht richtig gestartet – Veröffentlichung abgebrochen' }
           Get-Content $out
@@ -67,10 +67,10 @@ jobs:
         with:
           tag_name: v${{ steps.ver.outputs.version }}
           target_commitish: ${{ github.sha }}
-          name: Elektron GX ${{ steps.ver.outputs.version }}
+          name: Elektron ${{ steps.ver.outputs.version }}
           make_latest: true
           body: |
-            **Installieren:** `Elektron-GX-Setup-${{ steps.ver.outputs.version }}.exe` herunterladen und starten.
+            **Installieren:** `Elektron-Setup-${{ steps.ver.outputs.version }}.exe` herunterladen und starten.
             Windows SmartScreen fragt evtl. nach → „Weitere Informationen“ → „Trotzdem ausführen“.
 
             Bereits installierte Browser aktualisieren sich automatisch.

@@ -18,7 +18,7 @@ if (location.protocol === 'elektron:') {
 /*
  * Schutz vor Fingerprinting – auf normalen Webseiten.
  * Webseiten können dich ohne Cookies wiedererkennen, indem sie z. B. ein unsichtbares
- * Bild zeichnen (Canvas) oder den Namen deiner Grafikkarte abfragen. Elektron GX
+ * Bild zeichnen (Canvas) oder den Namen deiner Grafikkarte abfragen. Elektron
  * verändert das Canvas-Ergebnis minimal (pro Seite und Browser-Start anders, für das
  * Auge unsichtbar), meldet einen allgemeinen Grafikkarten-Namen und Standardwerte für
  * CPU-Kerne und Arbeitsspeicher.

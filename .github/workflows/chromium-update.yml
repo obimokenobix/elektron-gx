@@ -1,5 +1,5 @@
 # Prüft alle 3 Stunden auf die neueste Electron-Version (Chromium-Sicherheitsupdates) innerhalb der
-# aktuellen Hauptversion, erhöht die Versionsnummer von Elektron GX und startet den Release-Build.
+# aktuellen Hauptversion, erhöht die Versionsnummer von Elektron und startet den Release-Build.
 # Alle installierten Browser bekommen das Update danach automatisch.
 name: Chromium-Sicherheitsupdates
 
@@ -63,6 +63,6 @@ jobs:
           if [ "$NEW_MAJOR" -gt "$((CUR_MAJOR + 1))" ]; then
             TITLE="Neue Electron-Hauptversion $NEW_MAJOR verfügbar"
             if ! gh issue list --state open --search "$TITLE in:title" --json number -q '.[0].number' | grep -q .; then
-              gh issue create --title "$TITLE" --body "Elektron GX nutzt Electron $CUR_MAJOR. Electron unterstützt nur die drei neuesten Hauptversionen mit Sicherheitsupdates – bitte auf Electron $NEW_MAJOR umsteigen und testen."
+              gh issue create --title "$TITLE" --body "Elektron nutzt Electron $CUR_MAJOR. Electron unterstützt nur die drei neuesten Hauptversionen mit Sicherheitsupdates – bitte auf Electron $NEW_MAJOR umsteigen und testen."
             fi
           fi

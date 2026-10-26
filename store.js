@@ -1,7 +1,7 @@
 'use strict';
 /*
- * Elektron GX – Datenablage für Lesezeichen, Verlauf und Downloads.
- * Alles liegt als JSON im Benutzerordner (%APPDATA%\Elektron GX).
+ * Elektron – Datenablage für Lesezeichen, Verlauf und Downloads.
+ * Alles liegt als JSON im Benutzerordner (%APPDATA%\Elektron GX – Ordnername aus der Zeit vor der Umbenennung).
  */
 const fs = require('fs');
 const path = require('path');

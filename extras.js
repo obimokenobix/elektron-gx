@@ -1,6 +1,6 @@
 'use strict';
 /*
- * Elektron GX – Gaming-Extras
+ * Elektron – Gaming-Extras
  *  • Steam-Bibliothek: installierte Spiele finden (libraryfolders.vdf + appmanifest_*.acf)
  *  • Hardware-Anzeige: Grafikkarte über nvidia-smi (NVIDIA-Treiber), CPU und RAM des ganzen PCs
  */

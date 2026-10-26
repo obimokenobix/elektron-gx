@@ -9,10 +9,10 @@ const fs = require('fs');
 
 const INFO = {
   CompanyName: 'Elektron',
-  FileDescription: 'Elektron GX',
-  ProductName: 'Elektron GX',
-  InternalName: 'Elektron GX',
-  OriginalFilename: 'Elektron GX.exe',
+  FileDescription: 'Elektron',
+  ProductName: 'Elektron',
+  InternalName: 'Elektron',
+  OriginalFilename: 'Elektron.exe',
   LegalCopyright: '© 2026 Elektron'
 };
 

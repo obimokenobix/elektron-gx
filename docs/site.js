@@ -1,12 +1,12 @@
 'use strict';
 // Bildergalerie
 const shot = document.getElementById('shot');
-const labels = { split: 'Split-Screen', float: 'Schwebendes Fenster', v2b: 'Adressleiste mit Vorschlägen und Verlauf', gaming: 'GX Control mit Gaming-Modus', start: 'Startseite mit Steam-Spielen', design: 'Design-Einstellungen', reader: 'Lesemodus' };
+const labels = { split: 'Split-Screen', float: 'Schwebendes Fenster', v2b: 'Adressleiste mit Vorschlägen und Verlauf', gaming: 'GX Control mit Gaming-Modus', start: 'Startseite mit Steam-Spielen', design: 'Design-Einstellungen', reader: 'Lesemodus', studio: 'Elektron Studio – Shader & Bilder', flows: 'Elektron Studio – Abläufe' };
 document.querySelectorAll('.tabs button').forEach((b) => {
   b.addEventListener('click', () => {
     document.querySelectorAll('.tabs button').forEach((x) => x.classList.toggle('on', x === b));
     shot.src = `img/${b.dataset.shot}.webp`;
-    shot.alt = `Elektron GX – ${labels[b.dataset.shot]}`;
+    shot.alt = `Elektron – ${labels[b.dataset.shot]}`;
   });
 });
 
@@ -31,7 +31,7 @@ document.getElementById('copy-link').addEventListener('click', async (e) => {
   const url = 'https://obimokenobix.github.io/elektron-gx/';
   try {
     if (navigator.share && /Android|iPhone|iPad/i.test(navigator.userAgent)) {
-      await navigator.share({ title: 'Elektron GX', text: 'Der kostenlose Gaming-Browser für Windows', url });
+      await navigator.share({ title: 'Elektron', text: 'Der kostenlose Gaming-Browser für Windows', url });
       return;
     }
     await navigator.clipboard.writeText(url);

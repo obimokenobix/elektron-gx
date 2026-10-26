@@ -1,6 +1,6 @@
 'use strict';
 /*
- * Elektron GX – Schutz
+ * Elektron – Schutz
  *  • Phishing- und Malware-Schutz über öffentliche Sperrlisten
  *      - Phishing.Database (aktive Phishing-Domains, MIT-Lizenz)
  *      - URLhaus von abuse.ch (Domains, die Schadsoftware verteilen, CC0)

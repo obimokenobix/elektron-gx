@@ -23,7 +23,7 @@ jobs:
         run: npx electron-builder --win appx --publish never
       - uses: actions/upload-artifact@v4
         with:
-          name: Elektron-GX-Microsoft-Store
+          name: Elektron-Microsoft-Store
           path: dist/*.appx
       - name: Version lesen
         id: ver

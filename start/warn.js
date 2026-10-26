@@ -18,7 +18,7 @@ if (isBlocked && kind === 'lookalike' && meant) {
     const li = document.createElement('li'); li.textContent = t; ul.appendChild(li);
   }
   document.getElementById('detail').textContent = `Adresse: ${url}`;
-  const src = document.querySelector('.src'); if (src) src.textContent = 'Elektron GX Schutz · Doppelgänger-Erkennung direkt auf deinem PC';
+  const src = document.querySelector('.src'); if (src) src.textContent = 'Elektron Schutz · Doppelgänger-Erkennung direkt auf deinem PC';
   const go = document.getElementById('back');
   go.textContent = `Zur echten Seite: ${meant}`;
   go.addEventListener('click', (e) => { e.stopImmediatePropagation(); location.href = 'https://' + meant + '/'; }, true);
@@ -27,7 +27,7 @@ if (isBlocked && kind === 'lookalike' && meant) {
   document.title = malware ? 'Schadsoftware blockiert' : 'Betrugsseite blockiert';
   document.getElementById('title').textContent = malware ? 'Diese Seite verteilt Schadsoftware' : 'Betrugsseite blockiert';
   document.getElementById('text').textContent = malware
-    ? 'Von dieser Seite wurden Viren oder andere Schadprogramme verbreitet. Elektron GX hat sie gestoppt, bevor etwas auf deinen PC gelangt.'
+    ? 'Von dieser Seite wurden Viren oder andere Schadprogramme verbreitet. Elektron hat sie gestoppt, bevor etwas auf deinen PC gelangt.'
     : 'Diese Seite steht auf einer Liste bekannter Phishing-Seiten. Solche Seiten sehen oft echt aus, wollen aber deine Passwörter oder Bankdaten stehlen.';
   const tips = malware
     ? ['Lade von hier nichts herunter.', 'Öffne keine Dateien, die du von dieser Seite schon hast.', 'Lass deinen Virenscanner laufen, falls du unsicher bist.']
