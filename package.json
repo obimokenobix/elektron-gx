@@ -86,15 +86,14 @@
       }
     ],
     "appx": {
-      "identityName": "ELEKTRON-STORE-ID.ElektronGX",
-      "publisher": "CN=00000000-0000-0000-0000-000000000000",
-      "publisherDisplayName": "Elektron",
+      "identityName": "JomoSoft.ElektronGX",
+      "publisher": "CN=09A68222-F66C-4CA4-AE24-2227F0228F48",
+      "publisherDisplayName": "JomoSoft",
       "applicationId": "ElektronGX",
       "displayName": "Elektron GX",
       "backgroundColor": "#0b0b0f",
       "languages": [
-        "de-DE",
-        "en-US"
+        "de-DE"
       ],
       "showNameOnTiles": false
     }
