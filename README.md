@@ -43,6 +43,17 @@
 - **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Malwarebytes Browser Guard, Bitwarden, optional Avast) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
+**Neu in 2.7 – Datenschutz und Sicherheit**
+
+- **DuckDuckGo als Standard-Suche** (einmalige Umstellung mit Hinweis und „Zurück zu Google“)
+- **Werbe-Schnittstellen von Chromium aus**: Topics, FLEDGE/Interessengruppen, Attribution Reporting, Shared Storage
+- **Client Hints gekürzt** (keine genaue Windows-/Browser-Version, Architektur, Modell)
+- **Tracking-Pings** (`<a ping>`, Beacons) an fremde Seiten blockiert
+- **Doppelgänger-Warnung** (`lookalike.js`): paypa1.com, steamcommunlty.com, kyrillische Buchstaben … mit Knopf zur echten Seite
+- **Downloads als „aus dem Internet“ markiert** (Mark of the Web) – Windows SmartScreen prüft beim Öffnen
+- **Maximale Sicherheit** (optional): JavaScript ohne JIT-Compiler
+- **Schnellere Sicherheitsupdates**: CI prüft alle 3 Stunden auf neue Electron-/Chromium-Versionen, der Browser stündlich
+
 **Neu in 2.6 – Datenschutz**
 
 - **Schild in der Adressleiste**: zeigt pro Seite, was blockiert wurde; Werbeblocker, Fremd-Cookies und Fingerprint-Schutz pro Seite abschaltbar; **JavaScript pro Seite blockieren**; **Seite beim Schließen vergessen** (Cookies und Website-Daten löschen)

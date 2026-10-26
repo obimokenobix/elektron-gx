@@ -19,6 +19,7 @@ const extmod = require('./extensions');
 const protect = require('./protect');
 const privacy = require('./privacy');
 const favicons = require('./favicons');
+const lookalike = require('./lookalike');
 const extras = require('./extras');
 
 const APP_NAME = 'Elektron GX';
@@ -74,7 +75,8 @@ const DEFAULTS = {
   blockThirdPartyCookies: true,
   fingerprintProtect: true,
   cleanLinks: true,
-  searchEngine: 'google',   // google | duckduckgo | brave | startpage
+  searchEngine: 'duckduckgo', // google | duckduckgo | brave | startpage
+  searchMigrated: true,
   searchSuggest: true,
   gpc: true,
   webrtcProtect: true,
@@ -86,6 +88,7 @@ const DEFAULTS = {
   restoreSession: true,
   highPerfGpu: true,
   unlockFps: false,
+  maxSecurity: false,      // V8 ohne JIT (wie Edge „Verstärkte Sicherheit“) – sicherer, aber langsamer
   blockedTotal: 0,
   siteShields: {},        // Ausnahmen pro Seite: { 'beispiel.de': { adblock: false, cookies: false, fp: false } }
   permissions: {},
@@ -110,7 +113,14 @@ function loadSettings() {
 }
 
 let settings = loadSettings();
-const bootSettings = { highPerfGpu: settings.highPerfGpu, unlockFps: settings.unlockFps };
+// Einmalige Umstellung auf eine private Suchmaschine (ab 2.7) – jederzeit zurückstellbar
+let searchSwitchedNotice = false;
+if (!settings.searchMigrated) {
+  if (settings.searchEngine === 'google') { settings.searchEngine = 'duckduckgo'; searchSwitchedNotice = true; }
+  settings.searchMigrated = true;
+  setTimeout(() => saveSettings(), 0);
+}
+const bootSettings = { highPerfGpu: settings.highPerfGpu, unlockFps: settings.unlockFps, maxSecurity: settings.maxSecurity };
 let saveTimer = null;
 
 function saveSettingsNow() {
@@ -129,6 +139,14 @@ app.setName(APP_NAME);
 if (process.platform === 'win32') app.setAppUserModelId('at.elektron.gx');
 if (settings.highPerfGpu) app.commandLine.appendSwitch('force_high_performance_gpu');
 app.commandLine.appendSwitch('enable-gpu-rasterization');
+// Maximale Sicherheit: JavaScript ohne JIT-Compiler – schließt die häufigste Angriffsfläche, kostet Tempo
+if (settings.maxSecurity) app.commandLine.appendSwitch('js-flags', '--jitless');
+// Datenschutz: Werbe-Schnittstellen von Chromium abschalten (Topics, Interessengruppen/FLEDGE, Attribution, Shared Storage)
+app.commandLine.appendSwitch('disable-features', [
+  'BrowsingTopics', 'BrowsingTopicsDocumentAPI', 'InterestGroupStorage', 'Fledge', 'AdInterestGroupAPI',
+  'PrivacySandboxAdsAPIsOverride', 'AttributionReportingCrossAppWeb', 'ConversionMeasurement', 'SharedStorageAPI',
+  'InterestFeedContentSuggestions', 'MediaRouter', 'OptimizationHints'
+].join(','));
 app.commandLine.appendSwitch('enable-zero-copy');
 app.commandLine.appendSwitch('ignore-gpu-blocklist');
 if (settings.unlockFps) {
@@ -295,9 +313,9 @@ function snapshot() {
       updateUrl: effectiveUpdateUrl(),
       freezeOnMinimize: settings.freezeOnMinimize,
       clearOnExit: settings.clearOnExit, restoreSession: settings.restoreSession,
-      highPerfGpu: settings.highPerfGpu, unlockFps: settings.unlockFps
+      highPerfGpu: settings.highPerfGpu, unlockFps: settings.unlockFps, maxSecurity: settings.maxSecurity
     },
-    needsRestart: settings.highPerfGpu !== bootSettings.highPerfGpu || settings.unlockFps !== bootSettings.unlockFps,
+    needsRestart: settings.highPerfGpu !== bootSettings.highPerfGpu || settings.unlockFps !== bootSettings.unlockFps || settings.maxSecurity !== bootSettings.maxSecurity,
     versions: { app: app.getVersion(), chrome: process.versions.chrome, electron: process.versions.electron }
   };
 }
@@ -1426,6 +1444,15 @@ function requestFilter(ses) {
           countBlocked();
           return cb({ cancel: true });
         }
+        // Doppelgänger bekannter Seiten (paypa1.com, kyrillische Buchstaben …)
+        if (type === 'mainFrame') {
+          const real = lookalike.check(host);
+          if (real) {
+            if (details.webContentsId) pendingBlock.set(details.webContentsId, { url, kind: 'lookalike', real });
+            countBlocked();
+            return cb({ cancel: true });
+          }
+        }
       }
       if (type === 'mainFrame' && settings.cleanLinks && details.method === 'GET') {
         const clean = privacy.cleanUrl(url);
@@ -1435,6 +1462,11 @@ function requestFilter(ses) {
         if (details.webContentsId) upgraded.set(details.webContentsId, url);
         return cb({ redirectURL: 'https:' + url.slice(5) });
       }
+    }
+    // Tracking-Pings (<a ping>, Beacons) an fremde Seiten blockieren
+    if (type === 'ping' && settings.cleanLinks) {
+      const top = topUrlOf(details);
+      if (top && privacy.isThirdParty(top, url)) { linksCleaned++; return cb({ cancel: true }); }
     }
     if (blocker && adblockSessions.has(ses)) {
       if (type !== 'mainFrame' && !shieldOn(topUrlOf(details), 'adblock')) return cb({});
@@ -1470,6 +1502,12 @@ function sendHeadersFilter() {
       let removed = false;
       for (const k of Object.keys(h)) if (k.toLowerCase() === 'cookie') { delete h[k]; removed = true; }
       if (removed) { countCookie(details); changed = true; }
+    }
+    // Detaillierte Geräte-Angaben (Client Hints) nicht verraten
+    if (settings.fingerprintProtect) {
+      for (const k of Object.keys(h)) {
+        if (/^sec-ch-ua-(full-version|full-version-list|platform-version|arch|bitness|model|wow64|form-factors?)$/i.test(k)) { delete h[k]; changed = true; }
+      }
     }
     // Global Privacy Control: „Meine Daten nicht verkaufen oder weitergeben“
     if (settings.gpc && /^https?:/i.test(details.url)) { h['Sec-GPC'] = '1'; changed = true; }
@@ -1523,7 +1561,7 @@ function handleProtectedFailure(wc, code, url) {
   const blocked = pendingBlock.get(wc.id);
   if (blocked && code === -20) {
     pendingBlock.delete(wc.id);
-    wc.loadURL(`elektron://start/blocked.html?u=${encodeURIComponent(blocked.url)}&k=${blocked.kind}`);
+    wc.loadURL(`elektron://start/blocked.html?u=${encodeURIComponent(blocked.url)}&k=${blocked.kind}${blocked.real ? '&m=' + encodeURIComponent(blocked.real) : ''}`);
     return true;
   }
   const original = upgraded.get(wc.id);
@@ -1571,6 +1609,7 @@ function setSetting(key, value) {
     case 'searchEngine': if (SEARCH_ENGINES[value]) { settings.searchEngine = value; lookChanged(); } break;
     case 'searchSuggest': settings.searchSuggest = !!value; break;
     case 'gpc': settings.gpc = !!value; break;
+    case 'maxSecurity': settings.maxSecurity = !!value; break;
     case 'webrtcProtect': settings.webrtcProtect = !!value; allWebContents().forEach(applyWebRtcPolicy); break;
     case 'preconnect': settings.preconnect = !!value; break;
     case 'showBookmarkBar': settings.showBookmarkBar = !!value; hideSuggest(); layout(); break;
@@ -1741,6 +1780,7 @@ ipcMain.on('ui:cmd', (e, name, ...args) => {
     case 'chooseBg': chooseBackground(); break;
     case 'screenshot': screenshot(!!args[0]); break;
     case 'shieldMenu': showShieldMenu(); break;
+    case 'searchGoogle': setSetting('searchEngine', 'google'); break;
     case 'reader': readerMode(); break;
     case 'showFile': if (typeof args[0] === 'string' && fs.existsSync(args[0])) shell.showItemInFolder(args[0]); break;
     case 'backup': backupData(); break;
@@ -1901,12 +1941,23 @@ function onWillDownload(e, item) {
       total: item.getTotalBytes() || item.getReceivedBytes(), speed: 0
     }, true);
     if (st === 'completed') {
+      markFromInternet(item.getSavePath(), item.getURL(), item.getReferrer && item.getReferrer());
       if (settings.scanDownloads && protect.defenderPath()) scanDownload(id, rec.name, item.getSavePath());
       else toast(`Download fertig: ${rec.name}`, { action: 'Im Ordner zeigen', cmd: 'openDownload', arg: id });
     } else if (st === 'failed') toast(`Download fehlgeschlagen: ${rec.name}`);
     broadcastDownloads();
   });
   broadcastDownloads();
+}
+
+// Windows-Markierung „aus dem Internet“ (Mark of the Web): Beim Öffnen prüft Windows SmartScreen
+// die Datei und Office öffnet Dokumente in der geschützten Ansicht – wie bei Edge und Chrome.
+function markFromInternet(file, url, referrer) {
+  if (process.platform !== 'win32' || !file) return;
+  const clean = (u) => { try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.origin + x.pathname : ''; } catch { return ''; } };
+  const host = clean(url), ref = clean(referrer || '');
+  const body = '[ZoneTransfer]\r\nZoneId=3\r\n' + (ref ? `ReferrerUrl=${ref}\r\n` : '') + (host ? `HostUrl=${host}\r\n` : '');
+  try { fs.writeFileSync(file + ':Zone.Identifier', body); } catch {}
 }
 
 async function scanDownload(id, name, file) {
@@ -2441,7 +2492,7 @@ function setupUpdater() {
   });
   autoUpdater.on('error', (err) => setUpdate({ state: 'error', message: String(err && err.message || err).split('\n')[0].slice(0, 160) }));
   setTimeout(() => { if (settings.autoUpdate) checkUpdates(false); }, 15000);
-  setInterval(() => { if (settings.autoUpdate) checkUpdates(false); }, 4 * 3600 * 1000);
+  setInterval(() => { if (settings.autoUpdate) checkUpdates(false); }, 3600 * 1000); // stündlich – Sicherheitsupdates schnell verteilen
 }
 
 function checkUpdates(manual) {
@@ -2584,6 +2635,7 @@ app.whenReady().then(async () => {
     perf('extensions-ready');
   })();
   await Promise.race([extReady, new Promise(r => setTimeout(r, 1500))]);
+  if (searchSwitchedNotice) setTimeout(() => toast('Mehr Datenschutz: Du suchst jetzt mit DuckDuckGo statt Google', { action: 'Zurück zu Google', cmd: 'searchGoogle' }), 4000);
   // Starttest für die automatische Veröffentlichung: läuft der Browser wirklich?
   if (process.env.ELEKTRON_SMOKE) {
     setTimeout(async () => {
@@ -2759,11 +2811,12 @@ setTimeout(()=>{document.getElementById('f').src='http://localhost:8771/check'},
         setTimeout(() => uiView.webContents.executeJavaScript("document.querySelector('.seccheck').scrollIntoView()"), 2500);
       }
       if (process.env.ELEKTRON_TEST === 'links') {
+        settings.siteShields = {};
         require('http').createServer((q, r) => {
           console.log('LINK-REQ', q.url, 'gpc=' + (q.headers['sec-gpc'] || '-'));
           r.setHeader('content-type', 'text/html; charset=utf-8');
           if (q.url.startsWith('/amp')) return r.end('<!doctype html><html amp><head><link rel="canonical" href="http://127.0.0.1:8772/original"></head><body>AMP-Version</body></html>');
-          r.end(`<!doctype html><body style="font:18px sans-serif;background:#111;color:#eee;padding:20px"><h2>Seite: ${q.url}</h2><p>GPC: <b id=g></b></p><script>document.getElementById('g').textContent=navigator.globalPrivacyControl</script></body>`);
+          r.end(`<!doctype html><body style="font:18px sans-serif;background:#111;color:#eee;padding:20px"><h2>Seite: ${q.url}</h2><p>GPC: <b id=g></b></p><p>Topics-API: <b id=t></b></p><p>Client Hints: <b id=c></b></p><script>document.getElementById('g').textContent=navigator.globalPrivacyControl;document.getElementById('t').textContent=('browsingTopics' in document)?'AN':'aus';navigator.userAgentData.getHighEntropyValues(['platformVersion','fullVersionList','architecture']).then(v=>{document.getElementById('c').textContent=JSON.stringify(v);console.log('CH',JSON.stringify(v))})</script></body>`);
         }).listen(8772, '127.0.0.1');
         const t1 = createTab('http://127.0.0.1:8772/page?utm_source=newsletter&fbclid=abc&id=1');
         setTimeout(() => createTab('http://127.0.0.1:8772/amp/artikel'), 2500);
@@ -2784,6 +2837,9 @@ setTimeout(()=>{document.getElementById('f').src='http://localhost:8771/check'},
           closeTab(tj.id);
           setTimeout(async () => { const after = await mainSes.cookies.get({ domain: '127.0.0.1' }); console.log('JSF cookies-nachher=' + after.length); }, 3000);
         }, 4000);
+      }
+      if (process.env.ELEKTRON_TEST === 'lookalike') {
+        createTab('http://paypa1.com/login');
       }
       if (process.env.ELEKTRON_TEST === 'normal') {
         settings.style = 'gaming'; setStyle('normal'); createTab();

@@ -134,6 +134,24 @@ function fpShield(seed) {
     return r;
   });
 
+  // --- Detaillierte Browser-/Geräte-Angaben (User-Agent Client Hints) kürzen
+  const UAD = window.NavigatorUAData && NavigatorUAData.prototype;
+  patchMethod(UAD, 'getHighEntropyValues', () => (target, self, args) => {
+    return Reflect.apply(target, self, args).then((v) => {
+      const out = { ...v };
+      const major = (b) => ({ brand: b.brand, version: String(b.version).split('.')[0] + '.0.0.0' });
+      if ('platformVersion' in out) out.platformVersion = '10.0.0';
+      if ('architecture' in out) out.architecture = 'x86';
+      if ('bitness' in out) out.bitness = '64';
+      if ('model' in out) out.model = '';
+      if ('wow64' in out) out.wow64 = false;
+      if ('uaFullVersion' in out) out.uaFullVersion = String(out.uaFullVersion).split('.')[0] + '.0.0.0';
+      if (Array.isArray(out.fullVersionList)) out.fullVersionList = out.fullVersionList.map(major);
+      if ('formFactors' in out) out.formFactors = ['Desktop'];
+      return out;
+    });
+  });
+
   // --- Hardware-Werte vereinheitlichen
   const NP = window.Navigator && Navigator.prototype;
   patchGetter(NP, 'hardwareConcurrency', 8);

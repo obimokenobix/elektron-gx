@@ -8,7 +8,21 @@ let host = url;
 try { host = new URL(url).hostname; } catch {}
 document.getElementById('host').textContent = host;
 
-if (isBlocked) {
+const meant = q.get('m');
+if (isBlocked && kind === 'lookalike' && meant) {
+  document.title = 'Gefälschte Adresse?';
+  document.getElementById('title').textContent = 'Diese Adresse sieht aus wie ' + meant;
+  document.getElementById('text').textContent = `Die Adresse ist der echten Seite ${meant} zum Verwechseln ähnlich – ein typischer Trick von Betrügern. Schau genau hin: Ein Buchstabe ist vertauscht, ersetzt oder stammt aus einem anderen Alphabet.`;
+  const ul = document.getElementById('list');
+  for (const t of ['Gib hier keine Passwörter, Codes oder Kartendaten ein.', `Wenn du zu ${meant} willst, nimm den Knopf unten.`, 'Kam der Link per E-Mail, SMS oder Discord? Dann war es vermutlich Betrug.']) {
+    const li = document.createElement('li'); li.textContent = t; ul.appendChild(li);
+  }
+  document.getElementById('detail').textContent = `Adresse: ${url}`;
+  const src = document.querySelector('.src'); if (src) src.textContent = 'Elektron GX Schutz · Doppelgänger-Erkennung direkt auf deinem PC';
+  const go = document.getElementById('back');
+  go.textContent = `Zur echten Seite: ${meant}`;
+  go.addEventListener('click', (e) => { e.stopImmediatePropagation(); location.href = 'https://' + meant + '/'; }, true);
+} else if (isBlocked) {
   const malware = kind === 'malware';
   document.title = malware ? 'Schadsoftware blockiert' : 'Betrugsseite blockiert';
   document.getElementById('title').textContent = malware ? 'Diese Seite verteilt Schadsoftware' : 'Betrugsseite blockiert';

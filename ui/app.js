@@ -534,6 +534,8 @@ function renderProtect() {
     ['Links werden gesäubert', !!st.cleanLinks, p.linksCleaned ? `${p.linksCleaned.toLocaleString('de-AT')} Tracking-Links entschärft` : ''],
     ['IP-Adresse bei WebRTC versteckt', !!st.webrtcProtect],
     ['„Nicht verkaufen“-Signal (GPC)', !!st.gpc],
+    ['Warnung vor gefälschten Adressen', !!st.phishingProtect],
+    ['Private Suchmaschine', st.searchEngine && st.searchEngine !== 'google', st.searchEngine === 'google' ? 'Google erstellt Profile – DuckDuckGo, Brave oder Startpage nicht' : ''],
     ['Downloads werden geprüft', !!st.scanDownloads && !!p.defender, p.defender ? '' : 'Windows Defender nicht gefunden'],
     ['Programm gehärtet', !!p.hardened, p.hardened ? '' : 'nur in der installierten Version']
   ];

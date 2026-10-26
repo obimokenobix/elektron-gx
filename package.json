@@ -1,7 +1,7 @@
 {
   "name": "elektron-gx",
   "productName": "Elektron GX",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "Elektron GX – der Gaming-Browser",
   "main": "main.js",
   "author": "Elektron",
@@ -37,6 +37,7 @@
       "extras.js",
       "privacy.js",
       "favicons.js",
+      "lookalike.js",
       "preload-ui.js",
       "preload-float.js",
       "preload-internal.js",

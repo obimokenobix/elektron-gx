@@ -1,11 +1,11 @@
-# Holt jeden Tag die neueste Electron-Version (Chromium-Sicherheitsupdates) innerhalb der
+# Prüft alle 3 Stunden auf die neueste Electron-Version (Chromium-Sicherheitsupdates) innerhalb der
 # aktuellen Hauptversion, erhöht die Versionsnummer von Elektron GX und startet den Release-Build.
 # Alle installierten Browser bekommen das Update danach automatisch.
 name: Chromium-Sicherheitsupdates
 
 on:
   schedule:
-    - cron: '17 3 * * *'
+    - cron: '17 */3 * * *'
   workflow_dispatch:
 
 permissions:
