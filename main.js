@@ -53,6 +53,7 @@ const DEFAULTS = {
   mic: 'ask',
   autoPip: true,
   showBookmarkBar: true,
+  welcomeDone: false,
   autoUpdate: true,
   updateUrl: '',
   freezeOnMinimize: true,
@@ -1314,7 +1315,7 @@ ipcMain.on('ui:cmd', (e, name, ...args) => {
       if (d) shell.showItemInFolder(d.path);
       break;
     }
-    case 'openInternal': if (['bookmarks', 'history', 'downloads', 'extensions'].includes(args[0])) openInternal(args[0]); break;
+    case 'openInternal': if (['bookmarks', 'history', 'downloads', 'extensions', 'welcome'].includes(args[0])) openInternal(args[0]); break;
     case 'privateTab': createTab(HOME, { private: true }); break;
     case 'bmToggle': toggleBookmark(); break;
     case 'bmOpen': openBookmark(String(args[0]), args[1]); break;
@@ -1622,6 +1623,10 @@ ipcMain.handle('internal', async (e, name, ...args) => {
     case 'downloads.clear': store.clearDownloads(); broadcastDownloads(); return true;
     case 'downloads.folder': shell.openPath(app.getPath('downloads')); return true;
     case 'ext.list': return extmod.list();
+    case 'welcome.state': return Object.keys(extmod.RECOMMENDED).map(id => ({ id, installed: extmod.isInstalled(id) }));
+    case 'welcome.install': return extmod.installRecommended(String(args[0]));
+    case 'welcome.done': settings.welcomeDone = true; saveSettings(); return true;
+    case 'welcome.store': extmod.openStore(String(args[0] || '')); return true;
     case 'ext.remove': return extmod.remove(String(args[0]));
     case 'ext.loadUnpacked': return extmod.loadUnpacked();
     case 'ext.update': await extmod.updateAll(); return true;
@@ -1919,6 +1924,7 @@ app.whenReady().then(async () => {
   } catch (e) { console.warn('Erweiterungen:', e.message); }
   createWindow();
   markWindowReady();
+  if (!settings.welcomeDone && !process.env.ELEKTRON_TEST) openInternal('welcome');
   initAdblock();
   setupUpdater();
   setInterval(tick, 1000);
@@ -1992,6 +1998,13 @@ app.whenReady().then(async () => {
       }
       if (process.env.ELEKTRON_TEST === 'extpage') {
         mainSes.extensions.loadExtension(process.env.ELEKTRON_TESTEXT).catch(() => {}).finally(() => openInternal('extensions'));
+      }
+      if (process.env.ELEKTRON_TEST === 'welcome' || process.env.ELEKTRON_TEST === 'welcome2') {
+        openInternal('welcome');
+        if (process.env.ELEKTRON_TEST === 'welcome2') setTimeout(() => {
+          const t = activeTab();
+          t.view.webContents.executeJavaScript("document.getElementById('go').click()");
+        }, 1500);
       }
       if (process.env.ELEKTRON_TEST === 'privacy') {
         togglePanel('gx');

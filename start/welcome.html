@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data:; style-src 'self'; script-src 'self'">
+  <title>Willkommen</title>
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <div class="glow"></div>
+  <main class="welcome">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/><path class="e" d="M29 25h31v10H39v10h19v10H39v10h21v10H29z"/><path class="b" d="M72 24L61 50h8l-6 26 16-32h-8l6-20z"/></svg>
+    </div>
+    <h1>Willkommen bei Elektron <span>GX</span></h1>
+    <p class="lead">Noch ein Schritt: Diese zwei Erweiterungen empfehlen wir für mehr Sicherheit.
+      Wähle aus, was du haben möchtest – du kannst sie später jederzeit unter „Erweiterungen“ wieder entfernen.</p>
+
+    <div class="recs">
+      <label class="rec" data-id="nngceckbapebfimnlniiiahkandclblb">
+        <input type="checkbox" checked>
+        <span class="check" aria-hidden="true"></span>
+        <span class="ico"><img src="https://www.google.com/s2/favicons?domain=bitwarden.com&amp;sz=64" alt=""></span>
+        <span class="txt">
+          <b>Bitwarden <em>Passwort-Manager</em></b>
+          <span>Speichert deine Passwörter verschlüsselt und füllt sie auf Webseiten automatisch aus. Kostenlos, Open Source.</span>
+          <small>Braucht ein kostenloses Bitwarden-Konto. Darf: Daten auf allen Webseiten lesen und ändern (zum Ausfüllen).</small>
+        </span>
+        <span class="status"></span>
+      </label>
+
+      <label class="rec" data-id="gomekmidlodglbbmalcneegieacbdmki">
+        <input type="checkbox" checked>
+        <span class="check" aria-hidden="true"></span>
+        <span class="ico"><img src="https://www.google.com/s2/favicons?domain=avast.com&amp;sz=64" alt=""></span>
+        <span class="txt">
+          <b>Avast Online Security <em>Schutz</em></b>
+          <span>Warnt vor gefährlichen Seiten, Betrug und Phishing, bevor du etwas eingibst.</span>
+          <small>Gut zu wissen: Avast prüft dafür die Adressen der Seiten, die du besuchst. Darf: Daten auf allen Webseiten lesen und ändern.</small>
+        </span>
+        <span class="status"></span>
+      </label>
+    </div>
+
+    <p class="error" id="error" hidden></p>
+    <div class="actions">
+      <button class="btn primary big" id="go" type="button">Installieren &amp; loslegen</button>
+      <button class="btn big" id="skip" type="button">Ohne Erweiterungen weiter</button>
+    </div>
+    <p class="fine">Die Erweiterungen kommen direkt aus dem Chrome Web Store und gehören ihren Herstellern (Bitwarden Inc., Avast/Gen Digital).</p>
+  </main>
+  <script src="internal.js"></script>
+  <script src="welcome.js"></script>
+</body>
+</html>

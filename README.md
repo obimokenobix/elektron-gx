@@ -36,6 +36,7 @@
 - **PDF-Anzeige** und **Rechtschreibprüfung** (Deutsch/Englisch)
 - **Chrome-Erweiterungen** aus dem Chrome Web Store (Symbole in der Leiste, Popups, Rechtsklick-Einträge, automatische Updates), Verwaltung unter `elektron://start/extensions.html`
 - **Claude und ChatGPT** in der Seitenleiste
+- **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Bitwarden, Avast Online Security) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
 ## Tastenkürzel

@@ -197,6 +197,32 @@ async function loadUnpacked() {
   } catch (e) { return { error: e.message }; }
 }
 
+// Empfohlene Erweiterungen (Willkommensseite) – nur diese IDs dürfen direkt installiert werden
+const RECOMMENDED = {
+  nngceckbapebfimnlniiiahkandclblb: 'Bitwarden',
+  gomekmidlodglbbmalcneegieacbdmki: 'Avast Online Security & Privacy'
+};
+
+function isInstalled(id) {
+  return !!(ses && ses.extensions.getExtension(id));
+}
+
+async function installRecommended(id) {
+  if (!RECOMMENDED[id]) return { id, ok: false, error: 'nicht erlaubt' };
+  if (isInstalled(id)) return { id, ok: true, already: true };
+  if (!webStore) return { id, ok: false, error: 'Chrome Web Store nicht verfügbar' };
+  try {
+    await Promise.race([
+      webStore.installExtension(id, { session: ses }),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('Zeitüberschreitung')), 90000))
+    ]);
+    host.changed();
+    return { id, ok: true };
+  } catch (e) {
+    return { id, ok: false, error: String(e && e.message || e).split('\n')[0].slice(0, 140) };
+  }
+}
+
 async function updateAll() {
   if (!webStore) return;
   try { await webStore.updateExtensions(ses); host.toast('Erweiterungen sind aktuell'); } catch { host.toast('Update der Erweiterungen fehlgeschlagen'); }
@@ -207,4 +233,4 @@ function openStore(query) {
   return host.createTab(url, true);
 }
 
-module.exports = { init, addTab, selectTab, contextMenuItems, list, remove, loadUnpacked, updateAll, openStore, shell };
+module.exports = { init, addTab, selectTab, contextMenuItems, list, remove, loadUnpacked, updateAll, openStore, isInstalled, installRecommended, RECOMMENDED, shell };
