@@ -1,7 +1,7 @@
 {
   "name": "elektron-gx",
   "productName": "Elektron GX",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Elektron GX – der Gaming-Browser",
   "main": "main.js",
   "author": "Elektron",
@@ -35,6 +35,7 @@
       "extensions.js",
       "protect.js",
       "extras.js",
+      "privacy.js",
       "preload-ui.js",
       "preload-float.js",
       "preload-internal.js",
@@ -46,6 +47,15 @@
       "package.json"
     ],
     "asar": true,
+    "electronFuses": {
+      "runAsNode": false,
+      "enableCookieEncryption": true,
+      "enableNodeOptionsEnvironmentVariable": false,
+      "enableNodeCliInspectArguments": false,
+      "enableEmbeddedAsarIntegrityValidation": true,
+      "onlyLoadAppFromAsar": true,
+      "grantFileProtocolExtraPrivileges": false
+    },
     "win": {
       "target": [
         {

@@ -519,6 +519,35 @@ function renderProtect() {
   $('#protect-info').textContent = n
     ? `Blockiert ${n.toLocaleString('de-AT')} bekannte Betrugs- und Virenseiten. Die Liste wird alle 6 Stunden aktualisiert.`
     : 'Blockiert bekannte Betrugsseiten und Seiten, die Viren verteilen. Die Liste wird gerade geladen …';
+  // Sicherheits-Check
+  const st = state.settings || {};
+  const u = state.update || {};
+  const checks = [
+    ['Browser aktuell', !['ready', 'error'].includes(u.state), u.state === 'ready' ? 'Update bereit – Browser neu starten' : `Chromium ${state.versions.chrome}`],
+    ['Werbe- und Tracker-Blocker', !!st.adblock],
+    ['Phishing- und Malware-Schutz', !!st.phishingProtect],
+    ['Nur HTTPS', !!st.httpsOnly],
+    ['Sicheres DNS', !!st.secureDns],
+    ['Fremd-Cookies blockiert', !!st.blockThirdPartyCookies, p.cookiesBlocked ? `${p.cookiesBlocked.toLocaleString('de-AT')} Tracking-Cookies abgewehrt` : ''],
+    ['Fingerprint-Schutz', !!st.fingerprintProtect],
+    ['Downloads werden geprüft', !!st.scanDownloads && !!p.defender, p.defender ? '' : 'Windows Defender nicht gefunden'],
+    ['Programm gehärtet', !!p.hardened, p.hardened ? '' : 'nur in der installierten Version']
+  ];
+  const ok = checks.filter(c => c[1]).length;
+  const pct = Math.round(ok / checks.length * 100);
+  $('#sec-score').textContent = pct + ' %';
+  $('#sec-score').dataset.level = pct >= 90 ? 'good' : pct >= 60 ? 'mid' : 'bad';
+  $('#sec-bar').style.width = pct + '%';
+  $('#sec-bar').dataset.level = $('#sec-score').dataset.level;
+  $('#sec-sum').textContent = ok === checks.length ? 'Alle Schutzfunktionen sind aktiv.' : `${ok} von ${checks.length} Schutzfunktionen aktiv.`;
+  $('#sec-list').replaceChildren(...checks.map(([name, on, note]) => {
+    const li = document.createElement('li');
+    li.className = on ? 'on' : 'off';
+    const t = document.createElement('span'); t.textContent = name;
+    li.appendChild(t);
+    if (note) { const n = document.createElement('small'); n.textContent = note; li.appendChild(n); }
+    return li;
+  }));
   $('#scan-info').textContent = p.defender
     ? 'Jede heruntergeladene Datei wird mit dem Windows Defender geprüft.'
     : 'Prüft Downloads mit dem Windows Defender (auf diesem PC nicht verfügbar).';

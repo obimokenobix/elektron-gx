@@ -214,6 +214,14 @@
       </div>
 
       <h3>Schutz</h3>
+      <div class="card seccheck">
+        <div class="row">
+          <div><h2>Sicherheits-Check</h2><p id="sec-sum">–</p></div>
+          <b id="sec-score" class="sec-score">–</b>
+        </div>
+        <div class="sec-bar"><i id="sec-bar"></i></div>
+        <ul id="sec-list" class="sec-list"></ul>
+      </div>
       <div class="card">
         <div class="row">
           <div><h2>Werbeblocker</h2><p id="adblock-info">Blockiert Werbung, Tracker, Werbe-Popups und Cookie-Banner.</p></div>
@@ -236,6 +244,24 @@
         <div class="row">
           <div><h2>Downloads auf Viren prüfen</h2><p id="scan-info">Jede heruntergeladene Datei wird mit dem Windows Defender geprüft.</p></div>
           <label class="switch"><input type="checkbox" data-setting="scanDownloads"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><h2>Sicheres DNS</h2><p>Verschlüsselt, welche Seiten du aufrufst (DNS über HTTPS mit Quad9 aus der Schweiz) und sperrt zusätzlich bekannte Schadsoftware-Adressen.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="secureDns"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><h2>Fremd-Cookies blockieren</h2><p id="tpc-info">Werbefirmen können dich nicht mehr über verschiedene Webseiten hinweg verfolgen. Anmelden, Captchas und Bezahlen funktionieren weiter.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="blockThirdPartyCookies"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><h2>Schutz vor Fingerprinting</h2><p>Webseiten können dich schwerer an deinem PC wiedererkennen (Canvas, Grafikkarten-Name, CPU-Kerne).</p></div>
+          <label class="switch"><input type="checkbox" data-setting="fingerprintProtect"><i></i></label>
         </div>
       </div>
       <div class="card">

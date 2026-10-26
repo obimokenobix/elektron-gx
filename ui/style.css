@@ -408,3 +408,18 @@ body.style-normal .tab.active::after { box-shadow: none; }
 body.style-normal .rail-btn.active::before, body.style-normal .panel-head h1::after { box-shadow: none; }
 body.style-normal .switch input:checked + i, body.style-normal .seg button.active, body.style-normal .accent-btn,
 body.style-normal .pill-btn.on, body.style-normal #omnibox:focus-within { box-shadow: none; }
+
+/* Sicherheits-Check */
+.sec-score { font-size: 26px; font-weight: 800; color: var(--accent); white-space: nowrap; }
+.sec-score[data-level="good"] { color: #22c55e; }
+.sec-score[data-level="mid"] { color: #f59e0b; }
+.sec-score[data-level="bad"] { color: #ef4444; }
+.sec-bar { height: 6px; margin: 12px 0 10px; border-radius: 3px; background: rgba(255,255,255,.08); overflow: hidden; }
+.sec-bar i { display: block; height: 100%; width: 0; border-radius: 3px; background: #22c55e; transition: width .4s; }
+.sec-bar i[data-level="mid"] { background: #f59e0b; }
+.sec-bar i[data-level="bad"] { background: #ef4444; }
+.sec-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.sec-list li { display: grid; grid-template-columns: 18px 1fr; column-gap: 8px; font-size: 13px; color: var(--text-2, #c8c8d0); }
+.sec-list li::before { content: "✓"; grid-row: span 2; font-weight: 800; color: #22c55e; }
+.sec-list li.off::before { content: "✕"; color: #ef4444; }
+.sec-list li small { grid-column: 2; font-size: 11.5px; color: var(--text-3, #8a8a96); }

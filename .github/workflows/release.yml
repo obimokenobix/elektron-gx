@@ -46,6 +46,21 @@ jobs:
         if: steps.ver.outputs.exists == 'false'
         run: npx electron-builder --win --publish never
 
+      - name: Starttest – startet die gebaute Version wirklich?
+        if: steps.ver.outputs.exists == 'false'
+        shell: pwsh
+        run: |
+          node scripts/check-fuses.js "dist/win-unpacked/Elektron GX.exe"
+          if ($LASTEXITCODE -ne 0) { throw "Sicherheits-Schalter fehlen" }
+          $out = Join-Path $env:RUNNER_TEMP 'smoke.json'
+          $env:ELEKTRON_SMOKE = $out
+          $p = Start-Process -FilePath "dist/win-unpacked/Elektron GX.exe" -PassThru
+          if (-not $p.WaitForExit(120000)) { Stop-Process -Id $p.Id -Force; throw 'Browser hat sich nicht beendet (Zeitüberschreitung)' }
+          if (-not (Test-Path $out)) { throw 'Browser ist nicht richtig gestartet – Veröffentlichung abgebrochen' }
+          Get-Content $out
+          $r = Get-Content $out | ConvertFrom-Json
+          if (-not $r.ok) { throw 'Starttest fehlgeschlagen' }
+
       - name: Release veröffentlichen
         if: steps.ver.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2

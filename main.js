@@ -7,7 +7,7 @@ process.on('uncaughtException', (e) => { console.error('UNCAUGHT', e && e.stack 
  */
 const {
   app, BaseWindow, WebContentsView, ipcMain, session, Menu, MenuItem, dialog, nativeImage,
-  protocol, shell, clipboard, net
+  protocol, shell, clipboard, net, webContents: wcModule
 } = require('electron');
 const path = require('path');
 const fs = require('fs');
@@ -16,6 +16,7 @@ const { pathToFileURL } = require('url');
 const { createStore } = require('./store');
 const extmod = require('./extensions');
 const protect = require('./protect');
+const privacy = require('./privacy');
 const extras = require('./extras');
 
 const APP_NAME = 'Elektron GX';
@@ -67,6 +68,9 @@ const DEFAULTS = {
   httpsOnly: true,
   phishingProtect: true,
   scanDownloads: true,
+  secureDns: true,
+  blockThirdPartyCookies: true,
+  fingerprintProtect: true,
   autoUpdate: true,
   updateUrl: '',
   freezeOnMinimize: true,
@@ -237,7 +241,7 @@ function snapshot() {
     } : null,
     bookmarks: settings.showBookmarkBar ? store.bookmarks().slice(0, 60).map(b => ({ id: b.id, title: b.title, url: b.url })) : [],
     downloads: downloadSummary(),
-    protect: { lists: protect.status(), defender: !!protect.defenderPath() },
+    protect: { lists: protect.status(), defender: !!protect.defenderPath(), cookiesBlocked, hardened: app.isPackaged },
     update,
     panel,
     gamingMode,
@@ -252,6 +256,7 @@ function snapshot() {
       camera: settings.camera, mic: settings.mic, autoPip: settings.autoPip,
       showBookmarkBar: settings.showBookmarkBar, autoUpdate: settings.autoUpdate,
       httpsOnly: settings.httpsOnly, phishingProtect: settings.phishingProtect, scanDownloads: settings.scanDownloads,
+      secureDns: settings.secureDns, blockThirdPartyCookies: settings.blockThirdPartyCookies, fingerprintProtect: settings.fingerprintProtect,
       updateUrl: effectiveUpdateUrl(),
       freezeOnMinimize: settings.freezeOnMinimize,
       clearOnExit: settings.clearOnExit, restoreSession: settings.restoreSession,
@@ -1284,9 +1289,57 @@ function requestFilter(ses) {
   };
 }
 
+// ------------------------------------------------------------------ Tracking-Schutz: Fremd-Cookies blockieren
+let cookiesBlocked = 0;
+function topUrlOf(details) {
+  try { const f = details.frame; if (f && f.top && f.top.url) return f.top.url; } catch {}
+  try { const wc = details.webContents || (details.webContentsId && wcModule.fromId(details.webContentsId)); if (wc && !wc.isDestroyed()) return wc.getURL(); } catch {}
+  return '';
+}
+function stripThirdParty(details) {
+  if (!settings.blockThirdPartyCookies || details.resourceType === 'mainFrame') return false;
+  const top = topUrlOf(details);
+  return !!top && privacy.isThirdParty(top, details.url);
+}
+function sendHeadersFilter() {
+  return (details, cb) => {
+    const h = details.requestHeaders;
+    if (stripThirdParty(details)) {
+      let changed = false;
+      for (const k of Object.keys(h)) if (k.toLowerCase() === 'cookie') { delete h[k]; changed = true; }
+      if (changed) { cookiesBlocked++; return cb({ requestHeaders: h }); }
+    }
+    cb({});
+  };
+}
+function headersFilter(ses) {
+  return (details, cb) => {
+    let changed = false;
+    const h = details.responseHeaders || {};
+    if (stripThirdParty(details)) {
+      for (const k of Object.keys(h)) if (k.toLowerCase() === 'set-cookie') { delete h[k]; changed = true; }
+      if (changed) cookiesBlocked++;
+    }
+    if (blocker && adblockSessions.has(ses)) {
+      return blocker.onHeadersReceived(details, (r) => cb(r && r.responseHeaders ? r : (changed ? { responseHeaders: h } : {})));
+    }
+    cb(changed ? { responseHeaders: h } : {});
+  };
+}
+
+// ------------------------------------------------------------------ Sicheres DNS (DNS über HTTPS)
+function applyDns() {
+  try {
+    if (settings.secureDns) app.configureHostResolver({ secureDnsMode: 'automatic', secureDnsServers: privacy.DOH_SERVERS });
+    else app.configureHostResolver({ secureDnsMode: 'off' });
+  } catch (e) { console.warn('DNS:', e.message); }
+}
+
 function installRequestFilter(ses) {
   if (!ses) return;
   ses.webRequest.onBeforeRequest({ urls: ['<all_urls>'] }, requestFilter(ses));
+  ses.webRequest.onBeforeSendHeaders({ urls: ['<all_urls>'] }, sendHeadersFilter());
+  ses.webRequest.onHeadersReceived({ urls: ['<all_urls>'] }, headersFilter(ses));
 }
 
 function reinstallRequestFilters() {
@@ -1340,6 +1393,9 @@ function setSetting(key, value) {
     case 'httpsOnly': settings.httpsOnly = !!value; break;
     case 'phishingProtect': settings.phishingProtect = !!value; break;
     case 'scanDownloads': settings.scanDownloads = !!value; break;
+    case 'secureDns': settings.secureDns = !!value; applyDns(); break;
+    case 'blockThirdPartyCookies': settings.blockThirdPartyCookies = !!value; break;
+    case 'fingerprintProtect': settings.fingerprintProtect = !!value; break;
     case 'showBookmarkBar': settings.showBookmarkBar = !!value; hideSuggest(); layout(); break;
     case 'autoUpdate': settings.autoUpdate = !!value; break;
     case 'updateUrl': {
@@ -1904,7 +1960,7 @@ async function readerMode() {
 // ------------------------------------------------------------------ Sichern & Wiederherstellen
 const BACKUP_KEYS = ['accent', 'accentNormal', 'style', 'background', 'preferredAI', 'ramLimit', 'cpuLimit', 'netLimit',
   'adblock', 'ytSkip', 'camera', 'mic', 'autoPip', 'showBookmarkBar', 'freezeOnMinimize', 'restoreSession',
-  'httpsOnly', 'phishingProtect', 'scanDownloads'];
+  'httpsOnly', 'phishingProtect', 'scanDownloads', 'secureDns', 'blockThirdPartyCookies', 'fingerprintProtect'];
 async function backupData() {
   const r = await dialog.showSaveDialog(win, {
     title: 'Lesezeichen und Einstellungen sichern',
@@ -1945,6 +2001,10 @@ function openInternal(page) {
   if (ex) activateTab(ex.id);
   else createTab(url);
 }
+
+// Fingerprint-Schutz: Einstellungen für das Seiten-Skript (preload-internal.js)
+const FP_SEED = Math.floor(Math.random() * 0x7fffffff);
+ipcMain.on('fp-config', (e) => { e.returnValue = { on: !!settings.fingerprintProtect, seed: FP_SEED }; });
 
 ipcMain.handle('internal', async (e, name, ...args) => {
   const from = e.senderFrame ? e.senderFrame.url : '';
@@ -2284,6 +2344,7 @@ app.on('second-instance', (e, argv) => {
 
 app.whenReady().then(async () => {
   perf('ready');
+  applyDns();
   Menu.setApplicationMenu(null);
   setupSession();
   // Fenster sofort zeigen – Erweiterungen laden parallel im Hintergrund (schnellerer Start)
@@ -2308,6 +2369,19 @@ app.whenReady().then(async () => {
     perf('extensions-ready');
   })();
   await Promise.race([extReady, new Promise(r => setTimeout(r, 1500))]);
+  // Starttest für die automatische Veröffentlichung: läuft der Browser wirklich?
+  if (process.env.ELEKTRON_SMOKE) {
+    setTimeout(() => {
+      const t = activeTab();
+      const res = {
+        ok: !!(win && uiView && !uiView.webContents.isDestroyed() && /index\.html$/.test(uiView.webContents.getURL()) && t && t.view),
+        tab: t && t.view ? t.view.webContents.getURL() : null,
+        chrome: process.versions.chrome, app: app.getVersion(), packaged: app.isPackaged
+      };
+      try { fs.writeFileSync(process.env.ELEKTRON_SMOKE, JSON.stringify(res)); } catch {}
+      app.exit(res.ok ? 0 : 3);
+    }, 10000);
+  }
   // Willkommensseite: beim ersten Start und einmal nach Updates mit neuen Empfehlungen (Version 2: Malwarebytes)
   if (!process.env.ELEKTRON_TEST && (!settings.welcomeDone || ((settings.welcomeVersion || 0) < 2 && !extmod.isInstalled('ihcjicgdanjaechkgeegckofjjedodee')))) {
     openInternal('welcome');
@@ -2433,6 +2507,36 @@ app.whenReady().then(async () => {
       }
       if (process.env.ELEKTRON_TEST === 'shot') {
         createTab(); setTimeout(() => screenshot(true).then(() => console.log('SHOT OK')).catch(e => console.log('SHOT ERR', e)), 4000);
+      }
+      if (process.env.ELEKTRON_TEST === 'privacy2') {
+        const http = require('http');
+        http.createServer((q, r) => {
+          console.log('3P-REQ', q.url, 'cookie=' + (q.headers.cookie || '-'));
+          if (q.url.startsWith('/set')) { r.setHeader('set-cookie', 'tracker=123; SameSite=None; Secure; Path=/'); r.setHeader('content-type', 'image/gif'); return r.end(Buffer.from('R0lGODlhAQABAAAAACw=', 'base64')); }
+          r.setHeader('content-type', 'text/html'); r.end('<body style="color:#fff;background:#222;font:16px sans-serif">Cookie bei Drittanbieter: <b>' + (q.headers.cookie || 'keins') + '</b></body>');
+        }).listen(8771, '127.0.0.1');
+        http.createServer((q, r) => {
+          r.setHeader('content-type', 'text/html; charset=utf-8');
+          r.end(`<!doctype html><body style="font:16px sans-serif;background:#111;color:#eee;padding:20px"><h2>Sicherheits-Test</h2>
+<img src="http://localhost:8771/set" width=1 height=1>
+<div id=o></div><iframe id=f style="width:600px;height:60px;border:1px solid #555"></iframe>
+<script>
+function hash(s){let h=0;for(let i=0;i<s.length;i++)h=Math.imul(31,h)+s.charCodeAt(i)|0;return (h>>>0).toString(16)}
+function canvasFp(){const c=document.createElement('canvas');c.width=200;c.height=50;const x=c.getContext('2d');x.textBaseline='top';x.font='16px Arial';x.fillStyle='#f60';x.fillRect(10,10,100,30);x.fillStyle='#069';x.fillText('Elektron GX 😀',2,15);return hash(c.toDataURL())}
+const gl=document.createElement('canvas').getContext('webgl');const ext=gl&&gl.getExtension('WEBGL_debug_renderer_info');
+const rows=[['CPU-Kerne',navigator.hardwareConcurrency],['RAM (GB)',navigator.deviceMemory],['Grafikkarte',ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'-'],['Canvas 1',canvasFp()],['Canvas 2',canvasFp()],['toString',HTMLCanvasElement.prototype.toDataURL.toString()]];
+document.getElementById('o').innerHTML=rows.map(r=>'<p>'+r[0]+': <b>'+r[1]+'</b></p>').join('');
+console.log('FP', JSON.stringify(rows));
+setTimeout(()=>{document.getElementById('f').src='http://localhost:8771/check'},1500);
+</script>`);
+        }).listen(8770, '127.0.0.1');
+        settings.blockThirdPartyCookies = process.env.TPC !== '0';
+        settings.fingerprintProtect = process.env.FP !== '0';
+        createTab('http://127.0.0.1:8770/');
+      }
+      if (process.env.ELEKTRON_TEST === 'sec') {
+        togglePanel('gx');
+        setTimeout(() => uiView.webContents.executeJavaScript("document.querySelector('.seccheck').scrollIntoView()"), 2500);
       }
       if (process.env.ELEKTRON_TEST === 'normal') {
         settings.style = 'gaming'; setStyle('normal'); createTab();

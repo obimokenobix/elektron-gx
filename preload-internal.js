@@ -14,3 +14,117 @@ if (location.protocol === 'elektron:') {
     }
   });
 }
+
+/*
+ * Schutz vor Fingerprinting – auf normalen Webseiten.
+ * Webseiten können dich ohne Cookies wiedererkennen, indem sie z. B. ein unsichtbares
+ * Bild zeichnen (Canvas) oder den Namen deiner Grafikkarte abfragen. Elektron GX
+ * verändert das Canvas-Ergebnis minimal (pro Seite und Browser-Start anders, für das
+ * Auge unsichtbar), meldet einen allgemeinen Grafikkarten-Namen und Standardwerte für
+ * CPU-Kerne und Arbeitsspeicher.
+ */
+function fpShield(seed) {
+  'use strict';
+  const host = location.hostname;
+  let h = seed >>> 0;
+  for (let i = 0; i < host.length; i++) h = Math.imul(h ^ host.charCodeAt(i), 2654435761) >>> 0;
+  const rand = (n) => {
+    let x = (h ^ Math.imul(n + 1, 0x9E3779B1)) >>> 0;
+    x ^= x >>> 16; x = Math.imul(x, 0x85ebca6b) >>> 0; x ^= x >>> 13; x = Math.imul(x, 0xc2b2ae35) >>> 0; x ^= x >>> 16;
+    return x >>> 0;
+  };
+
+  // Ersetzte Funktionen sollen wie eingebaute aussehen
+  const originals = new WeakMap();
+  const fnToString = Function.prototype.toString;
+  const wrapFn = (orig, apply) => { const p = new Proxy(orig, { apply }); originals.set(p, orig); return p; };
+  const tsProxy = wrapFn(fnToString, (target, self, args) => Reflect.apply(target, originals.get(self) || self, args));
+  try { Object.defineProperty(Function.prototype, 'toString', { value: tsProxy, writable: true, configurable: true, enumerable: false }); } catch {}
+
+  const patchMethod = (proto, name, makeApply) => {
+    if (!proto) return;
+    const d = Object.getOwnPropertyDescriptor(proto, name);
+    if (!d || typeof d.value !== 'function') return;
+    try { Object.defineProperty(proto, name, { ...d, value: wrapFn(d.value, makeApply(d.value)) }); } catch {}
+  };
+  const patchGetter = (proto, name, value) => {
+    if (!proto) return;
+    const d = Object.getOwnPropertyDescriptor(proto, name);
+    if (!d || typeof d.get !== 'function') return;
+    try { Object.defineProperty(proto, name, { ...d, get: wrapFn(d.get, () => value) }); } catch {}
+  };
+
+  // --- Canvas: welche Kontexte gibt es?
+  const ctxType = new WeakMap();
+  patchMethod(window.HTMLCanvasElement && HTMLCanvasElement.prototype, 'getContext', (orig) => (target, self, args) => {
+    const ctx = Reflect.apply(target, self, args);
+    if (ctx && !ctxType.has(self)) ctxType.set(self, String(args[0]));
+    return ctx;
+  });
+
+  const noisify = (data) => {
+    const len = data.length >> 2;
+    if (!len) return;
+    for (let k = 0; k < 12; k++) {
+      const r = rand(k);
+      let px = r % len;
+      for (let step = 0; step < 64; step++, px = (px + 1) % len) {
+        if (data[px * 4 + 3] !== 0) { const i = px * 4 + ((r >>> 9) % 3); data[i] = data[i] ^ 1; break; }
+      }
+    }
+  };
+
+  const C2D = window.CanvasRenderingContext2D && CanvasRenderingContext2D.prototype;
+  const origGetImageData = C2D && C2D.getImageData;
+  const origGetContext = window.HTMLCanvasElement && HTMLCanvasElement.prototype.getContext;
+  if (C2D && origGetImageData) {
+    patchMethod(C2D, 'getImageData', () => (target, self, args) => {
+      const img = Reflect.apply(target, self, args);
+      try { noisify(img.data); } catch {}
+      return img;
+    });
+    // Kopie mit leichtem Rauschen erzeugen – die echte Zeichenfläche der Seite bleibt unverändert
+    const noisyCopy = (canvas) => {
+      if (ctxType.get(canvas) !== '2d') return null;
+      const w = canvas.width, hh = canvas.height;
+      if (!w || !hh || w * hh > 4000000) return null;
+      try {
+        const src = Reflect.apply(origGetContext, canvas, ['2d']);
+        const img = Reflect.apply(origGetImageData, src, [0, 0, w, hh]);
+        noisify(img.data);
+        const copy = document.createElement('canvas');
+        copy.width = w; copy.height = hh;
+        Reflect.apply(origGetContext, copy, ['2d']).putImageData(img, 0, 0);
+        return copy;
+      } catch { return null; }
+    };
+    for (const name of ['toDataURL', 'toBlob']) {
+      patchMethod(HTMLCanvasElement.prototype, name, () => (target, self, args) => {
+        const copy = noisyCopy(self);
+        return Reflect.apply(target, copy || self, args);
+      });
+    }
+  }
+
+  // --- WebGL: allgemeiner Grafikkarten-Name
+  const glParam = () => (target, self, args) => {
+    if (args[0] === 0x9245) return 'Google Inc.';
+    if (args[0] === 0x9246) return 'ANGLE (Generic GPU)';
+    return Reflect.apply(target, self, args);
+  };
+  patchMethod(window.WebGLRenderingContext && WebGLRenderingContext.prototype, 'getParameter', glParam);
+  patchMethod(window.WebGL2RenderingContext && WebGL2RenderingContext.prototype, 'getParameter', glParam);
+
+  // --- Hardware-Werte vereinheitlichen
+  const NP = window.Navigator && Navigator.prototype;
+  patchGetter(NP, 'hardwareConcurrency', 8);
+  patchGetter(NP, 'deviceMemory', 8);
+}
+
+if (location.protocol === 'https:' || location.protocol === 'http:') {
+  let cfg = null;
+  try { cfg = ipcRenderer.sendSync('fp-config'); } catch {}
+  if (cfg && cfg.on && typeof contextBridge.executeInMainWorld === 'function') {
+    try { contextBridge.executeInMainWorld({ func: fpShield, args: [cfg.seed] }); } catch (e) { console.warn('fp', e && e.message); }
+  }
+}

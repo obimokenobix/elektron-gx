@@ -43,6 +43,15 @@
 - **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Malwarebytes Browser Guard, Bitwarden, optional Avast) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
+**Neu in 2.5 – Sicherheit**
+
+- **Sicherheits-Check** in GX Control: zeigt auf einen Blick, welche Schutzfunktionen aktiv sind
+- **Fremd-Cookies blockieren** (Tracking-Schutz) mit Ausnahmen für Anmelden, Captchas, Bezahlen und Seiten derselben Firma (`privacy.js`)
+- **Schutz vor Fingerprinting**: Canvas-Rauschen pro Seite und Browser-Start, allgemeiner WebGL-Grafikkarten-Name, einheitliche CPU-/RAM-Werte (`preload-internal.js`)
+- **Sicheres DNS** (DNS über HTTPS mit Quad9, sperrt zusätzlich Schadsoftware-Domains)
+- **Gehärtetes Programm** (Electron-Fuses): kein `ELECTRON_RUN_AS_NODE`, kein `NODE_OPTIONS`, kein `--inspect`, verschlüsselte Cookies, App-Code nur aus geprüftem `app.asar` (ASAR-Integrität)
+- **Starttest vor jeder Veröffentlichung**: Die gebaute Windows-Version wird im CI gestartet – nur wenn sie läuft, wird sie veröffentlicht
+
 **Neu in 2.4**
 
 - **Browser-Stil umschaltbar**: Gaming (alle Extras) oder Normal (ruhig, blau, ohne Gaming-Anzeigen) – Menü oder GX Control → Design

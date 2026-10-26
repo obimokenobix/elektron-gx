@@ -220,4 +220,4 @@ function addTestHost(kind, host) {
   tables[kind] = Float64Array.from(old).sort();
 }
 
-module.exports = { start, refresh, check, status, isLocalHost, scanFile, defenderPath, addTestHost };
+module.exports = { start, refresh, check, status, isLocalHost, scanFile, defenderPath, addTestHost, registrable };
