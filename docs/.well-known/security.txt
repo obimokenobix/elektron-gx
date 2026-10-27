@@ -1,0 +1,5 @@
+Contact: https://github.com/obimokenobix/elektron-gx/security/advisories/new
+Expires: 2027-10-27T00:00:00.000Z
+Preferred-Languages: de, en
+Policy: https://obimokenobix.github.io/elektron-gx/sicherheit.html
+Canonical: https://obimokenobix.github.io/elektron-gx/.well-known/security.txt

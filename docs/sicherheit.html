@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sicherheit – Elektron</title>
+  <meta name="description" content="Sicherheitsrichtlinie von Elektron: Lücken melden, unterstützte Versionen, Updates.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal { width: min(820px, 100% - 32px); margin: 0 auto; padding: 48px 0 40px; }
+    .legal h1 { font-size: clamp(30px, 4vw, 42px); margin: 0 0 6px; }
+    .legal .stand { color: var(--text-3); margin: 0 0 32px; }
+    .legal h2 { font-size: 22px; margin: 34px 0 10px; }
+    .legal p, .legal li { color: var(--text-2); line-height: 1.7; }
+    .legal ul { padding-left: 22px; }
+    .legal table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
+    .legal th, .legal td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--text-2); }
+    .legal th { color: var(--text); font-weight: 600; }
+    .legal .contact { padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+    .legal a { color: var(--accent-2); }
+  </style>
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="./"><img src="img/icon.png" alt="" width="32" height="32"><span>Elektron</span></a>
+    <nav><a href="./">Startseite</a><a class="nav-dl" href="./#download">Download</a></nav>
+  </header>
+
+  <main class="legal">
+    <h1>Sicherheit</h1>
+    <p class="stand">Sicherheitsrichtlinie · Stand: 27. Oktober 2026 · <a href="#en">English version below</a></p>
+
+    <h2>Eine Sicherheitslücke gefunden?</h2>
+    <p>Danke, dass du hilfst, Elektron sicherer zu machen! Bitte melde Lücken <b>vertraulich</b> – nicht öffentlich, damit niemand sie ausnutzen kann, bevor sie geschlossen ist.</p>
+    <div class="contact">
+      <p><b>Vertraulich melden:</b> <a href="https://github.com/obimokenobix/elektron-gx/security/advisories/new">github.com/obimokenobix/elektron-gx/security/advisories/new</a><br>
+      (GitHub-Funktion „Report a vulnerability“ – nur das Elektron-Team sieht die Meldung.)</p>
+    </div>
+    <p>Hilfreich sind: betroffene Version, Schritte zum Nachstellen, was ein Angreifer damit erreichen kann, und – falls vorhanden – ein kleiner Beweis (Proof of Concept).</p>
+
+    <h2>Was passiert nach deiner Meldung</h2>
+    <ul>
+      <li>Wir bestätigen den Eingang so schnell wie möglich, Ziel: innerhalb von 7 Tagen.</li>
+      <li>Wir prüfen die Meldung und halten dich über den Stand auf dem Laufenden.</li>
+      <li>Kritische Lücken haben Vorrang vor allem anderen. Der Fix wird über die automatischen Updates an alle verteilt.</li>
+      <li>Nach dem Fix veröffentlichen wir einen Hinweis und nennen dich – wenn du möchtest – als Finder.</li>
+    </ul>
+
+    <h2>Was gemeldet werden soll</h2>
+    <ul>
+      <li>Webseiten können aus der Sandbox ausbrechen, auf Dateien zugreifen oder Programme starten.</li>
+      <li>Webseiten erreichen die internen Seiten (<code>elektron://</code>) oder deren Schnittstellen.</li>
+      <li>Schutzfunktionen lassen sich umgehen (Phishing-Schutz, Doppelgänger-Warnung, Nur-HTTPS, Fremd-Cookies, Fingerprint-Schutz).</li>
+      <li>Das Update-System lässt sich manipulieren.</li>
+      <li>Abläufe im Elektron Studio führen etwas aus, das sie nicht dürften.</li>
+    </ul>
+    <h2>Was nicht hierher gehört</h2>
+    <ul>
+      <li>Lücken in Chromium selbst – bitte an das <a href="https://bughunters.google.com/report">Chromium-Team bei Google</a>. Fixes kommen über Electron automatisch zu Elektron.</li>
+      <li>Lücken in Erweiterungen anderer Hersteller (Bitwarden, Malwarebytes …) – bitte an den jeweiligen Hersteller.</li>
+      <li>Angriffe, für die man schon Zugriff auf den PC des Opfers braucht, sowie Social Engineering.</li>
+    </ul>
+
+    <h2>Unterstützte Versionen</h2>
+    <p>Sicherheitsupdates gibt es nur für die <b>neueste Version</b>. Elektron aktualisiert sich automatisch: Der Browser sucht stündlich nach Updates, und alle drei Stunden wird geprüft, ob es eine neue Chromium-Version mit Sicherheitsfixes gibt. Ist eine da, wird automatisch eine neue Version gebaut, beim Start getestet und veröffentlicht.</p>
+
+    <h2>Fair-Play-Regeln für Forscher (Safe Harbor)</h2>
+    <p>Wer nach diesen Regeln sucht und meldet, handelt in gutem Glauben und muss von uns keine rechtlichen Schritte befürchten:</p>
+    <ul>
+      <li>Teste nur mit deinen eigenen Konten, Geräten und Daten.</li>
+      <li>Greif nicht auf Daten anderer zu, verändere oder lösche nichts und störe keine Dienste.</li>
+      <li>Gib uns angemessen Zeit für einen Fix, bevor du Details veröffentlichst (in der Regel 90 Tage).</li>
+    </ul>
+
+    <h2>So ist Elektron geschützt</h2>
+    <ul>
+      <li>Webseiten laufen in der Chromium-Sandbox mit Site Isolation; Node.js ist für Webseiten aus.</li>
+      <li>Gehärtetes Programm (Electron-Fuses): kein <code>ELECTRON_RUN_AS_NODE</code>, kein <code>NODE_OPTIONS</code>, kein Debugger per Startparameter, verschlüsselte Cookies, App-Code nur aus geprüftem Archiv (ASAR-Integrität).</li>
+      <li>Jede Version wird automatisch auf GitHub gebaut; vor der Veröffentlichung wird geprüft, ob alle Sicherheits-Schalter gesetzt sind und ob der Browser wirklich startet.</li>
+      <li>Der Quellcode ist offen: <a href="https://github.com/obimokenobix/elektron-gx">github.com/obimokenobix/elektron-gx</a>.</li>
+    </ul>
+
+    <h2 id="en">English</h2>
+    <p><b>Report a vulnerability privately</b> via <a href="https://github.com/obimokenobix/elektron-gx/security/advisories/new">GitHub Security Advisories</a> – please do not open public issues for security problems. We aim to acknowledge reports within 7 days, prioritise critical issues, ship fixes through the automatic updater and credit reporters who wish to be named. Only the latest version receives security fixes. Chromium bugs belong to the <a href="https://bughunters.google.com/report">Chromium team</a>. Good-faith research that respects users' data and gives us reasonable time (usually 90 days) before disclosure will not face legal action from us.</p>
+  </main>
+
+  <footer>
+    <span>© 2026 Elektron</span>
+    <a href="./">Startseite</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="https://github.com/obimokenobix/elektron-gx">Quellcode auf GitHub</a>
+  </footer>
+</body>
+</html>
