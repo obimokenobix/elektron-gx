@@ -23,6 +23,8 @@ const privacy = require('./privacy');
 const favicons = require('./favicons');
 const lookalike = require('./lookalike');
 const flows = require('./flows');
+const i18n = require('./i18n');
+const T = (s) => i18n.t(s);
 const extras = require('./extras');
 
 const APP_NAME = 'Elektron';
@@ -95,6 +97,7 @@ const DEFAULTS = {
   blockedTotal: 0,
   flows: null,            // Abläufe aus dem Elektron Studio
   flowsEnabled: true,
+  language: 'auto',        // 'auto' = Windows-Sprache, sonst Sprachcode (de, en, es, …)
   siteShields: {},        // Ausnahmen pro Seite: { 'beispiel.de': { adblock: false, cookies: false, fp: false } }
   permissions: {},
   lastSession: null
@@ -118,6 +121,51 @@ function loadSettings() {
 }
 
 let settings = loadSettings();
+// ------------------------------------------------------------------ Sprache
+function systemLanguage() {
+  let list = [];
+  try { list = app.getPreferredSystemLanguages(); } catch {}
+  if (!list || !list.length) { try { list = [app.getLocale()]; } catch {} }
+  if (!list || !list.length) list = [process.env.LANG || 'de'];
+  for (const l of list) { const m = i18n.match(l); if (m && i18n.available(m)) return m; }
+  return i18n.available('en') ? 'en' : 'de';
+}
+function resolveLanguage() {
+  const want = process.env.ELEKTRON_LANG || (settings.language && settings.language !== 'auto' ? settings.language : systemLanguage());
+  return i18n.available(want) ? want : 'de';
+}
+i18n.load(resolveLanguage());
+if (i18n.current().code !== 'de' || settings.language !== 'auto') { try { app.commandLine.appendSwitch('lang', i18n.current().code); } catch {} }
+// Menüs, Hinweise und Dialoge automatisch übersetzen
+{
+  const build = Menu.buildFromTemplate.bind(Menu);
+  Menu.buildFromTemplate = (tpl) => build(i18n.menu(tpl));
+  const wrap = (name) => {
+    const orig = dialog[name].bind(dialog);
+    dialog[name] = (...args) => {
+      const i = args[0] && typeof args[0].isDestroyed === 'function' ? 1 : 0; // erstes Argument ist evtl. das Fenster
+      const o = args[i];
+      if (o && typeof o === 'object') {
+        const c = { ...o };
+        for (const k of ['title', 'message', 'detail', 'checkboxLabel', 'buttonLabel']) if (typeof c[k] === 'string') c[k] = T(c[k]);
+        if (Array.isArray(c.buttons)) c.buttons = c.buttons.map(T);
+        if (Array.isArray(c.filters)) c.filters = c.filters.map(f => ({ ...f, name: T(f.name) }));
+        args[i] = c;
+      }
+      return orig(...args);
+    };
+  };
+  for (const n of ['showMessageBox', 'showOpenDialog', 'showSaveDialog', 'showMessageBoxSync', 'showErrorBox']) if (typeof dialog[n] === 'function' && n !== 'showErrorBox') wrap(n);
+}
+function acceptLanguages() {
+  const c = i18n.current().code;
+  const base = c.split('-')[0];
+  const list = [c];
+  if (base !== c) list.push(base);
+  if (base !== 'en') list.push('en');
+  return list.map((l, i) => i ? `${l};q=${(1 - i * 0.1).toFixed(1)}` : l).join(',');
+}
+
 // Einmalige Umstellung auf eine private Suchmaschine (ab 2.7) – jederzeit zurückstellbar
 let searchSwitchedNotice = false;
 if (!settings.searchMigrated) {
@@ -172,8 +220,9 @@ let uiProtocolReady = false;
 function setupUiProtocol() {
   if (uiProtocolReady) return;
   uiProtocolReady = true;
+  session.defaultSession.registerPreloadScript({ type: 'frame', filePath: path.join(__dirname, 'preload-i18n.js') });
   // ui/… und die gemeinsam genutzten Bilder (assets/, start/bg/) – sonst nichts
-  const ROOTS = [UI_DIR, path.join(__dirname, 'assets'), path.join(__dirname, 'start', 'bg')];
+  const ROOTS = [UI_DIR, path.join(__dirname, 'assets'), path.join(__dirname, 'start', 'bg'), path.join(__dirname, 'start', 'flags')];
   session.defaultSession.protocol.handle('elektron-ui', async (req) => {
     const u = new URL(req.url);
     if (u.hostname !== 'app') return new Response('Nicht gefunden', { status: 404 });
@@ -265,7 +314,8 @@ function pushState() {
 }
 
 function toast(text, extra = {}) {
-  if (uiView && alive(uiView.webContents)) uiView.webContents.send('toast', { text, ...extra });
+  if (extra && extra.action) extra = { ...extra, action: T(extra.action) };
+  if (uiView && alive(uiView.webContents)) uiView.webContents.send('toast', { text: T(text), ...extra });
 }
 
 function snapshot() {
@@ -314,6 +364,7 @@ function snapshot() {
       httpsOnly: settings.httpsOnly, phishingProtect: settings.phishingProtect, scanDownloads: settings.scanDownloads,
       secureDns: settings.secureDns, blockThirdPartyCookies: settings.blockThirdPartyCookies, fingerprintProtect: settings.fingerprintProtect,
       searchEngine: settings.searchEngine, searchEngineName: engine().name, searchSuggest: settings.searchSuggest,
+      language: settings.language || 'auto', languageInfo: i18n.info(),
       cleanLinks: settings.cleanLinks, gpc: settings.gpc, webrtcProtect: settings.webrtcProtect, preconnect: settings.preconnect,
       updateUrl: effectiveUpdateUrl(),
       freezeOnMinimize: settings.freezeOnMinimize,
@@ -1012,7 +1063,7 @@ function showContextMenu(wc, p, tab) {
     t.push(
       { label: 'Kopieren', click: () => wc.copy() },
       { label: `Mit ${engine().name} suchen: „${short}“`, click: () => createTab(searchUrl(s)) },
-      { label: `Mit ${aiName} erklären`, click: () => openAI('Erkläre mir das bitte einfach und auf Deutsch:\n\n' + s.slice(0, 3000)) },
+      { label: `Mit ${aiName} erklären`, click: () => openAI(T('Erkläre mir das bitte einfach und auf Deutsch:') + '\n\n' + s.slice(0, 3000)) },
       { label: 'Übersetzen', click: () => translateText(s) },
       { type: 'separator' }
     );
@@ -1790,6 +1841,7 @@ ipcMain.on('ui:cmd', (e, name, ...args) => {
     case 'chooseBg': chooseBackground(); break;
     case 'screenshot': screenshot(!!args[0]); break;
     case 'shieldMenu': showShieldMenu(); break;
+    case 'openLanguages': openInternal('sprachen'); break;
     case 'searchGoogle': setSetting('searchEngine', 'google'); break;
     case 'reader': readerMode(); break;
     case 'showFile': if (typeof args[0] === 'string' && fs.existsSync(args[0])) shell.showItemInFolder(args[0]); break;
@@ -1872,7 +1924,7 @@ async function handlePermission(wc, permission, callback, details) {
 }
 
 function configureSession(ses) {
-  ses.setUserAgent(app.userAgentFallback);
+  ses.setUserAgent(app.userAgentFallback, acceptLanguages());
   const startDir = path.join(__dirname, 'start');
   ses.protocol.handle('elektron', (req) => {
     const u = new URL(req.url);
@@ -1890,7 +1942,14 @@ function configureSession(ses) {
   });
   // Schnittstelle für die eigenen Seiten (Lesezeichen, Verlauf, Downloads)
   ses.registerPreloadScript({ type: 'frame', filePath: path.join(__dirname, 'preload-internal.js') });
-  try { ses.setSpellCheckerLanguages(['de-DE', 'en-US']); } catch {}
+  try {
+    const avail = ses.availableSpellCheckerLanguages || [];
+    const c = i18n.current().code, base = c.split('-')[0];
+    const want = [...new Set([c, ...avail.filter(l => l.split('-')[0] === base).slice(0, 1), 'de-DE', 'en-US'])].filter(l => avail.includes(l));
+    ses.setSpellCheckerLanguages(want.length ? want.slice(0, 3) : ['de-DE', 'en-US']);
+  } catch {}
+  // Übersetzung der eigenen Seiten
+  ses.registerPreloadScript({ type: 'frame', filePath: path.join(__dirname, 'preload-i18n.js') });
   ses.setPermissionRequestHandler(handlePermission);
   ses.on('will-download', onWillDownload);
   installRequestFilter(ses);
@@ -2160,19 +2219,20 @@ async function aiAboutPage(tab, mode) {
       return (el ? el.innerText : '').replace(/\\s+/g, ' ').trim().slice(0, 1800);
     })()` }]);
   } catch {}
-  const head = mode === 'explain'
+  const head = T(mode === 'explain'
     ? 'Erkläre mir einfach und auf Deutsch, worum es auf dieser Webseite geht.'
-    : 'Fasse diese Webseite kurz und auf Deutsch zusammen – die wichtigsten Punkte als Liste.';
-  openAI(`${head}\nTitel: ${wc.getTitle()}\nAdresse: ${wc.getURL()}\n\nText (Auszug):\n${text}`);
+    : 'Fasse diese Webseite kurz und auf Deutsch zusammen – die wichtigsten Punkte als Liste.');
+  openAI(`${head}\n${T('Titel:')} ${wc.getTitle()}\n${T('Adresse:')} ${wc.getURL()}\n\n${T('Text (Auszug):')}\n${text}`);
 }
 
 // ------------------------------------------------------------------ Übersetzen
+function translateTarget() { const c = i18n.current().code; return c === 'nb' ? 'no' : c === 'fil' ? 'tl' : c; }
 function translatePage(tab) {
   if (!tab || !/^https?:/i.test(tab.url)) return;
-  navigate('https://translate.google.com/translate?sl=auto&tl=de&u=' + encodeURIComponent(tab.url));
+  navigate(`https://translate.google.com/translate?sl=auto&tl=${encodeURIComponent(translateTarget())}&u=` + encodeURIComponent(tab.url));
 }
 function translateText(text) {
-  createTab('https://translate.google.com/?sl=auto&tl=de&op=translate&text=' + encodeURIComponent(text.slice(0, 4000)));
+  createTab(`https://translate.google.com/?sl=auto&tl=${encodeURIComponent(translateTarget())}&op=translate&text=` + encodeURIComponent(text.slice(0, 4000)));
 }
 
 // ------------------------------------------------------------------ Lesemodus
@@ -2315,6 +2375,27 @@ function openInternal(page) {
   else createTab(url);
 }
 
+// Übersetzungen für die eigenen Seiten (preload-i18n.js)
+ipcMain.on('i18n-dict', (e) => {
+  let url = '';
+  try { url = (e.senderFrame && e.senderFrame.url) || e.sender.getURL(); } catch {}
+  if (!/^elektron(-ui)?:/.test(url)) { e.returnValue = null; return; }
+  const c = i18n.current();
+  e.returnValue = { code: c.code, dir: c.dir, keys: c.keys, values: c.values };
+});
+function setLanguage(code) {
+  settings.language = code === 'auto' || i18n.available(code) ? code : 'auto';
+  saveSettings();
+  i18n.load(resolveLanguage());
+  for (const ses of [mainSes, privateSes]) if (ses) { try { ses.setUserAgent(app.userAgentFallback, acceptLanguages()); } catch {} }
+  // Oberfläche und eigene Seiten neu laden
+  if (uiView && alive(uiView.webContents)) uiView.webContents.reload();
+  if (suggestView && alive(suggestView.webContents)) suggestView.webContents.reload();
+  for (const f of floatsByBar.values()) if (alive(f.bar.webContents)) f.bar.webContents.reload();
+  for (const t of tabs) if (t.view && alive(t.view.webContents) && /^elektron:/.test(t.view.webContents.getURL())) t.view.webContents.reload();
+  setTimeout(() => toast(`${i18n.info().name} ✓`), 1200);
+}
+
 // AMP-Seiten (abgespeckte Google-Kopien) → Originalseite laden
 const deampDone = new Map(); // webContents-ID -> zuletzt umgeleitete Adresse (gegen Schleifen)
 ipcMain.on('deamp', (e, canonical) => {
@@ -2399,6 +2480,9 @@ ipcMain.handle('internal', async (e, name, ...args) => {
       return true;
     }
     case 'flows.test': return flows.test(String(args[0] || ''));
+    case 'lang.list': return { setting: settings.language || 'auto', current: i18n.current().code, system: systemLanguage(),
+      languages: i18n.LANGUAGES.filter(l => i18n.available(l.code)).map(l => ({ code: l.code, name: l.name, en: l.en, flags: l.flags, dir: l.dir || 'ltr' })) };
+    case 'lang.set': setLanguage(String(args[0] || 'auto')); return true;
     case 'ext.list': return extmod.list();
     case 'welcome.state': return Object.keys(extmod.RECOMMENDED).map(id => ({ id, installed: extmod.isInstalled(id) }));
     case 'welcome.install': return extmod.installRecommended(String(args[0]));
@@ -2448,7 +2532,7 @@ function ensureSuggestView() {
 
 // ------------------------------------------------------------------ Suchmaschinen
 const SEARCH_ENGINES = {
-  google: { name: 'Google', url: 'https://www.google.com/search?q=', suggest: 'https://suggestqueries.google.com/complete/search?client=firefox&hl=de&q=' },
+  google: { name: 'Google', url: 'https://www.google.com/search?q=', suggest: () => `https://suggestqueries.google.com/complete/search?client=firefox&hl=${encodeURIComponent(i18n.current().code)}&q=` },
   duckduckgo: { name: 'DuckDuckGo', url: 'https://duckduckgo.com/?q=', suggest: 'https://duckduckgo.com/ac/?type=list&q=' },
   brave: { name: 'Brave Search', url: 'https://search.brave.com/search?q=', suggest: 'https://search.brave.com/api/suggest?q=' },
   startpage: { name: 'Startpage', url: 'https://www.startpage.com/sp/search?query=', suggest: null }
@@ -2480,7 +2564,7 @@ async function updateSuggest(query, rect) {
   const eng = engine();
   if (!settings.searchSuggest || !eng.suggest) return;
   try {
-    const res = await mainSes.fetch(eng.suggest + encodeURIComponent(q.trim()));
+    const res = await mainSes.fetch((typeof eng.suggest === 'function' ? eng.suggest() : eng.suggest) + encodeURIComponent(q.trim()));
     let data = await res.json();
     if (Array.isArray(data) && data.length && data[0] && typeof data[0] === 'object' && 'phrase' in data[0]) data = [q, data.map(x => x.phrase)];
     if (seq !== suggest.seq || !suggest.open) return;
@@ -2991,6 +3075,9 @@ setTimeout(()=>{document.getElementById('f').src='http://localhost:8771/check'},
           console.log('STUDIO-ALL', res);
         }, 5000);
         createTab('elektron://start/studio.html' + (process.env.STUDIO_MODE ? '?mode=' + process.env.STUDIO_MODE : ''));
+      }
+      if (process.env.ELEKTRON_TEST === 'langpage') {
+        openInternal('sprachen');
       }
       if (process.env.ELEKTRON_TEST === 'normal') {
         settings.style = 'gaming'; setStyle('normal'); createTab();

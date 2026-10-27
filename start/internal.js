@@ -1,4 +1,6 @@
 'use strict';
+// Dezimalzeichen passend zur Sprache (Komma oder Punkt)
+const DEC = () => ((1.5).toLocaleString(document.documentElement.lang || 'de-AT').includes(',') ? ',' : '.');
 /* Gemeinsame Hilfen für die Browser-Seiten (Lesezeichen, Verlauf, Downloads) */
 window.ui = (() => {
   const api = window.elektron;
@@ -41,15 +43,15 @@ window.ui = (() => {
     const diff = Math.round((start(now) - start(d)) / 86400000);
     if (diff === 0) return 'Heute';
     if (diff === 1) return 'Gestern';
-    return d.toLocaleDateString('de-AT', { weekday: 'long', day: 'numeric', month: 'long', year: diff > 300 ? 'numeric' : undefined });
+    return d.toLocaleDateString(document.documentElement.lang || 'de-AT', { weekday: 'long', day: 'numeric', month: 'long', year: diff > 300 ? 'numeric' : undefined });
   }
-  const time = (ts) => new Date(ts).toLocaleTimeString('de-AT', { hour: '2-digit', minute: '2-digit' });
+  const time = (ts) => new Date(ts).toLocaleTimeString(document.documentElement.lang || 'de-AT', { hour: '2-digit', minute: '2-digit' });
   function bytes(n) {
     if (!n) return '0 B';
     const u = ['B', 'KB', 'MB', 'GB'];
     let i = 0;
     while (n >= 1024 && i < u.length - 1) { n /= 1024; i++; }
-    return n.toFixed(i > 1 ? 1 : 0).replace('.', ',') + ' ' + u[i];
+    return n.toFixed(i > 1 ? 1 : 0).replace('.', DEC()) + ' ' + u[i];
   }
   function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
   return { api, el, favicon, iconBtn, host, dayLabel, time, bytes, debounce };

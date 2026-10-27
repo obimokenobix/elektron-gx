@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'">
+  <title>Sprache</title>
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="sprachen.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="page">
+      <h1>Sprache</h1>
+      <div class="spacer"></div>
+      <label class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="q" placeholder="Sprache oder Land suchen …" autocomplete="off" spellcheck="false">
+      </label>
+    </header>
+    <p class="lead">In welcher Sprache soll Elektron mit dir reden? Die Flaggen zeigen die Länder, in denen die Sprache gesprochen wird.</p>
+    <button type="button" class="lang auto" id="auto">
+      <span class="flags"><span class="globe">🌐</span></span>
+      <span class="names"><b>Automatisch</b><small id="auto-sub">Sprache von Windows</small></span>
+      <i class="check">✓</i>
+    </button>
+    <div class="grid" id="grid"></div>
+    <p class="note">Übersetzungen ohne Gewähr – Fehler gefunden? Melde sie auf GitHub, wir verbessern sie gerne.</p>
+  </div>
+  <script src="sprachen.js"></script>
+</body>
+</html>

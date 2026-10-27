@@ -1,4 +1,6 @@
 'use strict';
+// Dezimalzeichen passend zur Sprache (Komma oder Punkt)
+const DEC = () => ((1.5).toLocaleString(document.documentElement.lang || 'de-AT').includes(',') ? ',' : '.');
 /* Elektron – Browser-Oberfläche */
 const $ = (s) => document.querySelector(s);
 /* global gx – kommt aus preload-ui.js */
@@ -29,8 +31,8 @@ const HIST_LEN = 60;
 function esc(s) {
   return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
-function fmtMB(mb) { return mb >= 1024 ? (mb / 1024).toFixed(mb >= 10240 ? 0 : 1).replace('.', ',') + ' GB' : Math.round(mb) + ' MB'; }
-function fmtKBs(kb) { return kb >= 1024 ? (kb / 1024).toFixed(kb % 1024 ? 1 : 0).replace('.', ',') + ' MB/s' : kb + ' KB/s'; }
+function fmtMB(mb) { return mb >= 1024 ? (mb / 1024).toFixed(mb >= 10240 ? 0 : 1).replace('.', DEC()) + ' GB' : Math.round(mb) + ' MB'; }
+function fmtKBs(kb) { return kb >= 1024 ? (kb / 1024).toFixed(kb % 1024 ? 1 : 0).replace('.', DEC()) + ' MB/s' : kb + ' KB/s'; }
 function nearestIdx(steps, v) {
   let best = 0;
   steps.forEach((s, i) => { if (Math.abs(s - v) < Math.abs(steps[best] - v)) best = i; });
@@ -503,6 +505,18 @@ $('#update-install').addEventListener('click', () => gx.cmd('updateInstall'));
 $('#update-url-save').addEventListener('click', () => gx.cmd('setSetting', 'updateUrl', $('#update-url').value.trim()));
 $('#update-url').addEventListener('keydown', (e) => { if (e.key === 'Enter') gx.cmd('setSetting', 'updateUrl', $('#update-url').value.trim()); });
 
+function renderLanguage() {
+  const li = state.settings.languageInfo;
+  if (!li) return;
+  const box = $('#lang-flags');
+  if (box.dataset.code !== li.code) {
+    box.dataset.code = li.code;
+    box.replaceChildren(...li.flags.slice(0, 6).map(f => { const i = new Image(); i.src = `../start/flags/${f}.svg`; i.alt = ''; return i; }));
+  }
+  $('#lang-name').textContent = li.name + (state.settings.language === 'auto' ? ' · Auto' : '');
+}
+$('#lang-btn').addEventListener('click', () => gx.cmd('openLanguages'));
+
 function renderStyle() {
   const normal = state.settings.style === 'normal';
   document.body.classList.toggle('style-normal', normal);
@@ -518,7 +532,7 @@ function renderProtect() {
   const l = p.lists || {};
   const n = (l.phishing ? l.phishing.count : 0) + (l.malware ? l.malware.count : 0);
   $('#protect-info').textContent = n
-    ? `Blockiert ${n.toLocaleString('de-AT')} bekannte Betrugs- und Virenseiten. Die Liste wird alle 6 Stunden aktualisiert.`
+    ? `Blockiert ${n.toLocaleString(document.documentElement.lang || 'de-AT')} bekannte Betrugs- und Virenseiten. Die Liste wird alle 6 Stunden aktualisiert.`
     : 'Blockiert bekannte Betrugsseiten und Seiten, die Viren verteilen. Die Liste wird gerade geladen …';
   // Sicherheits-Check
   const st = state.settings || {};
@@ -529,9 +543,9 @@ function renderProtect() {
     ['Phishing- und Malware-Schutz', !!st.phishingProtect],
     ['Nur HTTPS', !!st.httpsOnly],
     ['Sicheres DNS', !!st.secureDns],
-    ['Fremd-Cookies blockiert', !!st.blockThirdPartyCookies, p.cookiesBlocked ? `${p.cookiesBlocked.toLocaleString('de-AT')} Tracking-Cookies abgewehrt` : ''],
+    ['Fremd-Cookies blockiert', !!st.blockThirdPartyCookies, p.cookiesBlocked ? `${p.cookiesBlocked.toLocaleString(document.documentElement.lang || 'de-AT')} Tracking-Cookies abgewehrt` : ''],
     ['Fingerprint-Schutz', !!st.fingerprintProtect],
-    ['Links werden gesäubert', !!st.cleanLinks, p.linksCleaned ? `${p.linksCleaned.toLocaleString('de-AT')} Tracking-Links entschärft` : ''],
+    ['Links werden gesäubert', !!st.cleanLinks, p.linksCleaned ? `${p.linksCleaned.toLocaleString(document.documentElement.lang || 'de-AT')} Tracking-Links entschärft` : ''],
     ['IP-Adresse bei WebRTC versteckt', !!st.webrtcProtect],
     ['„Nicht verkaufen“-Signal (GPC)', !!st.gpc],
     ['Warnung vor gefälschten Adressen', !!st.phishingProtect],
@@ -668,17 +682,17 @@ gx.on('stats', (st) => {
   hist.ram.push(st.ram); hist.cpu.push(st.cpu);
   if (hist.ram.length > HIST_LEN) hist.ram.shift();
   if (hist.cpu.length > HIST_LEN) hist.cpu.shift();
-  $('#hud-cpu').textContent = st.cpu.toFixed(st.cpu < 10 ? 1 : 0).replace('.', ',') + ' %';
+  $('#hud-cpu').textContent = st.cpu.toFixed(st.cpu < 10 ? 1 : 0).replace('.', DEC()) + ' %';
   $('#hud-ram').textContent = fmtMB(st.ram);
   $('#shield-count').textContent = st.tabBlocked ? (st.tabBlocked > 999 ? Math.round(st.tabBlocked / 1000) + 'k' : st.tabBlocked) : '';
   $('#shield').classList.toggle('off-site', !!st.shieldOff);
   $('#adblock-info').textContent = st.blocked
-    ? `Blockiert Werbung, Tracker, Popups und Cookie-Banner – bisher ${st.blocked.toLocaleString('de-AT')} Anfragen gestoppt.`
+    ? `Blockiert Werbung, Tracker, Popups und Cookie-Banner – bisher ${st.blocked.toLocaleString(document.documentElement.lang || 'de-AT')} Anfragen gestoppt.`
     : 'Blockiert Werbung, Tracker, Werbe-Popups und Cookie-Banner.';
   if (!state || state.panel !== 'gx') return;
   renderHw(st.hw);
   $('#m-ram').textContent = fmtMB(st.ram);
-  $('#m-cpu').textContent = st.cpu.toFixed(1).replace('.', ',') + ' %';
+  $('#m-cpu').textContent = st.cpu.toFixed(1).replace('.', DEC()) + ' %';
   $('#n-tabs').textContent = st.tabs;
   $('#n-frozen').textContent = st.frozen;
   $('#n-sleep').textContent = st.sleeping;
@@ -701,7 +715,7 @@ function renderHw(hw) {
     const t = $('#gpu-temp');
     t.textContent = g.temp != null ? Math.round(g.temp) + ' °C' : '';
     t.classList.toggle('hot', g.temp >= 80);
-    $('#gpu-mem').textContent = g.memUsed != null ? `${(g.memUsed / 1024).toFixed(1).replace('.', ',')}/${(g.memTotal / 1024).toFixed(0)} GB VRAM` : '';
+    $('#gpu-mem').textContent = g.memUsed != null ? `${(g.memUsed / 1024).toFixed(1).replace('.', DEC())}/${(g.memTotal / 1024).toFixed(0)} GB VRAM` : '';
     $('#gpu-power').textContent = g.power != null ? Math.round(g.power) + ' W' : '';
   }
   $('#pc-cpu').textContent = hw.cpu != null ? Math.round(hw.cpu) + ' %' : '–';
@@ -723,6 +737,7 @@ gx.on('state', (s) => {
   renderBookmarkBar();
   renderUpdates();
   renderProtect();
+  renderLanguage();
   renderStyle();
 });
 

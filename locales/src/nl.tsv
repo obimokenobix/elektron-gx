@@ -1,0 +1,752 @@
+0	(blauw) of
+1	(paars). Wijzigingen worden automatisch opgeslagen en werken meteen.
+2	(rood) – bv. ‘Als een pagina wordt geopend’. Verbind de witte pijl met
+3	1 download bezig – Ctrl+J
+4	1080 × 1080 (vierkant)
+5	1080 × 1920 (telefoon)
+6	1920 × 1080 (Full HD)
+7	A (onder)
+8	Annuleren
+9	Geannuleerd
+10	Flows
+11	Flows actief
+12	Optellen (gloed)
+13	Adres
+14	Adres bevat
+15	Adres, bv. roblox.com
+16	Adres:
+17	Adres: {0}
+18	Acties
+19	Actief tabblad sluiten
+20	Accentkleur
+21	Al je gegevens op alle websites lezen en wijzigen
+22	Alle bladwijzers
+23	Alle bladwijzers (Ctrl+Shift+O)
+24	Alle bladwijzers beheren …
+25	Alle beveiligingsinstellingen …
+26	Alle beveiligingsfuncties zijn actief.
+27	Alle verbindingen loskoppelen
+28	Alles bijwerken
+29	Alles tonen
+30	Om de paar minuten
+31	Alle {0} tonen
+32	Alles selecteren
+33	Alles wissen en opnieuw beginnen?
+34	Alles wat je in Elektron kunt instellen.
+35	Opslaan als afbeelding (PNG)
+36	Instellen als standaardbrowser …
+37	Als achtergrond van de startpagina instellen
+38	Openen als zwevend venster
+39	Andere extensies beheren
+40	Andere tabbladen sluiten
+41	Animatie
+42	Geanimeerd
+43	Soort
+44	Zoeken op pagina
+45	Zoeken op pagina …
+46	Niets te blokkeren op deze pagina
+47	Op deze pagina speelt geen video
+48	Importeren uit Chrome
+49	Importeren uit Edge
+50	Importeren uit Opera GX
+51	Uit de lijst verwijderen
+52	Vullen
+53	Uitvoer
+54	Triggers
+55	Uitschakelen
+56	Knippen
+57	Automatisch
+58	Automatisch
+59	Automatisch bijwerken
+60	B (boven)
+61	Maakt al verbinding als de muis op een link staat – sneller, maar de site ziet je IP-adres al vóór de klik.
+62	Bewerken
+63	Bewerken …
+64	Voorwaarden
+65	Afsluiten
+66	Beperkt de bandbreedte van alle tabbladen, zodat je ping stabiel blijft tijdens het gamen.
+67	Bevriezen bij minimaliseren
+68	Voorbeeld
+69	Voorbeeld laden? Je huidige flows worden vervangen.
+70	Populair
+71	Meldingen
+72	Meldingen tonen
+73	Toestemming
+74	Klaar om te gamen?
+75	Oplichterssite geblokkeerd
+76	Beweging
+77	Afbeelding
+78	Afbeelding kiezen …
+79	Afbeelding behouden
+80	Afbeelding openen in nieuw tabblad
+81	Afbeelding is te groot (max. 25 MB)
+82	Afbeelding kon niet worden geladen
+83	Afbeelding kopiëren
+84	Afbeelding opslaan …
+85	Afbeelding van pc
+86	Afbeeldingsadres (https://…)
+87	Vul het afbeeldingsadres in en klik op ‘Laden’
+88	Afbeeldingen
+89	Tot
+90	Voer een adres in dat begint met https://
+91	Blokkeren
+92	Blokkeert oplichterssites, malware, abonnementsvallen en helpdeskfraude. Gratis, geen account nodig.
+93	Blokkeert advertenties, trackers, pop-ups en cookiebanners – tot nu toe {0} verzoeken gestopt.
+94	Blokkeert advertenties, trackers, advertentie-pop-ups en cookiebanners.
+95	Blokkeert bekende oplichterssites en sites die virussen verspreiden.
+96	Blokkeert bekende oplichterssites en sites die virussen verspreiden. De lijst wordt geladen …
+97	Blokkeert {0} bekende oplichters- en virussites. De lijst wordt elke 6 uur bijgewerkt.
+98	Heeft een gratis Bitwarden-account nodig. Mag: gegevens op alle websites lezen en wijzigen (om in te vullen).
+99	Browser up-to-date
+100	Browserbelasting
+101	Browsergames draaien zonder V-Sync boven de verversingssnelheid. Kan beeldscheuren veroorzaken.
+102	Browserstijl
+103	Browsegegevens gewist
+104	Browsegegevens nu wissen
+105	Browsegegevens wissen
+106	CPU-begrenzer
+107	Gebruik ChatGPT direct in de browser.
+108	Chrome Web Store niet beschikbaar
+109	Chrome Web Store openen
+110	Claude als extensie – of gewoon via de zijbalk.
+111	Code
+112	Code uitvoeren op websites
+113	Strip / poster
+114	Cookies en aanmeldingen wissen bij afsluiten
+115	Cookies lezen en wijzigen
+116	Dan
+117	Mag:
+118	Mag: gegevens op alle websites lezen en wijzigen (om te controleren en te blokkeren).
+119	De afbeelding is te groot (max. 25 MB)
+120	Het beveiligingscertificaat van {0} is niet betrouwbaar.
+121	Het beveiligingscertificaat van {0} is ongeldig.
+122	Dit is geen geldige afbeelding
+123	Dit is geen flowbestand.
+124	Dit is geen shaderbestand.
+125	Bestand is verwijderd of verplaatst
+126	gegevens op
+127	Privacy-instellingen wijzigen
+128	Dekking
+129	Je bladwijzers lezen en wijzigen
+130	Je games
+131	Je browsegeschiedenis lezen en wijzigen
+132	Je browsegeschiedenis en open tabbladen lezen
+133	Je locatie bepalen
+134	De gamingbrowser. Chromium {0} · Electron {1}
+135	De geschiedenis is leeg
+136	Uiterlijk
+137	Bureaublad
+138	Details
+139	Dichtheid
+140	Het adres lijkt verwarrend veel op de echte site {0} – een typische truc van oplichters. Kijk goed: een letter is verwisseld, vervangen of komt uit een ander alfabet.
+141	Het adres moet beginnen met https://
+142	Het adres van {0} is niet gevonden. Klopt de spelling?
+143	De extensie heeft geen speciale rechten nodig.
+144	De extensie kan: •
+145	De extensies komen rechtstreeks uit de Chrome Web Store en zijn van hun makers (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	De pagina kon niet worden geladen.
+147	Deze site ondersteunt geen beveiligde verbinding (HTTPS). Anderen in hetzelfde netwerk – bv. openbare wifi – kunnen meelezen wat je hier ziet en typt.
+148	Het klembord lezen
+149	Dit adres lijkt op
+150	Dit bestand kon niet worden gelezen
+151	Deze pagina is niet versleuteld
+152	Deze site staat op de lijst met gevaarlijke sites
+153	Deze site staat op een lijst met bekende phishingsites. Zulke sites lijken vaak echt, maar willen je wachtwoorden of bankgegevens stelen.
+154	Deze site verspreidt malware
+155	Deze verbinding is niet versleuteld
+156	Deze video kan niet losgemaakt worden
+157	Verschil
+158	Download
+159	Download geblokkeerd: {0} verspreidt bekende malware
+160	Download mislukt: {0}
+161	Download klaar: {0}
+162	Download gestart: {0}
+163	Downloadmap openen
+164	Downloads
+165	Downloads (Ctrl+J)
+166	Downloads op virussen scannen
+167	Downloads doorzoeken
+168	Downloads beheren
+169	Downloads worden gescand
+170	Draaien (°)
+171	Draait
+172	Rotatie (°)
+173	Daarna ben je overal afgemeld.
+174	DuckDuckGo, Brave Search en Startpage maken geen profiel van je. Startpage toont Google-resultaten zonder tracking.
+175	Donker
+176	Donker thema voor elke website.
+177	Dupliceren
+178	Dupliceren (Ctrl+D)
+179	Effecten
+180	Eigen shader (GLSL)
+181	Eigen afbeelding
+182	Eigen afbeelding …
+183	Eigen achtergrondafbeelding kiezen
+184	Een flow begint met een
+185	Bevriezen
+186	Inkleuren
+187	Plakken
+188	Passend maken
+189	Inschakelen
+190	Instellingen
+191	Instellingen konden niet worden opgeslagen:
+192	Items aan het rechtsklikmenu toevoegen
+193	Elektron-bescherming · Herkenning van nepdubbelgangers direct op je pc
+194	Elektron-bescherming · Lijsten van Phishing.Database en URLhaus (abuse.ch)
+195	Elektron Studio (shaders en flows)
+196	Elektron heeft deze site gestopt omdat hij op een lijst met bekende oplichterssites staat.
+197	Elektron zoekt regelmatig naar nieuwe versies.
+198	Elektron aanbevelen
+199	Aanbevolen
+200	Verwijderen
+201	Verwijdert trackingparameters zoals utm_, fbclid en gclid, slaat doorverwijs-trackers van Google en Facebook over en opent AMP-pagina’s in het origineel.
+202	Uitgepakte extensie laden (map met manifest.json)
+203	Uitgepakte extensie laden …
+204	Keuze onthouden
+205	Ontwikkelaarstools
+206	Gratis Epic-games
+207	Leg me dit eenvoudig uit, in het Nederlands:
+208	Leg me eenvoudig en in het Nederlands uit waar deze website over gaat.
+209	Toestaan
+210	Opnieuw downloaden
+211	Opnieuw proberen
+212	Bouw eerst een afbeelding – er komt nog niets aan bij ‘Uitvoer’.
+213	Extensie toevoegen
+214	Extensies
+215	Extensies komen uit de Chrome Web Store en werken in Elektron net als in Chrome. Sommige zeer grote extensies gebruiken Chrome-functies die hier niet bestaan – die werken dan maar deels. Claude en ChatGPT vind je ook direct in de zijbalk links.
+216	Extensies zijn up-to-date
+217	Extensiebalk niet beschikbaar:
+218	De node ‘Uitvoer’ ontbreekt.
+219	Exporteren
+220	FPS-limiet opheffen
+221	Kleur
+222	Kleur 1
+223	Kleur 2
+224	Kleurtoon draaien
+225	Vat deze website kort samen in het Nederlands – de belangrijkste punten als lijst.
+226	Fout:
+227	Mislukt
+228	Klaar
+229	Vragen
+230	Cookies van derden blokkeren
+231	Cookies van derden geblokkeerd
+232	Bevriest alle achtergrondtabbladen en verlaagt de prioriteit van de browser, zodat je game voorrang heeft. Tabbladen met geluid blijven lopen.
+233	Kies voor Discord-spraakkanalen ‘Vragen’ of ‘Toestaan’.
+234	Voor rechtsklik → ‘Pagina samenvatten’ en ‘Uitleggen’.
+235	Voor deze pagina is er geen leesmodus
+236	HELE PC
+237	Melkweg
+238	Gaming
+239	Gaming met alle extra’s – of een rustige, normale browser. Altijd om te schakelen.
+240	De gamingbrowser is terug 🎮
+241	Gamingmodus
+242	Gamingmodus (Ctrl+Shift+G)
+243	Gamingmodus aan – achtergrondtabbladen bevroren, browserprioriteit verlaagd
+244	Gamingmodus uit
+245	Gamingmodus uitschakelen
+246	Gamingmodus inschakelen
+247	Helemaal tonen
+248	Hele pagina
+249	Gevaarlijk
+250	Gevaarlijke site geblokkeerd
+251	Nepadres?
+252	Geladen – te groot om te onthouden, na herstart opnieuw kiezen
+253	Hele geschiedenis wissen
+254	Gesloten tabblad herstellen
+255	Opgeslagen ✓
+256	Gisteren
+257	Vul hier geen wachtwoorden, bank- of kaartgegevens in.
+258	Vul hier geen wachtwoorden, codes of kaartgegevens in.
+259	Raster
+260	Google maakt profielen – DuckDuckGo, Brave en Startpage niet
+261	Google Translate
+262	Graph als bestand opslaan
+263	Graphbestand laden
+264	Grootte
+265	Grootte bij opslaan
+266	Goed om te weten: Avast controleert daarvoor de adressen van de sites die je bezoekt. Mag: gegevens op alle websites lezen en wijzigen.
+267	Goedenacht
+268	Goedenavond
+269	Goedenavond – tijd voor een sessie.
+270	Goedemorgen
+271	Goedemorgen – klaar om te gamen?
+272	HTTPS-modus · uit te schakelen in GX Control onder ‘Bescherming’
+273	Houd de browser klein, zodat je game de kracht krijgt.
+274	Dat lukte niet
+275	Licht
+276	Licht / donker
+277	Helderheid
+278	Helderheid en contrast
+279	Vandaag
+280	Achtergrond
+281	Achtergrond van de startpagina
+282	Achtergrond ingesteld ✓
+283	Melding tonen
+284	Toevoegen
+285	Start
+286	IP-adres verbergen voor WebRTC
+287	IP-adres verborgen voor WebRTC
+288	Ik begrijp het risico – site toch openen
+289	Op de achtergrond
+290	Tonen in map
+291	Tonen in map
+292	Altijd op voorgrond
+293	Altijd op voorgrond (aan)
+294	Altijd op voorgrond (uit)
+295	Importeren mislukt:
+296	Importeren
+297	Naar het klembord schrijven
+298	Openen in nieuw tabblad
+299	Openen in privétabblad
+300	In welke taal moet Elektron met je praten? De vlaggen tonen de landen waar de taal gesproken wordt.
+301	Inhoud op websites blokkeren
+302	Installeren en beginnen
+303	Geïnstalleerd
+304	Omkeren
+305	Ja
+306	JavaScript op deze site blokkeren
+307	Elk gedownload bestand wordt met Windows Defender gescand.
+308	Elke dag
+309	Nu naar updates zoeken
+310	Nu herstarten
+311	AI in de zijbalk
+312	Caleidoscoop
+313	Kwam de link via e-mail, sms of Discord? Dan was het waarschijnlijk oplichting.
+314	Camera en microfoon
+315	Geen internetverbinding. Controleer wifi of netwerkkabel.
+316	Geen suggesties
+317	Geen beveiligde verbinding
+318	Klik op de ster in de adresbalk of druk op Ctrl+D.
+319	Klik om los te koppelen
+320	Kon niet worden geladen:
+321	Contrast
+322	Kopiëren
+323	Cirkel
+324	Download hier niets.
+325	Laden
+326	Laden stoppen
+327	Laat je virusscanner draaien als je twijfelt.
+328	Prestaties
+329	Krachtige videokaart
+330	Leesmodus
+331	Leesmodus (F9)
+332	Leesmodus openen
+333	Bladwijzers
+334	Bladwijzers en instellingen back-uppen …
+335	Bladwijzers doorzoeken
+336	Bladwijzer verwijderen (Ctrl+D)
+337	Bladwijzer verwijderd
+338	Bladwijzers verschijnen hier – klik op de ster in de adresbalk.
+339	Bladwijzer opgeslagen
+340	Bladwijzer toevoegen (Ctrl+D)
+341	Bladwijzers en instellingen als bestand opslaan – bv. voor een nieuwe pc.
+342	Bladwijzers en instellingen back-uppen
+343	Bladwijzerbalk tonen
+344	Bladwijzerbalk verbergen
+345	Laatste 24 uur wissen
+346	Laatste uur wissen
+347	Gaat de browser over de limiet, dan wordt het hongerigste achtergrondtabblad bevroren.
+348	Limiet
+349	Lineair
+350	Lijndikte
+351	Link openen in gesplitst scherm
+352	Link openen in nieuw tabblad
+353	Link openen in privétabblad
+354	Link kopiëren
+355	Link gekopieerd – stuur hem naar je vrienden!
+356	Links opschonen
+357	Links vooraf laden
+358	Links worden opgeschoond
+359	Lijst leegmaken
+360	Lijst te kort
+361	Lokale adressen zijn niet toegestaan
+362	Aan de slag
+363	Laadt pagina’s altijd versleuteld en waarschuwt als een site dat niet kan.
+364	Laadt een afbeelding van internet
+365	Laden …
+366	Verwijderen
+367	Verwijderen (Del)
+368	MIDI-apparaten
+369	Geselecteerde tekst of hele pagina’s vertalen.
+370	Masker
+371	Masker (licht = zichtbaar)
+372	Maximale beveiliging
+373	Meer privacy: je zoekt nu met DuckDuckGo in plaats van Google
+374	Menu
+375	Microfoon
+376	Minimaliseer je de browser voor een game, dan rusten alle stille tabbladen.
+377	Minuten
+378	Mengen
+379	Zoeken met Google
+380	Zoek met Google of voer een adres in
+381	Uitleggen met {0}
+382	Zoeken met {0}
+383	Zoek met {0} of voer een adres in
+384	Zoeken met {0}: ‘{1}’
+385	Modus
+386	Maandag – vrijdag
+387	Vermenigvuldigen
+388	Patroon
+389	Naar updates zoeken
+390	Naam
+391	Nevel
+392	Bleken
+393	Nee
+394	Neon
+395	Neonraster
+396	Netwerkbegrenzer
+397	Netwerkverkeer bekijken
+398	Netwerkverkeer blokkeren en wijzigen
+399	Nieuw
+400	Opnieuw laden
+401	Opnieuw laden (F5)
+402	Herstarten en installeren
+403	Nieuw tabblad
+404	Nieuw tabblad (Ctrl+T)
+405	Nieuw privétabblad
+406	Nieuwe, lege afbeelding
+407	Herstarten
+408	Niet gevonden
+409	Niet opgeslagen
+410	Niet mogelijk
+411	Niet veilig
+412	Niets gevonden
+413	Nog één stap: deze extensies raden we aan voor extra veiligheid. Kies wat je wilt – je kunt ze altijd weer verwijderen onder ‘Extensies’.
+414	Nog een potje? Het is midden in de nacht.
+415	Nog geen downloads
+416	Nog geen extensies geïnstalleerd. Open de Chrome Web Store en klik daar op ‘Toevoegen’.
+417	Nog geen bladwijzers
+418	Nog geen updateadres ingesteld (GX Control → Updates)
+419	Node zoeken …
+420	Normaal
+421	Normale browser – gaming-onderdelen zijn verborgen
+422	Alleen bestanden met (leeg = alle)
+423	Alleen HTTPS
+424	Maar één keer per dag
+425	Alleen http- en https-adressen
+426	Gebruikt de losse GPU (bv. RTX) in plaats van de ingebouwde graphics.
+427	Volgende treffer (F3)
+428	Verder zonder extensies
+429	Optioneel
+430	Opties
+431	Paneel sluiten
+432	Wachtwoordbeheerder
+433	Bescherming tegen phishing en malware
+434	Pixelgrootte
+435	Plasma (kleurrijk, geanimeerd)
+436	Noorderlicht
+437	Privé
+438	Privézoekmachine
+439	Privétabblad
+440	Privétabblad – geschiedenis, cookies en aanmeldingen verdwijnen zodra je alle privétabbladen sluit.
+441	Privétabblad – geen geschiedenis, geen cookies na het sluiten
+442	Programma gehard
+443	Proxy-instellingen wijzigen
+444	Scant downloads met Windows Defender (niet beschikbaar op deze pc).
+445	Stippen
+446	Bronnen
+447	RAM {0} van {1}
+448	RAM-begrenzer
+449	RGB-verschuiving (glitch)
+450	Ruis / wolken
+451	Rechtsklik op een tabblad biedt dit allemaal ook.
+452	Rechtsklik of spatiebalk voegt nodes toe. Sleep van het punt rechts op een node naar een punt links op de volgende. Alles wat uiteindelijk in
+453	Rechtsklik of spatie: node toevoegen · Achtergrond slepen: verschuiven · Muiswiel: zoomen · Del: verwijderen
+454	Retro
+455	Retrobergen
+456	Laat elke website via Global Privacy Control weten dat je gegevens niet verkocht of gedeeld mogen worden.
+457	Dambord
+458	Malware geblokkeerd
+459	Schakelt de JavaScript-turbo (JIT) uit – het meest gebruikte aanvalspunt van browsers. Websites worden trager en sommige browsergames werken niet meer. Werkt na een herstart.
+460	In slaap zetten (RAM vrijmaken)
+461	Eenvoudig
+462	Sluiten
+463	Sluiten (Esc)
+464	Snelle toegang
+465	Al 22 uur – morgen school/werk 😉
+466	Grotere tekst
+467	Kleinere tekst
+468	Bescherming
+469	Bescherming voor deze site (klikken)
+470	Bescherming voor deze site weer inschakelen
+471	Bescherming voor {0}
+472	Bescherming tegen fingerprinting
+473	Beschermingslijst {0}:
+474	Zwart-wit
+475	Zwevend venster
+476	Fijne dag
+477	Screenshot
+478	Screenshot (Ctrl+Shift+X) – rechtsklik: hele pagina
+479	Screenshot (hele pagina)
+480	Screenshot (zichtbaar deel)
+481	Screenshot is mislukt
+482	Screenshot gekopieerd – plak hem in Discord met Ctrl+V
+483	Screenshot maken
+484	Pagina
+485	Pagina naar het Nederlands vertalen
+486	Site vergeten bij sluiten (cookies wissen)
+487	Pagina afdrukken …
+488	Werkt de site niet? Zet hier de bescherming uit
+489	Pagina samenvatten met {0}
+490	Site niet bereikbaar
+491	Inspecteren
+492	Kanten wisselen
+493	Zijbalk openen
+494	Beeldverhouding van het voorbeeld
+495	Seconden
+496	Server antwoordde met fout {0}
+497	Shaders en afbeeldingen
+498	Beveiligde verbinding
+499	Veilige DNS
+500	Beveiliging
+501	Veiligheidscheck
+502	Back-up en herstel
+503	Back-uppen …
+504	Back-up opgeslagen
+505	Back-up herstellen
+506	Back-up herstellen …
+507	Zichtbaar deel
+508	Zo werkt het
+509	Zo werkt het:
+510	Overig
+511	Opslaan
+512	Opslaan mislukt:
+513	Bewaart je wachtwoorden veilig en vult ze automatisch in.
+514	Bewaart je wachtwoorden versleuteld en vult ze automatisch in op websites. Gratis, open source.
+515	Gesplitst scherm
+516	Gesplitst scherm (Ctrl+Shift+S)
+517	Gesplitst scherm aan – sleep de scheidingslijn om aan te passen
+518	Gesplitst scherm beëindigen
+519	Gesplitst scherm beëindigen (Ctrl+Shift+S)
+520	Taal
+521	Taal of land zoeken …
+522	Taal van Windows
+523	Taal van Windows: {0}
+524	Standaard herstellen
+525	Starten
+526	Startpagina (Alt+Home)
+527	Besturing
+528	Uitrekken
+529	Strepen
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T nieuw tabblad · Ctrl+D bladwijzer · Ctrl+H geschiedenis · F11 volledig scherm
+537	Ctrl+Shift+G start de gamingmodus · Ctrl+T nieuw tabblad · F11 volledig scherm
+538	Studio
+539	Niveaus
+540	Dempen
+541	Sterkte
+542	Storing
+543	Zoeken naar updates …
+544	Zoekmachine
+545	Zoeksuggesties tijdens het typen in de adresbalk (worden naar de zoekmachine gestuurd)
+546	Verzadiging
+547	Tabblad
+548	Tabblad gecrasht – klik om opnieuw te laden
+549	Tabblad als zwevend venster
+550	Tabblad als zwevend venster (Ctrl+Shift+F)
+551	Tabblad sluiten
+552	Het tabblad zweeft nu boven alle vensters
+553	Tabblad dempen
+554	Tabblad openen
+555	Tabbladen
+556	Tabbladen rechts sluiten
+557	Tabbladen herstellen
+558	Dagen
+559	Toets
+560	Sneltoets
+561	Delen
+562	Tempo
+563	Tekst
+564	Tekst (fragment):
+565	Titel:
+566	Geluid van alle tabbladen
+567	Geluid aan
+568	Gifgroen
+569	Transparantie
+570	Twitch open – gamingmodus staat aan 🎮
+571	Tijd (UU:MM)
+572	Ultraviolet
+573	Omkeren
+574	Wisselen
+575	Ongeldig adres
+576	Vervaging
+577	Op dit adres staat geen afbeelding (tip: rechtsklik op een afbeelding → ‘Afbeeldingsadres kopiëren’)
+578	Onversleuteld openen
+579	Update klaar – herstart de browser
+580	Bijwerken van extensies mislukt
+581	Update installeren
+582	Update installeren en herstarten
+583	Update {0} is klaar
+584	Update {0} wordt op de achtergrond gedownload …
+585	Updateadres (map op je website)
+586	Updatemodule ontbreekt
+587	Zoeken naar updates mislukt: {0}
+588	Updates
+589	Updates werken in de geïnstalleerde versie
+590	Verboden
+591	Inzoomen
+592	Uitzoomen
+593	Geschiedenis
+594	Geschiedenis doorzoeken
+595	Verschuiving
+596	Verplaatsen / zoomen / draaien
+597	Versleutelt welke sites je bezoekt (DNS via HTTPS met Quad9 uit Zwitserland) en blokkeert ook bekende malware-adressen.
+598	Versie
+599	Versie {0} is up-to-date.
+600	Versie {0} is klaar – wordt bij de volgende start geïnstalleerd.
+601	Versie {0} wordt gedownload … {1} %
+602	Versie {0} · Chromium {1}
+603	Versie {0} · Nog geen updateadres ingesteld.
+604	Versie {0} · Updates zijn er in de geïnstalleerde Windows-versie.
+605	Versie {0} · Updates komen automatisch via de Microsoft Store.
+606	Beheren
+607	Video losmaken
+608	Video losmaken (beeld-in-beeld)
+609	Video losmaken – beeld-in-beeld (Ctrl+Shift+P)
+610	Video’s automatisch losmaken
+611	Videoadvertenties worden gedempt en meteen overgeslagen, advertentievlakken verdwijnen.
+612	Vignet
+613	Virus gevonden in {0} – Windows Defender heeft het bestand verwijderd
+614	Virus gevonden – Windows Defender heeft het bestand verwijderd
+615	Volledig scherm
+616	Van
+617	Via deze site zijn virussen of andere malware verspreid. Elektron heeft het gestopt voordat er iets op je pc kwam.
+618	Vooruit
+619	Vooruit (Alt+→)
+620	Vorige treffer (Shift+F3)
+621	Suggesties
+622	Honingraat
+623	Kans (%)
+624	Waarschuwt ook voor gevaarlijke sites. Naast Malwarebytes meestal niet nodig – ze overlappen elkaar.
+625	Waarschuwt voor gevaarlijke sites en phishing.
+626	Waarschuwing voor nepadressen
+627	Wachten
+628	Wat er gebeurt als een site je camera wil gebruiken.
+629	WebGL 2 is niet beschikbaar op deze pc.
+630	Webcam
+631	Websites op afstand besturen (debugger)
+632	Websites herkennen je pc moeilijker (canvas, naam van de videokaart, CPU-kernen).
+633	Websites kunnen je lokale IP-adres niet meer uitlezen via videobeltechniek – ook niet achter een VPN.
+634	Wissel je van tabblad of minimaliseer je de browser, dan speelt de video verder in een klein venster (beeld-in-beeld).
+635	Zachtheid
+636	Andere bladwijzers
+637	Golven
+638	Minder tonen
+639	Als gamingmodus aan staat
+640	Als gamingmodus …
+641	Als de dag is
+642	Als de tijd tussen
+643	Als actief tabblad bevat
+644	Als de browser start
+645	Wil je naar {0}? Gebruik dan de knop hieronder.
+646	Als een download klaar is
+647	Als een pagina wordt geopend
+648	Advertentie- en trackerblokker
+649	Advertentieblokker
+650	Advertentieblokker kon niet worden geladen:
+651	Advertentiebedrijven kunnen je niet meer volgen over verschillende websites. Aanmelden, captcha’s en betalen blijven werken.
+652	Advertenties/trackers geblokkeerd: {0} · Trackingcookies tegengehouden: {1}
+653	Gereedschap
+654	Weer inschakelen
+655	Hersteld: {0} nieuwe bladwijzers en je instellingen
+656	Herstellen …
+657	Herhalen (tegels)
+658	Welkom
+659	Welkom bij Elektron
+660	Windows Defender niet gevonden
+661	Hoek
+662	Wordt de limiet overschreden, dan gaan de langst ongebruikte tabbladen slapen.
+663	Bezig met installeren …
+664	Echt de hele geschiedenis wissen?
+665	Echt openen? Deze site staat bekend als gevaarlijk.
+666	Weekend
+667	YouTube-advertenties overslaan
+668	Toont weer de dislikes onder YouTube-video’s.
+669	Lijnen
+670	Tijd
+671	Tijd voor een pauze! 🎮
+672	Time-out
+673	Time-out bij het laden
+674	Slepen om aan te passen · Dubbelklik: 50/50
+675	Zoom
+676	Zoom herstellen
+677	Zoom herstellen (Ctrl+0)
+678	Toeval
+679	Om te proberen: knop
+680	Naar de gamingbrowser
+681	Aan woordenboek toevoegen
+682	Naar de normale browser
+683	Op een tijdstip
+684	Naar de echte site: {0}
+685	Terug
+686	Terug (Alt+←)
+687	Terug naar veiligheid
+688	Terug naar de browser
+689	Terughalen in de browser
+690	Terug naar Google
+691	op een trigger.
+692	aankomt, zie je hierboven. Afbeeldingen van internet: rechtsklik op een afbeelding → ‘Afbeeldingsadres kopiëren’ en plak het in de node.
+693	je microfoon
+694	je camera
+695	je scherm
+696	je locatie
+697	het bladwijzerbestand kon niet worden gelezen.
+698	het klembord
+699	geen limiet
+700	geen Elektron-back-up
+701	lezen en wijzigen
+702	niet toegestaan
+703	alleen in de geïnstalleerde versie
+704	bv. .exe of .zip
+705	bv. youtube.com
+706	{0} downloads bezig – Ctrl+J
+707	{0} bladwijzers overgenomen uit {1}.
+708	{0} trackingcookies tegengehouden
+709	{0} trackinglinks onschadelijk gemaakt
+710	{0} reageert niet op tijd.
+711	{0} heeft de verbinding geweigerd.
+712	{0} is klaar – geen virus gevonden
+713	{0} kon niet worden geladen.
+714	{0} kon niet worden geïnstalleerd. Controleer je internetverbinding en probeer het opnieuw – of installeer het later via Menu → Chrome Web Store.
+715	{0} wil toegang tot {1}.
+716	{0} starten
+717	{0} van {1} beschermingsfuncties actief.
+718	{0} is vergeten – cookies en sitegegevens gewist
+719	{0} – niet bereikbaar
+720	· Auto
+721	· wordt op virussen gescand …
+722	· ✓ geen virus (Windows Defender)
+723	Wijzigen …
+724	Open banken, Steam, Discord en co. liever direct via de adresbalk of een bladwijzer.
+725	Open geen bestanden die je al van deze site hebt.
+726	Openen
+727	Opent bij het starten je tabbladen van de vorige keer – ze laden pas als je erop klikt.
+728	Over {0}
+729	Overlay
+730	Vertalen
+731	Vertalingen zonder garantie – een fout gevonden? Meld het op GitHub, dan verbeteren we het graag.
+732	Slaat gesponsorde stukken in YouTube-video’s over.
+733	– beeld-in-beeld
+734	– gesplitst scherm
+735	– tabblad blijft boven je game
+736	– bevroren
+737	– privé
+738	– slaapt (klik om te laden)
+739	– zwevend venster (klik om te tonen)
+740	– twee tabbladen naast elkaar
+741	‘Niet verkopen’-signaal (GPC)
+742	‘{0}’ verwijderen?
+743	‘{0}’ is geladen.
+744	‘{0}’ is toegevoegd
+745	‘{0}’ aan Elektron toevoegen?
+746	… wordt uitgeschakeld
+747	… wordt ingeschakeld
+748	← Originele pagina
+749	▶ Nu testen
+750	✓ Uitgevoerd
+751	🎮 Gaming

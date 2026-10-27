@@ -1,0 +1,752 @@
+0	(bleu) ou
+1	(violet). Les modifications sont enregistrées automatiquement et s’appliquent tout de suite.
+2	(rouge) – p. ex. « Quand une page est ouverte ». Relie la flèche blanche à
+3	1 téléchargement en cours – Ctrl+J
+4	1080 × 1080 (carré)
+5	1080 × 1920 (téléphone)
+6	1920 × 1080 (Full HD)
+7	A (dessous)
+8	Annuler
+9	Annulé
+10	Scénarios
+11	Scénarios actifs
+12	Ajouter (lueur)
+13	Adresse
+14	L’adresse contient
+15	Adresse, p. ex. roblox.com
+16	Adresse :
+17	Adresse : {0}
+18	Actions
+19	Fermer l’onglet actif
+20	Couleur d’accent
+21	Lire et modifier toutes tes données sur tous les sites web
+22	Tous les favoris
+23	Tous les favoris (Ctrl+Maj+O)
+24	Gérer tous les favoris …
+25	Tous les réglages de protection …
+26	Toutes les protections sont actives.
+27	Couper toutes les liaisons
+28	Tout mettre à jour
+29	Tout afficher
+30	Toutes les quelques minutes
+31	Afficher les {0}
+32	Tout sélectionner
+33	Tout effacer et recommencer ?
+34	Tout ce que tu peux régler dans Elektron.
+35	Enregistrer en image (PNG)
+36	Définir comme navigateur par défaut …
+37	Utiliser comme fond de la page d’accueil
+38	Ouvrir en fenêtre flottante
+39	Gérer les autres extensions
+40	Fermer les autres onglets
+41	Animation
+42	Animé
+43	Type
+44	Rechercher dans la page
+45	Rechercher dans la page …
+46	Rien à bloquer sur cette page
+47	Aucune vidéo ne joue sur cette page
+48	Importer depuis Chrome
+49	Importer depuis Edge
+50	Importer depuis Opera GX
+51	Retirer de la liste
+52	Remplir
+53	Sortie
+54	Déclencheurs
+55	Désactiver
+56	Couper
+57	Automatique
+58	Automatique
+59	Mettre à jour automatiquement
+60	B (dessus)
+61	Se connecte dès que la souris survole un lien – plus rapide, mais le site voit ton adresse IP avant le clic.
+62	Modifier
+63	Modifier …
+64	Conditions
+65	Quitter
+66	Limite la bande passante de tous les onglets pour que ton ping reste stable en jeu.
+67	Geler à la réduction
+68	Exemple
+69	Charger l’exemple ? Tes scénarios actuels seront remplacés.
+70	Populaire
+71	Notifications
+72	Afficher des notifications
+73	Autorisation
+74	Prêt à jouer ?
+75	Site frauduleux bloqué
+76	Mouvement
+77	Image
+78	Choisir une image …
+79	Garder l’image
+80	Ouvrir l’image dans un nouvel onglet
+81	Image trop grande (max. 25 Mo)
+82	Impossible de charger l’image
+83	Copier l’image
+84	Enregistrer l’image …
+85	Image du PC
+86	Adresse de l’image (https://…)
+87	Saisis l’adresse de l’image et appuie sur « Charger »
+88	Images
+89	À
+90	Saisis une adresse commençant par https://
+91	Bloquer
+92	Bloque les sites frauduleux, les logiciels malveillants, les pièges à abonnement et les arnaques au support technique. Gratuit, sans compte.
+93	Bloque pubs, traqueurs, pop-ups et bannières de cookies – {0} requêtes stoppées jusqu’ici.
+94	Bloque pubs, traqueurs, pop-ups publicitaires et bannières de cookies.
+95	Bloque les sites frauduleux connus et les sites qui propagent des virus.
+96	Bloque les sites frauduleux connus et les sites qui propagent des virus. Chargement de la liste …
+97	Bloque {0} sites frauduleux et infectés connus. La liste est mise à jour toutes les 6 heures.
+98	Nécessite un compte Bitwarden gratuit. Peut : lire et modifier les données sur tous les sites (pour remplir).
+99	Navigateur à jour
+100	Charge du navigateur
+101	Les jeux par navigateur tournent sans V-Sync au-delà de la fréquence d’écran. Peut provoquer des déchirures d’image.
+102	Style du navigateur
+103	Données de navigation effacées
+104	Effacer les données de navigation maintenant
+105	Effacer les données de navigation
+106	Limiteur CPU
+107	Utilise ChatGPT directement dans le navigateur.
+108	Chrome Web Store indisponible
+109	Ouvrir le Chrome Web Store
+110	Claude en extension – ou simplement via la barre latérale.
+111	Code
+112	Exécuter du code sur les sites web
+113	BD / affiche
+114	Effacer cookies et connexions en quittant
+115	Lire et modifier les cookies
+116	Ensuite
+117	Peut :
+118	Peut : lire et modifier les données sur tous les sites (pour vérifier et bloquer).
+119	L’image est trop grande (max. 25 Mo)
+120	Le certificat de sécurité de {0} n’est pas fiable.
+121	Le certificat de sécurité de {0} n’est pas valide.
+122	Ce n’est pas une image valide
+123	Ce n’est pas un fichier de scénarios.
+124	Ce n’est pas un fichier de shader.
+125	Le fichier a été supprimé ou déplacé
+126	données sur
+127	Modifier les paramètres de confidentialité
+128	Opacité
+129	Lire et modifier tes favoris
+130	Tes jeux
+131	Lire et modifier ton historique de navigation
+132	Lire ton historique et tes onglets ouverts
+133	Déterminer ta position
+134	Le navigateur gaming. Chromium {0} · Electron {1}
+135	L’historique est vide
+136	Apparence
+137	Bureau
+138	Détails
+139	Densité
+140	L’adresse ressemble à s’y méprendre au vrai site {0} – une ruse typique des escrocs. Regarde bien : une lettre est inversée, remplacée ou vient d’un autre alphabet.
+141	L’adresse doit commencer par https://
+142	L’adresse de {0} est introuvable. L’orthographe est-elle correcte ?
+143	L’extension n’a besoin d’aucune autorisation particulière.
+144	L’extension peut : •
+145	Les extensions viennent directement du Chrome Web Store et appartiennent à leurs éditeurs (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	La page n’a pas pu être chargée.
+147	Ce site ne prend pas en charge la connexion sécurisée (HTTPS). D’autres personnes sur le même réseau – par exemple un Wi-Fi public – pourraient lire ce que tu vois et saisis ici.
+148	Lire le presse-papiers
+149	Cette adresse ressemble à
+150	Impossible de lire ce fichier
+151	Cette page n’est pas chiffrée
+152	Ce site figure sur la liste des sites dangereux
+153	Ce site figure sur une liste de sites d’hameçonnage connus. Ils semblent souvent authentiques mais veulent voler tes mots de passe ou tes coordonnées bancaires.
+154	Ce site diffuse des logiciels malveillants
+155	Cette connexion n’est pas chiffrée
+156	Cette vidéo ne peut pas être détachée
+157	Différence
+158	Téléchargement
+159	Téléchargement bloqué : {0} diffuse des logiciels malveillants connus
+160	Échec du téléchargement : {0}
+161	Téléchargement terminé : {0}
+162	Téléchargement lancé : {0}
+163	Ouvrir le dossier des téléchargements
+164	Téléchargements
+165	Téléchargements (Ctrl+J)
+166	Analyser les téléchargements
+167	Rechercher dans les téléchargements
+168	Gérer les téléchargements
+169	Les téléchargements sont analysés
+170	Rotation (°)
+171	Tourne
+172	Rotation (°)
+173	Tu seras ensuite déconnecté partout.
+174	DuckDuckGo, Brave Search et Startpage ne créent pas de profil sur toi. Startpage affiche les résultats de Google sans pistage.
+175	Sombre
+176	Thème sombre pour tous les sites web.
+177	Dupliquer
+178	Dupliquer (Ctrl+D)
+179	Effets
+180	Shader personnalisé (GLSL)
+181	Image personnelle
+182	Image personnelle …
+183	Choisir une image de fond personnelle
+184	Un scénario commence par un
+185	Geler
+186	Teinter
+187	Coller
+188	Ajustement
+189	Activer
+190	Paramètres
+191	Impossible d’enregistrer les paramètres :
+192	Ajouter des entrées au menu contextuel
+193	Protection Elektron · Détection des sosies directement sur ton PC
+194	Protection Elektron · Listes de Phishing.Database et URLhaus (abuse.ch)
+195	Elektron Studio (shaders et scénarios)
+196	Elektron a arrêté ce site car il figure sur une liste de sites frauduleux connus.
+197	Elektron recherche régulièrement de nouvelles versions.
+198	Recommander Elektron
+199	Recommandé
+200	Supprimer
+201	Supprime les paramètres de pistage comme utm_, fbclid et gclid, saute les redirections de suivi de Google et Facebook et ouvre les pages AMP dans leur version d’origine.
+202	Charger une extension non empaquetée (dossier avec manifest.json)
+203	Charger une extension non empaquetée …
+204	Mémoriser la décision
+205	Outils de développement
+206	Jeux gratuits Epic
+207	Explique-moi cela simplement, en français :
+208	Explique-moi simplement, en français, de quoi parle cette page web.
+209	Autoriser
+210	Retélécharger
+211	Réessayer
+212	Crée d’abord une image – rien n’arrive encore à « Sortie ».
+213	Ajouter l’extension
+214	Extensions
+215	Les extensions viennent du Chrome Web Store et fonctionnent dans Elektron comme dans Chrome. Certaines très grosses extensions utilisent des fonctions de Chrome absentes ici – elles ne fonctionnent alors qu’en partie. Tu trouveras aussi Claude et ChatGPT directement dans la barre latérale à gauche.
+216	Les extensions sont à jour
+217	Barre d’extensions indisponible :
+218	Le nœud « Sortie » est manquant.
+219	Exporter
+220	Supprimer la limite d’IPS
+221	Couleur
+222	Couleur 1
+223	Couleur 2
+224	Faire tourner la teinte
+225	Résume cette page web brièvement en français – les points essentiels sous forme de liste.
+226	Erreur :
+227	Échec
+228	Terminé
+229	Demander
+230	Bloquer les cookies tiers
+231	Cookies tiers bloqués
+232	Gèle tous les onglets en arrière-plan et baisse la priorité du navigateur pour que ton jeu passe avant. Les onglets avec du son continuent.
+233	Pour les salons vocaux Discord, choisis « Demander » ou « Autoriser ».
+234	Pour clic droit → « Résumer la page » et « Expliquer ».
+235	Pas de mode lecture pour cette page
+236	PC ENTIER
+237	Galaxie
+238	Gaming
+239	Le gaming avec tous les extras – ou un navigateur normal et calme. Modifiable à tout moment.
+240	Le navigateur gaming est de retour 🎮
+241	Mode gaming
+242	Mode gaming (Ctrl+Maj+G)
+243	Mode gaming activé – onglets en arrière-plan gelés, priorité du navigateur réduite
+244	Mode gaming désactivé
+245	Désactiver le mode gaming
+246	Activer le mode gaming
+247	Tout afficher
+248	Page entière
+249	Dangereux
+250	Site dangereux bloqué
+251	Fausse adresse ?
+252	Chargée – trop grande pour être mémorisée, à rechoisir après redémarrage
+253	Effacer tout l’historique
+254	Rouvrir l’onglet fermé
+255	Enregistré ✓
+256	Hier
+257	Ne saisis ici ni mot de passe, ni données bancaires ou de carte.
+258	Ne saisis ici ni mot de passe, ni code, ni données de carte.
+259	Grille
+260	Google crée des profils – DuckDuckGo, Brave et Startpage non
+261	Google Traduction
+262	Enregistrer le graphe dans un fichier
+263	Charger un fichier de graphe
+264	Taille
+265	Taille à l’enregistrement
+266	Bon à savoir : Avast vérifie pour cela les adresses des sites que tu visites. Peut : lire et modifier les données sur tous les sites.
+267	Bonne nuit
+268	Bonsoir
+269	Bonsoir – c’est l’heure d’une session.
+270	Bonjour
+271	Bonjour – prêt à jouer ?
+272	Mode HTTPS · désactivable dans GX Control, rubrique « Protection »
+273	Garde le navigateur léger pour que ton jeu ait toute la puissance.
+274	Ça n’a pas marché
+275	Clair
+276	Clair / Sombre
+277	Luminosité
+278	Luminosité et contraste
+279	Aujourd’hui
+280	Arrière-plan
+281	Arrière-plan de la page d’accueil
+282	Arrière-plan défini ✓
+283	Afficher un message
+284	Ajouter
+285	Accueil
+286	Masquer l’adresse IP pour WebRTC
+287	Adresse IP masquée pour WebRTC
+288	Je comprends le risque – ouvrir quand même le site
+289	En arrière-plan
+290	Afficher dans le dossier
+291	Afficher dans le dossier
+292	Toujours au premier plan
+293	Toujours au premier plan (activé)
+294	Toujours au premier plan (désactivé)
+295	Échec de l’import :
+296	Importer
+297	Écrire dans le presse-papiers
+298	Ouvrir dans un nouvel onglet
+299	Ouvrir dans un onglet privé
+300	Dans quelle langue Elektron doit-il te parler ? Les drapeaux montrent les pays où la langue est parlée.
+301	Bloquer du contenu sur les sites web
+302	Installer et commencer
+303	Installée
+304	Inverser
+305	Oui
+306	Bloquer JavaScript sur ce site
+307	Chaque fichier téléchargé est analysé par Windows Defender.
+308	Tous les jours
+309	Rechercher des mises à jour maintenant
+310	Redémarrer maintenant
+311	IA dans la barre latérale
+312	Kaléidoscope
+313	Le lien est arrivé par e-mail, SMS ou Discord ? Alors c’était probablement une arnaque.
+314	Caméra et micro
+315	Pas de connexion Internet. Vérifie le Wi-Fi ou le câble réseau.
+316	Aucune suggestion
+317	Connexion non sécurisée
+318	Clique sur l’étoile de la barre d’adresse ou appuie sur Ctrl+D.
+319	Cliquer pour couper
+320	Chargement impossible :
+321	Contraste
+322	Copier
+323	Cercle
+324	Ne télécharge rien ici.
+325	Charger
+326	Arrêter le chargement
+327	Lance ton antivirus si tu as un doute.
+328	Performances
+329	Carte graphique performante
+330	Mode lecture
+331	Mode lecture (F9)
+332	Ouvrir le mode lecture
+333	Favoris
+334	Sauvegarder favoris et paramètres …
+335	Rechercher dans les favoris
+336	Retirer le favori (Ctrl+D)
+337	Favori retiré
+338	Les favoris apparaissent ici – clique sur l’étoile de la barre d’adresse.
+339	Favori enregistré
+340	Ajouter aux favoris (Ctrl+D)
+341	Enregistrer favoris et paramètres dans un fichier – p. ex. pour un nouveau PC.
+342	Sauvegarder favoris et paramètres
+343	Afficher la barre de favoris
+344	Masquer la barre de favoris
+345	Effacer les dernières 24 heures
+346	Effacer la dernière heure
+347	Si le navigateur dépasse la limite, l’onglet en arrière-plan le plus gourmand est gelé.
+348	Limite
+349	Linéaire
+350	Épaisseur de ligne
+351	Ouvrir le lien en écran partagé
+352	Ouvrir le lien dans un nouvel onglet
+353	Ouvrir le lien dans un onglet privé
+354	Copier le lien
+355	Lien copié – envoie-le à tes amis !
+356	Nettoyer les liens
+357	Précharger les liens
+358	Les liens sont nettoyés
+359	Vider la liste
+360	Liste trop courte
+361	Les adresses locales ne sont pas autorisées
+362	C’est parti
+363	Charge toujours les pages en chiffré et prévient quand un site ne le permet pas.
+364	Charge une image depuis Internet
+365	Chargement …
+366	Supprimer
+367	Supprimer (Suppr)
+368	Appareils MIDI
+369	Traduire le texte sélectionné ou des pages entières.
+370	Masque
+371	Masque (clair = visible)
+372	Sécurité maximale
+373	Plus de confidentialité : tu cherches maintenant avec DuckDuckGo au lieu de Google
+374	Menu
+375	Micro
+376	Quand tu réduis le navigateur pour jouer, tous les onglets silencieux se reposent.
+377	Minutes
+378	Mélanger
+379	Rechercher avec Google
+380	Rechercher avec Google ou saisir une adresse
+381	Expliquer avec {0}
+382	Rechercher avec {0}
+383	Rechercher avec {0} ou saisir une adresse
+384	Rechercher avec {0} : « {1} »
+385	Mode
+386	Lundi – vendredi
+387	Produit
+388	Motif
+389	Rechercher des mises à jour
+390	Nom
+391	Nébuleuse
+392	Superposition claire
+393	Non
+394	Néon
+395	Grille néon
+396	Limiteur réseau
+397	Observer le trafic réseau
+398	Bloquer et modifier le trafic réseau
+399	Nouveau
+400	Actualiser
+401	Actualiser (F5)
+402	Redémarrer et installer
+403	Nouvel onglet
+404	Nouvel onglet (Ctrl+T)
+405	Nouvel onglet privé
+406	Nouvelle image vide
+407	Redémarrer
+408	Introuvable
+409	Non enregistré
+410	Impossible
+411	Non sécurisé
+412	Aucun résultat
+413	Encore une étape : nous recommandons ces extensions pour plus de sécurité. Choisis ce que tu veux – tu peux les retirer à tout moment dans « Extensions ».
+414	Encore une partie ? Il est le milieu de la nuit.
+415	Aucun téléchargement pour l’instant
+416	Aucune extension installée. Ouvre le Chrome Web Store et clique sur « Ajouter ».
+417	Aucun favori pour l’instant
+418	Aucune adresse de mise à jour saisie (GX Control → Mises à jour)
+419	Rechercher un nœud …
+420	Normal
+421	Navigateur normal – les éléments gaming sont masqués
+422	Seulement les fichiers avec (vide = tous)
+423	HTTPS uniquement
+424	Une seule fois par jour
+425	Seulement des adresses http et https
+426	Utilise le GPU dédié (p. ex. RTX) au lieu de la puce graphique intégrée.
+427	Résultat suivant (F3)
+428	Continuer sans extensions
+429	Facultatif
+430	Options
+431	Fermer le panneau
+432	Gestionnaire de mots de passe
+433	Protection contre l’hameçonnage et les logiciels malveillants
+434	Taille des pixels
+435	Plasma (coloré, animé)
+436	Aurore boréale
+437	Privé
+438	Moteur de recherche privé
+439	Onglet privé
+440	Onglet privé – historique, cookies et connexions disparaissent dès que tu fermes tous les onglets privés.
+441	Onglet privé – pas d’historique ni de cookies après fermeture
+442	Programme renforcé
+443	Modifier les paramètres du proxy
+444	Analyse les téléchargements avec Windows Defender (indisponible sur ce PC).
+445	Points
+446	Sources
+447	RAM {0} sur {1}
+448	Limiteur RAM
+449	Décalage RVB (glitch)
+450	Bruit / nuages
+451	Un clic droit sur un onglet propose aussi tout cela.
+452	Clic droit ou barre d’espace ajoute des nœuds. Fais glisser du point à droite d’un nœud vers un point à gauche du suivant. Tout ce qui arrive à la fin dans
+453	Clic droit ou espace : ajouter un nœud · Glisser le fond : déplacer · Molette : zoomer · Suppr : supprimer
+454	Rétro
+455	Montagnes rétro
+456	Indique à chaque site via Global Privacy Control que tes données ne doivent pas être vendues ni partagées.
+457	Damier
+458	Logiciel malveillant bloqué
+459	Désactive le turbo JavaScript (JIT) – la surface d’attaque la plus courante des navigateurs. Les sites deviennent plus lents et certains jeux par navigateur ne marchent plus. Effet après redémarrage.
+460	Mettre en veille (libérer la RAM)
+461	Sobre
+462	Fermer
+463	Fermer (Échap)
+464	Accès rapide
+465	Déjà 22 h – école/travail demain 😉
+466	Texte plus grand
+467	Texte plus petit
+468	Protection
+469	Protection de ce site (cliquer)
+470	Réactiver la protection pour ce site
+471	Protection pour {0}
+472	Protection contre le fingerprinting
+473	Liste de protection {0} :
+474	Noir et blanc
+475	Fenêtre flottante
+476	Bonne journée
+477	Capture d’écran
+478	Capture d’écran (Ctrl+Maj+X) – clic droit : page entière
+479	Capture d’écran (page entière)
+480	Capture d’écran (zone visible)
+481	La capture d’écran a échoué
+482	Capture copiée – colle-la dans Discord avec Ctrl+V
+483	Faire une capture d’écran
+484	Page
+485	Traduire la page en français
+486	Oublier le site à la fermeture (effacer les cookies)
+487	Imprimer la page …
+488	Le site ne marche pas ? Désactive la protection ici
+489	Résumer la page avec {0}
+490	Site inaccessible
+491	Inspecter
+492	Inverser les côtés
+493	Ouvrir la barre latérale
+494	Format de l’aperçu
+495	Secondes
+496	Le serveur a répondu avec l’erreur {0}
+497	Shaders et images
+498	Connexion sécurisée
+499	DNS sécurisé
+500	Sécurité
+501	Bilan de sécurité
+502	Sauvegarde et restauration
+503	Sauvegarder …
+504	Sauvegarde enregistrée
+505	Restaurer une sauvegarde
+506	Restaurer une sauvegarde …
+507	Zone visible
+508	Comment ça marche
+509	Comment ça marche :
+510	Divers
+511	Enregistrer
+512	Échec de l’enregistrement :
+513	Enregistre tes mots de passe en sécurité et les remplit automatiquement.
+514	Enregistre tes mots de passe chiffrés et les remplit automatiquement sur les sites. Gratuit, open source.
+515	Écran partagé
+516	Écran partagé (Ctrl+Maj+S)
+517	Écran partagé activé – fais glisser la séparation pour ajuster
+518	Quitter l’écran partagé
+519	Quitter l’écran partagé (Ctrl+Maj+S)
+520	Langue
+521	Rechercher une langue ou un pays …
+522	Langue de Windows
+523	Langue de Windows : {0}
+524	Rétablir par défaut
+525	Démarrer
+526	Page d’accueil (Alt+Début)
+527	Contrôle
+528	Étirer
+529	Rayures
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Maj + F
+533	Ctrl + Maj + G
+534	Ctrl + Maj + P
+535	Ctrl + Maj + S
+536	Ctrl+T nouvel onglet · Ctrl+D favori · Ctrl+H historique · F11 plein écran
+537	Ctrl+Maj+G lance le mode gaming · Ctrl+T nouvel onglet · F11 plein écran
+538	Studio
+539	Niveaux
+540	Couper le son
+541	Intensité
+542	Perturbation
+543	Recherche de mises à jour …
+544	Moteur de recherche
+545	Suggestions de recherche pendant la saisie dans la barre d’adresse (envoyées au moteur de recherche)
+546	Saturation
+547	Onglet
+548	L’onglet a planté – clique pour recharger
+549	Onglet en fenêtre flottante
+550	Onglet en fenêtre flottante (Ctrl+Maj+F)
+551	Fermer l’onglet
+552	L’onglet flotte maintenant au-dessus de toutes les fenêtres
+553	Couper le son de l’onglet
+554	Ouvrir un onglet
+555	Onglets
+556	Fermer les onglets à droite
+557	Restaurer les onglets
+558	Jours
+559	Touche
+560	Raccourci clavier
+561	Segments
+562	Vitesse
+563	Texte
+564	Texte (extrait) :
+565	Titre :
+566	Son de tous les onglets
+567	Réactiver le son
+568	Vert toxique
+569	Transparence
+570	Twitch ouvert – le mode gaming est activé 🎮
+571	Heure (HH:MM)
+572	Ultraviolet
+573	Inverser
+574	Basculer
+575	Adresse invalide
+576	Flou
+577	Il n’y a pas d’image à cette adresse (astuce : clic droit sur une image → « Copier l’adresse de l’image »)
+578	Ouvrir sans chiffrement
+579	Mise à jour prête – redémarre le navigateur
+580	Échec de la mise à jour des extensions
+581	Installer la mise à jour
+582	Installer la mise à jour et redémarrer
+583	La mise à jour {0} est prête
+584	La mise à jour {0} se télécharge en arrière-plan …
+585	Adresse de mise à jour (dossier sur ton site web)
+586	Module de mise à jour manquant
+587	Échec de la recherche de mises à jour : {0}
+588	Mises à jour
+589	Les mises à jour fonctionnent dans la version installée
+590	Interdit
+591	Agrandir
+592	Réduire
+593	Historique
+594	Rechercher dans l’historique
+595	Décalage
+596	Déplacer / zoomer / tourner
+597	Chiffre les sites que tu visites (DNS via HTTPS avec Quad9, Suisse) et bloque en plus les adresses malveillantes connues.
+598	Version
+599	La version {0} est à jour.
+600	La version {0} est prête – elle sera installée au prochain démarrage.
+601	Téléchargement de la version {0} … {1} %
+602	Version {0} · Chromium {1}
+603	Version {0} · Aucune adresse de mise à jour saisie.
+604	Version {0} · Les mises à jour sont disponibles dans la version Windows installée.
+605	Version {0} · Les mises à jour arrivent automatiquement via le Microsoft Store.
+606	Gérer
+607	Détacher la vidéo
+608	Détacher la vidéo (image dans l’image)
+609	Détacher la vidéo – image dans l’image (Ctrl+Maj+P)
+610	Détacher les vidéos automatiquement
+611	Les pubs vidéo sont coupées et sautées aussitôt, les espaces publicitaires disparaissent.
+612	Vignette
+613	Virus trouvé dans {0} – Windows Defender a supprimé le fichier
+614	Virus trouvé – Windows Defender a supprimé le fichier
+615	Plein écran
+616	De
+617	Des virus ou autres logiciels malveillants ont été diffusés depuis ce site. Elektron les a arrêtés avant que rien n’atteigne ton PC.
+618	Suivant
+619	Suivant (Alt+→)
+620	Résultat précédent (Maj+F3)
+621	Suggestions
+622	Nid d’abeille
+623	Probabilité (%)
+624	Prévient aussi des sites dangereux. Avec Malwarebytes, généralement inutile – les deux font doublon.
+625	Prévient des sites dangereux et de l’hameçonnage.
+626	Alerte contre les fausses adresses
+627	Attendre
+628	Ce qui se passe quand un site veut utiliser ta caméra.
+629	WebGL 2 n’est pas disponible sur ce PC.
+630	Webcam
+631	Contrôler des sites à distance (débogueur)
+632	Les sites ont plus de mal à reconnaître ton PC (canvas, nom de la carte graphique, cœurs du processeur).
+633	Les sites ne peuvent plus lire ton adresse IP locale via la technologie de visio – même derrière un VPN.
+634	Si tu changes d’onglet ou réduis le navigateur, la vidéo continue dans une petite fenêtre (image dans l’image).
+635	Douceur
+636	Autres favoris
+637	Vagues
+638	Afficher moins
+639	Si le mode gaming est activé
+640	Quand le mode gaming …
+641	Si le jour est
+642	Si l’heure est entre
+643	Si l’onglet actif contient
+644	Quand le navigateur démarre
+645	Si tu veux aller sur {0}, utilise le bouton ci-dessous.
+646	Quand un téléchargement est terminé
+647	Quand une page est ouverte
+648	Bloqueur de pubs et de traqueurs
+649	Bloqueur de pubs
+650	Impossible de charger le bloqueur de pubs :
+651	Les régies publicitaires ne peuvent plus te suivre d’un site à l’autre. Connexion, captchas et paiements fonctionnent toujours.
+652	Pubs/traqueurs bloqués : {0} · Cookies de pistage stoppés : {1}
+653	Outils
+654	Réactiver
+655	Restauré : {0} nouveaux favoris et tes paramètres
+656	Restaurer …
+657	Répéter (mosaïque)
+658	Bienvenue
+659	Bienvenue dans Elektron
+660	Windows Defender introuvable
+661	Angle
+662	Si la limite est dépassée, les onglets inutilisés depuis le plus longtemps s’endorment.
+663	Installation …
+664	Vraiment effacer tout l’historique ?
+665	Vraiment ouvrir ? Ce site est connu pour être dangereux.
+666	Week-end
+667	Passer les pubs YouTube
+668	Réaffiche les « je n’aime pas » sous les vidéos YouTube.
+669	Lignes
+670	Heure
+671	C’est l’heure d’une pause ! 🎮
+672	Délai dépassé
+673	Délai de chargement dépassé
+674	Glisser pour ajuster · Double-clic : 50/50
+675	Zoom
+676	Réinitialiser le zoom
+677	Réinitialiser le zoom (Ctrl+0)
+678	Hasard
+679	Pour essayer : bouton
+680	Passer au navigateur gaming
+681	Ajouter au dictionnaire
+682	Passer au navigateur normal
+683	À une heure donnée
+684	Aller sur le vrai site : {0}
+685	Précédent
+686	Précédent (Alt+←)
+687	Retour en sécurité
+688	Retour au navigateur
+689	Ramener dans le navigateur
+690	Revenir à Google
+691	sur un déclencheur.
+692	s’affiche ci-dessus. Images d’Internet : clic droit sur une image → « Copier l’adresse de l’image » puis colle-la dans le nœud.
+693	ton micro
+694	ta caméra
+695	ton écran
+696	ta position
+697	le fichier de favoris n’a pas pu être lu.
+698	le presse-papiers
+699	sans limite
+700	pas une sauvegarde Elektron
+701	lire et modifier
+702	non autorisé
+703	uniquement dans la version installée
+704	p. ex. .exe ou .zip
+705	p. ex. youtube.com
+706	{0} téléchargements en cours – Ctrl+J
+707	{0} favoris importés de {1}.
+708	{0} cookies de pistage stoppés
+709	{0} liens de pistage neutralisés
+710	{0} ne répond pas à temps.
+711	{0} a refusé la connexion.
+712	{0} est terminé – aucun virus trouvé
+713	{0} n’a pas pu être chargé.
+714	{0} n’a pas pu être installé. Vérifie ta connexion Internet et réessaie – ou installe-le plus tard via Menu → Chrome Web Store.
+715	{0} veut accéder à {1}.
+716	Lancer {0}
+717	{0} protections actives sur {1}.
+718	{0} a été oublié – cookies et données du site effacés
+719	{0} – inaccessible
+720	· Auto
+721	· analyse antivirus en cours …
+722	· ✓ aucun virus (Windows Defender)
+723	Modifier …
+724	Ouvre plutôt les banques, Steam, Discord & co. directement via la barre d’adresse ou un favori.
+725	N’ouvre aucun fichier que tu as déjà reçu de ce site.
+726	Ouvrir
+727	Rouvre au démarrage tes onglets de la dernière fois – ils ne se chargent que quand tu cliques dessus.
+728	À propos de {0}
+729	Incrustation
+730	Traduire
+731	Traductions sans garantie – une erreur ? Signale-la sur GitHub, nous l’améliorerons volontiers.
+732	Saute les passages sponsorisés des vidéos YouTube.
+733	– image dans l’image
+734	– écran partagé
+735	– l’onglet reste au-dessus de ton jeu
+736	– gelé
+737	– privé
+738	– en veille (cliquer pour charger)
+739	– fenêtre flottante (cliquer pour afficher)
+740	– deux onglets côte à côte
+741	Signal « Ne pas vendre » (GPC)
+742	Retirer « {0} » ?
+743	« {0} » a été chargé.
+744	« {0} » a été ajouté
+745	Ajouter « {0} » à Elektron ?
+746	… est désactivé
+747	… est activé
+748	← Page d’origine
+749	▶ Tester maintenant
+750	✓ Exécuté
+751	🎮 Gaming

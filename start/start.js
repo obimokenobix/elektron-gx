@@ -76,8 +76,8 @@ $('#reset').addEventListener('click', () => { dials = DEFAULT_DIALS.slice(); sav
 
 function tick() {
   const now = new Date();
-  $('#time').textContent = now.toLocaleTimeString('de-AT', { hour: '2-digit', minute: '2-digit' });
-  $('#date').textContent = now.toLocaleDateString('de-AT', { weekday: 'long', day: 'numeric', month: 'long' });
+  $('#time').textContent = now.toLocaleTimeString(document.documentElement.lang || 'de-AT', { hour: '2-digit', minute: '2-digit' });
+  $('#date').textContent = now.toLocaleDateString(document.documentElement.lang || 'de-AT', { weekday: 'long', day: 'numeric', month: 'long' });
   const h = now.getHours();
   if (document.body.classList.contains('private')) return;
   const normal = document.body.classList.contains('style-normal');

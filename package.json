@@ -39,6 +39,9 @@
       "favicons.js",
       "lookalike.js",
       "flows.js",
+      "locales/**",
+      "preload-i18n.js",
+      "i18n.js",
       "preload-ui.js",
       "preload-float.js",
       "preload-internal.js",
@@ -71,10 +74,6 @@
       "icon": "assets/icon.ico",
       "signAndEditExecutable": false
     },
-    "electronLanguages": [
-      "de",
-      "en-US"
-    ],
     "compression": "maximum",
     "afterPack": "scripts/after-pack.js",
     "nsis": {

@@ -1,0 +1,752 @@
+0	(blue) or
+1	(purple). Changes are saved automatically and take effect immediately.
+2	(red) – e.g. “When a page is opened”. Connect the white arrow to
+3	1 download running – Ctrl+J
+4	1080 × 1080 (square)
+5	1080 × 1920 (phone)
+6	1920 × 1080 (Full HD)
+7	A (bottom)
+8	Cancel
+9	Cancelled
+10	Flows
+11	Flows active
+12	Add (glow)
+13	Address
+14	Address contains
+15	Address, e.g. roblox.com
+16	Address:
+17	Address: {0}
+18	Actions
+19	Close active tab
+20	Accent colour
+21	Read and change all your data on all websites
+22	All bookmarks
+23	All bookmarks (Ctrl+Shift+O)
+24	Manage all bookmarks …
+25	All protection settings …
+26	All protection features are active.
+27	Disconnect all links
+28	Update all
+29	Show all
+30	Every few minutes
+31	Show all {0}
+32	Select all
+33	Delete everything and start over?
+34	Everything you can set up in Elektron.
+35	Save as image (PNG)
+36	Set as default browser …
+37	Set as start page background
+38	Open as floating window
+39	Manage other extensions
+40	Close other tabs
+41	Animation
+42	Animated
+43	Type
+44	Find on page
+45	Find on page …
+46	Nothing to block on this page
+47	No video is playing on this page
+48	Import from Chrome
+49	Import from Edge
+50	Import from Opera GX
+51	Remove from list
+52	Fill
+53	Output
+54	Triggers
+55	Turn off
+56	Cut
+57	Automatic
+58	Automatic
+59	Update automatically
+60	B (top)
+61	Connects as soon as the mouse rests on a link – faster, but the site sees your IP address before you click.
+62	Edit
+63	Edit …
+64	Conditions
+65	Quit
+66	Limits the bandwidth of all tabs so your ping stays stable while gaming.
+67	Freeze when minimised
+68	Example
+69	Load the example? Your current flows will be replaced.
+70	Popular
+71	Notifications
+72	Show notifications
+73	Permission
+74	Ready to play?
+75	Scam site blocked
+76	Movement
+77	Image
+78	Choose image …
+79	Keep image
+80	Open image in new tab
+81	Image is too large (max. 25 MB)
+82	Image could not be loaded
+83	Copy image
+84	Save image …
+85	Image from PC
+86	Image address (https://…)
+87	Enter an image address and press “Load”
+88	Images
+89	To
+90	Please enter an address starting with https://
+91	Block
+92	Blocks scam sites, malware, subscription traps and tech-support scams. Free, no account needed.
+93	Blocks ads, trackers, pop-ups and cookie banners – {0} requests stopped so far.
+94	Blocks ads, trackers, ad pop-ups and cookie banners.
+95	Blocks known scam sites and sites that spread viruses.
+96	Blocks known scam sites and sites that spread viruses. The list is loading …
+97	Blocks {0} known scam and virus sites. The list is updated every 6 hours.
+98	Needs a free Bitwarden account. May: read and change data on all websites (to fill in forms).
+99	Browser up to date
+100	Browser load
+101	Browser games run without V-Sync above the refresh rate. May cause screen tearing.
+102	Browser style
+103	Browsing data cleared
+104	Clear browsing data now
+105	Clear browsing data
+106	CPU limiter
+107	Use ChatGPT right in the browser.
+108	Chrome Web Store not available
+109	Open Chrome Web Store
+110	Claude as an extension – or simply via the sidebar.
+111	Code
+112	Run code on websites
+113	Comic / poster
+114	Delete cookies & logins on exit
+115	Read and change cookies
+116	Then
+117	May:
+118	May: read and change data on all websites (to check and block).
+119	The image is too large (max. 25 MB)
+120	The security certificate of {0} is not trusted.
+121	The security certificate of {0} is invalid.
+122	This is not a valid image
+123	This is not a flow file.
+124	This is not a shader file.
+125	File was deleted or moved
+126	data on
+127	Change privacy settings
+128	Opacity
+129	Read and change your bookmarks
+130	Your games
+131	Read and change your browsing history
+132	Read your browsing history and open tabs
+133	Detect your location
+134	The gaming browser. Chromium {0} · Electron {1}
+135	History is empty
+136	Design
+137	Desktop
+138	Details
+139	Density
+140	The address looks confusingly similar to the real site {0} – a typical scammer trick. Look closely: a letter is swapped, replaced or comes from another alphabet.
+141	The address must start with https://
+142	The address of {0} was not found. Is it spelled correctly?
+143	The extension needs no special permissions.
+144	The extension can: •
+145	The extensions come straight from the Chrome Web Store and belong to their makers (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	The page could not be loaded.
+147	This site doesn't support a secure connection (HTTPS). Others on the same network – e.g. public Wi-Fi – could read what you see and type here.
+148	Read the clipboard
+149	This address looks like
+150	This file could not be read
+151	This page is not encrypted
+152	This site is on the list of dangerous sites
+153	This site is on a list of known phishing sites. Such sites often look real but want to steal your passwords or bank details.
+154	This site spreads malware
+155	This connection is not encrypted
+156	This video can't be popped out
+157	Difference
+158	Download
+159	Download blocked: {0} spreads known malware
+160	Download failed: {0}
+161	Download finished: {0}
+162	Download started: {0}
+163	Open downloads folder
+164	Downloads
+165	Downloads (Ctrl+J)
+166	Scan downloads for viruses
+167	Search downloads
+168	Manage downloads
+169	Downloads are scanned
+170	Rotate (°)
+171	Spins
+172	Rotation (°)
+173	You will be signed out everywhere.
+174	DuckDuckGo, Brave Search and Startpage don't build a profile of you. Startpage shows Google results without tracking.
+175	Dark
+176	Dark theme for every website.
+177	Duplicate
+178	Duplicate (Ctrl+D)
+179	Effects
+180	Custom shader (GLSL)
+181	Custom image
+182	Custom image …
+183	Choose custom background image
+184	A flow starts with a
+185	Freeze
+186	Tint
+187	Paste
+188	Fit
+189	Turn on
+190	Settings
+191	Settings could not be saved:
+192	Add items to the right-click menu
+193	Elektron protection · Look-alike detection right on your PC
+194	Elektron protection · Lists from Phishing.Database and URLhaus (abuse.ch)
+195	Elektron Studio (shaders & flows)
+196	Elektron stopped this site because it is on a list of known scam sites.
+197	Elektron regularly checks for new versions.
+198	Recommend Elektron
+199	Recommended
+200	Remove
+201	Removes tracking parameters like utm_, fbclid and gclid, skips redirect trackers from Google and Facebook and opens AMP pages in their original form.
+202	Load unpacked extension (folder with manifest.json)
+203	Load unpacked extension …
+204	Remember decision
+205	Developer tools
+206	Epic free games
+207	Please explain this to me simply, in English:
+208	Explain to me simply, in English, what this website is about.
+209	Allow
+210	Download again
+211	Try again
+212	Build an image first – nothing reaches “Output” yet.
+213	Add extension
+214	Extensions
+215	Extensions come from the Chrome Web Store and work in Elektron just like in Chrome. Some very large extensions use Chrome features that don't exist here – they then only partly work. You'll also find Claude and ChatGPT right in the sidebar on the left.
+216	Extensions are up to date
+217	Extension bar not available:
+218	The “Output” node is missing.
+219	Export
+220	Remove FPS limit
+221	Colour
+222	Colour 1
+223	Colour 2
+224	Rotate hue
+225	Summarise this website briefly in English – the key points as a list.
+226	Error:
+227	Failed
+228	Done
+229	Ask
+230	Block third-party cookies
+231	Third-party cookies blocked
+232	Freezes all background tabs and lowers the browser's priority so your game comes first. Tabs playing audio keep running.
+233	For Discord voice channels choose “Ask” or “Allow”.
+234	For right-click → “Summarise page” and “Explain”.
+235	There is no reader mode for this page
+236	WHOLE PC
+237	Galaxy
+238	Gaming
+239	Gaming with all the extras – or a calm, normal browser. Switch any time.
+240	The gaming browser is back 🎮
+241	Gaming mode
+242	Gaming mode (Ctrl+Shift+G)
+243	Gaming mode on – background tabs frozen, browser priority lowered
+244	Gaming mode off
+245	Turn off gaming mode
+246	Turn on gaming mode
+247	Show whole
+248	Whole page
+249	Dangerous
+250	Dangerous site blocked
+251	Fake address?
+252	Loaded – too large to remember, choose again after restart
+253	Delete entire history
+254	Reopen closed tab
+255	Saved ✓
+256	Yesterday
+257	Don't enter passwords, bank or card details here.
+258	Don't enter passwords, codes or card details here.
+259	Grid
+260	Google builds profiles – DuckDuckGo, Brave and Startpage don't
+261	Google Translate
+262	Save graph as file
+263	Load graph file
+264	Size
+265	Size when saving
+266	Good to know: Avast checks the addresses of the sites you visit. May: read and change data on all websites.
+267	Good night
+268	Good evening
+269	Good evening – time for a session.
+270	Good morning
+271	Good morning – ready to play?
+272	HTTPS mode · can be turned off in GX Control under “Protection”
+273	Keep the browser small so your game gets the power.
+274	That didn't work
+275	Light
+276	Light / Dark
+277	Brightness
+278	Brightness & contrast
+279	Today
+280	Background
+281	Start page background
+282	Background set ✓
+283	Show notice
+284	Add
+285	Home
+286	Hide IP address from WebRTC
+287	IP address hidden from WebRTC
+288	I understand the risk – open the site anyway
+289	In the background
+290	Show in folder
+291	Show in folder
+292	Always on top
+293	Always on top (on)
+294	Always on top (off)
+295	Import failed:
+296	Import
+297	Write to the clipboard
+298	Open in new tab
+299	Open in private tab
+300	Which language should Elektron speak? The flags show the countries where the language is spoken.
+301	Block content on websites
+302	Install & get started
+303	Installed
+304	Invert
+305	Yes
+306	Block JavaScript on this site
+307	Every downloaded file is scanned with Windows Defender.
+308	Every day
+309	Check for updates now
+310	Restart now
+311	AI in the sidebar
+312	Kaleidoscope
+313	Did the link come by email, text message or Discord? Then it was probably a scam.
+314	Camera and microphone
+315	No internet connection. Check your Wi-Fi or network cable.
+316	No suggestions
+317	No secure connection
+318	Click the star in the address bar or press Ctrl+D.
+319	Click to disconnect
+320	Could not be loaded:
+321	Contrast
+322	Copy
+323	Circle
+324	Don't download anything from here.
+325	Load
+326	Stop loading
+327	Run your virus scanner if you're unsure.
+328	Performance
+329	High-performance graphics card
+330	Reader mode
+331	Reader mode (F9)
+332	Open reader mode
+333	Bookmarks
+334	Back up bookmarks & settings …
+335	Search bookmarks
+336	Remove bookmark (Ctrl+D)
+337	Bookmark removed
+338	Bookmarks appear here – click the star in the address bar.
+339	Bookmark saved
+340	Add bookmark (Ctrl+D)
+341	Save bookmarks and settings as a file – e.g. for a new PC.
+342	Back up bookmarks and settings
+343	Show bookmarks bar
+344	Hide bookmarks bar
+345	Delete last 24 hours
+346	Delete last hour
+347	If the browser goes over the limit, the hungriest background tab is frozen.
+348	Limit
+349	Linear
+350	Line width
+351	Open link in split screen
+352	Open link in new tab
+353	Open link in private tab
+354	Copy link
+355	Link copied – send it to your friends!
+356	Clean links
+357	Preload links
+358	Links are cleaned
+359	Clear list
+360	List too short
+361	Local addresses are not allowed
+362	Get started
+363	Always loads pages encrypted and warns you when a site can't do that.
+364	Loads an image from the internet
+365	Loading …
+366	Delete
+367	Delete (Del)
+368	MIDI devices
+369	Translate selected text or whole pages.
+370	Mask
+371	Mask (light = visible)
+372	Maximum security
+373	More privacy: you now search with DuckDuckGo instead of Google
+374	Menu
+375	Microphone
+376	When you minimise the browser for a game, all silent tabs rest.
+377	Minutes
+378	Mix
+379	Search with Google
+380	Search with Google or enter an address
+381	Explain with {0}
+382	Search with {0}
+383	Search with {0} or enter an address
+384	Search with {0}: “{1}”
+385	Mode
+386	Monday – Friday
+387	Multiply
+388	Pattern
+389	Check for updates
+390	Name
+391	Nebula
+392	Screen
+393	No
+394	Neon
+395	Neon grid
+396	Network limiter
+397	Monitor network traffic
+398	Block and change network traffic
+399	New
+400	Reload
+401	Reload (F5)
+402	Restart & install
+403	New tab
+404	New tab (Ctrl+T)
+405	New private tab
+406	New, empty image
+407	Restart
+408	Not found
+409	Not saved
+410	Not possible
+411	Not secure
+412	Nothing found
+413	One more step: we recommend these extensions for extra security. Pick what you want – you can remove them any time under “Extensions”.
+414	One more round? It's the middle of the night.
+415	No downloads yet
+416	No extensions installed yet. Open the Chrome Web Store and click “Add” there.
+417	No bookmarks yet
+418	No update address entered yet (GX Control → Updates)
+419	Search node …
+420	Normal
+421	Normal browser – gaming elements are hidden
+422	Only files with (empty = all)
+423	HTTPS only
+424	Only once a day
+425	Only http and https addresses
+426	Uses the dedicated GPU (e.g. RTX) instead of integrated graphics.
+427	Next match (F3)
+428	Continue without extensions
+429	Optional
+430	Options
+431	Close panel
+432	Password manager
+433	Phishing and malware protection
+434	Pixel size
+435	Plasma (colourful, animated)
+436	Aurora
+437	Private
+438	Private search engine
+439	Private tab
+440	Private tab – history, cookies and logins disappear as soon as you close all private tabs.
+441	Private tab – no history, no cookies after closing
+442	App hardened
+443	Change proxy settings
+444	Scans downloads with Windows Defender (not available on this PC).
+445	Dots
+446	Sources
+447	RAM {0} of {1}
+448	RAM limiter
+449	RGB shift (glitch)
+450	Noise / clouds
+451	Right-clicking a tab offers all of this too.
+452	Right-click or space adds nodes. Drag from the dot on the right of a node to a dot on the left of the next one. Whatever ends up in
+453	Right-click or space: add node · Drag background: move · Mouse wheel: zoom · Del: delete
+454	Retro
+455	Retro mountains
+456	Tells every website via Global Privacy Control that your data must not be sold or shared.
+457	Checkerboard
+458	Malware blocked
+459	Turns off the JavaScript turbo (JIT) – the most common attack surface of browsers. Websites get slower and some browser games stop working. Takes effect after a restart.
+460	Put to sleep (free RAM)
+461	Plain
+462	Close
+463	Close (Esc)
+464	Quick access
+465	Already 10 pm – school/work tomorrow 😉
+466	Larger text
+467	Smaller text
+468	Protection
+469	Protection for this site (click)
+470	Turn protection back on for this site
+471	Protection for {0}
+472	Fingerprinting protection
+473	Protection list {0}:
+474	Black & white
+475	Floating window
+476	Have a nice day
+477	Screenshot
+478	Screenshot (Ctrl+Shift+X) – right-click: whole page
+479	Screenshot (whole page)
+480	Screenshot (visible area)
+481	Screenshot didn't work
+482	Screenshot copied – paste it into Discord with Ctrl+V
+483	Take screenshot
+484	Page
+485	Translate page into English
+486	Forget site when closed (delete cookies)
+487	Print page …
+488	Site not working? Turn protection off here
+489	Summarise page with {0}
+490	Site can't be reached
+491	Inspect page
+492	Swap sides
+493	Open sidebar
+494	Preview aspect ratio
+495	Seconds
+496	Server responded with error {0}
+497	Shaders & images
+498	Secure connection
+499	Secure DNS
+500	Security
+501	Security check
+502	Backup & restore
+503	Back up …
+504	Backup saved
+505	Restore backup
+506	Restore backup …
+507	Visible area
+508	How it works
+509	How it works:
+510	Other
+511	Save
+512	Saving failed:
+513	Stores your passwords securely and fills them in automatically.
+514	Stores your passwords encrypted and fills them in on websites automatically. Free, open source.
+515	Split screen
+516	Split screen (Ctrl+Shift+S)
+517	Split screen on – drag the divider to adjust
+518	End split screen
+519	End split screen (Ctrl+Shift+S)
+520	Language
+521	Search language or country …
+522	Windows language
+523	Windows language: {0}
+524	Restore default
+525	Start
+526	Home page (Alt+Home)
+527	Control
+528	Stretch
+529	Stripes
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T new tab · Ctrl+D bookmark · Ctrl+H history · F11 full screen
+537	Ctrl+Shift+G starts gaming mode · Ctrl+T new tab · F11 full screen
+538	Studio
+539	Levels
+540	Mute
+541	Strength
+542	Interference
+543	Checking for updates …
+544	Search engine
+545	Search suggestions while typing in the address bar (sent to the search engine)
+546	Saturation
+547	Tab
+548	Tab crashed – click to reload
+549	Tab as floating window
+550	Tab as floating window (Ctrl+Shift+F)
+551	Close tab
+552	Tab now floats above all windows
+553	Mute tab
+554	Open tab
+555	Tabs
+556	Close tabs to the right
+557	Restore tabs
+558	Days
+559	Key
+560	Keyboard shortcut
+561	Segments
+562	Speed
+563	Text
+564	Text (excerpt):
+565	Title:
+566	Sound of all tabs
+567	Unmute
+568	Toxic green
+569	Transparency
+570	Twitch open – gaming mode is on 🎮
+571	Time (HH:MM)
+572	Ultraviolet
+573	Invert
+574	Toggle
+575	Invalid address
+576	Blur
+577	There is no image at this address (tip: right-click an image → “Copy image address”)
+578	Open unencrypted
+579	Update ready – restart the browser
+580	Updating extensions failed
+581	Install update
+582	Install update and restart
+583	Update {0} is ready
+584	Update {0} is downloading in the background …
+585	Update address (folder on your website)
+586	Update module missing
+587	Update check failed: {0}
+588	Updates
+589	Updates work in the installed version
+590	Forbidden
+591	Zoom in
+592	Zoom out
+593	History
+594	Search history
+595	Offset
+596	Move / zoom / rotate
+597	Encrypts which sites you visit (DNS over HTTPS with Quad9 from Switzerland) and also blocks known malware addresses.
+598	Version
+599	Version {0} is up to date.
+600	Version {0} is ready – it will be installed on the next start.
+601	Downloading version {0} … {1} %
+602	Version {0} · Chromium {1}
+603	Version {0} · No update address entered yet.
+604	Version {0} · Updates are available in the installed Windows version.
+605	Version {0} · Updates arrive automatically via the Microsoft Store.
+606	Manage
+607	Pop out video
+608	Pop out video (picture-in-picture)
+609	Pop out video – picture-in-picture (Ctrl+Shift+P)
+610	Pop out videos automatically
+611	Video ads are muted and skipped instantly, ad spaces disappear.
+612	Vignette
+613	Virus found in {0} – Windows Defender removed the file
+614	Virus found – Windows Defender removed the file
+615	Full screen
+616	From
+617	Viruses or other malware have been spread from this site. Elektron stopped it before anything reached your PC.
+618	Forward
+619	Forward (Alt+→)
+620	Previous match (Shift+F3)
+621	Suggestions
+622	Honeycomb
+623	Probability (%)
+624	Also warns about dangerous sites. Usually not needed alongside Malwarebytes – the two overlap.
+625	Warns about dangerous sites and phishing.
+626	Warning about fake addresses
+627	Wait
+628	What happens when a site wants to use your camera.
+629	WebGL 2 is not available on this PC.
+630	Webcam
+631	Remote-control websites (debugger)
+632	Websites find it harder to recognise your PC (canvas, graphics card name, CPU cores).
+633	Websites can no longer read your local IP address through video-chat technology – not even behind a VPN.
+634	If you switch tabs or minimise the browser, the video keeps playing in a small window (picture-in-picture).
+635	Softness
+636	Other bookmarks
+637	Waves
+638	Show less
+639	If gaming mode is on
+640	When gaming mode …
+641	If the day is
+642	If the time is between
+643	If the active tab contains
+644	When the browser starts
+645	If you want to go to {0}, use the button below.
+646	When a download finishes
+647	When a page is opened
+648	Ad and tracker blocker
+649	Ad blocker
+650	Ad blocker could not be loaded:
+651	Ad companies can no longer follow you across different websites. Signing in, captchas and payments keep working.
+652	Ads/trackers blocked: {0} · Tracking cookies stopped: {1}
+653	Tools
+654	Turn on again
+655	Restored: {0} new bookmarks and your settings
+656	Restore …
+657	Repeat (tiles)
+658	Welcome
+659	Welcome to Elektron
+660	Windows Defender not found
+661	Angle
+662	When the limit is exceeded, the tabs unused the longest go to sleep.
+663	Installing …
+664	Really delete the entire history?
+665	Really open? This site is known to be dangerous.
+666	Weekend
+667	Skip YouTube ads
+668	Shows the dislikes under YouTube videos again.
+669	Lines
+670	Time
+671	Time for a break! 🎮
+672	Timed out
+673	Timed out while loading
+674	Drag to adjust · Double-click: 50/50
+675	Zoom
+676	Reset zoom
+677	Reset zoom (Ctrl+0)
+678	Random
+679	To try it out: button
+680	Switch to gaming browser
+681	Add to dictionary
+682	Switch to normal browser
+683	At a time
+684	Go to the real site: {0}
+685	Back
+686	Back (Alt+←)
+687	Back to safety
+688	Back to the browser
+689	Bring back into the browser
+690	Back to Google
+691	on a trigger.
+692	arrives is shown above. Images from the internet: right-click an image → “Copy image address” and paste it into the node.
+693	your microphone
+694	your camera
+695	your screen
+696	your location
+697	the bookmarks file could not be read.
+698	the clipboard
+699	no limit
+700	not an Elektron backup
+701	read and change
+702	not allowed
+703	only in the installed version
+704	e.g. .exe or .zip
+705	e.g. youtube.com
+706	{0} downloads running – Ctrl+J
+707	{0} bookmarks imported from {1}.
+708	{0} tracking cookies stopped
+709	{0} tracking links defused
+710	{0} is not responding in time.
+711	{0} refused the connection.
+712	{0} is done – no virus found
+713	{0} could not be loaded.
+714	{0} could not be installed. Check your internet connection and try again – or install it later via Menu → Chrome Web Store.
+715	{0} wants to access {1}.
+716	Start {0}
+717	{0} of {1} protection features active.
+718	{0} has been forgotten – cookies and site data deleted
+719	{0} – can't be reached
+720	· Auto
+721	· being scanned for viruses …
+722	· ✓ no virus (Windows Defender)
+723	Change …
+724	Better open banks, Steam, Discord & co. directly via the address bar or a bookmark.
+725	Don't open any files you already got from this site.
+726	Open
+727	Opens your tabs from last time on start – they only load when you click them.
+728	About {0}
+729	Overlay
+730	Translate
+731	Translations without guarantee – found a mistake? Report it on GitHub and we'll gladly improve it.
+732	Skips sponsor segments in YouTube videos.
+733	– picture-in-picture
+734	– split screen
+735	– tab stays on top of your game
+736	– frozen
+737	– private
+738	– sleeping (click to load)
+739	– floating window (click to show)
+740	– two tabs side by side
+741	“Do not sell” signal (GPC)
+742	Remove “{0}”?
+743	“{0}” has been loaded.
+744	“{0}” has been added
+745	Add “{0}” to Elektron?
+746	… is turned off
+747	… is turned on
+748	← Original page
+749	▶ Test now
+750	✓ Done
+751	🎮 Gaming
