@@ -1,0 +1,752 @@
+0	(mavi) ya da
+1	(mor). Değişiklikler otomatik kaydedilir ve hemen geçerli olur.
+2	(kırmızı) – ör. “Bir sayfa açıldığında”. Beyaz oku şuna bağla:
+3	1 indirme sürüyor – Ctrl+J
+4	1080 × 1080 (kare)
+5	1080 × 1920 (telefon)
+6	1920 × 1080 (Full HD)
+7	A (alt)
+8	İptal
+9	İptal edildi
+10	Akışlar
+11	Akışlar etkin
+12	Topla (parlama)
+13	Adres
+14	Adres şunu içeriyor
+15	Adres, ör. roblox.com
+16	Adres:
+17	Adres: {0}
+18	Eylemler
+19	Etkin sekmeyi kapat
+20	Vurgu rengi
+21	Tüm web sitelerindeki tüm verilerini okuma ve değiştirme
+22	Tüm yer imleri
+23	Tüm yer imleri (Ctrl+Shift+O)
+24	Tüm yer imlerini yönet …
+25	Tüm koruma ayarları …
+26	Tüm koruma özellikleri etkin.
+27	Tüm bağlantıları kopar
+28	Tümünü güncelle
+29	Tümünü göster
+30	Birkaç dakikada bir
+31	{0} öğenin tümünü göster
+32	Tümünü seç
+33	Her şey silinip baştan başlansın mı?
+34	Elektron'da ayarlayabileceğin her şey.
+35	Resim olarak kaydet (PNG)
+36	Varsayılan tarayıcı yap …
+37	Başlangıç sayfası arka planı yap
+38	Yüzen pencerede aç
+39	Diğer uzantıları yönet
+40	Diğer sekmeleri kapat
+41	Animasyon
+42	Animasyonlu
+43	Tür
+44	Sayfada bul
+45	Sayfada bul …
+46	Bu sayfada engellenecek bir şey yok
+47	Bu sayfada oynayan video yok
+48	Chrome'dan içe aktar
+49	Edge'den içe aktar
+50	Opera GX'ten içe aktar
+51	Listeden kaldır
+52	Doldur
+53	Çıkış
+54	Tetikleyiciler
+55	Kapat
+56	Kes
+57	Otomatik
+58	Otomatik
+59	Otomatik güncelle
+60	B (üst)
+61	Fare bir bağlantının üzerinde durunca bağlanır – daha hızlı, ama site IP adresini tıklamadan önce görür.
+62	Düzenle
+63	Düzenle …
+64	Koşullar
+65	Çıkış yap
+66	Tüm sekmelerin bant genişliğini sınırlar, oyun oynarken ping'in sabit kalır.
+67	Simge durumuna küçültünce dondur
+68	Örnek
+69	Örnek yüklensin mi? Mevcut akışların değiştirilecek.
+70	Popüler
+71	Bildirimler
+72	Bildirim gösterme
+73	İzin
+74	Oynamaya hazır mısın?
+75	Dolandırıcı site engellendi
+76	Hareket
+77	Resim
+78	Resim seç …
+79	Resmi koru
+80	Resmi yeni sekmede aç
+81	Resim çok büyük (en fazla 25 MB)
+82	Resim yüklenemedi
+83	Resmi kopyala
+84	Resmi kaydet …
+85	Bilgisayardan resim
+86	Resim adresi (https://…)
+87	Resim adresini gir ve “Yükle”ye bas
+88	Resimler
+89	Bitiş
+90	Lütfen https:// ile başlayan bir adres gir
+91	Engelle
+92	Dolandırıcı siteleri, kötü amaçlı yazılımları, abonelik tuzaklarını ve sahte teknik destek dolandırıcılığını engeller. Ücretsiz, hesap gerekmez.
+93	Reklamları, izleyicileri, açılır pencereleri ve çerez bildirimlerini engeller – şimdiye kadar {0} istek durduruldu.
+94	Reklamları, izleyicileri, reklam pencerelerini ve çerez bildirimlerini engeller.
+95	Bilinen dolandırıcı siteleri ve virüs yayan siteleri engeller.
+96	Bilinen dolandırıcı siteleri ve virüs yayan siteleri engeller. Liste yükleniyor …
+97	Bilinen {0} dolandırıcı ve virüslü siteyi engeller. Liste 6 saatte bir güncellenir.
+98	Ücretsiz bir Bitwarden hesabı gerekir. İzin: tüm sitelerde verileri okuma ve değiştirme (doldurmak için).
+99	Tarayıcı güncel
+100	Tarayıcı yükü
+101	Tarayıcı oyunları V-Sync olmadan yenileme hızının üstünde çalışır. Görüntü yırtılmasına yol açabilir.
+102	Tarayıcı stili
+103	Tarama verileri silindi
+104	Tarama verilerini şimdi sil
+105	Tarama verilerini sil
+106	CPU sınırlayıcı
+107	ChatGPT'yi doğrudan tarayıcıda kullan.
+108	Chrome Web Mağazası kullanılamıyor
+109	Chrome Web Mağazası'nı aç
+110	Uzantı olarak Claude – ya da kenar çubuğundan kolayca.
+111	Kod
+112	Web sitelerinde kod çalıştırma
+113	Çizgi roman / poster
+114	Çıkışta çerezleri ve oturumları sil
+115	Çerezleri okuma ve değiştirme
+116	Sonra
+117	İzin:
+118	İzin: tüm sitelerde verileri okuma ve değiştirme (kontrol edip engellemek için).
+119	Resim çok büyük (en fazla 25 MB)
+120	{0} güvenlik sertifikası güvenilir değil.
+121	{0} güvenlik sertifikası geçersiz.
+122	Bu geçerli bir resim değil
+123	Bu bir akış dosyası değil.
+124	Bu bir shader dosyası değil.
+125	Dosya silindi veya taşındı
+126	şuradaki veriler:
+127	Gizlilik ayarlarını değiştirme
+128	Opaklık
+129	Yer imlerini okuma ve değiştirme
+130	Oyunların
+131	Tarama geçmişini okuma ve değiştirme
+132	Tarama geçmişini ve açık sekmeleri okuma
+133	Konumunu belirleme
+134	Oyuncu tarayıcısı. Chromium {0} · Electron {1}
+135	Geçmiş boş
+136	Görünüm
+137	Masaüstü
+138	Ayrıntılar
+139	Yoğunluk
+140	Adres gerçek site {0} ile şaşırtıcı derecede benzer – dolandırıcıların tipik bir hilesi. Dikkatli bak: bir harf yer değiştirmiş, değiştirilmiş ya da başka bir alfabeden.
+141	Adres https:// ile başlamalı
+142	{0} adresi bulunamadı. Yazım doğru mu?
+143	Uzantının özel bir izne ihtiyacı yok.
+144	Uzantı şunları yapabilir: •
+145	Uzantılar doğrudan Chrome Web Mağazası'ndan gelir ve üreticilerine aittir (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Sayfa yüklenemedi.
+147	Bu site güvenli bağlantıyı (HTTPS) desteklemiyor. Aynı ağdaki başkaları – ör. halka açık Wi-Fi'da – burada gördüklerini ve yazdıklarını okuyabilir.
+148	Panoyu okuma
+149	Bu adres şuna benziyor:
+150	Bu dosya okunamadı
+151	Bu sayfa şifreli değil
+152	Bu site tehlikeli siteler listesinde
+153	Bu site bilinen kimlik avı siteleri listesinde. Bu siteler çoğu zaman gerçek görünür ama şifrelerini veya banka bilgilerini çalmak ister.
+154	Bu site kötü amaçlı yazılım yayıyor
+155	Bu bağlantı şifreli değil
+156	Bu video ayrı pencereye alınamıyor
+157	Fark
+158	İndirme
+159	İndirme engellendi: {0} bilinen kötü amaçlı yazılım yayıyor
+160	İndirme başarısız: {0}
+161	İndirme tamamlandı: {0}
+162	İndirme başladı: {0}
+163	İndirilenler klasörünü aç
+164	İndirilenler
+165	İndirilenler (Ctrl+J)
+166	İndirilenleri virüs için tara
+167	İndirilenlerde ara
+168	İndirilenleri yönet
+169	İndirilenler taranıyor
+170	Döndür (°)
+171	Dönüyor
+172	Dönüş (°)
+173	Ardından her yerden çıkış yapılır.
+174	DuckDuckGo, Brave Search ve Startpage hakkında profil oluşturmaz. Startpage, Google sonuçlarını izlemeden gösterir.
+175	Koyu
+176	Her web sitesi için koyu tema.
+177	Çoğalt
+178	Çoğalt (Ctrl+D)
+179	Efektler
+180	Özel shader (GLSL)
+181	Kendi resmin
+182	Kendi resmin …
+183	Kendi arka plan resmini seç
+184	Bir akış şununla başlar:
+185	Dondur
+186	Renklendir
+187	Yapıştır
+188	Sığdır
+189	Aç
+190	Ayarlar
+191	Ayarlar kaydedilemedi:
+192	Sağ tık menüsüne öğe ekleme
+193	Elektron koruması · Taklit algılama doğrudan bilgisayarında
+194	Elektron koruması · Phishing.Database ve URLhaus (abuse.ch) listeleri
+195	Elektron Studio (shader'lar ve akışlar)
+196	Elektron bu siteyi durdurdu çünkü bilinen dolandırıcı siteler listesinde.
+197	Elektron düzenli olarak yeni sürümleri arar.
+198	Elektron'u öner
+199	Önerilen
+200	Kaldır
+201	utm_, fbclid ve gclid gibi izleme eklerini kaldırır, Google ve Facebook yönlendirme izleyicilerini atlar ve AMP sayfalarını orijinal hâliyle açar.
+202	Paketlenmemiş uzantı yükle (manifest.json içeren klasör)
+203	Paketlenmemiş uzantı yükle …
+204	Kararı hatırla
+205	Geliştirici araçları
+206	Epic ücretsiz oyunlar
+207	Bunu bana basitçe ve Türkçe açıkla:
+208	Bu web sitesinin ne hakkında olduğunu bana basitçe ve Türkçe açıkla.
+209	İzin ver
+210	Yeniden indir
+211	Tekrar dene
+212	Önce bir resim oluştur – “Çıkış”a henüz hiçbir şey ulaşmıyor.
+213	Uzantı ekle
+214	Uzantılar
+215	Uzantılar Chrome Web Mağazası'ndan gelir ve Elektron'da Chrome'daki gibi çalışır. Çok kapsamlı bazı uzantılar burada olmayan Chrome özelliklerini kullanır – o zaman yalnızca kısmen çalışırlar. Claude ve ChatGPT'yi ayrıca soldaki kenar çubuğunda bulursun.
+216	Uzantılar güncel
+217	Uzantı çubuğu kullanılamıyor:
+218	“Çıkış” düğümü eksik.
+219	Dışa aktar
+220	FPS sınırını kaldır
+221	Renk
+222	Renk 1
+223	Renk 2
+224	Renk tonunu döndür
+225	Bu web sitesini kısaca ve Türkçe özetle – en önemli noktaları liste olarak.
+226	Hata:
+227	Başarısız
+228	Bitti
+229	Sor
+230	Üçüncü taraf çerezlerini engelle
+231	Üçüncü taraf çerezleri engellendi
+232	Tüm arka plan sekmelerini dondurur ve tarayıcının önceliğini düşürür, böylece oyunun öncelik kazanır. Sesli sekmeler çalışmaya devam eder.
+233	Discord ses kanalları için “Sor” veya “İzin ver”i seç.
+234	Sağ tık → “Sayfayı özetle” ve “Açıkla” için.
+235	Bu sayfa için okuma modu yok
+236	TÜM BİLGİSAYAR
+237	Galaksi
+238	Gaming
+239	Tüm ekstralarıyla gaming – ya da sakin, normal bir tarayıcı. İstediğin zaman değiştirilebilir.
+240	Oyuncu tarayıcısı geri döndü 🎮
+241	Oyun modu
+242	Oyun modu (Ctrl+Shift+G)
+243	Oyun modu açık – arka plan sekmeleri donduruldu, tarayıcı önceliği düşürüldü
+244	Oyun modu kapalı
+245	Oyun modunu kapat
+246	Oyun modunu aç
+247	Tamamını göster
+248	Tüm sayfa
+249	Tehlikeli
+250	Tehlikeli site engellendi
+251	Sahte adres mi?
+252	Yüklendi – hatırlanamayacak kadar büyük, yeniden başlattıktan sonra tekrar seç
+253	Tüm geçmişi sil
+254	Kapatılan sekmeyi geri aç
+255	Kaydedildi ✓
+256	Dün
+257	Buraya şifre, banka veya kart bilgisi girme.
+258	Buraya şifre, kod veya kart bilgisi girme.
+259	Izgara
+260	Google profil oluşturur – DuckDuckGo, Brave ve Startpage oluşturmaz
+261	Google Çeviri
+262	Grafiği dosya olarak kaydet
+263	Grafik dosyası yükle
+264	Boyut
+265	Kaydederken boyut
+266	Bilmekte fayda var: Avast bunun için ziyaret ettiğin sitelerin adreslerini kontrol eder. İzin: tüm sitelerde verileri okuma ve değiştirme.
+267	İyi geceler
+268	İyi akşamlar
+269	İyi akşamlar – oyun zamanı.
+270	Günaydın
+271	Günaydın – oynamaya hazır mısın?
+272	HTTPS modu · GX Control'de “Koruma” altında kapatılabilir
+273	Tarayıcıyı küçük tut ki oyunun tüm gücü alsın.
+274	Olmadı
+275	Açık
+276	Açık / Koyu
+277	Parlaklık
+278	Parlaklık ve kontrast
+279	Bugün
+280	Arka plan
+281	Başlangıç sayfası arka planı
+282	Arka plan ayarlandı ✓
+283	Bildirim göster
+284	Ekle
+285	Ana sayfa
+286	WebRTC'den IP adresini gizle
+287	IP adresi WebRTC'den gizlendi
+288	Riski anlıyorum – siteyi yine de aç
+289	Arka planda
+290	Klasörde göster
+291	Klasörde göster
+292	Her zaman üstte
+293	Her zaman üstte (açık)
+294	Her zaman üstte (kapalı)
+295	İçe aktarma başarısız:
+296	İçe aktar
+297	Panoya yazma
+298	Yeni sekmede aç
+299	Gizli sekmede aç
+300	Elektron seninle hangi dilde konuşsun? Bayraklar o dilin konuşulduğu ülkeleri gösterir.
+301	Web sitelerinde içerik engelleme
+302	Yükle ve başla
+303	Yüklendi
+304	Ters çevir
+305	Evet
+306	Bu sitede JavaScript'i engelle
+307	İndirilen her dosya Windows Defender ile taranır.
+308	Her gün
+309	Güncellemeleri şimdi denetle
+310	Şimdi yeniden başlat
+311	Kenar çubuğunda yapay zekâ
+312	Kaleydoskop
+313	Bağlantı e-posta, SMS veya Discord ile mi geldi? O zaman büyük ihtimalle dolandırıcılıktı.
+314	Kamera ve mikrofon
+315	İnternet bağlantısı yok. Wi-Fi'ı veya ağ kablosunu kontrol et.
+316	Öneri yok
+317	Güvenli bağlantı yok
+318	Adres çubuğundaki yıldıza tıkla ya da Ctrl+D'ye bas.
+319	Ayırmak için tıkla
+320	Yüklenemedi:
+321	Kontrast
+322	Kopyala
+323	Daire
+324	Buradan hiçbir şey indirme.
+325	Yükle
+326	Yüklemeyi durdur
+327	Emin değilsen virüs tarayıcını çalıştır.
+328	Performans
+329	Güçlü ekran kartı
+330	Okuma modu
+331	Okuma modu (F9)
+332	Okuma modunu aç
+333	Yer imleri
+334	Yer imlerini ve ayarları yedekle …
+335	Yer imlerinde ara
+336	Yer imini kaldır (Ctrl+D)
+337	Yer imi kaldırıldı
+338	Yer imleri burada görünür – adres çubuğundaki yıldıza tıkla.
+339	Yer imi kaydedildi
+340	Yer imi ekle (Ctrl+D)
+341	Yer imlerini ve ayarları dosyaya kaydet – ör. yeni bir bilgisayar için.
+342	Yer imlerini ve ayarları yedekle
+343	Yer imleri çubuğunu göster
+344	Yer imleri çubuğunu gizle
+345	Son 24 saati sil
+346	Son bir saati sil
+347	Tarayıcı sınırı aşarsa en çok kaynak yiyen arka plan sekmesi dondurulur.
+348	Sınır
+349	Doğrusal
+350	Çizgi kalınlığı
+351	Bağlantıyı bölünmüş ekranda aç
+352	Bağlantıyı yeni sekmede aç
+353	Bağlantıyı gizli sekmede aç
+354	Bağlantıyı kopyala
+355	Bağlantı kopyalandı – arkadaşlarına gönder!
+356	Bağlantıları temizle
+357	Bağlantıları önceden yükle
+358	Bağlantılar temizleniyor
+359	Listeyi temizle
+360	Liste çok kısa
+361	Yerel adreslere izin verilmez
+362	Başla
+363	Sayfaları her zaman şifreli yükler ve bir site bunu yapamıyorsa uyarır.
+364	İnternetten bir resim yükler
+365	Yükleniyor …
+366	Sil
+367	Sil (Del)
+368	MIDI cihazları
+369	Seçili metni veya tüm sayfaları çevir.
+370	Maske
+371	Maske (açık = görünür)
+372	En yüksek güvenlik
+373	Daha fazla gizlilik: artık Google yerine DuckDuckGo ile arıyorsun
+374	Menü
+375	Mikrofon
+376	Oyun için tarayıcıyı küçültürsen sessiz tüm sekmeler dinlenir.
+377	Dakika
+378	Karıştır
+379	Google ile ara
+380	Google ile ara veya bir adres gir
+381	{0} ile açıkla
+382	{0} ile ara
+383	{0} ile ara veya bir adres gir
+384	{0} ile ara: “{1}”
+385	Mod
+386	Pazartesi – Cuma
+387	Çarp
+388	Desen
+389	Güncellemeleri denetle
+390	Ad
+391	Bulutsu
+392	Ekran
+393	Hayır
+394	Neon
+395	Neon ızgara
+396	Ağ sınırlayıcı
+397	Ağ trafiğini izleme
+398	Ağ trafiğini engelleme ve değiştirme
+399	Yeni
+400	Yeniden yükle
+401	Yeniden yükle (F5)
+402	Yeniden başlat ve yükle
+403	Yeni sekme
+404	Yeni sekme (Ctrl+T)
+405	Yeni gizli sekme
+406	Yeni, boş resim
+407	Yeniden başlat
+408	Bulunamadı
+409	Kaydedilmedi
+410	Mümkün değil
+411	Güvenli değil
+412	Hiçbir şey bulunamadı
+413	Bir adım kaldı: daha fazla güvenlik için bu uzantıları öneriyoruz. İstediklerini seç – onları istediğin zaman “Uzantılar” altından kaldırabilirsin.
+414	Bir el daha mı? Gecenin bir yarısı.
+415	Henüz indirme yok
+416	Henüz uzantı yüklenmedi. Chrome Web Mağazası'nı aç ve orada “Ekle”ye tıkla.
+417	Henüz yer imi yok
+418	Henüz güncelleme adresi girilmedi (GX Control → Güncellemeler)
+419	Düğüm ara …
+420	Normal
+421	Normal tarayıcı – oyun öğeleri gizli
+422	Yalnızca şu dosyalar (boş = hepsi)
+423	Yalnızca HTTPS
+424	Günde yalnızca bir kez
+425	Yalnızca http ve https adresleri
+426	Tümleşik grafik yerine harici GPU'yu (ör. RTX) kullanır.
+427	Sonraki eşleşme (F3)
+428	Uzantısız devam et
+429	İsteğe bağlı
+430	Seçenekler
+431	Paneli kapat
+432	Şifre yöneticisi
+433	Kimlik avı ve kötü amaçlı yazılım koruması
+434	Piksel boyutu
+435	Plazma (renkli, animasyonlu)
+436	Kutup ışıkları
+437	Gizli
+438	Gizlilik dostu arama motoru
+439	Gizli sekme
+440	Gizli sekme – tüm gizli sekmeleri kapattığında geçmiş, çerezler ve oturumlar silinir.
+441	Gizli sekme – kapattıktan sonra geçmiş ve çerez yok
+442	Program güçlendirildi
+443	Proxy ayarlarını değiştirme
+444	İndirilenleri Windows Defender ile tarar (bu bilgisayarda yok).
+445	Noktalar
+446	Kaynaklar
+447	RAM {0} / {1}
+448	RAM sınırlayıcı
+449	RGB kayması (glitch)
+450	Gürültü / bulutlar
+451	Bir sekmeye sağ tıklamak da bunların hepsini sunar.
+452	Sağ tık veya boşluk tuşu düğüm ekler. Bir düğümün sağındaki noktadan sonrakinin solundaki noktaya sürükle. En sonunda şuraya ulaşan her şey:
+453	Sağ tık veya boşluk: düğüm ekle · Arka planı sürükle: taşı · Fare tekerleği: yakınlaştır · Del: sil
+454	Retro
+455	Retro dağlar
+456	Global Privacy Control ile her siteye verilerinin satılamayacağını ve paylaşılamayacağını söyler.
+457	Dama tahtası
+458	Kötü amaçlı yazılım engellendi
+459	JavaScript turbosunu (JIT) kapatır – tarayıcıların en yaygın saldırı yüzeyi. Siteler yavaşlar, bazı tarayıcı oyunları artık çalışmaz. Yeniden başlattıktan sonra geçerli olur.
+460	Uyut (RAM'i boşalt)
+461	Sade
+462	Kapat
+463	Kapat (Esc)
+464	Hızlı erişim
+465	Saat 22 olmuş – yarın okul/iş var 😉
+466	Yazıyı büyüt
+467	Yazıyı küçült
+468	Koruma
+469	Bu sitenin koruması (tıkla)
+470	Bu site için korumayı yeniden aç
+471	{0} için koruma
+472	Parmak izi koruması
+473	Koruma listesi {0}:
+474	Siyah-beyaz
+475	Yüzen pencere
+476	İyi günler
+477	Ekran görüntüsü
+478	Ekran görüntüsü (Ctrl+Shift+X) – sağ tık: tüm sayfa
+479	Ekran görüntüsü (tüm sayfa)
+480	Ekran görüntüsü (görünen alan)
+481	Ekran görüntüsü alınamadı
+482	Ekran görüntüsü kopyalandı – Discord'a Ctrl+V ile yapıştır
+483	Ekran görüntüsü al
+484	Sayfa
+485	Sayfayı Türkçeye çevir
+486	Kapatınca siteyi unut (çerezleri sil)
+487	Sayfayı yazdır …
+488	Site çalışmıyor mu? Korumayı buradan kapat
+489	Sayfayı {0} ile özetle
+490	Siteye ulaşılamıyor
+491	İncele
+492	Tarafları değiştir
+493	Kenar çubuğunu aç
+494	Önizleme en-boy oranı
+495	Saniye
+496	Sunucu {0} hatasıyla yanıt verdi
+497	Shader'lar ve resimler
+498	Güvenli bağlantı
+499	Güvenli DNS
+500	Güvenlik
+501	Güvenlik kontrolü
+502	Yedekleme ve geri yükleme
+503	Yedekle …
+504	Yedek kaydedildi
+505	Yedeği geri yükle
+506	Yedeği geri yükle …
+507	Görünen alan
+508	Nasıl çalışır
+509	Nasıl çalışır:
+510	Diğer
+511	Kaydet
+512	Kaydetme başarısız:
+513	Şifrelerini güvenle saklar ve otomatik doldurur.
+514	Şifrelerini şifreli saklar ve sitelerde otomatik doldurur. Ücretsiz, açık kaynak.
+515	Bölünmüş ekran
+516	Bölünmüş ekran (Ctrl+Shift+S)
+517	Bölünmüş ekran açık – ayarlamak için ayırıcıyı sürükle
+518	Bölünmüş ekranı kapat
+519	Bölünmüş ekranı kapat (Ctrl+Shift+S)
+520	Dil
+521	Dil veya ülke ara …
+522	Windows dili
+523	Windows dili: {0}
+524	Varsayılanı geri yükle
+525	Başlat
+526	Ana sayfa (Alt+Home)
+527	Kontrol
+528	Uzat
+529	Çizgiler
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T yeni sekme · Ctrl+D yer imi · Ctrl+H geçmiş · F11 tam ekran
+537	Ctrl+Shift+G oyun modunu başlatır · Ctrl+T yeni sekme · F11 tam ekran
+538	Studio
+539	Seviyeler
+540	Sesi kapat
+541	Güç
+542	Parazit
+543	Güncellemeler denetleniyor …
+544	Arama motoru
+545	Adres çubuğuna yazarken arama önerileri (arama motoruna gönderilir)
+546	Doygunluk
+547	Sekme
+548	Sekme çöktü – yeniden yüklemek için tıkla
+549	Sekme yüzen pencerede
+550	Sekme yüzen pencerede (Ctrl+Shift+F)
+551	Sekmeyi kapat
+552	Sekme artık tüm pencerelerin üstünde süzülüyor
+553	Sekmenin sesini kapat
+554	Sekme aç
+555	Sekmeler
+556	Sağdaki sekmeleri kapat
+557	Sekmeleri geri yükle
+558	Günler
+559	Tuş
+560	Klavye kısayolu
+561	Parçalar
+562	Hız
+563	Metin
+564	Metin (alıntı):
+565	Başlık:
+566	Tüm sekmelerin sesi
+567	Sesi aç
+568	Zehirli yeşil
+569	Saydamlık
+570	Twitch açık – oyun modu açık 🎮
+571	Saat (SS:DD)
+572	Ultraviyole
+573	Ters çevir
+574	Değiştir
+575	Geçersiz adres
+576	Bulanıklık
+577	Bu adreste resim yok (ipucu: bir resme sağ tıkla → “Resim adresini kopyala”)
+578	Şifresiz aç
+579	Güncelleme hazır – tarayıcıyı yeniden başlat
+580	Uzantılar güncellenemedi
+581	Güncellemeyi yükle
+582	Güncellemeyi yükle ve yeniden başlat
+583	{0} güncellemesi hazır
+584	{0} güncellemesi arka planda indiriliyor …
+585	Güncelleme adresi (web sitende bir klasör)
+586	Güncelleme modülü eksik
+587	Güncelleme denetimi başarısız: {0}
+588	Güncellemeler
+589	Güncellemeler yüklü sürümde çalışır
+590	Yasak
+591	Yakınlaştır
+592	Uzaklaştır
+593	Geçmiş
+594	Geçmişte ara
+595	Kayma
+596	Taşı / yakınlaştır / döndür
+597	Hangi siteleri açtığını şifreler (İsviçre'den Quad9 ile HTTPS üzerinden DNS) ve ayrıca bilinen kötü amaçlı adresleri engeller.
+598	Sürüm
+599	{0} sürümü güncel.
+600	{0} sürümü hazır – bir sonraki açılışta yüklenecek.
+601	{0} sürümü indiriliyor … %{1}
+602	Sürüm {0} · Chromium {1}
+603	Sürüm {0} · Henüz güncelleme adresi girilmedi.
+604	Sürüm {0} · Güncellemeler yüklü Windows sürümünde var.
+605	Sürüm {0} · Güncellemeler Microsoft Store üzerinden otomatik gelir.
+606	Yönet
+607	Videoyu ayır
+608	Videoyu ayır (resim içinde resim)
+609	Videoyu ayır – resim içinde resim (Ctrl+Shift+P)
+610	Videoları otomatik ayır
+611	Video reklamları sessize alınır ve hemen atlanır, reklam alanları kaybolur.
+612	Vinyet
+613	{0} içinde virüs bulundu – Windows Defender dosyayı kaldırdı
+614	Virüs bulundu – Windows Defender dosyayı kaldırdı
+615	Tam ekran
+616	Başlangıç
+617	Bu siteden virüs veya başka kötü amaçlı yazılımlar yayıldı. Elektron bilgisayarına bir şey ulaşmadan durdurdu.
+618	İleri
+619	İleri (Alt+→)
+620	Önceki eşleşme (Shift+F3)
+621	Öneriler
+622	Petek
+623	Olasılık (%)
+624	O da tehlikeli siteler konusunda uyarır. Malwarebytes varken genelde gerekmez – ikisi aynı işi yapar.
+625	Tehlikeli siteler ve kimlik avı konusunda uyarır.
+626	Sahte adres uyarısı
+627	Bekle
+628	Bir site kameranı kullanmak istediğinde ne olacağı.
+629	Bu bilgisayarda WebGL 2 kullanılamıyor.
+630	Web kamerası
+631	Web sitelerini uzaktan kontrol etme (hata ayıklayıcı)
+632	Siteler bilgisayarını daha zor tanır (canvas, ekran kartı adı, CPU çekirdekleri).
+633	Siteler görüntülü konuşma teknolojisiyle yerel IP adresini artık okuyamaz – VPN arkasında bile.
+634	Sekme değiştirir ya da tarayıcıyı küçültürsen video küçük bir pencerede oynamaya devam eder (resim içinde resim).
+635	Yumuşaklık
+636	Diğer yer imleri
+637	Dalgalar
+638	Daha az göster
+639	Oyun modu açıksa
+640	Oyun modu …
+641	Gün şuysa
+642	Saat şu aralıktaysa
+643	Etkin sekme şunu içeriyorsa
+644	Tarayıcı başladığında
+645	{0} sitesine gitmek istiyorsan aşağıdaki düğmeyi kullan.
+646	Bir indirme bittiğinde
+647	Bir sayfa açıldığında
+648	Reklam ve izleyici engelleyici
+649	Reklam engelleyici
+650	Reklam engelleyici yüklenemedi:
+651	Reklam şirketleri seni artık farklı siteler arasında takip edemez. Giriş, captcha ve ödemeler çalışmaya devam eder.
+652	Engellenen reklam/izleyici: {0} · Durdurulan izleme çerezi: {1}
+653	Araçlar
+654	Yeniden aç
+655	Geri yüklendi: {0} yeni yer imi ve ayarların
+656	Geri yükle …
+657	Tekrarla (döşeme)
+658	Hoş geldin
+659	Elektron'a hoş geldin
+660	Windows Defender bulunamadı
+661	Açı
+662	Sınır aşılırsa en uzun süredir kullanılmayan sekmeler uyur.
+663	Yükleniyor …
+664	Tüm geçmiş gerçekten silinsin mi?
+665	Gerçekten açılsın mı? Bu sitenin tehlikeli olduğu biliniyor.
+666	Hafta sonu
+667	YouTube reklamlarını atla
+668	YouTube videolarının altındaki beğenmemeleri yeniden gösterir.
+669	Satırlar
+670	Saat
+671	Mola zamanı! 🎮
+672	Zaman aşımı
+673	Yüklenirken zaman aşımı
+674	Ayarlamak için sürükle · Çift tık: 50/50
+675	Yakınlaştırma
+676	Yakınlaştırmayı sıfırla
+677	Yakınlaştırmayı sıfırla (Ctrl+0)
+678	Rastgele
+679	Denemek için: düğme
+680	Oyuncu tarayıcısına geç
+681	Sözlüğe ekle
+682	Normal tarayıcıya geç
+683	Belirli saatte
+684	Gerçek siteye git: {0}
+685	Geri
+686	Geri (Alt+←)
+687	Güvenli yere dön
+688	Tarayıcıya dön
+689	Tarayıcıya geri al
+690	Google'a geri dön
+691	bir tetikleyicide.
+692	yukarıda görünür. İnternetten resimler: bir resme sağ tıkla → “Resim adresini kopyala” ve düğüme yapıştır.
+693	mikrofonuna
+694	kamerana
+695	ekranına
+696	konumuna
+697	yer imleri dosyası okunamadı.
+698	panoya
+699	sınır yok
+700	Elektron yedeği değil
+701	okuma ve değiştirme
+702	izin verilmez
+703	yalnızca yüklü sürümde
+704	ör. .exe veya .zip
+705	ör. youtube.com
+706	{0} indirme sürüyor – Ctrl+J
+707	{1} kaynağından {0} yer imi alındı.
+708	{0} izleme çerezi durduruldu
+709	{0} izleme bağlantısı etkisiz hâle getirildi
+710	{0} zamanında yanıt vermiyor.
+711	{0} bağlantıyı reddetti.
+712	{0} hazır – virüs bulunamadı
+713	{0} yüklenemedi.
+714	{0} yüklenemedi. İnternet bağlantını kontrol edip tekrar dene – ya da sonra Menü → Chrome Web Mağazası üzerinden yükle.
+715	{0}, {1} erişmek istiyor.
+716	{0} başlat
+717	{1} koruma özelliğinden {0} etkin.
+718	{0} unutuldu – çerezler ve site verileri silindi
+719	{0} – ulaşılamıyor
+720	· Otomatik
+721	· virüs taranıyor …
+722	· ✓ virüs yok (Windows Defender)
+723	Değiştir …
+724	Bankaları, Steam'i, Discord'u vb. doğrudan adres çubuğundan ya da bir yer iminden açmak daha iyi.
+725	Bu siteden zaten aldığın dosyaları açma.
+726	Aç
+727	Açılışta son seferki sekmelerini açar – yalnızca tıkladığında yüklenirler.
+728	{0} hakkında
+729	Bindirme
+730	Çevir
+731	Çeviriler garantisizdir – bir hata mı buldun? GitHub'da bildir, memnuniyetle düzeltiriz.
+732	YouTube videolarındaki sponsorlu bölümleri atlar.
+733	– resim içinde resim
+734	– bölünmüş ekran
+735	– sekme oyununun üstünde kalır
+736	– donduruldu
+737	– gizli
+738	– uyuyor (yüklemek için tıkla)
+739	– yüzen pencere (göstermek için tıkla)
+740	– yan yana iki sekme
+741	“Satma” sinyali (GPC)
+742	“{0}” kaldırılsın mı?
+743	“{0}” yüklendi.
+744	“{0}” eklendi
+745	“{0}” Elektron'a eklensin mi?
+746	… kapatıldığında
+747	… açıldığında
+748	← Orijinal sayfa
+749	▶ Şimdi test et
+750	✓ Çalıştırıldı
+751	🎮 Gaming
