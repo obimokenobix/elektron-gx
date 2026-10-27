@@ -1,0 +1,752 @@
+0	(biru) atau
+1	(ungu). Perubahan disimpan otomatis dan langsung berlaku.
+2	(merah) – mis. „Saat halaman dibuka“. Hubungkan panah putih ke
+3	1 unduhan sedang berjalan – Ctrl+J
+4	1080 × 1080 (persegi)
+5	1080 × 1920 (ponsel)
+6	1920 × 1080 (Full HD)
+7	A (bawah)
+8	Batal
+9	Dibatalkan
+10	Alur
+11	Alur aktif
+12	Tambah (pendar)
+13	Alamat
+14	Alamat berisi
+15	Alamat, mis. roblox.com
+16	Alamat:
+17	Alamat: {0}
+18	Aksi
+19	Tutup tab aktif
+20	Warna aksen
+21	Membaca dan mengubah semua data di semua situs web
+22	Semua bookmark
+23	Semua bookmark (Ctrl+Shift+O)
+24	Kelola semua bookmark …
+25	Semua pengaturan perlindungan …
+26	Semua fungsi perlindungan aktif.
+27	Putuskan semua koneksi
+28	Perbarui semua
+29	Tampilkan semua
+30	Setiap beberapa menit
+31	Tampilkan semua {0}
+32	Pilih semua
+33	Hapus semuanya dan mulai dari awal?
+34	Semua yang bisa kamu atur di Elektron.
+35	Simpan sebagai gambar (PNG)
+36	Jadikan browser default …
+37	Jadikan latar halaman awal
+38	Buka sebagai jendela mengambang
+39	Kelola ekstensi lain
+40	Tutup tab lain
+41	Animasi
+42	Beranimasi
+43	Jenis
+44	Cari di halaman
+45	Cari di halaman …
+46	Tidak ada yang perlu diblokir di halaman ini
+47	Tidak ada video yang diputar di halaman ini
+48	Impor dari Chrome
+49	Impor dari Edge
+50	Impor dari Opera GX
+51	Hapus dari daftar
+52	Isi
+53	Keluaran
+54	Pemicu
+55	Matikan
+56	Potong
+57	Otomatis
+58	Otomatis
+59	Perbarui otomatis
+60	B (atas)
+61	Sudah tersambung saat mouse berada di atas tautan – lebih cepat, tapi situs melihat alamat IP-mu sebelum diklik.
+62	Edit
+63	Edit …
+64	Kondisi
+65	Keluar
+66	Membatasi bandwidth semua tab agar ping-mu tetap stabil saat bermain.
+67	Bekukan saat diminimalkan
+68	Contoh
+69	Muat contoh? Alur-mu yang sekarang akan diganti.
+70	Populer
+71	Notifikasi
+72	Tampilkan notifikasi
+73	Izin
+74	Siap main?
+75	Situs penipuan diblokir
+76	Gerakan
+77	Gambar
+78	Pilih gambar …
+79	Simpan gambar ini
+80	Buka gambar di tab baru
+81	Gambar terlalu besar (maks. 25 MB)
+82	Gambar tidak dapat dimuat
+83	Salin gambar
+84	Simpan gambar …
+85	Gambar dari PC
+86	Alamat gambar (https://…)
+87	Masukkan alamat gambar dan tekan „Muat“
+88	Gambar
+89	Sampai
+90	Masukkan alamat yang diawali https://
+91	Blokir
+92	Memblokir situs penipuan, malware, jebakan langganan, dan penipuan dukungan teknis palsu. Gratis, tanpa akun.
+93	Memblokir iklan, pelacak, pop-up, dan banner cookie – sejauh ini {0} permintaan dihentikan.
+94	Memblokir iklan, pelacak, pop-up iklan, dan banner cookie.
+95	Memblokir situs penipuan yang dikenal dan situs penyebar virus.
+96	Memblokir situs penipuan yang dikenal dan situs penyebar virus. Daftar sedang dimuat …
+97	Memblokir {0} situs penipuan dan virus yang dikenal. Daftar diperbarui setiap 6 jam.
+98	Butuh akun Bitwarden gratis. Boleh: membaca dan mengubah data di semua situs web (untuk mengisi otomatis).
+99	Browser sudah terbaru
+100	Beban browser
+101	Game browser berjalan tanpa V-Sync di atas refresh rate. Bisa menyebabkan gambar sobek.
+102	Gaya browser
+103	Data penjelajahan dihapus
+104	Hapus data penjelajahan sekarang
+105	Hapus data penjelajahan
+106	Pembatas CPU
+107	Pakai ChatGPT langsung di browser.
+108	Chrome Web Store tidak tersedia
+109	Buka Chrome Web Store
+110	Claude sebagai ekstensi – atau langsung lewat bilah samping.
+111	Kode
+112	Menjalankan kode di situs web
+113	Komik / poster
+114	Hapus cookie dan login saat keluar
+115	Membaca dan mengubah cookie
+116	Lalu
+117	Boleh:
+118	Boleh: membaca dan mengubah data di semua situs web (untuk memeriksa dan memblokir).
+119	Gambar terlalu besar (maks. 25 MB)
+120	Sertifikat keamanan {0} tidak tepercaya.
+121	Sertifikat keamanan {0} tidak valid.
+122	Ini bukan gambar yang valid
+123	Ini bukan file alur.
+124	Ini bukan file shader.
+125	File telah dihapus atau dipindahkan
+126	Data di
+127	Mengubah pengaturan privasi
+128	Opasitas
+129	Membaca dan mengubah bookmark-mu
+130	Game-mu
+131	Membaca dan mengubah riwayat penjelajahanmu
+132	Membaca riwayat penjelajahan dan tab yang terbuka
+133	Menentukan lokasimu
+134	Browser untuk gamer. Chromium {0} · Electron {1}
+135	Riwayat kosong
+136	Tampilan
+137	Desktop
+138	Detail
+139	Kepadatan
+140	Alamat ini sangat mirip dengan situs asli {0} – trik khas penipu. Perhatikan baik-baik: satu huruf tertukar, diganti, atau berasal dari alfabet lain.
+141	Alamat harus diawali https://
+142	Alamat {0} tidak ditemukan. Apakah ejaannya benar?
+143	Ekstensi ini tidak memerlukan izin khusus.
+144	Ekstensi ini bisa: •
+145	Ekstensi berasal langsung dari Chrome Web Store dan milik pembuatnya (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Halaman tidak dapat dimuat.
+147	Situs ini tidak mendukung koneksi aman (HTTPS). Orang lain di jaringan yang sama – mis. Wi-Fi publik – bisa melihat apa yang kamu lihat dan ketik di sini.
+148	Membaca papan klip
+149	Alamat ini terlihat seperti
+150	File ini tidak dapat dibaca
+151	Halaman ini tidak terenkripsi
+152	Situs ini ada di daftar situs berbahaya
+153	Situs ini ada di daftar situs phishing yang dikenal. Situs seperti ini sering terlihat asli, tapi ingin mencuri kata sandi atau data bank-mu.
+154	Situs ini menyebarkan malware
+155	Koneksi ini tidak terenkripsi
+156	Video ini tidak bisa dilepas
+157	Selisih
+158	Unduhan
+159	Unduhan diblokir: {0} menyebarkan malware yang dikenal
+160	Unduhan gagal: {0}
+161	Unduhan selesai: {0}
+162	Unduhan dimulai: {0}
+163	Buka folder unduhan
+164	Unduhan
+165	Unduhan (Ctrl+J)
+166	Periksa unduhan dari virus
+167	Cari unduhan
+168	Kelola unduhan
+169	Unduhan sedang diperiksa
+170	Putar (°)
+171	Berputar
+172	Rotasi (°)
+173	Setelah itu kamu akan keluar dari semua akun.
+174	DuckDuckGo, Brave Search, dan Startpage tidak membuat profil tentangmu. Startpage menampilkan hasil Google tanpa pelacakan.
+175	Gelap
+176	Tampilan gelap untuk setiap situs web.
+177	Duplikat
+178	Duplikat (Ctrl+D)
+179	Efek
+180	Shader sendiri (GLSL)
+181	Gambar sendiri
+182	Gambar sendiri …
+183	Pilih gambar latar sendiri
+184	Sebuah alur dimulai dengan
+185	Bekukan
+186	Warnai
+187	Tempel
+188	Sesuaikan
+189	Nyalakan
+190	Pengaturan
+191	Pengaturan tidak dapat disimpan:
+192	Menambahkan item ke menu klik kanan
+193	Perlindungan Elektron · Deteksi situs tiruan langsung di PC-mu
+194	Perlindungan Elektron · Daftar dari Phishing.Database dan URLhaus (abuse.ch)
+195	Elektron Studio (shader dan alur)
+196	Elektron menghentikan situs ini karena ada di daftar situs penipuan yang dikenal.
+197	Elektron rutin mencari versi baru.
+198	Rekomendasikan Elektron
+199	Direkomendasikan
+200	Hapus
+201	Menghapus tambahan pelacak seperti utm_, fbclid, dan gclid, melewati pelacak pengalihan Google dan Facebook, dan membuka halaman AMP dalam versi aslinya.
+202	Muat ekstensi yang belum dikemas (folder dengan manifest.json)
+203	Muat ekstensi yang belum dikemas …
+204	Ingat keputusan
+205	Alat pengembang
+206	Game gratis Epic
+207	Tolong jelaskan ini dengan sederhana dalam bahasa Indonesia:
+208	Jelaskan dengan sederhana dalam bahasa Indonesia tentang apa situs web ini.
+209	Izinkan
+210	Unduh lagi
+211	Coba lagi
+212	Buat gambar dulu – belum ada yang sampai ke „Keluaran“.
+213	Tambah ekstensi
+214	Ekstensi
+215	Ekstensi berasal dari Chrome Web Store dan berfungsi di Elektron seperti di Chrome. Beberapa ekstensi yang sangat besar memakai fitur Chrome yang tidak ada di sini – jadi hanya berjalan sebagian. Claude dan ChatGPT juga ada langsung di bilah samping kiri.
+216	Ekstensi sudah terbaru
+217	Bilah ekstensi tidak tersedia:
+218	Node „Keluaran“ tidak ada.
+219	Ekspor
+220	Lepas batas FPS
+221	Warna
+222	Warna 1
+223	Warna 2
+224	Putar rona
+225	Ringkas situs web ini secara singkat dalam bahasa Indonesia – poin terpenting dalam bentuk daftar.
+226	Kesalahan:
+227	Gagal
+228	Selesai
+229	Tanya
+230	Blokir cookie pihak ketiga
+231	Cookie pihak ketiga diblokir
+232	Membekukan semua tab latar dan menurunkan prioritas browser agar game-mu didahulukan. Tab yang memutar suara tetap berjalan.
+233	Untuk saluran suara Discord pilih „Tanya“ atau „Izinkan“.
+234	Untuk klik kanan → „Ringkas halaman“ dan „Jelaskan“.
+235	Tidak ada mode baca untuk halaman ini
+236	SELURUH PC
+237	Galaksi
+238	Gaming
+239	Gaming dengan semua ekstra – atau browser biasa yang tenang. Bisa diganti kapan saja.
+240	Browser gaming kembali 🎮
+241	Mode gaming
+242	Mode gaming (Ctrl+Shift+G)
+243	Mode gaming aktif – tab latar dibekukan, prioritas browser diturunkan
+244	Mode gaming mati
+245	Matikan mode gaming
+246	Nyalakan mode gaming
+247	Tampilkan utuh
+248	Seluruh halaman
+249	Berbahaya
+250	Situs berbahaya diblokir
+251	Alamat palsu?
+252	Dimuat – terlalu besar untuk diingat, pilih lagi setelah mulai ulang
+253	Hapus seluruh riwayat
+254	Pulihkan tab yang ditutup
+255	Tersimpan ✓
+256	Kemarin
+257	Jangan masukkan kata sandi, data bank, atau kartu di sini.
+258	Jangan masukkan kata sandi, kode, atau data kartu di sini.
+259	Kisi
+260	Google membuat profil – DuckDuckGo, Brave, dan Startpage tidak
+261	Google Terjemahan
+262	Simpan graf sebagai file
+263	Muat file graf
+264	Ukuran
+265	Ukuran saat disimpan
+266	Perlu diketahui: Avast memeriksa alamat halaman yang kamu kunjungi. Boleh: membaca dan mengubah data di semua situs web.
+267	Selamat malam
+268	Selamat malam
+269	Selamat malam – waktunya main.
+270	Selamat pagi
+271	Selamat pagi – siap main?
+272	Mode HTTPS · bisa dimatikan di GX Control pada „Perlindungan“
+273	Jaga browser tetap kecil agar game-mu dapat seluruh tenaga.
+274	Tidak berhasil
+275	Terang
+276	Terang / gelap
+277	Kecerahan
+278	Kecerahan dan kontras
+279	Hari ini
+280	Latar
+281	Latar halaman awal
+282	Latar diatur ✓
+283	Tampilkan catatan
+284	Tambah
+285	Beranda
+286	Sembunyikan alamat IP di WebRTC
+287	Alamat IP di WebRTC disembunyikan
+288	Saya paham risikonya – tetap buka situs
+289	Di latar belakang
+290	Tampilkan di folder
+291	Perlihatkan di folder
+292	Selalu di atas
+293	Selalu di atas (aktif)
+294	Selalu di atas (mati)
+295	Impor gagal:
+296	Impor
+297	Menulis ke papan klip
+298	Buka di tab baru
+299	Buka di tab pribadi
+300	Dalam bahasa apa Elektron harus berbicara denganmu? Bendera menunjukkan negara tempat bahasa itu digunakan.
+301	Memblokir konten di situs web
+302	Instal dan mulai
+303	Terinstal
+304	Balikkan
+305	Ya
+306	Blokir JavaScript di situs ini
+307	Setiap file yang diunduh diperiksa dengan Windows Defender.
+308	Setiap hari
+309	Cari pembaruan sekarang
+310	Mulai ulang sekarang
+311	AI di bilah samping
+312	Kaleidoskop
+313	Tautannya datang lewat email, SMS, atau Discord? Kemungkinan besar itu penipuan.
+314	Kamera dan mikrofon
+315	Tidak ada koneksi internet. Periksa Wi-Fi atau kabel jaringan.
+316	Tidak ada saran
+317	Tidak ada koneksi aman
+318	Klik bintang di bilah alamat atau tekan Ctrl+D.
+319	Klik untuk melepas
+320	Tidak dapat dimuat:
+321	Kontras
+322	Salin
+323	Lingkaran
+324	Jangan unduh apa pun dari sini.
+325	Muat
+326	Hentikan pemuatan
+327	Jalankan antivirus jika kamu ragu.
+328	Performa
+329	Kartu grafis kuat
+330	Mode baca
+331	Mode baca (F9)
+332	Buka mode baca
+333	Bookmark
+334	Cadangkan bookmark dan pengaturan …
+335	Cari bookmark
+336	Hapus bookmark (Ctrl+D)
+337	Bookmark dihapus
+338	Bookmark muncul di sini – klik bintang di bilah alamat.
+339	Bookmark disimpan
+340	Tambah bookmark (Ctrl+D)
+341	Simpan bookmark dan pengaturan sebagai file – mis. untuk PC baru.
+342	Cadangkan bookmark dan pengaturan
+343	Tampilkan bilah bookmark
+344	Sembunyikan bilah bookmark
+345	Hapus 24 jam terakhir
+346	Hapus satu jam terakhir
+347	Jika browser melewati batas, tab latar yang paling boros akan dibekukan.
+348	Batas
+349	Linear
+350	Lebar garis
+351	Buka tautan di layar terbagi
+352	Buka tautan di tab baru
+353	Buka tautan di tab pribadi
+354	Salin tautan
+355	Tautan disalin – kirim ke teman-temanmu!
+356	Bersihkan tautan
+357	Muat tautan lebih dulu
+358	Tautan sedang dibersihkan
+359	Kosongkan daftar
+360	Daftar terlalu pendek
+361	Alamat lokal tidak diizinkan
+362	Mulai
+363	Selalu memuat halaman secara terenkripsi dan memberi peringatan jika situs tidak bisa.
+364	Memuat gambar dari internet
+365	Memuat …
+366	Hapus
+367	Hapus (Del)
+368	Perangkat MIDI
+369	Terjemahkan teks yang dipilih atau seluruh halaman.
+370	Masker
+371	Masker (terang = terlihat)
+372	Keamanan maksimum
+373	Lebih privat: sekarang kamu mencari dengan DuckDuckGo, bukan Google
+374	Menu
+375	Mikrofon
+376	Saat kamu meminimalkan browser untuk bermain, semua tab tanpa suara beristirahat.
+377	Menit
+378	Campur
+379	Cari dengan Google
+380	Cari dengan Google atau masukkan alamat
+381	Jelaskan dengan {0}
+382	Cari dengan {0}
+383	Cari dengan {0} atau masukkan alamat
+384	Cari dengan {0}: „{1}“
+385	Mode
+386	Senin – Jumat
+387	Kalikan
+388	Pola
+389	Cari pembaruan
+390	Nama
+391	Nebula
+392	Layar
+393	Tidak
+394	Neon
+395	Kisi neon
+396	Pembatas jaringan
+397	Memantau lalu lintas jaringan
+398	Memblokir dan mengubah lalu lintas jaringan
+399	Baru
+400	Muat ulang
+401	Muat ulang (F5)
+402	Mulai ulang dan instal
+403	Tab baru
+404	Tab baru (Ctrl+T)
+405	Tab pribadi baru
+406	Gambar baru yang kosong
+407	Mulai ulang
+408	Tidak ditemukan
+409	Tidak disimpan
+410	Tidak mungkin
+411	Tidak aman
+412	Tidak ada yang ditemukan
+413	Satu langkah lagi: kami menyarankan ekstensi ini untuk keamanan lebih. Pilih yang kamu mau – kamu bisa menghapusnya kapan saja di „Ekstensi“.
+414	Satu ronde lagi? Sudah tengah malam.
+415	Belum ada unduhan
+416	Belum ada ekstensi yang terinstal. Buka Chrome Web Store dan klik „Tambah“ di sana.
+417	Belum ada bookmark
+418	Alamat pembaruan belum diisi (GX Control → Pembaruan)
+419	Cari node …
+420	Normal
+421	Browser normal – elemen gaming disembunyikan
+422	Hanya file dengan (kosong = semua)
+423	Hanya HTTPS
+424	Hanya sekali sehari
+425	Hanya alamat http dan https
+426	Memakai GPU khusus (mis. RTX) alih-alih grafis prosesor.
+427	Hasil berikutnya (F3)
+428	Lanjut tanpa ekstensi
+429	Opsional
+430	Opsi
+431	Tutup panel
+432	Pengelola kata sandi
+433	Perlindungan phishing dan malware
+434	Ukuran piksel
+435	Plasma (warna-warni, beranimasi)
+436	Aurora
+437	Pribadi
+438	Mesin pencari privat
+439	Tab pribadi
+440	Tab pribadi – riwayat, cookie, dan login hilang begitu kamu menutup semua tab pribadi.
+441	Tab pribadi – tanpa riwayat dan cookie setelah ditutup
+442	Program diperkuat
+443	Mengubah pengaturan proxy
+444	Memeriksa unduhan dengan Windows Defender (tidak tersedia di PC ini).
+445	Titik
+446	Sumber
+447	RAM {0} dari {1}
+448	Pembatas RAM
+449	Pergeseran RGB (glitch)
+450	Derau / awan
+451	Klik kanan pada tab juga menawarkan semua ini.
+452	Klik kanan atau spasi menambah node. Seret dari titik di kanan sebuah node ke titik di kiri node berikutnya. Semua yang akhirnya sampai di
+453	Klik kanan atau spasi: tambah node · Seret latar: geser · Roda mouse: zoom · Del: hapus
+454	Retro
+455	Gunung retro
+456	Memberi tahu setiap situs web lewat Global Privacy Control bahwa datamu tidak boleh dijual atau dibagikan.
+457	Papan catur
+458	Malware diblokir
+459	Mematikan turbo JavaScript (JIT) – sasaran serangan browser yang paling umum. Situs web jadi lebih lambat, beberapa game browser tidak berjalan lagi. Berlaku setelah mulai ulang.
+460	Tidurkan (bebaskan RAM)
+461	Sederhana
+462	Tutup
+463	Tutup (Esc)
+464	Akses cepat
+465	Sudah jam 22 – besok sekolah/kerja 😉
+466	Perbesar teks
+467	Perkecil teks
+468	Perlindungan
+469	Perlindungan untuk situs ini (klik)
+470	Nyalakan lagi perlindungan untuk situs ini
+471	Perlindungan untuk {0}
+472	Perlindungan dari fingerprinting
+473	Daftar perlindungan {0}:
+474	Hitam-putih
+475	Jendela mengambang
+476	Semoga harimu menyenangkan
+477	Tangkapan layar
+478	Tangkapan layar (Ctrl+Shift+X) – klik kanan: seluruh halaman
+479	Tangkapan layar (seluruh halaman)
+480	Tangkapan layar (area terlihat)
+481	Tangkapan layar gagal
+482	Tangkapan layar disalin – tempel di Discord dengan Ctrl+V
+483	Ambil tangkapan layar
+484	Halaman
+485	Terjemahkan halaman ke bahasa Indonesia
+486	Lupakan situs saat ditutup (hapus cookie)
+487	Cetak halaman …
+488	Situs tidak berfungsi? Matikan perlindungan di sini
+489	Ringkas halaman dengan {0}
+490	Situs tidak dapat dijangkau
+491	Periksa halaman
+492	Tukar sisi
+493	Buka bilah samping
+494	Rasio aspek pratinjau
+495	Detik
+496	Server merespons dengan kesalahan {0}
+497	Shader dan gambar
+498	Koneksi aman
+499	DNS aman
+500	Keamanan
+501	Pemeriksaan keamanan
+502	Cadangkan dan pulihkan
+503	Cadangkan …
+504	Cadangan disimpan
+505	Pulihkan cadangan
+506	Pulihkan cadangan …
+507	Area terlihat
+508	Cara kerjanya
+509	Cara kerjanya:
+510	Lainnya
+511	Simpan
+512	Gagal menyimpan:
+513	Menyimpan kata sandimu dengan aman dan mengisinya otomatis.
+514	Menyimpan kata sandimu secara terenkripsi dan mengisinya otomatis di situs web. Gratis, sumber terbuka.
+515	Layar terbagi
+516	Layar terbagi (Ctrl+Shift+S)
+517	Layar terbagi aktif – seret garis pemisah untuk menyesuaikan
+518	Akhiri layar terbagi
+519	Akhiri layar terbagi (Ctrl+Shift+S)
+520	Bahasa
+521	Cari bahasa atau negara …
+522	Bahasa Windows
+523	Bahasa Windows: {0}
+524	Pulihkan default
+525	Mulai
+526	Halaman awal (Alt+Home)
+527	Kontrol
+528	Regangkan
+529	Garis-garis
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T tab baru · Ctrl+D bookmark · Ctrl+H riwayat · F11 layar penuh
+537	Ctrl+Shift+G memulai mode gaming · Ctrl+T tab baru · F11 layar penuh
+538	Studio
+539	Tingkat
+540	Bisukan
+541	Kekuatan
+542	Gangguan
+543	Mencari pembaruan …
+544	Mesin pencari
+545	Saran pencarian saat mengetik di bilah alamat (dikirim ke mesin pencari)
+546	Saturasi
+547	Tab
+548	Tab mogok – klik untuk memuat ulang
+549	Tab sebagai jendela mengambang
+550	Tab sebagai jendela mengambang (Ctrl+Shift+F)
+551	Tutup tab
+552	Tab sekarang melayang di atas semua jendela
+553	Bisukan tab
+554	Buka tab
+555	Tab
+556	Tutup tab di sebelah kanan
+557	Pulihkan tab
+558	Hari
+559	Tombol
+560	Pintasan keyboard
+561	Bagian
+562	Kecepatan
+563	Teks
+564	Teks (kutipan):
+565	Judul:
+566	Suara semua tab
+567	Nyalakan suara
+568	Hijau beracun
+569	Transparansi
+570	Twitch terbuka – mode gaming aktif 🎮
+571	Waktu (JJ:MM)
+572	Ultraviolet
+573	Balik
+574	Alihkan
+575	Alamat tidak valid
+576	Buram
+577	Tidak ada gambar di alamat ini (tips: klik kanan gambar → „Salin alamat gambar“)
+578	Buka tanpa enkripsi
+579	Pembaruan siap – mulai ulang browser
+580	Pembaruan ekstensi gagal
+581	Instal pembaruan
+582	Instal pembaruan dan mulai ulang
+583	Pembaruan {0} siap
+584	Pembaruan {0} sedang diunduh di latar belakang …
+585	Alamat pembaruan (folder di situs web-mu)
+586	Modul pembaruan tidak ada
+587	Pencarian pembaruan gagal: {0}
+588	Pembaruan
+589	Pembaruan berfungsi di versi yang terinstal
+590	Dilarang
+591	Perbesar
+592	Perkecil
+593	Riwayat
+594	Cari riwayat
+595	Pergeseran
+596	Geser / zoom / putar
+597	Mengenkripsi situs mana yang kamu buka (DNS melalui HTTPS dengan Quad9 dari Swiss) dan juga memblokir alamat malware yang dikenal.
+598	Versi
+599	Versi {0} sudah terbaru.
+600	Versi {0} siap – akan diinstal saat mulai berikutnya.
+601	Mengunduh versi {0} … {1} %
+602	Versi {0} · Chromium {1}
+603	Versi {0} · Alamat pembaruan belum diisi.
+604	Versi {0} · Pembaruan tersedia di versi Windows yang terinstal.
+605	Versi {0} · Pembaruan datang otomatis lewat Microsoft Store.
+606	Kelola
+607	Lepas video
+608	Lepas video (gambar-dalam-gambar)
+609	Lepas video – gambar-dalam-gambar (Ctrl+Shift+P)
+610	Lepas video otomatis
+611	Iklan video dibisukan dan langsung dilewati, ruang iklan menghilang.
+612	Vinyet
+613	Virus ditemukan di {0} – Windows Defender menghapus file
+614	Virus ditemukan – Windows Defender menghapus file
+615	Layar penuh
+616	Dari
+617	Dari situs ini telah disebarkan virus atau program jahat lainnya. Elektron menghentikannya sebelum ada yang masuk ke PC-mu.
+618	Maju
+619	Maju (Alt+→)
+620	Hasil sebelumnya (Shift+F3)
+621	Saran
+622	Sarang lebah
+623	Probabilitas (%)
+624	Juga memperingatkan situs berbahaya. Di samping Malwarebytes biasanya tidak perlu – keduanya melakukan hal yang sama.
+625	Memperingatkan situs berbahaya dan phishing.
+626	Peringatan alamat palsu
+627	Tunggu
+628	Apa yang terjadi saat situs ingin memakai kameramu.
+629	WebGL 2 tidak tersedia di PC ini.
+630	Webcam
+631	Mengendalikan situs web dari jarak jauh (debugger)
+632	Situs web lebih sulit mengenalimu dari PC-mu (canvas, nama kartu grafis, inti CPU).
+633	Situs web tidak bisa lagi membaca alamat IP lokalmu lewat teknologi video chat – bahkan di balik VPN.
+634	Jika kamu ganti tab atau meminimalkan browser, video terus berjalan di jendela kecil (gambar-dalam-gambar).
+635	Kelembutan
+636	Bookmark lainnya
+637	Gelombang
+638	Tampilkan lebih sedikit
+639	Saat mode gaming aktif
+640	Saat mode gaming …
+641	Saat hari
+642	Saat waktu di antara
+643	Saat tab aktif berisi
+644	Saat browser dimulai
+645	Jika kamu ingin ke {0}, gunakan tombol di bawah.
+646	Saat unduhan selesai
+647	Saat halaman dibuka
+648	Pemblokir iklan dan pelacak
+649	Pemblokir iklan
+650	Pemblokir iklan tidak dapat dimuat:
+651	Perusahaan iklan tidak bisa lagi melacakmu di berbagai situs web. Login, captcha, dan pembayaran tetap berfungsi.
+652	Iklan/pelacak diblokir: {0} · Cookie pelacak ditolak: {1}
+653	Alat
+654	Nyalakan lagi
+655	Dipulihkan: {0} bookmark baru dan pengaturanmu
+656	Pulihkan …
+657	Ulangi (ubin)
+658	Selamat datang
+659	Selamat datang di Elektron
+660	Windows Defender tidak ditemukan
+661	Sudut
+662	Jika batas terlampaui, tab yang paling lama tidak dipakai akan tidur.
+663	Menginstal …
+664	Yakin hapus seluruh riwayat?
+665	Yakin buka? Situs ini dikenal berbahaya.
+666	Akhir pekan
+667	Lewati iklan YouTube
+668	Menampilkan lagi jumlah dislike di bawah video YouTube.
+669	Baris
+670	Waktu
+671	Waktunya istirahat! 🎮
+672	Waktu habis
+673	Waktu pemuatan habis
+674	Seret untuk menyesuaikan · Klik ganda: 50/50
+675	Zoom
+676	Atur ulang zoom
+677	Atur ulang zoom (Ctrl+0)
+678	Acak
+679	Untuk mencoba: tombol
+680	Beralih ke browser gaming
+681	Tambahkan ke kamus
+682	Beralih ke browser normal
+683	Pada jam
+684	Ke situs asli: {0}
+685	Kembali
+686	Kembali (Alt+←)
+687	Kembali ke tempat aman
+688	Kembali ke browser
+689	Kembalikan ke browser
+690	Kembali ke Google
+691	pada pemicu.
+692	, terlihat di atas. Gambar dari internet: klik kanan gambar → „Salin alamat gambar“ dan tempel di node.
+693	mikrofonmu
+694	kameramu
+695	layarmu
+696	lokasimu
+697	file bookmark tidak dapat dibaca.
+698	papan klip
+699	tanpa batas
+700	bukan cadangan Elektron
+701	membaca dan mengubah
+702	tidak diizinkan
+703	hanya di versi yang terinstal
+704	mis. .exe atau .zip
+705	mis. youtube.com
+706	{0} unduhan sedang berjalan – Ctrl+J
+707	{0} bookmark diambil dari {1}.
+708	{0} cookie pelacak ditolak
+709	{0} tautan pelacak dijinakkan
+710	{0} tidak merespons tepat waktu.
+711	{0} menolak koneksi.
+712	{0} selesai – tidak ada virus
+713	{0} tidak dapat dimuat.
+714	{0} tidak dapat diinstal. Periksa koneksi internetmu dan coba lagi – atau instal nanti lewat Menu → Chrome Web Store.
+715	{0} ingin mengakses {1}.
+716	Mulai {0}
+717	{0} dari {1} fungsi perlindungan aktif.
+718	{0} dilupakan – cookie dan data situs dihapus
+719	{0} – tidak dapat dijangkau
+720	· Otomatis
+721	· sedang diperiksa dari virus …
+722	· ✓ tidak ada virus (Windows Defender)
+723	Ubah …
+724	Sebaiknya buka bank, Steam, Discord, dll. langsung lewat bilah alamat atau bookmark.
+725	Jangan buka file yang sudah kamu dapat dari situs ini.
+726	Buka
+727	Saat dimulai, membuka tab dari terakhir kali – tab baru dimuat saat kamu mengkliknya.
+728	Tentang {0}
+729	Lapisan
+730	Terjemahkan
+731	Terjemahan tanpa jaminan – menemukan kesalahan? Laporkan di GitHub, kami akan senang memperbaikinya.
+732	Melewati bagian sponsor di video YouTube.
+733	– gambar-dalam-gambar
+734	– layar terbagi
+735	– tab tetap di atas game-mu
+736	– dibekukan
+737	– pribadi
+738	– tidur (klik untuk memuat)
+739	– jendela mengambang (klik untuk menampilkan)
+740	– dua tab berdampingan
+741	Sinyal „Jangan jual“ (GPC)
+742	Hapus „{0}“?
+743	„{0}“ telah dimuat.
+744	„{0}“ telah ditambahkan
+745	Tambahkan „{0}“ ke Elektron?
+746	… dimatikan
+747	… dinyalakan
+748	← Halaman asli
+749	▶ Uji sekarang
+750	✓ Dijalankan
+751	🎮 Gaming
