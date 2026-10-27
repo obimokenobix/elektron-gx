@@ -1,0 +1,54 @@
+﻿Elektron – Lizenz und Datenschutz
+==================================
+
+Elektron ist kostenlos und quelloffen (MIT-Lizenz).
+Quellcode: https://github.com/obimokenobix/elektron-gx
+
+DATENSCHUTZ
+Elektron hat keine Konten, sammelt keine Nutzungsdaten und zeigt keine Werbung.
+Verlauf, Lesezeichen und Einstellungen bleiben auf deinem PC.
+
+Der Browser verbindet sich mit diesen Diensten:
+- GitHub: Updates und Schutzlisten (Werbeblocker, Phishing- und Malware-Listen)
+- abuse.ch (URLhaus): Liste von Schadsoftware-Seiten
+- Quad9: sicheres DNS (DNS über HTTPS)
+- Die gewählte Suchmaschine (Standard: DuckDuckGo): Suche und Suchvorschläge
+- Chrome Web Store (Google): nur wenn du Erweiterungen installierst
+- Steam (Valve): Titelbilder deiner Spiele auf der Startseite
+
+Alles davon lässt sich in GX Control abschalten oder ändern
+(Updates, sicheres DNS, Suchvorschläge, Suchmaschine, Schutzlisten).
+
+Vollständige Datenschutzerklärung:
+https://obimokenobix.github.io/elektron-gx/datenschutz.html
+
+ÄNDERUNGEN AN WINDOWS
+Der Installer legt Elektron in deinem Benutzerordner ab, erstellt Verknüpfungen
+(Desktop, Startmenü) und meldet Elektron bei Windows als Browser an, damit du ihn
+unter „Standard-Apps“ auswählen kannst. Deinstallieren:
+Einstellungen > Apps > Installierte Apps > Elektron > Deinstallieren.
+
+SICHERHEIT
+Sicherheitslücken bitte vertraulich melden:
+https://obimokenobix.github.io/elektron-gx/sicherheit.html
+
+MIT-LIZENZ
+Copyright (c) 2026 Elektron
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

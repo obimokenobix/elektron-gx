@@ -90,7 +90,8 @@
       "artifactName": "Elektron-Setup-${version}.exe",
       "deleteAppDataOnUninstall": false,
       "include": "installer.nsh",
-      "runAfterFinish": true
+      "runAfterFinish": true,
+      "license": "build/installer-info.txt"
     },
     "publish": [
       {

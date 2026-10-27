@@ -1317,7 +1317,7 @@ function showShieldMenu() {
     const ad = shieldOn(url, 'adblock'), co = shieldOn(url, 'cookies'), fp = shieldOn(url, 'fp');
     items.push(
       { label: `Schutz für ${site}`, enabled: false },
-      { label: `${ads} Werbung/Tracker blockiert · ${ck} Tracking-Cookie${ck === 1 ? '' : 's'} abgewehrt`, enabled: false },
+      { label: `Werbung/Tracker blockiert: ${ads} · Tracking-Cookies abgewehrt: ${ck}`, enabled: false },
       { type: 'separator' },
       { label: 'Werbe- und Tracker-Blocker', type: 'checkbox', checked: settings.adblock && ad, enabled: settings.adblock, click: () => setSiteShield(url, 'adblock', !ad) },
       { label: 'Fremd-Cookies blockieren', type: 'checkbox', checked: settings.blockThirdPartyCookies && co, enabled: settings.blockThirdPartyCookies, click: () => setSiteShield(url, 'cookies', !co) },

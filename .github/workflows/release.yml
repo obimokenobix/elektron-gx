@@ -15,6 +15,10 @@ permissions:
 jobs:
   windows:
     runs-on: windows-latest
+    env:
+      # Signieren über SignPath (kostenlos für Open Source) – aktiv, sobald das Secret SIGNPATH_API_TOKEN
+      # und die Variable SIGNPATH_ORGANIZATION_ID im Repository eingetragen sind. Sonst wie bisher unsigniert.
+      SIGN: ${{ secrets.SIGNPATH_API_TOKEN != '' && vars.SIGNPATH_ORGANIZATION_ID != '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -43,8 +47,12 @@ jobs:
         run: npm ci
 
       - name: Windows-Installer bauen
-        if: steps.ver.outputs.exists == 'false'
+        if: steps.ver.outputs.exists == 'false' && env.SIGN != 'true'
         run: npx electron-builder --win --publish never
+
+      - name: Programm bauen (zum Signieren)
+        if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
+        run: npx electron-builder --win --dir --publish never
 
       - name: Starttest – startet die gebaute Version wirklich?
         if: steps.ver.outputs.exists == 'false'
@@ -61,6 +69,69 @@ jobs:
           $r = Get-Content $out | ConvertFrom-Json
           if (-not $r.ok) { throw 'Starttest fehlgeschlagen' }
 
+      # ---------------------------------------------------------------- Signieren (SignPath)
+      - name: Programm zum Signieren hochladen
+        id: up-app
+        if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: unsigniert-programm
+          path: dist/win-unpacked/
+
+      - name: Programm signieren (SignPath – Freigabe nötig)
+        if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
+        uses: signpath/github-action-submit-signing-request@v1
+        with:
+          api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+          organization-id: ${{ vars.SIGNPATH_ORGANIZATION_ID }}
+          project-slug: ${{ vars.SIGNPATH_PROJECT_SLUG || 'elektron' }}
+          signing-policy-slug: ${{ vars.SIGNPATH_POLICY_SLUG || 'release-signing' }}
+          artifact-configuration-slug: programm
+          github-artifact-id: ${{ steps.up-app.outputs.artifact-id }}
+          wait-for-completion: true
+          wait-for-completion-timeout-in-seconds: 21600
+          output-artifact-directory: dist/win-unpacked-signiert
+
+      - name: Installer aus dem signierten Programm bauen
+        if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
+        shell: pwsh
+        run: |
+          node scripts/check-fuses.js "dist/win-unpacked-signiert/Elektron.exe"
+          if ($LASTEXITCODE -ne 0) { throw "Sicherheits-Schalter fehlen nach dem Signieren" }
+          npx electron-builder --win nsis --prepackaged dist/win-unpacked-signiert --publish never
+
+      - name: Installer zum Signieren hochladen
+        id: up-setup
+        if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: unsigniert-installer
+          path: dist/Elektron-Setup-${{ steps.ver.outputs.version }}.exe
+
+      - name: Installer signieren (SignPath – Freigabe nötig)
+        if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
+        uses: signpath/github-action-submit-signing-request@v1
+        with:
+          api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+          organization-id: ${{ vars.SIGNPATH_ORGANIZATION_ID }}
+          project-slug: ${{ vars.SIGNPATH_PROJECT_SLUG || 'elektron' }}
+          signing-policy-slug: ${{ vars.SIGNPATH_POLICY_SLUG || 'release-signing' }}
+          artifact-configuration-slug: installer
+          github-artifact-id: ${{ steps.up-setup.outputs.artifact-id }}
+          wait-for-completion: true
+          wait-for-completion-timeout-in-seconds: 21600
+          output-artifact-directory: dist/signiert
+
+      - name: Signierten Installer übernehmen
+        if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
+        shell: pwsh
+        run: |
+          Copy-Item "dist/signiert/Elektron-Setup-${{ steps.ver.outputs.version }}.exe" "dist/" -Force
+          node scripts/update-latest-yml.js dist
+          $sig = Get-AuthenticodeSignature "dist/Elektron-Setup-${{ steps.ver.outputs.version }}.exe"
+          Write-Host "Signatur: $($sig.Status) – $($sig.SignerCertificate.Subject)"
+          if ($sig.Status -ne 'Valid') { throw "Installer ist nicht gültig signiert" }
+
       - name: Release veröffentlichen
         if: steps.ver.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
@@ -71,10 +142,10 @@ jobs:
           make_latest: true
           body: |
             **Installieren:** `Elektron-Setup-${{ steps.ver.outputs.version }}.exe` herunterladen und starten.
-            Windows SmartScreen fragt evtl. nach → „Weitere Informationen“ → „Trotzdem ausführen“.
+            ${{ env.SIGN == 'true' && 'Der Installer ist digital signiert (SignPath Foundation).' || 'Windows SmartScreen fragt evtl. nach → „Weitere Informationen“ → „Trotzdem ausführen“.' }}
 
             Bereits installierte Browser aktualisieren sich automatisch.
           files: |
-            dist/*.exe
+            dist/Elektron-Setup-*.exe
             dist/*.blockmap
             dist/latest.yml

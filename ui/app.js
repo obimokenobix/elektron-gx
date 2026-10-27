@@ -295,7 +295,7 @@ function renderToolbar() {
   dl.classList.toggle('active', d.active > 0);
   dl.classList.toggle('indeterminate', d.active > 0 && d.progress == null);
   dl.querySelector('.prog').style.strokeDashoffset = d.progress != null ? String(100 - d.progress * 100) : '';
-  dl.title = d.active ? `${d.active} Download${d.active > 1 ? 's' : ''} läuft – Strg+J` : 'Downloads (Strg+J)';
+  dl.title = d.active ? (d.active === 1 ? '1 Download läuft – Strg+J' : `${d.active} Downloads laufen – Strg+J`) : 'Downloads (Strg+J)';
 
   // Erweiterungen: Symbole für den aktiven Tab anzeigen
   const acts = $('#ext-actions');
