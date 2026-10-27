@@ -1,0 +1,752 @@
+0	(modrá) alebo
+1	(fialová). Zmeny sa ukladajú automaticky a platia okamžite.
+2	(červená) – napr. „Keď sa otvorí stránka“. Spoj bielu šípku s
+3	Prebieha 1 sťahovanie – Ctrl+J
+4	1080 × 1080 (štvorec)
+5	1080 × 1920 (mobil)
+6	1920 × 1080 (Full HD)
+7	A (dole)
+8	Zrušiť
+9	Zrušené
+10	Postupy
+11	Postupy aktívne
+12	Sčítanie (žiara)
+13	Adresa
+14	Adresa obsahuje
+15	Adresa, napr. roblox.com
+16	Adresa:
+17	Adresa: {0}
+18	Akcie
+19	Zavrieť aktívnu kartu
+20	Farba zvýraznenia
+21	Čítať a meniť všetky údaje na všetkých weboch
+22	Všetky záložky
+23	Všetky záložky (Ctrl+Shift+O)
+24	Spravovať všetky záložky …
+25	Všetky nastavenia ochrany …
+26	Všetky ochranné funkcie sú aktívne.
+27	Odpojiť všetky spojenia
+28	Aktualizovať všetko
+29	Zobraziť všetko
+30	Každých pár minút
+31	Zobraziť všetkých {0}
+32	Vybrať všetko
+33	Všetko vymazať a začať odznova?
+34	Všetko, čo môžeš v Elektrone nastaviť.
+35	Uložiť ako obrázok (PNG)
+36	Nastaviť ako predvolený prehliadač …
+37	Nastaviť ako pozadie úvodnej stránky
+38	Otvoriť ako plávajúce okno
+39	Spravovať ostatné rozšírenia
+40	Zavrieť ostatné karty
+41	Animácia
+42	Animované
+43	Typ
+44	Hľadať na stránke
+45	Hľadať na stránke …
+46	Na tejto stránke nie je čo blokovať
+47	Na tejto stránke nehrá žiadne video
+48	Importovať z Chrome
+49	Importovať z Edge
+50	Importovať z Opera GX
+51	Odstrániť zo zoznamu
+52	Vyplniť
+53	Výstup
+54	Spúšťače
+55	Vypnúť
+56	Vystrihnúť
+57	Automatika
+58	Automaticky
+59	Aktualizovať automaticky
+60	B (hore)
+61	Nadviaže spojenie už vtedy, keď je myš na odkaze – rýchlejšie, ale stránka vidí tvoju IP adresu ešte pred kliknutím.
+62	Upraviť
+63	Upraviť …
+64	Podmienky
+65	Ukončiť
+66	Obmedzuje šírku pásma všetkých kariet, aby tvoj ping pri hraní zostal stabilný.
+67	Pri minimalizácii zmraziť
+68	Príklad
+69	Načítať príklad? Tvoje aktuálne postupy budú nahradené.
+70	Obľúbené
+71	Upozornenia
+72	Zobrazovať upozornenia
+73	Povolenie
+74	Pripravený hrať?
+75	Podvodná stránka zablokovaná
+76	Pohyb
+77	Obrázok
+78	Vybrať obrázok …
+79	Ponechať obrázok
+80	Otvoriť obrázok na novej karte
+81	Obrázok je príliš veľký (max. 25 MB)
+82	Obrázok sa nepodarilo načítať
+83	Kopírovať obrázok
+84	Uložiť obrázok …
+85	Obrázok z PC
+86	Adresa obrázka (https://…)
+87	Zadaj adresu obrázka a stlač „Načítať“
+88	Obrázky
+89	Do
+90	Zadaj adresu začínajúcu https://
+91	Blokovať
+92	Blokuje podvodné stránky, malvér, predplatné pasce a podvody s falošnou technickou podporou. Zadarmo, bez účtu.
+93	Blokuje reklamy, sledovače, vyskakovacie okná a cookie lišty – zatiaľ zastavených {0} požiadaviek.
+94	Blokuje reklamy, sledovače, reklamné vyskakovacie okná a cookie lišty.
+95	Blokuje známe podvodné stránky a stránky šíriace vírusy.
+96	Blokuje známe podvodné stránky a stránky šíriace vírusy. Zoznam sa práve načítava …
+97	Blokuje {0} známych podvodných a vírusových stránok. Zoznam sa aktualizuje každých 6 hodín.
+98	Vyžaduje bezplatný účet Bitwarden. Smie: čítať a meniť údaje na všetkých weboch (na vypĺňanie).
+99	Prehliadač je aktuálny
+100	Vyťaženie prehliadača
+101	Hry v prehliadači bežia bez V-Sync nad obnovovacou frekvenciou. Môže spôsobiť trhanie obrazu.
+102	Štýl prehliadača
+103	Údaje prehliadania vymazané
+104	Vymazať údaje prehliadania teraz
+105	Vymazať údaje prehliadania
+106	Obmedzovač CPU
+107	Používaj ChatGPT priamo v prehliadači.
+108	Internetový obchod Chrome nie je dostupný
+109	Otvoriť Internetový obchod Chrome
+110	Claude ako rozšírenie – alebo jednoducho cez bočný panel.
+111	Kód
+112	Spúšťať kód na weboch
+113	Komiks / plagát
+114	Pri ukončení vymazať cookies a prihlásenia
+115	Čítať a meniť cookies
+116	Potom
+117	Smie:
+118	Smie: čítať a meniť údaje na všetkých weboch (na kontrolu a blokovanie).
+119	Obrázok je príliš veľký (max. 25 MB)
+120	Bezpečnostný certifikát {0} nie je dôveryhodný.
+121	Bezpečnostný certifikát {0} je neplatný.
+122	Toto nie je platný obrázok
+123	Toto nie je súbor postupu.
+124	Toto nie je súbor shadera.
+125	Súbor bol vymazaný alebo presunutý
+126	Údaje na
+127	Meniť nastavenia súkromia
+128	Krytie
+129	Čítať a meniť tvoje záložky
+130	Tvoje hry
+131	Čítať a meniť tvoju históriu prehliadania
+132	Čítať tvoju históriu prehliadania a otvorené karty
+133	Zistiť tvoju polohu
+134	Herný prehliadač. Chromium {0} · Electron {1}
+135	História je prázdna
+136	Vzhľad
+137	Pracovná plocha
+138	Podrobnosti
+139	Hustota
+140	Adresa sa na skutočnú stránku {0} mätúco podobá – typický trik podvodníkov. Pozri sa pozorne: jedno písmeno je prehodené, nahradené alebo pochádza z inej abecedy.
+141	Adresa musí začínať https://
+142	Adresa {0} sa nenašla. Je napísaná správne?
+143	Rozšírenie nepotrebuje žiadne zvláštne povolenia.
+144	Rozšírenie môže: •
+145	Rozšírenia pochádzajú priamo z Internetového obchodu Chrome a patria svojim výrobcom (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Stránku sa nepodarilo načítať.
+147	Stránka nepodporuje zabezpečené spojenie (HTTPS). Ostatní v tej istej sieti – napríklad na verejnej Wi-Fi – by mohli čítať, čo tu vidíš a zadávaš.
+148	Čítať schránku
+149	Táto adresa vyzerá ako
+150	Tento súbor sa nepodarilo prečítať
+151	Táto stránka nie je šifrovaná
+152	Táto stránka je na zozname nebezpečných stránok
+153	Táto stránka je na zozname známych phishingových stránok. Takéto stránky často vyzerajú pravo, ale chcú ukradnúť tvoje heslá alebo bankové údaje.
+154	Táto stránka šíri malvér
+155	Toto spojenie nie je šifrované
+156	Toto video sa nedá vysunúť
+157	Rozdiel
+158	Sťahovanie
+159	Sťahovanie zablokované: {0} šíri známy malvér
+160	Sťahovanie zlyhalo: {0}
+161	Stiahnuté: {0}
+162	Sťahovanie spustené: {0}
+163	Otvoriť priečinok stiahnutých súborov
+164	Stiahnuté súbory
+165	Stiahnuté súbory (Ctrl+J)
+166	Kontrolovať stiahnuté súbory na vírusy
+167	Hľadať v stiahnutých
+168	Spravovať stiahnuté súbory
+169	Stiahnuté súbory sa kontrolujú
+170	Otočiť (°)
+171	Otáča sa
+172	Otočenie (°)
+173	Potom budeš všade odhlásený.
+174	DuckDuckGo, Brave Search a Startpage o tebe nevytvárajú profily. Startpage zobrazuje výsledky Googlu bez sledovania.
+175	Tmavý
+176	Tmavý vzhľad pre každý web.
+177	Duplikovať
+178	Duplikovať (Ctrl+D)
+179	Efekty
+180	Vlastný shader (GLSL)
+181	Vlastný obrázok
+182	Vlastný obrázok …
+183	Vybrať vlastný obrázok na pozadie
+184	Postup začína
+185	Zmraziť
+186	Zafarbiť
+187	Vložiť
+188	Prispôsobiť
+189	Zapnúť
+190	Nastavenia
+191	Nastavenia sa nepodarilo uložiť:
+192	Pridávať položky do kontextovej ponuky
+193	Ochrana Elektron · Rozpoznanie dvojníkov priamo na tvojom PC
+194	Ochrana Elektron · Zoznamy Phishing.Database a URLhaus (abuse.ch)
+195	Elektron Studio (shadery a postupy)
+196	Elektron túto stránku zastavil, pretože je na zozname známych podvodných stránok.
+197	Elektron pravidelne hľadá nové verzie.
+198	Odporučiť Elektron
+199	Odporúčané
+200	Odstrániť
+201	Odstraňuje sledovacie prívesky ako utm_, fbclid a gclid, preskakuje presmerovacie sledovače Googlu a Facebooku a otvára AMP stránky v origináli.
+202	Načítať rozbalené rozšírenie (priečinok s manifest.json)
+203	Načítať rozbalené rozšírenie …
+204	Zapamätať rozhodnutie
+205	Nástroje pre vývojárov
+206	Hry zadarmo z Epicu
+207	Vysvetli mi to prosím jednoducho a po slovensky:
+208	Vysvetli mi jednoducho a po slovensky, o čom je tento web.
+209	Povoliť
+210	Stiahnuť znova
+211	Skúsiť znova
+212	Najprv zostav obrázok – do „Výstupu“ zatiaľ nič neprichádza.
+213	Pridať rozšírenie
+214	Rozšírenia
+215	Rozšírenia pochádzajú z Internetového obchodu Chrome a v Elektrone fungujú ako v Chrome. Niektoré veľmi rozsiahle rozšírenia používajú funkcie Chrome, ktoré tu nie sú – potom bežia len čiastočne. Claude a ChatGPT nájdeš navyše priamo v bočnom paneli vľavo.
+216	Rozšírenia sú aktuálne
+217	Lišta rozšírení nie je dostupná:
+218	Chýba uzol „Výstup“.
+219	Exportovať
+220	Zrušiť limit FPS
+221	Farba
+222	Farba 1
+223	Farba 2
+224	Posun odtieňa
+225	Zhrň tento web stručne a po slovensky – najdôležitejšie body ako zoznam.
+226	Chyba:
+227	Zlyhalo
+228	Hotovo
+229	Pýtať sa
+230	Blokovať cookies tretích strán
+231	Cookies tretích strán zablokované
+232	Zmrazí všetky karty na pozadí a zníži prioritu prehliadača, aby mala tvoja hra prednosť. Karty so zvukom bežia ďalej.
+233	Pre hlasové kanály Discordu zvoľ „Pýtať sa“ alebo „Povoliť“.
+234	Pre pravé kliknutie → „Zhrnúť stránku“ a „Vysvetliť“.
+235	Pre túto stránku nie je režim čítania
+236	CELÉ PC
+237	Galaxia
+238	Gaming
+239	Gaming so všetkými vychytávkami – alebo pokojný, normálny prehliadač. Prepnúť sa dá kedykoľvek.
+240	Herný prehliadač je späť 🎮
+241	Herný režim
+242	Herný režim (Ctrl+Shift+G)
+243	Herný režim zapnutý – karty na pozadí zmrazené, priorita prehliadača znížená
+244	Herný režim vypnutý
+245	Vypnúť herný režim
+246	Zapnúť herný režim
+247	Zobraziť celé
+248	Celá stránka
+249	Nebezpečné
+250	Nebezpečná stránka zablokovaná
+251	Falošná adresa?
+252	Načítané – príliš veľké na zapamätanie, po reštarte vyber znova
+253	Vymazať celú históriu
+254	Obnoviť zatvorenú kartu
+255	Uložené ✓
+256	Včera
+257	Nezadávaj sem heslá, bankové ani kartové údaje.
+258	Nezadávaj sem heslá, kódy ani údaje o karte.
+259	Mriežka
+260	Google vytvára profily – DuckDuckGo, Brave ani Startpage nie
+261	Prekladač Google
+262	Uložiť graf do súboru
+263	Načítať súbor grafu
+264	Veľkosť
+265	Veľkosť pri ukladaní
+266	Dobré vedieť: Avast na to kontroluje adresy stránok, ktoré navštevuješ. Smie: čítať a meniť údaje na všetkých weboch.
+267	Dobrú noc
+268	Dobrý večer
+269	Dobrý večer – čas na session.
+270	Dobré ráno
+271	Dobré ráno – pripravený hrať?
+272	Režim HTTPS · vypnúť sa dá v GX Control v časti „Ochrana“
+273	Udržuj prehliadač malý, nech má tvoja hra plný výkon.
+274	Nepodarilo sa
+275	Svetlý
+276	Svetlý / tmavý
+277	Jas
+278	Jas a kontrast
+279	Dnes
+280	Pozadie
+281	Pozadie úvodnej stránky
+282	Pozadie nastavené ✓
+283	Zobraziť upozornenie
+284	Pridať
+285	Domov
+286	Skryť IP adresu vo WebRTC
+287	IP adresa vo WebRTC skrytá
+288	Rozumiem riziku – stránku aj tak otvoriť
+289	Na pozadí
+290	Zobraziť v priečinku
+291	Ukázať v priečinku
+292	Vždy navrchu
+293	Vždy navrchu (zap.)
+294	Vždy navrchu (vyp.)
+295	Import zlyhal:
+296	Importovať
+297	Zapisovať do schránky
+298	Otvoriť na novej karte
+299	Otvoriť na súkromnej karte
+300	V akom jazyku s tebou má Elektron hovoriť? Vlajky ukazujú krajiny, kde sa daným jazykom hovorí.
+301	Blokovať obsah na weboch
+302	Nainštalovať a začať
+303	Nainštalované
+304	Invertovať
+305	Áno
+306	Blokovať JavaScript na tejto stránke
+307	Každý stiahnutý súbor sa kontroluje programom Windows Defender.
+308	Každý deň
+309	Hľadať aktualizácie teraz
+310	Reštartovať teraz
+311	AI v bočnom paneli
+312	Kaleidoskop
+313	Prišiel odkaz e-mailom, SMS alebo cez Discord? Potom išlo najskôr o podvod.
+314	Kamera a mikrofón
+315	Žiadne pripojenie k internetu. Skontroluj Wi-Fi alebo sieťový kábel.
+316	Žiadne návrhy
+317	Žiadne zabezpečené spojenie
+318	Klikni na hviezdičku v paneli s adresou alebo stlač Ctrl+D.
+319	Kliknutím odpojiť
+320	Nepodarilo sa načítať:
+321	Kontrast
+322	Kopírovať
+323	Kruh
+324	Nič odtiaľto nesťahuj.
+325	Načítať
+326	Zastaviť načítavanie
+327	Ak si nie si istý, spusti antivírus.
+328	Výkon
+329	Výkonná grafická karta
+330	Režim čítania
+331	Režim čítania (F9)
+332	Otvoriť režim čítania
+333	Záložky
+334	Zálohovať záložky a nastavenia …
+335	Hľadať v záložkách
+336	Odstrániť záložku (Ctrl+D)
+337	Záložka odstránená
+338	Záložky sa zobrazia tu – klikni na hviezdičku v paneli s adresou.
+339	Záložka uložená
+340	Pridať záložku (Ctrl+D)
+341	Uložiť záložky a nastavenia do súboru – napr. pre nové PC.
+342	Zálohovať záložky a nastavenia
+343	Zobraziť panel záložiek
+344	Skryť panel záložiek
+345	Vymazať posledných 24 hodín
+346	Vymazať poslednú hodinu
+347	Keď prehliadač prekročí limit, zmrazí sa najnáročnejšia karta na pozadí.
+348	Limit
+349	Lineárny
+350	Hrúbka čiary
+351	Otvoriť odkaz v rozdelenej obrazovke
+352	Otvoriť odkaz na novej karte
+353	Otvoriť odkaz na súkromnej karte
+354	Kopírovať odkaz
+355	Odkaz skopírovaný – pošli ho kamarátom!
+356	Čistiť odkazy
+357	Prednačítavať odkazy
+358	Odkazy sa čistia
+359	Vyprázdniť zoznam
+360	Zoznam je príliš krátky
+361	Miestne adresy nie sú povolené
+362	Začať
+363	Vždy načítava stránky šifrovane a varuje, keď to stránka nevie.
+364	Načíta obrázok z internetu
+365	Načítava sa …
+366	Vymazať
+367	Vymazať (Del)
+368	Zariadenia MIDI
+369	Prekladať označený text alebo celé stránky.
+370	Maska
+371	Maska (svetlé = viditeľné)
+372	Maximálne zabezpečenie
+373	Viac súkromia: teraz hľadáš cez DuckDuckGo namiesto Googlu
+374	Ponuka
+375	Mikrofón
+376	Keď kvôli hre minimalizuješ prehliadač, všetky karty bez zvuku odpočívajú.
+377	Minúty
+378	Miešať
+379	Hľadať cez Google
+380	Hľadať cez Google alebo zadať adresu
+381	Vysvetliť pomocou {0}
+382	Hľadať cez {0}
+383	Hľadať cez {0} alebo zadať adresu
+384	Hľadať cez {0}: „{1}“
+385	Režim
+386	Pondelok – piatok
+387	Násobiť
+388	Vzor
+389	Hľadať aktualizácie
+390	Názov
+391	Hmlovina
+392	Závoj
+393	Nie
+394	Neón
+395	Neónová mriežka
+396	Obmedzovač siete
+397	Sledovať sieťovú prevádzku
+398	Blokovať a meniť sieťovú prevádzku
+399	Nové
+400	Načítať znova
+401	Načítať znova (F5)
+402	Reštartovať a nainštalovať
+403	Nová karta
+404	Nová karta (Ctrl+T)
+405	Nová súkromná karta
+406	Nový prázdny obrázok
+407	Reštart
+408	Nenájdené
+409	Neuložené
+410	Nie je možné
+411	Nezabezpečené
+412	Nič sa nenašlo
+413	Ešte jeden krok: tieto rozšírenia odporúčame pre väčšiu bezpečnosť. Vyber, čo chceš – kedykoľvek ich môžeš odstrániť v časti „Rozšírenia“.
+414	Ešte jedno kolo? Je hlboká noc.
+415	Zatiaľ žiadne sťahovania
+416	Zatiaľ nie sú nainštalované žiadne rozšírenia. Otvor Internetový obchod Chrome a klikni tam na „Pridať“.
+417	Zatiaľ žiadne záložky
+418	Zatiaľ nie je zadaná adresa aktualizácií (GX Control → Aktualizácie)
+419	Hľadať uzol …
+420	Normálny
+421	Normálny prehliadač – herné prvky sú skryté
+422	Len súbory s (prázdne = všetky)
+423	Len HTTPS
+424	Len raz denne
+425	Len adresy http a https
+426	Používa dedikovanú GPU (napr. RTX) namiesto integrovanej grafiky.
+427	Ďalší výskyt (F3)
+428	Pokračovať bez rozšírení
+429	Voliteľné
+430	Možnosti
+431	Zavrieť panel
+432	Správca hesiel
+433	Ochrana pred phishingom a malvérom
+434	Veľkosť pixelu
+435	Plazma (farebná, animovaná)
+436	Polárna žiara
+437	Súkromné
+438	Súkromný vyhľadávač
+439	Súkromná karta
+440	Súkromná karta – história, cookies a prihlásenia zmiznú, hneď ako zavrieš všetky súkromné karty.
+441	Súkromná karta – po zatvorení žiadna história ani cookies
+442	Program zabezpečený
+443	Meniť nastavenia proxy
+444	Kontroluje stiahnuté súbory programom Windows Defender (na tomto PC nie je k dispozícii).
+445	Bodky
+446	Zdroje
+447	RAM {0} z {1}
+448	Obmedzovač RAM
+449	RGB posun (glitch)
+450	Šum / mraky
+451	Pravé kliknutie na kartu ponúka aj toto všetko.
+452	Pravé kliknutie alebo medzerník pridá uzly. Ťahaj od bodu vpravo na uzle k bodu vľavo na ďalšom. Všetko, čo nakoniec dorazí do
+453	Pravé kliknutie alebo medzerník: pridať uzol · Ťahať pozadie: posunúť · Koliesko myši: zoom · Del: vymazať
+454	Retro
+455	Retro hory
+456	Cez Global Privacy Control oznamuje každému webu, že tvoje údaje sa nesmú predávať ani odovzdávať.
+457	Šachovnica
+458	Malvér zablokovaný
+459	Vypne turbo JavaScriptu (JIT) – najčastejší cieľ útokov na prehliadače. Weby budú pomalšie, niektoré hry v prehliadači prestanú fungovať. Platí po reštarte.
+460	Uspať (uvoľniť RAM)
+461	Jednoduchý
+462	Zavrieť
+463	Zavrieť (Esc)
+464	Rýchly prístup
+465	Už je 22 hodín – zajtra je škola/práca 😉
+466	Väčšie písmo
+467	Menšie písmo
+468	Ochrana
+469	Ochrana pre túto stránku (klikni)
+470	Znova zapnúť ochranu pre túto stránku
+471	Ochrana pre {0}
+472	Ochrana pred fingerprintingom
+473	Zoznam ochrany {0}:
+474	Čiernobiele
+475	Plávajúce okno
+476	Pekný deň
+477	Snímka obrazovky
+478	Snímka obrazovky (Ctrl+Shift+X) – pravé kliknutie: celá stránka
+479	Snímka obrazovky (celá stránka)
+480	Snímka obrazovky (viditeľná oblasť)
+481	Snímka obrazovky sa nepodarila
+482	Snímka skopírovaná – vlož ju do Discordu cez Ctrl+V
+483	Urobiť snímku obrazovky
+484	Stránka
+485	Preložiť stránku do slovenčiny
+486	Pri zatvorení stránku zabudnúť (vymazať cookies)
+487	Tlačiť stránku …
+488	Stránka nefunguje? Vypni ochranu tu
+489	Zhrnúť stránku pomocou {0}
+490	Stránka nie je dostupná
+491	Preskúmať stránku
+492	Vymeniť strany
+493	Otvoriť bočný panel
+494	Pomer strán náhľadu
+495	Sekundy
+496	Server odpovedal chybou {0}
+497	Shadery a obrázky
+498	Zabezpečené spojenie
+499	Bezpečné DNS
+500	Zabezpečenie
+501	Kontrola zabezpečenia
+502	Zálohovanie a obnovenie
+503	Zálohovať …
+504	Záloha uložená
+505	Obnoviť zálohu
+506	Obnoviť zálohu …
+507	Viditeľná oblasť
+508	Ako na to
+509	Ako na to:
+510	Ostatné
+511	Uložiť
+512	Uloženie zlyhalo:
+513	Bezpečne ukladá tvoje heslá a automaticky ich vypĺňa.
+514	Ukladá tvoje heslá šifrovane a automaticky ich vypĺňa na weboch. Zadarmo, open source.
+515	Rozdelená obrazovka
+516	Rozdelená obrazovka (Ctrl+Shift+S)
+517	Rozdelená obrazovka zapnutá – ťahaj deliacu čiaru na úpravu
+518	Ukončiť rozdelenú obrazovku
+519	Ukončiť rozdelenú obrazovku (Ctrl+Shift+S)
+520	Jazyk
+521	Hľadať jazyk alebo krajinu …
+522	Jazyk Windows
+523	Jazyk Windows: {0}
+524	Obnoviť predvolené
+525	Štart
+526	Úvodná stránka (Alt+Home)
+527	Ovládanie
+528	Roztiahnuť
+529	Pruhy
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T nová karta · Ctrl+D záložka · Ctrl+H história · F11 celá obrazovka
+537	Ctrl+Shift+G spustí herný režim · Ctrl+T nová karta · F11 celá obrazovka
+538	Studio
+539	Úrovne
+540	Stlmiť
+541	Sila
+542	Rušenie
+543	Hľadajú sa aktualizácie …
+544	Vyhľadávač
+545	Návrhy vyhľadávania pri písaní do panela s adresou (odosielajú sa vyhľadávaču)
+546	Sýtosť
+547	Karta
+548	Karta spadla – kliknutím znova načítať
+549	Karta ako plávajúce okno
+550	Karta ako plávajúce okno (Ctrl+Shift+F)
+551	Zavrieť kartu
+552	Karta sa teraz vznáša nad všetkými oknami
+553	Stlmiť kartu
+554	Otvoriť kartu
+555	Karty
+556	Zavrieť karty vpravo
+557	Obnoviť karty
+558	Dni
+559	Kláves
+560	Klávesová skratka
+561	Diely
+562	Tempo
+563	Text
+564	Text (výňatok):
+565	Názov:
+566	Zvuk všetkých kariet
+567	Zapnúť zvuk
+568	Toxická zelená
+569	Priehľadnosť
+570	Twitch otvorený – herný režim je zapnutý 🎮
+571	Čas (HH:MM)
+572	Ultrafialová
+573	Obrátiť
+574	Prepnúť
+575	Neplatná adresa
+576	Rozmazanie
+577	Na tejto adrese nie je žiadny obrázok (tip: pravé kliknutie na obrázok → „Kopírovať adresu obrázka“)
+578	Otvoriť bez šifrovania
+579	Aktualizácia pripravená – reštartuj prehliadač
+580	Aktualizácia rozšírení zlyhala
+581	Nainštalovať aktualizáciu
+582	Nainštalovať aktualizáciu a reštartovať
+583	Aktualizácia {0} je pripravená
+584	Aktualizácia {0} sa sťahuje na pozadí …
+585	Adresa aktualizácií (priečinok na tvojom webe)
+586	Chýba modul aktualizácií
+587	Hľadanie aktualizácií zlyhalo: {0}
+588	Aktualizácie
+589	Aktualizácie fungujú v nainštalovanej verzii
+590	Zakázané
+591	Zväčšiť
+592	Zmenšiť
+593	História
+594	Hľadať v histórii
+595	Posun
+596	Posunúť / zoomovať / otočiť
+597	Šifruje, ktoré stránky navštevuješ (DNS cez HTTPS s Quad9 zo Švajčiarska), a navyše blokuje známe škodlivé adresy.
+598	Verzia
+599	Verzia {0} je aktuálna.
+600	Verzia {0} je pripravená – nainštaluje sa pri ďalšom spustení.
+601	Sťahuje sa verzia {0} … {1} %
+602	Verzia {0} · Chromium {1}
+603	Verzia {0} · Zatiaľ nie je zadaná adresa aktualizácií.
+604	Verzia {0} · Aktualizácie sú v nainštalovanej verzii pre Windows.
+605	Verzia {0} · Aktualizácie prichádzajú automaticky cez Microsoft Store.
+606	Spravovať
+607	Vysunúť video
+608	Vysunúť video (obraz v obraze)
+609	Vysunúť video – obraz v obraze (Ctrl+Shift+P)
+610	Automaticky vysúvať videá
+611	Videoreklamy sa stlmia a hneď preskočia, reklamné plochy zmiznú.
+612	Vineta
+613	Nájdený vírus v {0} – Windows Defender súbor odstránil
+614	Nájdený vírus – Windows Defender súbor odstránil
+615	Celá obrazovka
+616	Od
+617	Z tejto stránky sa šírili vírusy alebo iný škodlivý softvér. Elektron ich zastavil skôr, než sa niečo dostalo do tvojho PC.
+618	Dopredu
+619	Dopredu (Alt+→)
+620	Predchádzajúci výskyt (Shift+F3)
+621	Návrhy
+622	Plást
+623	Pravdepodobnosť (%)
+624	Tiež varuje pred nebezpečnými stránkami. Popri Malwarebytes väčšinou netreba – oba robia to isté.
+625	Varuje pred nebezpečnými stránkami a phishingom.
+626	Varovanie pred falošnými adresami
+627	Čakať
+628	Čo sa stane, keď chce stránka použiť tvoju kameru.
+629	WebGL 2 nie je na tomto PC dostupné.
+630	Webkamera
+631	Diaľkovo ovládať weby (debugger)
+632	Weby ťa ťažšie spoznajú podľa tvojho PC (canvas, názov grafickej karty, jadrá CPU).
+633	Weby už cez technológiu videochatu nezistia tvoju miestnu IP adresu – ani za VPN.
+634	Keď prepneš kartu alebo minimalizuješ prehliadač, video beží ďalej v malom okne (obraz v obraze).
+635	Mäkkosť
+636	Ďalšie záložky
+637	Vlny
+638	Zobraziť menej
+639	Keď je zapnutý herný režim
+640	Keď herný režim …
+641	Keď je deň
+642	Keď je čas medzi
+643	Keď aktívna karta obsahuje
+644	Keď sa spustí prehliadač
+645	Ak chceš na {0}, použi tlačidlo nižšie.
+646	Keď sa dokončí sťahovanie
+647	Keď sa otvorí stránka
+648	Blokovač reklám a sledovačov
+649	Blokovač reklám
+650	Blokovač reklám sa nepodarilo načítať:
+651	Reklamné firmy ťa už nemôžu sledovať naprieč webmi. Prihlasovanie, captcha a platby fungujú ďalej.
+652	Zablokované reklamy/sledovače: {0} · Odrazené sledovacie cookies: {1}
+653	Nástroje
+654	Znova zapnúť
+655	Obnovené: {0} nových záložiek a tvoje nastavenia
+656	Obnoviť …
+657	Opakovať (dlaždice)
+658	Vitaj
+659	Vitaj v Elektrone
+660	Windows Defender sa nenašiel
+661	Uhol
+662	Pri prekročení limitu zaspia karty najdlhšie nepoužívané.
+663	Inštaluje sa …
+664	Naozaj vymazať celú históriu?
+665	Naozaj otvoriť? Táto stránka je známa ako nebezpečná.
+666	Víkend
+667	Preskakovať reklamy na YouTube
+668	Znova zobrazuje palce nadol pod videami na YouTube.
+669	Riadky
+670	Čas
+671	Čas na prestávku! 🎮
+672	Vypršal časový limit
+673	Pri načítavaní vypršal časový limit
+674	Ťahaj na úpravu · Dvojklik: 50/50
+675	Zoom
+676	Obnoviť zoom
+677	Obnoviť zoom (Ctrl+0)
+678	Náhoda
+679	Na vyskúšanie: tlačidlo
+680	Prepnúť na herný prehliadač
+681	Pridať do slovníka
+682	Prepnúť na normálny prehliadač
+683	V určitý čas
+684	Na skutočnú stránku: {0}
+685	Späť
+686	Späť (Alt+←)
+687	Späť do bezpečia
+688	Späť do prehliadača
+689	Vrátiť do prehliadača
+690	Späť na Google
+691	pri spúšťači.
+692	, vidíš hore. Obrázky z internetu: pravé kliknutie na obrázok → „Kopírovať adresu obrázka“ a vložiť do uzla.
+693	k tvojmu mikrofónu
+694	k tvojej kamere
+695	k tvojej obrazovke
+696	k tvojej polohe
+697	súbor záložiek sa nepodarilo prečítať.
+698	k schránke
+699	bez limitu
+700	nie je záloha Elektronu
+701	čítať a meniť
+702	nepovolené
+703	len v nainštalovanej verzii
+704	napr. .exe alebo .zip
+705	napr. youtube.com
+706	Prebieha sťahovanie: {0} – Ctrl+J
+707	Prevzatých {0} záložiek z {1}.
+708	Odrazené sledovacie cookies: {0}
+709	Zneškodnené sledovacie odkazy: {0}
+710	{0} neodpovedá včas.
+711	{0} odmietol spojenie.
+712	{0} je hotové – žiadny vírus sa nenašiel
+713	{0} sa nepodarilo načítať.
+714	{0} sa nepodarilo nainštalovať. Skontroluj pripojenie k internetu a skús to znova – alebo to nainštaluj neskôr cez Ponuka → Internetový obchod Chrome.
+715	{0} chce prístup {1}.
+716	Spustiť {0}
+717	Aktívne ochranné funkcie: {0} z {1}.
+718	{0} zabudnuté – cookies a údaje webu vymazané
+719	{0} – nedostupné
+720	· Auto
+721	· kontroluje sa na vírusy …
+722	· ✓ žiadny vírus (Windows Defender)
+723	Zmeniť …
+724	Banky, Steam, Discord a spol. radšej otváraj priamo cez panel s adresou alebo záložku.
+725	Neotváraj súbory, ktoré už z tejto stránky máš.
+726	Otvoriť
+727	Pri spustení otvorí tvoje karty z minula – načítajú sa, až keď na ne klikneš.
+728	O aplikácii {0}
+729	Prekryť
+730	Preložiť
+731	Preklady bez záruky – našiel si chybu? Nahlás ju na GitHube, radi ju opravíme.
+732	Preskakuje sponzorované časti vo videách na YouTube.
+733	– obraz v obraze
+734	– rozdelená obrazovka
+735	– karta zostáva nad tvojou hrou
+736	– zmrazené
+737	– súkromné
+738	– spí (kliknutím načítať)
+739	– plávajúce okno (kliknutím zobraziť)
+740	– dve karty vedľa seba
+741	Signál „Nepredávať“ (GPC)
+742	Odstrániť „{0}“?
+743	„{0}“ bolo načítané.
+744	„{0}“ bolo pridané
+745	Pridať „{0}“ do Elektronu?
+746	… vypne
+747	… zapne
+748	← Pôvodná stránka
+749	▶ Vyskúšať teraz
+750	✓ Vykonané
+751	🎮 Gaming
