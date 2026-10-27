@@ -1,6 +1,6 @@
 0	(biru) atau
 1	(ungu). Perubahan disimpan otomatis dan langsung berlaku.
-2	(merah) – mis. „Saat halaman dibuka“. Hubungkan panah putih ke
+2	(merah) – mis. “Saat halaman dibuka”. Hubungkan panah putih ke
 3	1 unduhan sedang berjalan – Ctrl+J
 4	1080 × 1080 (persegi)
 5	1080 × 1920 (ponsel)
@@ -85,7 +85,7 @@
 84	Simpan gambar …
 85	Gambar dari PC
 86	Alamat gambar (https://…)
-87	Masukkan alamat gambar dan tekan „Muat“
+87	Masukkan alamat gambar dan tekan “Muat”
 88	Gambar
 89	Sampai
 90	Masukkan alamat yang diawali https://
@@ -210,13 +210,13 @@
 209	Izinkan
 210	Unduh lagi
 211	Coba lagi
-212	Buat gambar dulu – belum ada yang sampai ke „Keluaran“.
+212	Buat gambar dulu – belum ada yang sampai ke “Keluaran”.
 213	Tambah ekstensi
 214	Ekstensi
 215	Ekstensi berasal dari Chrome Web Store dan berfungsi di Elektron seperti di Chrome. Beberapa ekstensi yang sangat besar memakai fitur Chrome yang tidak ada di sini – jadi hanya berjalan sebagian. Claude dan ChatGPT juga ada langsung di bilah samping kiri.
 216	Ekstensi sudah terbaru
 217	Bilah ekstensi tidak tersedia:
-218	Node „Keluaran“ tidak ada.
+218	Node “Keluaran” tidak ada.
 219	Ekspor
 220	Lepas batas FPS
 221	Warna
@@ -231,8 +231,8 @@
 230	Blokir cookie pihak ketiga
 231	Cookie pihak ketiga diblokir
 232	Membekukan semua tab latar dan menurunkan prioritas browser agar game-mu didahulukan. Tab yang memutar suara tetap berjalan.
-233	Untuk saluran suara Discord pilih „Tanya“ atau „Izinkan“.
-234	Untuk klik kanan → „Ringkas halaman“ dan „Jelaskan“.
+233	Untuk saluran suara Discord pilih “Tanya” atau “Izinkan”.
+234	Untuk klik kanan → “Ringkas halaman” dan “Jelaskan”.
 235	Tidak ada mode baca untuk halaman ini
 236	SELURUH PC
 237	Galaksi
@@ -270,7 +270,7 @@
 269	Selamat malam – waktunya main.
 270	Selamat pagi
 271	Selamat pagi – siap main?
-272	Mode HTTPS · bisa dimatikan di GX Control pada „Perlindungan“
+272	Mode HTTPS · bisa dimatikan di GX Control pada “Perlindungan”
 273	Jaga browser tetap kecil agar game-mu dapat seluruh tenaga.
 274	Tidak berhasil
 275	Terang
@@ -382,7 +382,7 @@
 381	Jelaskan dengan {0}
 382	Cari dengan {0}
 383	Cari dengan {0} atau masukkan alamat
-384	Cari dengan {0}: „{1}“
+384	Cari dengan {0}: “{1}”
 385	Mode
 386	Senin – Jumat
 387	Kalikan
@@ -411,10 +411,10 @@
 410	Tidak mungkin
 411	Tidak aman
 412	Tidak ada yang ditemukan
-413	Satu langkah lagi: kami menyarankan ekstensi ini untuk keamanan lebih. Pilih yang kamu mau – kamu bisa menghapusnya kapan saja di „Ekstensi“.
+413	Satu langkah lagi: kami menyarankan ekstensi ini untuk keamanan lebih. Pilih yang kamu mau – kamu bisa menghapusnya kapan saja di “Ekstensi”.
 414	Satu ronde lagi? Sudah tengah malam.
 415	Belum ada unduhan
-416	Belum ada ekstensi yang terinstal. Buka Chrome Web Store dan klik „Tambah“ di sana.
+416	Belum ada ekstensi yang terinstal. Buka Chrome Web Store dan klik “Tambah” di sana.
 417	Belum ada bookmark
 418	Alamat pembaruan belum diisi (GX Control → Pembaruan)
 419	Cari node …
@@ -575,7 +575,7 @@
 574	Alihkan
 575	Alamat tidak valid
 576	Buram
-577	Tidak ada gambar di alamat ini (tips: klik kanan gambar → „Salin alamat gambar“)
+577	Tidak ada gambar di alamat ini (tips: klik kanan gambar → “Salin alamat gambar”)
 578	Buka tanpa enkripsi
 579	Pembaruan siap – mulai ulang browser
 580	Pembaruan ekstensi gagal
@@ -690,7 +690,7 @@
 689	Kembalikan ke browser
 690	Kembali ke Google
 691	pada pemicu.
-692	, terlihat di atas. Gambar dari internet: klik kanan gambar → „Salin alamat gambar“ dan tempel di node.
+692	, terlihat di atas. Gambar dari internet: klik kanan gambar → “Salin alamat gambar” dan tempel di node.
 693	mikrofonmu
 694	kameramu
 695	layarmu
@@ -739,11 +739,11 @@
 738	– tidur (klik untuk memuat)
 739	– jendela mengambang (klik untuk menampilkan)
 740	– dua tab berdampingan
-741	Sinyal „Jangan jual“ (GPC)
-742	Hapus „{0}“?
-743	„{0}“ telah dimuat.
-744	„{0}“ telah ditambahkan
-745	Tambahkan „{0}“ ke Elektron?
+741	Sinyal “Jangan jual” (GPC)
+742	Hapus “{0}”?
+743	“{0}” telah dimuat.
+744	“{0}” telah ditambahkan
+745	Tambahkan “{0}” ke Elektron?
 746	… dimatikan
 747	… dinyalakan
 748	← Halaman asli

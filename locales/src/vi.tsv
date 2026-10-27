@@ -1,0 +1,752 @@
+0	(xanh dương) hoặc
+1	(tím). Thay đổi được lưu tự động và có hiệu lực ngay.
+2	(đỏ) – ví dụ “Khi mở một trang”. Nối mũi tên trắng với
+3	1 tệp đang tải xuống – Ctrl+J
+4	1080 × 1080 (vuông)
+5	1080 × 1920 (điện thoại)
+6	1920 × 1080 (Full HD)
+7	A (dưới)
+8	Hủy
+9	Đã hủy
+10	Luồng
+11	Luồng đang bật
+12	Cộng (phát sáng)
+13	Địa chỉ
+14	Địa chỉ chứa
+15	Địa chỉ, ví dụ roblox.com
+16	Địa chỉ:
+17	Địa chỉ: {0}
+18	Hành động
+19	Đóng thẻ đang mở
+20	Màu nhấn
+21	Đọc và thay đổi mọi dữ liệu trên mọi trang web
+22	Tất cả dấu trang
+23	Tất cả dấu trang (Ctrl+Shift+O)
+24	Quản lý tất cả dấu trang …
+25	Tất cả cài đặt bảo vệ …
+26	Tất cả chức năng bảo vệ đang bật.
+27	Ngắt mọi kết nối
+28	Cập nhật tất cả
+29	Hiện tất cả
+30	Vài phút một lần
+31	Hiện tất cả {0}
+32	Chọn tất cả
+33	Xóa hết và bắt đầu lại?
+34	Mọi thứ bạn có thể chỉnh trong Elektron.
+35	Lưu dưới dạng ảnh (PNG)
+36	Đặt làm trình duyệt mặc định …
+37	Đặt làm hình nền trang bắt đầu
+38	Mở dưới dạng cửa sổ nổi
+39	Quản lý tiện ích khác
+40	Đóng các thẻ khác
+41	Hoạt ảnh
+42	Có hoạt ảnh
+43	Loại
+44	Tìm trên trang
+45	Tìm trên trang …
+46	Trang này không có gì để chặn
+47	Trang này không có video nào đang phát
+48	Nhập từ Chrome
+49	Nhập từ Edge
+50	Nhập từ Opera GX
+51	Xóa khỏi danh sách
+52	Lấp đầy
+53	Đầu ra
+54	Trình kích hoạt
+55	Tắt
+56	Cắt
+57	Tự động
+58	Tự động
+59	Tự động cập nhật
+60	B (trên)
+61	Kết nối ngay khi chuột đặt lên liên kết – nhanh hơn, nhưng trang thấy địa chỉ IP của bạn trước cả khi bấm.
+62	Chỉnh sửa
+63	Chỉnh sửa …
+64	Điều kiện
+65	Thoát
+66	Giới hạn băng thông của mọi thẻ để ping của bạn ổn định khi chơi game.
+67	Đóng băng khi thu nhỏ
+68	Ví dụ
+69	Tải ví dụ? Các luồng hiện tại của bạn sẽ bị thay thế.
+70	Phổ biến
+71	Thông báo
+72	Hiện thông báo
+73	Quyền
+74	Sẵn sàng chơi chưa?
+75	Đã chặn trang lừa đảo
+76	Chuyển động
+77	Ảnh
+78	Chọn ảnh …
+79	Giữ ảnh
+80	Mở ảnh trong thẻ mới
+81	Ảnh quá lớn (tối đa 25 MB)
+82	Không tải được ảnh
+83	Sao chép ảnh
+84	Lưu ảnh …
+85	Ảnh từ máy tính
+86	Địa chỉ ảnh (https://…)
+87	Nhập địa chỉ ảnh rồi nhấn “Tải”
+88	Ảnh
+89	Đến
+90	Hãy nhập địa chỉ bắt đầu bằng https://
+91	Chặn
+92	Chặn trang lừa đảo, phần mềm độc hại, bẫy đăng ký và lừa đảo hỗ trợ kỹ thuật giả. Miễn phí, không cần tài khoản.
+93	Chặn quảng cáo, trình theo dõi, cửa sổ bật lên và thông báo cookie – đến nay đã chặn {0} yêu cầu.
+94	Chặn quảng cáo, trình theo dõi, cửa sổ quảng cáo bật lên và thông báo cookie.
+95	Chặn các trang lừa đảo đã biết và trang phát tán virus.
+96	Chặn các trang lừa đảo đã biết và trang phát tán virus. Danh sách đang được tải …
+97	Chặn {0} trang lừa đảo và virus đã biết. Danh sách được cập nhật mỗi 6 giờ.
+98	Cần tài khoản Bitwarden miễn phí. Được phép: đọc và thay đổi dữ liệu trên mọi trang web (để tự điền).
+99	Trình duyệt đã mới nhất
+100	Tải của trình duyệt
+101	Game trên trình duyệt chạy không V-Sync, vượt tần số quét. Có thể gây xé hình.
+102	Phong cách trình duyệt
+103	Đã xóa dữ liệu duyệt web
+104	Xóa dữ liệu duyệt web ngay
+105	Xóa dữ liệu duyệt web
+106	Bộ giới hạn CPU
+107	Dùng ChatGPT ngay trong trình duyệt.
+108	Cửa hàng Chrome trực tuyến không khả dụng
+109	Mở Cửa hàng Chrome trực tuyến
+110	Claude dưới dạng tiện ích – hoặc đơn giản qua thanh bên.
+111	Mã
+112	Chạy mã trên trang web
+113	Truyện tranh / áp phích
+114	Xóa cookie và đăng nhập khi thoát
+115	Đọc và thay đổi cookie
+116	Thì
+117	Được phép:
+118	Được phép: đọc và thay đổi dữ liệu trên mọi trang web (để kiểm tra và chặn).
+119	Ảnh quá lớn (tối đa 25 MB)
+120	Chứng chỉ bảo mật của {0} không đáng tin cậy.
+121	Chứng chỉ bảo mật của {0} không hợp lệ.
+122	Đây không phải là ảnh hợp lệ
+123	Đây không phải là tệp luồng.
+124	Đây không phải là tệp shader.
+125	Tệp đã bị xóa hoặc di chuyển
+126	Dữ liệu trên
+127	Thay đổi cài đặt quyền riêng tư
+128	Độ mờ đục
+129	Đọc và thay đổi dấu trang của bạn
+130	Game của bạn
+131	Đọc và thay đổi lịch sử duyệt web của bạn
+132	Đọc lịch sử duyệt web và các thẻ đang mở
+133	Xác định vị trí của bạn
+134	Trình duyệt dành cho game thủ. Chromium {0} · Electron {1}
+135	Lịch sử trống
+136	Giao diện
+137	Màn hình nền
+138	Chi tiết
+139	Mật độ
+140	Địa chỉ này giống trang thật {0} đến mức dễ nhầm – một mánh khóe điển hình của kẻ lừa đảo. Hãy nhìn kỹ: một chữ cái bị đảo, bị thay hoặc đến từ bảng chữ cái khác.
+141	Địa chỉ phải bắt đầu bằng https://
+142	Không tìm thấy địa chỉ của {0}. Bạn viết đúng chưa?
+143	Tiện ích này không cần quyền đặc biệt.
+144	Tiện ích có thể: •
+145	Các tiện ích đến trực tiếp từ Cửa hàng Chrome trực tuyến và thuộc về nhà sản xuất của chúng (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Không tải được trang.
+147	Trang này không hỗ trợ kết nối an toàn (HTTPS). Người khác trong cùng mạng – ví dụ Wi-Fi công cộng – có thể thấy những gì bạn xem và nhập ở đây.
+148	Đọc bảng nhớ tạm
+149	Địa chỉ này trông giống
+150	Không đọc được tệp này
+151	Trang này không được mã hóa
+152	Trang này nằm trong danh sách trang nguy hiểm
+153	Trang này nằm trong danh sách trang lừa đảo (phishing) đã biết. Những trang như vậy thường trông thật nhưng muốn đánh cắp mật khẩu hoặc dữ liệu ngân hàng của bạn.
+154	Trang này phát tán phần mềm độc hại
+155	Kết nối này không được mã hóa
+156	Không thể tách video này ra
+157	Hiệu số
+158	Tải xuống
+159	Đã chặn tải xuống: {0} phát tán phần mềm độc hại đã biết
+160	Tải xuống thất bại: {0}
+161	Tải xuống xong: {0}
+162	Bắt đầu tải xuống: {0}
+163	Mở thư mục tải xuống
+164	Tệp đã tải xuống
+165	Tệp đã tải xuống (Ctrl+J)
+166	Quét virus các tệp tải xuống
+167	Tìm trong tệp tải xuống
+168	Quản lý tệp tải xuống
+169	Đang kiểm tra tệp tải xuống
+170	Xoay (°)
+171	Đang xoay
+172	Góc xoay (°)
+173	Sau đó bạn sẽ bị đăng xuất ở mọi nơi.
+174	DuckDuckGo, Brave Search và Startpage không tạo hồ sơ về bạn. Startpage hiển thị kết quả Google mà không theo dõi.
+175	Tối
+176	Giao diện tối cho mọi trang web.
+177	Nhân bản
+178	Nhân bản (Ctrl+D)
+179	Hiệu ứng
+180	Shader riêng (GLSL)
+181	Ảnh riêng
+182	Ảnh riêng …
+183	Chọn ảnh nền riêng
+184	Một luồng bắt đầu bằng một
+185	Đóng băng
+186	Tô màu
+187	Dán
+188	Vừa khung
+189	Bật
+190	Cài đặt
+191	Không lưu được cài đặt:
+192	Thêm mục vào menu chuột phải
+193	Bảo vệ Elektron · Nhận diện trang giả mạo ngay trên máy tính của bạn
+194	Bảo vệ Elektron · Danh sách từ Phishing.Database và URLhaus (abuse.ch)
+195	Elektron Studio (shader và luồng)
+196	Elektron đã chặn trang này vì nó nằm trong danh sách trang lừa đảo đã biết.
+197	Elektron thường xuyên tìm phiên bản mới.
+198	Giới thiệu Elektron
+199	Được đề xuất
+200	Xóa
+201	Loại bỏ phần đuôi theo dõi như utm_, fbclid và gclid, bỏ qua trình theo dõi chuyển hướng của Google và Facebook, và mở trang AMP ở bản gốc.
+202	Tải tiện ích đã giải nén (thư mục có manifest.json)
+203	Tải tiện ích đã giải nén …
+204	Ghi nhớ lựa chọn
+205	Công cụ dành cho nhà phát triển
+206	Game miễn phí của Epic
+207	Hãy giải thích cho tôi điều này thật đơn giản bằng tiếng Việt:
+208	Hãy giải thích thật đơn giản bằng tiếng Việt trang web này nói về gì.
+209	Cho phép
+210	Tải xuống lại
+211	Thử lại
+212	Hãy tạo ảnh trước – chưa có gì đến “Đầu ra”.
+213	Thêm tiện ích
+214	Tiện ích
+215	Tiện ích đến từ Cửa hàng Chrome trực tuyến và hoạt động trong Elektron như trong Chrome. Một số tiện ích rất lớn dùng tính năng của Chrome không có ở đây – khi đó chúng chỉ chạy một phần. Bạn cũng tìm thấy Claude và ChatGPT ngay trên thanh bên trái.
+216	Tiện ích đã mới nhất
+217	Thanh tiện ích không khả dụng:
+218	Thiếu nút “Đầu ra”.
+219	Xuất
+220	Bỏ giới hạn FPS
+221	Màu
+222	Màu 1
+223	Màu 2
+224	Xoay sắc độ
+225	Tóm tắt ngắn gọn trang web này bằng tiếng Việt – các ý quan trọng nhất dưới dạng danh sách.
+226	Lỗi:
+227	Thất bại
+228	Xong
+229	Hỏi
+230	Chặn cookie của bên thứ ba
+231	Đã chặn cookie của bên thứ ba
+232	Đóng băng mọi thẻ nền và giảm độ ưu tiên của trình duyệt để game của bạn được ưu tiên. Thẻ đang phát âm thanh vẫn chạy.
+233	Với kênh thoại Discord hãy chọn “Hỏi” hoặc “Cho phép”.
+234	Cho chuột phải → “Tóm tắt trang” và “Giải thích”.
+235	Trang này không có chế độ đọc
+236	TOÀN BỘ MÁY TÍNH
+237	Thiên hà
+238	Gaming
+239	Gaming với đầy đủ tính năng – hoặc một trình duyệt bình thường, yên tĩnh. Có thể chuyển bất cứ lúc nào.
+240	Trình duyệt gaming đã trở lại 🎮
+241	Chế độ gaming
+242	Chế độ gaming (Ctrl+Shift+G)
+243	Chế độ gaming đang bật – thẻ nền bị đóng băng, độ ưu tiên trình duyệt giảm
+244	Chế độ gaming đã tắt
+245	Tắt chế độ gaming
+246	Bật chế độ gaming
+247	Hiện toàn bộ
+248	Toàn trang
+249	Nguy hiểm
+250	Đã chặn trang nguy hiểm
+251	Địa chỉ giả?
+252	Đã tải – quá lớn để ghi nhớ, hãy chọn lại sau khi khởi động lại
+253	Xóa toàn bộ lịch sử
+254	Mở lại thẻ đã đóng
+255	Đã lưu ✓
+256	Hôm qua
+257	Đừng nhập mật khẩu, dữ liệu ngân hàng hay thẻ ở đây.
+258	Đừng nhập mật khẩu, mã hay dữ liệu thẻ ở đây.
+259	Lưới
+260	Google tạo hồ sơ – DuckDuckGo, Brave và Startpage thì không
+261	Google Dịch
+262	Lưu đồ thị thành tệp
+263	Tải tệp đồ thị
+264	Kích thước
+265	Kích thước khi lưu
+266	Nên biết: Avast kiểm tra địa chỉ các trang bạn truy cập. Được phép: đọc và thay đổi dữ liệu trên mọi trang web.
+267	Chúc ngủ ngon
+268	Chào buổi tối
+269	Chào buổi tối – đến giờ chơi rồi.
+270	Chào buổi sáng
+271	Chào buổi sáng – sẵn sàng chơi chưa?
+272	Chế độ HTTPS · có thể tắt trong GX Control mục “Bảo vệ”
+273	Giữ trình duyệt nhẹ để game của bạn có toàn bộ sức mạnh.
+274	Không thành công
+275	Sáng
+276	Sáng / tối
+277	Độ sáng
+278	Độ sáng và độ tương phản
+279	Hôm nay
+280	Hình nền
+281	Hình nền trang bắt đầu
+282	Đã đặt hình nền ✓
+283	Hiện ghi chú
+284	Thêm
+285	Trang chủ
+286	Ẩn địa chỉ IP trong WebRTC
+287	Đã ẩn địa chỉ IP trong WebRTC
+288	Tôi hiểu rủi ro – vẫn mở trang
+289	Chạy nền
+290	Hiện trong thư mục
+291	Xem trong thư mục
+292	Luôn ở trên cùng
+293	Luôn ở trên cùng (bật)
+294	Luôn ở trên cùng (tắt)
+295	Nhập thất bại:
+296	Nhập
+297	Ghi vào bảng nhớ tạm
+298	Mở trong thẻ mới
+299	Mở trong thẻ riêng tư
+300	Elektron nên nói chuyện với bạn bằng ngôn ngữ nào? Lá cờ cho biết những quốc gia nói ngôn ngữ đó.
+301	Chặn nội dung trên trang web
+302	Cài đặt và bắt đầu
+303	Đã cài đặt
+304	Đảo màu
+305	Có
+306	Chặn JavaScript trên trang này
+307	Mọi tệp tải xuống đều được kiểm tra bằng Windows Defender.
+308	Mỗi ngày
+309	Kiểm tra cập nhật ngay
+310	Khởi động lại ngay
+311	AI trên thanh bên
+312	Kính vạn hoa
+313	Liên kết đến qua email, SMS hay Discord? Vậy rất có thể đó là lừa đảo.
+314	Máy ảnh và micrô
+315	Không có kết nối internet. Hãy kiểm tra Wi-Fi hoặc cáp mạng.
+316	Không có gợi ý
+317	Không có kết nối an toàn
+318	Bấm vào ngôi sao trên thanh địa chỉ hoặc nhấn Ctrl+D.
+319	Bấm để tách
+320	Không tải được:
+321	Độ tương phản
+322	Sao chép
+323	Hình tròn
+324	Đừng tải gì từ đây.
+325	Tải
+326	Dừng tải
+327	Hãy chạy phần mềm diệt virus nếu bạn không chắc.
+328	Hiệu năng
+329	Card đồ họa mạnh
+330	Chế độ đọc
+331	Chế độ đọc (F9)
+332	Mở chế độ đọc
+333	Dấu trang
+334	Sao lưu dấu trang và cài đặt …
+335	Tìm trong dấu trang
+336	Xóa dấu trang (Ctrl+D)
+337	Đã xóa dấu trang
+338	Dấu trang sẽ hiện ở đây – bấm vào ngôi sao trên thanh địa chỉ.
+339	Đã lưu dấu trang
+340	Thêm dấu trang (Ctrl+D)
+341	Lưu dấu trang và cài đặt thành tệp – ví dụ cho máy tính mới.
+342	Sao lưu dấu trang và cài đặt
+343	Hiện thanh dấu trang
+344	Ẩn thanh dấu trang
+345	Xóa 24 giờ qua
+346	Xóa 1 giờ qua
+347	Nếu trình duyệt vượt giới hạn, thẻ nền ngốn tài nguyên nhất sẽ bị đóng băng.
+348	Giới hạn
+349	Tuyến tính
+350	Độ dày đường
+351	Mở liên kết trong chia đôi màn hình
+352	Mở liên kết trong thẻ mới
+353	Mở liên kết trong thẻ riêng tư
+354	Sao chép liên kết
+355	Đã sao chép liên kết – gửi cho bạn bè nhé!
+356	Làm sạch liên kết
+357	Tải trước liên kết
+358	Đang làm sạch liên kết
+359	Xóa danh sách
+360	Danh sách quá ngắn
+361	Không cho phép địa chỉ cục bộ
+362	Bắt đầu
+363	Luôn tải trang ở dạng mã hóa và cảnh báo khi trang không làm được.
+364	Tải một ảnh từ internet
+365	Đang tải …
+366	Xóa
+367	Xóa (Del)
+368	Thiết bị MIDI
+369	Dịch đoạn văn được chọn hoặc cả trang.
+370	Mặt nạ
+371	Mặt nạ (sáng = hiện)
+372	Bảo mật tối đa
+373	Riêng tư hơn: giờ bạn tìm kiếm bằng DuckDuckGo thay vì Google
+374	Menu
+375	Micrô
+376	Khi bạn thu nhỏ trình duyệt để chơi game, mọi thẻ không phát âm thanh sẽ nghỉ.
+377	Phút
+378	Trộn
+379	Tìm bằng Google
+380	Tìm bằng Google hoặc nhập địa chỉ
+381	Giải thích bằng {0}
+382	Tìm bằng {0}
+383	Tìm bằng {0} hoặc nhập địa chỉ
+384	Tìm bằng {0}: “{1}”
+385	Chế độ
+386	Thứ Hai – Thứ Sáu
+387	Nhân
+388	Họa tiết
+389	Kiểm tra cập nhật
+390	Tên
+391	Tinh vân
+392	Screen
+393	Không
+394	Neon
+395	Lưới neon
+396	Bộ giới hạn mạng
+397	Theo dõi lưu lượng mạng
+398	Chặn và thay đổi lưu lượng mạng
+399	Mới
+400	Tải lại
+401	Tải lại (F5)
+402	Khởi động lại và cài đặt
+403	Thẻ mới
+404	Thẻ mới (Ctrl+T)
+405	Thẻ riêng tư mới
+406	Ảnh trống mới
+407	Khởi động lại
+408	Không tìm thấy
+409	Chưa lưu
+410	Không thể
+411	Không an toàn
+412	Không tìm thấy gì
+413	Thêm một bước: chúng tôi đề xuất các tiện ích này để an toàn hơn. Chọn những gì bạn muốn – bạn có thể gỡ chúng bất cứ lúc nào trong “Tiện ích”.
+414	Thêm một ván nữa? Đã nửa đêm rồi.
+415	Chưa có tệp tải xuống
+416	Chưa cài tiện ích nào. Hãy mở Cửa hàng Chrome trực tuyến và bấm “Thêm” ở đó.
+417	Chưa có dấu trang
+418	Chưa nhập địa chỉ cập nhật (GX Control → Cập nhật)
+419	Tìm nút …
+420	Bình thường
+421	Trình duyệt bình thường – các thành phần gaming bị ẩn
+422	Chỉ tệp có (trống = tất cả)
+423	Chỉ HTTPS
+424	Chỉ một lần mỗi ngày
+425	Chỉ địa chỉ http và https
+426	Dùng GPU rời (ví dụ RTX) thay cho đồ họa tích hợp.
+427	Kết quả tiếp theo (F3)
+428	Tiếp tục không cần tiện ích
+429	Tùy chọn
+430	Tùy chọn
+431	Đóng bảng
+432	Trình quản lý mật khẩu
+433	Bảo vệ khỏi lừa đảo và phần mềm độc hại
+434	Kích thước điểm ảnh
+435	Plasma (nhiều màu, hoạt ảnh)
+436	Cực quang
+437	Riêng tư
+438	Công cụ tìm kiếm riêng tư
+439	Thẻ riêng tư
+440	Thẻ riêng tư – lịch sử, cookie và đăng nhập biến mất khi bạn đóng mọi thẻ riêng tư.
+441	Thẻ riêng tư – không lưu lịch sử và cookie sau khi đóng
+442	Chương trình đã được gia cố
+443	Thay đổi cài đặt proxy
+444	Kiểm tra tệp tải xuống bằng Windows Defender (không có trên máy tính này).
+445	Chấm
+446	Nguồn
+447	RAM {0} / {1}
+448	Bộ giới hạn RAM
+449	Lệch RGB (glitch)
+450	Nhiễu / mây
+451	Chuột phải vào thẻ cũng có tất cả những thứ này.
+452	Chuột phải hoặc phím cách để thêm nút. Kéo từ chấm bên phải một nút đến chấm bên trái nút tiếp theo. Mọi thứ cuối cùng đến
+453	Chuột phải hoặc phím cách: thêm nút · Kéo nền: di chuyển · Con lăn chuột: thu phóng · Del: xóa
+454	Retro
+455	Núi retro
+456	Thông qua Global Privacy Control, báo cho mọi trang web rằng dữ liệu của bạn không được bán hoặc chia sẻ.
+457	Bàn cờ
+458	Đã chặn phần mềm độc hại
+459	Tắt turbo của JavaScript (JIT) – mục tiêu tấn công phổ biến nhất của trình duyệt. Trang web sẽ chậm hơn, một số game trên trình duyệt không chạy nữa. Có hiệu lực sau khi khởi động lại.
+460	Cho ngủ (giải phóng RAM)
+461	Đơn giản
+462	Đóng
+463	Đóng (Esc)
+464	Truy cập nhanh
+465	Đã 22 giờ rồi – mai còn đi học/đi làm 😉
+466	Chữ lớn hơn
+467	Chữ nhỏ hơn
+468	Bảo vệ
+469	Bảo vệ cho trang này (bấm)
+470	Bật lại bảo vệ cho trang này
+471	Bảo vệ cho {0}
+472	Chống dấu vân tay trình duyệt
+473	Danh sách bảo vệ {0}:
+474	Đen trắng
+475	Cửa sổ nổi
+476	Chúc một ngày tốt lành
+477	Ảnh chụp màn hình
+478	Ảnh chụp màn hình (Ctrl+Shift+X) – chuột phải: toàn trang
+479	Ảnh chụp màn hình (toàn trang)
+480	Ảnh chụp màn hình (vùng hiển thị)
+481	Chụp màn hình không thành công
+482	Đã sao chép ảnh chụp – dán vào Discord bằng Ctrl+V
+483	Chụp màn hình
+484	Trang
+485	Dịch trang sang tiếng Việt
+486	Quên trang khi đóng (xóa cookie)
+487	In trang …
+488	Trang không hoạt động? Tắt bảo vệ tại đây
+489	Tóm tắt trang bằng {0}
+490	Không truy cập được trang
+491	Kiểm tra trang
+492	Đổi bên
+493	Mở thanh bên
+494	Tỷ lệ khung hình xem trước
+495	Giây
+496	Máy chủ trả về lỗi {0}
+497	Shader và ảnh
+498	Kết nối an toàn
+499	DNS an toàn
+500	Bảo mật
+501	Kiểm tra bảo mật
+502	Sao lưu và khôi phục
+503	Sao lưu …
+504	Đã lưu bản sao lưu
+505	Khôi phục bản sao lưu
+506	Khôi phục bản sao lưu …
+507	Vùng hiển thị
+508	Cách hoạt động
+509	Cách hoạt động:
+510	Khác
+511	Lưu
+512	Lưu thất bại:
+513	Lưu mật khẩu của bạn an toàn và tự động điền.
+514	Lưu mật khẩu của bạn ở dạng mã hóa và tự động điền trên trang web. Miễn phí, mã nguồn mở.
+515	Chia đôi màn hình
+516	Chia đôi màn hình (Ctrl+Shift+S)
+517	Chia đôi màn hình đang bật – kéo đường phân cách để điều chỉnh
+518	Thoát chia đôi màn hình
+519	Thoát chia đôi màn hình (Ctrl+Shift+S)
+520	Ngôn ngữ
+521	Tìm ngôn ngữ hoặc quốc gia …
+522	Ngôn ngữ của Windows
+523	Ngôn ngữ của Windows: {0}
+524	Khôi phục mặc định
+525	Bắt đầu
+526	Trang bắt đầu (Alt+Home)
+527	Điều khiển
+528	Kéo giãn
+529	Sọc
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T thẻ mới · Ctrl+D dấu trang · Ctrl+H lịch sử · F11 toàn màn hình
+537	Ctrl+Shift+G bật chế độ gaming · Ctrl+T thẻ mới · F11 toàn màn hình
+538	Studio
+539	Mức
+540	Tắt tiếng
+541	Cường độ
+542	Nhiễu loạn
+543	Đang kiểm tra cập nhật …
+544	Công cụ tìm kiếm
+545	Gợi ý tìm kiếm khi gõ vào thanh địa chỉ (được gửi đến công cụ tìm kiếm)
+546	Độ bão hòa
+547	Thẻ
+548	Thẻ bị lỗi – bấm để tải lại
+549	Thẻ dưới dạng cửa sổ nổi
+550	Thẻ dưới dạng cửa sổ nổi (Ctrl+Shift+F)
+551	Đóng thẻ
+552	Thẻ giờ nổi trên mọi cửa sổ
+553	Tắt tiếng thẻ
+554	Mở thẻ
+555	Thẻ
+556	Đóng các thẻ bên phải
+557	Khôi phục các thẻ
+558	Ngày
+559	Phím
+560	Phím tắt
+561	Phần
+562	Tốc độ
+563	Văn bản
+564	Văn bản (trích đoạn):
+565	Tiêu đề:
+566	Âm thanh của mọi thẻ
+567	Bật tiếng
+568	Xanh độc
+569	Độ trong suốt
+570	Twitch đang mở – chế độ gaming đang bật 🎮
+571	Giờ (HH:MM)
+572	Tia cực tím
+573	Đảo ngược
+574	Chuyển đổi
+575	Địa chỉ không hợp lệ
+576	Làm mờ
+577	Địa chỉ này không có ảnh (mẹo: chuột phải vào ảnh → “Sao chép địa chỉ hình ảnh”)
+578	Mở không mã hóa
+579	Bản cập nhật đã sẵn sàng – hãy khởi động lại trình duyệt
+580	Cập nhật tiện ích thất bại
+581	Cài đặt bản cập nhật
+582	Cài đặt bản cập nhật và khởi động lại
+583	Bản cập nhật {0} đã sẵn sàng
+584	Đang tải bản cập nhật {0} trong nền …
+585	Địa chỉ cập nhật (thư mục trên trang web của bạn)
+586	Thiếu mô-đun cập nhật
+587	Kiểm tra cập nhật thất bại: {0}
+588	Cập nhật
+589	Cập nhật hoạt động ở bản đã cài đặt
+590	Bị cấm
+591	Phóng to
+592	Thu nhỏ
+593	Lịch sử
+594	Tìm trong lịch sử
+595	Độ lệch
+596	Di chuyển / thu phóng / xoay
+597	Mã hóa việc bạn mở trang nào (DNS qua HTTPS với Quad9 từ Thụy Sĩ) và chặn thêm các địa chỉ độc hại đã biết.
+598	Phiên bản
+599	Phiên bản {0} đã mới nhất.
+600	Phiên bản {0} đã sẵn sàng – sẽ được cài ở lần khởi động tiếp theo.
+601	Đang tải phiên bản {0} … {1} %
+602	Phiên bản {0} · Chromium {1}
+603	Phiên bản {0} · Chưa nhập địa chỉ cập nhật.
+604	Phiên bản {0} · Có cập nhật ở bản Windows đã cài đặt.
+605	Phiên bản {0} · Cập nhật đến tự động qua Microsoft Store.
+606	Quản lý
+607	Tách video
+608	Tách video (hình trong hình)
+609	Tách video – hình trong hình (Ctrl+Shift+P)
+610	Tự động tách video
+611	Quảng cáo video bị tắt tiếng và bỏ qua ngay, ô quảng cáo biến mất.
+612	Làm tối viền
+613	Phát hiện virus trong {0} – Windows Defender đã xóa tệp
+614	Phát hiện virus – Windows Defender đã xóa tệp
+615	Toàn màn hình
+616	Từ
+617	Trang này từng phát tán virus hoặc chương trình độc hại khác. Elektron đã chặn chúng trước khi có gì đến được máy tính của bạn.
+618	Tiến
+619	Tiến (Alt+→)
+620	Kết quả trước (Shift+F3)
+621	Gợi ý
+622	Tổ ong
+623	Xác suất (%)
+624	Cũng cảnh báo về trang nguy hiểm. Đi kèm Malwarebytes thường không cần – cả hai làm cùng một việc.
+625	Cảnh báo trang nguy hiểm và lừa đảo.
+626	Cảnh báo địa chỉ giả
+627	Chờ
+628	Điều gì xảy ra khi một trang muốn dùng máy ảnh của bạn.
+629	Máy tính này không hỗ trợ WebGL 2.
+630	Webcam
+631	Điều khiển trang web từ xa (trình gỡ lỗi)
+632	Trang web khó nhận ra bạn qua máy tính hơn (canvas, tên card đồ họa, số nhân CPU).
+633	Trang web không còn đọc được địa chỉ IP cục bộ của bạn qua công nghệ gọi video – kể cả khi dùng VPN.
+634	Khi bạn chuyển thẻ hoặc thu nhỏ trình duyệt, video tiếp tục phát trong cửa sổ nhỏ (hình trong hình).
+635	Độ mềm
+636	Dấu trang khác
+637	Sóng
+638	Hiện ít hơn
+639	Khi chế độ gaming bật
+640	Khi chế độ gaming …
+641	Khi ngày là
+642	Khi giờ trong khoảng
+643	Khi thẻ đang mở chứa
+644	Khi trình duyệt khởi động
+645	Nếu bạn muốn đến {0}, hãy dùng nút bên dưới.
+646	Khi tải xuống xong
+647	Khi mở một trang
+648	Trình chặn quảng cáo và theo dõi
+649	Trình chặn quảng cáo
+650	Không tải được trình chặn quảng cáo:
+651	Các công ty quảng cáo không còn theo dõi bạn qua các trang web khác nhau. Đăng nhập, captcha và thanh toán vẫn hoạt động.
+652	Đã chặn quảng cáo/trình theo dõi: {0} · Đã chặn cookie theo dõi: {1}
+653	Công cụ
+654	Bật lại
+655	Đã khôi phục: {0} dấu trang mới và cài đặt của bạn
+656	Khôi phục …
+657	Lặp lại (lát gạch)
+658	Chào mừng
+659	Chào mừng đến với Elektron
+660	Không tìm thấy Windows Defender
+661	Góc
+662	Khi vượt giới hạn, các thẻ lâu nhất không dùng sẽ đi ngủ.
+663	Đang cài đặt …
+664	Thật sự xóa toàn bộ lịch sử?
+665	Thật sự mở? Trang này được biết là nguy hiểm.
+666	Cuối tuần
+667	Bỏ qua quảng cáo YouTube
+668	Hiển thị lại lượt không thích bên dưới video YouTube.
+669	Hàng
+670	Thời gian
+671	Đến giờ nghỉ rồi! 🎮
+672	Hết thời gian
+673	Hết thời gian khi tải
+674	Kéo để điều chỉnh · Bấm đúp: 50/50
+675	Thu phóng
+676	Đặt lại thu phóng
+677	Đặt lại thu phóng (Ctrl+0)
+678	Ngẫu nhiên
+679	Để thử: nút
+680	Chuyển sang trình duyệt gaming
+681	Thêm vào từ điển
+682	Chuyển sang trình duyệt bình thường
+683	Vào lúc
+684	Đến trang thật: {0}
+685	Quay lại
+686	Quay lại (Alt+←)
+687	Quay về nơi an toàn
+688	Quay lại trình duyệt
+689	Đưa về trình duyệt
+690	Quay lại Google
+691	trên một trình kích hoạt.
+692	sẽ hiện ở trên. Ảnh từ internet: chuột phải vào ảnh → “Sao chép địa chỉ hình ảnh” rồi dán vào nút.
+693	micrô của bạn
+694	máy ảnh của bạn
+695	màn hình của bạn
+696	vị trí của bạn
+697	không đọc được tệp dấu trang.
+698	bảng nhớ tạm
+699	không giới hạn
+700	không phải bản sao lưu Elektron
+701	đọc và thay đổi
+702	không được phép
+703	chỉ ở bản đã cài đặt
+704	ví dụ .exe hoặc .zip
+705	ví dụ youtube.com
+706	{0} tệp đang tải xuống – Ctrl+J
+707	Đã nhập {0} dấu trang từ {1}.
+708	Đã chặn {0} cookie theo dõi
+709	Đã vô hiệu hóa {0} liên kết theo dõi
+710	{0} không phản hồi kịp thời.
+711	{0} đã từ chối kết nối.
+712	{0} đã xong – không tìm thấy virus
+713	Không tải được {0}.
+714	Không cài được {0}. Hãy kiểm tra kết nối internet rồi thử lại – hoặc cài sau qua Menu → Cửa hàng Chrome trực tuyến.
+715	{0} muốn truy cập {1}.
+716	Khởi động {0}
+717	{0}/{1} chức năng bảo vệ đang bật.
+718	Đã quên {0} – cookie và dữ liệu trang đã bị xóa
+719	{0} – không truy cập được
+720	· Tự động
+721	· đang quét virus …
+722	· ✓ không có virus (Windows Defender)
+723	Thay đổi …
+724	Tốt hơn hãy mở ngân hàng, Steam, Discord v.v. trực tiếp qua thanh địa chỉ hoặc dấu trang.
+725	Đừng mở các tệp bạn đã có từ trang này.
+726	Mở
+727	Khi khởi động sẽ mở các thẻ của lần trước – chúng chỉ tải khi bạn bấm vào.
+728	Giới thiệu về {0}
+729	Phủ lớp
+730	Dịch
+731	Bản dịch không được bảo đảm – thấy lỗi? Hãy báo trên GitHub, chúng tôi sẵn lòng sửa.
+732	Bỏ qua các đoạn được tài trợ trong video YouTube.
+733	– hình trong hình
+734	– chia đôi màn hình
+735	– thẻ luôn nằm trên game của bạn
+736	– đã đóng băng
+737	– riêng tư
+738	– đang ngủ (bấm để tải)
+739	– cửa sổ nổi (bấm để hiện)
+740	– hai thẻ cạnh nhau
+741	Tín hiệu “Không bán” (GPC)
+742	Xóa “{0}”?
+743	Đã tải “{0}”.
+744	Đã thêm “{0}”
+745	Thêm “{0}” vào Elektron?
+746	… tắt
+747	… bật
+748	← Trang gốc
+749	▶ Thử ngay
+750	✓ Đã thực hiện
+751	🎮 Gaming
