@@ -1,0 +1,752 @@
+0	(sininen) tai
+1	(violetti). Muutokset tallentuvat automaattisesti ja tulevat heti voimaan.
+2	(punainen) – esim. ”Kun sivu avataan”. Yhdistä valkoinen nuoli kohteeseen
+3	1 lataus käynnissä – Ctrl+J
+4	1080 × 1080 (neliö)
+5	1080 × 1920 (puhelin)
+6	1920 × 1080 (Full HD)
+7	A (alla)
+8	Peruuta
+9	Peruttu
+10	Kulut
+11	Kulut käytössä
+12	Lisää (hehku)
+13	Osoite
+14	Osoite sisältää
+15	Osoite, esim. roblox.com
+16	Osoite:
+17	Osoite: {0}
+18	Toiminnot
+19	Sulje aktiivinen välilehti
+20	Korostusväri
+21	Lukea ja muuttaa kaikkia tietoja kaikilla sivustoilla
+22	Kaikki kirjanmerkit
+23	Kaikki kirjanmerkit (Ctrl+Shift+O)
+24	Hallitse kaikkia kirjanmerkkejä …
+25	Kaikki suojausasetukset …
+26	Kaikki suojaustoiminnot ovat käytössä.
+27	Katkaise kaikki yhteydet
+28	Päivitä kaikki
+29	Näytä kaikki
+30	Muutaman minuutin välein
+31	Näytä kaikki {0}
+32	Valitse kaikki
+33	Poistetaanko kaikki ja aloitetaan alusta?
+34	Kaikki, mitä Elektronissa voi säätää.
+35	Tallenna kuvana (PNG)
+36	Aseta oletusselaimeksi …
+37	Aseta aloitussivun taustaksi
+38	Avaa kelluvana ikkunana
+39	Hallitse muita laajennuksia
+40	Sulje muut välilehdet
+41	Animaatio
+42	Animoitu
+43	Tyyppi
+44	Etsi sivulta
+45	Etsi sivulta …
+46	Tällä sivulla ei ole mitään estettävää
+47	Tällä sivulla ei toisteta videota
+48	Tuo Chromesta
+49	Tuo Edgestä
+50	Tuo Opera GX:stä
+51	Poista luettelosta
+52	Täytä
+53	Tuloste
+54	Laukaisimet
+55	Poista käytöstä
+56	Leikkaa
+57	Automaattinen
+58	Automaattisesti
+59	Päivitä automaattisesti
+60	B (päällä)
+61	Muodostaa yhteyden jo, kun hiiri on linkin päällä – nopeampaa, mutta sivu näkee IP-osoitteesi jo ennen klikkausta.
+62	Muokkaa
+63	Muokkaa …
+64	Ehdot
+65	Lopeta
+66	Rajoittaa kaikkien välilehtien kaistanleveyttä, jotta pingisi pysyy vakaana pelatessa.
+67	Jäädytä pienennettäessä
+68	Esimerkki
+69	Ladataanko esimerkki? Nykyiset kulkusi korvataan.
+70	Suositut
+71	Ilmoitukset
+72	Näytä ilmoitukset
+73	Lupa
+74	Valmiina pelaamaan?
+75	Huijaussivu estetty
+76	Liike
+77	Kuva
+78	Valitse kuva …
+79	Säilytä kuva
+80	Avaa kuva uudessa välilehdessä
+81	Kuva on liian suuri (enint. 25 Mt)
+82	Kuvaa ei voitu ladata
+83	Kopioi kuva
+84	Tallenna kuva …
+85	Kuva tietokoneelta
+86	Kuvan osoite (https://…)
+87	Kirjoita kuvan osoite ja paina ”Lataa”
+88	Kuvat
+89	Asti
+90	Kirjoita osoite, joka alkaa https://
+91	Estä
+92	Estää huijaussivut, haittaohjelmat, tilausansat ja valetekniikkatukihuijaukset. Ilmainen, ei tiliä.
+93	Estää mainokset, seurantaohjelmat, ponnahdusikkunat ja evästebannerit – tähän mennessä {0} pyyntöä pysäytetty.
+94	Estää mainokset, seurantaohjelmat, mainosponnahdusikkunat ja evästebannerit.
+95	Estää tunnetut huijaussivut ja viruksia levittävät sivut.
+96	Estää tunnetut huijaussivut ja viruksia levittävät sivut. Luetteloa ladataan …
+97	Estää {0} tunnettua huijaus- ja virussivua. Luettelo päivittyy 6 tunnin välein.
+98	Vaatii ilmaisen Bitwarden-tilin. Saa: lukea ja muuttaa tietoja kaikilla sivustoilla (täyttämistä varten).
+99	Selain on ajan tasalla
+100	Selaimen kuormitus
+101	Selainpelit pyörivät ilman V-Synciä näytön virkistystaajuuden yli. Voi aiheuttaa kuvan repeilyä.
+102	Selaimen tyyli
+103	Selaustiedot poistettu
+104	Poista selaustiedot nyt
+105	Poista selaustiedot
+106	Suoritinrajoitin
+107	Käytä ChatGPT:tä suoraan selaimessa.
+108	Chrome Web Store ei ole käytettävissä
+109	Avaa Chrome Web Store
+110	Claude laajennuksena – tai helposti sivupalkin kautta.
+111	Koodi
+112	Suorittaa koodia sivustoilla
+113	Sarjakuva / juliste
+114	Poista evästeet ja kirjautumiset lopetettaessa
+115	Lukea ja muuttaa evästeitä
+116	Sitten
+117	Saa:
+118	Saa: lukea ja muuttaa tietoja kaikilla sivustoilla (tarkistusta ja estämistä varten).
+119	Kuva on liian suuri (enint. 25 Mt)
+120	Sivuston {0} suojausvarmenne ei ole luotettava.
+121	Sivuston {0} suojausvarmenne on virheellinen.
+122	Tämä ei ole kelvollinen kuva
+123	Tämä ei ole kulkutiedosto.
+124	Tämä ei ole varjostintiedosto.
+125	Tiedosto on poistettu tai siirretty
+126	Tiedot sivustolla
+127	Muuttaa tietosuoja-asetuksia
+128	Peittävyys
+129	Lukea ja muuttaa kirjanmerkkejäsi
+130	Pelisi
+131	Lukea ja muuttaa selaushistoriaasi
+132	Lukea selaushistoriaasi ja avoimia välilehtiä
+133	Selvittää sijaintisi
+134	Pelaajien selain. Chromium {0} · Electron {1}
+135	Historia on tyhjä
+136	Ulkoasu
+137	Työpöytä
+138	Tiedot
+139	Tiheys
+140	Osoite on harhaanjohtavan samanlainen kuin oikea sivu {0} – tyypillinen huijarien temppu. Katso tarkkaan: yksi kirjain on vaihdettu, korvattu tai peräisin toisesta aakkostosta.
+141	Osoitteen täytyy alkaa https://
+142	Sivuston {0} osoitetta ei löytynyt. Onko se kirjoitettu oikein?
+143	Laajennus ei tarvitse erityisiä lupia.
+144	Laajennus voi: •
+145	Laajennukset tulevat suoraan Chrome Web Storesta ja kuuluvat valmistajilleen (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Sivua ei voitu ladata.
+147	Sivu ei tue suojattua yhteyttä (HTTPS). Muut samassa verkossa – esim. julkisessa Wi-Fissä – voivat nähdä, mitä katsot ja kirjoitat täällä.
+148	Lukea leikepöytää
+149	Tämä osoite näyttää samalta kuin
+150	Tätä tiedostoa ei voitu lukea
+151	Tämä sivu ei ole salattu
+152	Tämä sivu on vaarallisten sivujen luettelossa
+153	Tämä sivu on tunnettujen tietojenkalastelusivujen luettelossa. Tällaiset sivut näyttävät usein aidoilta, mutta yrittävät varastaa salasanasi tai pankkitietosi.
+154	Tämä sivu levittää haittaohjelmia
+155	Tämä yhteys ei ole salattu
+156	Tätä videota ei voi irrottaa
+157	Erotus
+158	Lataus
+159	Lataus estetty: {0} levittää tunnettuja haittaohjelmia
+160	Lataus epäonnistui: {0}
+161	Lataus valmis: {0}
+162	Lataus aloitettu: {0}
+163	Avaa latauskansio
+164	Lataukset
+165	Lataukset (Ctrl+J)
+166	Tarkista lataukset virusten varalta
+167	Hae latauksista
+168	Hallitse latauksia
+169	Latauksia tarkistetaan
+170	Kierrä (°)
+171	Pyörii
+172	Kierto (°)
+173	Sen jälkeen olet kirjautunut ulos kaikkialta.
+174	DuckDuckGo, Brave Search ja Startpage eivät luo sinusta profiileja. Startpage näyttää Googlen tulokset ilman seurantaa.
+175	Tumma
+176	Tumma ulkoasu jokaiselle sivustolle.
+177	Monista
+178	Monista (Ctrl+D)
+179	Tehosteet
+180	Oma varjostin (GLSL)
+181	Oma kuva
+182	Oma kuva …
+183	Valitse oma taustakuva
+184	Kulku alkaa
+185	Jäädytä
+186	Väritä
+187	Liitä
+188	Sovita
+189	Ota käyttöön
+190	Asetukset
+191	Asetuksia ei voitu tallentaa:
+192	Lisätä kohtia hiiren oikean painikkeen valikkoon
+193	Elektron-suojaus · Kaksoisolentojen tunnistus suoraan tietokoneellasi
+194	Elektron-suojaus · Phishing.Databasen ja URLhausin (abuse.ch) luettelot
+195	Elektron Studio (varjostimet ja kulut)
+196	Elektron pysäytti tämän sivun, koska se on tunnettujen huijaussivujen luettelossa.
+197	Elektron etsii säännöllisesti uusia versioita.
+198	Suosittele Elektronia
+199	Suositeltu
+200	Poista
+201	Poistaa seurantaliitteet, kuten utm_, fbclid ja gclid, ohittaa Googlen ja Facebookin uudelleenohjausseurannan ja avaa AMP-sivut alkuperäisinä.
+202	Lataa purettu laajennus (kansio, jossa manifest.json)
+203	Lataa purettu laajennus …
+204	Muista valinta
+205	Kehittäjätyökalut
+206	Epicin ilmaiset pelit
+207	Selitä tämä minulle yksinkertaisesti ja suomeksi:
+208	Selitä minulle yksinkertaisesti ja suomeksi, mistä tällä sivustolla on kyse.
+209	Salli
+210	Lataa uudelleen
+211	Yritä uudelleen
+212	Rakenna ensin kuva – ”Tulosteeseen” ei vielä tule mitään.
+213	Lisää laajennus
+214	Laajennukset
+215	Laajennukset tulevat Chrome Web Storesta ja toimivat Elektronissa kuten Chromessa. Jotkin hyvin laajat laajennukset käyttävät Chromen toimintoja, joita täällä ei ole – silloin ne toimivat vain osittain. Clauden ja ChatGPT:n löydät lisäksi suoraan vasemmasta sivupalkista.
+216	Laajennukset ovat ajan tasalla
+217	Laajennuspalkki ei ole käytettävissä:
+218	Solmu ”Tuloste” puuttuu.
+219	Vie
+220	Poista FPS-raja
+221	Väri
+222	Väri 1
+223	Väri 2
+224	Kierrä sävyä
+225	Tiivistä tämä sivusto lyhyesti suomeksi – tärkeimmät kohdat luettelona.
+226	Virhe:
+227	Epäonnistui
+228	Valmis
+229	Kysy
+230	Estä kolmannen osapuolen evästeet
+231	Kolmannen osapuolen evästeet estetty
+232	Jäädyttää kaikki taustavälilehdet ja laskee selaimen prioriteettia, jotta pelisi saa etusijan. Ääntä toistavat välilehdet jatkavat.
+233	Valitse Discordin puhekanaville ”Kysy” tai ”Salli”.
+234	Hiiren oikean painikkeen toiminnoille → ”Tiivistä sivu” ja ”Selitä”.
+235	Tälle sivulle ei ole lukutilaa
+236	KOKO TIETOKONE
+237	Galaksi
+238	Gaming
+239	Pelaamista kaikilla lisillä – tai rauhallinen, tavallinen selain. Vaihdettavissa milloin tahansa.
+240	Pelaajien selain on palannut 🎮
+241	Pelitila
+242	Pelitila (Ctrl+Shift+G)
+243	Pelitila päällä – taustavälilehdet jäädytetty, selaimen prioriteetti laskettu
+244	Pelitila pois
+245	Poista pelitila käytöstä
+246	Ota pelitila käyttöön
+247	Näytä kokonaan
+248	Koko sivu
+249	Vaarallinen
+250	Vaarallinen sivu estetty
+251	Väärennetty osoite?
+252	Ladattu – liian suuri muistettavaksi, valitse uudelleen uudelleenkäynnistyksen jälkeen
+253	Poista koko historia
+254	Palauta suljettu välilehti
+255	Tallennettu ✓
+256	Eilen
+257	Älä kirjoita tähän salasanoja, pankki- tai korttitietoja.
+258	Älä kirjoita tähän salasanoja, koodeja tai korttitietoja.
+259	Ruudukko
+260	Google luo profiileja – DuckDuckGo, Brave ja Startpage eivät
+261	Google Kääntäjä
+262	Tallenna graafi tiedostoon
+263	Lataa graafitiedosto
+264	Koko
+265	Koko tallennettaessa
+266	Hyvä tietää: Avast tarkistaa tätä varten vierailemiesi sivujen osoitteet. Saa: lukea ja muuttaa tietoja kaikilla sivustoilla.
+267	Hyvää yötä
+268	Hyvää iltaa
+269	Hyvää iltaa – aika pelisessiolle.
+270	Hyvää huomenta
+271	Hyvää huomenta – valmiina pelaamaan?
+272	HTTPS-tila · voi poistaa käytöstä GX Controlissa kohdassa ”Suojaus”
+273	Pidä selain pienenä, jotta pelisi saa kaiken tehon.
+274	Ei onnistunut
+275	Vaalea
+276	Vaalea / tumma
+277	Kirkkaus
+278	Kirkkaus ja kontrasti
+279	Tänään
+280	Tausta
+281	Aloitussivun tausta
+282	Tausta asetettu ✓
+283	Näytä huomautus
+284	Lisää
+285	Koti
+286	Piilota IP-osoite WebRTC:ssä
+287	IP-osoite piilotettu WebRTC:ssä
+288	Ymmärrän riskin – avaa sivu silti
+289	Taustalla
+290	Näytä kansiossa
+291	Näytä kansiossa
+292	Aina päällimmäisenä
+293	Aina päällimmäisenä (päällä)
+294	Aina päällimmäisenä (pois)
+295	Tuonti epäonnistui:
+296	Tuo
+297	Kirjoittaa leikepöydälle
+298	Avaa uudessa välilehdessä
+299	Avaa yksityisessä välilehdessä
+300	Millä kielellä Elektronin pitäisi puhua sinulle? Liput näyttävät maat, joissa kieltä puhutaan.
+301	Estää sisältöä sivustoilla
+302	Asenna ja aloita
+303	Asennettu
+304	Käänteiset värit
+305	Kyllä
+306	Estä JavaScript tällä sivulla
+307	Jokainen ladattu tiedosto tarkistetaan Windows Defenderillä.
+308	Joka päivä
+309	Tarkista päivitykset nyt
+310	Käynnistä uudelleen nyt
+311	Tekoäly sivupalkissa
+312	Kaleidoskooppi
+313	Tuliko linkki sähköpostissa, tekstiviestissä tai Discordissa? Silloin se oli todennäköisesti huijaus.
+314	Kamera ja mikrofoni
+315	Ei internetyhteyttä. Tarkista Wi-Fi tai verkkokaapeli.
+316	Ei ehdotuksia
+317	Ei suojattua yhteyttä
+318	Napsauta osoiterivin tähteä tai paina Ctrl+D.
+319	Irrota napsauttamalla
+320	Ei voitu ladata:
+321	Kontrasti
+322	Kopioi
+323	Ympyrä
+324	Älä lataa täältä mitään.
+325	Lataa
+326	Keskeytä lataus
+327	Aja virustorjunta, jos olet epävarma.
+328	Suorituskyky
+329	Tehokas näytönohjain
+330	Lukutila
+331	Lukutila (F9)
+332	Avaa lukutila
+333	Kirjanmerkit
+334	Varmuuskopioi kirjanmerkit ja asetukset …
+335	Hae kirjanmerkeistä
+336	Poista kirjanmerkki (Ctrl+D)
+337	Kirjanmerkki poistettu
+338	Kirjanmerkit näkyvät tässä – napsauta osoiterivin tähteä.
+339	Kirjanmerkki tallennettu
+340	Lisää kirjanmerkki (Ctrl+D)
+341	Tallenna kirjanmerkit ja asetukset tiedostoon – esim. uutta tietokonetta varten.
+342	Varmuuskopioi kirjanmerkit ja asetukset
+343	Näytä kirjanmerkkipalkki
+344	Piilota kirjanmerkkipalkki
+345	Poista viimeiset 24 tuntia
+346	Poista viimeinen tunti
+347	Jos selain ylittää rajan, eniten resursseja vievä taustavälilehti jäädytetään.
+348	Raja
+349	Lineaarinen
+350	Viivan paksuus
+351	Avaa linkki jaetussa näkymässä
+352	Avaa linkki uudessa välilehdessä
+353	Avaa linkki yksityisessä välilehdessä
+354	Kopioi linkki
+355	Linkki kopioitu – lähetä se kavereillesi!
+356	Siivoa linkit
+357	Esilataa linkit
+358	Linkkejä siivotaan
+359	Tyhjennä luettelo
+360	Luettelo on liian lyhyt
+361	Paikalliset osoitteet eivät ole sallittuja
+362	Aloita
+363	Lataa sivut aina salattuina ja varoittaa, jos sivu ei siihen pysty.
+364	Lataa kuvan internetistä
+365	Ladataan …
+366	Poista
+367	Poista (Del)
+368	MIDI-laitteet
+369	Käännä valittu teksti tai kokonaisia sivuja.
+370	Maski
+371	Maski (vaalea = näkyvä)
+372	Suurin turvallisuus
+373	Enemmän yksityisyyttä: haet nyt DuckDuckGolla Googlen sijaan
+374	Valikko
+375	Mikrofoni
+376	Kun pienennät selaimen pelin ajaksi, kaikki äänettömät välilehdet lepäävät.
+377	Minuutit
+378	Sekoita
+379	Hae Googlella
+380	Hae Googlella tai kirjoita osoite
+381	Selitä palvelulla {0}
+382	Hae palvelulla {0}
+383	Hae palvelulla {0} tai kirjoita osoite
+384	Hae palvelulla {0}: ”{1}”
+385	Tila
+386	Maanantai – perjantai
+387	Kerro
+388	Kuvio
+389	Tarkista päivitykset
+390	Nimi
+391	Sumu
+392	Rasteri
+393	Ei
+394	Neon
+395	Neonruudukko
+396	Verkkorajoitin
+397	Tarkkailla verkkoliikennettä
+398	Estää ja muuttaa verkkoliikennettä
+399	Uusi
+400	Lataa uudelleen
+401	Lataa uudelleen (F5)
+402	Käynnistä uudelleen ja asenna
+403	Uusi välilehti
+404	Uusi välilehti (Ctrl+T)
+405	Uusi yksityinen välilehti
+406	Uusi tyhjä kuva
+407	Uudelleenkäynnistys
+408	Ei löytynyt
+409	Ei tallennettu
+410	Ei mahdollista
+411	Ei turvallinen
+412	Mitään ei löytynyt
+413	Vielä yksi vaihe: suosittelemme näitä laajennuksia paremman turvallisuuden vuoksi. Valitse haluamasi – voit poistaa ne milloin tahansa kohdasta ”Laajennukset”.
+414	Vielä yksi kierros? On keskiyö.
+415	Ei vielä latauksia
+416	Laajennuksia ei ole vielä asennettu. Avaa Chrome Web Store ja napsauta siellä ”Lisää”.
+417	Ei vielä kirjanmerkkejä
+418	Päivitysosoitetta ei ole vielä annettu (GX Control → Päivitykset)
+419	Etsi solmua …
+420	Tavallinen
+421	Tavallinen selain – pelielementit ovat piilossa
+422	Vain tiedostot, joissa (tyhjä = kaikki)
+423	Vain HTTPS
+424	Vain kerran päivässä
+425	Vain http- ja https-osoitteet
+426	Käyttää erillistä näytönohjainta (esim. RTX) suorittimen grafiikan sijaan.
+427	Seuraava osuma (F3)
+428	Jatka ilman laajennuksia
+429	Valinnainen
+430	Asetukset
+431	Sulje paneeli
+432	Salasanojen hallinta
+433	Suojaus tietojenkalastelulta ja haittaohjelmilta
+434	Pikselikoko
+435	Plasma (värikäs, animoitu)
+436	Revontulet
+437	Yksityinen
+438	Yksityinen hakukone
+439	Yksityinen välilehti
+440	Yksityinen välilehti – historia, evästeet ja kirjautumiset katoavat, kun suljet kaikki yksityiset välilehdet.
+441	Yksityinen välilehti – ei historiaa eikä evästeitä sulkemisen jälkeen
+442	Ohjelma vahvistettu
+443	Muuttaa välityspalvelinasetuksia
+444	Tarkistaa lataukset Windows Defenderillä (ei käytettävissä tällä tietokoneella).
+445	Pisteet
+446	Lähteet
+447	RAM {0} / {1}
+448	RAM-rajoitin
+449	RGB-siirtymä (glitch)
+450	Kohina / pilvet
+451	Välilehden hiiren oikea painike tarjoaa myös kaiken tämän.
+452	Hiiren oikea painike tai välilyönti lisää solmuja. Vedä solmun oikean puolen pisteestä seuraavan solmun vasemman puolen pisteeseen. Kaiken, mikä lopulta päätyy kohteeseen
+453	Oikea painike tai välilyönti: lisää solmu · Vedä taustaa: siirrä · Hiiren rulla: zoomaa · Del: poista
+454	Retro
+455	Retrovuoret
+456	Kertoo Global Privacy Controlin avulla jokaiselle sivustolle, ettei tietojasi saa myydä eikä jakaa.
+457	Shakkilauta
+458	Haittaohjelma estetty
+459	Poistaa käytöstä JavaScript-turbon (JIT) – selainten yleisimmän hyökkäyspinnan. Sivustot hidastuvat, ja jotkin selainpelit eivät enää toimi. Tulee voimaan uudelleenkäynnistyksen jälkeen.
+460	Laita lepoon (vapauta RAM)
+461	Pelkistetty
+462	Sulje
+463	Sulje (Esc)
+464	Pikakäyttö
+465	Jo kello 22 – huomenna on koulua/töitä 😉
+466	Suurempi teksti
+467	Pienempi teksti
+468	Suojaus
+469	Tämän sivun suojaus (napsauta)
+470	Ota tämän sivun suojaus uudelleen käyttöön
+471	Suojaus: {0}
+472	Suojaus sormenjäljitykseltä
+473	Suojausluettelo {0}:
+474	Mustavalkoinen
+475	Kelluva ikkuna
+476	Mukavaa päivää
+477	Kuvakaappaus
+478	Kuvakaappaus (Ctrl+Shift+X) – oikea painike: koko sivu
+479	Kuvakaappaus (koko sivu)
+480	Kuvakaappaus (näkyvä alue)
+481	Kuvakaappaus epäonnistui
+482	Kuvakaappaus kopioitu – liitä Discordiin Ctrl+V:llä
+483	Ota kuvakaappaus
+484	Sivu
+485	Käännä sivu suomeksi
+486	Unohda sivu suljettaessa (poista evästeet)
+487	Tulosta sivu …
+488	Eikö sivu toimi? Poista suojaus käytöstä tästä
+489	Tiivistä sivu palvelulla {0}
+490	Sivua ei tavoiteta
+491	Tutki sivua
+492	Vaihda puolia
+493	Avaa sivupalkki
+494	Esikatselun kuvasuhde
+495	Sekunnit
+496	Palvelin vastasi virheellä {0}
+497	Varjostimet ja kuvat
+498	Suojattu yhteys
+499	Suojattu DNS
+500	Turvallisuus
+501	Turvatarkistus
+502	Varmuuskopiointi ja palautus
+503	Varmuuskopioi …
+504	Varmuuskopio tallennettu
+505	Palauta varmuuskopio
+506	Palauta varmuuskopio …
+507	Näkyvä alue
+508	Näin se toimii
+509	Näin se toimii:
+510	Muut
+511	Tallenna
+512	Tallennus epäonnistui:
+513	Tallentaa salasanasi turvallisesti ja täyttää ne automaattisesti.
+514	Tallentaa salasanasi salattuina ja täyttää ne automaattisesti sivustoilla. Ilmainen, avointa lähdekoodia.
+515	Jaettu näkymä
+516	Jaettu näkymä (Ctrl+Shift+S)
+517	Jaettu näkymä päällä – säädä vetämällä jakoviivaa
+518	Lopeta jaettu näkymä
+519	Lopeta jaettu näkymä (Ctrl+Shift+S)
+520	Kieli
+521	Hae kieltä tai maata …
+522	Windowsin kieli
+523	Windowsin kieli: {0}
+524	Palauta oletus
+525	Aloitus
+526	Aloitussivu (Alt+Home)
+527	Ohjaus
+528	Venytä
+529	Raidat
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T uusi välilehti · Ctrl+D kirjanmerkki · Ctrl+H historia · F11 koko näyttö
+537	Ctrl+Shift+G käynnistää pelitilan · Ctrl+T uusi välilehti · F11 koko näyttö
+538	Studio
+539	Tasot
+540	Mykistä
+541	Voimakkuus
+542	Häiriö
+543	Etsitään päivityksiä …
+544	Hakukone
+545	Hakuehdotukset osoiteriville kirjoitettaessa (lähetetään hakukoneelle)
+546	Kylläisyys
+547	Välilehti
+548	Välilehti kaatui – lataa uudelleen napsauttamalla
+549	Välilehti kelluvana ikkunana
+550	Välilehti kelluvana ikkunana (Ctrl+Shift+F)
+551	Sulje välilehti
+552	Välilehti leijuu nyt kaikkien ikkunoiden päällä
+553	Mykistä välilehti
+554	Avaa välilehti
+555	Välilehdet
+556	Sulje oikealla olevat välilehdet
+557	Palauta välilehdet
+558	Päivät
+559	Näppäin
+560	Pikanäppäin
+561	Osat
+562	Nopeus
+563	Teksti
+564	Teksti (ote):
+565	Otsikko:
+566	Kaikkien välilehtien ääni
+567	Poista mykistys
+568	Myrkynvihreä
+569	Läpinäkyvyys
+570	Twitch auki – pelitila on päällä 🎮
+571	Kellonaika (HH:MM)
+572	Ultravioletti
+573	Käännä
+574	Vaihda
+575	Virheellinen osoite
+576	Sumennus
+577	Tässä osoitteessa ei ole kuvaa (vinkki: napsauta kuvaa oikealla → ”Kopioi kuvan osoite”)
+578	Avaa salaamattomana
+579	Päivitys valmis – käynnistä selain uudelleen
+580	Laajennusten päivitys epäonnistui
+581	Asenna päivitys
+582	Asenna päivitys ja käynnistä uudelleen
+583	Päivitys {0} on valmis
+584	Päivitystä {0} ladataan taustalla …
+585	Päivitysosoite (kansio sivustollasi)
+586	Päivitysmoduuli puuttuu
+587	Päivitysten haku epäonnistui: {0}
+588	Päivitykset
+589	Päivitykset toimivat asennetussa versiossa
+590	Kielletty
+591	Lähennä
+592	Loitonna
+593	Historia
+594	Hae historiasta
+595	Siirtymä
+596	Siirrä / zoomaa / kierrä
+597	Salaa, mitä sivuja avaat (DNS HTTPS:n kautta Sveitsin Quad9:llä), ja estää lisäksi tunnetut haittaohjelmaosoitteet.
+598	Versio
+599	Versio {0} on ajan tasalla.
+600	Versio {0} on valmis – asennetaan seuraavalla käynnistyskerralla.
+601	Ladataan versiota {0} … {1} %
+602	Versio {0} · Chromium {1}
+603	Versio {0} · Päivitysosoitetta ei ole vielä annettu.
+604	Versio {0} · Päivitykset ovat saatavilla asennetussa Windows-versiossa.
+605	Versio {0} · Päivitykset tulevat automaattisesti Microsoft Storen kautta.
+606	Hallitse
+607	Irrota video
+608	Irrota video (kuva kuvassa)
+609	Irrota video – kuva kuvassa (Ctrl+Shift+P)
+610	Irrota videot automaattisesti
+611	Videomainokset mykistetään ja ohitetaan heti, mainospaikat katoavat.
+612	Vinjetti
+613	Virus löytyi tiedostosta {0} – Windows Defender poisti tiedoston
+614	Virus löytyi – Windows Defender poisti tiedoston
+615	Koko näyttö
+616	Alkaen
+617	Tältä sivulta on levitetty viruksia tai muita haittaohjelmia. Elektron pysäytti ne, ennen kuin mitään pääsi tietokoneellesi.
+618	Eteenpäin
+619	Eteenpäin (Alt+→)
+620	Edellinen osuma (Shift+F3)
+621	Ehdotukset
+622	Hunajakenno
+623	Todennäköisyys (%)
+624	Varoittaa myös vaarallisista sivuista. Malwarebytesin rinnalla yleensä tarpeeton – molemmat tekevät saman.
+625	Varoittaa vaarallisista sivuista ja tietojenkalastelusta.
+626	Varoitus väärennetyistä osoitteista
+627	Odota
+628	Mitä tapahtuu, kun sivu haluaa käyttää kameraasi.
+629	WebGL 2 ei ole käytettävissä tällä tietokoneella.
+630	Verkkokamera
+631	Etäohjata sivustoja (virheenjäljitin)
+632	Sivustojen on vaikeampi tunnistaa sinut tietokoneesi perusteella (canvas, näytönohjaimen nimi, suoritinytimet).
+633	Sivustot eivät enää pysty lukemaan paikallista IP-osoitettasi videopuhetekniikan kautta – eivät edes VPN:n takaa.
+634	Kun vaihdat välilehteä tai pienennät selaimen, video jatkuu pienessä ikkunassa (kuva kuvassa).
+635	Pehmeys
+636	Muut kirjanmerkit
+637	Aallot
+638	Näytä vähemmän
+639	Kun pelitila on päällä
+640	Kun pelitila …
+641	Kun päivä on
+642	Kun kello on välillä
+643	Kun aktiivinen välilehti sisältää
+644	Kun selain käynnistyy
+645	Jos haluat sivulle {0}, käytä alla olevaa painiketta.
+646	Kun lataus valmistuu
+647	Kun sivu avataan
+648	Mainosten ja seurannan esto
+649	Mainosesto
+650	Mainosestoa ei voitu ladata:
+651	Mainosyhtiöt eivät voi enää seurata sinua eri sivustojen välillä. Kirjautuminen, captchat ja maksut toimivat edelleen.
+652	Estetyt mainokset/seurantaohjelmat: {0} · Torjutut seurantaevästeet: {1}
+653	Työkalut
+654	Ota uudelleen käyttöön
+655	Palautettu: {0} uutta kirjanmerkkiä ja asetuksesi
+656	Palauta …
+657	Toista (laatoitus)
+658	Tervetuloa
+659	Tervetuloa Elektroniin
+660	Windows Defenderiä ei löytynyt
+661	Kulma
+662	Kun raja ylittyy, pisimpään käyttämättä olleet välilehdet nukahtavat.
+663	Asennetaan …
+664	Poistetaanko varmasti koko historia?
+665	Avataanko varmasti? Tämä sivu tunnetaan vaarallisena.
+666	Viikonloppu
+667	Ohita YouTube-mainokset
+668	Näyttää taas YouTube-videoiden alapeukut.
+669	Rivit
+670	Aika
+671	Tauon paikka! 🎮
+672	Aikakatkaisu
+673	Aikakatkaisu ladattaessa
+674	Säädä vetämällä · Kaksoisnapsautus: 50/50
+675	Zoomaus
+676	Palauta zoomaus
+677	Palauta zoomaus (Ctrl+0)
+678	Satunnainen
+679	Kokeile: laukaisimen painike
+680	Vaihda pelaajien selaimeen
+681	Lisää sanakirjaan
+682	Vaihda tavalliseen selaimeen
+683	Kellonaikaan
+684	Oikealle sivulle: {0}
+685	Takaisin
+686	Takaisin (Alt+←)
+687	Takaisin turvaan
+688	Takaisin selaimeen
+689	Tuo takaisin selaimeen
+690	Takaisin Googleen
+691	.
+692	, näet yläpuolella. Kuvat internetistä: napsauta kuvaa oikealla → ”Kopioi kuvan osoite” ja liitä solmuun.
+693	mikrofoniisi
+694	kameraasi
+695	näyttöösi
+696	sijaintiisi
+697	kirjanmerkkitiedostoa ei voitu lukea.
+698	leikepöydälle
+699	ei rajaa
+700	ei Elektron-varmuuskopio
+701	lukea ja muuttaa
+702	ei sallittu
+703	vain asennetussa versiossa
+704	esim. .exe tai .zip
+705	esim. youtube.com
+706	{0} latausta käynnissä – Ctrl+J
+707	{0} kirjanmerkkiä tuotu lähteestä {1}.
+708	{0} seurantaevästettä torjuttu
+709	{0} seurantalinkkiä tehty vaarattomaksi
+710	{0} ei vastaa ajoissa.
+711	{0} kieltäytyi yhteydestä.
+712	{0} on valmis – viruksia ei löytynyt
+713	Kohdetta {0} ei voitu ladata.
+714	Kohdetta {0} ei voitu asentaa. Tarkista internetyhteys ja yritä uudelleen – tai asenna myöhemmin kohdasta Valikko → Chrome Web Store.
+715	{0} haluaa käyttöoikeuden kohteeseen {1}.
+716	Käynnistä {0}
+717	{0}/{1} suojaustoimintoa käytössä.
+718	{0} unohdettu – evästeet ja sivuston tiedot poistettu
+719	{0} – ei tavoitettavissa
+720	· Auto
+721	· tarkistetaan viruksilta …
+722	· ✓ ei viruksia (Windows Defender)
+723	Muuta …
+724	Avaa pankit, Steam, Discord ym. mieluummin suoraan osoiteriviltä tai kirjanmerkistä.
+725	Älä avaa tiedostoja, jotka sinulla jo on tältä sivulta.
+726	Avaa
+727	Avaa käynnistyksessä viime kerran välilehtesi – ne latautuvat vasta, kun napsautat niitä.
+728	Tietoja: {0}
+729	Peitto
+730	Käännä
+731	Käännökset ilman takuuta – löysitkö virheen? Ilmoita siitä GitHubissa, korjaamme mielellämme.
+732	Ohittaa sponsoroidut osat YouTube-videoissa.
+733	– kuva kuvassa
+734	– jaettu näkymä
+735	– välilehti pysyy pelisi päällä
+736	– jäädytetty
+737	– yksityinen
+738	– nukkuu (lataa napsauttamalla)
+739	– kelluva ikkuna (näytä napsauttamalla)
+740	– kaksi välilehteä vierekkäin
+741	”Älä myy” -signaali (GPC)
+742	Poistetaanko ”{0}”?
+743	”{0}” on ladattu.
+744	”{0}” on lisätty
+745	Lisätäänkö ”{0}” Elektroniin?
+746	… poistuu käytöstä
+747	… otetaan käyttöön
+748	← Alkuperäinen sivu
+749	▶ Testaa nyt
+750	✓ Suoritettu
+751	🎮 Gaming

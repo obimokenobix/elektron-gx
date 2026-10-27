@@ -1,0 +1,752 @@
+0	(sinine) või
+1	(lilla). Muudatused salvestatakse automaatselt ja kehtivad kohe.
+2	(punane) – nt „Kui leht avatakse“. Ühenda valge nool
+3	1 allalaadimine käib – Ctrl+J
+4	1080 × 1080 (ruut)
+5	1080 × 1920 (telefon)
+6	1920 × 1080 (Full HD)
+7	A (all)
+8	Tühista
+9	Katkestatud
+10	Voogud
+11	Voogud aktiivsed
+12	Liitmine (kuma)
+13	Aadress
+14	Aadress sisaldab
+15	Aadress, nt roblox.com
+16	Aadress:
+17	Aadress: {0}
+18	Toimingud
+19	Sulge aktiivne vahekaart
+20	Rõhuvärv
+21	Kõikide andmete lugemine ja muutmine kõigil veebisaitidel
+22	Kõik järjehoidjad
+23	Kõik järjehoidjad (Ctrl+Shift+O)
+24	Halda kõiki järjehoidjaid …
+25	Kõik kaitseseaded …
+26	Kõik kaitsefunktsioonid on aktiivsed.
+27	Katkesta kõik ühendused
+28	Uuenda kõiki
+29	Näita kõiki
+30	Iga paari minuti järel
+31	Näita kõiki {0}
+32	Vali kõik
+33	Kustutada kõik ja alustada otsast?
+34	Kõik, mida saad Elektronis seadistada.
+35	Salvesta pildina (PNG)
+36	Määra vaikebrauseriks …
+37	Määra avalehe taustaks
+38	Ava ujuva aknana
+39	Halda teisi laiendusi
+40	Sulge teised vahekaardid
+41	Animatsioon
+42	Animeeritud
+43	Tüüp
+44	Otsi lehelt
+45	Otsi lehelt …
+46	Sellel lehel pole midagi blokeerida
+47	Sellel lehel ei mängi ühtegi videot
+48	Impordi Chrome'ist
+49	Impordi Edge'ist
+50	Impordi Opera GX-ist
+51	Eemalda loendist
+52	Täida
+53	Väljund
+54	Päästikud
+55	Lülita välja
+56	Lõika
+57	Automaatika
+58	Automaatne
+59	Uuenda automaatselt
+60	B (üleval)
+61	Loob ühenduse juba siis, kui hiir on lingi peal – kiirem, kuid leht näeb su IP-aadressi juba enne klõpsu.
+62	Muuda
+63	Muuda …
+64	Tingimused
+65	Välju
+66	Piirab kõigi vahekaartide ribalaiust, et su ping mängimise ajal stabiilseks jääks.
+67	Külmuta minimeerimisel
+68	Näide
+69	Laadida näide? Sinu praegused voogud asendatakse.
+70	Populaarne
+71	Teavitused
+72	Näita teavitusi
+73	Luba
+74	Valmis mängima?
+75	Pettusleht blokeeritud
+76	Liikumine
+77	Pilt
+78	Vali pilt …
+79	Säilita pilt
+80	Ava pilt uuel vahekaardil
+81	Pilt on liiga suur (max 25 MB)
+82	Pilti ei õnnestunud laadida
+83	Kopeeri pilt
+84	Salvesta pilt …
+85	Pilt arvutist
+86	Pildi aadress (https://…)
+87	Sisesta pildi aadress ja vajuta „Laadi“
+88	Pildid
+89	Kuni
+90	Sisesta aadress, mis algab https://-ga
+91	Blokeeri
+92	Blokeerib pettuslehed, pahavara, tellimuslõksud ja võltstehnilise toe pettused. Tasuta, kontot pole vaja.
+93	Blokeerib reklaamid, jälgijad, hüpikaknad ja küpsisebännerid – seni peatatud {0} päringut.
+94	Blokeerib reklaamid, jälgijad, reklaamhüpikaknad ja küpsisebännerid.
+95	Blokeerib teadaolevad pettuslehed ja viirusi levitavad lehed.
+96	Blokeerib teadaolevad pettuslehed ja viirusi levitavad lehed. Loendit laaditakse …
+97	Blokeerib {0} teadaolevat pettus- ja viiruslehte. Loendit uuendatakse iga 6 tunni järel.
+98	Vajab tasuta Bitwardeni kontot. Tohib: lugeda ja muuta andmeid kõigil veebisaitidel (täitmiseks).
+99	Brauser on ajakohane
+100	Brauseri koormus
+101	Brauserimängud töötavad ilma V-Syncita üle värskendussageduse. Võib põhjustada pildi rebenemist.
+102	Brauseri stiil
+103	Sirvimisandmed kustutatud
+104	Kustuta sirvimisandmed kohe
+105	Kustuta sirvimisandmed
+106	Protsessoripiiraja
+107	Kasuta ChatGPT-d otse brauseris.
+108	Chrome'i veebipood pole saadaval
+109	Ava Chrome'i veebipood
+110	Claude laiendusena – või lihtsalt külgriba kaudu.
+111	Kood
+112	Koodi käitamine veebisaitidel
+113	Koomiks / plakat
+114	Kustuta küpsised ja sisselogimised väljumisel
+115	Küpsiste lugemine ja muutmine
+116	Siis
+117	Tohib:
+118	Tohib: lugeda ja muuta andmeid kõigil veebisaitidel (kontrollimiseks ja blokeerimiseks).
+119	Pilt on liiga suur (max 25 MB)
+120	Saidi {0} turvasertifikaat pole usaldusväärne.
+121	Saidi {0} turvasertifikaat on kehtetu.
+122	See pole kehtiv pilt
+123	See pole voofail.
+124	See pole varjutusfail.
+125	Fail on kustutatud või teisaldatud
+126	Andmed saidil
+127	Privaatsusseadete muutmine
+128	Läbipaistmatus
+129	Sinu järjehoidjate lugemine ja muutmine
+130	Sinu mängud
+131	Sinu sirvimisajaloo lugemine ja muutmine
+132	Sinu sirvimisajaloo ja avatud vahekaartide lugemine
+133	Sinu asukoha määramine
+134	Mängijate brauser. Chromium {0} · Electron {1}
+135	Ajalugu on tühi
+136	Kujundus
+137	Töölaud
+138	Üksikasjad
+139	Tihedus
+140	Aadress on päris saidiga {0} eksitavalt sarnane – pettjate tüüpiline nipp. Vaata hoolikalt: üks täht on vahetatud, asendatud või pärit teisest tähestikust.
+141	Aadress peab algama https://-ga
+142	Saidi {0} aadressi ei leitud. Kas see on õigesti kirjutatud?
+143	Laiendus ei vaja erilubasid.
+144	Laiendus saab: •
+145	Laiendused tulevad otse Chrome'i veebipoest ja kuuluvad nende tootjatele (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Lehte ei õnnestunud laadida.
+147	Leht ei toeta turvalist ühendust (HTTPS). Teised samas võrgus – nt avalikus WiFis – võivad näha, mida sa siin vaatad ja sisestad.
+148	Lõikelaua lugemine
+149	See aadress näeb välja nagu
+150	Seda faili ei õnnestunud lugeda
+151	See leht pole krüpteeritud
+152	See leht on ohtlike lehtede loendis
+153	See leht on teadaolevate õngitsuslehtede loendis. Sellised lehed näevad sageli ehtsad välja, kuid tahavad varastada su paroole või pangaandmeid.
+154	See leht levitab pahavara
+155	See ühendus pole krüpteeritud
+156	Seda videot ei saa lahti võtta
+157	Erinevus
+158	Allalaadimine
+159	Allalaadimine blokeeritud: {0} levitab teadaolevat pahavara
+160	Allalaadimine nurjus: {0}
+161	Allalaadimine valmis: {0}
+162	Allalaadimine alustatud: {0}
+163	Ava allalaadimiste kaust
+164	Allalaadimised
+165	Allalaadimised (Ctrl+J)
+166	Kontrolli allalaadimisi viiruste suhtes
+167	Otsi allalaadimistest
+168	Halda allalaadimisi
+169	Allalaadimisi kontrollitakse
+170	Pööra (°)
+171	Pöörleb
+172	Pööre (°)
+173	Seejärel oled kõikjalt välja logitud.
+174	DuckDuckGo, Brave Search ja Startpage ei loo sinust profiile. Startpage näitab Google'i tulemusi ilma jälgimiseta.
+175	Tume
+176	Tume kujundus igale veebisaidile.
+177	Dubleeri
+178	Dubleeri (Ctrl+D)
+179	Efektid
+180	Oma varjutus (GLSL)
+181	Oma pilt
+182	Oma pilt …
+183	Vali oma taustapilt
+184	Voog algab
+185	Külmuta
+186	Toonita
+187	Kleebi
+188	Mahuta
+189	Lülita sisse
+190	Seaded
+191	Seadeid ei õnnestunud salvestada:
+192	Kirjete lisamine paremklõpsu menüüsse
+193	Elektroni kaitse · Teisikute tuvastus otse sinu arvutis
+194	Elektroni kaitse · Phishing.Database'i ja URLhausi (abuse.ch) loendid
+195	Elektron Studio (varjutused ja voogud)
+196	Elektron peatas selle lehe, sest see on teadaolevate pettuslehtede loendis.
+197	Elektron otsib regulaarselt uusi versioone.
+198	Soovita Elektroni
+199	Soovitatud
+200	Eemalda
+201	Eemaldab jälgimislisandid nagu utm_, fbclid ja gclid, jätab vahele Google'i ja Facebooki ümbersuunamisjälgijad ning avab AMP-lehed originaalina.
+202	Laadi lahtipakitud laiendus (kaust, milles on manifest.json)
+203	Laadi lahtipakitud laiendus …
+204	Jäta otsus meelde
+205	Arendaja tööriistad
+206	Epicu tasuta mängud
+207	Selgita mulle seda lihtsalt ja eesti keeles:
+208	Selgita mulle lihtsalt ja eesti keeles, millest see veebisait räägib.
+209	Luba
+210	Laadi uuesti alla
+211	Proovi uuesti
+212	Koosta kõigepealt pilt – „Väljundisse“ ei jõua veel midagi.
+213	Lisa laiendus
+214	Laiendused
+215	Laiendused tulevad Chrome'i veebipoest ja töötavad Elektronis nagu Chrome'is. Mõned väga mahukad laiendused kasutavad Chrome'i funktsioone, mida siin pole – siis töötavad need ainult osaliselt. Claude'i ja ChatGPT leiad lisaks otse vasakult külgribalt.
+216	Laiendused on ajakohased
+217	Laienduste riba pole saadaval:
+218	Puudub sõlm „Väljund“.
+219	Ekspordi
+220	Eemalda FPS-i piirang
+221	Värv
+222	Värv 1
+223	Värv 2
+224	Pööra tooni
+225	Võta see veebisait lühidalt eesti keeles kokku – tähtsamad punktid loendina.
+226	Viga:
+227	Nurjus
+228	Valmis
+229	Küsi
+230	Blokeeri kolmanda osapoole küpsised
+231	Kolmanda osapoole küpsised blokeeritud
+232	Külmutab kõik taustal olevad vahekaardid ja langetab brauseri prioriteeti, et su mäng saaks eelise. Heliga vahekaardid töötavad edasi.
+233	Discordi häälkanalite jaoks vali „Küsi“ või „Luba“.
+234	Paremklõpsu jaoks → „Võta leht kokku“ ja „Selgita“.
+235	Selle lehe jaoks pole lugemisrežiimi
+236	KOGU ARVUTI
+237	Galaktika
+238	Gaming
+239	Mängimine kõigi lisadega – või rahulik, tavaline brauser. Saab igal ajal ümber lülitada.
+240	Mängijate brauser on tagasi 🎮
+241	Mängurežiim
+242	Mängurežiim (Ctrl+Shift+G)
+243	Mängurežiim sees – taustavahekaardid külmutatud, brauseri prioriteet langetatud
+244	Mängurežiim väljas
+245	Lülita mängurežiim välja
+246	Lülita mängurežiim sisse
+247	Näita tervikuna
+248	Kogu leht
+249	Ohtlik
+250	Ohtlik leht blokeeritud
+251	Võltsitud aadress?
+252	Laaditud – meelespidamiseks liiga suur, vali pärast taaskäivitust uuesti
+253	Kustuta kogu ajalugu
+254	Taasta suletud vahekaart
+255	Salvestatud ✓
+256	Eile
+257	Ära sisesta siia paroole, panga- ega kaardiandmeid.
+258	Ära sisesta siia paroole, koode ega kaardiandmeid.
+259	Ruudustik
+260	Google loob profiile – DuckDuckGo, Brave ja Startpage mitte
+261	Google'i tõlge
+262	Salvesta graaf failina
+263	Laadi graafifail
+264	Suurus
+265	Suurus salvestamisel
+266	Hea teada: Avast kontrollib selleks külastatavate lehtede aadresse. Tohib: lugeda ja muuta andmeid kõigil veebisaitidel.
+267	Head ööd
+268	Tere õhtust
+269	Tere õhtust – aeg mänguseansiks.
+270	Tere hommikust
+271	Tere hommikust – valmis mängima?
+272	HTTPS-režiim · saab välja lülitada GX Controlis jaotises „Kaitse“
+273	Hoia brauser väike, et su mäng saaks kogu jõudluse.
+274	Ei õnnestunud
+275	Hele
+276	Hele / tume
+277	Heledus
+278	Heledus ja kontrastsus
+279	Täna
+280	Taust
+281	Avalehe taust
+282	Taust määratud ✓
+283	Näita märkust
+284	Lisa
+285	Avaleht
+286	Peida IP-aadress WebRTC-s
+287	IP-aadress WebRTC-s peidetud
+288	Mõistan ohtu – ava leht siiski
+289	Taustal
+290	Näita kaustas
+291	Kuva kaustas
+292	Alati pealmine
+293	Alati pealmine (sees)
+294	Alati pealmine (väljas)
+295	Importimine nurjus:
+296	Impordi
+297	Lõikelauale kirjutamine
+298	Ava uuel vahekaardil
+299	Ava privaatsel vahekaardil
+300	Mis keeles peaks Elektron sinuga rääkima? Lipud näitavad riike, kus seda keelt räägitakse.
+301	Sisu blokeerimine veebisaitidel
+302	Paigalda ja alusta
+303	Paigaldatud
+304	Inverteeri
+305	Jah
+306	Blokeeri JavaScript sellel lehel
+307	Iga allalaaditud faili kontrollitakse Windows Defenderiga.
+308	Iga päev
+309	Otsi uuendusi kohe
+310	Taaskäivita kohe
+311	Tehisintellekt külgribal
+312	Kaleidoskoop
+313	Kas link tuli e-kirja, SMS-i või Discordi kaudu? Siis oli see tõenäoliselt pettus.
+314	Kaamera ja mikrofon
+315	Internetiühendus puudub. Kontrolli WiFi-t või võrgukaablit.
+316	Soovitusi pole
+317	Turvaline ühendus puudub
+318	Klõpsa aadressiribal tähte või vajuta Ctrl+D.
+319	Klõpsa lahutamiseks
+320	Ei õnnestunud laadida:
+321	Kontrastsus
+322	Kopeeri
+323	Ring
+324	Ära laadi siit midagi alla.
+325	Laadi
+326	Peata laadimine
+327	Kui sa pole kindel, käivita viirusetõrje.
+328	Jõudlus
+329	Võimas graafikakaart
+330	Lugemisrežiim
+331	Lugemisrežiim (F9)
+332	Ava lugemisrežiim
+333	Järjehoidjad
+334	Varunda järjehoidjad ja seaded …
+335	Otsi järjehoidjatest
+336	Eemalda järjehoidja (Ctrl+D)
+337	Järjehoidja eemaldatud
+338	Järjehoidjad ilmuvad siia – klõpsa aadressiribal tähte.
+339	Järjehoidja salvestatud
+340	Lisa järjehoidja (Ctrl+D)
+341	Salvesta järjehoidjad ja seaded faili – nt uue arvuti jaoks.
+342	Järjehoidjate ja seadete varundamine
+343	Näita järjehoidjariba
+344	Peida järjehoidjariba
+345	Kustuta viimased 24 tundi
+346	Kustuta viimane tund
+347	Kui brauser ületab piirangu, külmutatakse kõige näljasem taustavahekaart.
+348	Piirang
+349	Lineaarne
+350	Joone laius
+351	Ava link jagatud ekraanil
+352	Ava link uuel vahekaardil
+353	Ava link privaatsel vahekaardil
+354	Kopeeri link
+355	Link kopeeritud – saada see sõpradele!
+356	Puhasta lingid
+357	Laadi lingid ette
+358	Linke puhastatakse
+359	Tühjenda loend
+360	Loend on liiga lühike
+361	Kohalikud aadressid pole lubatud
+362	Alusta
+363	Laadib lehed alati krüpteeritult ja hoiatab, kui leht seda ei suuda.
+364	Laadib pildi internetist
+365	Laadimine …
+366	Kustuta
+367	Kustuta (Del)
+368	MIDI-seadmed
+369	Tõlgi valitud tekst või terved lehed.
+370	Mask
+371	Mask (hele = nähtav)
+372	Maksimaalne turvalisus
+373	Rohkem privaatsust: otsid nüüd Google'i asemel DuckDuckGo-ga
+374	Menüü
+375	Mikrofon
+376	Kui minimeerid brauseri mängu jaoks, puhkavad kõik helita vahekaardid.
+377	Minutid
+378	Sega
+379	Otsi Google'iga
+380	Otsi Google'iga või sisesta aadress
+381	Selgita teenusega {0}
+382	Otsi teenusega {0}
+383	Otsi teenusega {0} või sisesta aadress
+384	Otsi teenusega {0}: „{1}“
+385	Režiim
+386	Esmaspäev – reede
+387	Korruta
+388	Muster
+389	Otsi uuendusi
+390	Nimi
+391	Udukogu
+392	Ekraan
+393	Ei
+394	Neoon
+395	Neoonruudustik
+396	Võrgupiiraja
+397	Võrguliikluse jälgimine
+398	Võrguliikluse blokeerimine ja muutmine
+399	Uus
+400	Laadi uuesti
+401	Laadi uuesti (F5)
+402	Taaskäivita ja paigalda
+403	Uus vahekaart
+404	Uus vahekaart (Ctrl+T)
+405	Uus privaatne vahekaart
+406	Uus tühi pilt
+407	Taaskäivitus
+408	Ei leitud
+409	Pole salvestatud
+410	Pole võimalik
+411	Pole turvaline
+412	Midagi ei leitud
+413	Veel üks samm: soovitame neid laiendusi suurema turvalisuse jaoks. Vali, mida soovid – saad need igal ajal jaotises „Laiendused“ eemaldada.
+414	Veel üks voor? On kesköö.
+415	Allalaadimisi veel pole
+416	Laiendusi pole veel paigaldatud. Ava Chrome'i veebipood ja klõpsa seal „Lisa“.
+417	Järjehoidjaid veel pole
+418	Uuenduste aadressi pole veel sisestatud (GX Control → Uuendused)
+419	Otsi sõlme …
+420	Tavaline
+421	Tavaline brauser – mänguelemendid on peidetud
+422	Ainult failid, mis sisaldavad (tühi = kõik)
+423	Ainult HTTPS
+424	Ainult kord päevas
+425	Ainult http- ja https-aadressid
+426	Kasutab eraldi graafikakaarti (nt RTX) protsessori graafika asemel.
+427	Järgmine vaste (F3)
+428	Jätka ilma laiendusteta
+429	Valikuline
+430	Valikud
+431	Sulge paneel
+432	Paroolihaldur
+433	Kaitse õngitsuse ja pahavara eest
+434	Piksli suurus
+435	Plasma (värviline, animeeritud)
+436	Virmalised
+437	Privaatne
+438	Privaatne otsingumootor
+439	Privaatne vahekaart
+440	Privaatne vahekaart – ajalugu, küpsised ja sisselogimised kaovad, kui sulged kõik privaatsed vahekaardid.
+441	Privaatne vahekaart – pärast sulgemist pole ajalugu ega küpsiseid
+442	Programm tugevdatud
+443	Puhverserveri seadete muutmine
+444	Kontrollib allalaadimisi Windows Defenderiga (selles arvutis pole saadaval).
+445	Punktid
+446	Allikad
+447	RAM {0} / {1}
+448	RAM-i piiraja
+449	RGB-nihe (glitch)
+450	Müra / pilved
+451	Vahekaardil paremklõps pakub samuti kõike seda.
+452	Paremklõps või tühik lisab sõlmi. Lohista sõlme paremal olevast punktist järgmise sõlme vasakul olevasse punkti. Kõike, mis lõpuks jõuab sõlme
+453	Paremklõps või tühik: lisa sõlm · Lohista tausta: liiguta · Hiireratas: suumi · Del: kustuta
+454	Retro
+455	Retromäed
+456	Teatab Global Privacy Controli kaudu igale veebisaidile, et su andmeid ei tohi müüa ega jagada.
+457	Malelaud
+458	Pahavara blokeeritud
+459	Lülitab välja JavaScripti turbo (JIT) – brauserite levinuima rünnakupinna. Veebisaidid muutuvad aeglasemaks, mõned brauserimängud enam ei tööta. Kehtib pärast taaskäivitust.
+460	Pane magama (vabasta RAM)
+461	Lihtne
+462	Sulge
+463	Sulge (Esc)
+464	Kiirjuurdepääs
+465	Juba kell 22 – homme on kool/töö 😉
+466	Suurem kiri
+467	Väiksem kiri
+468	Kaitse
+469	Selle lehe kaitse (klõpsa)
+470	Lülita selle lehe kaitse uuesti sisse
+471	Kaitse: {0}
+472	Kaitse sõrmejälgede eest
+473	Kaitseloend {0}:
+474	Mustvalge
+475	Ujuv aken
+476	Head päeva
+477	Kuvatõmmis
+478	Kuvatõmmis (Ctrl+Shift+X) – paremklõps: kogu leht
+479	Kuvatõmmis (kogu leht)
+480	Kuvatõmmis (nähtav ala)
+481	Kuvatõmmis ei õnnestunud
+482	Kuvatõmmis kopeeritud – kleebi Discordi klahvidega Ctrl+V
+483	Tee kuvatõmmis
+484	Leht
+485	Tõlgi leht eesti keelde
+486	Unusta leht sulgemisel (kustuta küpsised)
+487	Prindi leht …
+488	Leht ei tööta? Lülita kaitse siin välja
+489	Võta leht kokku teenusega {0}
+490	Lehte ei saa avada
+491	Uuri lehte
+492	Vaheta pooled
+493	Ava külgriba
+494	Eelvaate kuvasuhe
+495	Sekundid
+496	Server vastas veaga {0}
+497	Varjutused ja pildid
+498	Turvaline ühendus
+499	Turvaline DNS
+500	Turvalisus
+501	Turvakontroll
+502	Varundamine ja taastamine
+503	Varunda …
+504	Varukoopia salvestatud
+505	Taasta varukoopia
+506	Taasta varukoopia …
+507	Nähtav ala
+508	Kuidas see töötab
+509	Kuidas see töötab:
+510	Muu
+511	Salvesta
+512	Salvestamine nurjus:
+513	Hoiab su paroole turvaliselt ja täidab need automaatselt.
+514	Hoiab su paroole krüpteeritult ja täidab need veebisaitidel automaatselt. Tasuta, avatud lähtekoodiga.
+515	Jagatud ekraan
+516	Jagatud ekraan (Ctrl+Shift+S)
+517	Jagatud ekraan sees – lohista eraldusjoont reguleerimiseks
+518	Lõpeta jagatud ekraan
+519	Lõpeta jagatud ekraan (Ctrl+Shift+S)
+520	Keel
+521	Otsi keelt või riiki …
+522	Windowsi keel
+523	Windowsi keel: {0}
+524	Taasta vaikimisi
+525	Algus
+526	Avaleht (Alt+Home)
+527	Juhtimine
+528	Venita
+529	Triibud
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T uus vahekaart · Ctrl+D järjehoidja · Ctrl+H ajalugu · F11 täisekraan
+537	Ctrl+Shift+G käivitab mängurežiimi · Ctrl+T uus vahekaart · F11 täisekraan
+538	Studio
+539	Astmed
+540	Vaigista
+541	Tugevus
+542	Häire
+543	Uuenduste otsimine …
+544	Otsingumootor
+545	Otsingusoovitused aadressiribale kirjutamisel (saadetakse otsingumootorile)
+546	Küllastus
+547	Vahekaart
+548	Vahekaart jooksis kokku – klõpsa uuesti laadimiseks
+549	Vahekaart ujuva aknana
+550	Vahekaart ujuva aknana (Ctrl+Shift+F)
+551	Sulge vahekaart
+552	Vahekaart hõljub nüüd kõigi akende kohal
+553	Vaigista vahekaart
+554	Ava vahekaart
+555	Vahekaardid
+556	Sulge paremal olevad vahekaardid
+557	Taasta vahekaardid
+558	Päevad
+559	Klahv
+560	Kiirklahv
+561	Osad
+562	Tempo
+563	Tekst
+564	Tekst (väljavõte):
+565	Pealkiri:
+566	Kõigi vahekaartide heli
+567	Lülita heli sisse
+568	Mürgiroheline
+569	Läbipaistvus
+570	Twitch avatud – mängurežiim on sees 🎮
+571	Kellaaeg (HH:MM)
+572	Ultraviolett
+573	Pööra ümber
+574	Lülita
+575	Vigane aadress
+576	Hägusus
+577	Sellel aadressil pole pilti (vihje: paremklõps pildil → „Kopeeri pildi aadress“)
+578	Ava krüpteerimata
+579	Uuendus on valmis – taaskäivita brauser
+580	Laienduste uuendamine nurjus
+581	Paigalda uuendus
+582	Paigalda uuendus ja taaskäivita
+583	Uuendus {0} on valmis
+584	Uuendust {0} laaditakse taustal …
+585	Uuenduste aadress (kaust sinu veebisaidil)
+586	Uuendusmoodul puudub
+587	Uuenduste otsimine nurjus: {0}
+588	Uuendused
+589	Uuendused töötavad paigaldatud versioonis
+590	Keelatud
+591	Suurenda
+592	Vähenda
+593	Ajalugu
+594	Otsi ajaloost
+595	Nihe
+596	Liiguta / suumi / pööra
+597	Krüpteerib, milliseid lehti sa avad (DNS üle HTTPS-i Šveitsi Quad9-ga), ja blokeerib lisaks teadaolevad pahavara-aadressid.
+598	Versioon
+599	Versioon {0} on ajakohane.
+600	Versioon {0} on valmis – paigaldatakse järgmisel käivitamisel.
+601	Laaditakse versiooni {0} … {1} %
+602	Versioon {0} · Chromium {1}
+603	Versioon {0} · Uuenduste aadressi pole veel sisestatud.
+604	Versioon {0} · Uuendused on saadaval paigaldatud Windowsi versioonis.
+605	Versioon {0} · Uuendused tulevad automaatselt Microsoft Store'i kaudu.
+606	Halda
+607	Võta video lahti
+608	Võta video lahti (pilt pildis)
+609	Võta video lahti – pilt pildis (Ctrl+Shift+P)
+610	Võta videod automaatselt lahti
+611	Videoreklaamid vaigistatakse ja jäetakse kohe vahele, reklaamipinnad kaovad.
+612	Vinjett
+613	Failist {0} leiti viirus – Windows Defender eemaldas faili
+614	Leiti viirus – Windows Defender eemaldas faili
+615	Täisekraan
+616	Alates
+617	Sellelt lehelt levitati viirusi või muid pahatahtlikke programme. Elektron peatas need enne, kui midagi su arvutisse jõudis.
+618	Edasi
+619	Edasi (Alt+→)
+620	Eelmine vaste (Shift+F3)
+621	Soovitused
+622	Kärg
+623	Tõenäosus (%)
+624	Hoiatab samuti ohtlike lehtede eest. Malwarebytesi kõrval enamasti pole vaja – mõlemad teevad sama.
+625	Hoiatab ohtlike lehtede ja õngitsuse eest.
+626	Hoiatus võltsitud aadresside eest
+627	Oota
+628	Mis juhtub, kui leht tahab su kaamerat kasutada.
+629	WebGL 2 pole selles arvutis saadaval.
+630	Veebikaamera
+631	Veebisaitide kaugjuhtimine (silur)
+632	Veebisaitidel on raskem sind arvuti järgi ära tunda (canvas, graafikakaardi nimi, protsessori tuumad).
+633	Veebisaidid ei saa enam videovestlustehnoloogia kaudu su kohalikku IP-aadressi lugeda – ka mitte VPN-i taga.
+634	Kui vahetad vahekaarti või minimeerid brauseri, jätkub video väikeses aknas (pilt pildis).
+635	Pehmus
+636	Muud järjehoidjad
+637	Lained
+638	Näita vähem
+639	Kui mängurežiim on sees
+640	Kui mängurežiim …
+641	Kui päev on
+642	Kui kell on vahemikus
+643	Kui aktiivne vahekaart sisaldab
+644	Kui brauser käivitub
+645	Kui soovid minna saidile {0}, kasuta allolevat nuppu.
+646	Kui allalaadimine on valmis
+647	Kui leht avatakse
+648	Reklaami- ja jälgijablokeerija
+649	Reklaamiblokeerija
+650	Reklaamiblokeerijat ei õnnestunud laadida:
+651	Reklaamifirmad ei saa sind enam eri veebisaitidel jälgida. Sisselogimine, captcha'd ja maksed töötavad edasi.
+652	Blokeeritud reklaame/jälgijaid: {0} · Tõrjutud jälgimisküpsiseid: {1}
+653	Tööriistad
+654	Lülita uuesti sisse
+655	Taastatud: {0} uut järjehoidjat ja sinu seaded
+656	Taasta …
+657	Korda (plaadid)
+658	Tere tulemast
+659	Tere tulemast Elektroni
+660	Windows Defenderit ei leitud
+661	Nurk
+662	Piirangu ületamisel jäävad magama kõige kauem kasutamata vahekaardid.
+663	Paigaldamine …
+664	Kas kustutada tõesti kogu ajalugu?
+665	Kas avada tõesti? See leht on teadaolevalt ohtlik.
+666	Nädalavahetus
+667	Jäta YouTube'i reklaamid vahele
+668	Näitab YouTube'i videote all taas mittemeeldimisi.
+669	Read
+670	Aeg
+671	Aeg pausiks! 🎮
+672	Ajalõpp
+673	Laadimisel tekkis ajalõpp
+674	Lohista reguleerimiseks · Topeltklõps: 50/50
+675	Suum
+676	Lähtesta suum
+677	Lähtesta suum (Ctrl+0)
+678	Juhuslik
+679	Proovimiseks: päästiku nupp
+680	Lülitu mängijate brauserile
+681	Lisa sõnastikku
+682	Lülitu tavalisele brauserile
+683	Kellaajal
+684	Päris saidile: {0}
+685	Tagasi
+686	Tagasi (Alt+←)
+687	Tagasi turvalisse kohta
+688	Tagasi brauserisse
+689	Too tagasi brauserisse
+690	Tagasi Google'isse
+691	.
+692	, näed üleval. Pildid internetist: paremklõps pildil → „Kopeeri pildi aadress“ ja kleebi sõlme.
+693	su mikrofonile
+694	su kaamerale
+695	su ekraanile
+696	su asukohale
+697	järjehoidjafaili ei õnnestunud lugeda.
+698	lõikelauale
+699	piiranguta
+700	pole Elektroni varukoopia
+701	lugeda ja muuta
+702	pole lubatud
+703	ainult paigaldatud versioonis
+704	nt .exe või .zip
+705	nt youtube.com
+706	{0} allalaadimist käib – Ctrl+J
+707	Allikast {1} üle võetud {0} järjehoidjat.
+708	{0} jälgimisküpsist tõrjutud
+709	{0} jälgimislinki kahjutuks tehtud
+710	{0} ei vasta õigel ajal.
+711	{0} keeldus ühendusest.
+712	{0} on valmis – viirust ei leitud
+713	{0} laadimine ebaõnnestus.
+714	{0} paigaldamine ebaõnnestus. Kontrolli internetiühendust ja proovi uuesti – või paigalda hiljem menüüst Menüü → Chrome'i veebipood.
+715	{0} soovib juurdepääsu {1}.
+716	Käivita {0}
+717	{0} kaitsefunktsiooni {1}-st on aktiivsed.
+718	{0} unustatud – küpsised ja saidi andmed kustutatud
+719	{0} – pole kättesaadav
+720	· Auto
+721	· kontrollitakse viiruste suhtes …
+722	· ✓ viirust pole (Windows Defender)
+723	Muuda …
+724	Ava pangad, Steam, Discord jms parem otse aadressiribalt või järjehoidjast.
+725	Ära ava faile, mis sul sellelt lehelt juba on.
+726	Ava
+727	Avab käivitamisel su eelmise korra vahekaardid – need laaditakse alles siis, kui neile klõpsad.
+728	Teave: {0}
+729	Ülekate
+730	Tõlgi
+731	Tõlked ilma garantiita – leidsid vea? Teata sellest GitHubis, parandame hea meelega.
+732	Jätab YouTube'i videotes sponsorlõigud vahele.
+733	– pilt pildis
+734	– jagatud ekraan
+735	– vahekaart jääb su mängu peale
+736	– külmutatud
+737	– privaatne
+738	– magab (klõpsa laadimiseks)
+739	– ujuv aken (klõpsa kuvamiseks)
+740	– kaks vahekaarti kõrvuti
+741	„Ära müü“ signaal (GPC)
+742	Eemaldada „{0}“?
+743	„{0}“ on laaditud.
+744	„{0}“ on lisatud
+745	Lisada „{0}“ Elektroni?
+746	… lülitatakse välja
+747	… lülitatakse sisse
+748	← Algne leht
+749	▶ Proovi kohe
+750	✓ Täidetud
+751	🎮 Gaming
