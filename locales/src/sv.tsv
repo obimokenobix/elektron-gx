@@ -1,0 +1,752 @@
+0	(blå) eller
+1	(lila). Ändringar sparas automatiskt och gäller direkt.
+2	(röd) – t.ex. ”När en sida öppnas”. Koppla den vita pilen till
+3	1 nedladdning pågår – Ctrl+J
+4	1080 × 1080 (kvadrat)
+5	1080 × 1920 (mobil)
+6	1920 × 1080 (Full HD)
+7	A (nederst)
+8	Avbryt
+9	Avbruten
+10	Flöden
+11	Flöden aktiva
+12	Addera (glöd)
+13	Adress
+14	Adressen innehåller
+15	Adress, t.ex. roblox.com
+16	Adress:
+17	Adress: {0}
+18	Åtgärder
+19	Stäng aktiv flik
+20	Accentfärg
+21	Läsa och ändra all data på alla webbplatser
+22	Alla bokmärken
+23	Alla bokmärken (Ctrl+Shift+O)
+24	Hantera alla bokmärken …
+25	Alla skyddsinställningar …
+26	Alla skyddsfunktioner är aktiva.
+27	Koppla från alla anslutningar
+28	Uppdatera alla
+29	Visa alla
+30	Med några minuters mellanrum
+31	Visa alla {0}
+32	Markera allt
+33	Radera allt och börja om?
+34	Allt du kan ställa in i Elektron.
+35	Spara som bild (PNG)
+36	Ange som standardwebbläsare …
+37	Använd som bakgrund på startsidan
+38	Öppna som flytande fönster
+39	Hantera andra tillägg
+40	Stäng andra flikar
+41	Animering
+42	Animerad
+43	Typ
+44	Sök på sidan
+45	Sök på sidan …
+46	Det finns inget att blockera på den här sidan
+47	Ingen video spelas på den här sidan
+48	Importera från Chrome
+49	Importera från Edge
+50	Importera från Opera GX
+51	Ta bort från listan
+52	Fyll
+53	Utdata
+54	Utlösare
+55	Stäng av
+56	Klipp ut
+57	Automatik
+58	Automatiskt
+59	Uppdatera automatiskt
+60	B (överst)
+61	Ansluter redan när musen är över en länk – snabbare, men sidan ser din IP-adress redan före klicket.
+62	Redigera
+63	Redigera …
+64	Villkor
+65	Avsluta
+66	Begränsar bandbredden för alla flikar så att din ping förblir stabil när du spelar.
+67	Frys vid minimering
+68	Exempel
+69	Läsa in exempel? Dina nuvarande flöden ersätts.
+70	Populärt
+71	Aviseringar
+72	Visa aviseringar
+73	Behörighet
+74	Redo att spela?
+75	Bedrägerisida blockerad
+76	Rörelse
+77	Bild
+78	Välj bild …
+79	Behåll bilden
+80	Öppna bilden i ny flik
+81	Bilden är för stor (max 25 MB)
+82	Bilden kunde inte läsas in
+83	Kopiera bild
+84	Spara bild …
+85	Bild från datorn
+86	Bildadress (https://…)
+87	Ange bildadressen och tryck på ”Läs in”
+88	Bilder
+89	Till
+90	Ange en adress som börjar med https://
+91	Blockera
+92	Blockerar bedrägerisidor, skadlig kod, prenumerationsfällor och falsk teknisk support. Gratis, inget konto behövs.
+93	Blockerar annonser, spårare, popup-fönster och cookie-banners – hittills {0} förfrågningar stoppade.
+94	Blockerar annonser, spårare, reklam-popups och cookie-banners.
+95	Blockerar kända bedrägerisidor och sidor som sprider virus.
+96	Blockerar kända bedrägerisidor och sidor som sprider virus. Listan läses in …
+97	Blockerar {0} kända bedrägeri- och virussidor. Listan uppdateras var 6:e timme.
+98	Kräver ett gratis Bitwarden-konto. Får: läsa och ändra data på alla webbplatser (för ifyllning).
+99	Webbläsaren är uppdaterad
+100	Webbläsarens belastning
+101	Webbläsarspel körs utan V-Sync över skärmens uppdateringsfrekvens. Kan orsaka bildrivning.
+102	Webbläsarstil
+103	Webbinformation raderad
+104	Radera webbinformation nu
+105	Radera webbinformation
+106	CPU-begränsare
+107	Använd ChatGPT direkt i webbläsaren.
+108	Chrome Web Store är inte tillgänglig
+109	Öppna Chrome Web Store
+110	Claude som tillägg – eller enkelt via sidofältet.
+111	Kod
+112	Köra kod på webbplatser
+113	Serie / affisch
+114	Radera cookies och inloggningar vid avslut
+115	Läsa och ändra cookies
+116	Sedan
+117	Får:
+118	Får: läsa och ändra data på alla webbplatser (för kontroll och blockering).
+119	Bilden är för stor (max 25 MB)
+120	Säkerhetscertifikatet för {0} är inte betrott.
+121	Säkerhetscertifikatet för {0} är ogiltigt.
+122	Det här är ingen giltig bild
+123	Det här är ingen flödesfil.
+124	Det här är ingen shader-fil.
+125	Filen har raderats eller flyttats
+126	Data på
+127	Ändra sekretessinställningar
+128	Opacitet
+129	Läsa och ändra dina bokmärken
+130	Dina spel
+131	Läsa och ändra din webbhistorik
+132	Läsa din webbhistorik och öppna flikar
+133	Ta reda på din plats
+134	Webbläsaren för gamers. Chromium {0} · Electron {1}
+135	Historiken är tom
+136	Utseende
+137	Skrivbord
+138	Detaljer
+139	Täthet
+140	Adressen liknar den riktiga sidan {0} förvillande mycket – ett typiskt bedragartrick. Titta noga: en bokstav är omkastad, utbytt eller kommer från ett annat alfabet.
+141	Adressen måste börja med https://
+142	Adressen till {0} hittades inte. Är den rätt stavad?
+143	Tillägget behöver inga särskilda behörigheter.
+144	Tillägget kan: •
+145	Tilläggen kommer direkt från Chrome Web Store och tillhör sina tillverkare (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Sidan kunde inte läsas in.
+147	Sidan stöder ingen säker anslutning (HTTPS). Andra i samma nätverk – t.ex. på ett offentligt wifi – kan se vad du tittar på och skriver här.
+148	Läsa urklipp
+149	Den här adressen ser ut som
+150	Filen kunde inte läsas
+151	Den här sidan är inte krypterad
+152	Den här sidan finns på listan över farliga sidor
+153	Den här sidan finns på en lista över kända nätfiskesidor. Sådana sidor ser ofta äkta ut men vill stjäla dina lösenord eller bankuppgifter.
+154	Den här sidan sprider skadlig kod
+155	Den här anslutningen är inte krypterad
+156	Den här videon kan inte lossas
+157	Differens
+158	Nedladdning
+159	Nedladdning blockerad: {0} sprider känd skadlig kod
+160	Nedladdningen misslyckades: {0}
+161	Nedladdning klar: {0}
+162	Nedladdning startad: {0}
+163	Öppna mappen Hämtade filer
+164	Nedladdningar
+165	Nedladdningar (Ctrl+J)
+166	Sök efter virus i nedladdningar
+167	Sök i nedladdningar
+168	Hantera nedladdningar
+169	Nedladdningar kontrolleras
+170	Rotera (°)
+171	Roterar
+172	Rotation (°)
+173	Sedan är du utloggad överallt.
+174	DuckDuckGo, Brave Search och Startpage skapar inga profiler om dig. Startpage visar Googles resultat utan spårning.
+175	Mörkt
+176	Mörkt utseende för varje webbplats.
+177	Duplicera
+178	Duplicera (Ctrl+D)
+179	Effekter
+180	Egen shader (GLSL)
+181	Egen bild
+182	Egen bild …
+183	Välj egen bakgrundsbild
+184	Ett flöde börjar med en
+185	Frys
+186	Färglägg
+187	Klistra in
+188	Anpassa
+189	Slå på
+190	Inställningar
+191	Inställningarna kunde inte sparas:
+192	Lägga till poster i högerklicksmenyn
+193	Elektron-skydd · Dubbelgångarigenkänning direkt på din dator
+194	Elektron-skydd · Listor från Phishing.Database och URLhaus (abuse.ch)
+195	Elektron Studio (shaders och flöden)
+196	Elektron har stoppat den här sidan eftersom den finns på en lista över kända bedrägerisidor.
+197	Elektron söker regelbundet efter nya versioner.
+198	Rekommendera Elektron
+199	Rekommenderas
+200	Ta bort
+201	Tar bort spårningstillägg som utm_, fbclid och gclid, hoppar över Googles och Facebooks omdirigeringsspårare och öppnar AMP-sidor i original.
+202	Läs in uppackat tillägg (mapp med manifest.json)
+203	Läs in uppackat tillägg …
+204	Kom ihåg beslutet
+205	Utvecklarverktyg
+206	Gratisspel från Epic
+207	Förklara det här enkelt och på svenska:
+208	Förklara enkelt och på svenska vad den här webbplatsen handlar om.
+209	Tillåt
+210	Ladda ned igen
+211	Försök igen
+212	Bygg en bild först – ingenting kommer fram till ”Utdata” än.
+213	Lägg till tillägg
+214	Tillägg
+215	Tillägg kommer från Chrome Web Store och fungerar i Elektron som i Chrome. Vissa mycket omfattande tillägg använder Chrome-funktioner som inte finns här – då fungerar de bara delvis. Claude och ChatGPT hittar du dessutom direkt i sidofältet till vänster.
+216	Tilläggen är uppdaterade
+217	Tilläggsfältet är inte tillgängligt:
+218	Noden ”Utdata” saknas.
+219	Exportera
+220	Ta bort FPS-gränsen
+221	Färg
+222	Färg 1
+223	Färg 2
+224	Rotera nyans
+225	Sammanfatta den här webbplatsen kort och på svenska – de viktigaste punkterna som en lista.
+226	Fel:
+227	Misslyckades
+228	Klar
+229	Fråga
+230	Blockera tredjepartscookies
+231	Tredjepartscookies blockerade
+232	Fryser alla bakgrundsflikar och sänker webbläsarens prioritet så att ditt spel går först. Flikar med ljud fortsätter.
+233	Välj ”Fråga” eller ”Tillåt” för röstkanaler i Discord.
+234	För högerklick → ”Sammanfatta sidan” och ”Förklara”.
+235	Det finns inget läsläge för den här sidan
+236	HELA DATORN
+237	Galax
+238	Gaming
+239	Gaming med alla extrafunktioner – eller en lugn, vanlig webbläsare. Kan bytas när som helst.
+240	Gamingwebbläsaren är tillbaka 🎮
+241	Gamingläge
+242	Gamingläge (Ctrl+Shift+G)
+243	Gamingläge på – bakgrundsflikar frysta, webbläsarens prioritet sänkt
+244	Gamingläge av
+245	Stäng av gamingläge
+246	Slå på gamingläge
+247	Visa hela
+248	Hela sidan
+249	Farlig
+250	Farlig sida blockerad
+251	Falsk adress?
+252	Inläst – för stor för att sparas, välj igen efter omstart
+253	Radera hela historiken
+254	Återställ stängd flik
+255	Sparat ✓
+256	I går
+257	Skriv inte in lösenord, bank- eller kortuppgifter här.
+258	Skriv inte in lösenord, koder eller kortuppgifter här.
+259	Rutnät
+260	Google skapar profiler – DuckDuckGo, Brave och Startpage gör det inte
+261	Google Översätt
+262	Spara grafen som fil
+263	Läs in graffil
+264	Storlek
+265	Storlek vid sparande
+266	Bra att veta: Avast kontrollerar adresserna till sidorna du besöker. Får: läsa och ändra data på alla webbplatser.
+267	God natt
+268	God kväll
+269	God kväll – dags för en session.
+270	God morgon
+271	God morgon – redo att spela?
+272	HTTPS-läge · kan stängas av i GX Control under ”Skydd”
+273	Håll webbläsaren liten så att ditt spel får all kraft.
+274	Det gick inte
+275	Ljust
+276	Ljust / mörkt
+277	Ljusstyrka
+278	Ljusstyrka och kontrast
+279	I dag
+280	Bakgrund
+281	Startsidans bakgrund
+282	Bakgrund inställd ✓
+283	Visa notis
+284	Lägg till
+285	Start
+286	Dölj IP-adressen i WebRTC
+287	IP-adressen dold i WebRTC
+288	Jag förstår risken – öppna sidan ändå
+289	I bakgrunden
+290	Visa i mappen
+291	Visa i mapp
+292	Alltid överst
+293	Alltid överst (på)
+294	Alltid överst (av)
+295	Importen misslyckades:
+296	Importera
+297	Skriva till urklipp
+298	Öppna i ny flik
+299	Öppna i privat flik
+300	Vilket språk ska Elektron prata med dig på? Flaggorna visar länderna där språket talas.
+301	Blockera innehåll på webbplatser
+302	Installera och kör igång
+303	Installerat
+304	Invertera
+305	Ja
+306	Blockera JavaScript på den här sidan
+307	Varje nedladdad fil kontrolleras med Windows Defender.
+308	Varje dag
+309	Sök efter uppdateringar nu
+310	Starta om nu
+311	AI i sidofältet
+312	Kalejdoskop
+313	Kom länken via e-post, sms eller Discord? Då var det troligen bedrägeri.
+314	Kamera och mikrofon
+315	Ingen internetanslutning. Kontrollera wifi eller nätverkskabel.
+316	Inga förslag
+317	Ingen säker anslutning
+318	Klicka på stjärnan i adressfältet eller tryck Ctrl+D.
+319	Klicka för att koppla loss
+320	Kunde inte läsas in:
+321	Kontrast
+322	Kopiera
+323	Cirkel
+324	Ladda inte ned något härifrån.
+325	Läs in
+326	Avbryt inläsning
+327	Kör ditt antivirusprogram om du är osäker.
+328	Prestanda
+329	Kraftfullt grafikkort
+330	Läsläge
+331	Läsläge (F9)
+332	Öppna läsläge
+333	Bokmärken
+334	Säkerhetskopiera bokmärken och inställningar …
+335	Sök i bokmärken
+336	Ta bort bokmärke (Ctrl+D)
+337	Bokmärke borttaget
+338	Bokmärken visas här – klicka på stjärnan i adressfältet.
+339	Bokmärke sparat
+340	Lägg till bokmärke (Ctrl+D)
+341	Spara bokmärken och inställningar som fil – t.ex. för en ny dator.
+342	Säkerhetskopiera bokmärken och inställningar
+343	Visa bokmärkesfältet
+344	Dölj bokmärkesfältet
+345	Radera senaste 24 timmarna
+346	Radera senaste timmen
+347	Om webbläsaren går över gränsen fryses den hungrigaste bakgrundsfliken.
+348	Gräns
+349	Linjär
+350	Linjebredd
+351	Öppna länk i delad skärm
+352	Öppna länk i ny flik
+353	Öppna länk i privat flik
+354	Kopiera länk
+355	Länk kopierad – skicka den till dina vänner!
+356	Rensa länkar
+357	Förinläs länkar
+358	Länkar rensas
+359	Töm listan
+360	Listan är för kort
+361	Lokala adresser är inte tillåtna
+362	Kör igång
+363	Läser alltid in sidor krypterat och varnar om en sida inte klarar det.
+364	Läser in en bild från internet
+365	Läser in …
+366	Radera
+367	Radera (Del)
+368	MIDI-enheter
+369	Översätt markerad text eller hela sidor.
+370	Mask
+371	Mask (ljust = synligt)
+372	Maximal säkerhet
+373	Mer integritet: du söker nu med DuckDuckGo i stället för Google
+374	Meny
+375	Mikrofon
+376	Minimerar du webbläsaren för spelet vilar alla flikar utan ljud.
+377	Minuter
+378	Blanda
+379	Sök med Google
+380	Sök med Google eller ange adress
+381	Förklara med {0}
+382	Sök med {0}
+383	Sök med {0} eller ange adress
+384	Sök med {0}: ”{1}”
+385	Läge
+386	Måndag – fredag
+387	Multiplicera
+388	Mönster
+389	Sök efter uppdateringar
+390	Namn
+391	Nebulosa
+392	Raster
+393	Nej
+394	Neon
+395	Neonrutnät
+396	Nätverksbegränsare
+397	Övervaka nätverkstrafik
+398	Blockera och ändra nätverkstrafik
+399	Ny
+400	Läs in igen
+401	Läs in igen (F5)
+402	Starta om och installera
+403	Ny flik
+404	Ny flik (Ctrl+T)
+405	Ny privat flik
+406	Ny, tom bild
+407	Omstart
+408	Hittades inte
+409	Inte sparat
+410	Inte möjligt
+411	Inte säker
+412	Inget hittades
+413	Ett steg till: vi rekommenderar de här tilläggen för mer säkerhet. Välj det du vill ha – du kan ta bort dem när som helst under ”Tillägg”.
+414	En runda till? Det är mitt i natten.
+415	Inga nedladdningar än
+416	Inga tillägg installerade än. Öppna Chrome Web Store och klicka på ”Lägg till” där.
+417	Inga bokmärken än
+418	Ingen uppdateringsadress angiven än (GX Control → Uppdateringar)
+419	Sök nod …
+420	Normal
+421	Vanlig webbläsare – gamingelement är dolda
+422	Bara filer med (tomt = alla)
+423	Bara HTTPS
+424	Bara en gång om dagen
+425	Bara http- och https-adresser
+426	Använder det dedikerade grafikkortet (t.ex. RTX) i stället för processorns grafik.
+427	Nästa träff (F3)
+428	Fortsätt utan tillägg
+429	Valfritt
+430	Alternativ
+431	Stäng panelen
+432	Lösenordshanterare
+433	Skydd mot nätfiske och skadlig kod
+434	Pixelstorlek
+435	Plasma (färgglad, animerad)
+436	Norrsken
+437	Privat
+438	Privat sökmotor
+439	Privat flik
+440	Privat flik – historik, cookies och inloggningar försvinner när du stänger alla privata flikar.
+441	Privat flik – ingen historik och inga cookies efter stängning
+442	Programmet härdat
+443	Ändra proxyinställningar
+444	Kontrollerar nedladdningar med Windows Defender (inte tillgängligt på den här datorn).
+445	Punkter
+446	Källor
+447	RAM {0} av {1}
+448	RAM-begränsare
+449	RGB-förskjutning (glitch)
+450	Brus / moln
+451	Högerklick på en flik erbjuder också allt detta.
+452	Högerklick eller mellanslag lägger till noder. Dra från punkten till höger på en nod till punkten till vänster på nästa. Allt som till slut kommer fram till
+453	Högerklick eller mellanslag: lägg till nod · Dra bakgrunden: flytta · Mushjul: zooma · Del: radera
+454	Retro
+455	Retroberg
+456	Talar om för varje webbplats via Global Privacy Control att din data inte får säljas eller delas.
+457	Schackbräde
+458	Skadlig kod blockerad
+459	Stänger av JavaScript-turbon (JIT) – webbläsarnas vanligaste angreppsyta. Webbplatser blir långsammare, vissa webbläsarspel fungerar inte längre. Gäller efter omstart.
+460	Söva (frigör RAM)
+461	Enkel
+462	Stäng
+463	Stäng (Esc)
+464	Snabbåtkomst
+465	Redan klockan 22 – i morgon är det skola/jobb 😉
+466	Större text
+467	Mindre text
+468	Skydd
+469	Skydd för den här sidan (klicka)
+470	Slå på skyddet för den här sidan igen
+471	Skydd för {0}
+472	Skydd mot fingeravtryck
+473	Skyddslista {0}:
+474	Svartvitt
+475	Flytande fönster
+476	Ha en bra dag
+477	Skärmbild
+478	Skärmbild (Ctrl+Shift+X) – högerklick: hela sidan
+479	Skärmbild (hela sidan)
+480	Skärmbild (synligt område)
+481	Skärmbilden misslyckades
+482	Skärmbild kopierad – klistra in i Discord med Ctrl+V
+483	Ta skärmbild
+484	Sida
+485	Översätt sidan till svenska
+486	Glöm sidan vid stängning (radera cookies)
+487	Skriv ut sidan …
+488	Fungerar inte sidan? Stäng av skyddet här
+489	Sammanfatta sidan med {0}
+490	Sidan kan inte nås
+491	Granska sidan
+492	Byt sida
+493	Öppna sidofältet
+494	Förhandsvisningens bildförhållande
+495	Sekunder
+496	Servern svarade med fel {0}
+497	Shaders och bilder
+498	Säker anslutning
+499	Säker DNS
+500	Säkerhet
+501	Säkerhetskontroll
+502	Säkerhetskopiering och återställning
+503	Säkerhetskopiera …
+504	Säkerhetskopia sparad
+505	Återställ säkerhetskopia
+506	Återställ säkerhetskopia …
+507	Synligt område
+508	Så funkar det
+509	Så funkar det:
+510	Övrigt
+511	Spara
+512	Det gick inte att spara:
+513	Sparar dina lösenord säkert och fyller i dem automatiskt.
+514	Sparar dina lösenord krypterat och fyller i dem automatiskt på webbplatser. Gratis, öppen källkod.
+515	Delad skärm
+516	Delad skärm (Ctrl+Shift+S)
+517	Delad skärm på – dra i avdelaren för att justera
+518	Avsluta delad skärm
+519	Avsluta delad skärm (Ctrl+Shift+S)
+520	Språk
+521	Sök språk eller land …
+522	Windows språk
+523	Windows språk: {0}
+524	Återställ standard
+525	Start
+526	Startsida (Alt+Home)
+527	Styrning
+528	Sträck ut
+529	Ränder
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T ny flik · Ctrl+D bokmärke · Ctrl+H historik · F11 helskärm
+537	Ctrl+Shift+G startar gamingläget · Ctrl+T ny flik · F11 helskärm
+538	Studio
+539	Nivåer
+540	Stäng av ljudet
+541	Styrka
+542	Störning
+543	Söker efter uppdateringar …
+544	Sökmotor
+545	Sökförslag när du skriver i adressfältet (skickas till sökmotorn)
+546	Mättnad
+547	Flik
+548	Fliken kraschade – klicka för att läsa in igen
+549	Flik som flytande fönster
+550	Flik som flytande fönster (Ctrl+Shift+F)
+551	Stäng flik
+552	Fliken svävar nu över alla fönster
+553	Stäng av ljudet i fliken
+554	Öppna flik
+555	Flikar
+556	Stäng flikar till höger
+557	Återställ flikar
+558	Dagar
+559	Tangent
+560	Kortkommando
+561	Delar
+562	Tempo
+563	Text
+564	Text (utdrag):
+565	Titel:
+566	Ljud i alla flikar
+567	Slå på ljudet
+568	Giftgrön
+569	Transparens
+570	Twitch öppet – gamingläget är på 🎮
+571	Klockslag (TT:MM)
+572	Ultraviolett
+573	Vänd
+574	Växla
+575	Ogiltig adress
+576	Oskärpa
+577	Det finns ingen bild på den här adressen (tips: högerklicka på en bild → ”Kopiera bildadress”)
+578	Öppna okrypterat
+579	Uppdatering klar – starta om webbläsaren
+580	Uppdateringen av tilläggen misslyckades
+581	Installera uppdatering
+582	Installera uppdatering och starta om
+583	Uppdatering {0} är klar
+584	Uppdatering {0} laddas ned i bakgrunden …
+585	Uppdateringsadress (mapp på din webbplats)
+586	Uppdateringsmodulen saknas
+587	Sökningen efter uppdateringar misslyckades: {0}
+588	Uppdateringar
+589	Uppdateringar fungerar i den installerade versionen
+590	Förbjudet
+591	Zooma in
+592	Zooma ut
+593	Historik
+594	Sök i historiken
+595	Förskjutning
+596	Flytta / zooma / rotera
+597	Krypterar vilka sidor du besöker (DNS över HTTPS med Quad9 från Schweiz) och blockerar dessutom kända skadliga adresser.
+598	Version
+599	Version {0} är uppdaterad.
+600	Version {0} är klar – installeras vid nästa start.
+601	Version {0} laddas ned … {1} %
+602	Version {0} · Chromium {1}
+603	Version {0} · Ingen uppdateringsadress angiven än.
+604	Version {0} · Uppdateringar finns i den installerade Windows-versionen.
+605	Version {0} · Uppdateringar kommer automatiskt via Microsoft Store.
+606	Hantera
+607	Lossa video
+608	Lossa video (bild-i-bild)
+609	Lossa video – bild-i-bild (Ctrl+Shift+P)
+610	Lossa videor automatiskt
+611	Videoannonser tystas och hoppas över direkt, annonsytor försvinner.
+612	Vinjett
+613	Virus hittat i {0} – Windows Defender tog bort filen
+614	Virus hittat – Windows Defender tog bort filen
+615	Helskärm
+616	Från
+617	Från den här sidan har virus eller annan skadlig kod spridits. Elektron stoppade dem innan något kom in på din dator.
+618	Framåt
+619	Framåt (Alt+→)
+620	Föregående träff (Shift+F3)
+621	Förslag
+622	Bikaka
+623	Sannolikhet (%)
+624	Varnar också för farliga sidor. Bredvid Malwarebytes behövs det oftast inte – de gör samma sak.
+625	Varnar för farliga sidor och nätfiske.
+626	Varning för falska adresser
+627	Vänta
+628	Vad som händer när en sida vill använda din kamera.
+629	WebGL 2 är inte tillgängligt på den här datorn.
+630	Webbkamera
+631	Fjärrstyra webbplatser (felsökare)
+632	Webbplatser har svårare att känna igen dig via din dator (canvas, grafikkortets namn, CPU-kärnor).
+633	Webbplatser kan inte längre läsa av din lokala IP-adress via videochatt-teknik – inte ens bakom en VPN.
+634	Byter du flik eller minimerar webbläsaren fortsätter videon i ett litet fönster (bild-i-bild).
+635	Mjukhet
+636	Andra bokmärken
+637	Vågor
+638	Visa mindre
+639	När gamingläget är på
+640	När gamingläget …
+641	När dagen är
+642	När klockan är mellan
+643	När aktiv flik innehåller
+644	När webbläsaren startar
+645	Om du vill till {0}, använd knappen nedan.
+646	När en nedladdning är klar
+647	När en sida öppnas
+648	Annons- och spårningsblockerare
+649	Annonsblockerare
+650	Annonsblockeraren kunde inte läsas in:
+651	Annonsföretag kan inte längre följa dig mellan olika webbplatser. Inloggning, captchas och betalningar fungerar som vanligt.
+652	Annonser/spårare blockerade: {0} · Spårningscookies avvärjda: {1}
+653	Verktyg
+654	Slå på igen
+655	Återställt: {0} nya bokmärken och dina inställningar
+656	Återställ …
+657	Upprepa (sida vid sida)
+658	Välkommen
+659	Välkommen till Elektron
+660	Windows Defender hittades inte
+661	Vinkel
+662	Om gränsen överskrids somnar de flikar som inte använts på längst tid.
+663	Installerar …
+664	Vill du verkligen radera hela historiken?
+665	Vill du verkligen öppna? Den här sidan är känd som farlig.
+666	Helg
+667	Hoppa över YouTube-annonser
+668	Visar ogillanden under YouTube-videor igen.
+669	Rader
+670	Tid
+671	Dags för en paus! 🎮
+672	Tidsgränsen överskreds
+673	Tidsgränsen överskreds vid inläsning
+674	Dra för att justera · Dubbelklick: 50/50
+675	Zoom
+676	Återställ zoom
+677	Återställ zoom (Ctrl+0)
+678	Slump
+679	Testa: knappen
+680	Byt till gamingwebbläsaren
+681	Lägg till i ordlistan
+682	Byt till vanlig webbläsare
+683	Vid klockslag
+684	Till den riktiga sidan: {0}
+685	Tillbaka
+686	Tillbaka (Alt+←)
+687	Tillbaka i säkerhet
+688	Tillbaka till webbläsaren
+689	Hämta tillbaka till webbläsaren
+690	Tillbaka till Google
+691	på en utlösare.
+692	ser du ovanför. Bilder från internet: högerklicka på en bild → ”Kopiera bildadress” och klistra in i noden.
+693	din mikrofon
+694	din kamera
+695	din skärm
+696	din plats
+697	bokmärkesfilen kunde inte läsas.
+698	urklipp
+699	ingen gräns
+700	ingen säkerhetskopia från Elektron
+701	läsa och ändra
+702	inte tillåtet
+703	bara i den installerade versionen
+704	t.ex. .exe eller .zip
+705	t.ex. youtube.com
+706	{0} nedladdningar pågår – Ctrl+J
+707	{0} bokmärken hämtade från {1}.
+708	{0} spårningscookies avvärjda
+709	{0} spårningslänkar oskadliggjorda
+710	{0} svarar inte i tid.
+711	{0} nekade anslutningen.
+712	{0} är klar – inget virus hittades
+713	{0} kunde inte läsas in.
+714	{0} kunde inte installeras. Kontrollera internetanslutningen och försök igen – eller installera senare via Meny → Chrome Web Store.
+715	{0} vill komma åt {1}.
+716	Starta {0}
+717	{0} av {1} skyddsfunktioner aktiva.
+718	{0} har glömts – cookies och webbplatsdata raderade
+719	{0} – kan inte nås
+720	· Auto
+721	· kontrolleras för virus …
+722	· ✓ inget virus (Windows Defender)
+723	Ändra …
+724	Öppna hellre banker, Steam, Discord och liknande direkt via adressfältet eller ett bokmärke.
+725	Öppna inga filer som du redan har från den här sidan.
+726	Öppna
+727	Öppnar dina flikar från förra gången vid start – de läses in först när du klickar på dem.
+728	Om {0}
+729	Överlägg
+730	Översätt
+731	Översättningar utan garanti – hittat ett fel? Rapportera det på GitHub, vi rättar gärna.
+732	Hoppar över sponsrade delar i YouTube-videor.
+733	– bild-i-bild
+734	– delad skärm
+735	– fliken stannar ovanpå ditt spel
+736	– fryst
+737	– privat
+738	– sover (klicka för att läsa in)
+739	– flytande fönster (klicka för att visa)
+740	– två flikar bredvid varandra
+741	”Sälj inte”-signal (GPC)
+742	Ta bort ”{0}”?
+743	”{0}” har lästs in.
+744	”{0}” har lagts till
+745	Lägga till ”{0}” i Elektron?
+746	… stängs av
+747	… slås på
+748	← Originalsidan
+749	▶ Testa nu
+750	✓ Utfört
+751	🎮 Gaming
