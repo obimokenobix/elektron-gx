@@ -1,0 +1,752 @@
+0	(mėlyna) arba
+1	(violetine). Pakeitimai išsaugomi automatiškai ir įsigalioja iš karto.
+2	(raudona) – pvz., „Kai atidaromas puslapis“. Sujunk baltą rodyklę su
+3	Vyksta 1 atsisiuntimas – Ctrl+J
+4	1080 × 1080 (kvadratas)
+5	1080 × 1920 (telefonas)
+6	1920 × 1080 (Full HD)
+7	A (apačioje)
+8	Atšaukti
+9	Atšaukta
+10	Srautai
+11	Srautai aktyvūs
+12	Sudėti (švytėjimas)
+13	Adresas
+14	Adrese yra
+15	Adresas, pvz., roblox.com
+16	Adresas:
+17	Adresas: {0}
+18	Veiksmai
+19	Uždaryti aktyvų skirtuką
+20	Akcento spalva
+21	Skaityti ir keisti visus duomenis visose svetainėse
+22	Visos žymės
+23	Visos žymės (Ctrl+Shift+O)
+24	Tvarkyti visas žymes …
+25	Visi apsaugos nustatymai …
+26	Visos apsaugos funkcijos įjungtos.
+27	Nutraukti visus ryšius
+28	Atnaujinti visus
+29	Rodyti viską
+30	Kas kelias minutes
+31	Rodyti visus {0}
+32	Žymėti viską
+33	Ištrinti viską ir pradėti iš naujo?
+34	Viskas, ką gali nustatyti Elektron.
+35	Įrašyti kaip paveikslėlį (PNG)
+36	Nustatyti kaip numatytąją naršyklę …
+37	Nustatyti kaip pradžios puslapio foną
+38	Atidaryti kaip slankųjį langą
+39	Tvarkyti kitus plėtinius
+40	Uždaryti kitus skirtukus
+41	Animacija
+42	Animuotas
+43	Tipas
+44	Ieškoti puslapyje
+45	Ieškoti puslapyje …
+46	Šiame puslapyje nėra ką blokuoti
+47	Šiame puslapyje neleidžiamas joks vaizdo įrašas
+48	Importuoti iš Chrome
+49	Importuoti iš Edge
+50	Importuoti iš Opera GX
+51	Pašalinti iš sąrašo
+52	Užpildyti
+53	Išvestis
+54	Paleidikliai
+55	Išjungti
+56	Iškirpti
+57	Automatika
+58	Automatiškai
+59	Atnaujinti automatiškai
+60	B (viršuje)
+61	Ryšį užmezga jau tada, kai pelė yra ant nuorodos – greičiau, bet svetainė mato tavo IP adresą dar prieš paspaudimą.
+62	Redaguoti
+63	Redaguoti …
+64	Sąlygos
+65	Išeiti
+66	Riboja visų skirtukų pralaidumą, kad žaidžiant tavo ping išliktų stabilus.
+67	Užšaldyti sumažinus
+68	Pavyzdys
+69	Įkelti pavyzdį? Dabartiniai tavo srautai bus pakeisti.
+70	Populiaru
+71	Pranešimai
+72	Rodyti pranešimus
+73	Leidimas
+74	Pasiruošęs žaisti?
+75	Sukčių svetainė užblokuota
+76	Judėjimas
+77	Paveikslėlis
+78	Pasirinkti paveikslėlį …
+79	Palikti paveikslėlį
+80	Atidaryti paveikslėlį naujame skirtuke
+81	Paveikslėlis per didelis (daugiausia 25 MB)
+82	Nepavyko įkelti paveikslėlio
+83	Kopijuoti paveikslėlį
+84	Įrašyti paveikslėlį …
+85	Paveikslėlis iš kompiuterio
+86	Paveikslėlio adresas (https://…)
+87	Įvesk paveikslėlio adresą ir paspausk „Įkelti“
+88	Paveikslėliai
+89	Iki
+90	Įvesk adresą, prasidedantį https://
+91	Blokuoti
+92	Blokuoja sukčių svetaines, kenkėjiškas programas, prenumeratų spąstus ir netikros techninės pagalbos apgaules. Nemokama, paskyros nereikia.
+93	Blokuoja reklamas, sekiklius, iššokančius langus ir slapukų juostas – iki šiol sustabdyta {0} užklausų.
+94	Blokuoja reklamas, sekiklius, reklaminius iššokančius langus ir slapukų juostas.
+95	Blokuoja žinomas sukčių svetaines ir svetaines, platinančias virusus.
+96	Blokuoja žinomas sukčių svetaines ir svetaines, platinančias virusus. Sąrašas įkeliamas …
+97	Blokuoja {0} žinomų sukčių ir virusų svetainių. Sąrašas atnaujinamas kas 6 valandas.
+98	Reikia nemokamos Bitwarden paskyros. Gali: skaityti ir keisti duomenis visose svetainėse (užpildymui).
+99	Naršyklė atnaujinta
+100	Naršyklės apkrova
+101	Naršyklės žaidimai veikia be V-Sync virš ekrano atnaujinimo dažnio. Gali atsirasti vaizdo plyšimas.
+102	Naršyklės stilius
+103	Naršymo duomenys ištrinti
+104	Ištrinti naršymo duomenis dabar
+105	Ištrinti naršymo duomenis
+106	CPU ribotuvas
+107	Naudok ChatGPT tiesiai naršyklėje.
+108	„Chrome“ internetinė parduotuvė nepasiekiama
+109	Atidaryti „Chrome“ internetinę parduotuvę
+110	Claude kaip plėtinys – arba tiesiog per šoninę juostą.
+111	Kodas
+112	Vykdyti kodą svetainėse
+113	Komiksas / plakatas
+114	Išeinant ištrinti slapukus ir prisijungimus
+115	Skaityti ir keisti slapukus
+116	Tada
+117	Gali:
+118	Gali: skaityti ir keisti duomenis visose svetainėse (tikrinimui ir blokavimui).
+119	Paveikslėlis per didelis (daugiausia 25 MB)
+120	{0} saugos sertifikatas nepatikimas.
+121	{0} saugos sertifikatas negalioja.
+122	Tai nėra tinkamas paveikslėlis
+123	Tai nėra srauto failas.
+124	Tai nėra šešėliuoklės failas.
+125	Failas ištrintas arba perkeltas
+126	Duomenys svetainėje
+127	Keisti privatumo nustatymus
+128	Neskaidrumas
+129	Skaityti ir keisti tavo žymes
+130	Tavo žaidimai
+131	Skaityti ir keisti tavo naršymo istoriją
+132	Skaityti tavo naršymo istoriją ir atidarytus skirtukus
+133	Nustatyti tavo vietą
+134	Naršyklė žaidėjams. Chromium {0} · Electron {1}
+135	Istorija tuščia
+136	Išvaizda
+137	Darbalaukis
+138	Išsamiau
+139	Tankis
+140	Adresas klaidinančiai panašus į tikrą svetainę {0} – tipinis sukčių triukas. Pažiūrėk atidžiai: viena raidė sukeista, pakeista arba paimta iš kitos abėcėlės.
+141	Adresas turi prasidėti https://
+142	{0} adresas nerastas. Ar teisingai parašytas?
+143	Plėtiniui nereikia specialių leidimų.
+144	Plėtinys gali: •
+145	Plėtiniai gaunami tiesiai iš „Chrome“ internetinės parduotuvės ir priklauso jų gamintojams (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Nepavyko įkelti puslapio.
+147	Svetainė nepalaiko saugaus ryšio (HTTPS). Kiti tame pačiame tinkle – pvz., viešajame Wi-Fi – galėtų matyti, ką čia žiūri ir įvedi.
+148	Skaityti iškarpinę
+149	Šis adresas atrodo kaip
+150	Nepavyko nuskaityti šio failo
+151	Šis puslapis nešifruotas
+152	Ši svetainė yra pavojingų svetainių sąraše
+153	Ši svetainė yra žinomų sukčiavimo (phishing) svetainių sąraše. Tokios svetainės dažnai atrodo tikros, bet nori pavogti tavo slaptažodžius ar banko duomenis.
+154	Ši svetainė platina kenkėjiškas programas
+155	Šis ryšys nešifruotas
+156	Šio vaizdo įrašo negalima atskirti
+157	Skirtumas
+158	Atsisiuntimas
+159	Atsisiuntimas užblokuotas: {0} platina žinomą kenkėjišką programą
+160	Atsisiuntimas nepavyko: {0}
+161	Atsisiuntimas baigtas: {0}
+162	Atsisiuntimas pradėtas: {0}
+163	Atidaryti atsisiuntimų aplanką
+164	Atsisiuntimai
+165	Atsisiuntimai (Ctrl+J)
+166	Tikrinti atsisiuntimus dėl virusų
+167	Ieškoti atsisiuntimuose
+168	Tvarkyti atsisiuntimus
+169	Atsisiuntimai tikrinami
+170	Pasukti (°)
+171	Sukasi
+172	Pasukimas (°)
+173	Po to būsi atjungtas visur.
+174	DuckDuckGo, Brave Search ir Startpage nekuria tavo profilių. Startpage rodo Google rezultatus be sekimo.
+175	Tamsi
+176	Tamsi išvaizda kiekvienai svetainei.
+177	Dubliuoti
+178	Dubliuoti (Ctrl+D)
+179	Efektai
+180	Sava šešėliuoklė (GLSL)
+181	Savas paveikslėlis
+182	Savas paveikslėlis …
+183	Pasirinkti savą fono paveikslėlį
+184	Srautas prasideda nuo
+185	Užšaldyti
+186	Nuspalvinti
+187	Įklijuoti
+188	Pritaikyti
+189	Įjungti
+190	Nustatymai
+191	Nepavyko išsaugoti nustatymų:
+192	Pridėti punktų į dešiniojo spustelėjimo meniu
+193	Elektron apsauga · Antrininkų atpažinimas tiesiai tavo kompiuteryje
+194	Elektron apsauga · Phishing.Database ir URLhaus (abuse.ch) sąrašai
+195	Elektron Studio (šešėliuoklės ir srautai)
+196	Elektron sustabdė šią svetainę, nes ji yra žinomų sukčių svetainių sąraše.
+197	Elektron reguliariai ieško naujų versijų.
+198	Rekomenduoti Elektron
+199	Rekomenduojama
+200	Pašalinti
+201	Pašalina sekimo priedus, tokius kaip utm_, fbclid ir gclid, praleidžia Google ir Facebook peradresavimo sekiklius ir atidaro AMP puslapius originaliai.
+202	Įkelti išpakuotą plėtinį (aplankas su manifest.json)
+203	Įkelti išpakuotą plėtinį …
+204	Prisiminti sprendimą
+205	Kūrėjo įrankiai
+206	Nemokami Epic žaidimai
+207	Paaiškink man tai paprastai ir lietuviškai:
+208	Paaiškink man paprastai ir lietuviškai, apie ką ši svetainė.
+209	Leisti
+210	Atsisiųsti iš naujo
+211	Bandyti dar kartą
+212	Pirmiausia sukurk paveikslėlį – į „Išvestį“ dar niekas nepatenka.
+213	Pridėti plėtinį
+214	Plėtiniai
+215	Plėtiniai gaunami iš „Chrome“ internetinės parduotuvės ir Elektron veikia kaip Chrome. Kai kurie labai dideli plėtiniai naudoja Chrome funkcijas, kurių čia nėra, – tada jie veikia tik iš dalies. Claude ir ChatGPT taip pat rasi tiesiai šoninėje juostoje kairėje.
+216	Plėtiniai atnaujinti
+217	Plėtinių juosta nepasiekiama:
+218	Trūksta mazgo „Išvestis“.
+219	Eksportuoti
+220	Panaikinti FPS ribą
+221	Spalva
+222	Spalva 1
+223	Spalva 2
+224	Pasukti atspalvį
+225	Trumpai apibendrink šią svetainę lietuviškai – svarbiausius punktus sąrašu.
+226	Klaida:
+227	Nepavyko
+228	Atlikta
+229	Klausti
+230	Blokuoti trečiųjų šalių slapukus
+231	Trečiųjų šalių slapukai užblokuoti
+232	Užšaldo visus fono skirtukus ir sumažina naršyklės prioritetą, kad tavo žaidimas būtų pirmas. Skirtukai su garsu veikia toliau.
+233	Discord balso kanalams pasirink „Klausti“ arba „Leisti“.
+234	Dešiniajam spustelėjimui → „Apibendrinti puslapį“ ir „Paaiškinti“.
+235	Šiam puslapiui nėra skaitymo režimo
+236	VISAS KOMPIUTERIS
+237	Galaktika
+238	Gaming
+239	Žaidimai su visais priedais – arba rami, įprasta naršyklė. Galima perjungti bet kada.
+240	Žaidėjų naršyklė grįžo 🎮
+241	Žaidimų režimas
+242	Žaidimų režimas (Ctrl+Shift+G)
+243	Žaidimų režimas įjungtas – fono skirtukai užšaldyti, naršyklės prioritetas sumažintas
+244	Žaidimų režimas išjungtas
+245	Išjungti žaidimų režimą
+246	Įjungti žaidimų režimą
+247	Rodyti visą
+248	Visas puslapis
+249	Pavojinga
+250	Pavojinga svetainė užblokuota
+251	Netikras adresas?
+252	Įkelta – per didelis, kad būtų įsimintas; paleidus iš naujo pasirink vėl
+253	Ištrinti visą istoriją
+254	Atkurti uždarytą skirtuką
+255	Išsaugota ✓
+256	Vakar
+257	Neįvesk čia slaptažodžių, banko ar kortelės duomenų.
+258	Neįvesk čia slaptažodžių, kodų ar kortelės duomenų.
+259	Tinklelis
+260	Google kuria profilius – DuckDuckGo, Brave ir Startpage ne
+261	Google vertėjas
+262	Išsaugoti grafą faile
+263	Įkelti grafo failą
+264	Dydis
+265	Dydis išsaugant
+266	Verta žinoti: Avast tam tikrina lankomų puslapių adresus. Gali: skaityti ir keisti duomenis visose svetainėse.
+267	Labanakt
+268	Labas vakaras
+269	Labas vakaras – laikas sesijai.
+270	Labas rytas
+271	Labas rytas – pasiruošęs žaisti?
+272	HTTPS režimas · išjungiamas GX Control skiltyje „Apsauga“
+273	Laikyk naršyklę mažą, kad žaidimas gautų visą galią.
+274	Nepavyko
+275	Šviesi
+276	Šviesi / tamsi
+277	Ryškumas
+278	Ryškumas ir kontrastas
+279	Šiandien
+280	Fonas
+281	Pradžios puslapio fonas
+282	Fonas nustatytas ✓
+283	Rodyti pastabą
+284	Pridėti
+285	Pradžia
+286	Slėpti IP adresą WebRTC
+287	IP adresas WebRTC paslėptas
+288	Suprantu riziką – vis tiek atidaryti svetainę
+289	Fone
+290	Rodyti aplanke
+291	Parodyti aplanke
+292	Visada viršuje
+293	Visada viršuje (įj.)
+294	Visada viršuje (išj.)
+295	Importavimas nepavyko:
+296	Importuoti
+297	Rašyti į iškarpinę
+298	Atidaryti naujame skirtuke
+299	Atidaryti privačiame skirtuke
+300	Kokia kalba Elektron turėtų su tavimi kalbėti? Vėliavos rodo šalis, kuriose kalbama ta kalba.
+301	Blokuoti turinį svetainėse
+302	Įdiegti ir pradėti
+303	Įdiegta
+304	Invertuoti
+305	Taip
+306	Blokuoti JavaScript šioje svetainėje
+307	Kiekvienas atsisiųstas failas tikrinamas Windows Defender.
+308	Kasdien
+309	Ieškoti naujinimų dabar
+310	Paleisti iš naujo dabar
+311	DI šoninėje juostoje
+312	Kaleidoskopas
+313	Ar nuoroda atėjo el. paštu, SMS ar per Discord? Tada greičiausiai tai buvo apgaulė.
+314	Kamera ir mikrofonas
+315	Nėra interneto ryšio. Patikrink Wi-Fi arba tinklo kabelį.
+316	Pasiūlymų nėra
+317	Nėra saugaus ryšio
+318	Spustelėk žvaigždutę adreso juostoje arba paspausk Ctrl+D.
+319	Spustelėk, kad atskirtum
+320	Nepavyko įkelti:
+321	Kontrastas
+322	Kopijuoti
+323	Apskritimas
+324	Nieko iš čia nesisiųsk.
+325	Įkelti
+326	Stabdyti įkėlimą
+327	Jei nesi tikras, paleisk antivirusinę programą.
+328	Našumas
+329	Galinga vaizdo plokštė
+330	Skaitymo režimas
+331	Skaitymo režimas (F9)
+332	Atidaryti skaitymo režimą
+333	Žymės
+334	Kurti žymių ir nustatymų atsarginę kopiją …
+335	Ieškoti žymėse
+336	Pašalinti žymę (Ctrl+D)
+337	Žymė pašalinta
+338	Žymės rodomos čia – spustelėk žvaigždutę adreso juostoje.
+339	Žymė išsaugota
+340	Pridėti žymę (Ctrl+D)
+341	Išsaugok žymes ir nustatymus faile – pvz., naujam kompiuteriui.
+342	Žymių ir nustatymų atsarginė kopija
+343	Rodyti žymių juostą
+344	Slėpti žymių juostą
+345	Ištrinti paskutines 24 valandas
+346	Ištrinti paskutinę valandą
+347	Jei naršyklė viršija ribą, užšaldomas daugiausia išteklių naudojantis fono skirtukas.
+348	Riba
+349	Tiesinis
+350	Linijos storis
+351	Atidaryti nuorodą padalytame ekrane
+352	Atidaryti nuorodą naujame skirtuke
+353	Atidaryti nuorodą privačiame skirtuke
+354	Kopijuoti nuorodą
+355	Nuoroda nukopijuota – nusiųsk ją draugams!
+356	Valyti nuorodas
+357	Iš anksto įkelti nuorodas
+358	Nuorodos valomos
+359	Išvalyti sąrašą
+360	Sąrašas per trumpas
+361	Vietiniai adresai neleidžiami
+362	Pradėti
+363	Visada įkelia puslapius šifruotai ir įspėja, jei svetainė to negali.
+364	Įkelia paveikslėlį iš interneto
+365	Įkeliama …
+366	Ištrinti
+367	Ištrinti (Del)
+368	MIDI įrenginiai
+369	Versti pažymėtą tekstą arba visus puslapius.
+370	Kaukė
+371	Kaukė (šviesu = matoma)
+372	Didžiausias saugumas
+373	Daugiau privatumo: dabar ieškai su DuckDuckGo vietoj Google
+374	Meniu
+375	Mikrofonas
+376	Kai dėl žaidimo sumažini naršyklę, visi skirtukai be garso ilsisi.
+377	Minutės
+378	Maišyti
+379	Ieškoti su Google
+380	Ieškoti su Google arba įvesti adresą
+381	Paaiškinti su {0}
+382	Ieškoti su {0}
+383	Ieškoti su {0} arba įvesti adresą
+384	Ieškoti su {0}: „{1}“
+385	Režimas
+386	Pirmadienis – penktadienis
+387	Dauginti
+388	Raštas
+389	Ieškoti naujinimų
+390	Pavadinimas
+391	Ūkas
+392	Ekranas
+393	Ne
+394	Neonas
+395	Neoninis tinklelis
+396	Tinklo ribotuvas
+397	Stebėti tinklo srautą
+398	Blokuoti ir keisti tinklo srautą
+399	Naujas
+400	Įkelti iš naujo
+401	Įkelti iš naujo (F5)
+402	Paleisti iš naujo ir įdiegti
+403	Naujas skirtukas
+404	Naujas skirtukas (Ctrl+T)
+405	Naujas privatus skirtukas
+406	Naujas tuščias paveikslėlis
+407	Paleidimas iš naujo
+408	Nerasta
+409	Neišsaugota
+410	Neįmanoma
+411	Nesaugu
+412	Nieko nerasta
+413	Dar vienas žingsnis: šiuos plėtinius rekomenduojame didesniam saugumui. Pasirink, ko nori – bet kada galėsi juos pašalinti skiltyje „Plėtiniai“.
+414	Dar vienas raundas? Jau vidurnaktis.
+415	Atsisiuntimų dar nėra
+416	Plėtinių dar neįdiegta. Atidaryk „Chrome“ internetinę parduotuvę ir ten spustelėk „Pridėti“.
+417	Žymių dar nėra
+418	Naujinimų adresas dar neįvestas (GX Control → Naujinimai)
+419	Ieškoti mazgo …
+420	Įprastas
+421	Įprasta naršyklė – žaidimų elementai paslėpti
+422	Tik failai su (tuščia = visi)
+423	Tik HTTPS
+424	Tik kartą per dieną
+425	Tik http ir https adresai
+426	Naudoja atskirą vaizdo plokštę (pvz., RTX) vietoj integruotos grafikos.
+427	Kitas atitikmuo (F3)
+428	Tęsti be plėtinių
+429	Neprivaloma
+430	Parinktys
+431	Uždaryti skydelį
+432	Slaptažodžių tvarkyklė
+433	Apsauga nuo sukčiavimo ir kenkėjiškų programų
+434	Pikselio dydis
+435	Plazma (spalvinga, animuota)
+436	Šiaurės pašvaistė
+437	Privatu
+438	Privati paieškos sistema
+439	Privatus skirtukas
+440	Privatus skirtukas – istorija, slapukai ir prisijungimai dingsta, kai uždarai visus privačius skirtukus.
+441	Privatus skirtukas – uždarius nelieka istorijos ir slapukų
+442	Programa sustiprinta
+443	Keisti tarpinio serverio nustatymus
+444	Tikrina atsisiuntimus Windows Defender (šiame kompiuteryje nepasiekiama).
+445	Taškai
+446	Šaltiniai
+447	RAM {0} iš {1}
+448	RAM ribotuvas
+449	RGB poslinkis (glitch)
+450	Triukšmas / debesys
+451	Dešinysis spustelėjimas ant skirtuko taip pat siūlo visa tai.
+452	Dešinysis spustelėjimas arba tarpas prideda mazgų. Tempk nuo taško dešinėje mazgo pusėje iki taško kairėje kito mazgo pusėje. Viską, kas galiausiai patenka į
+453	Dešinysis spustelėjimas arba tarpas: pridėti mazgą · Tempti foną: perkelti · Pelės ratukas: mastelis · Del: ištrinti
+454	Retro
+455	Retro kalnai
+456	Per Global Privacy Control praneša kiekvienai svetainei, kad tavo duomenų negalima parduoti ar perduoti.
+457	Šachmatų lenta
+458	Kenkėjiška programa užblokuota
+459	Išjungia JavaScript turbo (JIT) – dažniausią atakų prieš naršykles taikinį. Svetainės sulėtės, kai kurie naršyklės žaidimai nebeveiks. Įsigalioja paleidus iš naujo.
+460	Užmigdyti (atlaisvinti RAM)
+461	Paprastas
+462	Uždaryti
+463	Uždaryti (Esc)
+464	Greita prieiga
+465	Jau 22 valanda – rytoj mokykla/darbas 😉
+466	Didesnis šriftas
+467	Mažesnis šriftas
+468	Apsauga
+469	Šios svetainės apsauga (spustelėk)
+470	Vėl įjungti šios svetainės apsaugą
+471	Apsauga: {0}
+472	Apsauga nuo pirštų atspaudų sekimo
+473	Apsaugos sąrašas {0}:
+474	Nespalvotas
+475	Slankusis langas
+476	Gražios dienos
+477	Ekrano kopija
+478	Ekrano kopija (Ctrl+Shift+X) – dešinysis spustelėjimas: visas puslapis
+479	Ekrano kopija (visas puslapis)
+480	Ekrano kopija (matoma sritis)
+481	Ekrano kopija nepavyko
+482	Ekrano kopija nukopijuota – įklijuok ją į Discord su Ctrl+V
+483	Daryti ekrano kopiją
+484	Puslapis
+485	Versti puslapį į lietuvių kalbą
+486	Uždarant pamiršti svetainę (ištrinti slapukus)
+487	Spausdinti puslapį …
+488	Svetainė neveikia? Čia išjunk apsaugą
+489	Apibendrinti puslapį su {0}
+490	Svetainė nepasiekiama
+491	Tikrinti puslapį
+492	Sukeisti puses
+493	Atidaryti šoninę juostą
+494	Peržiūros kraštinių santykis
+495	Sekundės
+496	Serveris atsakė klaida {0}
+497	Šešėliuoklės ir paveikslėliai
+498	Saugus ryšys
+499	Saugus DNS
+500	Saugumas
+501	Saugumo patikra
+502	Atsarginė kopija ir atkūrimas
+503	Kurti atsarginę kopiją …
+504	Atsarginė kopija išsaugota
+505	Atkurti iš atsarginės kopijos
+506	Atkurti iš atsarginės kopijos …
+507	Matoma sritis
+508	Kaip tai veikia
+509	Kaip tai veikia:
+510	Kita
+511	Išsaugoti
+512	Išsaugoti nepavyko:
+513	Saugiai laiko tavo slaptažodžius ir automatiškai juos užpildo.
+514	Laiko tavo slaptažodžius šifruotus ir automatiškai užpildo juos svetainėse. Nemokama, atvirojo kodo.
+515	Padalytas ekranas
+516	Padalytas ekranas (Ctrl+Shift+S)
+517	Padalytas ekranas įjungtas – tempk skiriamąją liniją, kad pakeistum
+518	Baigti padalytą ekraną
+519	Baigti padalytą ekraną (Ctrl+Shift+S)
+520	Kalba
+521	Ieškoti kalbos arba šalies …
+522	Windows kalba
+523	Windows kalba: {0}
+524	Atkurti numatytuosius
+525	Pradžia
+526	Pradžios puslapis (Alt+Home)
+527	Valdymas
+528	Ištempti
+529	Juostos
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T naujas skirtukas · Ctrl+D žymė · Ctrl+H istorija · F11 visas ekranas
+537	Ctrl+Shift+G įjungia žaidimų režimą · Ctrl+T naujas skirtukas · F11 visas ekranas
+538	Studio
+539	Lygiai
+540	Nutildyti
+541	Stiprumas
+542	Trikdžiai
+543	Ieškoma naujinimų …
+544	Paieškos sistema
+545	Paieškos pasiūlymai rašant adreso juostoje (siunčiami paieškos sistemai)
+546	Sodrumas
+547	Skirtukas
+548	Skirtukas užstrigo – spustelėk, kad įkeltum iš naujo
+549	Skirtukas kaip slankusis langas
+550	Skirtukas kaip slankusis langas (Ctrl+Shift+F)
+551	Uždaryti skirtuką
+552	Skirtukas dabar sklando virš visų langų
+553	Nutildyti skirtuką
+554	Atidaryti skirtuką
+555	Skirtukai
+556	Uždaryti skirtukus dešinėje
+557	Atkurti skirtukus
+558	Dienos
+559	Klavišas
+560	Spartusis klavišas
+561	Dalys
+562	Tempas
+563	Tekstas
+564	Tekstas (ištrauka):
+565	Pavadinimas:
+566	Visų skirtukų garsas
+567	Įjungti garsą
+568	Nuodingai žalia
+569	Skaidrumas
+570	Twitch atidarytas – žaidimų režimas įjungtas 🎮
+571	Laikas (VV:MM)
+572	Ultravioletinė
+573	Apversti
+574	Perjungti
+575	Netinkamas adresas
+576	Suliejimas
+577	Šiuo adresu paveikslėlio nėra (patarimas: dešiniuoju spustelėk paveikslėlį → „Kopijuoti paveikslėlio adresą“)
+578	Atidaryti nešifruotai
+579	Naujinimas paruoštas – paleisk naršyklę iš naujo
+580	Plėtinių atnaujinti nepavyko
+581	Įdiegti naujinimą
+582	Įdiegti naujinimą ir paleisti iš naujo
+583	Naujinimas {0} paruoštas
+584	Naujinimas {0} atsisiunčiamas fone …
+585	Naujinimų adresas (aplankas tavo svetainėje)
+586	Trūksta naujinimų modulio
+587	Naujinimų paieška nepavyko: {0}
+588	Naujinimai
+589	Naujinimai veikia įdiegtoje versijoje
+590	Draudžiama
+591	Padidinti
+592	Sumažinti
+593	Istorija
+594	Ieškoti istorijoje
+595	Poslinkis
+596	Perkelti / mastelis / pasukti
+597	Šifruoja, kuriuos puslapius lankai (DNS per HTTPS su Quad9 iš Šveicarijos), ir papildomai blokuoja žinomus kenkėjiškus adresus.
+598	Versija
+599	Versija {0} yra naujausia.
+600	Versija {0} paruošta – bus įdiegta kitą kartą paleidus.
+601	Atsisiunčiama versija {0} … {1} %
+602	Versija {0} · Chromium {1}
+603	Versija {0} · Naujinimų adresas dar neįvestas.
+604	Versija {0} · Naujinimai pasiekiami įdiegtoje Windows versijoje.
+605	Versija {0} · Naujinimai ateina automatiškai per Microsoft Store.
+606	Tvarkyti
+607	Atskirti vaizdo įrašą
+608	Atskirti vaizdo įrašą (vaizdas vaizde)
+609	Atskirti vaizdo įrašą – vaizdas vaizde (Ctrl+Shift+P)
+610	Automatiškai atskirti vaizdo įrašus
+611	Vaizdo reklamos nutildomos ir iš karto praleidžiamos, reklamų plotai dingsta.
+612	Vinjetė
+613	Rastas virusas faile {0} – Windows Defender pašalino failą
+614	Rastas virusas – Windows Defender pašalino failą
+615	Visas ekranas
+616	Nuo
+617	Iš šios svetainės buvo platinami virusai ar kitos kenkėjiškos programos. Elektron jas sustabdė, kol niekas nepateko į tavo kompiuterį.
+618	Pirmyn
+619	Pirmyn (Alt+→)
+620	Ankstesnis atitikmuo (Shift+F3)
+621	Pasiūlymai
+622	Korys
+623	Tikimybė (%)
+624	Taip pat įspėja apie pavojingas svetaines. Šalia Malwarebytes dažniausiai nereikalingas – abu daro tą patį.
+625	Įspėja apie pavojingas svetaines ir sukčiavimą.
+626	Įspėjimas apie netikrus adresus
+627	Laukti
+628	Kas nutinka, kai svetainė nori naudoti tavo kamerą.
+629	WebGL 2 šiame kompiuteryje nepasiekiama.
+630	Interneto kamera
+631	Nuotoliniu būdu valdyti svetaines (derintuvė)
+632	Svetainėms sunkiau atpažinti tave pagal kompiuterį (canvas, vaizdo plokštės pavadinimas, CPU branduoliai).
+633	Svetainės nebegali nuskaityti tavo vietinio IP adreso per vaizdo pokalbių technologiją – net už VPN.
+634	Jei perjungi skirtuką ar sumažini naršyklę, vaizdo įrašas tęsiamas mažame lange (vaizdas vaizde).
+635	Minkštumas
+636	Kitos žymės
+637	Bangos
+638	Rodyti mažiau
+639	Kai žaidimų režimas įjungtas
+640	Kai žaidimų režimas …
+641	Kai diena yra
+642	Kai laikas tarp
+643	Kai aktyviame skirtuke yra
+644	Kai paleidžiama naršyklė
+645	Jei nori patekti į {0}, naudok mygtuką žemiau.
+646	Kai atsisiuntimas baigtas
+647	Kai atidaromas puslapis
+648	Reklamų ir sekiklių blokatorius
+649	Reklamų blokatorius
+650	Nepavyko įkelti reklamų blokatoriaus:
+651	Reklamos įmonės nebegali tavęs sekti skirtingose svetainėse. Prisijungimas, captcha ir mokėjimai veikia toliau.
+652	Užblokuota reklamų/sekiklių: {0} · Atmesta sekimo slapukų: {1}
+653	Įrankiai
+654	Vėl įjungti
+655	Atkurta: {0} naujos žymės ir tavo nustatymai
+656	Atkurti …
+657	Kartoti (plytelės)
+658	Sveiki
+659	Sveiki atvykę į Elektron
+660	Windows Defender nerastas
+661	Kampas
+662	Viršijus ribą, ilgiausiai nenaudoti skirtukai užmiega.
+663	Diegiama …
+664	Tikrai ištrinti visą istoriją?
+665	Tikrai atidaryti? Ši svetainė žinoma kaip pavojinga.
+666	Savaitgalis
+667	Praleisti YouTube reklamas
+668	Vėl rodo „nepatinka“ po YouTube vaizdo įrašais.
+669	Eilutės
+670	Laikas
+671	Laikas pertraukai! 🎮
+672	Baigėsi laikas
+673	Baigėsi įkėlimo laikas
+674	Tempk, kad pakeistum · Dukart spustelėk: 50/50
+675	Mastelis
+676	Atkurti mastelį
+677	Atkurti mastelį (Ctrl+0)
+678	Atsitiktinai
+679	Išbandymui: mygtukas
+680	Perjungti į žaidėjų naršyklę
+681	Pridėti į žodyną
+682	Perjungti į įprastą naršyklę
+683	Nurodytu laiku
+684	Į tikrą svetainę: {0}
+685	Atgal
+686	Atgal (Alt+←)
+687	Atgal į saugią vietą
+688	Atgal į naršyklę
+689	Grąžinti į naršyklę
+690	Atgal į Google
+691	ties paleidikliu.
+692	, matai viršuje. Paveikslėliai iš interneto: dešiniuoju spustelėk paveikslėlį → „Kopijuoti paveikslėlio adresą“ ir įklijuok į mazgą.
+693	tavo mikrofono
+694	tavo kameros
+695	tavo ekrano
+696	tavo vietos
+697	nepavyko nuskaityti žymių failo.
+698	iškarpinės
+699	be ribos
+700	ne Elektron atsarginė kopija
+701	skaityti ir keisti
+702	neleidžiama
+703	tik įdiegtoje versijoje
+704	pvz., .exe arba .zip
+705	pvz., youtube.com
+706	Vyksta atsisiuntimų: {0} – Ctrl+J
+707	Perkelta {0} žymių iš {1}.
+708	Atmesta sekimo slapukų: {0}
+709	Neutralizuota sekimo nuorodų: {0}
+710	{0} laiku neatsako.
+711	{0} atmetė ryšį.
+712	{0} paruoštas – virusų nerasta
+713	Nepavyko įkelti {0}.
+714	Nepavyko įdiegti {0}. Patikrink interneto ryšį ir bandyk dar kartą – arba įdiek vėliau per Meniu → „Chrome“ internetinė parduotuvė.
+715	{0} nori prieigos prie {1}.
+716	Paleisti {0}
+717	Aktyvių apsaugos funkcijų: {0} iš {1}.
+718	{0} pamiršta – slapukai ir svetainės duomenys ištrinti
+719	{0} – nepasiekiama
+720	· Auto
+721	· tikrinama dėl virusų …
+722	· ✓ virusų nėra (Windows Defender)
+723	Keisti …
+724	Bankus, Steam, Discord ir pan. geriau atidaryk tiesiai per adreso juostą ar žymę.
+725	Neatidaryk failų, kuriuos jau turi iš šios svetainės.
+726	Atidaryti
+727	Paleidžiant atidaro tavo praėjusio karto skirtukus – jie įkeliami tik tada, kai juos spusteli.
+728	Apie {0}
+729	Perdanga
+730	Versti
+731	Vertimai be garantijos – radai klaidą? Praneš apie ją GitHub, mielai pataisysime.
+732	Praleidžia remiamas dalis YouTube vaizdo įrašuose.
+733	– vaizdas vaizde
+734	– padalytas ekranas
+735	– skirtukas lieka virš tavo žaidimo
+736	– užšaldytas
+737	– privatus
+738	– miega (spustelėk, kad įkeltum)
+739	– slankusis langas (spustelėk, kad parodytum)
+740	– du skirtukai greta
+741	Signalas „Neparduoti“ (GPC)
+742	Pašalinti „{0}“?
+743	„{0}“ įkeltas.
+744	„{0}“ pridėtas
+745	Pridėti „{0}“ į Elektron?
+746	… išjungiamas
+747	… įjungiamas
+748	← Originalus puslapis
+749	▶ Išbandyti dabar
+750	✓ Atlikta
+751	🎮 Gaming
