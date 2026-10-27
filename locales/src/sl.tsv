@@ -1,0 +1,752 @@
+0	(modro) ali
+1	(vijolično). Spremembe se shranijo samodejno in veljajo takoj.
+2	(rdeče) – npr. »Ko se odpre stran«. Poveži belo puščico z
+3	Poteka 1 prenos – Ctrl+J
+4	1080 × 1080 (kvadrat)
+5	1080 × 1920 (telefon)
+6	1920 × 1080 (Full HD)
+7	A (spodaj)
+8	Prekliči
+9	Preklicano
+10	Poteki
+11	Poteki aktivni
+12	Seštevanje (sij)
+13	Naslov
+14	Naslov vsebuje
+15	Naslov, npr. roblox.com
+16	Naslov:
+17	Naslov: {0}
+18	Dejanja
+19	Zapri aktivni zavihek
+20	Barva poudarka
+21	Branje in spreminjanje vseh podatkov na vseh spletnih mestih
+22	Vsi zaznamki
+23	Vsi zaznamki (Ctrl+Shift+O)
+24	Upravljaj vse zaznamke …
+25	Vse nastavitve zaščite …
+26	Vse zaščitne funkcije so aktivne.
+27	Prekini vse povezave
+28	Posodobi vse
+29	Prikaži vse
+30	Na nekaj minut
+31	Prikaži vseh {0}
+32	Izberi vse
+33	Vse izbrisati in začeti znova?
+34	Vse, kar lahko nastaviš v Elektronu.
+35	Shrani kot sliko (PNG)
+36	Nastavi kot privzeti brskalnik …
+37	Nastavi kot ozadje začetne strani
+38	Odpri kot lebdeče okno
+39	Upravljaj druge razširitve
+40	Zapri druge zavihke
+41	Animacija
+42	Animirano
+43	Vrsta
+44	Najdi na strani
+45	Najdi na strani …
+46	Na tej strani ni ničesar za blokiranje
+47	Na tej strani se ne predvaja noben videoposnetek
+48	Uvozi iz Chroma
+49	Uvozi iz Edgea
+50	Uvozi iz Opera GX
+51	Odstrani s seznama
+52	Zapolni
+53	Izhod
+54	Sprožilci
+55	Izklopi
+56	Izreži
+57	Samodejno
+58	Samodejno
+59	Samodejno posodabljaj
+60	B (zgoraj)
+61	Vzpostavi povezavo že, ko je miška na povezavi – hitreje, a stran vidi tvoj naslov IP že pred klikom.
+62	Uredi
+63	Uredi …
+64	Pogoji
+65	Končaj
+66	Omeji pasovno širino vseh zavihkov, da ostane ping med igranjem stabilen.
+67	Zamrzni ob pomanjšanju
+68	Primer
+69	Naložim primer? Tvoji trenutni poteki bodo zamenjani.
+70	Priljubljeno
+71	Obvestila
+72	Prikazuj obvestila
+73	Dovoljenje
+74	Pripravljen na igro?
+75	Goljufiva stran blokirana
+76	Gibanje
+77	Slika
+78	Izberi sliko …
+79	Obdrži sliko
+80	Odpri sliko v novem zavihku
+81	Slika je prevelika (največ 25 MB)
+82	Slike ni bilo mogoče naložiti
+83	Kopiraj sliko
+84	Shrani sliko …
+85	Slika iz računalnika
+86	Naslov slike (https://…)
+87	Vpiši naslov slike in pritisni »Naloži«
+88	Slike
+89	Do
+90	Vpiši naslov, ki se začne s https://
+91	Blokiraj
+92	Blokira goljufive strani, zlonamerno programje, pasti z naročninami in prevare z lažno tehnično podporo. Brezplačno, brez računa.
+93	Blokira oglase, sledilnike, pojavna okna in pasice za piškotke – doslej ustavljenih {0} zahtev.
+94	Blokira oglase, sledilnike, oglasna pojavna okna in pasice za piškotke.
+95	Blokira znane goljufive strani in strani, ki širijo viruse.
+96	Blokira znane goljufive strani in strani, ki širijo viruse. Seznam se nalaga …
+97	Blokira {0} znanih goljufivih in virusnih strani. Seznam se posodobi vsakih 6 ur.
+98	Potrebuje brezplačen račun Bitwarden. Sme: brati in spreminjati podatke na vseh spletnih mestih (za izpolnjevanje).
+99	Brskalnik je posodobljen
+100	Obremenitev brskalnika
+101	Brskalniške igre tečejo brez V-Synca nad osveževalno frekvenco. Lahko povzroči trganje slike.
+102	Slog brskalnika
+103	Podatki brskanja izbrisani
+104	Izbriši podatke brskanja zdaj
+105	Izbriši podatke brskanja
+106	Omejevalnik CPE
+107	Uporabljaj ChatGPT neposredno v brskalniku.
+108	Spletna trgovina Chrome ni na voljo
+109	Odpri spletno trgovino Chrome
+110	Claude kot razširitev – ali preprosto prek stranske vrstice.
+111	Koda
+112	Izvajanje kode na spletnih mestih
+113	Strip / plakat
+114	Ob izhodu izbriši piškotke in prijave
+115	Branje in spreminjanje piškotkov
+116	Potem
+117	Sme:
+118	Sme: brati in spreminjati podatke na vseh spletnih mestih (za preverjanje in blokiranje).
+119	Slika je prevelika (največ 25 MB)
+120	Varnostno potrdilo za {0} ni zaupanja vredno.
+121	Varnostno potrdilo za {0} ni veljavno.
+122	To ni veljavna slika
+123	To ni datoteka poteka.
+124	To ni datoteka senčilnika.
+125	Datoteka je bila izbrisana ali premaknjena
+126	Podatki na
+127	Spreminjanje nastavitev zasebnosti
+128	Prekrivnost
+129	Branje in spreminjanje tvojih zaznamkov
+130	Tvoje igre
+131	Branje in spreminjanje zgodovine brskanja
+132	Branje zgodovine brskanja in odprtih zavihkov
+133	Določanje tvoje lokacije
+134	Brskalnik za igralce. Chromium {0} · Electron {1}
+135	Zgodovina je prazna
+136	Videz
+137	Namizje
+138	Podrobnosti
+139	Gostota
+140	Naslov je zavajajoče podoben pravi strani {0} – tipičen trik goljufov. Poglej natančno: ena črka je zamenjana, spremenjena ali iz druge pisave.
+141	Naslov se mora začeti s https://
+142	Naslova {0} ni mogoče najti. Ali je pravilno zapisan?
+143	Razširitev ne potrebuje posebnih dovoljenj.
+144	Razširitev lahko: •
+145	Razširitve prihajajo neposredno iz spletne trgovine Chrome in pripadajo svojim proizvajalcem (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Strani ni bilo mogoče naložiti.
+147	Stran ne podpira varne povezave (HTTPS). Drugi v istem omrežju – npr. v javnem Wi-Fi – bi lahko videli, kaj tukaj gledaš in vpisuješ.
+148	Branje odložišča
+149	Ta naslov je videti kot
+150	Te datoteke ni bilo mogoče prebrati
+151	Ta stran ni šifrirana
+152	Ta stran je na seznamu nevarnih strani
+153	Ta stran je na seznamu znanih lažnih (phishing) strani. Takšne strani so pogosto videti pristne, a želijo ukrasti tvoja gesla ali bančne podatke.
+154	Ta stran širi zlonamerno programje
+155	Ta povezava ni šifrirana
+156	Tega videoposnetka ni mogoče odpeti
+157	Razlika
+158	Prenos
+159	Prenos blokiran: {0} širi znano zlonamerno programje
+160	Prenos ni uspel: {0}
+161	Prenos končan: {0}
+162	Prenos začet: {0}
+163	Odpri mapo s prenosi
+164	Prenosi
+165	Prenosi (Ctrl+J)
+166	Preveri prenose za viruse
+167	Išči po prenosih
+168	Upravljaj prenose
+169	Prenosi se preverjajo
+170	Zasukaj (°)
+171	Se vrti
+172	Zasuk (°)
+173	Nato boš povsod odjavljen.
+174	DuckDuckGo, Brave Search in Startpage ne ustvarjajo tvojih profilov. Startpage prikazuje Googlove rezultate brez sledenja.
+175	Temno
+176	Temen videz za vsako spletno stran.
+177	Podvoji
+178	Podvoji (Ctrl+D)
+179	Učinki
+180	Lasten senčilnik (GLSL)
+181	Lastna slika
+182	Lastna slika …
+183	Izberi lastno sliko ozadja
+184	Potek se začne s
+185	Zamrzni
+186	Obarvaj
+187	Prilepi
+188	Prilagodi
+189	Vklopi
+190	Nastavitve
+191	Nastavitev ni bilo mogoče shraniti:
+192	Dodajanje vnosov v meni desnega klika
+193	Zaščita Elektron · Prepoznavanje dvojnikov neposredno na tvojem računalniku
+194	Zaščita Elektron · Seznami Phishing.Database in URLhaus (abuse.ch)
+195	Elektron Studio (senčilniki in poteki)
+196	Elektron je ustavil to stran, ker je na seznamu znanih goljufivih strani.
+197	Elektron redno išče nove različice.
+198	Priporoči Elektron
+199	Priporočeno
+200	Odstrani
+201	Odstrani sledilne dodatke, kot so utm_, fbclid in gclid, preskoči Googlove in Facebookove preusmeritvene sledilnike in odpre strani AMP v izvirniku.
+202	Naloži razpakirano razširitev (mapa z manifest.json)
+203	Naloži razpakirano razširitev …
+204	Zapomni si odločitev
+205	Orodja za razvijalce
+206	Brezplačne igre Epic
+207	Razloži mi to preprosto in v slovenščini:
+208	Razloži mi preprosto in v slovenščini, o čem govori ta spletna stran.
+209	Dovoli
+210	Ponovno prenesi
+211	Poskusi znova
+212	Najprej sestavi sliko – v »Izhod« še nič ne prispe.
+213	Dodaj razširitev
+214	Razširitve
+215	Razširitve prihajajo iz spletne trgovine Chrome in v Elektronu delujejo kot v Chromu. Nekatere zelo obsežne razširitve uporabljajo funkcije Chroma, ki jih tu ni – takrat delujejo le delno. Claude in ChatGPT najdeš tudi neposredno v stranski vrstici levo.
+216	Razširitve so posodobljene
+217	Vrstica razširitev ni na voljo:
+218	Manjka vozlišče »Izhod«.
+219	Izvozi
+220	Odpravi omejitev FPS
+221	Barva
+222	Barva 1
+223	Barva 2
+224	Zasukaj odtenek
+225	Povzemi to spletno stran na kratko in v slovenščini – najpomembnejše točke kot seznam.
+226	Napaka:
+227	Ni uspelo
+228	Končano
+229	Vprašaj
+230	Blokiraj piškotke tretjih oseb
+231	Piškotki tretjih oseb blokirani
+232	Zamrzne vse zavihke v ozadju in zniža prednost brskalnika, da ima tvoja igra prednost. Zavihki z zvokom delujejo naprej.
+233	Za glasovne kanale Discord izberi »Vprašaj« ali »Dovoli«.
+234	Za desni klik → »Povzemi stran« in »Razloži«.
+235	Za to stran ni bralnega načina
+236	CEL RAČUNALNIK
+237	Galaksija
+238	Gaming
+239	Igranje z vsemi dodatki – ali miren, običajen brskalnik. Preklopiš lahko kadar koli.
+240	Igralni brskalnik je nazaj 🎮
+241	Igralni način
+242	Igralni način (Ctrl+Shift+G)
+243	Igralni način vklopljen – zavihki v ozadju zamrznjeni, prednost brskalnika znižana
+244	Igralni način izklopljen
+245	Izklopi igralni način
+246	Vklopi igralni način
+247	Prikaži celotno
+248	Cela stran
+249	Nevarno
+250	Nevarna stran blokirana
+251	Ponarejen naslov?
+252	Naloženo – preveliko za shranjevanje, po ponovnem zagonu izberi znova
+253	Izbriši vso zgodovino
+254	Obnovi zaprti zavihek
+255	Shranjeno ✓
+256	Včeraj
+257	Tukaj ne vpisuj gesel, bančnih podatkov ali podatkov kartice.
+258	Tukaj ne vpisuj gesel, kod ali podatkov kartice.
+259	Mreža
+260	Google ustvarja profile – DuckDuckGo, Brave in Startpage ne
+261	Google Prevajalnik
+262	Shrani graf v datoteko
+263	Naloži datoteko grafa
+264	Velikost
+265	Velikost pri shranjevanju
+266	Dobro je vedeti: Avast za to preverja naslove strani, ki jih obiščeš. Sme: brati in spreminjati podatke na vseh spletnih mestih.
+267	Lahko noč
+268	Dober večer
+269	Dober večer – čas za sejo.
+270	Dobro jutro
+271	Dobro jutro – pripravljen na igro?
+272	Način HTTPS · izklopiš ga v GX Control pod »Zaščita«
+273	Ohrani brskalnik majhen, da igra dobi vso moč.
+274	Ni uspelo
+275	Svetlo
+276	Svetlo / temno
+277	Svetlost
+278	Svetlost in kontrast
+279	Danes
+280	Ozadje
+281	Ozadje začetne strani
+282	Ozadje nastavljeno ✓
+283	Prikaži opozorilo
+284	Dodaj
+285	Domov
+286	Skrij naslov IP v WebRTC
+287	Naslov IP v WebRTC skrit
+288	Razumem tveganje – vseeno odpri stran
+289	V ozadju
+290	Prikaži v mapi
+291	Pokaži v mapi
+292	Vedno na vrhu
+293	Vedno na vrhu (vklop)
+294	Vedno na vrhu (izklop)
+295	Uvoz ni uspel:
+296	Uvozi
+297	Pisanje v odložišče
+298	Odpri v novem zavihku
+299	Odpri v zasebnem zavihku
+300	V katerem jeziku naj Elektron govori s tabo? Zastave kažejo države, v katerih se ta jezik govori.
+301	Blokiranje vsebine na spletnih mestih
+302	Namesti in začni
+303	Nameščeno
+304	Obrni barve
+305	Da
+306	Blokiraj JavaScript na tej strani
+307	Vsaka prenesena datoteka se preveri z Windows Defenderjem.
+308	Vsak dan
+309	Preveri posodobitve zdaj
+310	Znova zaženi zdaj
+311	UI v stranski vrstici
+312	Kalejdoskop
+313	Ali je povezava prišla po e-pošti, SMS-u ali Discordu? Potem je bila verjetno prevara.
+314	Kamera in mikrofon
+315	Ni internetne povezave. Preveri Wi-Fi ali omrežni kabel.
+316	Ni predlogov
+317	Ni varne povezave
+318	Klikni zvezdico v naslovni vrstici ali pritisni Ctrl+D.
+319	Klikni za ločitev
+320	Ni bilo mogoče naložiti:
+321	Kontrast
+322	Kopiraj
+323	Krog
+324	Od tu ne prenašaj ničesar.
+325	Naloži
+326	Ustavi nalaganje
+327	Če nisi prepričan, zaženi protivirusni program.
+328	Zmogljivost
+329	Zmogljiva grafična kartica
+330	Bralni način
+331	Bralni način (F9)
+332	Odpri bralni način
+333	Zaznamki
+334	Shrani zaznamke in nastavitve …
+335	Išči po zaznamkih
+336	Odstrani zaznamek (Ctrl+D)
+337	Zaznamek odstranjen
+338	Zaznamki se prikažejo tukaj – klikni zvezdico v naslovni vrstici.
+339	Zaznamek shranjen
+340	Dodaj zaznamek (Ctrl+D)
+341	Shrani zaznamke in nastavitve v datoteko – npr. za nov računalnik.
+342	Varnostna kopija zaznamkov in nastavitev
+343	Prikaži vrstico zaznamkov
+344	Skrij vrstico zaznamkov
+345	Izbriši zadnjih 24 ur
+346	Izbriši zadnjo uro
+347	Če brskalnik preseže omejitev, se zamrzne najbolj potraten zavihek v ozadju.
+348	Omejitev
+349	Linearno
+350	Debelina črte
+351	Odpri povezavo na razdeljenem zaslonu
+352	Odpri povezavo v novem zavihku
+353	Odpri povezavo v zasebnem zavihku
+354	Kopiraj povezavo
+355	Povezava kopirana – pošlji jo prijateljem!
+356	Čisti povezave
+357	Vnaprej naloži povezave
+358	Povezave se čistijo
+359	Izprazni seznam
+360	Seznam je prekratek
+361	Lokalni naslovi niso dovoljeni
+362	Začni
+363	Strani vedno naloži šifrirano in opozori, ko stran tega ne zmore.
+364	Naloži sliko iz interneta
+365	Nalaganje …
+366	Izbriši
+367	Izbriši (Del)
+368	Naprave MIDI
+369	Prevedi označeno besedilo ali cele strani.
+370	Maska
+371	Maska (svetlo = vidno)
+372	Največja varnost
+373	Več zasebnosti: zdaj iščeš z DuckDuckGo namesto z Googlom
+374	Meni
+375	Mikrofon
+376	Ko zaradi igre pomanjšaš brskalnik, vsi zavihki brez zvoka mirujejo.
+377	Minute
+378	Mešaj
+379	Išči z Googlom
+380	Išči z Googlom ali vpiši naslov
+381	Razloži z {0}
+382	Išči z {0}
+383	Išči z {0} ali vpiši naslov
+384	Išči z {0}: »{1}«
+385	Način
+386	Ponedeljek – petek
+387	Množenje
+388	Vzorec
+389	Preveri posodobitve
+390	Ime
+391	Meglica
+392	Zaslon
+393	Ne
+394	Neon
+395	Neonska mreža
+396	Omejevalnik omrežja
+397	Opazovanje omrežnega prometa
+398	Blokiranje in spreminjanje omrežnega prometa
+399	Novo
+400	Znova naloži
+401	Znova naloži (F5)
+402	Znova zaženi in namesti
+403	Nov zavihek
+404	Nov zavihek (Ctrl+T)
+405	Nov zasebni zavihek
+406	Nova prazna slika
+407	Ponovni zagon
+408	Ni najdeno
+409	Ni shranjeno
+410	Ni mogoče
+411	Ni varno
+412	Nič ni najdeno
+413	Še en korak: te razširitve priporočamo za več varnosti. Izberi, kar želiš – kadar koli jih lahko odstraniš pod »Razširitve«.
+414	Še ena runda? Sredi noči je.
+415	Še ni prenosov
+416	Še ni nameščenih razširitev. Odpri spletno trgovino Chrome in tam klikni »Dodaj«.
+417	Še ni zaznamkov
+418	Naslov za posodobitve še ni vpisan (GX Control → Posodobitve)
+419	Išči vozlišče …
+420	Običajno
+421	Običajen brskalnik – igralni elementi so skriti
+422	Samo datoteke z (prazno = vse)
+423	Samo HTTPS
+424	Samo enkrat na dan
+425	Samo naslovi http in https
+426	Uporablja namensko grafično kartico (npr. RTX) namesto vgrajene grafike.
+427	Naslednji zadetek (F3)
+428	Nadaljuj brez razširitev
+429	Neobvezno
+430	Možnosti
+431	Zapri ploščo
+432	Upravitelj gesel
+433	Zaščita pred lažnim predstavljanjem in zlonamernim programjem
+434	Velikost slikovne pike
+435	Plazma (pisana, animirana)
+436	Polarni sij
+437	Zasebno
+438	Zasebni iskalnik
+439	Zasebni zavihek
+440	Zasebni zavihek – zgodovina, piškotki in prijave izginejo, ko zapreš vse zasebne zavihke.
+441	Zasebni zavihek – po zaprtju brez zgodovine in piškotkov
+442	Program utrjen
+443	Spreminjanje nastavitev proxyja
+444	Preverja prenose z Windows Defenderjem (na tem računalniku ni na voljo).
+445	Pike
+446	Viri
+447	RAM {0} od {1}
+448	Omejevalnik RAM-a
+449	Zamik RGB (glitch)
+450	Šum / oblaki
+451	Desni klik na zavihek ponuja tudi vse to.
+452	Desni klik ali preslednica doda vozlišča. Povleci od pike desno na vozlišču do pike levo na naslednjem. Vse, kar na koncu prispe v
+453	Desni klik ali preslednica: dodaj vozlišče · Vleci ozadje: premakni · Kolesce miške: povečava · Del: izbriši
+454	Retro
+455	Retro gore
+456	Prek Global Privacy Control vsakemu spletnemu mestu sporoči, da tvojih podatkov ni dovoljeno prodajati ali deliti.
+457	Šahovnica
+458	Zlonamerno programje blokirano
+459	Izklopi turbo za JavaScript (JIT) – najpogostejšo tarčo napadov na brskalnike. Strani postanejo počasnejše, nekatere brskalniške igre ne delujejo več. Velja po ponovnem zagonu.
+460	Uspavaj (sprosti RAM)
+461	Preprosto
+462	Zapri
+463	Zapri (Esc)
+464	Hitri dostop
+465	Že 22 ura je – jutri je šola/služba 😉
+466	Večja pisava
+467	Manjša pisava
+468	Zaščita
+469	Zaščita za to stran (klikni)
+470	Znova vklopi zaščito za to stran
+471	Zaščita za {0}
+472	Zaščita pred prstnimi odtisi
+473	Seznam zaščite {0}:
+474	Črno-belo
+475	Lebdeče okno
+476	Lep dan
+477	Posnetek zaslona
+478	Posnetek zaslona (Ctrl+Shift+X) – desni klik: cela stran
+479	Posnetek zaslona (cela stran)
+480	Posnetek zaslona (vidno območje)
+481	Posnetek zaslona ni uspel
+482	Posnetek kopiran – prilepi ga v Discord s Ctrl+V
+483	Zajemi zaslon
+484	Stran
+485	Prevedi stran v slovenščino
+486	Ob zaprtju pozabi stran (izbriši piškotke)
+487	Natisni stran …
+488	Stran ne deluje? Tukaj izklopi zaščito
+489	Povzemi stran z {0}
+490	Strani ni mogoče doseči
+491	Preglej stran
+492	Zamenjaj strani
+493	Odpri stransko vrstico
+494	Razmerje stranic predogleda
+495	Sekunde
+496	Strežnik je odgovoril z napako {0}
+497	Senčilniki in slike
+498	Varna povezava
+499	Varni DNS
+500	Varnost
+501	Varnostni pregled
+502	Varnostno kopiranje in obnovitev
+503	Shrani kopijo …
+504	Varnostna kopija shranjena
+505	Obnovi varnostno kopijo
+506	Obnovi varnostno kopijo …
+507	Vidno območje
+508	Kako deluje
+509	Kako deluje:
+510	Drugo
+511	Shrani
+512	Shranjevanje ni uspelo:
+513	Varno shranjuje tvoja gesla in jih samodejno izpolni.
+514	Shranjuje tvoja gesla šifrirano in jih samodejno izpolni na spletnih mestih. Brezplačno, odprta koda.
+515	Razdeljen zaslon
+516	Razdeljen zaslon (Ctrl+Shift+S)
+517	Razdeljen zaslon vklopljen – povleci ločilno črto za prilagoditev
+518	Končaj razdeljen zaslon
+519	Končaj razdeljen zaslon (Ctrl+Shift+S)
+520	Jezik
+521	Išči jezik ali državo …
+522	Jezik sistema Windows
+523	Jezik sistema Windows: {0}
+524	Obnovi privzeto
+525	Začetek
+526	Začetna stran (Alt+Home)
+527	Upravljanje
+528	Raztegni
+529	Črte
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T nov zavihek · Ctrl+D zaznamek · Ctrl+H zgodovina · F11 celozaslonski način
+537	Ctrl+Shift+G zažene igralni način · Ctrl+T nov zavihek · F11 celozaslonski način
+538	Studio
+539	Stopnje
+540	Utišaj
+541	Moč
+542	Motnje
+543	Iskanje posodobitev …
+544	Iskalnik
+545	Predlogi iskanja med tipkanjem v naslovno vrstico (pošljejo se iskalniku)
+546	Nasičenost
+547	Zavihek
+548	Zavihek se je sesul – klikni za ponovno nalaganje
+549	Zavihek kot lebdeče okno
+550	Zavihek kot lebdeče okno (Ctrl+Shift+F)
+551	Zapri zavihek
+552	Zavihek zdaj lebdi nad vsemi okni
+553	Utišaj zavihek
+554	Odpri zavihek
+555	Zavihki
+556	Zapri zavihke na desni
+557	Obnovi zavihke
+558	Dnevi
+559	Tipka
+560	Bližnjica na tipkovnici
+561	Deli
+562	Hitrost
+563	Besedilo
+564	Besedilo (izsek):
+565	Naslov:
+566	Zvok vseh zavihkov
+567	Vklopi zvok
+568	Strupeno zelena
+569	Prosojnost
+570	Twitch odprt – igralni način je vklopljen 🎮
+571	Ura (HH:MM)
+572	Ultravijolična
+573	Obrni
+574	Preklopi
+575	Neveljaven naslov
+576	Zameglitev
+577	Na tem naslovu ni slike (namig: desni klik na sliko → »Kopiraj naslov slike«)
+578	Odpri brez šifriranja
+579	Posodobitev pripravljena – znova zaženi brskalnik
+580	Posodobitev razširitev ni uspela
+581	Namesti posodobitev
+582	Namesti posodobitev in znova zaženi
+583	Posodobitev {0} je pripravljena
+584	Posodobitev {0} se prenaša v ozadju …
+585	Naslov za posodobitve (mapa na tvoji spletni strani)
+586	Manjka modul za posodobitve
+587	Iskanje posodobitev ni uspelo: {0}
+588	Posodobitve
+589	Posodobitve delujejo v nameščeni različici
+590	Prepovedano
+591	Povečaj
+592	Pomanjšaj
+593	Zgodovina
+594	Išči po zgodovini
+595	Zamik
+596	Premakni / povečaj / zasukaj
+597	Šifrira, katere strani obiščeš (DNS prek HTTPS s Quad9 iz Švice), in dodatno blokira znane zlonamerne naslove.
+598	Različica
+599	Različica {0} je posodobljena.
+600	Različica {0} je pripravljena – namestila se bo ob naslednjem zagonu.
+601	Prenaša se različica {0} … {1} %
+602	Različica {0} · Chromium {1}
+603	Različica {0} · Naslov za posodobitve še ni vpisan.
+604	Različica {0} · Posodobitve so na voljo v nameščeni različici za Windows.
+605	Različica {0} · Posodobitve prihajajo samodejno prek trgovine Microsoft Store.
+606	Upravljaj
+607	Odpni videoposnetek
+608	Odpni videoposnetek (slika v sliki)
+609	Odpni videoposnetek – slika v sliki (Ctrl+Shift+P)
+610	Samodejno odpenjaj videoposnetke
+611	Video oglasi se utišajo in takoj preskočijo, oglasne površine izginejo.
+612	Vinjeta
+613	Virus najden v {0} – Windows Defender je odstranil datoteko
+614	Virus najden – Windows Defender je odstranil datoteko
+615	Celozaslonski način
+616	Od
+617	S te strani so se širili virusi ali drugi zlonamerni programi. Elektron jih je ustavil, preden je kar koli prišlo na tvoj računalnik.
+618	Naprej
+619	Naprej (Alt+→)
+620	Prejšnji zadetek (Shift+F3)
+621	Predlogi
+622	Satovje
+623	Verjetnost (%)
+624	Tudi ta opozarja na nevarne strani. Poleg Malwarebytes večinoma ni potreben – oba delata isto.
+625	Opozarja na nevarne strani in lažno predstavljanje.
+626	Opozorilo pred ponarejenimi naslovi
+627	Čakaj
+628	Kaj se zgodi, ko želi stran uporabiti tvojo kamero.
+629	WebGL 2 na tem računalniku ni na voljo.
+630	Spletna kamera
+631	Daljinsko upravljanje spletnih mest (razhroščevalnik)
+632	Spletna mesta te težje prepoznajo po tvojem računalniku (canvas, ime grafične kartice, jedra CPE).
+633	Spletna mesta prek tehnologije videoklepeta ne morejo več prebrati tvojega lokalnega naslova IP – tudi za VPN ne.
+634	Ko zamenjaš zavihek ali pomanjšaš brskalnik, se videoposnetek nadaljuje v majhnem oknu (slika v sliki).
+635	Mehkoba
+636	Drugi zaznamki
+637	Valovi
+638	Prikaži manj
+639	Ko je igralni način vklopljen
+640	Ko se igralni način …
+641	Ko je dan
+642	Ko je ura med
+643	Ko aktivni zavihek vsebuje
+644	Ko se brskalnik zažene
+645	Če želiš na {0}, uporabi gumb spodaj.
+646	Ko se prenos konča
+647	Ko se odpre stran
+648	Zaviralec oglasov in sledilnikov
+649	Zaviralec oglasov
+650	Zaviralca oglasov ni bilo mogoče naložiti:
+651	Oglaševalska podjetja ti ne morejo več slediti prek različnih spletnih mest. Prijava, captche in plačila delujejo naprej.
+652	Blokiranih oglasov/sledilnikov: {0} · Zavrnjenih sledilnih piškotkov: {1}
+653	Orodja
+654	Znova vklopi
+655	Obnovljeno: {0} novih zaznamkov in tvoje nastavitve
+656	Obnovi …
+657	Ponavljaj (ploščice)
+658	Dobrodošel
+659	Dobrodošel v Elektronu
+660	Windows Defender ni bil najden
+661	Kot
+662	Ob preseženi omejitvi zaspijo zavihki, ki jih najdlje nisi uporabil.
+663	Nameščanje …
+664	Res izbrisati vso zgodovino?
+665	Res odprem? Ta stran je znana kot nevarna.
+666	Vikend
+667	Preskoči oglase na YouTubu
+668	Znova prikaže »ni mi všeč« pod videoposnetki na YouTubu.
+669	Vrstice
+670	Čas
+671	Čas za odmor! 🎮
+672	Časovna omejitev
+673	Časovna omejitev pri nalaganju
+674	Povleci za prilagoditev · Dvoklik: 50/50
+675	Povečava
+676	Ponastavi povečavo
+677	Ponastavi povečavo (Ctrl+0)
+678	Naključno
+679	Za preizkus: gumb
+680	Preklopi na igralni brskalnik
+681	Dodaj v slovar
+682	Preklopi na običajen brskalnik
+683	Ob uri
+684	Na pravo stran: {0}
+685	Nazaj
+686	Nazaj (Alt+←)
+687	Nazaj na varno
+688	Nazaj v brskalnik
+689	Vrni v brskalnik
+690	Nazaj na Google
+691	na sprožilcu.
+692	, vidiš zgoraj. Slike iz interneta: desni klik na sliko → »Kopiraj naslov slike« in prilepi v vozlišče.
+693	tvojemu mikrofonu
+694	tvoji kameri
+695	tvojemu zaslonu
+696	tvoji lokaciji
+697	datoteke z zaznamki ni bilo mogoče prebrati.
+698	odložišču
+699	brez omejitve
+700	ni varnostna kopija Elektrona
+701	branje in spreminjanje
+702	ni dovoljeno
+703	samo v nameščeni različici
+704	npr. .exe ali .zip
+705	npr. youtube.com
+706	Poteka prenosov: {0} – Ctrl+J
+707	Prevzetih {0} zaznamkov iz {1}.
+708	Zavrnjenih sledilnih piškotkov: {0}
+709	Onemogočenih sledilnih povezav: {0}
+710	{0} se ne odzove pravočasno.
+711	{0} je zavrnil povezavo.
+712	{0} je pripravljeno – virus ni bil najden
+713	{0} ni bilo mogoče naložiti.
+714	{0} ni bilo mogoče namestiti. Preveri internetno povezavo in poskusi znova – ali namesti pozneje prek Meni → Spletna trgovina Chrome.
+715	{0} želi dostop do {1}.
+716	Zaženi {0}
+717	Aktivnih {0} od {1} zaščitnih funkcij.
+718	{0} pozabljeno – piškotki in podatki strani izbrisani
+719	{0} – ni dosegljivo
+720	· Samodejno
+721	· preverjanje virusov …
+722	· ✓ ni virusa (Windows Defender)
+723	Spremeni …
+724	Banke, Steam, Discord ipd. raje odpiraj neposredno prek naslovne vrstice ali zaznamka.
+725	Ne odpiraj datotek, ki jih s te strani že imaš.
+726	Odpri
+727	Ob zagonu odpre tvoje zavihke od zadnjič – naložijo se šele, ko jih klikneš.
+728	O {0}
+729	Prekrivanje
+730	Prevedi
+731	Prevodi brez jamstva – si našel napako? Sporoči jo na GitHubu, z veseljem jo popravimo.
+732	Preskoči sponzorirane dele v videoposnetkih na YouTubu.
+733	– slika v sliki
+734	– razdeljen zaslon
+735	– zavihek ostane nad tvojo igro
+736	– zamrznjeno
+737	– zasebno
+738	– spi (klikni za nalaganje)
+739	– lebdeče okno (klikni za prikaz)
+740	– dva zavihka drug ob drugem
+741	Signal »Ne prodajaj« (GPC)
+742	Odstranim »{0}«?
+743	»{0}« je naloženo.
+744	»{0}« je dodano
+745	Dodam »{0}« v Elektron?
+746	… izklopi
+747	… vklopi
+748	← Izvirna stran
+749	▶ Preizkusi zdaj
+750	✓ Izvedeno
+751	🎮 Gaming
