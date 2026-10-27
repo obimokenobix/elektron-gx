@@ -1,0 +1,752 @@
+0	(kék) vagy
+1	(lila) elemekkel. A módosítások automatikusan mentődnek, és azonnal érvényesek.
+2	(piros) – pl. „Amikor megnyílik egy oldal”. Kösd össze a fehér nyilat
+3	1 letöltés folyamatban – Ctrl+J
+4	1080 × 1080 (négyzet)
+5	1080 × 1920 (telefon)
+6	1920 × 1080 (Full HD)
+7	A (alul)
+8	Mégse
+9	Megszakítva
+10	Folyamatok
+11	Folyamatok aktívak
+12	Összeadás (ragyogás)
+13	Cím
+14	A cím tartalmazza
+15	Cím, pl. roblox.com
+16	Cím:
+17	Cím: {0}
+18	Műveletek
+19	Aktív lap bezárása
+20	Kiemelőszín
+21	Az összes adat olvasása és módosítása minden webhelyen
+22	Összes könyvjelző
+23	Összes könyvjelző (Ctrl+Shift+O)
+24	Összes könyvjelző kezelése …
+25	Összes védelmi beállítás …
+26	Minden védelmi funkció aktív.
+27	Összes kapcsolat bontása
+28	Összes frissítése
+29	Összes megjelenítése
+30	Néhány percenként
+31	Mind a(z) {0} megjelenítése
+32	Összes kijelölése
+33	Mindent törölsz és újrakezded?
+34	Minden, amit az Elektronban beállíthatsz.
+35	Mentés képként (PNG)
+36	Beállítás alapértelmezett böngészőként …
+37	Beállítás a kezdőlap háttereként
+38	Megnyitás lebegő ablakként
+39	Más bővítmények kezelése
+40	Többi lap bezárása
+41	Animáció
+42	Animált
+43	Típus
+44	Keresés az oldalon
+45	Keresés az oldalon …
+46	Ezen az oldalon nincs mit letiltani
+47	Ezen az oldalon nem fut videó
+48	Importálás a Chrome-ból
+49	Importálás az Edge-ből
+50	Importálás az Opera GX-ből
+51	Eltávolítás a listából
+52	Kitöltés
+53	Kimenet
+54	Kiváltók
+55	Kikapcsolás
+56	Kivágás
+57	Automatika
+58	Automatikus
+59	Automatikus frissítés
+60	B (felül)
+61	Már akkor kapcsolódik, amikor az egér egy linken van – gyorsabb, de az oldal már a kattintás előtt látja az IP-címedet.
+62	Szerkesztés
+63	Szerkesztés …
+64	Feltételek
+65	Kilépés
+66	Korlátozza az összes lap sávszélességét, hogy játék közben stabil maradjon a pinged.
+67	Lefagyasztás kis méretre állításkor
+68	Példa
+69	Betöltöd a példát? A jelenlegi folyamataid felülíródnak.
+70	Népszerű
+71	Értesítések
+72	Értesítések megjelenítése
+73	Engedély
+74	Készen állsz a játékra?
+75	Csaló oldal letiltva
+76	Mozgás
+77	Kép
+78	Kép kiválasztása …
+79	Kép megtartása
+80	Kép megnyitása új lapon
+81	A kép túl nagy (max. 25 MB)
+82	A kép nem tölthető be
+83	Kép másolása
+84	Kép mentése …
+85	Kép a gépről
+86	Kép címe (https://…)
+87	Írd be a kép címét, és nyomd meg a „Betöltés” gombot
+88	Képek
+89	Eddig
+90	Adj meg egy https://-sel kezdődő címet
+91	Letiltás
+92	Letiltja a csaló oldalakat, a kártevőket, az előfizetési csapdákat és a hamis műszaki támogatással való csalást. Ingyenes, fiók nélkül.
+93	Letiltja a hirdetéseket, követőket, felugró ablakokat és sütibannereket – eddig {0} kérés megállítva.
+94	Letiltja a hirdetéseket, követőket, reklám-felugrókat és sütibannereket.
+95	Letiltja az ismert csaló oldalakat és a vírusokat terjesztő oldalakat.
+96	Letiltja az ismert csaló oldalakat és a vírusokat terjesztő oldalakat. A lista éppen töltődik …
+97	{0} ismert csaló és vírusos oldalt tilt le. A lista 6 óránként frissül.
+98	Ingyenes Bitwarden-fiók kell hozzá. Jogosult: adatok olvasása és módosítása minden webhelyen (a kitöltéshez).
+99	A böngésző naprakész
+100	Böngésző terhelése
+101	A böngészős játékok V-Sync nélkül futnak a képfrissítési frekvencia fölött. Képszakadást okozhat.
+102	Böngésző stílusa
+103	Böngészési adatok törölve
+104	Böngészési adatok törlése most
+105	Böngészési adatok törlése
+106	CPU-korlátozó
+107	Használd a ChatGPT-t közvetlenül a böngészőben.
+108	A Chrome Webáruház nem érhető el
+109	Chrome Webáruház megnyitása
+110	Claude bővítményként – vagy egyszerűen az oldalsávon keresztül.
+111	Kód
+112	Kód futtatása webhelyeken
+113	Képregény / poszter
+114	Sütik és bejelentkezések törlése kilépéskor
+115	Sütik olvasása és módosítása
+116	Akkor
+117	Jogosult:
+118	Jogosult: adatok olvasása és módosítása minden webhelyen (ellenőrzéshez és letiltáshoz).
+119	A kép túl nagy (max. 25 MB)
+120	A(z) {0} biztonsági tanúsítványa nem megbízható.
+121	A(z) {0} biztonsági tanúsítványa érvénytelen.
+122	Ez nem érvényes kép
+123	Ez nem folyamatfájl.
+124	Ez nem shaderfájl.
+125	A fájlt törölték vagy áthelyezték
+126	Adatok itt:
+127	Adatvédelmi beállítások módosítása
+128	Átlátszatlanság
+129	Könyvjelzőid olvasása és módosítása
+130	Játékaid
+131	Böngészési előzményeid olvasása és módosítása
+132	Böngészési előzményeid és megnyitott lapjaid olvasása
+133	Tartózkodási helyed meghatározása
+134	A gamer böngésző. Chromium {0} · Electron {1}
+135	Az előzmények üresek
+136	Megjelenés
+137	Asztal
+138	Részletek
+139	Sűrűség
+140	A cím megtévesztésig hasonlít a valódi {0} oldalra – a csalók tipikus trükkje. Nézd meg alaposan: egy betű fel van cserélve, ki van cserélve, vagy másik ábécéből való.
+141	A címnek https://-sel kell kezdődnie
+142	A(z) {0} címe nem található. Jól írtad be?
+143	A bővítménynek nincs szüksége különleges engedélyekre.
+144	A bővítmény képes: •
+145	A bővítmények közvetlenül a Chrome Webáruházból származnak, és a gyártóikéi (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Az oldal nem tölthető be.
+147	Az oldal nem támogatja a biztonságos kapcsolatot (HTTPS). Mások ugyanazon a hálózaton – pl. nyilvános Wi-Fi-n – láthatják, mit nézel és írsz be itt.
+148	A vágólap olvasása
+149	Ez a cím így néz ki:
+150	Ez a fájl nem olvasható
+151	Ez az oldal nem titkosított
+152	Ez az oldal a veszélyes oldalak listáján van
+153	Ez az oldal az ismert adathalász oldalak listáján van. Az ilyen oldalak gyakran valódinak tűnnek, de el akarják lopni a jelszavaidat vagy banki adataidat.
+154	Ez az oldal kártevőt terjeszt
+155	Ez a kapcsolat nem titkosított
+156	Ez a videó nem választható le
+157	Különbség
+158	Letöltés
+159	Letöltés letiltva: a(z) {0} ismert kártevőt terjeszt
+160	Sikertelen letöltés: {0}
+161	Letöltés kész: {0}
+162	Letöltés elindítva: {0}
+163	Letöltések mappa megnyitása
+164	Letöltések
+165	Letöltések (Ctrl+J)
+166	Letöltések víruskeresése
+167	Keresés a letöltésekben
+168	Letöltések kezelése
+169	A letöltések ellenőrzése folyik
+170	Forgatás (°)
+171	Forog
+172	Elforgatás (°)
+173	Ezután mindenhonnan ki leszel jelentkeztetve.
+174	A DuckDuckGo, a Brave Search és a Startpage nem készít rólad profilt. A Startpage követés nélkül mutatja a Google találatait.
+175	Sötét
+176	Sötét megjelenés minden webhelyhez.
+177	Kettőzés
+178	Kettőzés (Ctrl+D)
+179	Effektek
+180	Saját shader (GLSL)
+181	Saját kép
+182	Saját kép …
+183	Saját háttérkép kiválasztása
+184	Egy folyamat ezzel kezdődik:
+185	Lefagyasztás
+186	Színezés
+187	Beillesztés
+188	Igazítás
+189	Bekapcsolás
+190	Beállítások
+191	A beállítások nem menthetők:
+192	Elemek hozzáadása a jobb gombos menühöz
+193	Elektron védelem · Hasonmás-felismerés közvetlenül a gépeden
+194	Elektron védelem · A Phishing.Database és az URLhaus (abuse.ch) listái
+195	Elektron Studio (shaderek és folyamatok)
+196	Az Elektron leállította ezt az oldalt, mert az ismert csaló oldalak listáján szerepel.
+197	Az Elektron rendszeresen keres új verziókat.
+198	Elektron ajánlása
+199	Ajánlott
+200	Eltávolítás
+201	Eltávolítja az olyan követő toldalékokat, mint az utm_, fbclid és gclid, átugorja a Google és a Facebook átirányító követőit, és eredetiben nyitja meg az AMP-oldalakat.
+202	Kicsomagolt bővítmény betöltése (manifest.json-t tartalmazó mappa)
+203	Kicsomagolt bővítmény betöltése …
+204	Döntés megjegyzése
+205	Fejlesztői eszközök
+206	Ingyenes Epic-játékok
+207	Magyarázd el ezt egyszerűen és magyarul:
+208	Magyarázd el egyszerűen és magyarul, miről szól ez a weboldal.
+209	Engedélyezés
+210	Letöltés újra
+211	Újrapróbálás
+212	Előbb építs egy képet – a „Kimenet”-re még semmi sem érkezik.
+213	Bővítmény hozzáadása
+214	Bővítmények
+215	A bővítmények a Chrome Webáruházból származnak, és az Elektronban úgy működnek, mint a Chrome-ban. Néhány nagyon összetett bővítmény olyan Chrome-funkciókat használ, amelyek itt nincsenek – ezek csak részben működnek. A Claude és a ChatGPT közvetlenül a bal oldalsávban is megtalálható.
+216	A bővítmények naprakészek
+217	A bővítménysáv nem érhető el:
+218	Hiányzik a „Kimenet” csomópont.
+219	Exportálás
+220	FPS-korlát feloldása
+221	Szín
+222	1. szín
+223	2. szín
+224	Színárnyalat forgatása
+225	Foglald össze ezt a weboldalt röviden és magyarul – a legfontosabb pontokat listában.
+226	Hiba:
+227	Sikertelen
+228	Kész
+229	Kérdezzen
+230	Harmadik féltől származó sütik letiltása
+231	Harmadik féltől származó sütik letiltva
+232	Lefagyasztja az összes háttérben lévő lapot, és csökkenti a böngésző prioritását, hogy a játékod előnyt élvezzen. A hangot lejátszó lapok tovább futnak.
+233	Discord hangcsatornákhoz válaszd a „Kérdezzen” vagy az „Engedélyezés” lehetőséget.
+234	A jobb kattintás → „Oldal összefoglalása” és „Magyarázat” funkcióhoz.
+235	Ehhez az oldalhoz nincs olvasó mód
+236	AZ EGÉSZ GÉP
+237	Galaxis
+238	Gaming
+239	Gaming minden extrával – vagy nyugodt, normál böngésző. Bármikor váltható.
+240	Visszatért a gamer böngésző 🎮
+241	Gaming mód
+242	Gaming mód (Ctrl+Shift+G)
+243	Gaming mód bekapcsolva – háttérlapok lefagyasztva, böngésző prioritása csökkentve
+244	Gaming mód kikapcsolva
+245	Gaming mód kikapcsolása
+246	Gaming mód bekapcsolása
+247	Teljes megjelenítés
+248	Teljes oldal
+249	Veszélyes
+250	Veszélyes oldal letiltva
+251	Hamis cím?
+252	Betöltve – túl nagy a megjegyzéshez, újraindítás után válaszd ki újra
+253	Teljes előzmény törlése
+254	Bezárt lap visszaállítása
+255	Mentve ✓
+256	Tegnap
+257	Ne adj meg itt jelszót, banki vagy kártyaadatot.
+258	Ne adj meg itt jelszót, kódot vagy kártyaadatot.
+259	Rács
+260	A Google profilt készít – a DuckDuckGo, a Brave és a Startpage nem
+261	Google Fordító
+262	Gráf mentése fájlba
+263	Gráffájl betöltése
+264	Méret
+265	Méret mentéskor
+266	Jó tudni: az Avast ehhez ellenőrzi a meglátogatott oldalak címét. Jogosult: adatok olvasása és módosítása minden webhelyen.
+267	Jó éjszakát
+268	Jó estét
+269	Jó estét – ideje egy menetnek.
+270	Jó reggelt
+271	Jó reggelt – készen állsz a játékra?
+272	HTTPS mód · a GX Controlban a „Védelem” alatt kapcsolható ki
+273	Tartsd kicsin a böngészőt, hogy a játékod kapja a teljes teljesítményt.
+274	Nem sikerült
+275	Világos
+276	Világos / sötét
+277	Fényerő
+278	Fényerő és kontraszt
+279	Ma
+280	Háttér
+281	Kezdőlap háttere
+282	Háttér beállítva ✓
+283	Figyelmeztetés megjelenítése
+284	Hozzáadás
+285	Kezdőlap
+286	IP-cím elrejtése a WebRTC-ben
+287	IP-cím elrejtve a WebRTC-ben
+288	Értem a kockázatot – mégis megnyitom az oldalt
+289	A háttérben
+290	Megjelenítés mappában
+291	Mutatás mappában
+292	Mindig felül
+293	Mindig felül (be)
+294	Mindig felül (ki)
+295	Sikertelen importálás:
+296	Importálás
+297	Írás a vágólapra
+298	Megnyitás új lapon
+299	Megnyitás privát lapon
+300	Milyen nyelven beszéljen veled az Elektron? A zászlók azokat az országokat mutatják, ahol ezt a nyelvet beszélik.
+301	Tartalom letiltása webhelyeken
+302	Telepítés és indulás
+303	Telepítve
+304	Invertálás
+305	Igen
+306	JavaScript letiltása ezen az oldalon
+307	Minden letöltött fájlt a Windows Defender ellenőriz.
+308	Minden nap
+309	Frissítések keresése most
+310	Újraindítás most
+311	MI az oldalsávban
+312	Kaleidoszkóp
+313	E-mailben, SMS-ben vagy Discordon kaptad a linket? Akkor valószínűleg csalás volt.
+314	Kamera és mikrofon
+315	Nincs internetkapcsolat. Ellenőrizd a Wi-Fi-t vagy a hálózati kábelt.
+316	Nincsenek javaslatok
+317	Nincs biztonságos kapcsolat
+318	Kattints a címsorban a csillagra, vagy nyomd meg a Ctrl+D billentyűt.
+319	Kattints a leválasztáshoz
+320	Nem tölthető be:
+321	Kontraszt
+322	Másolás
+323	Kör
+324	Innen ne tölts le semmit.
+325	Betöltés
+326	Betöltés leállítása
+327	Ha bizonytalan vagy, futtasd a víruskeresődet.
+328	Teljesítmény
+329	Erős videokártya
+330	Olvasó mód
+331	Olvasó mód (F9)
+332	Olvasó mód megnyitása
+333	Könyvjelzők
+334	Könyvjelzők és beállítások mentése …
+335	Keresés a könyvjelzőkben
+336	Könyvjelző eltávolítása (Ctrl+D)
+337	Könyvjelző eltávolítva
+338	Itt jelennek meg a könyvjelzők – kattints a címsorban a csillagra.
+339	Könyvjelző mentve
+340	Könyvjelző hozzáadása (Ctrl+D)
+341	Könyvjelzők és beállítások mentése fájlba – pl. egy új géphez.
+342	Könyvjelzők és beállítások biztonsági mentése
+343	Könyvjelzősáv megjelenítése
+344	Könyvjelzősáv elrejtése
+345	Utolsó 24 óra törlése
+346	Utolsó óra törlése
+347	Ha a böngésző túllépi a korlátot, a legéhesebb háttérlap lefagy.
+348	Korlát
+349	Lineáris
+350	Vonalvastagság
+351	Link megnyitása osztott képernyőn
+352	Link megnyitása új lapon
+353	Link megnyitása privát lapon
+354	Link másolása
+355	Link másolva – küldd el a barátaidnak!
+356	Linkek tisztítása
+357	Linkek előtöltése
+358	Linkek tisztítása folyik
+359	Lista ürítése
+360	A lista túl rövid
+361	Helyi címek nem engedélyezettek
+362	Indulás
+363	Mindig titkosítva tölti be az oldalakat, és figyelmeztet, ha egy oldal erre nem képes.
+364	Képet tölt be az internetről
+365	Betöltés …
+366	Törlés
+367	Törlés (Del)
+368	MIDI-eszközök
+369	Kijelölt szöveg vagy teljes oldalak fordítása.
+370	Maszk
+371	Maszk (világos = látható)
+372	Maximális biztonság
+373	Több adatvédelem: mostantól Google helyett DuckDuckGo-val keresel
+374	Menü
+375	Mikrofon
+376	Ha a játék miatt kis méretre állítod a böngészőt, minden hang nélküli lap pihen.
+377	Perc
+378	Keverés
+379	Keresés a Google-lel
+380	Keresés a Google-lel vagy cím megadása
+381	Magyarázat ezzel: {0}
+382	Keresés ezzel: {0}
+383	Keresés ezzel: {0}, vagy cím megadása
+384	Keresés ezzel: {0}: „{1}”
+385	Mód
+386	Hétfő – péntek
+387	Szorzás
+388	Minta
+389	Frissítések keresése
+390	Név
+391	Köd
+392	Szita
+393	Nem
+394	Neon
+395	Neonrács
+396	Hálózatkorlátozó
+397	Hálózati forgalom figyelése
+398	Hálózati forgalom letiltása és módosítása
+399	Új
+400	Újratöltés
+401	Újratöltés (F5)
+402	Újraindítás és telepítés
+403	Új lap
+404	Új lap (Ctrl+T)
+405	Új privát lap
+406	Új, üres kép
+407	Újraindítás
+408	Nem található
+409	Nincs mentve
+410	Nem lehetséges
+411	Nem biztonságos
+412	Nincs találat
+413	Még egy lépés: a nagyobb biztonság érdekében ezeket a bővítményeket ajánljuk. Válaszd ki, amit szeretnél – bármikor eltávolíthatod őket a „Bővítmények” alatt.
+414	Még egy kör? Az éjszaka közepe van.
+415	Még nincsenek letöltések
+416	Még nincs telepített bővítmény. Nyisd meg a Chrome Webáruházat, és ott kattints a „Hozzáadás” gombra.
+417	Még nincsenek könyvjelzők
+418	Még nincs megadva frissítési cím (GX Control → Frissítések)
+419	Csomópont keresése …
+420	Normál
+421	Normál böngésző – a gaming elemek el vannak rejtve
+422	Csak ilyen fájlok (üres = mind)
+423	Csak HTTPS
+424	Csak naponta egyszer
+425	Csak http- és https-címek
+426	A dedikált GPU-t (pl. RTX) használja a processzor grafikája helyett.
+427	Következő találat (F3)
+428	Tovább bővítmények nélkül
+429	Nem kötelező
+430	Beállítások
+431	Panel bezárása
+432	Jelszókezelő
+433	Adathalászat és kártevők elleni védelem
+434	Képpontméret
+435	Plazma (színes, animált)
+436	Sarki fény
+437	Privát
+438	Adatvédő keresőmotor
+439	Privát lap
+440	Privát lap – az előzmények, sütik és bejelentkezések eltűnnek, amint bezárod az összes privát lapot.
+441	Privát lap – bezárás után nincs előzmény és süti
+442	Program megerősítve
+443	Proxybeállítások módosítása
+444	A letöltéseket a Windows Defenderrel ellenőrzi (ezen a gépen nem érhető el).
+445	Pontok
+446	Források
+447	RAM {0} / {1}
+448	RAM-korlátozó
+449	RGB-eltolás (glitch)
+450	Zaj / felhők
+451	Egy lapra jobb gombbal kattintva mindez szintén elérhető.
+452	Jobb kattintás vagy szóköz csomópontot ad hozzá. Húzz egy csomópont jobb oldali pontjától a következő bal oldali pontjáig. Minden, ami végül a
+453	Jobb kattintás vagy szóköz: csomópont hozzáadása · Háttér húzása: mozgatás · Egérgörgő: nagyítás · Del: törlés
+454	Retró
+455	Retró hegyek
+456	A Global Privacy Control segítségével minden webhelynek jelzi, hogy az adataidat nem szabad eladni vagy továbbadni.
+457	Sakktábla
+458	Kártevő letiltva
+459	Kikapcsolja a JavaScript-turbót (JIT) – a böngészők leggyakoribb támadási felületét. A weboldalak lassabbak lesznek, egyes böngészős játékok nem futnak többé. Újraindítás után érvényes.
+460	Altatás (RAM felszabadítása)
+461	Egyszerű
+462	Bezárás
+463	Bezárás (Esc)
+464	Gyorselérés
+465	Már 22 óra – holnap iskola/munka 😉
+466	Nagyobb betű
+467	Kisebb betű
+468	Védelem
+469	Védelem ehhez az oldalhoz (kattints)
+470	Védelem visszakapcsolása ehhez az oldalhoz
+471	Védelem: {0}
+472	Ujjlenyomat-védelem
+473	Védelmi lista {0}:
+474	Fekete-fehér
+475	Lebegő ablak
+476	Szép napot
+477	Képernyőkép
+478	Képernyőkép (Ctrl+Shift+X) – jobb kattintás: teljes oldal
+479	Képernyőkép (teljes oldal)
+480	Képernyőkép (látható terület)
+481	A képernyőkép nem sikerült
+482	Képernyőkép másolva – illeszd be a Discordba Ctrl+V-vel
+483	Képernyőkép készítése
+484	Oldal
+485	Oldal lefordítása magyarra
+486	Oldal elfelejtése bezáráskor (sütik törlése)
+487	Oldal nyomtatása …
+488	Nem működik az oldal? Itt kapcsold ki a védelmet
+489	Oldal összefoglalása ezzel: {0}
+490	Az oldal nem érhető el
+491	Oldal vizsgálata
+492	Oldalak cseréje
+493	Oldalsáv megnyitása
+494	Előnézet képaránya
+495	Másodperc
+496	A szerver {0} hibával válaszolt
+497	Shaderek és képek
+498	Biztonságos kapcsolat
+499	Biztonságos DNS
+500	Biztonság
+501	Biztonsági ellenőrzés
+502	Biztonsági mentés és visszaállítás
+503	Mentés …
+504	Biztonsági mentés elkészült
+505	Biztonsági mentés visszaállítása
+506	Biztonsági mentés visszaállítása …
+507	Látható terület
+508	Így működik
+509	Így működik:
+510	Egyéb
+511	Mentés
+512	Sikertelen mentés:
+513	Biztonságosan tárolja a jelszavaidat, és automatikusan kitölti őket.
+514	Titkosítva tárolja a jelszavaidat, és automatikusan kitölti őket a weboldalakon. Ingyenes, nyílt forráskódú.
+515	Osztott képernyő
+516	Osztott képernyő (Ctrl+Shift+S)
+517	Osztott képernyő bekapcsolva – az elválasztó húzásával igazíthatod
+518	Osztott képernyő bezárása
+519	Osztott képernyő bezárása (Ctrl+Shift+S)
+520	Nyelv
+521	Nyelv vagy ország keresése …
+522	A Windows nyelve
+523	A Windows nyelve: {0}
+524	Alapértelmezés visszaállítása
+525	Start
+526	Kezdőlap (Alt+Home)
+527	Vezérlés
+528	Nyújtás
+529	Csíkok
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T új lap · Ctrl+D könyvjelző · Ctrl+H előzmények · F11 teljes képernyő
+537	Ctrl+Shift+G elindítja a gaming módot · Ctrl+T új lap · F11 teljes képernyő
+538	Studio
+539	Fokozatok
+540	Némítás
+541	Erősség
+542	Zavar
+543	Frissítések keresése …
+544	Keresőmotor
+545	Keresési javaslatok a címsorba gépeléskor (elküldésre kerülnek a keresőmotornak)
+546	Telítettség
+547	Lap
+548	A lap összeomlott – kattints az újratöltéshez
+549	Lap lebegő ablakként
+550	Lap lebegő ablakként (Ctrl+Shift+F)
+551	Lap bezárása
+552	A lap most minden ablak fölött lebeg
+553	Lap némítása
+554	Lap megnyitása
+555	Lapok
+556	Jobbra lévő lapok bezárása
+557	Lapok visszaállítása
+558	Napok
+559	Billentyű
+560	Billentyűparancs
+561	Részek
+562	Tempó
+563	Szöveg
+564	Szöveg (részlet):
+565	Cím:
+566	Az összes lap hangja
+567	Hang bekapcsolása
+568	Méregzöld
+569	Átlátszóság
+570	Twitch megnyitva – a gaming mód be van kapcsolva 🎮
+571	Időpont (ÓÓ:PP)
+572	Ultraibolya
+573	Megfordítás
+574	Váltás
+575	Érvénytelen cím
+576	Elmosás
+577	Ezen a címen nincs kép (tipp: jobb kattintás egy képre → „Képcím másolása”)
+578	Megnyitás titkosítás nélkül
+579	A frissítés kész – indítsd újra a böngészőt
+580	A bővítmények frissítése sikertelen
+581	Frissítés telepítése
+582	Frissítés telepítése és újraindítás
+583	A(z) {0} frissítés kész
+584	A(z) {0} frissítés letöltése a háttérben …
+585	Frissítési cím (egy mappa a webhelyeden)
+586	Hiányzik a frissítőmodul
+587	Sikertelen frissítéskeresés: {0}
+588	Frissítések
+589	A frissítések a telepített verzióban működnek
+590	Tiltott
+591	Nagyítás
+592	Kicsinyítés
+593	Előzmények
+594	Keresés az előzményekben
+595	Eltolás
+596	Mozgatás / nagyítás / forgatás
+597	Titkosítja, hogy mely oldalakat nyitod meg (DNS HTTPS-en keresztül a svájci Quad9-cel), és emellett letiltja az ismert kártevőcímeket.
+598	Verzió
+599	A(z) {0} verzió naprakész.
+600	A(z) {0} verzió kész – a következő indításkor települ.
+601	A(z) {0} verzió letöltése … {1} %
+602	Verzió: {0} · Chromium {1}
+603	Verzió: {0} · Még nincs megadva frissítési cím.
+604	Verzió: {0} · Frissítések a telepített Windows-verzióban érhetők el.
+605	Verzió: {0} · A frissítések automatikusan érkeznek a Microsoft Store-on keresztül.
+606	Kezelés
+607	Videó leválasztása
+608	Videó leválasztása (kép a képben)
+609	Videó leválasztása – kép a képben (Ctrl+Shift+P)
+610	Videók automatikus leválasztása
+611	A videohirdetések elnémulnak és azonnal átugródnak, a hirdetési felületek eltűnnek.
+612	Vignetta
+613	Vírus található itt: {0} – a Windows Defender eltávolította a fájlt
+614	Vírus található – a Windows Defender eltávolította a fájlt
+615	Teljes képernyő
+616	Ettől
+617	Erről az oldalról vírusokat vagy más kártevő programokat terjesztettek. Az Elektron megállította őket, mielőtt bármi a gépedre jutott volna.
+618	Előre
+619	Előre (Alt+→)
+620	Előző találat (Shift+F3)
+621	Javaslatok
+622	Méhsejt
+623	Valószínűség (%)
+624	Ez is figyelmeztet a veszélyes oldalakra. A Malwarebytes mellett többnyire nem kell – a kettő ugyanazt csinálja.
+625	Figyelmeztet a veszélyes oldalakra és az adathalászatra.
+626	Figyelmeztetés hamis címekre
+627	Várakozás
+628	Mi történik, ha egy oldal használni akarja a kamerádat.
+629	A WebGL 2 nem érhető el ezen a gépen.
+630	Webkamera
+631	Webhelyek távvezérlése (hibakereső)
+632	A weboldalak nehezebben ismernek fel a géped alapján (canvas, videokártya neve, CPU-magok).
+633	A weboldalak többé nem tudják kiolvasni a helyi IP-címedet a videochat-technológián keresztül – VPN mögött sem.
+634	Ha lapot váltasz vagy kis méretre állítod a böngészőt, a videó egy kis ablakban fut tovább (kép a képben).
+635	Lágyság
+636	Egyéb könyvjelzők
+637	Hullámok
+638	Kevesebb megjelenítése
+639	Ha a gaming mód be van kapcsolva
+640	Ha a gaming mód …
+641	Ha a nap
+642	Ha az idő e kettő között van
+643	Ha az aktív lap tartalmazza
+644	Amikor a böngésző elindul
+645	Ha a(z) {0} oldalra szeretnél menni, használd a lenti gombot.
+646	Amikor egy letöltés befejeződik
+647	Amikor megnyílik egy oldal
+648	Hirdetés- és követőblokkoló
+649	Hirdetésblokkoló
+650	A hirdetésblokkoló nem tölthető be:
+651	A hirdetőcégek többé nem tudnak követni különböző weboldalakon át. A bejelentkezés, a captcha és a fizetés továbbra is működik.
+652	Letiltott hirdetés/követő: {0} · Visszavert követő süti: {1}
+653	Eszközök
+654	Visszakapcsolás
+655	Visszaállítva: {0} új könyvjelző és a beállításaid
+656	Visszaállítás …
+657	Ismétlés (csempézés)
+658	Üdv
+659	Üdv az Elektronban
+660	A Windows Defender nem található
+661	Szög
+662	A korlát túllépésekor a legrégebben nem használt lapok elalszanak.
+663	Telepítés …
+664	Biztosan törlöd a teljes előzményt?
+665	Biztosan megnyitod? Ez az oldal veszélyesként ismert.
+666	Hétvége
+667	YouTube-hirdetések átugrása
+668	Újra megmutatja a nem tetszéseket a YouTube-videók alatt.
+669	Sorok
+670	Idő
+671	Ideje szünetet tartani! 🎮
+672	Időtúllépés
+673	Időtúllépés betöltés közben
+674	Húzd az igazításhoz · Dupla kattintás: 50/50
+675	Nagyítás
+676	Nagyítás visszaállítása
+677	Nagyítás visszaállítása (Ctrl+0)
+678	Véletlen
+679	Kipróbáláshoz: a kiváltón lévő
+680	Váltás a gamer böngészőre
+681	Hozzáadás a szótárhoz
+682	Váltás a normál böngészőre
+683	Időpontban
+684	A valódi oldalra: {0}
+685	Vissza
+686	Vissza (Alt+←)
+687	Vissza biztonságba
+688	Vissza a böngészőbe
+689	Visszahozás a böngészőbe
+690	Vissza a Google-höz
+691	gomb.
+692	csomópontba érkezik, fent látod. Képek az internetről: jobb kattintás egy képre → „Képcím másolása”, és illeszd be a csomópontba.
+693	a mikrofonodhoz
+694	a kamerádhoz
+695	a képernyődhöz
+696	a tartózkodási helyedhez
+697	a könyvjelzőfájl nem olvasható.
+698	a vágólaphoz
+699	nincs korlát
+700	nem Elektron-biztonsági mentés
+701	olvasás és módosítás
+702	nem engedélyezett
+703	csak a telepített verzióban
+704	pl. .exe vagy .zip
+705	pl. youtube.com
+706	{0} letöltés folyamatban – Ctrl+J
+707	{0} könyvjelző átvéve innen: {1}.
+708	{0} követő süti visszaverve
+709	{0} követő link hatástalanítva
+710	A(z) {0} nem válaszol időben.
+711	A(z) {0} elutasította a kapcsolatot.
+712	{0} kész – nem található vírus
+713	A(z) {0} nem tölthető be.
+714	A(z) {0} nem telepíthető. Ellenőrizd az internetkapcsolatot, és próbáld újra – vagy telepítsd később a Menü → Chrome Webáruház útján.
+715	A(z) {0} hozzá szeretne férni {1}.
+716	{0} indítása
+717	{1} védelmi funkcióból {0} aktív.
+718	{0} elfelejtve – sütik és webhelyadatok törölve
+719	{0} – nem érhető el
+720	· Auto
+721	· víruskeresés …
+722	· ✓ nincs vírus (Windows Defender)
+723	Módosítás …
+724	Bankokat, Steamet, Discordot és társaikat inkább közvetlenül a címsorból vagy könyvjelzőből nyisd meg.
+725	Ne nyisd meg azokat a fájlokat, amelyeket már letöltöttél erről az oldalról.
+726	Megnyitás
+727	Indításkor megnyitja a legutóbbi lapjaidat – csak akkor töltődnek be, amikor rájuk kattintasz.
+728	A(z) {0} névjegye
+729	Átfedés
+730	Fordítás
+731	A fordítások garancia nélküliek – hibát találtál? Jelezd a GitHubon, szívesen javítjuk.
+732	Átugorja a szponzorált részeket a YouTube-videókban.
+733	– kép a képben
+734	– osztott képernyő
+735	– a lap a játékod fölött marad
+736	– lefagyasztva
+737	– privát
+738	– alszik (kattints a betöltéshez)
+739	– lebegő ablak (kattints a megjelenítéshez)
+740	– két lap egymás mellett
+741	„Ne add el” jelzés (GPC)
+742	Eltávolítod: „{0}”?
+743	„{0}” betöltve.
+744	„{0}” hozzáadva
+745	Hozzáadod a(z) „{0}” elemet az Elektronhoz?
+746	… kikapcsol
+747	… bekapcsol
+748	← Eredeti oldal
+749	▶ Kipróbálás most
+750	✓ Végrehajtva
+751	🎮 Gaming
