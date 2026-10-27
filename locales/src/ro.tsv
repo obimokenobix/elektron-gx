@@ -1,0 +1,752 @@
+0	(albastru) sau
+1	(mov). Modificările se salvează automat și se aplică imediat.
+2	(roșu) – de ex. „Când se deschide o pagină”. Conectează săgeata albă cu
+3	1 descărcare în curs – Ctrl+J
+4	1080 × 1080 (pătrat)
+5	1080 × 1920 (telefon)
+6	1920 × 1080 (Full HD)
+7	A (jos)
+8	Anulează
+9	Anulat
+10	Fluxuri
+11	Fluxuri active
+12	Adunare (strălucire)
+13	Adresă
+14	Adresa conține
+15	Adresă, de ex. roblox.com
+16	Adresă:
+17	Adresă: {0}
+18	Acțiuni
+19	Închide fila activă
+20	Culoare de accent
+21	Citirea și modificarea tuturor datelor de pe toate site-urile
+22	Toate marcajele
+23	Toate marcajele (Ctrl+Shift+O)
+24	Gestionează toate marcajele …
+25	Toate setările de protecție …
+26	Toate funcțiile de protecție sunt active.
+27	Întrerupe toate conexiunile
+28	Actualizează tot
+29	Arată tot
+30	La câteva minute
+31	Arată toate cele {0}
+32	Selectează tot
+33	Ștergi tot și o iei de la capăt?
+34	Tot ce poți configura în Elektron.
+35	Salvează ca imagine (PNG)
+36	Setează ca browser implicit …
+37	Setează ca fundal al paginii de start
+38	Deschide ca fereastră plutitoare
+39	Gestionează alte extensii
+40	Închide celelalte file
+41	Animație
+42	Animat
+43	Tip
+44	Caută în pagină
+45	Caută în pagină …
+46	Pe această pagină nu este nimic de blocat
+47	Pe această pagină nu rulează niciun videoclip
+48	Importă din Chrome
+49	Importă din Edge
+50	Importă din Opera GX
+51	Elimină din listă
+52	Umple
+53	Ieșire
+54	Declanșatoare
+55	Dezactivează
+56	Decupează
+57	Automat
+58	Automat
+59	Actualizează automat
+60	B (sus)
+61	Inițiază conexiunea deja când mouse-ul e pe un link – mai rapid, dar site-ul îți vede adresa IP încă dinainte de clic.
+62	Editare
+63	Editează …
+64	Condiții
+65	Ieșire
+66	Limitează lățimea de bandă a tuturor filelor, ca ping-ul să rămână stabil cât joci.
+67	Îngheață la minimizare
+68	Exemplu
+69	Încarci exemplul? Fluxurile tale actuale vor fi înlocuite.
+70	Populare
+71	Notificări
+72	Afișează notificări
+73	Permisiune
+74	Gata de joc?
+75	Site de înșelătorie blocat
+76	Mișcare
+77	Imagine
+78	Alege imaginea …
+79	Păstrează imaginea
+80	Deschide imaginea într-o filă nouă
+81	Imaginea e prea mare (max. 25 MB)
+82	Imaginea nu a putut fi încărcată
+83	Copiază imaginea
+84	Salvează imaginea …
+85	Imagine de pe PC
+86	Adresa imaginii (https://…)
+87	Introdu adresa imaginii și apasă „Încarcă”
+88	Imagini
+89	Până la
+90	Introdu o adresă care începe cu https://
+91	Blochează
+92	Blochează site-uri de înșelătorie, programe malware, capcane cu abonamente și escrocherii cu falsul suport tehnic. Gratuit, fără cont.
+93	Blochează reclame, trackere, ferestre pop-up și bannere de cookie-uri – până acum {0} cereri oprite.
+94	Blochează reclame, trackere, pop-up-uri publicitare și bannere de cookie-uri.
+95	Blochează site-urile de înșelătorie cunoscute și site-urile care răspândesc viruși.
+96	Blochează site-urile de înșelătorie cunoscute și site-urile care răspândesc viruși. Lista se încarcă …
+97	Blochează {0} site-uri cunoscute de înșelătorie și cu viruși. Lista se actualizează la fiecare 6 ore.
+98	Necesită un cont Bitwarden gratuit. Poate: să citească și să modifice date pe toate site-urile (pentru completare).
+99	Browserul este actualizat
+100	Încărcarea browserului
+101	Jocurile din browser rulează fără V-Sync peste rata de reîmprospătare. Poate provoca rupturi de imagine.
+102	Stilul browserului
+103	Datele de navigare au fost șterse
+104	Șterge acum datele de navigare
+105	Șterge datele de navigare
+106	Limitator CPU
+107	Folosește ChatGPT direct în browser.
+108	Magazinul web Chrome nu este disponibil
+109	Deschide Magazinul web Chrome
+110	Claude ca extensie – sau simplu, din bara laterală.
+111	Cod
+112	Rularea de cod pe site-uri
+113	Bandă desenată / poster
+114	Șterge cookie-urile și autentificările la ieșire
+115	Citirea și modificarea cookie-urilor
+116	Atunci
+117	Poate:
+118	Poate: să citească și să modifice date pe toate site-urile (pentru verificare și blocare).
+119	Imaginea e prea mare (max. 25 MB)
+120	Certificatul de securitate al {0} nu este de încredere.
+121	Certificatul de securitate al {0} este nevalid.
+122	Aceasta nu este o imagine validă
+123	Acesta nu este un fișier de flux.
+124	Acesta nu este un fișier shader.
+125	Fișierul a fost șters sau mutat
+126	Date pe
+127	Modificarea setărilor de confidențialitate
+128	Opacitate
+129	Citirea și modificarea marcajelor tale
+130	Jocurile tale
+131	Citirea și modificarea istoricului de navigare
+132	Citirea istoricului de navigare și a filelor deschise
+133	Determinarea locației tale
+134	Browserul pentru gameri. Chromium {0} · Electron {1}
+135	Istoricul este gol
+136	Aspect
+137	Desktop
+138	Detalii
+139	Densitate
+140	Adresa seamănă înșelător de mult cu site-ul real {0} – un truc tipic al escrocilor. Uită-te atent: o literă e inversată, înlocuită sau provine din alt alfabet.
+141	Adresa trebuie să înceapă cu https://
+142	Adresa {0} nu a fost găsită. E scrisă corect?
+143	Extensia nu are nevoie de permisiuni speciale.
+144	Extensia poate: •
+145	Extensiile vin direct din Magazinul web Chrome și aparțin producătorilor lor (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Pagina nu a putut fi încărcată.
+147	Site-ul nu acceptă o conexiune securizată (HTTPS). Alții din aceeași rețea – de ex. pe un Wi-Fi public – ar putea vedea ce vezi și ce scrii aici.
+148	Citirea clipboardului
+149	Această adresă arată ca
+150	Acest fișier nu a putut fi citit
+151	Această pagină nu este criptată
+152	Acest site se află pe lista site-urilor periculoase
+153	Acest site se află pe o listă de site-uri de phishing cunoscute. Astfel de site-uri par adesea reale, dar vor să-ți fure parolele sau datele bancare.
+154	Acest site răspândește programe malware
+155	Această conexiune nu este criptată
+156	Acest videoclip nu poate fi detașat
+157	Diferență
+158	Descărcare
+159	Descărcare blocată: {0} răspândește programe malware cunoscute
+160	Descărcare eșuată: {0}
+161	Descărcare finalizată: {0}
+162	Descărcare pornită: {0}
+163	Deschide dosarul de descărcări
+164	Descărcări
+165	Descărcări (Ctrl+J)
+166	Scanează descărcările de viruși
+167	Caută în descărcări
+168	Gestionează descărcările
+169	Descărcările sunt verificate
+170	Rotește (°)
+171	Se rotește
+172	Rotație (°)
+173	După aceea vei fi deconectat peste tot.
+174	DuckDuckGo, Brave Search și Startpage nu-ți creează profiluri. Startpage afișează rezultate Google fără urmărire.
+175	Întunecat
+176	Aspect întunecat pentru orice site.
+177	Duplică
+178	Duplică (Ctrl+D)
+179	Efecte
+180	Shader propriu (GLSL)
+181	Imagine proprie
+182	Imagine proprie …
+183	Alege propria imagine de fundal
+184	Un flux începe cu un
+185	Îngheață
+186	Colorează
+187	Lipește
+188	Încadrează
+189	Activează
+190	Setări
+191	Setările nu au putut fi salvate:
+192	Adăugarea de elemente în meniul de clic dreapta
+193	Protecție Elektron · Detectarea dublurilor direct pe PC-ul tău
+194	Protecție Elektron · Liste de la Phishing.Database și URLhaus (abuse.ch)
+195	Elektron Studio (shadere și fluxuri)
+196	Elektron a oprit acest site pentru că se află pe o listă de site-uri de înșelătorie cunoscute.
+197	Elektron caută regulat versiuni noi.
+198	Recomandă Elektron
+199	Recomandat
+200	Elimină
+201	Elimină adaosurile de urmărire precum utm_, fbclid și gclid, sare peste redirecționările de urmărire Google și Facebook și deschide paginile AMP în original.
+202	Încarcă extensia despachetată (dosar cu manifest.json)
+203	Încarcă extensia despachetată …
+204	Ține minte decizia
+205	Instrumente pentru dezvoltatori
+206	Jocuri gratuite Epic
+207	Explică-mi asta simplu și în română:
+208	Explică-mi simplu și în română despre ce este acest site.
+209	Permite
+210	Descarcă din nou
+211	Încearcă din nou
+212	Construiește întâi o imagine – la „Ieșire” nu ajunge încă nimic.
+213	Adaugă extensie
+214	Extensii
+215	Extensiile vin din Magazinul web Chrome și funcționează în Elektron ca în Chrome. Unele extensii foarte complexe folosesc funcții Chrome care aici nu există – atunci funcționează doar parțial. Claude și ChatGPT le găsești și direct în bara laterală din stânga.
+216	Extensiile sunt actualizate
+217	Bara de extensii nu este disponibilă:
+218	Lipsește nodul „Ieșire”.
+219	Exportă
+220	Elimină limita de FPS
+221	Culoare
+222	Culoarea 1
+223	Culoarea 2
+224	Rotește nuanța
+225	Rezumă scurt acest site în română – punctele cele mai importante ca listă.
+226	Eroare:
+227	Eșuat
+228	Gata
+229	Întreabă
+230	Blochează cookie-urile terțe
+231	Cookie-uri terțe blocate
+232	Îngheață toate filele din fundal și scade prioritatea browserului, ca jocul tău să aibă întâietate. Filele cu sunet continuă să ruleze.
+233	Pentru canalele vocale Discord alege „Întreabă” sau „Permite”.
+234	Pentru clic dreapta → „Rezumă pagina” și „Explică”.
+235	Pentru această pagină nu există mod de citire
+236	TOT PC-UL
+237	Galaxie
+238	Gaming
+239	Gaming cu toate extrasele – sau un browser liniștit, normal. Se poate schimba oricând.
+240	Browserul de gaming s-a întors 🎮
+241	Modul gaming
+242	Modul gaming (Ctrl+Shift+G)
+243	Modul gaming activ – filele din fundal sunt înghețate, prioritatea browserului este redusă
+244	Modul gaming dezactivat
+245	Dezactivează modul gaming
+246	Activează modul gaming
+247	Arată integral
+248	Pagina întreagă
+249	Periculos
+250	Site periculos blocat
+251	Adresă falsă?
+252	Încărcat – prea mare pentru a fi memorat, alege din nou după repornire
+253	Șterge tot istoricul
+254	Redeschide fila închisă
+255	Salvat ✓
+256	Ieri
+257	Nu introduce aici parole, date bancare sau de card.
+258	Nu introduce aici parole, coduri sau date de card.
+259	Grilă
+260	Google creează profiluri – DuckDuckGo, Brave și Startpage nu
+261	Google Traducere
+262	Salvează graficul ca fișier
+263	Încarcă un fișier de grafic
+264	Dimensiune
+265	Dimensiune la salvare
+266	Bine de știut: Avast verifică pentru asta adresele site-urilor pe care le vizitezi. Poate: să citească și să modifice date pe toate site-urile.
+267	Noapte bună
+268	Bună seara
+269	Bună seara – e timpul pentru o sesiune.
+270	Bună dimineața
+271	Bună dimineața – gata de joc?
+272	Mod HTTPS · se dezactivează în GX Control la „Protecție”
+273	Ține browserul mic, ca jocul să primească toată puterea.
+274	Nu a funcționat
+275	Luminos
+276	Luminos / întunecat
+277	Luminozitate
+278	Luminozitate și contrast
+279	Astăzi
+280	Fundal
+281	Fundalul paginii de start
+282	Fundal setat ✓
+283	Arată o notă
+284	Adaugă
+285	Acasă
+286	Ascunde adresa IP în WebRTC
+287	Adresa IP ascunsă în WebRTC
+288	Înțeleg riscul – deschide totuși site-ul
+289	În fundal
+290	Arată în dosar
+291	Afișează în dosar
+292	Mereu deasupra
+293	Mereu deasupra (activ)
+294	Mereu deasupra (inactiv)
+295	Importul a eșuat:
+296	Importă
+297	Scrierea în clipboard
+298	Deschide într-o filă nouă
+299	Deschide într-o filă privată
+300	În ce limbă să vorbească Elektron cu tine? Steagurile arată țările în care se vorbește limba respectivă.
+301	Blocarea conținutului pe site-uri
+302	Instalează și începe
+303	Instalat
+304	Inversează
+305	Da
+306	Blochează JavaScript pe acest site
+307	Fiecare fișier descărcat este verificat cu Windows Defender.
+308	În fiecare zi
+309	Caută actualizări acum
+310	Repornește acum
+311	IA în bara laterală
+312	Caleidoscop
+313	Linkul a venit prin e-mail, SMS sau Discord? Atunci probabil a fost o înșelătorie.
+314	Cameră și microfon
+315	Nu există conexiune la internet. Verifică Wi-Fi-ul sau cablul de rețea.
+316	Nicio sugestie
+317	Nicio conexiune securizată
+318	Dă clic pe stea în bara de adrese sau apasă Ctrl+D.
+319	Dă clic pentru a separa
+320	Nu s-a putut încărca:
+321	Contrast
+322	Copiază
+323	Cerc
+324	Nu descărca nimic de aici.
+325	Încarcă
+326	Oprește încărcarea
+327	Pornește antivirusul dacă nu ești sigur.
+328	Performanță
+329	Placă grafică puternică
+330	Mod de citire
+331	Mod de citire (F9)
+332	Deschide modul de citire
+333	Marcaje
+334	Salvează marcajele și setările …
+335	Caută în marcaje
+336	Elimină marcajul (Ctrl+D)
+337	Marcaj eliminat
+338	Marcajele apar aici – dă clic pe stea în bara de adrese.
+339	Marcaj salvat
+340	Adaugă marcaj (Ctrl+D)
+341	Salvează marcajele și setările într-un fișier – de ex. pentru un PC nou.
+342	Copie de siguranță pentru marcaje și setări
+343	Arată bara de marcaje
+344	Ascunde bara de marcaje
+345	Șterge ultimele 24 de ore
+346	Șterge ultima oră
+347	Dacă browserul depășește limita, fila din fundal cea mai lacomă este înghețată.
+348	Limită
+349	Liniar
+350	Grosimea liniei
+351	Deschide linkul în ecran împărțit
+352	Deschide linkul într-o filă nouă
+353	Deschide linkul într-o filă privată
+354	Copiază linkul
+355	Link copiat – trimite-l prietenilor!
+356	Curăță linkurile
+357	Preîncarcă linkurile
+358	Linkurile sunt curățate
+359	Golește lista
+360	Lista e prea scurtă
+361	Adresele locale nu sunt permise
+362	Începe
+363	Încarcă mereu paginile criptat și avertizează când un site nu poate.
+364	Încarcă o imagine de pe internet
+365	Se încarcă …
+366	Șterge
+367	Șterge (Del)
+368	Dispozitive MIDI
+369	Tradu textul selectat sau pagini întregi.
+370	Mască
+371	Mască (luminos = vizibil)
+372	Securitate maximă
+373	Mai multă confidențialitate: acum cauți cu DuckDuckGo în loc de Google
+374	Meniu
+375	Microfon
+376	Când minimizezi browserul pentru joc, toate filele fără sunet se odihnesc.
+377	Minute
+378	Amestecă
+379	Caută cu Google
+380	Caută cu Google sau introdu o adresă
+381	Explică cu {0}
+382	Caută cu {0}
+383	Caută cu {0} sau introdu o adresă
+384	Caută cu {0}: „{1}”
+385	Mod
+386	Luni – vineri
+387	Înmulțire
+388	Model
+389	Caută actualizări
+390	Nume
+391	Nebuloasă
+392	Ecran
+393	Nu
+394	Neon
+395	Grilă neon
+396	Limitator de rețea
+397	Monitorizarea traficului de rețea
+398	Blocarea și modificarea traficului de rețea
+399	Nou
+400	Reîncarcă
+401	Reîncarcă (F5)
+402	Repornește și instalează
+403	Filă nouă
+404	Filă nouă (Ctrl+T)
+405	Filă privată nouă
+406	Imagine nouă, goală
+407	Repornire
+408	Negăsit
+409	Nesalvat
+410	Imposibil
+411	Nesigur
+412	Nu s-a găsit nimic
+413	Încă un pas: recomandăm aceste extensii pentru mai multă securitate. Alege ce vrei – le poți elimina oricând din „Extensii”.
+414	Încă o rundă? E miezul nopții.
+415	Încă nu există descărcări
+416	Încă nu sunt extensii instalate. Deschide Magazinul web Chrome și dă clic acolo pe „Adaugă”.
+417	Încă nu există marcaje
+418	Încă nu e introdusă o adresă de actualizare (GX Control → Actualizări)
+419	Caută nod …
+420	Normal
+421	Browser normal – elementele de gaming sunt ascunse
+422	Doar fișiere cu (gol = toate)
+423	Doar HTTPS
+424	Doar o dată pe zi
+425	Doar adrese http și https
+426	Folosește placa grafică dedicată (de ex. RTX) în locul celei integrate.
+427	Rezultatul următor (F3)
+428	Continuă fără extensii
+429	Opțional
+430	Opțiuni
+431	Închide panoul
+432	Manager de parole
+433	Protecție împotriva phishingului și a malware-ului
+434	Mărimea pixelului
+435	Plasmă (colorată, animată)
+436	Auroră
+437	Privat
+438	Motor de căutare privat
+439	Filă privată
+440	Filă privată – istoricul, cookie-urile și autentificările dispar imediat ce închizi toate filele private.
+441	Filă privată – fără istoric și cookie-uri după închidere
+442	Program securizat
+443	Modificarea setărilor proxy
+444	Verifică descărcările cu Windows Defender (indisponibil pe acest PC).
+445	Puncte
+446	Surse
+447	RAM {0} din {1}
+448	Limitator RAM
+449	Decalaj RGB (glitch)
+450	Zgomot / nori
+451	Clic dreapta pe o filă oferă de asemenea toate acestea.
+452	Clic dreapta sau Spațiu adaugă noduri. Trage din punctul din dreapta unui nod spre punctul din stânga celui următor. Tot ce ajunge la final în
+453	Clic dreapta sau Spațiu: adaugă nod · Trage fundalul: mută · Rotița mouse-ului: zoom · Del: șterge
+454	Retro
+455	Munți retro
+456	Prin Global Privacy Control spune fiecărui site că datele tale nu pot fi vândute sau partajate.
+457	Tablă de șah
+458	Malware blocat
+459	Dezactivează turbo-ul JavaScript (JIT) – cea mai frecventă țintă de atac a browserelor. Site-urile devin mai lente, unele jocuri din browser nu mai merg. Se aplică după repornire.
+460	Pune în repaus (eliberează RAM)
+461	Simplu
+462	Închide
+463	Închide (Esc)
+464	Acces rapid
+465	E deja ora 22 – mâine e școală/serviciu 😉
+466	Text mai mare
+467	Text mai mic
+468	Protecție
+469	Protecție pentru acest site (clic)
+470	Reactivează protecția pentru acest site
+471	Protecție pentru {0}
+472	Protecție împotriva amprentării
+473	Lista de protecție {0}:
+474	Alb-negru
+475	Fereastră plutitoare
+476	O zi bună
+477	Captură de ecran
+478	Captură de ecran (Ctrl+Shift+X) – clic dreapta: pagina întreagă
+479	Captură de ecran (pagina întreagă)
+480	Captură de ecran (zona vizibilă)
+481	Captura de ecran nu a reușit
+482	Captură copiată – lipește-o în Discord cu Ctrl+V
+483	Fă o captură de ecran
+484	Pagină
+485	Tradu pagina în română
+486	Uită site-ul la închidere (șterge cookie-urile)
+487	Imprimă pagina …
+488	Site-ul nu merge? Dezactivează protecția aici
+489	Rezumă pagina cu {0}
+490	Site inaccesibil
+491	Inspectează pagina
+492	Schimbă părțile
+493	Deschide bara laterală
+494	Raportul de aspect al previzualizării
+495	Secunde
+496	Serverul a răspuns cu eroarea {0}
+497	Shadere și imagini
+498	Conexiune securizată
+499	DNS securizat
+500	Securitate
+501	Verificare de securitate
+502	Copie de siguranță și restaurare
+503	Salvează copia …
+504	Copie de siguranță salvată
+505	Restaurează copia de siguranță
+506	Restaurează copia de siguranță …
+507	Zona vizibilă
+508	Cum funcționează
+509	Cum funcționează:
+510	Altele
+511	Salvează
+512	Salvarea a eșuat:
+513	Îți păstrează parolele în siguranță și le completează automat.
+514	Îți salvează parolele criptat și le completează automat pe site-uri. Gratuit, open source.
+515	Ecran împărțit
+516	Ecran împărțit (Ctrl+Shift+S)
+517	Ecran împărțit activ – trage linia de separare pentru ajustare
+518	Închide ecranul împărțit
+519	Închide ecranul împărțit (Ctrl+Shift+S)
+520	Limbă
+521	Caută limba sau țara …
+522	Limba Windows
+523	Limba Windows: {0}
+524	Restabilește implicitul
+525	Start
+526	Pagina de start (Alt+Home)
+527	Control
+528	Întinde
+529	Dungi
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T filă nouă · Ctrl+D marcaj · Ctrl+H istoric · F11 ecran complet
+537	Ctrl+Shift+G pornește modul gaming · Ctrl+T filă nouă · F11 ecran complet
+538	Studio
+539	Trepte
+540	Dezactivează sunetul
+541	Intensitate
+542	Interferență
+543	Se caută actualizări …
+544	Motor de căutare
+545	Sugestii de căutare când scrii în bara de adrese (sunt trimise motorului de căutare)
+546	Saturație
+547	Filă
+548	Fila s-a blocat – dă clic pentru reîncărcare
+549	Filă ca fereastră plutitoare
+550	Filă ca fereastră plutitoare (Ctrl+Shift+F)
+551	Închide fila
+552	Fila plutește acum deasupra tuturor ferestrelor
+553	Dezactivează sunetul filei
+554	Deschide fila
+555	File
+556	Închide filele din dreapta
+557	Restaurează filele
+558	Zile
+559	Tastă
+560	Comandă rapidă
+561	Părți
+562	Viteză
+563	Text
+564	Text (fragment):
+565	Titlu:
+566	Sunetul tuturor filelor
+567	Activează sunetul
+568	Verde toxic
+569	Transparență
+570	Twitch deschis – modul gaming este activ 🎮
+571	Ora (HH:MM)
+572	Ultraviolet
+573	Inversează
+574	Comută
+575	Adresă nevalidă
+576	Estompare
+577	La această adresă nu există nicio imagine (sfat: clic dreapta pe o imagine → „Copiază adresa imaginii”)
+578	Deschide necriptat
+579	Actualizare pregătită – repornește browserul
+580	Actualizarea extensiilor a eșuat
+581	Instalează actualizarea
+582	Instalează actualizarea și repornește
+583	Actualizarea {0} este pregătită
+584	Actualizarea {0} se descarcă în fundal …
+585	Adresa de actualizare (un dosar pe site-ul tău)
+586	Lipsește modulul de actualizare
+587	Căutarea actualizărilor a eșuat: {0}
+588	Actualizări
+589	Actualizările funcționează în versiunea instalată
+590	Interzis
+591	Mărește
+592	Micșorează
+593	Istoric
+594	Caută în istoric
+595	Decalaj
+596	Mută / zoom / rotește
+597	Criptează ce site-uri accesezi (DNS prin HTTPS cu Quad9 din Elveția) și blochează în plus adresele malware cunoscute.
+598	Versiune
+599	Versiunea {0} este actualizată.
+600	Versiunea {0} este pregătită – se instalează la următoarea pornire.
+601	Se descarcă versiunea {0} … {1} %
+602	Versiunea {0} · Chromium {1}
+603	Versiunea {0} · Încă nu e introdusă o adresă de actualizare.
+604	Versiunea {0} · Actualizările sunt disponibile în versiunea Windows instalată.
+605	Versiunea {0} · Actualizările vin automat prin Microsoft Store.
+606	Gestionează
+607	Detașează videoclipul
+608	Detașează videoclipul (imagine în imagine)
+609	Detașează videoclipul – imagine în imagine (Ctrl+Shift+P)
+610	Detașează videoclipurile automat
+611	Reclamele video sunt puse pe mut și sărite imediat, spațiile publicitare dispar.
+612	Vignetă
+613	Virus găsit în {0} – Windows Defender a eliminat fișierul
+614	Virus găsit – Windows Defender a eliminat fișierul
+615	Ecran complet
+616	De la
+617	De pe acest site au fost răspândiți viruși sau alte programe malițioase. Elektron i-a oprit înainte ca ceva să ajungă pe PC-ul tău.
+618	Înainte
+619	Înainte (Alt+→)
+620	Rezultatul anterior (Shift+F3)
+621	Sugestii
+622	Fagure
+623	Probabilitate (%)
+624	Avertizează și el despre site-uri periculoase. Lângă Malwarebytes de obicei nu e necesar – amândouă fac același lucru.
+625	Avertizează despre site-uri periculoase și phishing.
+626	Avertizare la adrese false
+627	Așteaptă
+628	Ce se întâmplă când un site vrea să-ți folosească camera.
+629	WebGL 2 nu este disponibil pe acest PC.
+630	Cameră web
+631	Controlul de la distanță al site-urilor (depanator)
+632	Site-urile te recunosc mai greu după PC-ul tău (canvas, numele plăcii grafice, nucleele CPU).
+633	Site-urile nu mai pot citi adresa ta IP locală prin tehnologia de video-chat – nici în spatele unui VPN.
+634	Când schimbi fila sau minimizezi browserul, videoclipul continuă într-o fereastră mică (imagine în imagine).
+635	Moliciune
+636	Alte marcaje
+637	Valuri
+638	Arată mai puțin
+639	Când modul gaming este activ
+640	Când modul gaming …
+641	Când ziua este
+642	Când ora este între
+643	Când fila activă conține
+644	Când pornește browserul
+645	Dacă vrei să mergi la {0}, folosește butonul de mai jos.
+646	Când se termină o descărcare
+647	Când se deschide o pagină
+648	Blocant de reclame și trackere
+649	Blocant de reclame
+650	Blocantul de reclame nu a putut fi încărcat:
+651	Firmele de publicitate nu te mai pot urmări de la un site la altul. Autentificarea, captcha și plățile funcționează în continuare.
+652	Reclame/trackere blocate: {0} · Cookie-uri de urmărire respinse: {1}
+653	Unelte
+654	Reactivează
+655	Restaurat: {0} marcaje noi și setările tale
+656	Restaurează …
+657	Repetă (dale)
+658	Bun venit
+659	Bun venit în Elektron
+660	Windows Defender nu a fost găsit
+661	Unghi
+662	Dacă limita e depășită, filele nefolosite de cel mai mult timp intră în repaus.
+663	Se instalează …
+664	Sigur ștergi tot istoricul?
+665	Sigur deschizi? Acest site este cunoscut ca periculos.
+666	Weekend
+667	Sari peste reclamele YouTube
+668	Afișează din nou dislike-urile sub videoclipurile YouTube.
+669	Rânduri
+670	Timp
+671	E timpul pentru o pauză! 🎮
+672	Timp expirat
+673	Timpul de încărcare a expirat
+674	Trage pentru ajustare · Dublu clic: 50/50
+675	Zoom
+676	Resetează zoomul
+677	Resetează zoomul (Ctrl+0)
+678	Aleatoriu
+679	Pentru test: butonul
+680	Treci la browserul de gaming
+681	Adaugă în dicționar
+682	Treci la browserul normal
+683	La ora
+684	Spre site-ul real: {0}
+685	Înapoi
+686	Înapoi (Alt+←)
+687	Înapoi la siguranță
+688	Înapoi în browser
+689	Adu înapoi în browser
+690	Înapoi la Google
+691	de pe un declanșator.
+692	, vezi sus. Imagini de pe internet: clic dreapta pe o imagine → „Copiază adresa imaginii” și lipește în nod.
+693	microfonul tău
+694	camera ta
+695	ecranul tău
+696	locația ta
+697	fișierul de marcaje nu a putut fi citit.
+698	clipboard
+699	fără limită
+700	nu este o copie de siguranță Elektron
+701	citire și modificare
+702	nepermis
+703	doar în versiunea instalată
+704	de ex. .exe sau .zip
+705	de ex. youtube.com
+706	{0} descărcări în curs – Ctrl+J
+707	{0} marcaje preluate din {1}.
+708	{0} cookie-uri de urmărire respinse
+709	{0} linkuri de urmărire dezamorsate
+710	{0} nu răspunde la timp.
+711	{0} a refuzat conexiunea.
+712	{0} este gata – niciun virus găsit
+713	{0} nu a putut fi încărcat.
+714	{0} nu a putut fi instalat. Verifică conexiunea la internet și încearcă din nou – sau instalează mai târziu din Meniu → Magazinul web Chrome.
+715	{0} vrea acces la {1}.
+716	Pornește {0}
+717	{0} din {1} funcții de protecție active.
+718	{0} a fost uitat – cookie-urile și datele site-ului au fost șterse
+719	{0} – inaccesibil
+720	· Auto
+721	· se verifică de viruși …
+722	· ✓ niciun virus (Windows Defender)
+723	Schimbă …
+724	Deschide băncile, Steam, Discord & co. mai bine direct din bara de adrese sau dintr-un marcaj.
+725	Nu deschide fișierele pe care le ai deja de pe acest site.
+726	Deschide
+727	La pornire deschide filele de data trecută – se încarcă abia când dai clic pe ele.
+728	Despre {0}
+729	Suprapunere
+730	Tradu
+731	Traduceri fără garanție – ai găsit o greșeală? Raporteaz-o pe GitHub, o corectăm cu plăcere.
+732	Sare peste segmentele sponsorizate din videoclipurile YouTube.
+733	– imagine în imagine
+734	– ecran împărțit
+735	– fila rămâne deasupra jocului
+736	– înghețată
+737	– privată
+738	– în repaus (clic pentru încărcare)
+739	– fereastră plutitoare (clic pentru afișare)
+740	– două file una lângă alta
+741	Semnal „Nu vinde” (GPC)
+742	Elimini „{0}”?
+743	„{0}” a fost încărcat.
+744	„{0}” a fost adăugat
+745	Adaugi „{0}” în Elektron?
+746	… este dezactivat
+747	… este activat
+748	← Pagina originală
+749	▶ Testează acum
+750	✓ Executat
+751	🎮 Gaming
