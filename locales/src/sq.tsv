@@ -1,0 +1,752 @@
+0	(blu) ose
+1	(vjollcë). Ndryshimet ruhen automatikisht dhe hyjnë në fuqi menjëherë.
+2	(e kuqe) – p.sh. “Kur hapet një faqe”. Lidh shigjetën e bardhë me
+3	1 shkarkim në vazhdim – Ctrl+J
+4	1080 × 1080 (katror)
+5	1080 × 1920 (celular)
+6	1920 × 1080 (Full HD)
+7	A (poshtë)
+8	Anulo
+9	U anulua
+10	Rrjedhat
+11	Rrjedha aktive
+12	Shto (shkëlqim)
+13	Adresa
+14	Adresa përmban
+15	Adresa, p.sh. roblox.com
+16	Adresa:
+17	Adresa: {0}
+18	Veprimet
+19	Mbyll skedën aktive
+20	Ngjyra theksuese
+21	Lexo dhe ndrysho të gjitha të dhënat në të gjitha faqet
+22	Të gjitha faqerojtësit
+23	Të gjitha faqerojtësit (Ctrl+Shift+O)
+24	Menaxho të gjitha faqerojtësit …
+25	Të gjitha cilësimet e mbrojtjes …
+26	Të gjitha funksionet e mbrojtjes janë aktive.
+27	Shkëput të gjitha lidhjet
+28	Përditëso të gjitha
+29	Shfaq të gjitha
+30	Çdo disa minuta
+31	Shfaq të {0}
+32	Përzgjidh të gjitha
+33	Të fshihet gjithçka dhe të fillohet nga e para?
+34	Gjithçka që mund të rregullosh në Elektron.
+35	Ruaj si imazh (PNG)
+36	Cakto si shfletues parazgjedhur …
+37	Cakto si sfond të faqes fillestare
+38	Hap si dritare lundruese
+39	Menaxho zgjerimet e tjera
+40	Mbyll skedat e tjera
+41	Animacion
+42	I animuar
+43	Lloji
+44	Kërko në faqe
+45	Kërko në faqe …
+46	Nuk ka asgjë për të bllokuar në këtë faqe
+47	Asnjë video nuk po luhet në këtë faqe
+48	Importo nga Chrome
+49	Importo nga Edge
+50	Importo nga Opera GX
+51	Hiq nga lista
+52	Mbush
+53	Dalja
+54	Shkrehësit
+55	Çaktivizo
+56	Prit
+57	Automatike
+58	Automatik
+59	Përditëso automatikisht
+60	B (lart)
+61	Lidhet sapo miu qëndron mbi një lidhje – më shpejt, por faqja e sheh adresën tënde IP para se të klikosh.
+62	Redakto
+63	Redakto …
+64	Kushtet
+65	Dil
+66	Kufizon gjerësinë e brezit të të gjitha skedave që ping-u të mbetet i qëndrueshëm gjatë lojës.
+67	Ngrij kur minimizohet
+68	Shembull
+69	Të ngarkohet shembulli? Rrjedhat e tua aktuale do të zëvendësohen.
+70	Të njohura
+71	Njoftimet
+72	Shfaq njoftime
+73	Leja
+74	Gati për të luajtur?
+75	Faqe mashtrimi u bllokua
+76	Lëvizja
+77	Imazhi
+78	Zgjidh imazhin …
+79	Mbaj imazhin
+80	Hap imazhin në skedë të re
+81	Imazhi është shumë i madh (maks. 25 MB)
+82	Imazhi nuk mund të ngarkohej
+83	Kopjo imazhin
+84	Ruaj imazhin …
+85	Imazh nga kompjuteri
+86	Adresa e imazhit (https://…)
+87	Shkruaj adresën e imazhit dhe shtyp “Ngarko”
+88	Imazhet
+89	Deri
+90	Të lutem shkruaj një adresë që fillon me https://
+91	Blloko
+92	Bllokon faqet e mashtrimit, malware-in, kurthet e abonimeve dhe mashtrimet me “mbështetje teknike”. Falas, pa llogari.
+93	Bllokon reklamat, gjurmuesit, dritaret kërcyese dhe banerat e cookie-ve – deri tani janë ndalur {0} kërkesa.
+94	Bllokon reklamat, gjurmuesit, dritaret kërcyese të reklamave dhe banerat e cookie-ve.
+95	Bllokon faqet e njohura të mashtrimit dhe faqet që përhapin viruse.
+96	Bllokon faqet e njohura të mashtrimit dhe faqet që përhapin viruse. Lista po ngarkohet …
+97	Bllokon {0} faqe të njohura mashtrimi dhe virusesh. Lista përditësohet çdo 6 orë.
+98	Kërkon një llogari falas Bitwarden. Mund të: lexojë dhe ndryshojë të dhënat në të gjitha faqet (për plotësim).
+99	Shfletuesi është i përditësuar
+100	Ngarkesa e shfletuesit
+101	Lojërat në shfletues punojnë pa V-Sync mbi shpejtësinë e rifreskimit. Mund të shkaktojë grisje të figurës.
+102	Stili i shfletuesit
+103	Të dhënat e shfletimit u fshinë
+104	Fshi tani të dhënat e shfletimit
+105	Fshi të dhënat e shfletimit
+106	Kufizuesi i CPU-së
+107	Përdor ChatGPT drejtpërdrejt në shfletues.
+108	Chrome Web Store nuk është i disponueshëm
+109	Hap Chrome Web Store
+110	Claude si zgjerim – ose thjesht nga shiriti anësor.
+111	Kodi
+112	Ekzekuto kod në faqet e internetit
+113	Komik / poster
+114	Fshi cookie-t dhe hyrjet kur del
+115	Lexo dhe ndrysho cookie-t
+116	Pastaj
+117	Mund të:
+118	Mund të: lexojë dhe ndryshojë të dhënat në të gjitha faqet (për kontroll dhe bllokim).
+119	Imazhi është shumë i madh (maks. 25 MB)
+120	Certifikata e sigurisë e {0} nuk është e besueshme.
+121	Certifikata e sigurisë e {0} është e pavlefshme.
+122	Ky nuk është imazh i vlefshëm
+123	Ky nuk është skedar rrjedhe.
+124	Ky nuk është skedar shader-i.
+125	Skedari u fshi ose u zhvendos
+126	të dhënat në
+127	Ndrysho cilësimet e privatësisë
+128	Patejdukshmëria
+129	Lexo dhe ndrysho faqerojtësit e tu
+130	Lojërat e tua
+131	Lexo dhe ndrysho historikun e shfletimit
+132	Lexo historikun e shfletimit dhe skedat e hapura
+133	Përcakto vendndodhjen tënde
+134	Shfletuesi për lojtarë. Chromium {0} · Electron {1}
+135	Historiku është bosh
+136	Dizajni
+137	Desktopi
+138	Detajet
+139	Dendësia
+140	Adresa ngjan në mënyrë mashtruese me faqen e vërtetë {0} – një truk tipik i mashtruesve. Shiko me kujdes: një shkronjë është ndërruar, zëvendësuar ose vjen nga një alfabet tjetër.
+141	Adresa duhet të fillojë me https://
+142	Adresa e {0} nuk u gjet. A është shkruar saktë?
+143	Zgjerimi nuk ka nevojë për leje të veçanta.
+144	Zgjerimi mund të: •
+145	Zgjerimet vijnë drejtpërdrejt nga Chrome Web Store dhe u përkasin krijuesve të tyre (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Faqja nuk mund të ngarkohej.
+147	Kjo faqe nuk mbështet lidhje të sigurt (HTTPS). Të tjerët në të njëjtin rrjet – p.sh. në Wi-Fi publik – mund të shohin çfarë shikon dhe shkruan këtu.
+148	Lexo kujtesën e fragmenteve
+149	Kjo adresë ngjan me
+150	Ky skedar nuk mund të lexohej
+151	Kjo faqe nuk është e enkriptuar
+152	Kjo faqe është në listën e faqeve të rrezikshme
+153	Kjo faqe është në një listë faqesh të njohura phishing. Faqe të tilla shpesh duken të vërteta, por duan të vjedhin fjalëkalimet ose të dhënat e tua bankare.
+154	Kjo faqe përhap malware
+155	Kjo lidhje nuk është e enkriptuar
+156	Kjo video nuk mund të shkëputet
+157	Diferenca
+158	Shkarko
+159	Shkarkimi u bllokua: {0} përhap malware të njohur
+160	Shkarkimi dështoi: {0}
+161	Shkarkimi përfundoi: {0}
+162	Shkarkimi filloi: {0}
+163	Hap dosjen e shkarkimeve
+164	Shkarkimet
+165	Shkarkimet (Ctrl+J)
+166	Kontrollo shkarkimet për viruse
+167	Kërko në shkarkime
+168	Menaxho shkarkimet
+169	Shkarkimet kontrollohen
+170	Rrotullo (°)
+171	Rrotullohet
+172	Rrotullimi (°)
+173	Pas kësaj do të jesh i dalë kudo.
+174	DuckDuckGo, Brave Search dhe Startpage nuk krijojnë profil për ty. Startpage shfaq rezultatet e Google pa gjurmim.
+175	E errët
+176	Pamje e errët për çdo faqe.
+177	Dyfisho
+178	Dyfisho (Ctrl+D)
+179	Efektet
+180	Shader i personalizuar (GLSL)
+181	Imazh i personalizuar
+182	Imazh i personalizuar …
+183	Zgjidh imazhin e sfondit
+184	Një rrjedhë fillon me një
+185	Ngrij
+186	Ngjyros
+187	Ngjit
+188	Përshtat
+189	Aktivizo
+190	Cilësimet
+191	Cilësimet nuk mund të ruheshin:
+192	Shto elemente në menynë e klikimit të djathtë
+193	Mbrojtja Elektron · Zbulim i adresave imituese drejtpërdrejt në kompjuterin tënd
+194	Mbrojtja Elektron · Lista nga Phishing.Database dhe URLhaus (abuse.ch)
+195	Elektron Studio (shader-a dhe rrjedha)
+196	Elektron e ndaloi këtë faqe sepse është në një listë faqesh të njohura mashtrimi.
+197	Elektron kontrollon rregullisht për versione të reja.
+198	Rekomando Elektron
+199	E rekomanduar
+200	Hiq
+201	Heq parametrat e gjurmimit si utm_, fbclid dhe gclid, anashkalon ridrejtuesit gjurmues të Google dhe Facebook dhe hap faqet AMP në formën origjinale.
+202	Ngarko zgjerim të papaketuar (dosje me manifest.json)
+203	Ngarko zgjerim të papaketuar …
+204	Mbaj mend vendimin
+205	Mjetet e zhvilluesit
+206	Lojëra falas nga Epic
+207	Të lutem ma shpjego thjesht, në shqip:
+208	Më shpjego thjesht, në shqip, për çfarë bëhet fjalë në këtë faqe.
+209	Lejo
+210	Shkarko përsëri
+211	Provo përsëri
+212	Krijo fillimisht një imazh – asgjë nuk arrin ende te “Dalja”.
+213	Shto zgjerimin
+214	Zgjerimet
+215	Zgjerimet vijnë nga Chrome Web Store dhe punojnë në Elektron si në Chrome. Disa zgjerime shumë të mëdha përdorin funksione të Chrome që nuk ekzistojnë këtu – atëherë punojnë vetëm pjesërisht. Claude dhe ChatGPT i gjen edhe drejtpërdrejt në shiritin anësor majtas.
+216	Zgjerimet janë të përditësuara
+217	Shiriti i zgjerimeve nuk është i disponueshëm:
+218	Mungon nyja “Dalja”.
+219	Eksporto
+220	Hiq kufirin e FPS
+221	Ngjyra
+222	Ngjyra 1
+223	Ngjyra 2
+224	Rrotullo nuancën
+225	Përmblidhe shkurt këtë faqe në shqip – pikat kryesore si listë.
+226	Gabim:
+227	Dështoi
+228	U krye
+229	Pyet
+230	Blloko cookie-t e palëve të treta
+231	Cookie-t e palëve të treta u bllokuan
+232	Ngrin të gjitha skedat në sfond dhe ul prioritetin e shfletuesit që loja jote të ketë përparësi. Skedat me zë vazhdojnë.
+233	Për kanalet zanore të Discord zgjidh “Pyet” ose “Lejo”.
+234	Për klikim të djathtë → “Përmblidh faqen” dhe “Shpjego”.
+235	Nuk ka modalitet leximi për këtë faqe
+236	I GJITHË KOMPJUTERI
+237	Galaktika
+238	Gaming
+239	Gaming me të gjitha shtesat – ose një shfletues i qetë dhe normal. Mund ta ndryshosh kurdo.
+240	Shfletuesi për lojtarë u kthye 🎮
+241	Modaliteti i lojës
+242	Modaliteti i lojës (Ctrl+Shift+G)
+243	Modaliteti i lojës aktiv – skedat në sfond u ngrinë, prioriteti i shfletuesit u ul
+244	Modaliteti i lojës joaktiv
+245	Çaktivizo modalitetin e lojës
+246	Aktivizo modalitetin e lojës
+247	Shfaq të plotë
+248	E gjithë faqja
+249	E rrezikshme
+250	Faqe e rrezikshme u bllokua
+251	Adresë e rreme?
+252	U ngarkua – shumë e madhe për t’u mbajtur mend, zgjidhe përsëri pas rinisjes
+253	Fshi të gjithë historikun
+254	Rihap skedën e mbyllur
+255	U ruajt ✓
+256	Dje
+257	Mos fut këtu fjalëkalime, të dhëna bankare ose të kartës.
+258	Mos fut këtu fjalëkalime, kode ose të dhëna të kartës.
+259	Rrjeta
+260	Google krijon profile – DuckDuckGo, Brave dhe Startpage jo
+261	Google Translate
+262	Ruaj grafikun si skedar
+263	Ngarko skedarin e grafikut
+264	Madhësia
+265	Madhësia gjatë ruajtjes
+266	Mirë ta dish: Avast kontrollon për këtë adresat e faqeve që viziton. Mund të: lexojë dhe ndryshojë të dhënat në të gjitha faqet.
+267	Natën e mirë
+268	Mirëmbrëma
+269	Mirëmbrëma – koha për një seancë.
+270	Mirëmëngjes
+271	Mirëmëngjes – gati për të luajtur?
+272	Modaliteti HTTPS · mund të çaktivizohet te GX Control nën “Mbrojtja”
+273	Mbaje shfletuesin të vogël që loja të marrë gjithë fuqinë.
+274	Kjo nuk funksionoi
+275	E çelët
+276	E çelët / e errët
+277	Ndriçimi
+278	Ndriçimi dhe kontrasti
+279	Sot
+280	Sfondi
+281	Sfondi i faqes fillestare
+282	Sfondi u caktua ✓
+283	Shfaq njoftimin
+284	Shto
+285	Kreu
+286	Fshih adresën IP nga WebRTC
+287	Adresa IP u fsheh nga WebRTC
+288	E kuptoj rrezikun – hape faqen gjithsesi
+289	Në sfond
+290	Shfaq në dosje
+291	Shfaq në dosje
+292	Gjithmonë sipër
+293	Gjithmonë sipër (aktiv)
+294	Gjithmonë sipër (joaktiv)
+295	Importimi dështoi:
+296	Importo
+297	Shkruaj në kujtesën e fragmenteve
+298	Hap në skedë të re
+299	Hap në skedë private
+300	Në cilën gjuhë duhet të flasë Elektron me ty? Flamujt tregojnë vendet ku flitet gjuha.
+301	Blloko përmbajtjen në faqet e internetit
+302	Instalo dhe fillo
+303	E instaluar
+304	Përmbys
+305	Po
+306	Blloko JavaScript në këtë faqe
+307	Çdo skedar i shkarkuar kontrollohet me Windows Defender.
+308	Çdo ditë
+309	Kontrollo tani për përditësime
+310	Rinis tani
+311	IA në shiritin anësor
+312	Kaleidoskop
+313	A erdhi lidhja me email, SMS ose Discord? Atëherë ka shumë gjasa të ishte mashtrim.
+314	Kamera dhe mikrofoni
+315	Nuk ka lidhje interneti. Kontrollo Wi-Fi ose kabllon e rrjetit.
+316	Asnjë sugjerim
+317	Nuk ka lidhje të sigurt
+318	Kliko yllin në shiritin e adresës ose shtyp Ctrl+D.
+319	Kliko për ta shkëputur
+320	Nuk mund të ngarkohej:
+321	Kontrasti
+322	Kopjo
+323	Rreth
+324	Mos shkarko asgjë nga këtu.
+325	Ngarko
+326	Ndalo ngarkimin
+327	Nëse nuk je i sigurt, nis antivirusin.
+328	Performanca
+329	Kartë grafike me performancë të lartë
+330	Modaliteti i leximit
+331	Modaliteti i leximit (F9)
+332	Hap modalitetin e leximit
+333	Faqerojtësit
+334	Bëj kopje rezervë të faqerojtësve dhe cilësimeve …
+335	Kërko në faqerojtës
+336	Hiq faqerojtësin (Ctrl+D)
+337	Faqerojtësi u hoq
+338	Faqerojtësit shfaqen këtu – kliko yllin në shiritin e adresës.
+339	Faqerojtësi u ruajt
+340	Shto faqerojtës (Ctrl+D)
+341	Ruaj faqerojtësit dhe cilësimet si skedar – p.sh. për një kompjuter të ri.
+342	Kopje rezervë e faqerojtësve dhe cilësimeve
+343	Shfaq shiritin e faqerojtësve
+344	Fshih shiritin e faqerojtësve
+345	Fshi 24 orët e fundit
+346	Fshi orën e fundit
+347	Nëse shfletuesi kalon kufirin, ngrihet skeda në sfond që konsumon më shumë.
+348	Kufiri
+349	Lineare
+350	Trashësia e vijës
+351	Hap lidhjen në ekran të ndarë
+352	Hap lidhjen në skedë të re
+353	Hap lidhjen në skedë private
+354	Kopjo lidhjen
+355	Lidhja u kopjua – dërgoja shokëve!
+356	Pastro lidhjet
+357	Parangarko lidhjet
+358	Lidhjet pastrohen
+359	Pastro listën
+360	Lista shumë e shkurtër
+361	Adresat lokale nuk lejohen
+362	Fillo
+363	Ngarkon faqet gjithmonë të enkriptuara dhe paralajmëron kur një faqe nuk e mbështet.
+364	Ngarkon një imazh nga interneti
+365	Po ngarkohet …
+366	Fshi
+367	Fshi (Del)
+368	Pajisjet MIDI
+369	Përkthe tekstin e zgjedhur ose faqe të tëra.
+370	Maska
+371	Maska (e çelët = e dukshme)
+372	Siguri maksimale
+373	Më shumë privatësi: tani kërkon me DuckDuckGo në vend të Google
+374	Menyja
+375	Mikrofoni
+376	Kur minimizon shfletuesin për lojë, të gjitha skedat pa zë pushojnë.
+377	Minuta
+378	Përzierje
+379	Kërko me Google
+380	Kërko me Google ose shkruaj adresën
+381	Shpjego me {0}
+382	Kërko me {0}
+383	Kërko me {0} ose shkruaj adresën
+384	Kërko me {0}: “{1}”
+385	Modaliteti
+386	E hënë – e premte
+387	Shumëzo
+388	Modeli
+389	Kontrollo për përditësime
+390	Emri
+391	Mjegullnaja
+392	Ekrani
+393	Jo
+394	Neon
+395	Rrjetë neoni
+396	Kufizuesi i rrjetit
+397	Monitoro trafikun e rrjetit
+398	Blloko dhe ndrysho trafikun e rrjetit
+399	E re
+400	Ringarko
+401	Ringarko (F5)
+402	Rinis dhe instalo
+403	Skedë e re
+404	Skedë e re (Ctrl+T)
+405	Skedë e re private
+406	Imazh i ri bosh
+407	Rinis
+408	Nuk u gjet
+409	Nuk u ruajt
+410	Nuk është e mundur
+411	Jo e sigurt
+412	Nuk u gjet asgjë
+413	Edhe një hap: të rekomandojmë këto zgjerime për më shumë siguri. Zgjidh çfarë dëshiron – mund t’i heqësh kurdo te “Zgjerimet”.
+414	Edhe një raund? Është mesnatë.
+415	Ende pa shkarkime
+416	Ende nuk ka zgjerime të instaluara. Hap Chrome Web Store dhe kliko atje “Shto”.
+417	Ende pa faqerojtës
+418	Ende nuk është futur adresë përditësimi (GX Control → Përditësimet)
+419	Kërko nyje …
+420	Normal
+421	Shfletues normal – elementet e lojës janë fshehur
+422	Vetëm skedarët me (bosh = të gjithë)
+423	Vetëm HTTPS
+424	Vetëm një herë në ditë
+425	Vetëm adresa http dhe https
+426	Përdor GPU-në e dedikuar (p.sh. RTX) në vend të grafikës së integruar.
+427	Rezultati tjetër (F3)
+428	Vazhdo pa zgjerime
+429	Opsionale
+430	Opsionet
+431	Mbyll panelin
+432	Menaxhuesi i fjalëkalimeve
+433	Mbrojtje nga phishing dhe malware
+434	Madhësia e pikselit
+435	Plazma (shumëngjyrëshe, e animuar)
+436	Aurora polare
+437	Private
+438	Motor kërkimi privat
+439	Skedë private
+440	Skedë private – historiku, cookie-t dhe hyrjet zhduken sapo mbyll të gjitha skedat private.
+441	Skedë private – pa historik dhe pa cookie pas mbylljes
+442	Aplikacioni u forcua
+443	Ndrysho cilësimet e proxy-t
+444	Kontrollon shkarkimet me Windows Defender (nuk është i disponueshëm në këtë kompjuter).
+445	Pika
+446	Burimet
+447	RAM {0} nga {1}
+448	Kufizuesi i RAM-it
+449	Zhvendosje RGB (glitch)
+450	Zhurmë / re
+451	Klikimi i djathtë mbi një skedë ofron gjithashtu të gjitha këto.
+452	Klikimi i djathtë ose hapësira shton nyje. Tërhiq nga pika djathtas e një nyjeje te pika majtas e nyjes tjetër. Gjithçka që në fund
+453	Klikim i djathtë ose hapësirë: shto nyje · Tërhiq sfondin: lëviz · Rrota e miut: zmadho · Del: fshi
+454	Retro
+455	Male retro
+456	Përmes Global Privacy Control i thotë çdo faqeje që të dhënat e tua nuk duhet të shiten ose ndahen.
+457	Fushë shahu
+458	Malware u bllokua
+459	Çaktivizon turbon e JavaScript (JIT) – sipërfaqja më e zakonshme e sulmit në shfletues. Faqet bëhen më të ngadalta dhe disa lojëra në shfletues nuk punojnë më. Hyn në fuqi pas rinisjes.
+460	Vëre në gjumë (liro RAM)
+461	E thjeshtë
+462	Mbyll
+463	Mbyll (Esc)
+464	Qasje e shpejtë
+465	Ora është tashmë 22:00 – nesër ka shkollë/punë 😉
+466	Tekst më i madh
+467	Tekst më i vogël
+468	Mbrojtja
+469	Mbrojtja për këtë faqe (kliko)
+470	Aktivizo përsëri mbrojtjen për këtë faqe
+471	Mbrojtja për {0}
+472	Mbrojtje nga gjurmët e gishtave
+473	Lista e mbrojtjes {0}:
+474	Bardh e zi
+475	Dritare lundruese
+476	Ditë të mbarë
+477	Pamje ekrani
+478	Pamje ekrani (Ctrl+Shift+X) – klikim i djathtë: e gjithë faqja
+479	Pamje ekrani (e gjithë faqja)
+480	Pamje ekrani (pjesa e dukshme)
+481	Pamja e ekranit nuk funksionoi
+482	Pamja e ekranit u kopjua – ngjite në Discord me Ctrl+V
+483	Bëj pamje ekrani
+484	Faqja
+485	Përkthe faqen në shqip
+486	Harro faqen kur mbyllet (fshi cookie-t)
+487	Printo faqen …
+488	Faqja nuk punon? Çaktivizo mbrojtjen këtu
+489	Përmblidh faqen me {0}
+490	Faqja nuk mund të arrihet
+491	Inspekto faqen
+492	Ndërro anët
+493	Hap shiritin anësor
+494	Raporti i pamjes paraprake
+495	Sekonda
+496	Serveri u përgjigj me gabimin {0}
+497	Shader-a dhe imazhe
+498	Lidhje e sigurt
+499	DNS i sigurt
+500	Siguria
+501	Kontrolli i sigurisë
+502	Kopje rezervë dhe rikthim
+503	Bëj kopje rezervë …
+504	Kopja rezervë u ruajt
+505	Rikthe kopjen rezervë
+506	Rikthe kopjen rezervë …
+507	Pjesa e dukshme
+508	Si funksionon
+509	Si funksionon:
+510	Të tjera
+511	Ruaj
+512	Ruajtja dështoi:
+513	Ruan fjalëkalimet e tua në mënyrë të sigurt dhe i plotëson automatikisht.
+514	Ruan fjalëkalimet e tua të enkriptuara dhe i plotëson automatikisht në faqet e internetit. Falas, me burim të hapur.
+515	Ekran i ndarë
+516	Ekran i ndarë (Ctrl+Shift+S)
+517	Ekrani i ndarë aktiv – tërhiq ndarësin për ta rregulluar
+518	Mbyll ekranin e ndarë
+519	Mbyll ekranin e ndarë (Ctrl+Shift+S)
+520	Gjuha
+521	Kërko gjuhën ose vendin …
+522	Gjuha e Windows
+523	Gjuha e Windows: {0}
+524	Rikthe parazgjedhjen
+525	Fillimi
+526	Faqja fillestare (Alt+Home)
+527	Kontrolli
+528	Shtrij
+529	Vija
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T skedë e re · Ctrl+D faqerojtës · Ctrl+H historiku · F11 ekran i plotë
+537	Ctrl+Shift+G nis modalitetin e lojës · Ctrl+T skedë e re · F11 ekran i plotë
+538	Studio
+539	Shtresat
+540	Hesht
+541	Forca
+542	Interferenca
+543	Po kontrollohet për përditësime …
+544	Motori i kërkimit
+545	Sugjerime kërkimi gjatë shkrimit në shiritin e adresës (dërgohen te motori i kërkimit)
+546	Ngopja
+547	Skeda
+548	Skeda u rrëzua – kliko për ta ringarkuar
+549	Skeda si dritare lundruese
+550	Skeda si dritare lundruese (Ctrl+Shift+F)
+551	Mbyll skedën
+552	Skeda tani qëndron mbi të gjitha dritaret
+553	Hesht skedën
+554	Hap skedën
+555	Skedat
+556	Mbyll skedat në të djathtë
+557	Rikthe skedat
+558	Ditët
+559	Tasti
+560	Shkurtore tastiere
+561	Segmentet
+562	Shpejtësia
+563	Teksti
+564	Teksti (fragment):
+565	Titulli:
+566	Zëri i të gjitha skedave
+567	Aktivizo zërin
+568	E gjelbër toksike
+569	Transparenca
+570	Twitch i hapur – modaliteti i lojës është aktiv 🎮
+571	Ora (OO:MM)
+572	Ultraviolet
+573	Përmbys
+574	Ndërro
+575	Adresë e pavlefshme
+576	Turbullim
+577	Nuk ka imazh në këtë adresë (këshillë: klikim i djathtë mbi imazh → “Kopjo adresën e imazhit”)
+578	Hap pa enkriptim
+579	Përditësimi gati – rinis shfletuesin
+580	Përditësimi i zgjerimeve dështoi
+581	Instalo përditësimin
+582	Instalo përditësimin dhe rinis
+583	Përditësimi {0} është gati
+584	Përditësimi {0} po shkarkohet në sfond …
+585	Adresa e përditësimit (dosje në faqen tënde)
+586	Mungon moduli i përditësimit
+587	Kontrolli i përditësimit dështoi: {0}
+588	Përditësimet
+589	Përditësimet punojnë në versionin e instaluar
+590	E ndaluar
+591	Zmadho
+592	Zvogëlo
+593	Historiku
+594	Kërko në historik
+595	Zhvendosja
+596	Lëviz / zmadho / rrotullo
+597	Enkripton se cilat faqe viziton (DNS përmes HTTPS me Quad9 nga Zvicra) dhe gjithashtu bllokon adresat e njohura të malware-it.
+598	Versioni
+599	Versioni {0} është i përditësuar.
+600	Versioni {0} është gati – do të instalohet në nisjen e ardhshme.
+601	Po shkarkohet versioni {0} … {1} %
+602	Versioni {0} · Chromium {1}
+603	Versioni {0} · Ende nuk është futur adresë përditësimi.
+604	Versioni {0} · Përditësimet janë të disponueshme në versionin e instaluar të Windows.
+605	Versioni {0} · Përditësimet vijnë automatikisht përmes Microsoft Store.
+606	Menaxho
+607	Shkëput videon
+608	Shkëput videon (figurë në figurë)
+609	Shkëput videon – figurë në figurë (Ctrl+Shift+P)
+610	Shkëput videot automatikisht
+611	Reklamat video heshten dhe anashkalohen menjëherë, hapësirat e reklamave zhduken.
+612	Vinjetë
+613	U gjet virus në {0} – Windows Defender e hoqi skedarin
+614	U gjet virus – Windows Defender e hoqi skedarin
+615	Ekran i plotë
+616	Nga
+617	Nga kjo faqe janë përhapur viruse ose programe të tjera dashakeqe. Elektron i ndaloi para se diçka të arrinte në kompjuterin tënd.
+618	Përpara
+619	Përpara (Alt+→)
+620	Rezultati i mëparshëm (Shift+F3)
+621	Sugjerimet
+622	Hoje bletësh
+623	Probabiliteti (%)
+624	Paralajmëron gjithashtu për faqe të rrezikshme. Bashkë me Malwarebytes zakonisht nuk nevojitet – të dyja bëjnë të njëjtën gjë.
+625	Paralajmëron për faqe të rrezikshme dhe phishing.
+626	Paralajmërim për adresa të rreme
+627	Prit
+628	Çfarë ndodh kur një faqe dëshiron të përdorë kamerën tënde.
+629	WebGL 2 nuk është i disponueshëm në këtë kompjuter.
+630	Kamera e internetit
+631	Kontrollo faqet nga larg (debugger)
+632	Faqet e internetit e kanë më të vështirë ta njohin kompjuterin tënd (canvas, emri i kartës grafike, bërthamat e CPU-së).
+633	Faqet nuk mund ta lexojnë më adresën tënde lokale IP përmes teknologjisë së bisedës video – as pas një VPN-je.
+634	Kur ndërron skedën ose minimizon shfletuesin, video vazhdon në një dritare të vogël (figurë në figurë).
+635	Butësia
+636	Faqerojtës të tjerë
+637	Valët
+638	Shfaq më pak
+639	Kur modaliteti i lojës është aktiv
+640	Kur modaliteti i lojës …
+641	Kur dita është
+642	Kur ora është ndërmjet
+643	Kur skeda aktive përmban
+644	Kur niset shfletuesi
+645	Nëse dëshiron të shkosh te {0}, përdor butonin më poshtë.
+646	Kur përfundon një shkarkim
+647	Kur hapet një faqe
+648	Bllokues reklamash dhe gjurmuesish
+649	Bllokues reklamash
+650	Bllokuesi i reklamave nuk mund të ngarkohej:
+651	Kompanitë e reklamave nuk mund të të ndjekin më nëpër faqe të ndryshme. Hyrja, captcha-t dhe pagesat vazhdojnë të punojnë.
+652	Reklama/gjurmues të bllokuar: {0} · Cookie gjurmimi të ndalura: {1}
+653	Mjetet
+654	Aktivizo përsëri
+655	U rikthyen: {0} faqerojtës të rinj dhe cilësimet e tua
+656	Rikthe …
+657	Përsërit (pllaka)
+658	Mirë se erdhe
+659	Mirë se erdhe në Elektron
+660	Windows Defender nuk u gjet
+661	Këndi
+662	Kur kalohet kufiri, skedat e papërdorura më gjatë vihen në gjumë.
+663	Po instalohet …
+664	Të fshihet vërtet i gjithë historiku?
+665	Ta hap vërtet? Kjo faqe njihet si e rrezikshme.
+666	Fundjava
+667	Anashkalo reklamat e YouTube
+668	Shfaq përsëri mospëlqimet poshtë videove në YouTube.
+669	Rreshtat
+670	Ora
+671	Koha për një pushim! 🎮
+672	Koha mbaroi
+673	Koha mbaroi gjatë ngarkimit
+674	Tërhiq për ta rregulluar · Klikim i dyfishtë: 50/50
+675	Zmadhimi
+676	Rivendos zmadhimin
+677	Rivendos zmadhimin (Ctrl+0)
+678	Rastësisht
+679	Për ta provuar: butoni
+680	Kalo te shfletuesi për lojtarë
+681	Shto në fjalor
+682	Kalo te shfletuesi normal
+683	Në një orë të caktuar
+684	Shko te faqja e vërtetë: {0}
+685	Prapa
+686	Prapa (Alt+←)
+687	Kthehu në siguri
+688	Kthehu te shfletuesi
+689	Ktheje në shfletues
+690	Kthehu te Google
+691	te një shkrehës.
+692	arrin, e sheh lart. Imazhe nga interneti: klikim i djathtë mbi imazh → “Kopjo adresën e imazhit” dhe ngjite në nyje.
+693	mikrofonin tënd
+694	kamerën tënde
+695	ekranin tënd
+696	vendndodhjen tënde
+697	skedari i faqerojtësve nuk mund të lexohej.
+698	kujtesën e fragmenteve
+699	pa kufi
+700	nuk është kopje rezervë e Elektron
+701	lexo dhe ndrysho
+702	nuk lejohet
+703	vetëm në versionin e instaluar
+704	p.sh. .exe ose .zip
+705	p.sh. youtube.com
+706	{0} shkarkime në vazhdim – Ctrl+J
+707	{0} faqerojtës u importuan nga {1}.
+708	{0} cookie gjurmimi të ndalura
+709	{0} lidhje gjurmimi të neutralizuara
+710	{0} nuk përgjigjet në kohë.
+711	{0} e refuzoi lidhjen.
+712	{0} përfundoi – nuk u gjet virus
+713	{0} nuk mund të ngarkohej.
+714	{0} nuk mund të instalohej. Kontrollo lidhjen e internetit dhe provo përsëri – ose instaloje më vonë përmes Menyja → Chrome Web Store.
+715	{0} dëshiron qasje te {1}.
+716	Nis {0}
+717	{0} nga {1} funksione mbrojtjeje aktive.
+718	{0} u harrua – cookie-t dhe të dhënat e faqes u fshinë
+719	{0} – nuk mund të arrihet
+720	· Auto
+721	· po kontrollohet për viruse …
+722	· ✓ pa virus (Windows Defender)
+723	Ndrysho …
+724	Më mirë hap bankat, Steam, Discord etj. drejtpërdrejt nga shiriti i adresës ose një faqerojtës.
+725	Mos hap skedarë që i ke marrë tashmë nga kjo faqe.
+726	Hap
+727	Në nisje hap skedat e herës së kaluar – ngarkohen vetëm kur klikon mbi to.
+728	Rreth {0}
+729	Mbivendosje
+730	Përkthe
+731	Përkthime pa garanci – gjete një gabim? Raportoje në GitHub dhe do ta përmirësojmë me kënaqësi.
+732	Anashkalon pjesët e sponsorizuara në videot e YouTube.
+733	– figurë në figurë
+734	– ekran i ndarë
+735	– skeda qëndron mbi lojën tënde
+736	– e ngrirë
+737	– private
+738	– në gjumë (kliko për ta ngarkuar)
+739	– dritare lundruese (kliko për ta shfaqur)
+740	– dy skeda pranë njëra-tjetrës
+741	Sinjali “Mos e shit” (GPC)
+742	Të hiqet “{0}”?
+743	“{0}” u ngarkua.
+744	“{0}” u shtua
+745	Të shtohet “{0}” në Elektron?
+746	… çaktivizohet
+747	… aktivizohet
+748	← Faqja origjinale
+749	▶ Testo tani
+750	✓ U eksportua
+751	🎮 Gaming
