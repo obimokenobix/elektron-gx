@@ -436,3 +436,5 @@ body.style-normal .pill-btn.on, body.style-normal #omnibox:focus-within { box-sh
 .btn-small { height: 30px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg-0, #111); color: var(--text); font: inherit; font-size: 12.5px; cursor: pointer; white-space: nowrap; }
 .btn-small:hover { border-color: var(--accent); }
 [dir=rtl] body, body[dir=rtl] { direction: rtl; }
+/* Zahlen mit Einheit (1,1 GB, 12 %) auch bei Rechts-nach-links-Sprachen in der gewohnten Reihenfolge */
+[dir=rtl] :is(#hud-cpu, #hud-ram, #m-ram, #m-cpu, #pc-cpu, #gpu-util, #o-ram, #o-cpu, #o-net, #sec-score, #zoom) { direction: ltr; unicode-bidi: isolate; }

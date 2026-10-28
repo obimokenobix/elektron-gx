@@ -81,7 +81,9 @@ function t(text) {
       p.order.forEach((idx, i) => { vals[idx] = m[i + 1]; });
       return p.out.replace(/\{(\d+)\}/g, (_, k) => {
         const v = vals[k];
-        return v === undefined ? '' : t(v); // Platzhalter wie „Gaming-Modus“ ggf. auch übersetzen
+        if (v === undefined) return '';
+        const out = t(v); // Platzhalter wie „Gaming-Modus“ ggf. auch übersetzen
+        return current.dir === 'rtl' && out ? '\u2068' + out + '\u2069' : out; // Werte bei RTL abtrennen
       });
     }
   }

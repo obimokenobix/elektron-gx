@@ -3078,6 +3078,7 @@ setTimeout(()=>{document.getElementById('f').src='http://localhost:8771/check'},
       }
       if (process.env.ELEKTRON_TEST === 'langpage') {
         openInternal('sprachen');
+        if (process.env.LANG_SWITCH) setTimeout(() => { setLanguage(process.env.LANG_SWITCH); togglePanel('gx'); }, 8000);
       }
       if (process.env.ELEKTRON_TEST === 'normal') {
         settings.style = 'gaming'; setStyle('normal'); createTab();

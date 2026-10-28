@@ -33,6 +33,8 @@ const { ipcRenderer, contextBridge } = require('electron');
   });
   patterns.sort((a, b) => b.len - a.len);
   const done = new Set(dict.values); // schon übersetzte Texte nicht nochmal anfassen
+  // Bei Rechts-nach-links-Sprachen eingesetzte Werte (Zahlen, Namen) abtrennen, damit „7,8 GB“ nicht durcheinandergerät
+  const iso = dict.dir === 'rtl' ? (v) => (v ? '\u2068' + v + '\u2069' : v) : (v) => v;
 
   function t(text, depth = 0) {
     const n = text.replace(/\s+/g, ' ').trim();
@@ -45,7 +47,7 @@ const { ipcRenderer, contextBridge } = require('electron');
       if (!m) continue;
       const vals = {};
       p.order.forEach((idx, i) => { vals[idx] = m[i + 1]; });
-      return p.out.replace(/\{(\d+)\}/g, (_, k) => { const v = vals[k] || ''; return t(v, depth + 1) || v; });
+      return p.out.replace(/\{(\d+)\}/g, (_, k) => { const v = vals[k] || ''; return iso(t(v, depth + 1) || v); });
     }
     return null;
   }
@@ -105,6 +107,7 @@ const { ipcRenderer, contextBridge } = require('electron');
       func: (pairs) => {
         const m = new Map(pairs);
         const tr = (s) => { const n = String(s == null ? '' : s).replace(/\s+/g, ' ').trim(); return m.has(n) ? m.get(n) : s; };
+        try { Object.defineProperty(window, '__elektronT', { value: tr }); } catch {}
         for (const name of ['alert', 'confirm', 'prompt']) {
           const orig = window[name];
           if (typeof orig !== 'function') continue;

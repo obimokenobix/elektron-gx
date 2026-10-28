@@ -65,14 +65,15 @@
     once: { title: 'Nur einmal pro Tag', category: 'Steuerung', color: C.ctl, inputs: IN, outputs: THEN, width: 190, params: [] }
   };
 
+  const tr = (x) => (typeof window.__elektronT === 'function' ? window.__elektronT(x) : x);
   const EXAMPLE = {
     nodes: [
       { id: 't1', type: 'on_page', x: 40, y: 60, params: { match: 'twitch.tv' } },
       { id: 'a1', type: 'gaming', x: 340, y: 60, params: { state: 'on' } },
-      { id: 'a2', type: 'notify', x: 600, y: 60, params: { text: 'Twitch offen – Gaming-Modus ist an 🎮' } },
+      { id: 'a2', type: 'notify', x: 600, y: 60, params: { text: tr('Twitch offen – Gaming-Modus ist an 🎮') } },
       { id: 't2', type: 'on_time', x: 40, y: 280, params: { time: '22:00', days: 'work' } },
       { id: 'c1', type: 'if_gaming', x: 300, y: 280, params: {} },
-      { id: 'a3', type: 'notify', x: 580, y: 260, params: { text: 'Schon 22 Uhr – morgen ist Schule/Arbeit 😉' } }
+      { id: 'a3', type: 'notify', x: 580, y: 260, params: { text: tr('Schon 22 Uhr – morgen ist Schule/Arbeit 😉') } }
     ],
     links: [
       { from: { node: 't1', port: 'then' }, to: { node: 'a1', port: 'in' } },
