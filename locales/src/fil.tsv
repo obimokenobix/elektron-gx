@@ -1,0 +1,752 @@
+0	(asul) o
+1	(lila). Awtomatikong nase-save ang mga pagbabago at agad na umiiral.
+2	(pula) – hal. “Kapag binuksan ang isang page”. Ikonekta ang puting arrow sa
+3	1 download ang tumatakbo – Ctrl+J
+4	1080 × 1080 (parisukat)
+5	1080 × 1920 (phone)
+6	1920 × 1080 (Full HD)
+7	A (ibaba)
+8	Kanselahin
+9	Kinansela
+10	Mga flow
+11	Aktibo ang mga flow
+12	Idagdag (liwanag)
+13	Address
+14	Naglalaman ang address ng
+15	Address, hal. roblox.com
+16	Address:
+17	Address: {0}
+18	Mga aksyon
+19	Isara ang aktibong tab
+20	Accent na kulay
+21	Basahin at baguhin ang lahat ng data sa lahat ng website
+22	Lahat ng bookmark
+23	Lahat ng bookmark (Ctrl+Shift+O)
+24	Pamahalaan ang lahat ng bookmark …
+25	Lahat ng setting ng proteksyon …
+26	Aktibo ang lahat ng proteksyon.
+27	Putulin ang lahat ng koneksyon
+28	I-update lahat
+29	Ipakita lahat
+30	Bawat ilang minuto
+31	Ipakita ang lahat ng {0}
+32	Piliin lahat
+33	Burahin lahat at magsimula ulit?
+34	Lahat ng puwede mong i-set sa Elektron.
+35	I-save bilang larawan (PNG)
+36	Gawing default na browser …
+37	Gawing background ng start page
+38	Buksan bilang lumulutang na window
+39	Pamahalaan ang ibang extension
+40	Isara ang ibang tab
+41	Animation
+42	May animation
+43	Uri
+44	Maghanap sa page
+45	Maghanap sa page …
+46	Walang kailangang i-block sa page na ito
+47	Walang video na tumutugtog sa page na ito
+48	Mag-import mula sa Chrome
+49	Mag-import mula sa Edge
+50	Mag-import mula sa Opera GX
+51	Alisin sa listahan
+52	Punuin
+53	Output
+54	Mga trigger
+55	I-off
+56	I-cut
+57	Awtomatiko
+58	Awtomatiko
+59	Awtomatikong i-update
+60	B (itaas)
+61	Kumokonekta na kapag nasa link pa lang ang mouse – mas mabilis, pero nakikita ng site ang IP address mo bago ka pa mag-click.
+62	I-edit
+63	I-edit …
+64	Mga kondisyon
+65	Lumabas
+66	Nililimitahan ang bandwidth ng lahat ng tab para manatiling stable ang ping mo habang naglalaro.
+67	I-freeze kapag naka-minimize
+68	Halimbawa
+69	I-load ang halimbawa? Papalitan ang kasalukuyan mong mga flow.
+70	Sikat
+71	Mga notification
+72	Ipakita ang mga notification
+73	Pahintulot
+74	Handa ka na bang maglaro?
+75	Na-block ang scam na site
+76	Galaw
+77	Larawan
+78	Pumili ng larawan …
+79	Panatilihin ang larawan
+80	Buksan ang larawan sa bagong tab
+81	Masyadong malaki ang larawan (max. 25 MB)
+82	Hindi ma-load ang larawan
+83	Kopyahin ang larawan
+84	I-save ang larawan …
+85	Larawan mula sa PC
+86	Address ng larawan (https://…)
+87	Ilagay ang address ng larawan at pindutin ang “I-load”
+88	Mga larawan
+89	Hanggang
+90	Maglagay ng address na nagsisimula sa https://
+91	I-block
+92	Bina-block ang mga scam na site, malware, subscription trap at pekeng tech support. Libre, walang account.
+93	Bina-block ang mga ad, tracker, pop-up at cookie banner – {0} request na ang napigilan.
+94	Bina-block ang mga ad, tracker, ad pop-up at cookie banner.
+95	Bina-block ang mga kilalang scam na site at site na nagkakalat ng virus.
+96	Bina-block ang mga kilalang scam na site at site na nagkakalat ng virus. Nilo-load ang listahan …
+97	Bina-block ang {0} kilalang scam at virus na site. Ina-update ang listahan bawat 6 na oras.
+98	Kailangan ng libreng Bitwarden account. Puwede: magbasa at magbago ng data sa lahat ng website (para mag-fill in).
+99	Updated ang browser
+100	Load ng browser
+101	Tumatakbo ang mga browser game nang walang V-Sync lampas sa refresh rate. Puwedeng magka-screen tearing.
+102	Estilo ng browser
+103	Nabura ang browsing data
+104	Burahin ang browsing data ngayon
+105	Burahin ang browsing data
+106	CPU limiter
+107	Gamitin ang ChatGPT nang direkta sa browser.
+108	Hindi available ang Chrome Web Store
+109	Buksan ang Chrome Web Store
+110	Claude bilang extension – o simple lang sa sidebar.
+111	Code
+112	Magpatakbo ng code sa mga website
+113	Komiks / poster
+114	Burahin ang cookies at login sa paglabas
+115	Basahin at baguhin ang cookies
+116	Pagkatapos
+117	Puwede:
+118	Puwede: magbasa at magbago ng data sa lahat ng website (para mag-check at mag-block).
+119	Masyadong malaki ang larawan (max. 25 MB)
+120	Hindi mapagkakatiwalaan ang security certificate ng {0}.
+121	Hindi valid ang security certificate ng {0}.
+122	Hindi ito valid na larawan
+123	Hindi ito flow file.
+124	Hindi ito shader file.
+125	Nabura o nailipat ang file
+126	Data sa
+127	Baguhin ang mga setting ng privacy
+128	Opacity
+129	Basahin at baguhin ang iyong mga bookmark
+130	Ang mga laro mo
+131	Basahin at baguhin ang iyong browsing history
+132	Basahin ang browsing history at mga bukas na tab
+133	Alamin ang iyong lokasyon
+134	Ang browser para sa mga gamer. Chromium {0} · Electron {1}
+135	Walang laman ang history
+136	Disenyo
+137	Desktop
+138	Mga detalye
+139	Density
+140	Nakakalitong kahawig ng address ang totoong site na {0} – karaniwang trick ng mga scammer. Tingnang mabuti: may isang letrang napagpalit, napalitan o galing sa ibang alpabeto.
+141	Dapat magsimula sa https:// ang address
+142	Hindi nakita ang address ng {0}. Tama ba ang spelling?
+143	Hindi kailangan ng extension ng espesyal na pahintulot.
+144	Kaya ng extension na: •
+145	Direktang galing sa Chrome Web Store ang mga extension at pag-aari ng mga gumawa nito (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Hindi ma-load ang page.
+147	Hindi sinusuportahan ng site ang secure na koneksyon (HTTPS). Puwedeng makita ng iba sa parehong network – hal. sa pampublikong Wi-Fi – ang tinitingnan at tina-type mo rito.
+148	Basahin ang clipboard
+149	Mukhang ganito ang address na ito:
+150	Hindi mabasa ang file na ito
+151	Hindi naka-encrypt ang page na ito
+152	Nasa listahan ng mapanganib na site ang site na ito
+153	Nasa listahan ng mga kilalang phishing site ang site na ito. Kadalasang mukhang totoo ang ganitong site, pero gusto nilang nakawin ang password o bank data mo.
+154	Nagkakalat ng malware ang site na ito
+155	Hindi naka-encrypt ang koneksyong ito
+156	Hindi mailalabas ang video na ito
+157	Difference
+158	Download
+159	Na-block ang download: nagkakalat ng kilalang malware ang {0}
+160	Nabigo ang download: {0}
+161	Tapos ang download: {0}
+162	Nagsimula ang download: {0}
+163	Buksan ang download folder
+164	Mga download
+165	Mga download (Ctrl+J)
+166	I-scan ang mga download para sa virus
+167	Maghanap sa mga download
+168	Pamahalaan ang mga download
+169	Sinusuri ang mga download
+170	I-rotate (°)
+171	Umiikot
+172	Pag-ikot (°)
+173	Pagkatapos nito, naka-log out ka na kahit saan.
+174	Hindi gumagawa ng profile mo ang DuckDuckGo, Brave Search at Startpage. Ipinapakita ng Startpage ang resulta ng Google nang walang tracking.
+175	Madilim
+176	Madilim na disenyo para sa bawat website.
+177	I-duplicate
+178	I-duplicate (Ctrl+D)
+179	Mga effect
+180	Sariling shader (GLSL)
+181	Sariling larawan
+182	Sariling larawan …
+183	Pumili ng sariling background na larawan
+184	Nagsisimula ang flow sa isang
+185	I-freeze
+186	Kulayan
+187	I-paste
+188	Ipagkasya
+189	I-on
+190	Mga setting
+191	Hindi ma-save ang mga setting:
+192	Magdagdag ng item sa right-click menu
+193	Proteksyon ng Elektron · Pagkilala sa mga pekeng site direkta sa PC mo
+194	Proteksyon ng Elektron · Mga listahan mula sa Phishing.Database at URLhaus (abuse.ch)
+195	Elektron Studio (mga shader at flow)
+196	Pinigilan ng Elektron ang site na ito dahil nasa listahan ito ng mga kilalang scam na site.
+197	Regular na naghahanap ang Elektron ng mga bagong bersyon.
+198	Irekomenda ang Elektron
+199	Inirerekomenda
+200	Alisin
+201	Inaalis ang mga tracking na dagdag tulad ng utm_, fbclid at gclid, nilalaktawan ang mga redirect tracker ng Google at Facebook, at binubuksan ang mga AMP page sa orihinal.
+202	Mag-load ng unpacked na extension (folder na may manifest.json)
+203	Mag-load ng unpacked na extension …
+204	Tandaan ang desisyon
+205	Mga tool ng developer
+206	Libreng laro sa Epic
+207	Pakipaliwanag ito nang simple at sa Filipino:
+208	Ipaliwanag nang simple at sa Filipino kung tungkol saan ang website na ito.
+209	Payagan
+210	I-download ulit
+211	Subukan ulit
+212	Gumawa muna ng larawan – wala pang dumarating sa “Output”.
+213	Magdagdag ng extension
+214	Mga extension
+215	Galing sa Chrome Web Store ang mga extension at gumagana sa Elektron gaya ng sa Chrome. May ilang napakalaking extension na gumagamit ng mga feature ng Chrome na wala rito – kaya bahagya lang silang gumagana. Makikita mo rin ang Claude at ChatGPT direkta sa sidebar sa kaliwa.
+216	Updated ang mga extension
+217	Hindi available ang extension bar:
+218	Nawawala ang node na “Output”.
+219	I-export
+220	Alisin ang FPS limit
+221	Kulay
+222	Kulay 1
+223	Kulay 2
+224	Paikutin ang hue
+225	Ibuod nang maikli ang website na ito sa Filipino – ang pinakamahahalagang punto bilang listahan.
+226	Error:
+227	Nabigo
+228	Tapos na
+229	Magtanong
+230	I-block ang third-party cookies
+231	Na-block ang third-party cookies
+232	Pinapa-freeze ang lahat ng background tab at ibinababa ang priority ng browser para mauna ang laro mo. Patuloy ang mga tab na may tunog.
+233	Para sa mga voice channel sa Discord, piliin ang “Magtanong” o “Payagan”.
+234	Para sa right-click → “Ibuod ang page” at “Ipaliwanag”.
+235	Walang reading mode para sa page na ito
+236	BUONG PC
+237	Galaxy
+238	Gaming
+239	Gaming na may lahat ng extra – o tahimik at normal na browser. Puwedeng palitan anumang oras.
+240	Bumalik na ang gaming browser 🎮
+241	Gaming mode
+242	Gaming mode (Ctrl+Shift+G)
+243	Naka-on ang gaming mode – naka-freeze ang mga background tab, ibinaba ang priority ng browser
+244	Naka-off ang gaming mode
+245	I-off ang gaming mode
+246	I-on ang gaming mode
+247	Ipakita nang buo
+248	Buong page
+249	Mapanganib
+250	Na-block ang mapanganib na site
+251	Pekeng address?
+252	Na-load – masyadong malaki para tandaan, pumili ulit pagkatapos mag-restart
+253	Burahin ang buong history
+254	Ibalik ang isinarang tab
+255	Na-save ✓
+256	Kahapon
+257	Huwag maglagay rito ng password, bank o card data.
+258	Huwag maglagay rito ng password, code o card data.
+259	Grid
+260	Gumagawa ng profile ang Google – hindi ang DuckDuckGo, Brave at Startpage
+261	Google Translate
+262	I-save ang graph bilang file
+263	Mag-load ng graph file
+264	Laki
+265	Laki kapag sine-save
+266	Mabuting malaman: sinusuri ng Avast ang address ng mga page na binibisita mo. Puwede: magbasa at magbago ng data sa lahat ng website.
+267	Magandang gabi
+268	Magandang gabi
+269	Magandang gabi – oras na para maglaro.
+270	Magandang umaga
+271	Magandang umaga – handa ka na bang maglaro?
+272	HTTPS mode · puwedeng i-off sa GX Control sa “Proteksyon”
+273	Panatilihing magaan ang browser para makuha ng laro mo ang buong lakas.
+274	Hindi gumana
+275	Maliwanag
+276	Maliwanag / madilim
+277	Liwanag
+278	Liwanag at contrast
+279	Ngayon
+280	Background
+281	Background ng start page
+282	Naitakda ang background ✓
+283	Ipakita ang paalala
+284	Idagdag
+285	Home
+286	Itago ang IP address sa WebRTC
+287	Nakatago ang IP address sa WebRTC
+288	Naiintindihan ko ang panganib – buksan pa rin ang site
+289	Sa background
+290	Ipakita sa folder
+291	Tingnan sa folder
+292	Laging nasa ibabaw
+293	Laging nasa ibabaw (on)
+294	Laging nasa ibabaw (off)
+295	Nabigo ang import:
+296	Mag-import
+297	Magsulat sa clipboard
+298	Buksan sa bagong tab
+299	Buksan sa private tab
+300	Anong wika ang gagamitin ng Elektron sa pakikipag-usap sa iyo? Ipinapakita ng mga bandila ang mga bansang gumagamit ng wika.
+301	Mag-block ng content sa mga website
+302	I-install at magsimula
+303	Naka-install
+304	Baligtarin ang kulay
+305	Oo
+306	I-block ang JavaScript sa site na ito
+307	Sinusuri ng Windows Defender ang bawat na-download na file.
+308	Araw-araw
+309	Maghanap ng update ngayon
+310	I-restart ngayon
+311	AI sa sidebar
+312	Kaleidoscope
+313	Dumating ba ang link sa email, SMS o Discord? Malamang scam iyon.
+314	Camera at mikropono
+315	Walang koneksyon sa internet. Tingnan ang Wi-Fi o network cable.
+316	Walang mungkahi
+317	Walang secure na koneksyon
+318	I-click ang bituin sa address bar o pindutin ang Ctrl+D.
+319	I-click para ihiwalay
+320	Hindi ma-load:
+321	Contrast
+322	Kopyahin
+323	Bilog
+324	Huwag mag-download ng kahit ano rito.
+325	I-load
+326	Ihinto ang pag-load
+327	Patakbuhin ang antivirus mo kung hindi ka sigurado.
+328	Performance
+329	Malakas na graphics card
+330	Reading mode
+331	Reading mode (F9)
+332	Buksan ang reading mode
+333	Mga bookmark
+334	I-back up ang mga bookmark at setting …
+335	Maghanap sa mga bookmark
+336	Alisin ang bookmark (Ctrl+D)
+337	Inalis ang bookmark
+338	Lalabas dito ang mga bookmark – i-click ang bituin sa address bar.
+339	Na-save ang bookmark
+340	Magdagdag ng bookmark (Ctrl+D)
+341	I-save ang mga bookmark at setting bilang file – hal. para sa bagong PC.
+342	I-back up ang mga bookmark at setting
+343	Ipakita ang bookmarks bar
+344	Itago ang bookmarks bar
+345	Burahin ang huling 24 na oras
+346	Burahin ang huling oras
+347	Kapag lumampas sa limit ang browser, pinapa-freeze ang pinakagutom na background tab.
+348	Limit
+349	Linear
+350	Kapal ng linya
+351	Buksan ang link sa split screen
+352	Buksan ang link sa bagong tab
+353	Buksan ang link sa private tab
+354	Kopyahin ang link
+355	Nakopya ang link – ipadala sa mga kaibigan mo!
+356	Linisin ang mga link
+357	I-preload ang mga link
+358	Nililinis ang mga link
+359	Alisan ng laman ang listahan
+360	Masyadong maikli ang listahan
+361	Hindi pinapayagan ang mga lokal na address
+362	Magsimula
+363	Laging naglo-load ng page nang naka-encrypt at nagbababala kapag hindi kaya ng site.
+364	Naglo-load ng larawan mula sa internet
+365	Nilo-load …
+366	Burahin
+367	Burahin (Del)
+368	Mga MIDI device
+369	Isalin ang napiling teksto o buong page.
+370	Mask
+371	Mask (maliwanag = nakikita)
+372	Pinakamataas na seguridad
+373	Mas pribado: DuckDuckGo na ang gamit mo sa paghahanap sa halip na Google
+374	Menu
+375	Mikropono
+376	Kapag mini-minimize mo ang browser para maglaro, nagpapahinga ang lahat ng tab na walang tunog.
+377	Minuto
+378	Paghaluin
+379	Maghanap sa Google
+380	Maghanap sa Google o maglagay ng address
+381	Ipaliwanag gamit ang {0}
+382	Maghanap gamit ang {0}
+383	Maghanap gamit ang {0} o maglagay ng address
+384	Maghanap gamit ang {0}: “{1}”
+385	Mode
+386	Lunes – Biyernes
+387	Multiply
+388	Pattern
+389	Maghanap ng update
+390	Pangalan
+391	Nebula
+392	Screen
+393	Hindi
+394	Neon
+395	Neon grid
+396	Network limiter
+397	Bantayan ang network traffic
+398	I-block at baguhin ang network traffic
+399	Bago
+400	I-reload
+401	I-reload (F5)
+402	I-restart at i-install
+403	Bagong tab
+404	Bagong tab (Ctrl+T)
+405	Bagong private tab
+406	Bagong blangkong larawan
+407	Restart
+408	Hindi nakita
+409	Hindi na-save
+410	Hindi posible
+411	Hindi secure
+412	Walang nakita
+413	Isang hakbang pa: inirerekomenda namin ang mga extension na ito para sa mas mataas na seguridad. Piliin ang gusto mo – puwede mo silang alisin anumang oras sa “Mga extension”.
+414	Isa pang round? Hatinggabi na.
+415	Wala pang download
+416	Wala pang naka-install na extension. Buksan ang Chrome Web Store at i-click doon ang “Idagdag”.
+417	Wala pang bookmark
+418	Wala pang nakalagay na update address (GX Control → Mga update)
+419	Maghanap ng node …
+420	Normal
+421	Normal na browser – nakatago ang mga gaming element
+422	Mga file lang na may (blangko = lahat)
+423	HTTPS lang
+424	Isang beses lang bawat araw
+425	Mga http at https address lang
+426	Ginagamit ang dedicated GPU (hal. RTX) sa halip na graphics ng processor.
+427	Susunod na tugma (F3)
+428	Magpatuloy nang walang extension
+429	Opsyonal
+430	Mga opsyon
+431	Isara ang panel
+432	Password manager
+433	Proteksyon laban sa phishing at malware
+434	Laki ng pixel
+435	Plasma (makulay, may animation)
+436	Aurora
+437	Pribado
+438	Pribadong search engine
+439	Private tab
+440	Private tab – nawawala ang history, cookies at login kapag isinara mo ang lahat ng private tab.
+441	Private tab – walang history at cookies pagkasara
+442	Pinatibay ang program
+443	Baguhin ang mga setting ng proxy
+444	Sinusuri ang mga download gamit ang Windows Defender (hindi available sa PC na ito).
+445	Mga tuldok
+446	Mga pinagmulan
+447	RAM {0} sa {1}
+448	RAM limiter
+449	RGB shift (glitch)
+450	Noise / ulap
+451	Iniaalok din ito lahat ng right-click sa isang tab.
+452	Nagdadagdag ng node ang right-click o Space. I-drag mula sa tuldok sa kanan ng isang node papunta sa tuldok sa kaliwa ng susunod. Lahat ng sa huli ay umaabot sa
+453	Right-click o Space: magdagdag ng node · I-drag ang background: ilipat · Mouse wheel: zoom · Del: burahin
+454	Retro
+455	Retro na bundok
+456	Sinasabihan ang bawat website sa pamamagitan ng Global Privacy Control na hindi puwedeng ibenta o ibahagi ang data mo.
+457	Chessboard
+458	Na-block ang malware
+459	Ino-off ang turbo ng JavaScript (JIT) – ang pinakakaraniwang target ng atake sa browser. Babagal ang mga website, at hindi na gagana ang ilang browser game. May bisa pagkatapos mag-restart.
+460	Patulugin (palayain ang RAM)
+461	Simple
+462	Isara
+463	Isara (Esc)
+464	Mabilis na access
+465	Alas-diyes na ng gabi – may pasok/trabaho bukas 😉
+466	Mas malaking teksto
+467	Mas maliit na teksto
+468	Proteksyon
+469	Proteksyon para sa site na ito (i-click)
+470	I-on ulit ang proteksyon para sa site na ito
+471	Proteksyon para sa {0}
+472	Proteksyon laban sa fingerprinting
+473	Listahan ng proteksyon {0}:
+474	Black and white
+475	Lumulutang na window
+476	Magandang araw
+477	Screenshot
+478	Screenshot (Ctrl+Shift+X) – right-click: buong page
+479	Screenshot (buong page)
+480	Screenshot (nakikitang bahagi)
+481	Hindi nagtagumpay ang screenshot
+482	Nakopya ang screenshot – i-paste sa Discord gamit ang Ctrl+V
+483	Kumuha ng screenshot
+484	Page
+485	Isalin ang page sa Filipino
+486	Kalimutan ang site kapag isinara (burahin ang cookies)
+487	I-print ang page …
+488	Hindi gumagana ang site? I-off dito ang proteksyon
+489	Ibuod ang page gamit ang {0}
+490	Hindi maabot ang site
+491	Siyasatin ang page
+492	Pagpalitin ang mga gilid
+493	Buksan ang sidebar
+494	Aspect ratio ng preview
+495	Segundo
+496	Sumagot ang server ng error na {0}
+497	Mga shader at larawan
+498	Secure na koneksyon
+499	Secure na DNS
+500	Seguridad
+501	Security check
+502	Backup at restore
+503	Mag-back up …
+504	Na-save ang backup
+505	I-restore ang backup
+506	I-restore ang backup …
+507	Nakikitang bahagi
+508	Paano ito gumagana
+509	Paano ito gumagana:
+510	Iba pa
+511	I-save
+512	Nabigo ang pag-save:
+513	Ligtas na sine-save ang mga password mo at awtomatikong ini-fill in.
+514	Sine-save nang naka-encrypt ang mga password mo at awtomatikong ini-fill in sa mga website. Libre, open source.
+515	Split screen
+516	Split screen (Ctrl+Shift+S)
+517	Naka-on ang split screen – i-drag ang divider para i-adjust
+518	Tapusin ang split screen
+519	Tapusin ang split screen (Ctrl+Shift+S)
+520	Wika
+521	Maghanap ng wika o bansa …
+522	Wika ng Windows
+523	Wika ng Windows: {0}
+524	Ibalik ang default
+525	Simula
+526	Start page (Alt+Home)
+527	Kontrol
+528	I-stretch
+529	Guhit
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T bagong tab · Ctrl+D bookmark · Ctrl+H history · F11 full screen
+537	Ctrl+Shift+G sinisimulan ang gaming mode · Ctrl+T bagong tab · F11 full screen
+538	Studio
+539	Mga antas
+540	I-mute
+541	Lakas
+542	Interference
+543	Naghahanap ng update …
+544	Search engine
+545	Mga mungkahi sa paghahanap habang nagta-type sa address bar (ipinapadala sa search engine)
+546	Saturation
+547	Tab
+548	Nag-crash ang tab – i-click para i-reload
+549	Tab bilang lumulutang na window
+550	Tab bilang lumulutang na window (Ctrl+Shift+F)
+551	Isara ang tab
+552	Lumulutang na ngayon ang tab sa ibabaw ng lahat ng window
+553	I-mute ang tab
+554	Buksan ang tab
+555	Mga tab
+556	Isara ang mga tab sa kanan
+557	Ibalik ang mga tab
+558	Mga araw
+559	Key
+560	Keyboard shortcut
+561	Mga bahagi
+562	Bilis
+563	Teksto
+564	Teksto (sipi):
+565	Pamagat:
+566	Tunog ng lahat ng tab
+567	I-unmute
+568	Toxic green
+569	Transparency
+570	Bukas ang Twitch – naka-on ang gaming mode 🎮
+571	Oras (HH:MM)
+572	Ultraviolet
+573	Baligtarin
+574	I-toggle
+575	Hindi valid na address
+576	Blur
+577	Walang larawan sa address na ito (tip: i-right-click ang isang larawan → “Kopyahin ang address ng larawan”)
+578	Buksan nang hindi naka-encrypt
+579	Handa na ang update – i-restart ang browser
+580	Nabigo ang pag-update ng mga extension
+581	I-install ang update
+582	I-install ang update at i-restart
+583	Handa na ang update {0}
+584	Dina-download ang update {0} sa background …
+585	Update address (folder sa website mo)
+586	Nawawala ang update module
+587	Nabigo ang paghahanap ng update: {0}
+588	Mga update
+589	Gumagana ang mga update sa naka-install na bersyon
+590	Bawal
+591	Mag-zoom in
+592	Mag-zoom out
+593	History
+594	Maghanap sa history
+595	Offset
+596	Ilipat / i-zoom / i-rotate
+597	Ini-encrypt kung aling mga site ang binubuksan mo (DNS over HTTPS gamit ang Quad9 mula sa Switzerland) at bina-block din ang mga kilalang malware address.
+598	Bersyon
+599	Updated ang bersyon {0}.
+600	Handa na ang bersyon {0} – mai-install sa susunod na pag-start.
+601	Dina-download ang bersyon {0} … {1} %
+602	Bersyon {0} · Chromium {1}
+603	Bersyon {0} · Wala pang nakalagay na update address.
+604	Bersyon {0} · May update sa naka-install na bersyon ng Windows.
+605	Bersyon {0} · Awtomatikong dumarating ang update sa Microsoft Store.
+606	Pamahalaan
+607	Ilabas ang video
+608	Ilabas ang video (picture-in-picture)
+609	Ilabas ang video – picture-in-picture (Ctrl+Shift+P)
+610	Awtomatikong ilabas ang mga video
+611	Mine-mute at agad nilalaktawan ang mga video ad, at nawawala ang mga ad space.
+612	Vignette
+613	May nakitang virus sa {0} – inalis ng Windows Defender ang file
+614	May nakitang virus – inalis ng Windows Defender ang file
+615	Full screen
+616	Mula
+617	Nagkalat ang site na ito ng mga virus o iba pang mapanganib na program. Pinigilan ng Elektron ang mga ito bago may makarating sa PC mo.
+618	Pasulong
+619	Pasulong (Alt+→)
+620	Nakaraang tugma (Shift+F3)
+621	Mga mungkahi
+622	Pulot-pukyutan
+623	Probabilidad (%)
+624	Nagbababala rin tungkol sa mapanganib na site. Kasama ng Malwarebytes, kadalasan hindi na kailangan – pareho lang ang ginagawa nila.
+625	Nagbababala tungkol sa mapanganib na site at phishing.
+626	Babala sa pekeng address
+627	Maghintay
+628	Ano ang nangyayari kapag gustong gamitin ng isang site ang camera mo.
+629	Hindi available ang WebGL 2 sa PC na ito.
+630	Webcam
+631	Kontrolin ang mga website mula sa malayo (debugger)
+632	Mas mahirap kang makilala ng mga website mula sa PC mo (canvas, pangalan ng graphics card, CPU core).
+633	Hindi na mababasa ng mga website ang lokal mong IP address sa pamamagitan ng video chat technology – kahit naka-VPN ka.
+634	Kapag lumipat ka ng tab o mini-minimize mo ang browser, tuloy ang video sa maliit na window (picture-in-picture).
+635	Lambot
+636	Iba pang bookmark
+637	Alon
+638	Magpakita ng mas kaunti
+639	Kapag naka-on ang gaming mode
+640	Kapag ang gaming mode ay …
+641	Kapag ang araw ay
+642	Kapag ang oras ay nasa pagitan ng
+643	Kapag naglalaman ang aktibong tab ng
+644	Kapag nagsimula ang browser
+645	Kung gusto mong pumunta sa {0}, gamitin ang button sa ibaba.
+646	Kapag natapos ang isang download
+647	Kapag binuksan ang isang page
+648	Ad at tracker blocker
+649	Ad blocker
+650	Hindi ma-load ang ad blocker:
+651	Hindi ka na masusundan ng mga kumpanya ng ad sa iba't ibang website. Gumagana pa rin ang login, captcha at pagbabayad.
+652	Na-block na ad/tracker: {0} · Naitabing tracking cookies: {1}
+653	Mga tool
+654	I-on ulit
+655	Naibalik: {0} bagong bookmark at ang mga setting mo
+656	I-restore …
+657	Ulitin (tiles)
+658	Maligayang pagdating
+659	Maligayang pagdating sa Elektron
+660	Hindi nakita ang Windows Defender
+661	Anggulo
+662	Kapag nalampasan ang limit, natutulog ang mga tab na pinakamatagal nang hindi ginagamit.
+663	Ini-install …
+664	Talaga bang buburahin ang buong history?
+665	Talaga bang bubuksan? Kilala ang site na ito bilang mapanganib.
+666	Weekend
+667	Laktawan ang mga ad sa YouTube
+668	Ipinapakita ulit ang mga dislike sa ilalim ng mga video sa YouTube.
+669	Mga hilera
+670	Oras
+671	Oras na para magpahinga! 🎮
+672	Timeout
+673	Nag-timeout habang naglo-load
+674	I-drag para i-adjust · Double-click: 50/50
+675	Zoom
+676	I-reset ang zoom
+677	I-reset ang zoom (Ctrl+0)
+678	Random
+679	Para subukan: ang button na
+680	Lumipat sa gaming browser
+681	Idagdag sa diksyunaryo
+682	Lumipat sa normal na browser
+683	Sa takdang oras
+684	Pumunta sa totoong site: {0}
+685	Bumalik
+686	Bumalik (Alt+←)
+687	Bumalik sa ligtas
+688	Bumalik sa browser
+689	Ibalik sa browser
+690	Bumalik sa Google
+691	sa isang trigger.
+692	, makikita mo sa itaas. Mga larawan mula sa internet: i-right-click ang larawan → “Kopyahin ang address ng larawan” at i-paste sa node.
+693	sa mikropono mo
+694	sa camera mo
+695	sa screen mo
+696	sa lokasyon mo
+697	hindi mabasa ang bookmarks file.
+698	sa clipboard
+699	walang limit
+700	hindi Elektron backup
+701	magbasa at magbago
+702	hindi pinapayagan
+703	sa naka-install na bersyon lang
+704	hal. .exe o .zip
+705	hal. youtube.com
+706	{0} download ang tumatakbo – Ctrl+J
+707	{0} bookmark ang kinuha mula sa {1}.
+708	{0} tracking cookie ang naitaboy
+709	{0} tracking link ang na-disarm
+710	Hindi sumasagot sa oras ang {0}.
+711	Tinanggihan ng {0} ang koneksyon.
+712	Tapos na ang {0} – walang nakitang virus
+713	Hindi ma-load ang {0}.
+714	Hindi ma-install ang {0}. Tingnan ang koneksyon mo sa internet at subukan ulit – o i-install mamaya sa Menu → Chrome Web Store.
+715	Gustong mag-access ng {0} {1}.
+716	Simulan ang {0}
+717	{0} sa {1} proteksyon ang aktibo.
+718	Kinalimutan ang {0} – nabura ang cookies at site data
+719	{0} – hindi maabot
+720	· Auto
+721	· sinusuri para sa virus …
+722	· ✓ walang virus (Windows Defender)
+723	Baguhin …
+724	Mas mabuting buksan ang mga bangko, Steam, Discord at iba pa nang direkta sa address bar o bookmark.
+725	Huwag buksan ang mga file na nakuha mo na mula sa site na ito.
+726	Buksan
+727	Sa pag-start, binubuksan ang mga tab mo mula sa huling beses – naglo-load lang sila kapag kini-click mo.
+728	Tungkol sa {0}
+729	Overlay
+730	Isalin
+731	Walang garantiya ang mga salin – may nakitang mali? I-report sa GitHub, aayusin namin.
+732	Nilalaktawan ang mga sponsored na bahagi sa mga video sa YouTube.
+733	– picture-in-picture
+734	– split screen
+735	– nananatili ang tab sa ibabaw ng laro mo
+736	– naka-freeze
+737	– pribado
+738	– natutulog (i-click para i-load)
+739	– lumulutang na window (i-click para ipakita)
+740	– dalawang tab na magkatabi
+741	Signal na “Huwag ibenta” (GPC)
+742	Alisin ang “{0}”?
+743	Na-load ang “{0}”.
+744	Naidagdag ang “{0}”
+745	Idagdag ang “{0}” sa Elektron?
+746	… ay na-off
+747	… ay na-on
+748	← Orihinal na page
+749	▶ Subukan ngayon
+750	✓ Naisagawa
+751	🎮 Gaming
