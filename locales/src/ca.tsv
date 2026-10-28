@@ -1,0 +1,752 @@
+0	(blau) o
+1	(lila). Els canvis es desen automàticament i s'apliquen de seguida.
+2	(vermell) – p. ex. «Quan s'obre una pàgina». Connecta la fletxa blanca amb
+3	1 baixada en curs – Ctrl+J
+4	1080 × 1080 (quadrat)
+5	1080 × 1920 (mòbil)
+6	1920 × 1080 (Full HD)
+7	A (a sota)
+8	Cancel·la
+9	Cancel·lat
+10	Fluxos
+11	Fluxos actius
+12	Suma (resplendor)
+13	Adreça
+14	L'adreça conté
+15	Adreça, p. ex. roblox.com
+16	Adreça:
+17	Adreça: {0}
+18	Accions
+19	Tanca la pestanya activa
+20	Color d'accent
+21	Llegir i canviar totes les dades de tots els llocs web
+22	Totes les adreces d'interès
+23	Totes les adreces d'interès (Ctrl+Shift+O)
+24	Gestiona totes les adreces d'interès …
+25	Tots els paràmetres de protecció …
+26	Totes les funcions de protecció estan actives.
+27	Talla totes les connexions
+28	Actualitza-ho tot
+29	Mostra-ho tot
+30	Cada pocs minuts
+31	Mostra'ls tots ({0})
+32	Selecciona-ho tot
+33	Vols esborrar-ho tot i tornar a començar?
+34	Tot el que pots configurar a Elektron.
+35	Desa com a imatge (PNG)
+36	Estableix com a navegador predeterminat …
+37	Estableix com a fons de la pàgina d'inici
+38	Obre com a finestra flotant
+39	Gestiona altres extensions
+40	Tanca les altres pestanyes
+41	Animació
+42	Animat
+43	Tipus
+44	Cerca a la pàgina
+45	Cerca a la pàgina …
+46	En aquesta pàgina no hi ha res a bloquejar
+47	En aquesta pàgina no s'està reproduint cap vídeo
+48	Importa de Chrome
+49	Importa d'Edge
+50	Importa d'Opera GX
+51	Elimina de la llista
+52	Omple
+53	Sortida
+54	Activadors
+55	Desactiva
+56	Retalla
+57	Automàtic
+58	Automàticament
+59	Actualitza automàticament
+60	B (a sobre)
+61	Estableix la connexió quan el ratolí ja és sobre un enllaç – més ràpid, però el lloc veu la teva adreça IP abans del clic.
+62	Edita
+63	Edita …
+64	Condicions
+65	Surt
+66	Limita l'amplada de banda de totes les pestanyes perquè el ping es mantingui estable mentre jugues.
+67	Congela en minimitzar
+68	Exemple
+69	Vols carregar l'exemple? Els teus fluxos actuals se substituiran.
+70	Populars
+71	Notificacions
+72	Mostra notificacions
+73	Permís
+74	A punt per jugar?
+75	S'ha bloquejat un lloc fraudulent
+76	Moviment
+77	Imatge
+78	Tria una imatge …
+79	Conserva la imatge
+80	Obre la imatge en una pestanya nova
+81	La imatge és massa gran (màx. 25 MB)
+82	No s'ha pogut carregar la imatge
+83	Copia la imatge
+84	Desa la imatge …
+85	Imatge de l'ordinador
+86	Adreça de la imatge (https://…)
+87	Escriu l'adreça de la imatge i prem «Carrega»
+88	Imatges
+89	Fins a
+90	Escriu una adreça que comenci per https://
+91	Bloqueja
+92	Bloqueja llocs fraudulents, programari maliciós, paranys de subscripció i estafes de fals suport tècnic. Gratuït, sense compte.
+93	Bloqueja anuncis, rastrejadors, finestres emergents i bàners de galetes – fins ara s'han aturat {0} sol·licituds.
+94	Bloqueja anuncis, rastrejadors, finestres emergents publicitàries i bàners de galetes.
+95	Bloqueja llocs fraudulents coneguts i llocs que escampen virus.
+96	Bloqueja llocs fraudulents coneguts i llocs que escampen virus. S'està carregant la llista …
+97	Bloqueja {0} llocs fraudulents i de virus coneguts. La llista s'actualitza cada 6 hores.
+98	Cal un compte gratuït de Bitwarden. Pot: llegir i canviar dades a tots els llocs web (per emplenar).
+99	El navegador està actualitzat
+100	Càrrega del navegador
+101	Els jocs del navegador funcionen sense V-Sync per sobre de la freqüència de refresc. Pot provocar esquinçament d'imatge.
+102	Estil del navegador
+103	S'han esborrat les dades de navegació
+104	Esborra ara les dades de navegació
+105	Esborra les dades de navegació
+106	Limitador de CPU
+107	Fes servir ChatGPT directament al navegador.
+108	Chrome Web Store no està disponible
+109	Obre Chrome Web Store
+110	Claude com a extensió – o simplement des de la barra lateral.
+111	Codi
+112	Executar codi a llocs web
+113	Còmic / pòster
+114	Esborra galetes i inicis de sessió en sortir
+115	Llegir i canviar galetes
+116	Llavors
+117	Pot:
+118	Pot: llegir i canviar dades a tots els llocs web (per comprovar i bloquejar).
+119	La imatge és massa gran (màx. 25 MB)
+120	El certificat de seguretat de {0} no és de confiança.
+121	El certificat de seguretat de {0} no és vàlid.
+122	No és una imatge vàlida
+123	No és un fitxer de flux.
+124	No és un fitxer d'ombrejador.
+125	El fitxer s'ha esborrat o mogut
+126	Dades a
+127	Canviar la configuració de privadesa
+128	Opacitat
+129	Llegir i canviar les teves adreces d'interès
+130	Els teus jocs
+131	Llegir i canviar el teu historial de navegació
+132	Llegir el teu historial de navegació i les pestanyes obertes
+133	Determinar la teva ubicació
+134	El navegador per a gamers. Chromium {0} · Electron {1}
+135	L'historial és buit
+136	Aparença
+137	Escriptori
+138	Detalls
+139	Densitat
+140	L'adreça s'assembla enganyosament al lloc real {0} – un truc típic dels estafadors. Mira-la bé: una lletra està canviada d'ordre, substituïda o prové d'un altre alfabet.
+141	L'adreça ha de començar per https://
+142	No s'ha trobat l'adreça de {0}. Està ben escrita?
+143	L'extensió no necessita permisos especials.
+144	L'extensió pot: •
+145	Les extensions provenen directament de Chrome Web Store i pertanyen als seus fabricants (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	No s'ha pogut carregar la pàgina.
+147	El lloc no admet una connexió segura (HTTPS). Altres persones de la mateixa xarxa – per exemple en una wifi pública – podrien veure el que mires i escrius aquí.
+148	Llegir el porta-retalls
+149	Aquesta adreça sembla
+150	No s'ha pogut llegir aquest fitxer
+151	Aquesta pàgina no està xifrada
+152	Aquest lloc és a la llista de llocs perillosos
+153	Aquest lloc és en una llista de llocs de pesca (phishing) coneguts. Aquests llocs sovint semblen reals, però volen robar-te les contrasenyes o les dades bancàries.
+154	Aquest lloc escampa programari maliciós
+155	Aquesta connexió no està xifrada
+156	Aquest vídeo no es pot desacoblar
+157	Diferència
+158	Baixada
+159	S'ha bloquejat la baixada: {0} escampa programari maliciós conegut
+160	La baixada ha fallat: {0}
+161	Baixada completada: {0}
+162	Baixada iniciada: {0}
+163	Obre la carpeta de baixades
+164	Baixades
+165	Baixades (Ctrl+J)
+166	Analitza les baixades per detectar virus
+167	Cerca a les baixades
+168	Gestiona les baixades
+169	S'estan comprovant les baixades
+170	Gira (°)
+171	Gira
+172	Rotació (°)
+173	Després hauràs tancat la sessió a tot arreu.
+174	DuckDuckGo, Brave Search i Startpage no creen perfils teus. Startpage mostra resultats de Google sense seguiment.
+175	Fosc
+176	Aparença fosca per a qualsevol lloc web.
+177	Duplica
+178	Duplica (Ctrl+D)
+179	Efectes
+180	Ombrejador propi (GLSL)
+181	Imatge pròpia
+182	Imatge pròpia …
+183	Tria una imatge de fons pròpia
+184	Un flux comença amb un
+185	Congela
+186	Acoloreix
+187	Enganxa
+188	Ajusta
+189	Activa
+190	Configuració
+191	No s'ha pogut desar la configuració:
+192	Afegir elements al menú del clic dret
+193	Protecció Elektron · Detecció de dobles directament al teu ordinador
+194	Protecció Elektron · Llistes de Phishing.Database i URLhaus (abuse.ch)
+195	Elektron Studio (ombrejadors i fluxos)
+196	Elektron ha aturat aquest lloc perquè és en una llista de llocs fraudulents coneguts.
+197	Elektron cerca noves versions regularment.
+198	Recomana Elektron
+199	Recomanat
+200	Elimina
+201	Elimina afegits de seguiment com utm_, fbclid i gclid, salta els redireccionadors de seguiment de Google i Facebook i obre les pàgines AMP en l'original.
+202	Carrega una extensió desempaquetada (carpeta amb manifest.json)
+203	Carrega una extensió desempaquetada …
+204	Recorda la decisió
+205	Eines per a desenvolupadors
+206	Jocs gratuïts d'Epic
+207	Explica-m'ho de manera senzilla i en català:
+208	Explica'm de manera senzilla i en català de què tracta aquest lloc web.
+209	Permet
+210	Torna a baixar
+211	Torna-ho a provar
+212	Primer crea una imatge – encara no arriba res a «Sortida».
+213	Afegeix una extensió
+214	Extensions
+215	Les extensions provenen de Chrome Web Store i funcionen a Elektron com a Chrome. Algunes extensions molt grans fan servir funcions de Chrome que aquí no hi són – aleshores només funcionen en part. Claude i ChatGPT també els trobaràs directament a la barra lateral esquerra.
+216	Les extensions estan actualitzades
+217	La barra d'extensions no està disponible:
+218	Falta el node «Sortida».
+219	Exporta
+220	Elimina el límit d'FPS
+221	Color
+222	Color 1
+223	Color 2
+224	Gira el to
+225	Resumeix breument aquest lloc web en català – els punts més importants en una llista.
+226	Error:
+227	Ha fallat
+228	Fet
+229	Pregunta
+230	Bloqueja les galetes de tercers
+231	Galetes de tercers bloquejades
+232	Congela totes les pestanyes en segon pla i redueix la prioritat del navegador perquè el teu joc tingui preferència. Les pestanyes amb so continuen funcionant.
+233	Per als canals de veu de Discord tria «Pregunta» o «Permet».
+234	Per al clic dret → «Resumeix la pàgina» i «Explica».
+235	Aquesta pàgina no té mode de lectura
+236	TOT L'ORDINADOR
+237	Galàxia
+238	Gaming
+239	Gaming amb tots els extres – o un navegador normal i tranquil. Es pot canviar en qualsevol moment.
+240	El navegador gamer ha tornat 🎮
+241	Mode gaming
+242	Mode gaming (Ctrl+Shift+G)
+243	Mode gaming activat – pestanyes en segon pla congelades, prioritat del navegador reduïda
+244	Mode gaming desactivat
+245	Desactiva el mode gaming
+246	Activa el mode gaming
+247	Mostra-ho sencer
+248	Pàgina sencera
+249	Perillós
+250	S'ha bloquejat un lloc perillós
+251	Adreça falsa?
+252	Carregat – massa gran per recordar-lo, torna a triar-lo després de reiniciar
+253	Esborra tot l'historial
+254	Restaura la pestanya tancada
+255	Desat ✓
+256	Ahir
+257	No hi escriguis contrasenyes ni dades bancàries o de targeta.
+258	No hi escriguis contrasenyes, codis ni dades de targeta.
+259	Quadrícula
+260	Google crea perfils – DuckDuckGo, Brave i Startpage no
+261	Google Traductor
+262	Desa el graf com a fitxer
+263	Carrega un fitxer de graf
+264	Mida
+265	Mida en desar
+266	Bo de saber: Avast comprova les adreces de les pàgines que visites. Pot: llegir i canviar dades a tots els llocs web.
+267	Bona nit
+268	Bon vespre
+269	Bon vespre – hora d'una sessió.
+270	Bon dia
+271	Bon dia – a punt per jugar?
+272	Mode HTTPS · es pot desactivar a GX Control a «Protecció»
+273	Mantén el navegador lleuger perquè el joc tingui tota la potència.
+274	No ha funcionat
+275	Clar
+276	Clar / fosc
+277	Brillantor
+278	Brillantor i contrast
+279	Avui
+280	Fons
+281	Fons de la pàgina d'inici
+282	Fons establert ✓
+283	Mostra una nota
+284	Afegeix
+285	Inici
+286	Amaga l'adreça IP a WebRTC
+287	Adreça IP amagada a WebRTC
+288	Entenc el risc – obre el lloc igualment
+289	En segon pla
+290	Mostra a la carpeta
+291	Mostra a la carpeta
+292	Sempre a sobre
+293	Sempre a sobre (activat)
+294	Sempre a sobre (desactivat)
+295	La importació ha fallat:
+296	Importa
+297	Escriure al porta-retalls
+298	Obre en una pestanya nova
+299	Obre en una pestanya privada
+300	En quina llengua vols que et parli Elektron? Les banderes mostren els països on es parla.
+301	Bloquejar contingut a llocs web
+302	Instal·la i comença
+303	Instal·lat
+304	Inverteix
+305	Sí
+306	Bloqueja JavaScript en aquest lloc
+307	Cada fitxer baixat es comprova amb Windows Defender.
+308	Cada dia
+309	Cerca actualitzacions ara
+310	Reinicia ara
+311	IA a la barra lateral
+312	Calidoscopi
+313	Et va arribar l'enllaç per correu, SMS o Discord? Llavors probablement era una estafa.
+314	Càmera i micròfon
+315	No hi ha connexió a Internet. Comprova la wifi o el cable de xarxa.
+316	No hi ha suggeriments
+317	Cap connexió segura
+318	Fes clic a l'estrella de la barra d'adreces o prem Ctrl+D.
+319	Fes clic per desacoblar
+320	No s'ha pogut carregar:
+321	Contrast
+322	Copia
+323	Cercle
+324	No baixis res d'aquí.
+325	Carrega
+326	Atura la càrrega
+327	Executa l'antivirus si no n'estàs segur.
+328	Rendiment
+329	Targeta gràfica potent
+330	Mode de lectura
+331	Mode de lectura (F9)
+332	Obre el mode de lectura
+333	Adreces d'interès
+334	Fes una còpia de les adreces d'interès i la configuració …
+335	Cerca a les adreces d'interès
+336	Elimina l'adreça d'interès (Ctrl+D)
+337	Adreça d'interès eliminada
+338	Les adreces d'interès apareixen aquí – fes clic a l'estrella de la barra d'adreces.
+339	Adreça d'interès desada
+340	Afegeix una adreça d'interès (Ctrl+D)
+341	Desa les adreces d'interès i la configuració en un fitxer – p. ex. per a un ordinador nou.
+342	Còpia de seguretat d'adreces d'interès i configuració
+343	Mostra la barra d'adreces d'interès
+344	Amaga la barra d'adreces d'interès
+345	Esborra les últimes 24 hores
+346	Esborra l'última hora
+347	Si el navegador supera el límit, es congela la pestanya en segon pla que més consumeix.
+348	Límit
+349	Lineal
+350	Gruix de línia
+351	Obre l'enllaç a la pantalla dividida
+352	Obre l'enllaç en una pestanya nova
+353	Obre l'enllaç en una pestanya privada
+354	Copia l'enllaç
+355	Enllaç copiat – envia'l als amics!
+356	Neteja els enllaços
+357	Precarrega els enllaços
+358	S'estan netejant els enllaços
+359	Buida la llista
+360	La llista és massa curta
+361	No es permeten adreces locals
+362	Som-hi
+363	Carrega sempre les pàgines xifrades i avisa quan un lloc no pot.
+364	Carrega una imatge d'Internet
+365	S'està carregant …
+366	Esborra
+367	Esborra (Supr)
+368	Dispositius MIDI
+369	Tradueix el text seleccionat o pàgines senceres.
+370	Màscara
+371	Màscara (clar = visible)
+372	Seguretat màxima
+373	Més privadesa: ara cerques amb DuckDuckGo en lloc de Google
+374	Menú
+375	Micròfon
+376	Si minimitzes el navegador per jugar, totes les pestanyes sense so reposen.
+377	Minuts
+378	Barreja
+379	Cerca amb Google
+380	Cerca amb Google o escriu una adreça
+381	Explica amb {0}
+382	Cerca amb {0}
+383	Cerca amb {0} o escriu una adreça
+384	Cerca amb {0}: «{1}»
+385	Mode
+386	Dilluns – divendres
+387	Multiplica
+388	Patró
+389	Cerca actualitzacions
+390	Nom
+391	Nebulosa
+392	Pantalla
+393	No
+394	Neó
+395	Quadrícula de neó
+396	Limitador de xarxa
+397	Observar el trànsit de xarxa
+398	Bloquejar i canviar el trànsit de xarxa
+399	Nou
+400	Torna a carregar
+401	Torna a carregar (F5)
+402	Reinicia i instal·la
+403	Pestanya nova
+404	Pestanya nova (Ctrl+T)
+405	Pestanya privada nova
+406	Imatge nova en blanc
+407	Reinici
+408	No s'ha trobat
+409	No desat
+410	No és possible
+411	No segur
+412	No s'ha trobat res
+413	Un pas més: et recomanem aquestes extensions per a més seguretat. Tria el que vulguis – les pots eliminar quan vulguis a «Extensions».
+414	Una altra ronda? És mitjanit.
+415	Encara no hi ha baixades
+416	Encara no hi ha extensions instal·lades. Obre Chrome Web Store i fes clic a «Afegeix» allà.
+417	Encara no hi ha adreces d'interès
+418	Encara no s'ha indicat l'adreça d'actualitzacions (GX Control → Actualitzacions)
+419	Cerca un node …
+420	Normal
+421	Navegador normal – els elements de gaming estan amagats
+422	Només fitxers amb (buit = tots)
+423	Només HTTPS
+424	Només un cop al dia
+425	Només adreces http i https
+426	Fa servir la GPU dedicada (p. ex. RTX) en lloc dels gràfics del processador.
+427	Coincidència següent (F3)
+428	Continua sense extensions
+429	Opcional
+430	Opcions
+431	Tanca el tauler
+432	Gestor de contrasenyes
+433	Protecció contra pesca i programari maliciós
+434	Mida del píxel
+435	Plasma (colorit, animat)
+436	Aurora boreal
+437	Privat
+438	Cercador privat
+439	Pestanya privada
+440	Pestanya privada – l'historial, les galetes i els inicis de sessió desapareixen quan tanques totes les pestanyes privades.
+441	Pestanya privada – sense historial ni galetes després de tancar-la
+442	Programa reforçat
+443	Canviar la configuració del servidor intermediari
+444	Comprova les baixades amb Windows Defender (no disponible en aquest ordinador).
+445	Punts
+446	Fonts
+447	RAM {0} de {1}
+448	Limitador de RAM
+449	Desplaçament RGB (glitch)
+450	Soroll / núvols
+451	El clic dret sobre una pestanya també ofereix tot això.
+452	El clic dret o l'espai afegeixen nodes. Arrossega des del punt dret d'un node fins al punt esquerre del següent. Tot el que finalment arriba a
+453	Clic dret o espai: afegeix node · Arrossega el fons: mou · Roda del ratolí: zoom · Supr: esborra
+454	Retro
+455	Muntanyes retro
+456	Comunica a cada lloc web mitjançant Global Privacy Control que les teves dades no es poden vendre ni compartir.
+457	Tauler d'escacs
+458	S'ha bloquejat programari maliciós
+459	Desactiva el turbo de JavaScript (JIT) – la superfície d'atac més habitual dels navegadors. Els llocs web són més lents i alguns jocs del navegador deixen de funcionar. S'aplica després de reiniciar.
+460	Posa en repòs (allibera RAM)
+461	Senzill
+462	Tanca
+463	Tanca (Esc)
+464	Accés ràpid
+465	Ja són les 22 h – demà hi ha escola/feina 😉
+466	Lletra més gran
+467	Lletra més petita
+468	Protecció
+469	Protecció per a aquest lloc (fes clic)
+470	Torna a activar la protecció per a aquest lloc
+471	Protecció per a {0}
+472	Protecció contra l'empremta digital
+473	Llista de protecció {0}:
+474	Blanc i negre
+475	Finestra flotant
+476	Bon dia
+477	Captura de pantalla
+478	Captura de pantalla (Ctrl+Shift+X) – clic dret: pàgina sencera
+479	Captura de pantalla (pàgina sencera)
+480	Captura de pantalla (àrea visible)
+481	La captura de pantalla ha fallat
+482	Captura copiada – enganxa-la a Discord amb Ctrl+V
+483	Fes una captura de pantalla
+484	Pàgina
+485	Tradueix la pàgina al català
+486	Oblida el lloc en tancar (esborra les galetes)
+487	Imprimeix la pàgina …
+488	El lloc no funciona? Desactiva la protecció aquí
+489	Resumeix la pàgina amb {0}
+490	No es pot accedir al lloc
+491	Inspecciona la pàgina
+492	Intercanvia els costats
+493	Obre la barra lateral
+494	Relació d'aspecte de la previsualització
+495	Segons
+496	El servidor ha respost amb l'error {0}
+497	Ombrejadors i imatges
+498	Connexió segura
+499	DNS segur
+500	Seguretat
+501	Comprovació de seguretat
+502	Còpia de seguretat i restauració
+503	Fes una còpia …
+504	Còpia de seguretat desada
+505	Restaura la còpia de seguretat
+506	Restaura la còpia de seguretat …
+507	Àrea visible
+508	Com funciona
+509	Com funciona:
+510	Altres
+511	Desa
+512	No s'ha pogut desar:
+513	Desa les teves contrasenyes de manera segura i les emplena automàticament.
+514	Desa les teves contrasenyes xifrades i les emplena automàticament als llocs web. Gratuït, codi obert.
+515	Pantalla dividida
+516	Pantalla dividida (Ctrl+Shift+S)
+517	Pantalla dividida activada – arrossega la línia divisòria per ajustar-la
+518	Surt de la pantalla dividida
+519	Surt de la pantalla dividida (Ctrl+Shift+S)
+520	Llengua
+521	Cerca una llengua o un país …
+522	Llengua de Windows
+523	Llengua de Windows: {0}
+524	Restaura els valors predeterminats
+525	Inici
+526	Pàgina d'inici (Alt+Inici)
+527	Control
+528	Estira
+529	Ratlles
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T pestanya nova · Ctrl+D adreça d'interès · Ctrl+H historial · F11 pantalla completa
+537	Ctrl+Shift+G inicia el mode gaming · Ctrl+T pestanya nova · F11 pantalla completa
+538	Studio
+539	Nivells
+540	Silencia
+541	Intensitat
+542	Interferència
+543	S'estan cercant actualitzacions …
+544	Cercador
+545	Suggeriments de cerca en escriure a la barra d'adreces (s'envien al cercador)
+546	Saturació
+547	Pestanya
+548	La pestanya ha fallat – fes clic per tornar-la a carregar
+549	Pestanya com a finestra flotant
+550	Pestanya com a finestra flotant (Ctrl+Shift+F)
+551	Tanca la pestanya
+552	La pestanya ara sura per sobre de totes les finestres
+553	Silencia la pestanya
+554	Obre la pestanya
+555	Pestanyes
+556	Tanca les pestanyes de la dreta
+557	Restaura les pestanyes
+558	Dies
+559	Tecla
+560	Drecera de teclat
+561	Parts
+562	Velocitat
+563	Text
+564	Text (extracte):
+565	Títol:
+566	So de totes les pestanyes
+567	Activa el so
+568	Verd tòxic
+569	Transparència
+570	Twitch obert – el mode gaming està activat 🎮
+571	Hora (HH:MM)
+572	Ultraviolat
+573	Inverteix
+574	Commuta
+575	Adreça no vàlida
+576	Desenfocament
+577	En aquesta adreça no hi ha cap imatge (consell: clic dret sobre una imatge → «Copia l'adreça de la imatge»)
+578	Obre sense xifrar
+579	Actualització a punt – reinicia el navegador
+580	L'actualització de les extensions ha fallat
+581	Instal·la l'actualització
+582	Instal·la l'actualització i reinicia
+583	L'actualització {0} està a punt
+584	S'està baixant l'actualització {0} en segon pla …
+585	Adreça d'actualitzacions (una carpeta al teu lloc web)
+586	Falta el mòdul d'actualització
+587	La cerca d'actualitzacions ha fallat: {0}
+588	Actualitzacions
+589	Les actualitzacions funcionen a la versió instal·lada
+590	Prohibit
+591	Amplia
+592	Redueix
+593	Historial
+594	Cerca a l'historial
+595	Desplaçament
+596	Mou / zoom / gira
+597	Xifra quines pàgines visites (DNS sobre HTTPS amb Quad9 des de Suïssa) i, a més, bloqueja adreces de programari maliciós conegudes.
+598	Versió
+599	La versió {0} està actualitzada.
+600	La versió {0} està a punt – s'instal·larà en el proper inici.
+601	S'està baixant la versió {0} … {1} %
+602	Versió {0} · Chromium {1}
+603	Versió {0} · Encara no s'ha indicat l'adreça d'actualitzacions.
+604	Versió {0} · Hi ha actualitzacions a la versió de Windows instal·lada.
+605	Versió {0} · Les actualitzacions arriben automàticament per Microsoft Store.
+606	Gestiona
+607	Desacobla el vídeo
+608	Desacobla el vídeo (imatge en imatge)
+609	Desacobla el vídeo – imatge en imatge (Ctrl+Shift+P)
+610	Desacobla els vídeos automàticament
+611	Els anuncis de vídeo se silencien i se salten de seguida, i els espais publicitaris desapareixen.
+612	Vinyeta
+613	S'ha trobat un virus a {0} – Windows Defender ha eliminat el fitxer
+614	S'ha trobat un virus – Windows Defender ha eliminat el fitxer
+615	Pantalla completa
+616	Des de
+617	Des d'aquest lloc s'han escampat virus o altres programes maliciosos. Elektron els ha aturat abans que res arribés al teu ordinador.
+618	Endavant
+619	Endavant (Alt+→)
+620	Coincidència anterior (Shift+F3)
+621	Suggeriments
+622	Bresca
+623	Probabilitat (%)
+624	També avisa de llocs perillosos. Al costat de Malwarebytes normalment no cal – tots dos fan el mateix.
+625	Avisa de llocs perillosos i pesca.
+626	Avís d'adreces falses
+627	Espera
+628	Què passa quan un lloc vol fer servir la teva càmera.
+629	WebGL 2 no està disponible en aquest ordinador.
+630	Càmera web
+631	Controlar remotament llocs web (depurador)
+632	Els llocs web et reconeixen amb més dificultat pel teu ordinador (canvas, nom de la targeta gràfica, nuclis de CPU).
+633	Els llocs web ja no poden llegir la teva adreça IP local amb la tecnologia de videotrucades – ni tan sols darrere d'una VPN.
+634	Si canvies de pestanya o minimitzes el navegador, el vídeo continua en una finestra petita (imatge en imatge).
+635	Suavitat
+636	Altres adreces d'interès
+637	Ones
+638	Mostra'n menys
+639	Quan el mode gaming està activat
+640	Quan el mode gaming …
+641	Quan el dia és
+642	Quan l'hora és entre
+643	Quan la pestanya activa conté
+644	Quan s'inicia el navegador
+645	Si vols anar a {0}, fes servir el botó de sota.
+646	Quan acaba una baixada
+647	Quan s'obre una pàgina
+648	Bloquejador d'anuncis i rastrejadors
+649	Bloquejador d'anuncis
+650	No s'ha pogut carregar el bloquejador d'anuncis:
+651	Les empreses de publicitat ja no et poden seguir entre diferents llocs web. L'inici de sessió, els captcha i els pagaments continuen funcionant.
+652	Anuncis/rastrejadors bloquejats: {0} · Galetes de seguiment rebutjades: {1}
+653	Eines
+654	Torna a activar
+655	Restaurat: {0} adreces d'interès noves i la teva configuració
+656	Restaura …
+657	Repeteix (mosaic)
+658	Benvingut
+659	Benvingut a Elektron
+660	No s'ha trobat Windows Defender
+661	Angle
+662	Si se supera el límit, les pestanyes que fa més temps que no es fan servir s'adormen.
+663	S'està instal·lant …
+664	Segur que vols esborrar tot l'historial?
+665	Segur que el vols obrir? Aquest lloc és conegut com a perillós.
+666	Cap de setmana
+667	Salta els anuncis de YouTube
+668	Torna a mostrar els «no m'agrada» sota els vídeos de YouTube.
+669	Files
+670	Temps
+671	Hora de fer una pausa! 🎮
+672	Temps esgotat
+673	S'ha esgotat el temps de càrrega
+674	Arrossega per ajustar · Doble clic: 50/50
+675	Zoom
+676	Restableix el zoom
+677	Restableix el zoom (Ctrl+0)
+678	Aleatori
+679	Per provar-ho: botó
+680	Canvia al navegador gamer
+681	Afegeix al diccionari
+682	Canvia al navegador normal
+683	A l'hora
+684	Al lloc real: {0}
+685	Enrere
+686	Enrere (Alt+←)
+687	Torna a un lloc segur
+688	Torna al navegador
+689	Retorna al navegador
+690	Torna a Google
+691	en un activador.
+692	ho veus a dalt. Imatges d'Internet: clic dret sobre una imatge → «Copia l'adreça de la imatge» i enganxa-la al node.
+693	al teu micròfon
+694	a la teva càmera
+695	a la teva pantalla
+696	a la teva ubicació
+697	no s'ha pogut llegir el fitxer d'adreces d'interès.
+698	al porta-retalls
+699	sense límit
+700	no és una còpia de seguretat d'Elektron
+701	llegir i canviar
+702	no permès
+703	només a la versió instal·lada
+704	p. ex. .exe o .zip
+705	p. ex. youtube.com
+706	{0} baixades en curs – Ctrl+J
+707	S'han importat {0} adreces d'interès de {1}.
+708	{0} galetes de seguiment rebutjades
+709	{0} enllaços de seguiment neutralitzats
+710	{0} no respon a temps.
+711	{0} ha rebutjat la connexió.
+712	{0} està a punt – no s'ha trobat cap virus
+713	No s'ha pogut carregar {0}.
+714	No s'ha pogut instal·lar {0}. Comprova la connexió a Internet i torna-ho a provar – o instal·la-ho més tard des de Menú → Chrome Web Store.
+715	{0} vol accedir {1}.
+716	Inicia {0}
+717	{0} de {1} funcions de protecció actives.
+718	{0} oblidat – galetes i dades del lloc esborrades
+719	{0} – no accessible
+720	· Automàtic
+721	· s'està comprovant si hi ha virus …
+722	· ✓ cap virus (Windows Defender)
+723	Canvia …
+724	Obre els bancs, Steam, Discord i companyia directament des de la barra d'adreces o una adreça d'interès.
+725	No obris fitxers que ja tens d'aquest lloc.
+726	Obre
+727	En iniciar obre les pestanyes de l'última vegada – només es carreguen quan hi fas clic.
+728	Quant a {0}
+729	Superposa
+730	Tradueix
+731	Traduccions sense garantia – has trobat un error? Informa'n a GitHub, el corregirem de bon grat.
+732	Salta les parts patrocinades dels vídeos de YouTube.
+733	– imatge en imatge
+734	– pantalla dividida
+735	– la pestanya es queda sobre el teu joc
+736	– congelada
+737	– privada
+738	– dorm (fes clic per carregar)
+739	– finestra flotant (fes clic per mostrar)
+740	– dues pestanyes una al costat de l'altra
+741	Senyal «No venguis» (GPC)
+742	Vols eliminar «{0}»?
+743	S'ha carregat «{0}».
+744	S'ha afegit «{0}»
+745	Vols afegir «{0}» a Elektron?
+746	… es desactiva
+747	… s'activa
+748	← Pàgina original
+749	▶ Prova-ho ara
+750	✓ Executat
+751	🎮 Gaming
