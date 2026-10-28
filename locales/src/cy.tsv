@@ -1,0 +1,752 @@
+0	(glas) neu
+1	(porffor). Caiff newidiadau eu cadw’n awtomatig a dônt i rym ar unwaith.
+2	(coch) – e.e. “Pan agorir tudalen”. Cysylltwch y saeth wen â
+3	1 llwytho i lawr ar waith – Ctrl+J
+4	1080 × 1080 (sgwâr)
+5	1080 × 1920 (ffôn)
+6	1920 × 1080 (Full HD)
+7	A (gwaelod)
+8	Diddymu
+9	Wedi’i ddiddymu
+10	Llifoedd
+11	Llifoedd gweithredol
+12	Adio (llewyrch)
+13	Cyfeiriad
+14	Mae’r cyfeiriad yn cynnwys
+15	Cyfeiriad, e.e. roblox.com
+16	Cyfeiriad:
+17	Cyfeiriad: {0}
+18	Gweithredoedd
+19	Cau’r tab gweithredol
+20	Lliw acen
+21	Darllen a newid eich holl ddata ar bob gwefan
+22	Pob nod tudalen
+23	Pob nod tudalen (Ctrl+Shift+O)
+24	Rheoli pob nod tudalen …
+25	Pob gosodiad diogelu …
+26	Mae pob nodwedd ddiogelu’n weithredol.
+27	Datgysylltu pob cysylltiad
+28	Diweddaru’r cyfan
+29	Dangos y cyfan
+30	Bob ychydig funudau
+31	Dangos pob un o’r {0}
+32	Dewis y cyfan
+33	Dileu popeth a dechrau eto?
+34	Popeth y gallwch ei osod yn Elektron.
+35	Cadw fel delwedd (PNG)
+36	Gosod fel porwr rhagosodedig …
+37	Gosod fel cefndir y dudalen gychwyn
+38	Agor fel ffenestr arnofiol
+39	Rheoli estyniadau eraill
+40	Cau tabiau eraill
+41	Animeiddiad
+42	Animeiddiedig
+43	Math
+44	Canfod ar y dudalen
+45	Canfod ar y dudalen …
+46	Dim byd i’w rwystro ar y dudalen hon
+47	Does dim fideo’n chwarae ar y dudalen hon
+48	Mewnforio o Chrome
+49	Mewnforio o Edge
+50	Mewnforio o Opera GX
+51	Tynnu o’r rhestr
+52	Llenwi
+53	Allbwn
+54	Sbardunau
+55	Diffodd
+56	Torri
+57	Awtomatig
+58	Awtomatig
+59	Diweddaru’n awtomatig
+60	B (top)
+61	Yn cysylltu cyn gynted ag y bydd y llygoden yn oedi ar ddolen – yn gyflymach, ond mae’r wefan yn gweld eich cyfeiriad IP cyn i chi glicio.
+62	Golygu
+63	Golygu …
+64	Amodau
+65	Gadael
+66	Yn cyfyngu lled band pob tab fel bod eich ping yn aros yn sefydlog wrth chwarae.
+67	Rhewi pan gaiff ei leihau
+68	Enghraifft
+69	Llwytho’r enghraifft? Bydd eich llifoedd presennol yn cael eu disodli.
+70	Poblogaidd
+71	Hysbysiadau
+72	Dangos hysbysiadau
+73	Caniatâd
+74	Barod i chwarae?
+75	Gwefan sgam wedi’i rhwystro
+76	Symudiad
+77	Delwedd
+78	Dewis delwedd …
+79	Cadw’r ddelwedd
+80	Agor delwedd mewn tab newydd
+81	Mae’r ddelwedd yn rhy fawr (uchaf. 25 MB)
+82	Methu llwytho’r ddelwedd
+83	Copïo delwedd
+84	Cadw delwedd …
+85	Delwedd o’r cyfrifiadur
+86	Cyfeiriad delwedd (https://…)
+87	Rhowch gyfeiriad delwedd a phwyso “Llwytho”
+88	Delweddau
+89	Hyd at
+90	Rhowch gyfeiriad sy’n dechrau gyda https://
+91	Rhwystro
+92	Yn rhwystro gwefannau sgam, maleiswedd, maglau tanysgrifio a sgamiau cymorth technegol ffug. Am ddim, dim angen cyfrif.
+93	Yn rhwystro hysbysebion, tracwyr, ffenestri naid a baneri cwcis – {0} cais wedi’u hatal hyd yma.
+94	Yn rhwystro hysbysebion, tracwyr, ffenestri naid hysbysebu a baneri cwcis.
+95	Yn rhwystro gwefannau sgam hysbys a gwefannau sy’n lledaenu firysau.
+96	Yn rhwystro gwefannau sgam hysbys a gwefannau sy’n lledaenu firysau. Mae’r rhestr yn llwytho …
+97	Yn rhwystro {0} o wefannau sgam a firws hysbys. Caiff y rhestr ei diweddaru bob 6 awr.
+98	Angen cyfrif Bitwarden am ddim. Gall: ddarllen a newid data ar bob gwefan (i lenwi ffurflenni).
+99	Mae’r porwr yn gyfredol
+100	Llwyth y porwr
+101	Mae gemau porwr yn rhedeg heb V-Sync uwchlaw’r gyfradd adnewyddu. Gall achosi rhwygo sgrin.
+102	Arddull y porwr
+103	Data pori wedi’i ddileu
+104	Dileu data pori nawr
+105	Dileu data pori
+106	Cyfyngydd CPU
+107	Defnyddiwch ChatGPT yn syth yn y porwr.
+108	Dyw Chrome Web Store ddim ar gael
+109	Agor Chrome Web Store
+110	Claude fel estyniad – neu’n syml drwy’r bar ochr.
+111	Cod
+112	Rhedeg cod ar wefannau
+113	Comic / poster
+114	Dileu cwcis a mewngofnodion wrth adael
+115	Darllen a newid cwcis
+116	Yna
+117	Gall:
+118	Gall: ddarllen a newid data ar bob gwefan (i wirio a rhwystro).
+119	Mae’r ddelwedd yn rhy fawr (uchaf. 25 MB)
+120	Dyw tystysgrif ddiogelwch {0} ddim yn ddibynadwy.
+121	Mae tystysgrif ddiogelwch {0} yn annilys.
+122	Nid delwedd ddilys yw hon
+123	Nid ffeil llif yw hon.
+124	Nid ffeil arlliwiwr yw hon.
+125	Cafodd y ffeil ei dileu neu ei symud
+126	data ar
+127	Newid gosodiadau preifatrwydd
+128	Didreiddedd
+129	Darllen a newid eich nodau tudalen
+130	Eich gemau
+131	Darllen a newid eich hanes pori
+132	Darllen eich hanes pori a’ch tabiau agored
+133	Canfod eich lleoliad
+134	Y porwr i chwaraewyr. Chromium {0} · Electron {1}
+135	Mae’r hanes yn wag
+136	Dyluniad
+137	Bwrdd gwaith
+138	Manylion
+139	Dwysedd
+140	Mae’r cyfeiriad yn edrych yn gamarweiniol o debyg i’r wefan go iawn {0} – tric nodweddiadol gan sgamwyr. Edrychwch yn ofalus: mae llythyren wedi’i chyfnewid, ei disodli neu’n dod o wyddor arall.
+141	Rhaid i’r cyfeiriad ddechrau gyda https://
+142	Ni chafwyd hyd i gyfeiriad {0}. Ydy e wedi’i sillafu’n gywir?
+143	Does dim angen caniatâd arbennig ar yr estyniad.
+144	Gall yr estyniad: •
+145	Daw’r estyniadau’n syth o Chrome Web Store ac maen nhw’n perthyn i’w gwneuthurwyr (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Methu llwytho’r dudalen.
+147	Dyw’r wefan hon ddim yn cefnogi cysylltiad diogel (HTTPS). Gallai eraill ar yr un rhwydwaith – e.e. Wi-Fi cyhoeddus – weld beth rydych chi’n ei weld a’i deipio yma.
+148	Darllen y clipfwrdd
+149	Mae’r cyfeiriad hwn yn edrych fel
+150	Methu darllen y ffeil hon
+151	Dyw’r dudalen hon ddim wedi’i hamgryptio
+152	Mae’r wefan hon ar y rhestr o wefannau peryglus
+153	Mae’r wefan hon ar restr o wefannau gwe-rwydo hysbys. Mae gwefannau o’r fath yn aml yn edrych yn ddilys ond eisiau dwyn eich cyfrineiriau neu’ch manylion banc.
+154	Mae’r wefan hon yn lledaenu maleiswedd
+155	Dyw’r cysylltiad hwn ddim wedi’i amgryptio
+156	Does dim modd datgysylltu’r fideo hwn
+157	Gwahaniaeth
+158	Llwytho i lawr
+159	Llwytho i lawr wedi’i rwystro: mae {0} yn lledaenu maleiswedd hysbys
+160	Methodd llwytho i lawr: {0}
+161	Llwytho i lawr wedi gorffen: {0}
+162	Llwytho i lawr wedi dechrau: {0}
+163	Agor ffolder llwythi
+164	Llwythi
+165	Llwythi (Ctrl+J)
+166	Sganio llwythi am firysau
+167	Chwilio llwythi
+168	Rheoli llwythi
+169	Caiff llwythi eu sganio
+170	Cylchdroi (°)
+171	Yn troelli
+172	Cylchdro (°)
+173	Wedyn byddwch wedi allgofnodi ym mhobman.
+174	Dyw DuckDuckGo, Brave Search a Startpage ddim yn creu proffil ohonoch chi. Mae Startpage yn dangos canlyniadau Google heb dracio.
+175	Tywyll
+176	Thema dywyll ar gyfer pob gwefan.
+177	Dyblygu
+178	Dyblygu (Ctrl+D)
+179	Effeithiau
+180	Arlliwiwr personol (GLSL)
+181	Delwedd bersonol
+182	Delwedd bersonol …
+183	Dewis delwedd gefndir bersonol
+184	Mae llif yn dechrau gyda
+185	Rhewi
+186	Arlliwio
+187	Gludo
+188	Ffitio
+189	Troi ymlaen
+190	Gosodiadau
+191	Methu cadw’r gosodiadau:
+192	Ychwanegu eitemau at y ddewislen clic de
+193	Diogelwch Elektron · Canfod ffugiadau’n syth ar eich cyfrifiadur
+194	Diogelwch Elektron · Rhestrau o Phishing.Database ac URLhaus (abuse.ch)
+195	Elektron Studio (arlliwyr a llifoedd)
+196	Ataliodd Elektron y wefan hon am ei bod ar restr o wefannau sgam hysbys.
+197	Mae Elektron yn chwilio’n rheolaidd am fersiynau newydd.
+198	Argymell Elektron
+199	Argymhellir
+200	Tynnu
+201	Yn tynnu paramedrau tracio fel utm_, fbclid a gclid, yn hepgor tracwyr ailgyfeirio Google a Facebook ac yn agor tudalennau AMP yn eu ffurf wreiddiol.
+202	Llwytho estyniad heb ei becynnu (ffolder gyda manifest.json)
+203	Llwytho estyniad heb ei becynnu …
+204	Cofio’r penderfyniad
+205	Offer datblygwyr
+206	Gemau am ddim Epic
+207	Esboniwch hyn i mi’n syml, yn Gymraeg:
+208	Esboniwch i mi’n syml, yn Gymraeg, beth yw pwrpas y wefan hon.
+209	Caniatáu
+210	Llwytho i lawr eto
+211	Ceisio eto
+212	Crëwch ddelwedd yn gyntaf – does dim byd yn cyrraedd “Allbwn” eto.
+213	Ychwanegu estyniad
+214	Estyniadau
+215	Daw estyniadau o Chrome Web Store ac maen nhw’n gweithio yn Elektron yn union fel yn Chrome. Mae rhai estyniadau mawr iawn yn defnyddio nodweddion Chrome sydd ddim yn bodoli yma – yna dim ond yn rhannol maen nhw’n gweithio. Mae Claude a ChatGPT hefyd ar gael yn syth yn y bar ochr ar y chwith.
+216	Mae’r estyniadau’n gyfredol
+217	Dyw’r bar estyniadau ddim ar gael:
+218	Mae’r nod “Allbwn” ar goll.
+219	Allforio
+220	Dileu cyfyngiad FPS
+221	Lliw
+222	Lliw 1
+223	Lliw 2
+224	Cylchdroi arlliw
+225	Crynhowch y wefan hon yn fyr yn Gymraeg – y prif bwyntiau fel rhestr.
+226	Gwall:
+227	Wedi methu
+228	Wedi gorffen
+229	Gofyn
+230	Rhwystro cwcis trydydd parti
+231	Cwcis trydydd parti wedi’u rhwystro
+232	Yn rhewi pob tab cefndir ac yn gostwng blaenoriaeth y porwr fel bod eich gêm yn dod gyntaf. Mae tabiau sy’n chwarae sain yn parhau.
+233	Ar gyfer sianeli llais Discord dewiswch “Gofyn” neu “Caniatáu”.
+234	Ar gyfer clic de → “Crynhoi’r dudalen” ac “Esbonio”.
+235	Does dim modd darllen ar gyfer y dudalen hon
+236	Y CYFRIFIADUR CYFAN
+237	Galaeth
+238	Gaming
+239	Gaming gyda’r holl bethau ychwanegol – neu borwr tawel, arferol. Newidiwch unrhyw bryd.
+240	Mae’r porwr i chwaraewyr yn ôl 🎮
+241	Modd gemau
+242	Modd gemau (Ctrl+Shift+G)
+243	Modd gemau ymlaen – tabiau cefndir wedi’u rhewi, blaenoriaeth y porwr wedi’i gostwng
+244	Modd gemau i ffwrdd
+245	Diffodd modd gemau
+246	Troi modd gemau ymlaen
+247	Dangos y cyfan
+248	Y dudalen gyfan
+249	Peryglus
+250	Gwefan beryglus wedi’i rhwystro
+251	Cyfeiriad ffug?
+252	Wedi llwytho – rhy fawr i’w gofio, dewiswch eto ar ôl ailgychwyn
+253	Dileu’r holl hanes
+254	Ailagor tab a gaewyd
+255	Wedi’i gadw ✓
+256	Ddoe
+257	Peidiwch â rhoi cyfrineiriau, manylion banc na cherdyn yma.
+258	Peidiwch â rhoi cyfrineiriau, codau na manylion cerdyn yma.
+259	Grid
+260	Mae Google yn creu proffiliau – dyw DuckDuckGo, Brave a Startpage ddim
+261	Google Translate
+262	Cadw’r graff fel ffeil
+263	Llwytho ffeil graff
+264	Maint
+265	Maint wrth gadw
+266	Da gwybod: mae Avast yn gwirio cyfeiriadau’r gwefannau rydych chi’n ymweld â nhw. Gall: ddarllen a newid data ar bob gwefan.
+267	Nos da
+268	Noswaith dda
+269	Noswaith dda – amser am sesiwn.
+270	Bore da
+271	Bore da – barod i chwarae?
+272	Modd HTTPS · gellir ei ddiffodd yn GX Control o dan “Diogelwch”
+273	Cadwch y porwr yn ysgafn fel bod eich gêm yn cael y pŵer.
+274	Wnaeth hynny ddim gweithio
+275	Golau
+276	Golau / tywyll
+277	Disgleirdeb
+278	Disgleirdeb a chyferbyniad
+279	Heddiw
+280	Cefndir
+281	Cefndir y dudalen gychwyn
+282	Cefndir wedi’i osod ✓
+283	Dangos rhybudd
+284	Ychwanegu
+285	Hafan
+286	Cuddio cyfeiriad IP rhag WebRTC
+287	Cyfeiriad IP wedi’i guddio rhag WebRTC
+288	Rwy’n deall y risg – agor y wefan beth bynnag
+289	Yn y cefndir
+290	Dangos yn y ffolder
+291	Dangos yn y ffolder
+292	Bob amser ar ben
+293	Bob amser ar ben (ymlaen)
+294	Bob amser ar ben (i ffwrdd)
+295	Methodd mewnforio:
+296	Mewnforio
+297	Ysgrifennu i’r clipfwrdd
+298	Agor mewn tab newydd
+299	Agor mewn tab preifat
+300	Ym mha iaith ddylai Elektron siarad â chi? Mae’r baneri’n dangos y gwledydd lle siaredir yr iaith.
+301	Rhwystro cynnwys ar wefannau
+302	Gosod a dechrau
+303	Wedi’i osod
+304	Gwrthdroi
+305	Ie
+306	Rhwystro JavaScript ar y wefan hon
+307	Caiff pob ffeil a lwythir i lawr ei sganio gyda Windows Defender.
+308	Bob dydd
+309	Chwilio am ddiweddariadau nawr
+310	Ailgychwyn nawr
+311	DA yn y bar ochr
+312	Caleidosgop
+313	Ddaeth y ddolen drwy e-bost, neges destun neu Discord? Yna sgam oedd hi, mae’n debyg.
+314	Camera a meicroffon
+315	Dim cysylltiad â’r rhyngrwyd. Gwiriwch eich Wi-Fi neu gebl rhwydwaith.
+316	Dim awgrymiadau
+317	Dim cysylltiad diogel
+318	Cliciwch y seren yn y bar cyfeiriad neu pwyswch Ctrl+D.
+319	Cliciwch i ddatgysylltu
+320	Methu llwytho:
+321	Cyferbyniad
+322	Copïo
+323	Cylch
+324	Peidiwch â llwytho dim i lawr o’r fan hon.
+325	Llwytho
+326	Atal llwytho
+327	Rhedwch eich sganiwr firysau os ydych chi’n ansicr.
+328	Perfformiad
+329	Cerdyn graffeg perfformiad uchel
+330	Modd darllen
+331	Modd darllen (F9)
+332	Agor modd darllen
+333	Nodau tudalen
+334	Gwneud copi wrth gefn o nodau tudalen a gosodiadau …
+335	Chwilio nodau tudalen
+336	Tynnu nod tudalen (Ctrl+D)
+337	Nod tudalen wedi’i dynnu
+338	Mae nodau tudalen yn ymddangos yma – cliciwch y seren yn y bar cyfeiriad.
+339	Nod tudalen wedi’i gadw
+340	Ychwanegu nod tudalen (Ctrl+D)
+341	Cadw nodau tudalen a gosodiadau fel ffeil – e.e. ar gyfer cyfrifiadur newydd.
+342	Copi wrth gefn o nodau tudalen a gosodiadau
+343	Dangos bar nodau tudalen
+344	Cuddio bar nodau tudalen
+345	Dileu’r 24 awr ddiwethaf
+346	Dileu’r awr ddiwethaf
+347	Os yw’r porwr yn mynd dros y terfyn, caiff y tab cefndir mwyaf barus ei rewi.
+348	Terfyn
+349	Llinol
+350	Lled llinell
+351	Agor dolen mewn sgrin hollt
+352	Agor dolen mewn tab newydd
+353	Agor dolen mewn tab preifat
+354	Copïo dolen
+355	Dolen wedi’i chopïo – anfonwch hi at eich ffrindiau!
+356	Glanhau dolenni
+357	Rhaglwytho dolenni
+358	Caiff dolenni eu glanhau
+359	Clirio’r rhestr
+360	Rhestr yn rhy fyr
+361	Ni chaniateir cyfeiriadau lleol
+362	Dechrau arni
+363	Yn llwytho tudalennau wedi’u hamgryptio bob amser ac yn rhybuddio pan na all gwefan wneud hynny.
+364	Yn llwytho delwedd o’r rhyngrwyd
+365	Yn llwytho …
+366	Dileu
+367	Dileu (Del)
+368	Dyfeisiau MIDI
+369	Cyfieithwch destun a ddewiswyd neu dudalennau cyfan.
+370	Mwgwd
+371	Mwgwd (golau = gweladwy)
+372	Diogelwch mwyaf
+373	Mwy o breifatrwydd: rydych chi nawr yn chwilio gyda DuckDuckGo yn lle Google
+374	Dewislen
+375	Meicroffon
+376	Pan fyddwch yn lleihau’r porwr ar gyfer gêm, mae pob tab tawel yn gorffwys.
+377	Munudau
+378	Cymysgu
+379	Chwilio gyda Google
+380	Chwiliwch gyda Google neu rhowch gyfeiriad
+381	Esbonio gyda {0}
+382	Chwilio gyda {0}
+383	Chwiliwch gyda {0} neu rhowch gyfeiriad
+384	Chwilio gyda {0}: “{1}”
+385	Modd
+386	Dydd Llun – Dydd Gwener
+387	Lluosi
+388	Patrwm
+389	Chwilio am ddiweddariadau
+390	Enw
+391	Nifwl
+392	Sgrin
+393	Na
+394	Neon
+395	Grid neon
+396	Cyfyngydd rhwydwaith
+397	Monitro traffig rhwydwaith
+398	Rhwystro a newid traffig rhwydwaith
+399	Newydd
+400	Ail-lwytho
+401	Ail-lwytho (F5)
+402	Ailgychwyn a gosod
+403	Tab newydd
+404	Tab newydd (Ctrl+T)
+405	Tab preifat newydd
+406	Delwedd newydd wag
+407	Ailgychwyn
+408	Heb ei ganfod
+409	Heb ei gadw
+410	Ddim yn bosibl
+411	Ddim yn ddiogel
+412	Dim byd wedi’i ganfod
+413	Un cam arall: rydyn ni’n argymell yr estyniadau hyn ar gyfer mwy o ddiogelwch. Dewiswch beth rydych chi eisiau – gallwch eu tynnu unrhyw bryd o dan “Estyniadau”.
+414	Un rownd arall? Mae hi’n ganol nos.
+415	Dim llwythi eto
+416	Does dim estyniadau wedi’u gosod eto. Agorwch Chrome Web Store a chliciwch “Ychwanegu” yno.
+417	Dim nodau tudalen eto
+418	Does dim cyfeiriad diweddaru wedi’i roi eto (GX Control → Diweddariadau)
+419	Chwilio nod …
+420	Arferol
+421	Porwr arferol – mae elfennau gemau wedi’u cuddio
+422	Dim ond ffeiliau gyda (gwag = y cyfan)
+423	HTTPS yn unig
+424	Unwaith y dydd yn unig
+425	Cyfeiriadau http a https yn unig
+426	Yn defnyddio’r GPU pwrpasol (e.e. RTX) yn lle’r graffeg integredig.
+427	Canlyniad nesaf (F3)
+428	Parhau heb estyniadau
+429	Dewisol
+430	Opsiynau
+431	Cau’r panel
+432	Rheolwr cyfrineiriau
+433	Diogelwch rhag gwe-rwydo a maleiswedd
+434	Maint picsel
+435	Plasma (lliwgar, animeiddiedig)
+436	Goleuni’r Gogledd
+437	Preifat
+438	Peiriant chwilio preifat
+439	Tab preifat
+440	Tab preifat – mae hanes, cwcis a mewngofnodion yn diflannu cyn gynted ag y byddwch yn cau pob tab preifat.
+441	Tab preifat – dim hanes na chwcis ar ôl cau
+442	Ap wedi’i gryfhau
+443	Newid gosodiadau dirprwy
+444	Yn sganio llwythi gyda Windows Defender (ddim ar gael ar y cyfrifiadur hwn).
+445	Dotiau
+446	Ffynonellau
+447	RAM {0} o {1}
+448	Cyfyngydd RAM
+449	Symud RGB (glitch)
+450	Sŵn / cymylau
+451	Mae clic de ar dab hefyd yn cynnig hyn i gyd.
+452	Mae clic de neu’r bylchwr yn ychwanegu nodau. Llusgwch o’r dot ar ochr dde nod i’r dot ar ochr chwith yr un nesaf. Mae beth bynnag sy’n cyrraedd
+453	Clic de neu fylchwr: ychwanegu nod · Llusgo’r cefndir: symud · Olwyn llygoden: chwyddo · Del: dileu
+454	Retro
+455	Mynyddoedd retro
+456	Yn dweud wrth bob gwefan drwy Global Privacy Control na chaiff eich data ei werthu na’i rannu.
+457	Bwrdd gwyddbwyll
+458	Maleiswedd wedi’i rhwystro
+459	Yn diffodd turbo JavaScript (JIT) – arwyneb ymosod mwyaf cyffredin porwyr. Mae gwefannau’n arafach ac mae rhai gemau porwr yn stopio gweithio. Daw i rym ar ôl ailgychwyn.
+460	Rhoi i gysgu (rhyddhau RAM)
+461	Plaen
+462	Cau
+463	Cau (Esc)
+464	Mynediad cyflym
+465	Mae hi eisoes yn 22:00 – ysgol/gwaith yfory 😉
+466	Testun mwy
+467	Testun llai
+468	Diogelwch
+469	Diogelwch ar gyfer y wefan hon (cliciwch)
+470	Troi’r diogelwch yn ôl ymlaen ar gyfer y wefan hon
+471	Diogelwch ar gyfer {0}
+472	Diogelwch rhag olion bysedd
+473	Rhestr ddiogelwch {0}:
+474	Du a gwyn
+475	Ffenestr arnofiol
+476	Diwrnod da i chi
+477	Sgrinlun
+478	Sgrinlun (Ctrl+Shift+X) – clic de: y dudalen gyfan
+479	Sgrinlun (y dudalen gyfan)
+480	Sgrinlun (y rhan weladwy)
+481	Wnaeth y sgrinlun ddim gweithio
+482	Sgrinlun wedi’i gopïo – gludwch ef yn Discord gyda Ctrl+V
+483	Tynnu sgrinlun
+484	Tudalen
+485	Cyfieithu’r dudalen i’r Gymraeg
+486	Anghofio’r wefan wrth gau (dileu cwcis)
+487	Argraffu tudalen …
+488	Dyw’r wefan ddim yn gweithio? Diffoddwch y diogelwch yma
+489	Crynhoi’r dudalen gyda {0}
+490	Methu cyrraedd y wefan
+491	Archwilio’r dudalen
+492	Cyfnewid ochrau
+493	Agor y bar ochr
+494	Cymhareb agwedd y rhagolwg
+495	Eiliadau
+496	Atebodd y gweinydd gyda gwall {0}
+497	Arlliwyr a delweddau
+498	Cysylltiad diogel
+499	DNS diogel
+500	Diogelwch
+501	Gwiriad diogelwch
+502	Copi wrth gefn ac adfer
+503	Gwneud copi wrth gefn …
+504	Copi wrth gefn wedi’i gadw
+505	Adfer copi wrth gefn
+506	Adfer copi wrth gefn …
+507	Rhan weladwy
+508	Sut mae’n gweithio
+509	Sut mae’n gweithio:
+510	Arall
+511	Cadw
+512	Methodd cadw:
+513	Yn storio’ch cyfrineiriau’n ddiogel ac yn eu llenwi’n awtomatig.
+514	Yn storio’ch cyfrineiriau wedi’u hamgryptio ac yn eu llenwi’n awtomatig ar wefannau. Am ddim, cod agored.
+515	Sgrin hollt
+516	Sgrin hollt (Ctrl+Shift+S)
+517	Sgrin hollt ymlaen – llusgwch y rhannwr i addasu
+518	Gorffen sgrin hollt
+519	Gorffen sgrin hollt (Ctrl+Shift+S)
+520	Iaith
+521	Chwilio iaith neu wlad …
+522	Iaith Windows
+523	Iaith Windows: {0}
+524	Adfer y rhagosodiad
+525	Cychwyn
+526	Tudalen gychwyn (Alt+Home)
+527	Rheolaeth
+528	Ymestyn
+529	Streipiau
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T tab newydd · Ctrl+D nod tudalen · Ctrl+H hanes · F11 sgrin lawn
+537	Ctrl+Shift+G yn cychwyn modd gemau · Ctrl+T tab newydd · F11 sgrin lawn
+538	Stiwdio
+539	Haenau
+540	Distewi
+541	Cryfder
+542	Ymyriant
+543	Yn chwilio am ddiweddariadau …
+544	Peiriant chwilio
+545	Awgrymiadau chwilio wrth deipio yn y bar cyfeiriad (yn cael eu hanfon at y peiriant chwilio)
+546	Dirlawnder
+547	Tab
+548	Chwalodd y tab – cliciwch i ail-lwytho
+549	Tab fel ffenestr arnofiol
+550	Tab fel ffenestr arnofiol (Ctrl+Shift+F)
+551	Cau’r tab
+552	Mae’r tab nawr yn arnofio uwchben pob ffenestr
+553	Distewi’r tab
+554	Agor tab
+555	Tabiau
+556	Cau tabiau ar y dde
+557	Adfer tabiau
+558	Dyddiau
+559	Bysell
+560	Llwybr byr bysellfwrdd
+561	Segmentau
+562	Cyflymder
+563	Testun
+564	Testun (dyfyniad):
+565	Teitl:
+566	Sain pob tab
+567	Dad-ddistewi
+568	Gwyrdd gwenwynig
+569	Tryloywder
+570	Twitch ar agor – mae modd gemau ymlaen 🎮
+571	Amser (AA:MM)
+572	Uwchfioled
+573	Gwrthdroi
+574	Toglo
+575	Cyfeiriad annilys
+576	Aneglurder
+577	Does dim delwedd yn y cyfeiriad hwn (awgrym: clic de ar ddelwedd → “Copïo cyfeiriad delwedd”)
+578	Agor heb amgryptio
+579	Diweddariad yn barod – ailgychwynnwch y porwr
+580	Methodd diweddaru estyniadau
+581	Gosod diweddariad
+582	Gosod diweddariad ac ailgychwyn
+583	Mae diweddariad {0} yn barod
+584	Mae diweddariad {0} yn llwytho i lawr yn y cefndir …
+585	Cyfeiriad diweddaru (ffolder ar eich gwefan)
+586	Modiwl diweddaru ar goll
+587	Methodd chwilio am ddiweddariadau: {0}
+588	Diweddariadau
+589	Mae diweddariadau’n gweithio yn y fersiwn wedi’i gosod
+590	Gwaharddedig
+591	Chwyddo i mewn
+592	Chwyddo allan
+593	Hanes
+594	Chwilio’r hanes
+595	Gwrthbwyso
+596	Symud / chwyddo / cylchdroi
+597	Yn amgryptio pa wefannau rydych chi’n ymweld â nhw (DNS dros HTTPS gyda Quad9 o’r Swistir) ac yn rhwystro cyfeiriadau maleiswedd hysbys hefyd.
+598	Fersiwn
+599	Mae fersiwn {0} yn gyfredol.
+600	Mae fersiwn {0} yn barod – caiff ei gosod y tro nesaf y byddwch yn cychwyn.
+601	Yn llwytho fersiwn {0} i lawr … {1} %
+602	Fersiwn {0} · Chromium {1}
+603	Fersiwn {0} · Does dim cyfeiriad diweddaru wedi’i roi eto.
+604	Fersiwn {0} · Mae diweddariadau ar gael yn y fersiwn Windows wedi’i gosod.
+605	Fersiwn {0} · Daw diweddariadau’n awtomatig drwy Microsoft Store.
+606	Rheoli
+607	Datgysylltu fideo
+608	Datgysylltu fideo (llun mewn llun)
+609	Datgysylltu fideo – llun mewn llun (Ctrl+Shift+P)
+610	Datgysylltu fideos yn awtomatig
+611	Caiff hysbysebion fideo eu distewi a’u hepgor ar unwaith, mae mannau hysbysebu’n diflannu.
+612	Fignét
+613	Firws wedi’i ganfod yn {0} – tynnodd Windows Defender y ffeil
+614	Firws wedi’i ganfod – tynnodd Windows Defender y ffeil
+615	Sgrin lawn
+616	O
+617	Mae firysau neu faleiswedd arall wedi’u lledaenu o’r wefan hon. Ataliodd Elektron nhw cyn i ddim gyrraedd eich cyfrifiadur.
+618	Ymlaen
+619	Ymlaen (Alt+→)
+620	Canlyniad blaenorol (Shift+F3)
+621	Awgrymiadau
+622	Diliau mêl
+623	Tebygolrwydd (%)
+624	Mae hefyd yn rhybuddio am wefannau peryglus. Fel arfer does dim angen gyda Malwarebytes – mae’r ddau’n gwneud yr un peth.
+625	Yn rhybuddio am wefannau peryglus a gwe-rwydo.
+626	Rhybudd am gyfeiriadau ffug
+627	Aros
+628	Beth sy’n digwydd pan fydd gwefan eisiau defnyddio’ch camera.
+629	Dyw WebGL 2 ddim ar gael ar y cyfrifiadur hwn.
+630	Gwe-gamera
+631	Rheoli gwefannau o bell (dadfygiwr)
+632	Mae’n anoddach i wefannau adnabod eich cyfrifiadur (canvas, enw’r cerdyn graffeg, creiddiau CPU).
+633	Ni all gwefannau ddarllen eich cyfeiriad IP lleol drwy dechnoleg sgwrsio fideo mwyach – hyd yn oed y tu ôl i VPN.
+634	Os ydych chi’n newid tab neu’n lleihau’r porwr, mae’r fideo’n parhau mewn ffenestr fach (llun mewn llun).
+635	Meddalwch
+636	Nodau tudalen eraill
+637	Tonnau
+638	Dangos llai
+639	Os yw modd gemau ymlaen
+640	Pan fydd modd gemau …
+641	Os mai’r diwrnod yw
+642	Os yw’r amser rhwng
+643	Os yw’r tab gweithredol yn cynnwys
+644	Pan fydd y porwr yn cychwyn
+645	Os ydych chi eisiau mynd i {0}, defnyddiwch y botwm isod.
+646	Pan fydd llwytho i lawr yn gorffen
+647	Pan agorir tudalen
+648	Atalydd hysbysebion a thracwyr
+649	Atalydd hysbysebion
+650	Methu llwytho’r atalydd hysbysebion:
+651	Ni all cwmnïau hysbysebu eich dilyn ar draws gwahanol wefannau mwyach. Mae mewngofnodi, captchas a thaliadau’n dal i weithio.
+652	Hysbysebion/tracwyr wedi’u rhwystro: {0} · Cwcis tracio wedi’u hatal: {1}
+653	Offer
+654	Troi ymlaen eto
+655	Wedi adfer: {0} nod tudalen newydd a’ch gosodiadau
+656	Adfer …
+657	Ailadrodd (teils)
+658	Croeso
+659	Croeso i Elektron
+660	Heb ganfod Windows Defender
+661	Ongl
+662	Pan eir dros y terfyn, mae’r tabiau sydd heb eu defnyddio hiraf yn mynd i gysgu.
+663	Yn gosod …
+664	Dileu’r holl hanes go iawn?
+665	Agor go iawn? Mae’r wefan hon yn hysbys am fod yn beryglus.
+666	Penwythnos
+667	Hepgor hysbysebion YouTube
+668	Yn dangos y bodiau i lawr o dan fideos YouTube eto.
+669	Llinellau
+670	Amser
+671	Amser am seibiant! 🎮
+672	Daeth yr amser i ben
+673	Daeth yr amser i ben wrth lwytho
+674	Llusgwch i addasu · Clic dwbl: 50/50
+675	Chwyddo
+676	Ailosod chwyddo
+677	Ailosod chwyddo (Ctrl+0)
+678	Ar hap
+679	I roi cynnig arni: botwm
+680	Newid i’r porwr i chwaraewyr
+681	Ychwanegu at y geiriadur
+682	Newid i’r porwr arferol
+683	Ar amser penodol
+684	I’r wefan go iawn: {0}
+685	Yn ôl
+686	Yn ôl (Alt+←)
+687	Yn ôl i ddiogelwch
+688	Yn ôl i’r porwr
+689	Dod yn ôl i’r porwr
+690	Yn ôl i Google
+691	ar sbardun.
+692	yn y pen draw i’w weld uchod. Delweddau o’r rhyngrwyd: clic de ar ddelwedd → “Copïo cyfeiriad delwedd” a’i ludo yn y nod.
+693	eich meicroffon
+694	eich camera
+695	eich sgrin
+696	eich lleoliad
+697	methu darllen ffeil y nodau tudalen.
+698	y clipfwrdd
+699	dim terfyn
+700	nid copi wrth gefn Elektron
+701	darllen a newid
+702	ni chaniateir
+703	yn y fersiwn wedi’i gosod yn unig
+704	e.e. .exe neu .zip
+705	e.e. youtube.com
+706	{0} llwytho i lawr ar waith – Ctrl+J
+707	{0} nod tudalen wedi’u mewnforio o {1}.
+708	{0} cwci tracio wedi’u hatal
+709	{0} dolen dracio wedi’u diarfogi
+710	Dyw {0} ddim yn ateb mewn pryd.
+711	Gwrthododd {0} y cysylltiad.
+712	Mae {0} wedi gorffen – dim firws wedi’i ganfod
+713	Methu llwytho {0}.
+714	Methu gosod {0}. Gwiriwch eich cysylltiad â’r rhyngrwyd a cheisio eto – neu gosodwch ef yn nes ymlaen drwy Dewislen → Chrome Web Store.
+715	Mae {0} eisiau mynediad i: {1}.
+716	Cychwyn {0}
+717	{0} o {1} nodwedd ddiogelu’n weithredol.
+718	Anghofiwyd {0} – cwcis a data’r wefan wedi’u dileu
+719	{0} – methu cyrraedd
+720	· Awto
+721	· yn cael ei sganio am firysau …
+722	· ✓ dim firws (Windows Defender)
+723	Newid …
+724	Gwell agor banciau, Steam, Discord ac ati’n syth drwy’r bar cyfeiriad neu nod tudalen.
+725	Peidiwch ag agor ffeiliau rydych chi eisoes wedi’u cael o’r wefan hon.
+726	Agor
+727	Yn agor eich tabiau o’r tro diwethaf wrth gychwyn – maen nhw’n llwytho dim ond pan fyddwch yn clicio arnyn nhw.
+728	Ynghylch {0}
+729	Troshaen
+730	Cyfieithu
+731	Cyfieithiadau heb warant – wedi dod o hyd i gamgymeriad? Rhowch wybod ar GitHub a byddwn yn falch o’i wella.
+732	Yn hepgor rhannau noddedig mewn fideos YouTube.
+733	– llun mewn llun
+734	– sgrin hollt
+735	– mae’r tab yn aros uwchben eich gêm
+736	– wedi rhewi
+737	– preifat
+738	– yn cysgu (cliciwch i lwytho)
+739	– ffenestr arnofiol (cliciwch i ddangos)
+740	– dau dab ochr yn ochr
+741	Signal “Peidiwch â gwerthu” (GPC)
+742	Tynnu “{0}”?
+743	Mae “{0}” wedi llwytho.
+744	Mae “{0}” wedi’i ychwanegu
+745	Ychwanegu “{0}” at Elektron?
+746	… wedi’i ddiffodd
+747	… wedi’i droi ymlaen
+748	← Tudalen wreiddiol
+749	▶ Profi nawr
+750	✓ Wedi’i weithredu
+751	🎮 Gaming

@@ -1,0 +1,752 @@
+0	(gorm) nó
+1	(corcra). Sábháiltear athruithe go huathoibríoch agus tagann siad i bhfeidhm láithreach.
+2	(dearg) – m.sh. “Nuair a osclaítear leathanach”. Ceangail an tsaighead bhán le
+3	1 íoslódáil ar siúl – Ctrl+J
+4	1080 × 1080 (cearnóg)
+5	1080 × 1920 (fón)
+6	1920 × 1080 (Full HD)
+7	A (bun)
+8	Cealaigh
+9	Cealaithe
+10	Sreafaí
+11	Sreafaí gníomhacha
+12	Suimigh (lonradh)
+13	Seoladh
+14	Tá sa seoladh
+15	Seoladh, m.sh. roblox.com
+16	Seoladh:
+17	Seoladh: {0}
+18	Gníomhartha
+19	Dún an cluaisín gníomhach
+20	Dath aibhsithe
+21	Do shonraí go léir ar gach suíomh gréasáin a léamh agus a athrú
+22	Gach leabharmharc
+23	Gach leabharmharc (Ctrl+Shift+O)
+24	Bainistigh gach leabharmharc …
+25	Gach socrú cosanta …
+26	Tá gach gné chosanta gníomhach.
+27	Dícheangail gach nasc
+28	Nuashonraigh gach rud
+29	Taispeáin gach rud
+30	Gach cúpla nóiméad
+31	Taispeáin gach ceann de {0}
+32	Roghnaigh gach rud
+33	Gach rud a scriosadh agus tosú as an nua?
+34	Gach rud is féidir leat a shocrú in Elektron.
+35	Sábháil mar íomhá (PNG)
+36	Socraigh mar bhrabhsálaí réamhshocraithe …
+37	Socraigh mar chúlra an leathanaigh tosaigh
+38	Oscail mar fhuinneog snámha
+39	Bainistigh eisínteachtaí eile
+40	Dún cluaisíní eile
+41	Beochan
+42	Beoite
+43	Cineál
+44	Aimsigh ar an leathanach
+45	Aimsigh ar an leathanach …
+46	Níl aon rud le bacadh ar an leathanach seo
+47	Níl físeán ar siúl ar an leathanach seo
+48	Iompórtáil ó Chrome
+49	Iompórtáil ó Edge
+50	Iompórtáil ó Opera GX
+51	Bain den liosta
+52	Líon
+53	Aschur
+54	Truicir
+55	Múch
+56	Gearr
+57	Uathoibríoch
+58	Uathoibríoch
+59	Nuashonraigh go huathoibríoch
+60	B (barr)
+61	Ceanglaíonn sé chomh luath is a stopann an luch ar nasc – níos tapúla, ach feiceann an suíomh do sheoladh IP sula gcliceálann tú.
+62	Cuir in eagar
+63	Cuir in eagar …
+64	Coinníollacha
+65	Scoir
+66	Teorannaíonn sé bandaleithead gach cluaisín ionas go bhfanann do ping seasmhach agus tú ag imirt.
+67	Reoigh nuair a íoslaghdaítear é
+68	Sampla
+69	An sampla a lódáil? Cuirfear sampla in áit do shreafaí reatha.
+70	Coitianta
+71	Fógraí
+72	Taispeáin fógraí
+73	Cead
+74	Réidh le himirt?
+75	Suíomh calaoise bactha
+76	Gluaiseacht
+77	Íomhá
+78	Roghnaigh íomhá …
+79	Coinnigh an íomhá
+80	Oscail íomhá i gcluaisín nua
+81	Tá an íomhá rómhór (25 MB ar a mhéad)
+82	Níorbh fhéidir an íomhá a lódáil
+83	Cóipeáil íomhá
+84	Sábháil íomhá …
+85	Íomhá ón ríomhaire
+86	Seoladh íomhá (https://…)
+87	Cuir isteach seoladh íomhá agus brúigh “Lódáil”
+88	Íomhánna
+89	Go dtí
+90	Cuir isteach seoladh a thosaíonn le https://
+91	Bac
+92	Bacann sé suíomhanna calaoise, bogearraí mailíseacha, gaistí síntiúis agus calaois tacaíochta teicniúla. Saor in aisce, gan cuntas.
+93	Bacann sé fógraí, rianaitheoirí, preabfhuinneoga agus meirgí fianán – {0} iarratas stoptha go dtí seo.
+94	Bacann sé fógraí, rianaitheoirí, preabfhuinneoga fógraíochta agus meirgí fianán.
+95	Bacann sé suíomhanna calaoise aitheanta agus suíomhanna a scaipeann víris.
+96	Bacann sé suíomhanna calaoise aitheanta agus suíomhanna a scaipeann víris. Tá an liosta á lódáil …
+97	Bacann sé {0} suíomh calaoise agus víris aitheanta. Nuashonraítear an liosta gach 6 uair an chloig.
+98	Teastaíonn cuntas Bitwarden saor in aisce. Is féidir leis: sonraí a léamh agus a athrú ar gach suíomh (chun foirmeacha a líonadh).
+99	Tá an brabhsálaí cothrom le dáta
+100	Ualach an bhrabhsálaí
+101	Ritheann cluichí brabhsálaí gan V-Sync os cionn an ráta athnuachana. D’fhéadfadh stróiceadh scáileáin tarlú.
+102	Stíl an bhrabhsálaí
+103	Sonraí brabhsála scriosta
+104	Scrios sonraí brabhsála anois
+105	Scrios sonraí brabhsála
+106	Teorantóir LAP
+107	Úsáid ChatGPT go díreach sa bhrabhsálaí.
+108	Níl Chrome Web Store ar fáil
+109	Oscail Chrome Web Store
+110	Claude mar eisínteacht – nó go simplí tríd an mbarra taoibh.
+111	Cód
+112	Rith cód ar shuíomhanna gréasáin
+113	Greannán / póstaer
+114	Scrios fianáin agus logálacha isteach ag scor
+115	Fianáin a léamh agus a athrú
+116	Ansin
+117	Is féidir leis:
+118	Is féidir leis: sonraí a léamh agus a athrú ar gach suíomh (chun seiceáil agus bacadh).
+119	Tá an íomhá rómhór (25 MB ar a mhéad)
+120	Níl teastas slándála {0} iontaofa.
+121	Tá teastas slándála {0} neamhbhailí.
+122	Ní íomhá bhailí í seo
+123	Ní comhad sreafa é seo.
+124	Ní comhad scáthóra é seo.
+125	Scriosadh nó bogadh an comhad
+126	sonraí ar
+127	Socruithe príobháideachais a athrú
+128	Teimhneacht
+129	Do leabharmharcanna a léamh agus a athrú
+130	Do chluichí
+131	Do stair bhrabhsála a léamh agus a athrú
+132	Do stair bhrabhsála agus cluaisíní oscailte a léamh
+133	Do shuíomh a aimsiú
+134	An brabhsálaí do chluicheoirí. Chromium {0} · Electron {1}
+135	Tá an stair folamh
+136	Dearadh
+137	Deasc
+138	Sonraí
+139	Dlús
+140	Tá an seoladh an-chosúil leis an bhfíorshuíomh {0} – cleas tipiciúil ag caimiléirí. Féach go cúramach: tá litir malartaithe, curtha in ionad litreach eile nó ó aibítir eile.
+141	Caithfidh an seoladh tosú le https://
+142	Níor aimsíodh seoladh {0}. An bhfuil sé litrithe i gceart?
+143	Níl ceadanna speisialta ag teastáil ón eisínteacht.
+144	Is féidir leis an eisínteacht: •
+145	Tagann na heisínteachtaí díreach ó Chrome Web Store agus is lena ndéantóirí iad (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Níorbh fhéidir an leathanach a lódáil.
+147	Ní thacaíonn an suíomh seo le nasc slán (HTTPS). D’fhéadfadh daoine eile ar an líonra céanna – m.sh. ar Wi-Fi poiblí – an méid a fheiceann agus a chlóscríobhann tú anseo a léamh.
+148	An ghearrthaisce a léamh
+149	Tá an seoladh seo cosúil le
+150	Níorbh fhéidir an comhad seo a léamh
+151	Níl an leathanach seo criptithe
+152	Tá an suíomh seo ar an liosta de shuíomhanna contúirteacha
+153	Tá an suíomh seo ar liosta de shuíomhanna fioscaireachta aitheanta. Is minic a bhíonn cuma fhírinneach ar shuíomhanna mar seo, ach teastaíonn uathu do phasfhocail nó do shonraí bainc a ghoid.
+154	Scaipeann an suíomh seo bogearraí mailíseacha
+155	Níl an nasc seo criptithe
+156	Ní féidir an físeán seo a scaradh amach
+157	Difríocht
+158	Íoslódáil
+159	Íoslódáil bactha: scaipeann {0} bogearraí mailíseacha aitheanta
+160	Theip ar an íoslódáil: {0}
+161	Íoslódáil críochnaithe: {0}
+162	Íoslódáil tosaithe: {0}
+163	Oscail fillteán na n-íoslódálacha
+164	Íoslódálacha
+165	Íoslódálacha (Ctrl+J)
+166	Scan íoslódálacha le haghaidh víreas
+167	Cuardaigh íoslódálacha
+168	Bainistigh íoslódálacha
+169	Déantar íoslódálacha a scanadh
+170	Rothlaigh (°)
+171	Casann sé
+172	Rothlú (°)
+173	Beidh tú logáilte amach i ngach áit ina dhiaidh sin.
+174	Ní thógann DuckDuckGo, Brave Search ná Startpage próifíl díot. Taispeánann Startpage torthaí Google gan rianú.
+175	Dorcha
+176	Téama dorcha do gach suíomh.
+177	Dúblaigh
+178	Dúblaigh (Ctrl+D)
+179	Maisíochtaí
+180	Scáthóir saincheaptha (GLSL)
+181	Íomhá shaincheaptha
+182	Íomhá shaincheaptha …
+183	Roghnaigh íomhá chúlra shaincheaptha
+184	Tosaíonn sreabhadh le
+185	Reoigh
+186	Imir
+187	Greamaigh
+188	Oiriúnaigh
+189	Cas air
+190	Socruithe
+191	Níorbh fhéidir na socruithe a shábháil:
+192	Cuir míreanna leis an roghchlár deaschliceála
+193	Cosaint Elektron · Brath seoltaí bréige díreach ar do ríomhaire
+194	Cosaint Elektron · Liostaí ó Phishing.Database agus URLhaus (abuse.ch)
+195	Elektron Studio (scáthóirí agus sreafaí)
+196	Chuir Elektron stop leis an suíomh seo mar go bhfuil sé ar liosta de shuíomhanna calaoise aitheanta.
+197	Seiceálann Elektron go rialta le haghaidh leaganacha nua.
+198	Mol Elektron
+199	Molta
+200	Bain
+201	Baineann sé paraiméadair rianaithe mar utm_, fbclid agus gclid, scipeálann sé rianaitheoirí atreoraithe Google agus Facebook agus osclaíonn sé leathanaigh AMP sa bhunleagan.
+202	Lódáil eisínteacht dhíphacáilte (fillteán le manifest.json)
+203	Lódáil eisínteacht dhíphacáilte …
+204	Cuimhnigh ar an gcinneadh
+205	Uirlisí forbróra
+206	Cluichí saor in aisce Epic
+207	Mínigh é seo dom go simplí, i nGaeilge, le do thoil:
+208	Mínigh dom go simplí, i nGaeilge, cad é atá sa suíomh gréasáin seo.
+209	Ceadaigh
+210	Íoslódáil arís
+211	Bain triail eile as
+212	Cruthaigh íomhá ar dtús – níl aon rud ag teacht chuig “Aschur” fós.
+213	Cuir eisínteacht leis
+214	Eisínteachtaí
+215	Tagann eisínteachtaí ó Chrome Web Store agus oibríonn siad in Elektron díreach mar a oibríonn siad in Chrome. Úsáideann roinnt eisínteachtaí an-mhóra gnéithe Chrome nach bhfuil anseo – ní oibríonn siad ach go páirteach ansin. Tá Claude agus ChatGPT ar fáil freisin sa bharra taoibh ar chlé.
+216	Tá na heisínteachtaí cothrom le dáta
+217	Níl barra na n-eisínteachtaí ar fáil:
+218	Tá an nód “Aschur” ar iarraidh.
+219	Easpórtáil
+220	Bain teorainn FPS
+221	Dath
+222	Dath 1
+223	Dath 2
+224	Rothlaigh an lí
+225	Déan achoimre ghearr ar an suíomh seo i nGaeilge – na príomhphointí mar liosta.
+226	Earráid:
+227	Theip air
+228	Déanta
+229	Fiafraigh
+230	Bac fianáin tríú páirtí
+231	Fianáin tríú páirtí bactha
+232	Reonn sé gach cluaisín cúlra agus íslíonn sé tosaíocht an bhrabhsálaí ionas go mbíonn do chluiche chun tosaigh. Leanann cluaisíní le fuaim ar aghaidh.
+233	Do chainéil ghutha Discord roghnaigh “Fiafraigh” nó “Ceadaigh”.
+234	Le haghaidh deaschliceáil → “Achoimrigh an leathanach” agus “Mínigh”.
+235	Níl mód léitheora ann don leathanach seo
+236	AN RÍOMHAIRE AR FAD
+237	Réaltra
+238	Gaming
+239	Gaming leis na breiseáin go léir – nó brabhsálaí ciúin, gnáth. Is féidir athrú am ar bith.
+240	Tá an brabhsálaí do chluicheoirí ar ais 🎮
+241	Mód cluichíochta
+242	Mód cluichíochta (Ctrl+Shift+G)
+243	Mód cluichíochta ar siúl – cluaisíní cúlra reoite, tosaíocht an bhrabhsálaí íslithe
+244	Mód cluichíochta múchta
+245	Múch mód cluichíochta
+246	Cas air mód cluichíochta
+247	Taispeáin ina iomláine
+248	An leathanach ar fad
+249	Contúirteach
+250	Suíomh contúirteach bactha
+251	Seoladh bréige?
+252	Lódáilte – rómhór le cuimhneamh air, roghnaigh arís tar éis atosú
+253	Scrios an stair ar fad
+254	Athoscail cluaisín dúnta
+255	Sábháilte ✓
+256	Inné
+257	Ná cuir pasfhocail, sonraí bainc ná cárta isteach anseo.
+258	Ná cuir pasfhocail, cóid ná sonraí cárta isteach anseo.
+259	Greille
+260	Tógann Google próifílí – ní thógann DuckDuckGo, Brave ná Startpage
+261	Google Translate
+262	Sábháil an graf mar chomhad
+263	Lódáil comhad grafa
+264	Méid
+265	Méid agus é á shábháil
+266	Is maith a fhios: seiceálann Avast seoltaí na suíomhanna a dtugann tú cuairt orthu. Is féidir leis: sonraí a léamh agus a athrú ar gach suíomh.
+267	Oíche mhaith
+268	Tráthnóna maith
+269	Tráthnóna maith – am do sheisiún.
+270	Maidin mhaith
+271	Maidin mhaith – réidh le himirt?
+272	Mód HTTPS · is féidir é a mhúchadh in GX Control faoi “Cosaint”
+273	Coinnigh an brabhsálaí éadrom ionas go bhfaigheann do chluiche an chumhacht.
+274	Níor oibrigh sé sin
+275	Geal
+276	Geal / dorcha
+277	Gile
+278	Gile agus codarsnacht
+279	Inniu
+280	Cúlra
+281	Cúlra an leathanaigh tosaigh
+282	Cúlra socraithe ✓
+283	Taispeáin fógra
+284	Cuir leis
+285	Baile
+286	Folaigh seoladh IP ó WebRTC
+287	Seoladh IP folaithe ó WebRTC
+288	Tuigim an riosca – oscail an suíomh mar sin féin
+289	Sa chúlra
+290	Taispeáin san fhillteán
+291	Taispeáin san fhillteán
+292	I gcónaí ar barr
+293	I gcónaí ar barr (ar siúl)
+294	I gcónaí ar barr (múchta)
+295	Theip ar an iompórtáil:
+296	Iompórtáil
+297	Scríobh chuig an ngearrthaisce
+298	Oscail i gcluaisín nua
+299	Oscail i gcluaisín príobháideach
+300	Cén teanga ar chóir do Elektron labhairt leat? Taispeánann na bratacha na tíortha ina labhraítear an teanga.
+301	Bac ábhar ar shuíomhanna gréasáin
+302	Suiteáil agus tosaigh
+303	Suiteáilte
+304	Inbhéartaigh
+305	Is ea
+306	Bac JavaScript ar an suíomh seo
+307	Scantar gach comhad íoslódáilte le Windows Defender.
+308	Gach lá
+309	Seiceáil le haghaidh nuashonruithe anois
+310	Atosaigh anois
+311	IS sa bharra taoibh
+312	Cailéideascóp
+313	Ar tháinig an nasc trí ríomhphost, SMS nó Discord? Más ea, is dócha gur calaois a bhí ann.
+314	Ceamara agus micreafón
+315	Níl nasc idirlín ann. Seiceáil an Wi-Fi nó an cábla líonra.
+316	Gan moltaí
+317	Gan nasc slán
+318	Cliceáil an réalta sa bharra seoltaí nó brúigh Ctrl+D.
+319	Cliceáil chun dícheangal
+320	Níorbh fhéidir lódáil:
+321	Codarsnacht
+322	Cóipeáil
+323	Ciorcal
+324	Ná híoslódáil aon rud as seo.
+325	Lódáil
+326	Stop an lódáil
+327	Rith do scanóir víreas mura bhfuil tú cinnte.
+328	Feidhmíocht
+329	Cárta grafaice ardfheidhmíochta
+330	Mód léitheora
+331	Mód léitheora (F9)
+332	Oscail mód léitheora
+333	Leabharmharcanna
+334	Cúltaca de leabharmharcanna agus socruithe …
+335	Cuardaigh leabharmharcanna
+336	Bain leabharmharc (Ctrl+D)
+337	Leabharmharc bainte
+338	Taispeántar leabharmharcanna anseo – cliceáil an réalta sa bharra seoltaí.
+339	Leabharmharc sábháilte
+340	Cuir leabharmharc leis (Ctrl+D)
+341	Sábháil leabharmharcanna agus socruithe mar chomhad – m.sh. do ríomhaire nua.
+342	Cúltaca de leabharmharcanna agus socruithe
+343	Taispeáin barra na leabharmharcanna
+344	Folaigh barra na leabharmharcanna
+345	Scrios na 24 uair an chloig deireanacha
+346	Scrios an uair an chloig dheireanach
+347	Má théann an brabhsálaí thar an teorainn, reoitear an cluaisín cúlra is ocraí.
+348	Teorainn
+349	Líneach
+350	Leithead líne
+351	Oscail nasc i scáileán scoilte
+352	Oscail nasc i gcluaisín nua
+353	Oscail nasc i gcluaisín príobháideach
+354	Cóipeáil nasc
+355	Nasc cóipeáilte – seol chuig do chairde é!
+356	Glan naisc
+357	Réamhlódáil naisc
+358	Glantar naisc
+359	Glan an liosta
+360	Liosta róghearr
+361	Ní cheadaítear seoltaí áitiúla
+362	Tosaigh
+363	Lódálann sé leathanaigh criptithe i gcónaí agus tugann sé rabhadh nuair nach féidir le suíomh é sin a dhéanamh.
+364	Lódálann sé íomhá ón idirlíon
+365	Á lódáil …
+366	Scrios
+367	Scrios (Del)
+368	Gléasanna MIDI
+369	Aistrigh téacs roghnaithe nó leathanaigh iomlána.
+370	Masc
+371	Masc (geal = infheicthe)
+372	Uasslándáil
+373	Níos mó príobháideachais: cuardaíonn tú anois le DuckDuckGo in ionad Google
+374	Roghchlár
+375	Micreafón
+376	Nuair a íoslaghdaíonn tú an brabhsálaí do chluiche, bíonn gach cluaisín ciúin ina scíth.
+377	Nóiméid
+378	Meascán
+379	Cuardaigh le Google
+380	Cuardaigh le Google nó cuir seoladh isteach
+381	Mínigh le {0}
+382	Cuardaigh le {0}
+383	Cuardaigh le {0} nó cuir seoladh isteach
+384	Cuardaigh le {0}: “{1}”
+385	Mód
+386	Luan – Aoine
+387	Iolraigh
+388	Patrún
+389	Seiceáil le haghaidh nuashonruithe
+390	Ainm
+391	Néal
+392	Scáileán
+393	Ní hea
+394	Neon
+395	Greille neoin
+396	Teorantóir líonra
+397	Monatóireacht ar thrácht líonra
+398	Trácht líonra a bhacadh agus a athrú
+399	Nua
+400	Athlódáil
+401	Athlódáil (F5)
+402	Atosaigh agus suiteáil
+403	Cluaisín nua
+404	Cluaisín nua (Ctrl+T)
+405	Cluaisín príobháideach nua
+406	Íomhá nua fholamh
+407	Atosaigh
+408	Níor aimsíodh
+409	Gan sábháil
+410	Ní féidir
+411	Neamhshlán
+412	Níor aimsíodh aon rud
+413	Céim amháin eile: molaimid na heisínteachtaí seo le haghaidh tuilleadh slándála. Roghnaigh an rud atá uait – is féidir iad a bhaint am ar bith faoi “Eisínteachtaí”.
+414	Babhta eile? Tá sé meán oíche.
+415	Gan íoslódálacha fós
+416	Níl eisínteachtaí suiteáilte fós. Oscail Chrome Web Store agus cliceáil “Cuir leis” ansin.
+417	Gan leabharmharcanna fós
+418	Níor cuireadh seoladh nuashonraithe isteach fós (GX Control → Nuashonruithe)
+419	Cuardaigh nód …
+420	Gnáth
+421	Gnáthbhrabhsálaí – tá eilimintí cluichíochta folaithe
+422	Comhaid amháin le (folamh = gach ceann)
+423	HTTPS amháin
+424	Uair sa lá amháin
+425	Seoltaí http agus https amháin
+426	Úsáideann sé an GPU tiomnaithe (m.sh. RTX) in ionad na grafaice comhtháite.
+427	An chéad mheaitseáil eile (F3)
+428	Lean ar aghaidh gan eisínteachtaí
+429	Roghnach
+430	Roghanna
+431	Dún an painéal
+432	Bainisteoir pasfhocal
+433	Cosaint ar fhioscaireacht agus ar bhogearraí mailíseacha
+434	Méid picteilín
+435	Plasma (ildaite, beoite)
+436	Na Saighneáin
+437	Príobháideach
+438	Inneall cuardaigh príobháideach
+439	Cluaisín príobháideach
+440	Cluaisín príobháideach – imíonn stair, fianáin agus logálacha isteach a luaithe a dhúnann tú gach cluaisín príobháideach.
+441	Cluaisín príobháideach – gan stair ná fianáin tar éis dúnadh
+442	Feidhmchlár daingnithe
+443	Socruithe seachfhreastalaí a athrú
+444	Scanann sé íoslódálacha le Windows Defender (níl sé ar fáil ar an ríomhaire seo).
+445	Poncanna
+446	Foinsí
+447	RAM {0} as {1}
+448	Teorantóir RAM
+449	Aistriú RGB (glitch)
+450	Torann / scamaill
+451	Tairgeann deaschliceáil ar chluaisín é seo go léir freisin.
+452	Cuireann deaschliceáil nó an spásbharra nóid leis. Tarraing ón bponc ar dheis nóid go dtí an ponc ar chlé an chéad nóid eile. Gach rud a shroicheann
+453	Deaschliceáil nó spásbharra: cuir nód leis · Tarraing an cúlra: bog · Roth na luiche: zúmáil · Del: scrios
+454	Retro
+455	Sléibhte retro
+456	Insíonn sé do gach suíomh trí Global Privacy Control nach féidir do shonraí a dhíol ná a roinnt.
+457	Clár fichille
+458	Bogearraí mailíseacha bactha
+459	Múchann sé turbó JavaScript (JIT) – an dromchla ionsaithe is coitianta i mbrabhsálaithe. Éiríonn suíomhanna níos moille agus stopann roinnt cluichí brabhsálaí ag obair. Tagann sé i bhfeidhm tar éis atosú.
+460	Cuir a chodladh (saor RAM)
+461	Simplí
+462	Dún
+463	Dún (Esc)
+464	Rochtain thapa
+465	Tá sé 22:00 cheana – scoil/obair amárach 😉
+466	Téacs níos mó
+467	Téacs níos lú
+468	Cosaint
+469	Cosaint don suíomh seo (cliceáil)
+470	Cas an chosaint air arís don suíomh seo
+471	Cosaint do {0}
+472	Cosaint ar mhéarlorgú
+473	Liosta cosanta {0}:
+474	Dubh agus bán
+475	Fuinneog snámha
+476	Bíodh lá maith agat
+477	Gabháil scáileáin
+478	Gabháil scáileáin (Ctrl+Shift+X) – deaschliceáil: an leathanach ar fad
+479	Gabháil scáileáin (an leathanach ar fad)
+480	Gabháil scáileáin (an chuid infheicthe)
+481	Níor oibrigh an ghabháil scáileáin
+482	Gabháil scáileáin cóipeáilte – greamaigh in Discord le Ctrl+V
+483	Glac gabháil scáileáin
+484	Leathanach
+485	Aistrigh an leathanach go Gaeilge
+486	Déan dearmad ar an suíomh nuair a dhúntar é (scrios fianáin)
+487	Priontáil leathanach …
+488	Níl an suíomh ag obair? Múch an chosaint anseo
+489	Achoimrigh an leathanach le {0}
+490	Ní féidir an suíomh a shroicheadh
+491	Iniúch an leathanach
+492	Malartaigh na taobhanna
+493	Oscail an barra taoibh
+494	Cóimheas réamhamhairc
+495	Soicindí
+496	D’fhreagair an freastalaí le hearráid {0}
+497	Scáthóirí agus íomhánna
+498	Nasc slán
+499	DNS slán
+500	Slándáil
+501	Seiceáil slándála
+502	Cúltaca agus athchóiriú
+503	Déan cúltaca …
+504	Cúltaca sábháilte
+505	Athchóirigh cúltaca
+506	Athchóirigh cúltaca …
+507	An chuid infheicthe
+508	Conas a oibríonn sé
+509	Conas a oibríonn sé:
+510	Eile
+511	Sábháil
+512	Theip ar an sábháil:
+513	Stórálann sé do phasfhocail go slán agus líonann sé isteach go huathoibríoch iad.
+514	Stórálann sé do phasfhocail criptithe agus líonann sé isteach iad go huathoibríoch ar shuíomhanna. Saor in aisce, foinse oscailte.
+515	Scáileán scoilte
+516	Scáileán scoilte (Ctrl+Shift+S)
+517	Scáileán scoilte ar siúl – tarraing an deighilteoir chun é a choigeartú
+518	Cuir deireadh leis an scáileán scoilte
+519	Cuir deireadh leis an scáileán scoilte (Ctrl+Shift+S)
+520	Teanga
+521	Cuardaigh teanga nó tír …
+522	Teanga Windows
+523	Teanga Windows: {0}
+524	Athchóirigh an réamhshocrú
+525	Tosach
+526	Leathanach tosaigh (Alt+Home)
+527	Rialú
+528	Sín
+529	Stríoca
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T cluaisín nua · Ctrl+D leabharmharc · Ctrl+H stair · F11 lánscáileán
+537	Ctrl+Shift+G tosaíonn mód cluichíochta · Ctrl+T cluaisín nua · F11 lánscáileán
+538	Stiúideo
+539	Sraitheanna
+540	Balbhaigh
+541	Neart
+542	Trasnaíocht
+543	Ag seiceáil le haghaidh nuashonruithe …
+544	Inneall cuardaigh
+545	Moltaí cuardaigh agus tú ag clóscríobh sa bharra seoltaí (seoltar chuig an inneall cuardaigh iad)
+546	Sáithiú
+547	Cluaisín
+548	Thuairteáil an cluaisín – cliceáil chun athlódáil
+549	Cluaisín mar fhuinneog snámha
+550	Cluaisín mar fhuinneog snámha (Ctrl+Shift+F)
+551	Dún an cluaisín
+552	Tá an cluaisín ag snámh os cionn gach fuinneoige anois
+553	Balbhaigh an cluaisín
+554	Oscail cluaisín
+555	Cluaisíní
+556	Dún cluaisíní ar dheis
+557	Athchóirigh cluaisíní
+558	Laethanta
+559	Eochair
+560	Aicearra méarchláir
+561	Míreanna
+562	Luas
+563	Téacs
+564	Téacs (sliocht):
+565	Teideal:
+566	Fuaim gach cluaisín
+567	Díbhalbhaigh
+568	Glas tocsaineach
+569	Trédhearcacht
+570	Twitch oscailte – tá mód cluichíochta ar siúl 🎮
+571	Am (UU:NN)
+572	Ultraivialait
+573	Inbhéartaigh
+574	Scoránaigh
+575	Seoladh neamhbhailí
+576	Doiléiriú
+577	Níl íomhá ag an seoladh seo (leid: deaschliceáil ar íomhá → “Cóipeáil seoladh na híomhá”)
+578	Oscail gan chriptiú
+579	Nuashonrú réidh – atosaigh an brabhsálaí
+580	Theip ar nuashonrú na n-eisínteachtaí
+581	Suiteáil nuashonrú
+582	Suiteáil nuashonrú agus atosaigh
+583	Tá nuashonrú {0} réidh
+584	Tá nuashonrú {0} á íoslódáil sa chúlra …
+585	Seoladh nuashonraithe (fillteán ar do shuíomh gréasáin)
+586	Modúl nuashonraithe ar iarraidh
+587	Theip ar sheiceáil nuashonraithe: {0}
+588	Nuashonruithe
+589	Oibríonn nuashonruithe sa leagan suiteáilte
+590	Toirmiscthe
+591	Zúmáil isteach
+592	Zúmáil amach
+593	Stair
+594	Cuardaigh sa stair
+595	Fritháireamh
+596	Bog / zúmáil / rothlaigh
+597	Criptíonn sé na suíomhanna a dtugann tú cuairt orthu (DNS thar HTTPS le Quad9 ón Eilvéis) agus bacann sé seoltaí aitheanta bogearraí mailíseacha freisin.
+598	Leagan
+599	Tá leagan {0} cothrom le dáta.
+600	Tá leagan {0} réidh – suiteálfar é ag an gcéad tosú eile.
+601	Leagan {0} á íoslódáil … {1} %
+602	Leagan {0} · Chromium {1}
+603	Leagan {0} · Níor cuireadh seoladh nuashonraithe isteach fós.
+604	Leagan {0} · Tá nuashonruithe ar fáil sa leagan Windows suiteáilte.
+605	Leagan {0} · Tagann nuashonruithe go huathoibríoch trí Microsoft Store.
+606	Bainistigh
+607	Scar an físeán amach
+608	Scar an físeán amach (pictiúr i bpictiúr)
+609	Scar an físeán amach – pictiúr i bpictiúr (Ctrl+Shift+P)
+610	Scar físeáin amach go huathoibríoch
+611	Balbhaítear fógraí físe agus scipeáiltear láithreach iad, imíonn spásanna fógraíochta.
+612	Vinéad
+613	Víreas aimsithe in {0} – bhain Windows Defender an comhad
+614	Víreas aimsithe – bhain Windows Defender an comhad
+615	Lánscáileán
+616	Ó
+617	Scaipeadh víris nó bogearraí mailíseacha eile ón suíomh seo. Chuir Elektron stop leo sular shroich aon rud do ríomhaire.
+618	Ar aghaidh
+619	Ar aghaidh (Alt+→)
+620	An mheaitseáil roimhe seo (Shift+F3)
+621	Moltaí
+622	Cíor mheala
+623	Dóchúlacht (%)
+624	Tugann sé rabhadh freisin faoi shuíomhanna contúirteacha. De ghnáth níl gá leis in éineacht le Malwarebytes – déanann an dá cheann an rud céanna.
+625	Tugann sé rabhadh faoi shuíomhanna contúirteacha agus fioscaireacht.
+626	Rabhadh faoi sheoltaí bréige
+627	Fan
+628	Cad a tharlaíonn nuair is mian le suíomh do cheamara a úsáid.
+629	Níl WebGL 2 ar fáil ar an ríomhaire seo.
+630	Ceamara gréasáin
+631	Cianrialú ar shuíomhanna gréasáin (dífhabhtóir)
+632	Bíonn sé níos deacra do shuíomhanna do ríomhaire a aithint (canvas, ainm an chárta grafaice, croíleacáin LAP).
+633	Ní féidir le suíomhanna do sheoladh IP áitiúil a léamh trí theicneolaíocht comhrá físe a thuilleadh – fiú taobh thiar de VPN.
+634	Má athraíonn tú cluaisín nó má íoslaghdaíonn tú an brabhsálaí, leanann an físeán ar aghaidh i bhfuinneog bheag (pictiúr i bpictiúr).
+635	Boige
+636	Leabharmharcanna eile
+637	Tonnta
+638	Taispeáin níos lú
+639	Má tá mód cluichíochta ar siúl
+640	Nuair a bhíonn mód cluichíochta …
+641	Más é an lá
+642	Má tá an t-am idir
+643	Má tá sa chluaisín gníomhach
+644	Nuair a thosaíonn an brabhsálaí
+645	Más mian leat dul chuig {0}, úsáid an cnaipe thíos.
+646	Nuair a chríochnaíonn íoslódáil
+647	Nuair a osclaítear leathanach
+648	Bacóir fógraí agus rianaitheoirí
+649	Bacóir fógraí
+650	Níorbh fhéidir an bacóir fógraí a lódáil:
+651	Ní féidir le comhlachtaí fógraíochta tú a leanúint thar shuíomhanna éagsúla a thuilleadh. Leanann logáil isteach, captcha agus íocaíochtaí ag obair.
+652	Fógraí/rianaitheoirí bactha: {0} · Fianáin rianaithe stoptha: {1}
+653	Uirlisí
+654	Cas air arís
+655	Athchóirithe: {0} leabharmharc nua agus do shocruithe
+656	Athchóirigh …
+657	Athdhéan (tíleanna)
+658	Fáilte
+659	Fáilte go Elektron
+660	Níor aimsíodh Windows Defender
+661	Uillinn
+662	Nuair a sháraítear an teorainn, téann na cluaisíní nár úsáideadh le fada a chodladh.
+663	Á shuiteáil …
+664	An bhfuil tú cinnte gur mian leat an stair ar fad a scriosadh?
+665	An bhfuil tú cinnte gur mian leat é a oscailt? Is eol gur suíomh contúirteach é seo.
+666	Deireadh seachtaine
+667	Scipeáil fógraí YouTube
+668	Taispeánann sé na “ní maith liom” faoi fhíseáin YouTube arís.
+669	Línte
+670	Am
+671	Am do shos! 🎮
+672	Am istigh
+673	Am istigh le linn lódála
+674	Tarraing chun coigeartú · Déchliceáil: 50/50
+675	Zúmáil
+676	Athshocraigh an zúmáil
+677	Athshocraigh an zúmáil (Ctrl+0)
+678	Randamach
+679	Le triail a bhaint as: cnaipe
+680	Athraigh go brabhsálaí na gcluicheoirí
+681	Cuir leis an bhfoclóir
+682	Athraigh go gnáthbhrabhsálaí
+683	Ag am áirithe
+684	Téigh chuig an bhfíorshuíomh: {0}
+685	Siar
+686	Siar (Alt+←)
+687	Ar ais go sábháilteacht
+688	Ar ais chuig an mbrabhsálaí
+689	Tabhair ar ais isteach sa bhrabhsálaí
+690	Ar ais chuig Google
+691	ar thruicear.
+692	ag an deireadh, feiceann tú thuas é. Íomhánna ón idirlíon: deaschliceáil ar íomhá → “Cóipeáil seoladh na híomhá” agus greamaigh sa nód.
+693	do mhicreafón
+694	do cheamara
+695	do scáileán
+696	do shuíomh
+697	níorbh fhéidir comhad na leabharmharcanna a léamh.
+698	an ghearrthaisce
+699	gan teorainn
+700	ní cúltaca Elektron é
+701	léamh agus athrú
+702	ní cheadaítear
+703	sa leagan suiteáilte amháin
+704	m.sh. .exe nó .zip
+705	m.sh. youtube.com
+706	{0} íoslódáil ar siúl – Ctrl+J
+707	{0} leabharmharc iompórtáilte ó {1}.
+708	{0} fianán rianaithe stoptha
+709	{0} nasc rianaithe díchumasaithe
+710	Níl {0} ag freagairt in am.
+711	Dhiúltaigh {0} an nasc.
+712	Tá {0} críochnaithe – níor aimsíodh víreas
+713	Níorbh fhéidir {0} a lódáil.
+714	Níorbh fhéidir {0} a shuiteáil. Seiceáil do nasc idirlín agus bain triail eile as – nó suiteáil níos déanaí é trí Roghchlár → Chrome Web Store.
+715	Iarrann {0} rochtain ar: {1}.
+716	Tosaigh {0}
+717	{0} as {1} gné chosanta gníomhach.
+718	Rinneadh dearmad ar {0} – fianáin agus sonraí suímh scriosta
+719	{0} – ní féidir é a shroicheadh
+720	· Uath
+721	· á scanadh le haghaidh víreas …
+722	· ✓ gan víreas (Windows Defender)
+723	Athraigh …
+724	Is fearr bainc, Steam, Discord srl. a oscailt go díreach tríd an mbarra seoltaí nó trí leabharmharc.
+725	Ná hoscail comhaid a fuair tú ón suíomh seo cheana.
+726	Oscail
+727	Osclaíonn sé do chluaisíní ón uair dheireanach ag an tús – ní lódáiltear iad go dtí go gcliceálann tú orthu.
+728	Maidir le {0}
+729	Forleagan
+730	Aistrigh
+731	Aistriúcháin gan ráthaíocht – an bhfuair tú botún? Tuairiscigh é ar GitHub agus feabhsóimid é go fonnmhar.
+732	Scipeálann sé míreanna urraithe i bhfíseáin YouTube.
+733	– pictiúr i bpictiúr
+734	– scáileán scoilte
+735	– fanann an cluaisín os cionn do chluiche
+736	– reoite
+737	– príobháideach
+738	– ina chodladh (cliceáil chun lódáil)
+739	– fuinneog snámha (cliceáil chun taispeáint)
+740	– dhá chluaisín taobh le taobh
+741	Comhartha “Ná díol” (GPC)
+742	“{0}” a bhaint?
+743	Lódáladh “{0}”.
+744	Cuireadh “{0}” leis
+745	“{0}” a chur le Elektron?
+746	… múchta
+747	… curtha ar siúl
+748	← Bunleathanach
+749	▶ Tástáil anois
+750	✓ Curtha i gcrích
+751	🎮 Gaming
