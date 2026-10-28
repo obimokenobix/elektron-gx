@@ -1,0 +1,752 @@
+0	(biru) atau
+1	(ungu). Perubahan disimpan secara automatik dan berkuat kuasa serta-merta.
+2	(merah) – cth. “Apabila halaman dibuka”. Sambungkan anak panah putih ke
+3	1 muat turun sedang berjalan – Ctrl+J
+4	1080 × 1080 (segi empat sama)
+5	1080 × 1920 (telefon)
+6	1920 × 1080 (Full HD)
+7	A (bawah)
+8	Batal
+9	Dibatalkan
+10	Aliran
+11	Aliran aktif
+12	Tambah (sinar)
+13	Alamat
+14	Alamat mengandungi
+15	Alamat, cth. roblox.com
+16	Alamat:
+17	Alamat: {0}
+18	Tindakan
+19	Tutup tab aktif
+20	Warna aksen
+21	Membaca dan mengubah semua data di semua laman web
+22	Semua penanda halaman
+23	Semua penanda halaman (Ctrl+Shift+O)
+24	Urus semua penanda halaman …
+25	Semua tetapan perlindungan …
+26	Semua fungsi perlindungan aktif.
+27	Putuskan semua sambungan
+28	Kemas kini semua
+29	Tunjukkan semua
+30	Setiap beberapa minit
+31	Tunjukkan kesemua {0}
+32	Pilih semua
+33	Padam semua dan mula semula?
+34	Semua yang anda boleh tetapkan dalam Elektron.
+35	Simpan sebagai imej (PNG)
+36	Jadikan pelayar lalai …
+37	Jadikan latar halaman mula
+38	Buka sebagai tetingkap terapung
+39	Urus sambungan lain
+40	Tutup tab lain
+41	Animasi
+42	Beranimasi
+43	Jenis
+44	Cari dalam halaman
+45	Cari dalam halaman …
+46	Tiada apa-apa untuk disekat di halaman ini
+47	Tiada video dimainkan di halaman ini
+48	Import daripada Chrome
+49	Import daripada Edge
+50	Import daripada Opera GX
+51	Alih keluar daripada senarai
+52	Isi
+53	Output
+54	Pencetus
+55	Matikan
+56	Potong
+57	Automatik
+58	Secara automatik
+59	Kemas kini secara automatik
+60	B (atas)
+61	Menyambung sebaik sahaja tetikus berada di atas pautan – lebih pantas, tetapi laman melihat alamat IP anda sebelum anda klik.
+62	Edit
+63	Edit …
+64	Syarat
+65	Keluar
+66	Mengehadkan lebar jalur semua tab supaya ping anda kekal stabil semasa bermain.
+67	Bekukan apabila diminimumkan
+68	Contoh
+69	Muatkan contoh? Aliran semasa anda akan diganti.
+70	Popular
+71	Pemberitahuan
+72	Tunjukkan pemberitahuan
+73	Kebenaran
+74	Sedia untuk bermain?
+75	Laman penipuan disekat
+76	Pergerakan
+77	Imej
+78	Pilih imej …
+79	Simpan imej ini
+80	Buka imej dalam tab baharu
+81	Imej terlalu besar (maks. 25 MB)
+82	Imej tidak dapat dimuatkan
+83	Salin imej
+84	Simpan imej …
+85	Imej daripada PC
+86	Alamat imej (https://…)
+87	Masukkan alamat imej dan tekan “Muatkan”
+88	Imej
+89	Hingga
+90	Masukkan alamat yang bermula dengan https://
+91	Sekat
+92	Menyekat laman penipuan, perisian hasad, perangkap langganan dan penipuan sokongan teknikal palsu. Percuma, tanpa akaun.
+93	Menyekat iklan, penjejak, tetingkap timbul dan sepanduk kuki – setakat ini {0} permintaan dihentikan.
+94	Menyekat iklan, penjejak, iklan timbul dan sepanduk kuki.
+95	Menyekat laman penipuan yang diketahui dan laman yang menyebarkan virus.
+96	Menyekat laman penipuan yang diketahui dan laman yang menyebarkan virus. Senarai sedang dimuatkan …
+97	Menyekat {0} laman penipuan dan virus yang diketahui. Senarai dikemas kini setiap 6 jam.
+98	Memerlukan akaun Bitwarden percuma. Dibenarkan: membaca dan mengubah data di semua laman web (untuk pengisian).
+99	Pelayar sudah terkini
+100	Beban pelayar
+101	Permainan pelayar berjalan tanpa V-Sync melebihi kadar segar semula. Boleh menyebabkan imej terkoyak.
+102	Gaya pelayar
+103	Data penyemakan imbas dipadam
+104	Padam data penyemakan imbas sekarang
+105	Padam data penyemakan imbas
+106	Pengehad CPU
+107	Gunakan ChatGPT terus dalam pelayar.
+108	Chrome Web Store tidak tersedia
+109	Buka Chrome Web Store
+110	Claude sebagai sambungan – atau terus melalui bar sisi.
+111	Kod
+112	Menjalankan kod di laman web
+113	Komik / poster
+114	Padam kuki dan log masuk semasa keluar
+115	Membaca dan mengubah kuki
+116	Kemudian
+117	Dibenarkan:
+118	Dibenarkan: membaca dan mengubah data di semua laman web (untuk memeriksa dan menyekat).
+119	Imej terlalu besar (maks. 25 MB)
+120	Sijil keselamatan {0} tidak dipercayai.
+121	Sijil keselamatan {0} tidak sah.
+122	Ini bukan imej yang sah
+123	Ini bukan fail aliran.
+124	Ini bukan fail pelorek.
+125	Fail telah dipadam atau dialihkan
+126	Data di
+127	Mengubah tetapan privasi
+128	Kelegapan
+129	Membaca dan mengubah penanda halaman anda
+130	Permainan anda
+131	Membaca dan mengubah sejarah penyemakan imbas anda
+132	Membaca sejarah penyemakan imbas dan tab yang terbuka
+133	Menentukan lokasi anda
+134	Pelayar untuk pemain. Chromium {0} · Electron {1}
+135	Sejarah kosong
+136	Reka bentuk
+137	Desktop
+138	Butiran
+139	Kepadatan
+140	Alamat ini amat menyerupai laman sebenar {0} – helah biasa penipu. Lihat dengan teliti: satu huruf telah ditukar tempat, diganti atau daripada abjad lain.
+141	Alamat mesti bermula dengan https://
+142	Alamat {0} tidak ditemui. Adakah ejaannya betul?
+143	Sambungan ini tidak memerlukan kebenaran khas.
+144	Sambungan ini boleh: •
+145	Sambungan datang terus dari Chrome Web Store dan milik pembuatnya (Malwarebytes, Bitwarden Inc., Avast/Gen Digital).
+146	Halaman tidak dapat dimuatkan.
+147	Laman ini tidak menyokong sambungan selamat (HTTPS). Orang lain dalam rangkaian yang sama – cth. Wi-Fi awam – mungkin dapat melihat apa yang anda lihat dan taip di sini.
+148	Membaca papan keratan
+149	Alamat ini kelihatan seperti
+150	Fail ini tidak dapat dibaca
+151	Halaman ini tidak disulitkan
+152	Laman ini ada dalam senarai laman berbahaya
+153	Laman ini ada dalam senarai laman pancingan data yang diketahui. Laman sebegini selalunya kelihatan tulen, tetapi mahu mencuri kata laluan atau data bank anda.
+154	Laman ini menyebarkan perisian hasad
+155	Sambungan ini tidak disulitkan
+156	Video ini tidak boleh dipisahkan
+157	Perbezaan
+158	Muat turun
+159	Muat turun disekat: {0} menyebarkan perisian hasad yang diketahui
+160	Muat turun gagal: {0}
+161	Muat turun selesai: {0}
+162	Muat turun dimulakan: {0}
+163	Buka folder muat turun
+164	Muat turun
+165	Muat turun (Ctrl+J)
+166	Imbas muat turun untuk virus
+167	Cari dalam muat turun
+168	Urus muat turun
+169	Muat turun sedang diperiksa
+170	Putar (°)
+171	Berputar
+172	Putaran (°)
+173	Selepas itu anda akan dilog keluar di semua tempat.
+174	DuckDuckGo, Brave Search dan Startpage tidak membina profil anda. Startpage memaparkan hasil Google tanpa penjejakan.
+175	Gelap
+176	Reka bentuk gelap untuk setiap laman web.
+177	Pendua
+178	Pendua (Ctrl+D)
+179	Kesan
+180	Pelorek sendiri (GLSL)
+181	Imej sendiri
+182	Imej sendiri …
+183	Pilih imej latar sendiri
+184	Satu aliran bermula dengan
+185	Bekukan
+186	Warnakan
+187	Tampal
+188	Muatkan ke bingkai
+189	Hidupkan
+190	Tetapan
+191	Tetapan tidak dapat disimpan:
+192	Menambah item pada menu klik kanan
+193	Perlindungan Elektron · Pengesanan laman tiruan terus pada PC anda
+194	Perlindungan Elektron · Senarai daripada Phishing.Database dan URLhaus (abuse.ch)
+195	Elektron Studio (pelorek dan aliran)
+196	Elektron menghentikan laman ini kerana ia ada dalam senarai laman penipuan yang diketahui.
+197	Elektron kerap mencari versi baharu.
+198	Syorkan Elektron
+199	Disyorkan
+200	Alih keluar
+201	Membuang tambahan penjejakan seperti utm_, fbclid dan gclid, melangkau penjejak ubah hala Google dan Facebook serta membuka halaman AMP dalam versi asal.
+202	Muatkan sambungan tidak berpek (folder dengan manifest.json)
+203	Muatkan sambungan tidak berpek …
+204	Ingat keputusan
+205	Alat pembangun
+206	Permainan percuma Epic
+207	Tolong terangkan ini dengan mudah dalam bahasa Melayu:
+208	Terangkan dengan mudah dalam bahasa Melayu tentang apa laman web ini.
+209	Benarkan
+210	Muat turun semula
+211	Cuba lagi
+212	Bina imej dahulu – belum ada apa-apa yang sampai ke “Output”.
+213	Tambah sambungan
+214	Sambungan
+215	Sambungan datang dari Chrome Web Store dan berfungsi dalam Elektron seperti dalam Chrome. Sesetengah sambungan yang sangat besar menggunakan ciri Chrome yang tiada di sini – jadi ia hanya berfungsi sebahagian. Claude dan ChatGPT juga ada terus di bar sisi kiri.
+216	Sambungan sudah terkini
+217	Bar sambungan tidak tersedia:
+218	Nod “Output” tiada.
+219	Eksport
+220	Buang had FPS
+221	Warna
+222	Warna 1
+223	Warna 2
+224	Putar rona
+225	Ringkaskan laman web ini secara ringkas dalam bahasa Melayu – perkara terpenting dalam bentuk senarai.
+226	Ralat:
+227	Gagal
+228	Selesai
+229	Tanya
+230	Sekat kuki pihak ketiga
+231	Kuki pihak ketiga disekat
+232	Membekukan semua tab latar belakang dan merendahkan keutamaan pelayar supaya permainan anda didahulukan. Tab yang memainkan bunyi terus berjalan.
+233	Untuk saluran suara Discord pilih “Tanya” atau “Benarkan”.
+234	Untuk klik kanan → “Ringkaskan halaman” dan “Terangkan”.
+235	Tiada mod bacaan untuk halaman ini
+236	SELURUH PC
+237	Galaksi
+238	Gaming
+239	Gaming dengan semua ekstra – atau pelayar biasa yang tenang. Boleh ditukar bila-bila masa.
+240	Pelayar gaming kembali 🎮
+241	Mod gaming
+242	Mod gaming (Ctrl+Shift+G)
+243	Mod gaming hidup – tab latar dibekukan, keutamaan pelayar direndahkan
+244	Mod gaming mati
+245	Matikan mod gaming
+246	Hidupkan mod gaming
+247	Tunjukkan sepenuhnya
+248	Seluruh halaman
+249	Berbahaya
+250	Laman berbahaya disekat
+251	Alamat palsu?
+252	Dimuatkan – terlalu besar untuk diingat, pilih semula selepas mula semula
+253	Padam semua sejarah
+254	Pulihkan tab yang ditutup
+255	Disimpan ✓
+256	Semalam
+257	Jangan masukkan kata laluan, data bank atau kad di sini.
+258	Jangan masukkan kata laluan, kod atau data kad di sini.
+259	Grid
+260	Google membina profil – DuckDuckGo, Brave dan Startpage tidak
+261	Google Terjemah
+262	Simpan graf sebagai fail
+263	Muatkan fail graf
+264	Saiz
+265	Saiz semasa menyimpan
+266	Baik untuk diketahui: Avast menyemak alamat halaman yang anda lawati. Dibenarkan: membaca dan mengubah data di semua laman web.
+267	Selamat malam
+268	Selamat petang
+269	Selamat petang – masa untuk satu sesi.
+270	Selamat pagi
+271	Selamat pagi – sedia untuk bermain?
+272	Mod HTTPS · boleh dimatikan dalam GX Control di bawah “Perlindungan”
+273	Pastikan pelayar ringan supaya permainan anda mendapat semua kuasa.
+274	Tidak berjaya
+275	Cerah
+276	Cerah / gelap
+277	Kecerahan
+278	Kecerahan dan kontras
+279	Hari ini
+280	Latar
+281	Latar halaman mula
+282	Latar ditetapkan ✓
+283	Tunjukkan nota
+284	Tambah
+285	Laman utama
+286	Sembunyikan alamat IP dalam WebRTC
+287	Alamat IP dalam WebRTC disembunyikan
+288	Saya faham risikonya – buka laman juga
+289	Di latar belakang
+290	Tunjukkan dalam folder
+291	Paparkan dalam folder
+292	Sentiasa di atas
+293	Sentiasa di atas (hidup)
+294	Sentiasa di atas (mati)
+295	Import gagal:
+296	Import
+297	Menulis ke papan keratan
+298	Buka dalam tab baharu
+299	Buka dalam tab peribadi
+300	Dalam bahasa apakah Elektron patut bercakap dengan anda? Bendera menunjukkan negara tempat bahasa itu dituturkan.
+301	Menyekat kandungan di laman web
+302	Pasang dan mula
+303	Dipasang
+304	Songsangkan
+305	Ya
+306	Sekat JavaScript di laman ini
+307	Setiap fail yang dimuat turun diperiksa dengan Windows Defender.
+308	Setiap hari
+309	Cari kemas kini sekarang
+310	Mula semula sekarang
+311	AI di bar sisi
+312	Kaleidoskop
+313	Pautan itu datang melalui e-mel, SMS atau Discord? Kemungkinan besar ia penipuan.
+314	Kamera dan mikrofon
+315	Tiada sambungan internet. Semak Wi-Fi atau kabel rangkaian.
+316	Tiada cadangan
+317	Tiada sambungan selamat
+318	Klik bintang di bar alamat atau tekan Ctrl+D.
+319	Klik untuk memisahkan
+320	Tidak dapat dimuatkan:
+321	Kontras
+322	Salin
+323	Bulatan
+324	Jangan muat turun apa-apa dari sini.
+325	Muatkan
+326	Hentikan pemuatan
+327	Jalankan antivirus anda jika tidak pasti.
+328	Prestasi
+329	Kad grafik berkuasa
+330	Mod bacaan
+331	Mod bacaan (F9)
+332	Buka mod bacaan
+333	Penanda halaman
+334	Sandarkan penanda halaman dan tetapan …
+335	Cari penanda halaman
+336	Alih keluar penanda halaman (Ctrl+D)
+337	Penanda halaman dialih keluar
+338	Penanda halaman dipaparkan di sini – klik bintang di bar alamat.
+339	Penanda halaman disimpan
+340	Tambah penanda halaman (Ctrl+D)
+341	Simpan penanda halaman dan tetapan sebagai fail – cth. untuk PC baharu.
+342	Sandarkan penanda halaman dan tetapan
+343	Tunjukkan bar penanda halaman
+344	Sembunyikan bar penanda halaman
+345	Padam 24 jam terakhir
+346	Padam sejam terakhir
+347	Jika pelayar melebihi had, tab latar yang paling banyak menggunakan sumber akan dibekukan.
+348	Had
+349	Linear
+350	Lebar garisan
+351	Buka pautan dalam skrin pisah
+352	Buka pautan dalam tab baharu
+353	Buka pautan dalam tab peribadi
+354	Salin pautan
+355	Pautan disalin – hantar kepada kawan anda!
+356	Bersihkan pautan
+357	Pramuat pautan
+358	Pautan sedang dibersihkan
+359	Kosongkan senarai
+360	Senarai terlalu pendek
+361	Alamat tempatan tidak dibenarkan
+362	Mula
+363	Sentiasa memuatkan halaman secara tersulit dan memberi amaran jika laman tidak dapat berbuat demikian.
+364	Memuatkan imej dari internet
+365	Memuatkan …
+366	Padam
+367	Padam (Del)
+368	Peranti MIDI
+369	Terjemah teks yang dipilih atau seluruh halaman.
+370	Topeng
+371	Topeng (cerah = kelihatan)
+372	Keselamatan maksimum
+373	Lebih privasi: kini anda mencari dengan DuckDuckGo dan bukan Google
+374	Menu
+375	Mikrofon
+376	Apabila anda meminimumkan pelayar untuk bermain, semua tab tanpa bunyi berehat.
+377	Minit
+378	Campur
+379	Cari dengan Google
+380	Cari dengan Google atau masukkan alamat
+381	Terangkan dengan {0}
+382	Cari dengan {0}
+383	Cari dengan {0} atau masukkan alamat
+384	Cari dengan {0}: “{1}”
+385	Mod
+386	Isnin – Jumaat
+387	Darab
+388	Corak
+389	Cari kemas kini
+390	Nama
+391	Nebula
+392	Skrin
+393	Tidak
+394	Neon
+395	Grid neon
+396	Pengehad rangkaian
+397	Memantau trafik rangkaian
+398	Menyekat dan mengubah trafik rangkaian
+399	Baharu
+400	Muat semula
+401	Muat semula (F5)
+402	Mula semula dan pasang
+403	Tab baharu
+404	Tab baharu (Ctrl+T)
+405	Tab peribadi baharu
+406	Imej kosong baharu
+407	Mula semula
+408	Tidak ditemui
+409	Tidak disimpan
+410	Tidak mungkin
+411	Tidak selamat
+412	Tiada apa-apa ditemui
+413	Satu langkah lagi: kami mengesyorkan sambungan ini untuk keselamatan tambahan. Pilih yang anda mahu – anda boleh mengalih keluarnya bila-bila masa di bawah “Sambungan”.
+414	Satu pusingan lagi? Sudah tengah malam.
+415	Belum ada muat turun
+416	Belum ada sambungan dipasang. Buka Chrome Web Store dan klik “Tambah” di sana.
+417	Belum ada penanda halaman
+418	Alamat kemas kini belum dimasukkan (GX Control → Kemas kini)
+419	Cari nod …
+420	Biasa
+421	Pelayar biasa – elemen gaming disembunyikan
+422	Hanya fail dengan (kosong = semua)
+423	Hanya HTTPS
+424	Hanya sekali sehari
+425	Hanya alamat http dan https
+426	Menggunakan GPU khusus (cth. RTX) dan bukannya grafik pemproses.
+427	Padanan seterusnya (F3)
+428	Teruskan tanpa sambungan
+429	Pilihan
+430	Pilihan
+431	Tutup panel
+432	Pengurus kata laluan
+433	Perlindungan pancingan data dan perisian hasad
+434	Saiz piksel
+435	Plasma (berwarna-warni, beranimasi)
+436	Aurora
+437	Peribadi
+438	Enjin carian peribadi
+439	Tab peribadi
+440	Tab peribadi – sejarah, kuki dan log masuk hilang sebaik sahaja anda menutup semua tab peribadi.
+441	Tab peribadi – tiada sejarah dan kuki selepas ditutup
+442	Program dikukuhkan
+443	Mengubah tetapan proksi
+444	Memeriksa muat turun dengan Windows Defender (tidak tersedia pada PC ini).
+445	Titik
+446	Sumber
+447	RAM {0} daripada {1}
+448	Pengehad RAM
+449	Anjakan RGB (glitch)
+450	Hingar / awan
+451	Klik kanan pada tab juga menawarkan semua ini.
+452	Klik kanan atau kekunci ruang menambah nod. Seret dari titik di kanan satu nod ke titik di kiri nod seterusnya. Semua yang akhirnya sampai ke
+453	Klik kanan atau ruang: tambah nod · Seret latar: alih · Roda tetikus: zum · Del: padam
+454	Retro
+455	Gunung retro
+456	Memberitahu setiap laman web melalui Global Privacy Control bahawa data anda tidak boleh dijual atau dikongsi.
+457	Papan catur
+458	Perisian hasad disekat
+459	Mematikan turbo JavaScript (JIT) – sasaran serangan pelayar yang paling biasa. Laman web menjadi lebih perlahan, sesetengah permainan pelayar tidak lagi berfungsi. Berkuat kuasa selepas mula semula.
+460	Tidurkan (bebaskan RAM)
+461	Ringkas
+462	Tutup
+463	Tutup (Esc)
+464	Akses pantas
+465	Sudah pukul 10 malam – esok sekolah/kerja 😉
+466	Teks lebih besar
+467	Teks lebih kecil
+468	Perlindungan
+469	Perlindungan untuk laman ini (klik)
+470	Hidupkan semula perlindungan untuk laman ini
+471	Perlindungan untuk {0}
+472	Perlindungan daripada cap jari pelayar
+473	Senarai perlindungan {0}:
+474	Hitam putih
+475	Tetingkap terapung
+476	Semoga hari anda indah
+477	Tangkapan skrin
+478	Tangkapan skrin (Ctrl+Shift+X) – klik kanan: seluruh halaman
+479	Tangkapan skrin (seluruh halaman)
+480	Tangkapan skrin (kawasan kelihatan)
+481	Tangkapan skrin gagal
+482	Tangkapan skrin disalin – tampal dalam Discord dengan Ctrl+V
+483	Ambil tangkapan skrin
+484	Halaman
+485	Terjemah halaman ke bahasa Melayu
+486	Lupakan laman semasa ditutup (padam kuki)
+487	Cetak halaman …
+488	Laman tidak berfungsi? Matikan perlindungan di sini
+489	Ringkaskan halaman dengan {0}
+490	Laman tidak dapat dicapai
+491	Periksa halaman
+492	Tukar sisi
+493	Buka bar sisi
+494	Nisbah aspek pratonton
+495	Saat
+496	Pelayan membalas dengan ralat {0}
+497	Pelorek dan imej
+498	Sambungan selamat
+499	DNS selamat
+500	Keselamatan
+501	Semakan keselamatan
+502	Sandaran dan pemulihan
+503	Sandarkan …
+504	Sandaran disimpan
+505	Pulihkan sandaran
+506	Pulihkan sandaran …
+507	Kawasan kelihatan
+508	Cara ia berfungsi
+509	Cara ia berfungsi:
+510	Lain-lain
+511	Simpan
+512	Gagal menyimpan:
+513	Menyimpan kata laluan anda dengan selamat dan mengisinya secara automatik.
+514	Menyimpan kata laluan anda secara tersulit dan mengisinya secara automatik di laman web. Percuma, sumber terbuka.
+515	Skrin pisah
+516	Skrin pisah (Ctrl+Shift+S)
+517	Skrin pisah hidup – seret garis pemisah untuk melaraskan
+518	Tamatkan skrin pisah
+519	Tamatkan skrin pisah (Ctrl+Shift+S)
+520	Bahasa
+521	Cari bahasa atau negara …
+522	Bahasa Windows
+523	Bahasa Windows: {0}
+524	Pulihkan lalai
+525	Mula
+526	Halaman mula (Alt+Home)
+527	Kawalan
+528	Regangkan
+529	Jalur
+530	Ctrl + Alt +
+531	Ctrl + Alt + …
+532	Ctrl + Shift + F
+533	Ctrl + Shift + G
+534	Ctrl + Shift + P
+535	Ctrl + Shift + S
+536	Ctrl+T tab baharu · Ctrl+D penanda halaman · Ctrl+H sejarah · F11 skrin penuh
+537	Ctrl+Shift+G memulakan mod gaming · Ctrl+T tab baharu · F11 skrin penuh
+538	Studio
+539	Tahap
+540	Senyapkan
+541	Kekuatan
+542	Gangguan
+543	Mencari kemas kini …
+544	Enjin carian
+545	Cadangan carian semasa menaip di bar alamat (dihantar ke enjin carian)
+546	Ketepuan
+547	Tab
+548	Tab ranap – klik untuk muat semula
+549	Tab sebagai tetingkap terapung
+550	Tab sebagai tetingkap terapung (Ctrl+Shift+F)
+551	Tutup tab
+552	Tab kini terapung di atas semua tetingkap
+553	Senyapkan tab
+554	Buka tab
+555	Tab
+556	Tutup tab di sebelah kanan
+557	Pulihkan tab
+558	Hari
+559	Kekunci
+560	Pintasan papan kekunci
+561	Bahagian
+562	Kelajuan
+563	Teks
+564	Teks (petikan):
+565	Tajuk:
+566	Bunyi semua tab
+567	Nyahsenyap
+568	Hijau toksik
+569	Ketelusan
+570	Twitch dibuka – mod gaming hidup 🎮
+571	Masa (JJ:MM)
+572	Ultraungu
+573	Terbalikkan
+574	Togol
+575	Alamat tidak sah
+576	Kabur
+577	Tiada imej pada alamat ini (petua: klik kanan imej → “Salin alamat imej”)
+578	Buka tanpa penyulitan
+579	Kemas kini sedia – mulakan semula pelayar
+580	Kemas kini sambungan gagal
+581	Pasang kemas kini
+582	Pasang kemas kini dan mula semula
+583	Kemas kini {0} sedia
+584	Kemas kini {0} sedang dimuat turun di latar belakang …
+585	Alamat kemas kini (folder di laman web anda)
+586	Modul kemas kini tiada
+587	Carian kemas kini gagal: {0}
+588	Kemas kini
+589	Kemas kini berfungsi dalam versi yang dipasang
+590	Dilarang
+591	Zum masuk
+592	Zum keluar
+593	Sejarah
+594	Cari sejarah
+595	Anjakan
+596	Alih / zum / putar
+597	Menyulitkan laman yang anda buka (DNS melalui HTTPS dengan Quad9 dari Switzerland) dan turut menyekat alamat perisian hasad yang diketahui.
+598	Versi
+599	Versi {0} sudah terkini.
+600	Versi {0} sedia – akan dipasang pada permulaan seterusnya.
+601	Memuat turun versi {0} … {1} %
+602	Versi {0} · Chromium {1}
+603	Versi {0} · Alamat kemas kini belum dimasukkan.
+604	Versi {0} · Kemas kini tersedia dalam versi Windows yang dipasang.
+605	Versi {0} · Kemas kini datang secara automatik melalui Microsoft Store.
+606	Urus
+607	Pisahkan video
+608	Pisahkan video (gambar dalam gambar)
+609	Pisahkan video – gambar dalam gambar (Ctrl+Shift+P)
+610	Pisahkan video secara automatik
+611	Iklan video disenyapkan dan dilangkau serta-merta, ruang iklan hilang.
+612	Vinyet
+613	Virus ditemui dalam {0} – Windows Defender telah membuang fail
+614	Virus ditemui – Windows Defender telah membuang fail
+615	Skrin penuh
+616	Dari
+617	Dari laman ini virus atau program hasad lain telah disebarkan. Elektron menghentikannya sebelum apa-apa sampai ke PC anda.
+618	Ke hadapan
+619	Ke hadapan (Alt+→)
+620	Padanan sebelumnya (Shift+F3)
+621	Cadangan
+622	Sarang lebah
+623	Kebarangkalian (%)
+624	Juga memberi amaran tentang laman berbahaya. Bersama Malwarebytes biasanya tidak diperlukan – kedua-duanya melakukan perkara yang sama.
+625	Memberi amaran tentang laman berbahaya dan pancingan data.
+626	Amaran alamat palsu
+627	Tunggu
+628	Apa yang berlaku apabila laman mahu menggunakan kamera anda.
+629	WebGL 2 tidak tersedia pada PC ini.
+630	Kamera web
+631	Mengawal laman web dari jauh (penyahpepijat)
+632	Laman web lebih sukar mengenali anda melalui PC anda (canvas, nama kad grafik, teras CPU).
+633	Laman web tidak lagi dapat membaca alamat IP tempatan anda melalui teknologi sembang video – walaupun di sebalik VPN.
+634	Jika anda menukar tab atau meminimumkan pelayar, video terus dimainkan dalam tetingkap kecil (gambar dalam gambar).
+635	Kelembutan
+636	Penanda halaman lain
+637	Gelombang
+638	Tunjukkan kurang
+639	Apabila mod gaming hidup
+640	Apabila mod gaming …
+641	Apabila hari ialah
+642	Apabila masa di antara
+643	Apabila tab aktif mengandungi
+644	Apabila pelayar bermula
+645	Jika anda mahu ke {0}, gunakan butang di bawah.
+646	Apabila muat turun selesai
+647	Apabila halaman dibuka
+648	Penyekat iklan dan penjejak
+649	Penyekat iklan
+650	Penyekat iklan tidak dapat dimuatkan:
+651	Syarikat iklan tidak lagi dapat menjejaki anda merentas laman web. Log masuk, captcha dan pembayaran terus berfungsi.
+652	Iklan/penjejak disekat: {0} · Kuki penjejakan ditolak: {1}
+653	Alatan
+654	Hidupkan semula
+655	Dipulihkan: {0} penanda halaman baharu dan tetapan anda
+656	Pulihkan …
+657	Ulang (jubin)
+658	Selamat datang
+659	Selamat datang ke Elektron
+660	Windows Defender tidak ditemui
+661	Sudut
+662	Jika had dilebihi, tab yang paling lama tidak digunakan akan tidur.
+663	Memasang …
+664	Betul-betul padam semua sejarah?
+665	Betul-betul buka? Laman ini diketahui berbahaya.
+666	Hujung minggu
+667	Langkau iklan YouTube
+668	Memaparkan semula tidak suka di bawah video YouTube.
+669	Baris
+670	Masa
+671	Masa untuk berehat! 🎮
+672	Tamat masa
+673	Tamat masa semasa memuatkan
+674	Seret untuk melaraskan · Klik dua kali: 50/50
+675	Zum
+676	Tetapkan semula zum
+677	Tetapkan semula zum (Ctrl+0)
+678	Rawak
+679	Untuk mencuba: butang
+680	Tukar ke pelayar gaming
+681	Tambah ke kamus
+682	Tukar ke pelayar biasa
+683	Pada masa
+684	Ke laman sebenar: {0}
+685	Kembali
+686	Kembali (Alt+←)
+687	Kembali ke tempat selamat
+688	Kembali ke pelayar
+689	Bawa kembali ke pelayar
+690	Kembali ke Google
+691	pada pencetus.
+692	, kelihatan di atas. Imej dari internet: klik kanan imej → “Salin alamat imej” dan tampal dalam nod.
+693	mikrofon anda
+694	kamera anda
+695	skrin anda
+696	lokasi anda
+697	fail penanda halaman tidak dapat dibaca.
+698	papan keratan
+699	tiada had
+700	bukan sandaran Elektron
+701	membaca dan mengubah
+702	tidak dibenarkan
+703	hanya dalam versi yang dipasang
+704	cth. .exe atau .zip
+705	cth. youtube.com
+706	{0} muat turun sedang berjalan – Ctrl+J
+707	{0} penanda halaman diambil daripada {1}.
+708	{0} kuki penjejakan ditolak
+709	{0} pautan penjejakan dinyahaktifkan
+710	{0} tidak membalas tepat pada masanya.
+711	{0} menolak sambungan.
+712	{0} selesai – tiada virus ditemui
+713	{0} tidak dapat dimuatkan.
+714	{0} tidak dapat dipasang. Semak sambungan internet anda dan cuba lagi – atau pasang kemudian melalui Menu → Chrome Web Store.
+715	{0} mahu mengakses {1}.
+716	Mulakan {0}
+717	{0} daripada {1} fungsi perlindungan aktif.
+718	{0} dilupakan – kuki dan data laman dipadam
+719	{0} – tidak dapat dicapai
+720	· Auto
+721	· sedang diimbas untuk virus …
+722	· ✓ tiada virus (Windows Defender)
+723	Tukar …
+724	Lebih baik buka bank, Steam, Discord dan seumpamanya terus melalui bar alamat atau penanda halaman.
+725	Jangan buka fail yang anda sudah ada daripada laman ini.
+726	Buka
+727	Semasa bermula, membuka tab anda dari kali terakhir – ia hanya dimuatkan apabila anda klik.
+728	Perihal {0}
+729	Tindih
+730	Terjemah
+731	Terjemahan tanpa jaminan – jumpa kesilapan? Laporkan di GitHub, kami sedia membetulkannya.
+732	Melangkau bahagian tajaan dalam video YouTube.
+733	– gambar dalam gambar
+734	– skrin pisah
+735	– tab kekal di atas permainan anda
+736	– dibekukan
+737	– peribadi
+738	– tidur (klik untuk memuatkan)
+739	– tetingkap terapung (klik untuk memaparkan)
+740	– dua tab bersebelahan
+741	Isyarat “Jangan jual” (GPC)
+742	Alih keluar “{0}”?
+743	“{0}” telah dimuatkan.
+744	“{0}” telah ditambah
+745	Tambah “{0}” ke Elektron?
+746	… dimatikan
+747	… dihidupkan
+748	← Halaman asal
+749	▶ Uji sekarang
+750	✓ Dilaksanakan
+751	🎮 Gaming
