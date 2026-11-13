@@ -46,6 +46,7 @@ const RAIL_W = 52;
 const PANEL_W = 380;
 
 const WEB_PANELS = {
+  assistent: 'elektron://start/assistent.html',
   claude: 'https://claude.ai/new',
   chatgpt: 'https://chatgpt.com/',
   discord: 'https://discord.com/app',
@@ -1390,7 +1391,10 @@ function showShieldMenu() {
 }
 
 // Werbe-Popups und Weiterleitungen beim Öffnen neuer Fenster/Tabs abfangen
+const LOGIN_HOSTS = /^(accounts\.google\.com|accounts\.youtube\.com|login\.microsoftonline\.com|login\.live\.com|appleid\.apple\.com|github\.com|discord\.com|www\.facebook\.com)$/i;
+function isLoginHost(url) { try { return LOGIN_HOSTS.test(new URL(url).hostname); } catch { return false; } }
 function isAdPopup(url, sourceUrl) {
+  if (isLoginHost(url)) return false;
   if (!blocker || !settings.adblock || !/^https?:/i.test(url)) return false;
   try {
     const { Request } = require('@ghostery/adblocker-electron');
@@ -1892,8 +1896,31 @@ const ASK = {
   'display-capture': 'deinen Bildschirm'
 };
 
+// Windows-Adressen, über die schon Schadcode gestartet wurde – nie aus einer Webseite heraus öffnen
+const BAD_SCHEMES = new Set(['file', 'javascript', 'data', 'vbscript', 'blob', 'about', 'chrome', 'view-source', 'http', 'https',
+  'ms-msdt', 'search-ms', 'search', 'ms-officecmd', 'ms-cxh', 'ms-cxh-full', 'ms-appinstaller', 'shell', 'res', 'mk', 'its', 'ms-its',
+  'mhtml', 'hcp', 'ldap', 'jar', 'wscript', 'cscript', 'elektron', 'elektron-ui', 'chrome-extension']);
+async function askOpenExternal(callback, details) {
+  let scheme = '', host = '?', origin = '?';
+  try { scheme = new URL(details.externalURL).protocol.replace(':', '').toLowerCase(); } catch { return callback(false); }
+  if (!/^[a-z][a-z0-9+.-]{1,40}$/.test(scheme) || BAD_SCHEMES.has(scheme)) return callback(false);
+  try { const u = new URL(details.requestingUrl); host = u.host; origin = u.origin; } catch {}
+  const key = `${origin}|openExternal|${scheme}`;
+  if (key in settings.permissions) return callback(settings.permissions[key]);
+  const r = await dialog.showMessageBox(win, {
+    type: 'question', buttons: ['Öffnen', 'Blockieren'], defaultId: 1, cancelId: 1,
+    title: 'App öffnen', message: `${host} möchte eine App auf deinem PC öffnen (${scheme}://).`,
+    detail: 'Erlaube das nur, wenn du es gerade selbst ausgelöst hast – zum Beispiel beim Anmelden in einem Spiel oder Programm.',
+    checkboxLabel: 'Für diese Seite merken', checkboxChecked: false
+  });
+  const allow = r.response === 0;
+  if (r.checkboxChecked) { settings.permissions[key] = allow; saveSettings(); }
+  callback(allow);
+}
+
 async function handlePermission(wc, permission, callback, details) {
   if (AUTO_ALLOW.has(permission)) return callback(true);
+  if (permission === 'openExternal') return askOpenExternal(callback, details || {});
   if (!ASK[permission]) return callback(false);
   let host = '?', origin = '?';
   try { const u = new URL(details.requestingUrl); host = u.host; origin = u.origin; } catch {}
@@ -2296,6 +2323,25 @@ async function restoreData() {
   }
 }
 
+// ------------------------------------------------------------------ Assistent (eingebaute KI)
+// Das KI-Modell (ca. 2 GB) passt nicht in den Installer. Elektron lädt es deshalb nach der Installation
+// einmal unsichtbar im Hintergrund, damit der Assistent beim ersten Öffnen schon bereit ist.
+const AI_MODEL = 'Llama-3.2-3B-Instruct-q4f16_1-MLC';
+let aiPreloadWin = null;
+function closeAiPreload() {
+  const w = aiPreloadWin; aiPreloadWin = null;
+  if (w && !w.isDestroyed()) setTimeout(() => { try { w.destroy(); } catch {} }, 500);
+}
+function startAiPreload() {
+  if (aiPreloadWin || settings.aiAutoDownload === false || settings.maxSecurity || settings.aiModelReady === AI_MODEL) return;
+  try {
+    aiPreloadWin = new BrowserWindow({ show: false, width: 400, height: 300, webPreferences: { session: mainSes, sandbox: true, contextIsolation: true, backgroundThrottling: false } });
+    aiPreloadWin.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
+    aiPreloadWin.on('closed', () => { aiPreloadWin = null; });
+    aiPreloadWin.loadURL('elektron://start/assistent.html#vorladen');
+  } catch (e) { console.warn('Assistent:', e.message); aiPreloadWin = null; }
+}
+
 // ------------------------------------------------------------------ Eigene Seiten
 // ------------------------------------------------------------------ Elektron Studio
 // Bilder aus dem Internet für den Shader-Editor laden (ohne Cookies, nur echte Bilder, max. 25 MB)
@@ -2418,7 +2464,7 @@ const FP_SEED = Math.floor(Math.random() * 0x7fffffff);
 ipcMain.on('fp-config', (e) => {
   let top = '';
   try { top = (e.senderFrame && e.senderFrame.top && e.senderFrame.top.url) || e.sender.getURL(); } catch {}
-  e.returnValue = { on: !!settings.fingerprintProtect && shieldOn(top, 'fp'), seed: FP_SEED, gpc: !!settings.gpc, deamp: !!settings.cleanLinks };
+  e.returnValue = { on: !!settings.fingerprintProtect && shieldOn(top, 'fp') && !/^(accounts\.google\.com|accounts\.youtube\.com)$/i.test(hostOf(top) || ''), seed: FP_SEED, gpc: !!settings.gpc, deamp: !!settings.cleanLinks };
 });
 
 ipcMain.handle('internal', async (e, name, ...args) => {
@@ -2468,6 +2514,10 @@ ipcMain.handle('internal', async (e, name, ...args) => {
       if (/^\d{1,10}$/.test(id)) shell.openExternal('steam://rungameid/' + id);
       return true;
     }
+    case 'ai.ready': settings.aiModelReady = String(args[0] || ''); saveSettings(); closeAiPreload(); return true;
+    case 'ai.failed': closeAiPreload(); return true;
+    case 'ai.info': return { ready: settings.aiModelReady || '', auto: settings.aiAutoDownload !== false, jitless: !!settings.maxSecurity };
+    case 'ai.setAuto': settings.aiAutoDownload = !!args[0]; saveSettings(); return true;
     case 'reader.get': return readerArticles.get(String(args[0])) || null;
     case 'look.chooseBg': chooseBackground(); return true;
     case 'studio.fetchImage': return studioFetchImage(String(args[0] || ''));
@@ -2757,7 +2807,7 @@ function createWindow() {
     if (t && t.frozen) setFrozen(t, false);
   });
   win.on('close', saveSession);
-  win.on('closed', () => { win = null; });
+  win.on('closed', () => { win = null; if (aiPreloadWin && !aiPreloadWin.isDestroyed()) { try { aiPreloadWin.destroy(); } catch {} } });
 
   // Tabs öffnen: Kommandozeile > letzte Sitzung > Startseite
   const argUrl = parseLaunchArg(process.argv);
@@ -2837,6 +2887,7 @@ app.whenReady().then(async () => {
   initAdblock();
   protect.start((url, opts) => net.fetch(url, opts));
   setupUpdater();
+  if (!process.env.ELEKTRON_TEST) setTimeout(startAiPreload, 25000);
   setInterval(tick, 1000);
   if (process.env.ELEKTRON_TEST) {
     // Testhilfe: ein paar Tabs öffnen und GX Control zeigen

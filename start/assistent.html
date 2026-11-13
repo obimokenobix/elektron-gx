@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de" data-look="nacht">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' https://huggingface.co https://*.huggingface.co https://*.hf.co https://raw.githubusercontent.com https://*.githubusercontent.com">
+<title>Assistent</title>
+<link rel="stylesheet" href="assistent.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<aside id="side">
+  <div class="brand"><div class="mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></div>Assistent <span class="pro-tag">PRO</span></div>
+  <button class="btn primary" id="new">Neuer Chat <kbd style="border-color:currentColor;color:inherit;opacity:.7">Alt N</kbd></button>
+  <input id="search" type="search" placeholder="Chats durchsuchen" aria-label="Chats durchsuchen">
+  <div id="hist"></div>
+  <div class="upsell" id="upsell">
+    <b>Pro freischalten</b>
+    <span>Drei weitere Farbwelten, drei weitere Modelle und lebendiger Hintergrund.</span>
+    <button class="btn" id="openPro">Pro ansehen</button>
+  </div>
+  <div class="foot">
+    <button class="btn" id="openUpd">Updates <i class="badge-new" id="updDot"></i></button>
+    <button class="btn" id="openSet">Einstellungen</button>
+  </div>
+</aside>
+
+<main>
+  <header>
+    <button class="icon" id="menu" aria-label="Seitenleiste öffnen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <div id="title">Neuer Chat</div>
+    <span class="state" id="state">Verbinde …</span>
+    <select id="model" aria-label="KI-Modell" title="KI-Modell auf dem Stick" hidden></select>
+    <button class="btn ghost" id="openPal" title="Befehle">Befehle <kbd>Strg K</kbd></button>
+    <button class="icon" id="copyChat" title="Chat kopieren" aria-label="Chat kopieren"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg></button>
+  </header>
+  <div id="msgs"><div class="col" id="col"></div></div>
+  <div class="composer">
+    <div class="inner">
+      <div id="slash"></div>
+      <div class="modes" id="modes"></div>
+      <div class="box">
+        <div class="files" id="pending"></div>
+        <textarea id="input" rows="1" placeholder="Nachricht schreiben oder / für Befehle"></textarea>
+        <div class="tools">
+          <button class="icon" id="attach" title="Datei anhängen" aria-label="Datei anhängen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.5l-8.5 8.5a5.5 5.5 0 0 1-7.8-7.8L13.5 4.4a3.7 3.7 0 0 1 5.2 5.2l-8.6 8.6a1.8 1.8 0 0 1-2.6-2.6l7.9-7.9"/></svg></button>
+          <input type="file" id="file" multiple hidden>
+          <button class="icon" id="mic" hidden title="Diktieren" aria-label="Diktieren"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+          <span class="sp"></span>
+          <span id="count">0 / 4000</span>
+          <button id="send" disabled aria-label="Senden"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="hint" id="hint"></div>
+    </div>
+  </div>
+</main>
+
+<div id="veil"><div class="dialog" id="dialog" role="dialog" aria-modal="true"></div></div>
+<div id="toasts"></div>
+
+<script src="assistent.js"></script>
+</body>
+</html>
