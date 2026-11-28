@@ -178,5 +178,9 @@ if (new URLSearchParams(location.search).get('private')) {
 document.querySelector('form.search').addEventListener('submit', (e) => {
   e.preventDefault();
   const q = $('#q').value.trim();
-  if (q) location.href = searchBase + encodeURIComponent(q);
+  if (!q) return;
+  // Adressen, Rechnungen und Abkürzungen (!yt …) wie in der Adressleiste behandeln
+  Promise.resolve(window.elektron ? window.elektron.invoke('hyper.resolve', q) : null)
+    .catch(() => null)
+    .then((u) => { location.href = u || searchBase + encodeURIComponent(q); });
 });

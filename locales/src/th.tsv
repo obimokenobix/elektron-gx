@@ -32,7 +32,7 @@
 31	แสดงทั้งหมด {0} รายการ
 32	เลือกทั้งหมด
 33	ลบทั้งหมดและเริ่มใหม่ไหม
-34	ทุกอย่างที่คุณตั้งค่าได้ใน Elektron
+34	ทุกอย่างที่คุณตั้งค่าได้ใน Volt
 35	บันทึกเป็นรูปภาพ (PNG)
 36	ตั้งเป็นเบราว์เซอร์เริ่มต้น …
 37	ตั้งเป็นพื้นหลังหน้าเริ่มต้น
@@ -191,12 +191,12 @@
 190	การตั้งค่า
 191	บันทึกการตั้งค่าไม่ได้:
 192	เพิ่มรายการในเมนูคลิกขวา
-193	การป้องกัน Elektron · ตรวจจับเว็บไซต์ปลอมบนคอมพิวเตอร์ของคุณโดยตรง
-194	การป้องกัน Elektron · รายการจาก Phishing.Database และ URLhaus (abuse.ch)
-195	Elektron Studio (เชดเดอร์และโฟลว์)
-196	Elektron หยุดเว็บไซต์นี้ไว้ เพราะอยู่ในรายการเว็บไซต์หลอกลวงที่รู้จัก
-197	Elektron ตรวจหาเวอร์ชันใหม่เป็นประจำ
-198	แนะนำ Elektron
+193	การป้องกัน Volt · ตรวจจับเว็บไซต์ปลอมบนคอมพิวเตอร์ของคุณโดยตรง
+194	การป้องกัน Volt · รายการจาก Phishing.Database และ URLhaus (abuse.ch)
+195	Volt Studio (เชดเดอร์และโฟลว์)
+196	Volt หยุดเว็บไซต์นี้ไว้ เพราะอยู่ในรายการเว็บไซต์หลอกลวงที่รู้จัก
+197	Volt ตรวจหาเวอร์ชันใหม่เป็นประจำ
+198	แนะนำ Volt
 199	แนะนำ
 200	นำออก
 201	ลบส่วนติดตามอย่าง utm_, fbclid และ gclid ข้ามตัวติดตามการเปลี่ยนเส้นทางของ Google และ Facebook และเปิดหน้า AMP เป็นต้นฉบับ
@@ -213,7 +213,7 @@
 212	สร้างภาพก่อน – ยังไม่มีอะไรไปถึง “เอาต์พุต”
 213	เพิ่มส่วนขยาย
 214	ส่วนขยาย
-215	ส่วนขยายมาจาก Chrome เว็บสโตร์และทำงานใน Elektron เหมือนใน Chrome ส่วนขยายบางตัวที่ใหญ่มากใช้ฟีเจอร์ของ Chrome ที่ไม่มีที่นี่ – จึงทำงานได้เพียงบางส่วน นอกจากนี้ Claude และ ChatGPT ยังอยู่ในแถบด้านข้างซ้ายโดยตรง
+215	ส่วนขยายมาจาก Chrome เว็บสโตร์และทำงานใน Volt เหมือนใน Chrome ส่วนขยายบางตัวที่ใหญ่มากใช้ฟีเจอร์ของ Chrome ที่ไม่มีที่นี่ – จึงทำงานได้เพียงบางส่วน นอกจากนี้ Claude และ ChatGPT ยังอยู่ในแถบด้านข้างซ้ายโดยตรง
 216	ส่วนขยายเป็นเวอร์ชันล่าสุด
 217	แถบส่วนขยายไม่พร้อมใช้งาน:
 218	ไม่มีโหนด “เอาต์พุต”
@@ -298,7 +298,7 @@
 297	เขียนลงคลิปบอร์ด
 298	เปิดในแท็บใหม่
 299	เปิดในแท็บส่วนตัว
-300	ให้ Elektron พูดกับคุณเป็นภาษาอะไร ธงแสดงประเทศที่ใช้ภาษานั้น
+300	ให้ Volt พูดกับคุณเป็นภาษาอะไร ธงแสดงประเทศที่ใช้ภาษานั้น
 301	บล็อกเนื้อหาบนเว็บไซต์
 302	ติดตั้งและเริ่ม
 303	ติดตั้งแล้ว
@@ -615,7 +615,7 @@
 614	พบไวรัส – Windows Defender ลบไฟล์แล้ว
 615	เต็มหน้าจอ
 616	จาก
-617	เว็บไซต์นี้เคยแพร่ไวรัสหรือโปรแกรมอันตรายอื่น Elektron หยุดไว้ก่อนที่อะไรจะเข้ามาในคอมพิวเตอร์ของคุณ
+617	เว็บไซต์นี้เคยแพร่ไวรัสหรือโปรแกรมอันตรายอื่น Volt หยุดไว้ก่อนที่อะไรจะเข้ามาในคอมพิวเตอร์ของคุณ
 618	ไปข้างหน้า
 619	ไปข้างหน้า (Alt+→)
 620	ผลลัพธ์ก่อนหน้า (Shift+F3)
@@ -657,7 +657,7 @@
 656	กู้คืน …
 657	ทำซ้ำ (เรียงต่อ)
 658	ยินดีต้อนรับ
-659	ยินดีต้อนรับสู่ Elektron
+659	ยินดีต้อนรับสู่ Volt
 660	ไม่พบ Windows Defender
 661	มุม
 662	เมื่อเกินขีดจำกัด แท็บที่ไม่ได้ใช้นานที่สุดจะเข้าสู่โหมดหลับ
@@ -698,7 +698,7 @@
 697	อ่านไฟล์บุ๊กมาร์กไม่ได้
 698	คลิปบอร์ด
 699	ไม่จำกัด
-700	ไม่ใช่ข้อมูลสำรองของ Elektron
+700	ไม่ใช่ข้อมูลสำรองของ Volt
 701	อ่านและเปลี่ยน
 702	ไม่อนุญาต
 703	เฉพาะในเวอร์ชันที่ติดตั้ง
@@ -743,7 +743,7 @@
 742	นำ “{0}” ออกไหม
 743	โหลด “{0}” แล้ว
 744	เพิ่ม “{0}” แล้ว
-745	เพิ่ม “{0}” ลงใน Elektron ไหม
+745	เพิ่ม “{0}” ลงใน Volt ไหม
 746	… ปิด
 747	… เปิด
 748	← หน้าต้นฉบับ
@@ -752,3 +752,77 @@
 751	🎮 Gaming
 752	ถูกหยุดชั่วคราว
 753	กำลังพัก
+754	Second virus scanner
+755	Also checks every download against the Malware Hash Registry – more than 30 antivirus databases. Only a fingerprint of the file is looked up, never the file itself.
+756	Put tabs to sleep automatically
+757	Tabs you haven't used for a while free up their memory. Tabs playing sound never sleep.
+758	Designs & customisation
+759	Designs & customisation …
+760	Your own look for every website and for Volt itself – with templates like dark mode or your own CSS.
+761	Open …
+762	HyperSearch X, DuckDuckGo, Brave Search and Startpage don't build a profile of you. HyperSearch X calculates instantly, shows knowledge from Wikipedia and understands shortcuts like
+763	after {0} min
+764	after {0} h
+765	{0} is done – 2 virus scanners: no virus found
+766	Malware detected in {0} – Volt moved the file to quarantine
+767	Malware detected in {0} – do not open it, please delete it
+768	Design for this site …
+769	Malware detected (Malware Hash Registry) – moved to quarantine
+770	Malware detected (Malware Hash Registry) – do not open!
+771	· ✓ no virus (2 virus scanners)
+772	· ✓ no virus (Malware Hash Registry)
+773	Search, calculate or !yt for YouTube …
+774	Search
+775	● No tracking
+776	Ctrl + Enter: search the whole web
+777	Search the whole web:
+778	Knowledge
+779	Source: Wikipedia
+780	Knowledge · {0} results
+781	What can HyperSearch X do?
+782	Calculate
+783	– e.g.
+784	or
+785	Shortcuts
+786	Wikipedia,
+787	– answers from Wikipedia right on the page
+788	Web search without tracking
+789	– with DuckDuckGo, Brave or Startpage
+790	Searching …
+791	Read the full article
+792	See the result above.
+793	No knowledge results – try the web search above.
+794	Knowledge currently unavailable
+795	Wikipedia is currently unavailable – use the web search above.
+796	Right-click: set as default for web search
+797	Map
+798	Websites
+799	Browser interface
+800	Add a site, e.g. youtube.com
+801	Save (Ctrl+S)
+802	Remove design
+803	No site yet
+804	custom design active
+805	no design yet
+806	Change the colours and font of Volt itself. Please don't change the heights and spacing of the bars. If something goes wrong: remove the design – or start Volt with “--ohne-design”.
+807	Takes effect right after saving.
+808	Give every website your own look – with templates or your own CSS. A design for youtube.com also applies to m.youtube.com. Everything stays on your PC.
+809	Pick a site on the left or add one
+810	Open tabs of this site change immediately.
+811	not saved
+812	Please save or remove first
+813	Saved – active immediately
+814	Design removed
+815	Please enter an address like youtube.com
+816	+ Force dark mode
+817	+ Larger text
+818	+ Reading width
+819	+ No animations
+820	+ Hide images
+821	+ Custom font
+822	+ Accent-coloured links
+823	+ Midnight
+824	+ OLED black
+825	+ Volt yellow
+826	+ Bahnschrift font
+827	+ No glow

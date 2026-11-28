@@ -5,7 +5,8 @@ const ICON = {
   search: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
   history: '<svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>',
   go: '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
-  star: '<svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg>'
+  star: '<svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg>',
+  calc: '<svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>'
 };
 
 function host(u) { try { return new URL(u).hostname; } catch { return ''; } }
@@ -26,6 +27,7 @@ suggestApi.onItems(({ items, selected, query, accent }) => {
     if (it.kind === 'search' || it.kind === 'suggestion') ic.innerHTML = ICON.search;
     else if (it.kind === 'go') ic.innerHTML = ICON.go;
     else if (it.kind === 'bookmark') ic.innerHTML = ICON.star;
+    else if (it.kind === 'calc') ic.innerHTML = ICON.calc;
     else {
       const img = new Image();
       img.src = `favicon?host=${encodeURIComponent(host(it.url))}`;

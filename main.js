@@ -2,7 +2,7 @@
 process.on('uncaughtException', (e) => { console.error('UNCAUGHT', e && e.stack || e); });
 process.on('unhandledRejection', (e) => { console.error('UNHANDLED', e && e.stack || e); });
 /*
- * Elektron – der Gaming-Browser
+ * Volt – der schnelle, sichere Gaming-Browser (hieß früher „Elektron“; Elektron bleibt der Name der Marke)
  * Hauptprozess: Fenster, Tabs, Seitenleiste, GX-Control (RAM-/CPU-/Netzwerk-Limiter),
  * Gaming-Modus, Werbeblocker, Downloads, Berechtigungen.
  */
@@ -14,11 +14,13 @@ const path = require('path');
 const fs = require('fs');
 const os = require('os');
 const { pathToFileURL } = require('url');
-// Der Browser hieß früher „Elektron GX“ – Lesezeichen, Verlauf und Einstellungen bleiben im bisherigen Ordner
+// Der Browser hieß früher „Elektron GX“ und „Elektron“ (jetzt Volt) – Lesezeichen, Verlauf und Einstellungen bleiben im bisherigen Ordner
 try { app.setPath('userData', path.join(app.getPath('appData'), 'Elektron GX')); } catch {}
 const { createStore } = require('./store');
 const extmod = require('./extensions');
 const protect = require('./protect');
+const hashscan = require('./hashscan');
+const hyper = require('./hyper');
 const privacy = require('./privacy');
 const favicons = require('./favicons');
 const lookalike = require('./lookalike');
@@ -27,7 +29,7 @@ const i18n = require('./i18n');
 const T = (s) => i18n.t(s);
 const extras = require('./extras');
 
-const APP_NAME = 'Elektron';
+const APP_NAME = 'Volt';
 const T0 = Date.now();
 const perf = (label) => { if (process.env.ELEKTRON_PERF) console.log(`PERF ${label} ${Date.now() - T0}ms`); };
 const PARTITION = 'persist:elektron';
@@ -60,6 +62,7 @@ const DEFAULTS = {
   ramLimit: { enabled: false, mb: 3072 },
   cpuLimit: { enabled: false, percent: 25 },
   netLimit: { enabled: false, kbs: 2048 },
+  autoSleep: { enabled: true, minutes: 30 }, // unbenutzte Tabs nach X Minuten schlafen legen (RAM sparen)
   adblock: true,
   ytSkip: true,
   camera: 'block',      // 'block' | 'ask' | 'allow'
@@ -76,11 +79,13 @@ const DEFAULTS = {
   httpsOnly: true,
   phishingProtect: true,
   scanDownloads: true,
+  cloudScan: true,         // zweiter Virenscanner: Malware Hash Registry (nur Fingerabdruck, nie die Datei)
   secureDns: true,
   blockThirdPartyCookies: true,
   fingerprintProtect: true,
   cleanLinks: true,
-  searchEngine: 'duckduckgo', // google | duckduckgo | brave | startpage
+  searchEngine: 'duckduckgo', // google | duckduckgo | brave | startpage | hyper (HyperSearch X)
+  hyperWeb: 'duckduckgo',  // HyperSearch X: Suchmaschine für „Im ganzen Web suchen“
   searchMigrated: true,
   searchSuggest: true,
   gpc: true,
@@ -95,10 +100,12 @@ const DEFAULTS = {
   unlockFps: false,
   maxSecurity: false,      // V8 ohne JIT (wie Edge „Verstärkte Sicherheit“) – sicherer, aber langsamer
   blockedTotal: 0,
-  flows: null,            // Abläufe aus dem Elektron Studio
+  flows: null,            // Abläufe aus dem Volt Studio
   flowsEnabled: true,
   language: 'auto',        // 'auto' = Windows-Sprache, sonst Sprachcode (de, en, es, …)
   siteShields: {},        // Ausnahmen pro Seite: { 'beispiel.de': { adblock: false, cookies: false, fp: false } }
+  siteStyles: {},         // eigene Designs pro Seite: { 'youtube.com': 'css …' }
+  uiCss: '',              // eigenes Design für die Browser-Oberfläche
   permissions: {},
   lastSession: null
 };
@@ -113,6 +120,7 @@ function loadSettings() {
       ramLimit: { ...DEFAULTS.ramLimit, ...(raw.ramLimit || {}) },
       cpuLimit: { ...DEFAULTS.cpuLimit, ...(raw.cpuLimit || {}) },
       netLimit: { ...DEFAULTS.netLimit, ...(raw.netLimit || {}) },
+      autoSleep: { ...DEFAULTS.autoSleep, ...(raw.autoSleep || {}) },
       permissions: raw.permissions || {}
     };
   } catch {
@@ -287,6 +295,8 @@ function toURL(text) {
   if (/^localhost(:\d+)?(\/.*)?$/i.test(text)) return 'http://' + text;
   if (/^\d{1,3}(\.\d{1,3}){3}(:\d+)?(\/.*)?$/.test(text)) return 'http://' + text;
   if (!/\s/.test(text) && /^[^\s/]+\.[a-z]{2,}(:\d+)?(\/.*)?$/i.test(text)) return 'https://' + text;
+  const b = hyper.bang(text, hyper.wikiLang(i18n.current().code)); // „!yt minecraft“ → direkt auf YouTube
+  if (b) return b;
   return searchUrl(text);
 }
 
@@ -295,12 +305,15 @@ function displayURL(url) {
   if (/^elektron:\/\/start\/(error|blocked|insecure|reader)\.html/.test(url)) {
     try { return new URL(url).searchParams.get('u') || ''; } catch { return ''; }
   }
+  if (url.startsWith('elektron://start/search.html')) {
+    try { return new URL(url).searchParams.get('q') || ''; } catch { return ''; }
+  }
   if (url.startsWith('elektron://start')) return '';
   return url;
 }
 
 function cleanUserAgent(ua) {
-  return ua.replace(/\s+Electron\/\S+/i, '').replace(/\s+elektron-gx\/\S+/i, '').replace(/\s+Elektron GX\/\S+/i, '').replace(/\s+Elektron\/\S+/i, '');
+  return ua.replace(/\s+Electron\/\S+/i, '').replace(/\s+elektron-gx\/\S+/i, '').replace(/\s+Elektron GX\/\S+/i, '').replace(/\s+Elektron\/\S+/i, '').replace(/\s+Volt\/\S+/i, '');
 }
 
 let stateQueued = false;
@@ -333,7 +346,7 @@ function snapshot() {
     splitDragging,
     nav: a ? {
       url: displayURL(a.url),
-      isStart: a.url.startsWith('elektron://start') && !/^elektron:\/\/start\/(error|blocked|insecure|reader)\.html/.test(a.url),
+      isStart: a.url.startsWith('elektron://start') && !/^elektron:\/\/start\/(error|blocked|insecure|reader|search|design)\.html/.test(a.url),
       warning: /^elektron:\/\/start\/blocked\.html/.test(a.url) ? 'danger' : /^elektron:\/\/start\/insecure\.html/.test(a.url) || /^http:/i.test(a.url) ? 'insecure' : null,
       canGoBack: wc ? wc.navigationHistory.canGoBack() : false,
       canGoForward: wc ? wc.navigationHistory.canGoForward() : false,
@@ -357,13 +370,13 @@ function snapshot() {
       accent: accentNow(),
       style: settings.style, background: settings.background, bgVersion: settings.bgVersion,
       hasUserBg: !!userBgFile(), preferredAI: settings.preferredAI,
-      ramLimit: settings.ramLimit, cpuLimit: settings.cpuLimit, netLimit: settings.netLimit,
+      ramLimit: settings.ramLimit, cpuLimit: settings.cpuLimit, netLimit: settings.netLimit, autoSleep: settings.autoSleep,
       adblock: settings.adblock, ytSkip: settings.ytSkip,
       camera: settings.camera, mic: settings.mic, autoPip: settings.autoPip,
       showBookmarkBar: settings.showBookmarkBar, autoUpdate: settings.autoUpdate,
-      httpsOnly: settings.httpsOnly, phishingProtect: settings.phishingProtect, scanDownloads: settings.scanDownloads,
+      httpsOnly: settings.httpsOnly, phishingProtect: settings.phishingProtect, scanDownloads: settings.scanDownloads, cloudScan: settings.cloudScan,
       secureDns: settings.secureDns, blockThirdPartyCookies: settings.blockThirdPartyCookies, fingerprintProtect: settings.fingerprintProtect,
-      searchEngine: settings.searchEngine, searchEngineName: engine().name, searchSuggest: settings.searchSuggest,
+      searchEngine: settings.searchEngine, searchEngineName: engine().name, searchSuggest: settings.searchSuggest, hyperWeb: settings.hyperWeb,
       language: settings.language || 'auto', languageInfo: i18n.info(),
       cleanLinks: settings.cleanLinks, gpc: settings.gpc, webrtcProtect: settings.webrtcProtect, preconnect: settings.preconnect,
       updateUrl: effectiveUpdateUrl(),
@@ -546,7 +559,7 @@ function activateTab(id) {
   layout();
   if (tab.frozen) setFrozen(tab, false);
   if (tab.view && !tab.private) extmod.selectTab(tab.view.webContents);
-  if (tab.url.startsWith(HOME) && !tab.url.startsWith('elektron://start/error')) focusAddress();
+  if (tab.url.startsWith(HOME) && !/^elektron:\/\/start\/(error|search|design)/.test(tab.url)) focusAddress();
   else if (tab.view) tab.view.webContents.focus();
   pushState();
 }
@@ -597,6 +610,63 @@ function discardTab(tab) {
   tab.loading = false;
   tab.audible = false;
   pushState();
+}
+
+// ------------------------------------------------------------------ Eigene Designs (Seiten & Oberfläche)
+const STYLE_MAX = 64 * 1024;
+function styleHost(url) { return hostOf(url).replace(/^www\./, ''); }
+function cleanStyles() {
+  const src = settings.siteStyles && typeof settings.siteStyles === 'object' && !Array.isArray(settings.siteStyles) ? settings.siteStyles : {};
+  const out = {};
+  for (const [h, css] of Object.entries(src).slice(0, 300)) {
+    if (/^[a-z0-9.-]{1,253}$/.test(h) && typeof css === 'string' && css.trim()) out[h] = css.slice(0, STYLE_MAX);
+  }
+  settings.siteStyles = out;
+  settings.uiCss = typeof settings.uiCss === 'string' ? settings.uiCss.slice(0, STYLE_MAX) : '';
+}
+cleanStyles();
+// Design einer Seite: gilt auch für Unterseiten (youtube.com → m.youtube.com)
+function siteCss(url) {
+  const parts = styleHost(url).split('.');
+  for (let i = 0; i < parts.length - 1; i++) {
+    const css = settings.siteStyles[parts.slice(i).join('.')];
+    if (css) return css;
+  }
+  return '';
+}
+async function applySiteStyle(wc) {
+  if (!alive(wc)) return;
+  const old = wc.__voltCss;
+  wc.__voltCss = null;
+  if (old) { try { await wc.removeInsertedCSS(old); } catch {} }
+  const url = wc.getURL();
+  if (!/^https?:/i.test(url)) return;
+  const css = siteCss(url);
+  if (!css) return;
+  try { wc.__voltCss = await wc.insertCSS(css); } catch {}
+}
+async function applyUiStyle() {
+  if (!uiView || !alive(uiView.webContents)) return;
+  const wc = uiView.webContents;
+  const old = wc.__voltCss;
+  wc.__voltCss = null;
+  if (old) { try { await wc.removeInsertedCSS(old); } catch {} }
+  // Notausgang: „Volt --ohne-design“ startet ohne eigenes Oberflächen-Design
+  if (!settings.uiCss.trim() || process.argv.includes('--ohne-design')) return;
+  try { wc.__voltCss = await wc.insertCSS(settings.uiCss); } catch {}
+}
+function applyAllStyles() {
+  for (const t of tabs) if (t.view && alive(t.view.webContents)) applySiteStyle(t.view.webContents);
+  applyUiStyle();
+}
+function saveSiteStyle(host, css) {
+  host = host.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/[/?#:].*$/, '').replace(/^www\./, '');
+  if (!/^[a-z0-9.-]{1,253}$/.test(host) || !host.includes('.')) return false;
+  if (css.trim()) settings.siteStyles[host] = css.slice(0, STYLE_MAX);
+  else delete settings.siteStyles[host];
+  saveSettings();
+  applyAllStyles();
+  return true;
 }
 
 // ------------------------------------------------------------------ Split-Screen
@@ -904,6 +974,8 @@ function wireWebContents(wc, tab) {
 
   if (!tab) return; // Seitenleisten-Panel
 
+  wc.on('dom-ready', () => applySiteStyle(wc)); // eigene Designs (start/design.html)
+
   // Im Split-Screen: angeklickte Seite wird zum aktiven Tab
   wc.on('focus', () => {
     if (inSplit(tab.id) && activeId !== tab.id) { activeId = tab.id; tab.lastActive = Date.now(); pushState(); }
@@ -1074,6 +1146,7 @@ function showContextMenu(wc, p, tab) {
       { label: `Seite mit ${aiName} zusammenfassen`, click: () => aiAboutPage(tab, 'summary') },
       { label: 'Seite auf Deutsch übersetzen', click: () => translatePage(tab) },
       { label: 'Lesemodus', click: () => readerMode() },
+      { label: 'Design für diese Seite …', click: () => createTab('elektron://start/design.html?host=' + encodeURIComponent(styleHost(wc.getURL()))) },
       { label: 'Screenshot', submenu: [
         { label: 'Sichtbarer Bereich', click: () => screenshot(false) },
         { label: 'Ganze Seite', click: () => screenshot(true) }
@@ -1234,6 +1307,13 @@ function tick() {
   }
 
   const background = tabs.filter(t => !isShown(t) && t.view && !t.audible);
+
+  // Auto-Schlaf: Tabs, die lange nicht benutzt wurden, geben ihren Arbeitsspeicher frei
+  // (laden beim Anklicken neu – wie die Speicher-Sparfunktion von Chrome)
+  if (settings.autoSleep.enabled) {
+    const limit = Date.now() - settings.autoSleep.minutes * 60000;
+    for (const t of background) if (!t.floating && !inSplit(t.id) && t.lastActive < limit) discardTab(t);
+  }
 
   // RAM-Limiter: am längsten unbenutzten Tab schlafen legen
   if (settings.ramLimit.enabled && ramMB > settings.ramLimit.mb) {
@@ -1655,6 +1735,8 @@ function setSetting(key, value) {
     case 'ramLimit.mb': settings.ramLimit.mb = clamp(value, 512, 32768); break;
     case 'cpuLimit.enabled': settings.cpuLimit.enabled = !!value; cpuOver = 0; break;
     case 'cpuLimit.percent': settings.cpuLimit.percent = clamp(value, 5, 95); break;
+    case 'autoSleep.enabled': settings.autoSleep.enabled = !!value; break;
+    case 'autoSleep.minutes': settings.autoSleep.minutes = clamp(value, 5, 240); break;
     case 'netLimit.enabled': settings.netLimit.enabled = !!value; allWebContents().forEach(applyNetLimit); break;
     case 'netLimit.kbs': settings.netLimit.kbs = clamp(value, 64, 1024 * 1024); if (settings.netLimit.enabled) allWebContents().forEach(applyNetLimit); break;
     case 'adblock': setAdblock(!!value); break;
@@ -1662,11 +1744,13 @@ function setSetting(key, value) {
     case 'httpsOnly': settings.httpsOnly = !!value; break;
     case 'phishingProtect': settings.phishingProtect = !!value; break;
     case 'scanDownloads': settings.scanDownloads = !!value; break;
+    case 'cloudScan': settings.cloudScan = !!value; break;
     case 'secureDns': settings.secureDns = !!value; applyDns(); break;
     case 'blockThirdPartyCookies': settings.blockThirdPartyCookies = !!value; break;
     case 'fingerprintProtect': settings.fingerprintProtect = !!value; break;
     case 'cleanLinks': settings.cleanLinks = !!value; break;
     case 'searchEngine': if (SEARCH_ENGINES[value]) { settings.searchEngine = value; lookChanged(); } break;
+    case 'hyperWeb': if (WEB_ENGINES.includes(value)) settings.hyperWeb = value; break;
     case 'searchSuggest': settings.searchSuggest = !!value; break;
     case 'gpc': settings.gpc = !!value; break;
     case 'maxSecurity': settings.maxSecurity = !!value; break;
@@ -1742,7 +1826,8 @@ function showMainMenu() {
     { label: 'Verlauf', accelerator: 'CmdOrCtrl+H', click: () => openInternal('history') },
     { label: 'Downloads', accelerator: 'CmdOrCtrl+J', click: () => openInternal('downloads') },
     { label: 'Erweiterungen', click: () => openInternal('extensions') },
-    { label: 'Elektron Studio (Shader & Abläufe)', accelerator: 'CmdOrCtrl+Shift+E', click: () => openInternal('studio') },
+    { label: 'Designs & Anpassungen …', click: () => openInternal('design') },
+    { label: 'Volt Studio (Shader & Abläufe)', accelerator: 'CmdOrCtrl+Shift+E', click: () => openInternal('studio') },
     { label: 'Chrome Web Store', click: () => extmod.openStore('') },
     { label: 'Auf der Seite suchen …', accelerator: 'CmdOrCtrl+F', enabled: !!wc, click: openFind },
     { label: 'Seite drucken …', enabled: !!wc, click: () => wc && wc.print() },
@@ -1755,13 +1840,13 @@ function showMainMenu() {
     { label: 'Lesezeichen & Einstellungen sichern …', click: backupData },
     { label: 'Sicherung wiederherstellen …', click: restoreData },
     { type: 'separator' },
-    { label: 'Elektron weiterempfehlen', click: () => {
+    { label: 'Volt weiterempfehlen', click: () => {
       clipboard.writeText('https://obimokenobix.github.io/elektron-gx/');
       toast('Link kopiert – schick ihn an deine Freunde!');
     } },
     { label: 'Browserdaten löschen', click: clearBrowsingData },
     { label: 'Nach Updates suchen', click: () => { if (panel !== 'gx') togglePanel('gx'); checkUpdates(true); } },
-    ...(process.platform === 'win32' ? [{ label: 'Als Standardbrowser festlegen …', click: () => shell.openExternal('ms-settings:defaultapps?registeredAppUser=Elektron%20GX') }] : []),
+    ...(process.platform === 'win32' ? [{ label: 'Als Standardbrowser festlegen …', click: () => shell.openExternal('ms-settings:defaultapps?registeredAppUser=Volt') }] : []),
     { label: `Über ${APP_NAME}`, click: () => dialog.showMessageBox(win, {
       type: 'info', title: APP_NAME, message: `${APP_NAME} ${app.getVersion()}`,
       detail: `Der Gaming-Browser.\nChromium ${process.versions.chrome} · Electron ${process.versions.electron}`
@@ -1837,7 +1922,7 @@ ipcMain.on('ui:cmd', (e, name, ...args) => {
       if (d) shell.showItemInFolder(d.path);
       break;
     }
-    case 'openInternal': if (['bookmarks', 'history', 'downloads', 'extensions', 'welcome'].includes(args[0])) openInternal(args[0]); break;
+    case 'openInternal': if (['bookmarks', 'history', 'downloads', 'extensions', 'welcome', 'design', 'search'].includes(args[0])) openInternal(args[0]); break;
     case 'chooseBg': chooseBackground(); break;
     case 'screenshot': screenshot(!!args[0]); break;
     case 'shieldMenu': showShieldMenu(); break;
@@ -2012,7 +2097,7 @@ function onWillDownload(e, item) {
     if (st === 'completed') {
       markFromInternet(item.getSavePath(), item.getURL(), item.getReferrer && item.getReferrer());
       flows.event('download', { name: rec.name });
-      if (settings.scanDownloads && protect.defenderPath()) scanDownload(id, rec.name, item.getSavePath());
+      if ((settings.scanDownloads && protect.defenderPath()) || settings.cloudScan) scanDownload(id, rec.name, item.getSavePath());
       else toast(`Download fertig: ${rec.name}`, { action: 'Im Ordner zeigen', cmd: 'openDownload', arg: id });
     } else if (st === 'failed') toast(`Download fehlgeschlagen: ${rec.name}`);
     broadcastDownloads();
@@ -2030,19 +2115,49 @@ function markFromInternet(file, url, referrer) {
   try { fs.writeFileSync(file + ':Zone.Identifier', body); } catch {}
 }
 
+// Zwei Virenscanner gleichzeitig: Microsoft Defender (auf dem PC) und die Malware Hash Registry
+// (Abgleich des Fingerabdrucks mit über 30 Antivirus-Datenbanken).
 async function scanDownload(id, name, file) {
   store.updateDownload(id, { scan: 'scanning' }, true);
   broadcastDownloads();
-  const result = await protect.scanFile(file);
-  if (result === 'threat') {
-    store.updateDownload(id, { scan: 'threat', state: 'virus' }, true);
+  const useDefender = settings.scanDownloads && !!protect.defenderPath();
+  const [def, hash] = await Promise.all([
+    useDefender ? protect.scanFile(file) : Promise.resolve('off'),
+    settings.cloudScan ? hashscan.scanFile(file).catch(() => ({ result: 'unavailable' })) : Promise.resolve({ result: 'off' })
+  ]);
+  const scanners = [];
+  if (def === 'clean') scanners.push('defender');
+  if (hash.result === 'clean') scanners.push('hash');
+  if (def === 'threat') {
+    store.updateDownload(id, { scan: 'threat', state: 'virus', virusBy: 'defender' }, true);
     toast(`Virus gefunden in ${name} – Windows Defender hat die Datei entfernt`);
+  } else if (hash.result === 'threat') {
+    const moved = quarantine(file, name);
+    store.updateDownload(id, { scan: 'threat', state: 'virus', virusBy: 'hash', virusPercent: hash.percent, quarantine: moved || null }, true);
+    toast(moved
+      ? `Schadsoftware erkannt in ${name} – Volt hat die Datei in Quarantäne verschoben`
+      : `Schadsoftware erkannt in ${name} – bitte nicht öffnen und löschen`);
   } else {
-    store.updateDownload(id, { scan: result }, true);
-    toast(result === 'clean' ? `${name} ist fertig – kein Virus gefunden` : `Download fertig: ${name}`,
+    const result = scanners.length ? 'clean' : 'unavailable';
+    store.updateDownload(id, { scan: result, scanners }, true);
+    toast(result === 'clean'
+      ? (scanners.length === 2 ? `${name} ist fertig – 2 Virenscanner: kein Virus gefunden` : `${name} ist fertig – kein Virus gefunden`)
+      : `Download fertig: ${name}`,
       { action: 'Im Ordner zeigen', cmd: 'openDownload', arg: id });
   }
   broadcastDownloads();
+}
+
+// Verdächtige Datei aus dem Download-Ordner holen: umbenannt (nicht mehr ausführbar) im Profilordner
+function quarantine(file, name) {
+  try {
+    const dir = path.join(app.getPath('userData'), 'Quarantaene');
+    fs.mkdirSync(dir, { recursive: true });
+    const target = path.join(dir, `${Date.now()}-${String(name).replace(/[^\w.\- ]+/g, '_')}.gesperrt`);
+    try { fs.renameSync(file, target); }
+    catch { fs.copyFileSync(file, target); fs.unlinkSync(file); }
+    return target;
+  } catch { return null; }
 }
 
 function downloadSummary() {
@@ -2189,7 +2304,7 @@ async function screenshot(full) {
     toast('Screenshot hat nicht geklappt');
     return;
   }
-  const dir = path.join(app.getPath('pictures'), 'Elektron');
+  const dir = path.join(app.getPath('pictures'), 'Volt');
   fs.mkdirSync(dir, { recursive: true });
   const stamp = new Date().toISOString().slice(0, 19).replace('T', ' ').replace(/:/g, '-');
   const file = path.join(dir, `Screenshot ${stamp}.png`);
@@ -2261,16 +2376,16 @@ async function readerMode() {
 
 // ------------------------------------------------------------------ Sichern & Wiederherstellen
 const BACKUP_KEYS = ['accent', 'accentNormal', 'style', 'background', 'preferredAI', 'ramLimit', 'cpuLimit', 'netLimit',
-  'adblock', 'ytSkip', 'camera', 'mic', 'autoPip', 'showBookmarkBar', 'freezeOnMinimize', 'restoreSession',
-  'httpsOnly', 'phishingProtect', 'scanDownloads', 'secureDns', 'blockThirdPartyCookies', 'fingerprintProtect', 'cleanLinks', 'gpc', 'webrtcProtect', 'preconnect', 'searchEngine', 'searchSuggest'];
+  'autoSleep', 'adblock', 'ytSkip', 'camera', 'mic', 'autoPip', 'showBookmarkBar', 'freezeOnMinimize', 'restoreSession',
+  'httpsOnly', 'phishingProtect', 'scanDownloads', 'cloudScan', 'secureDns', 'blockThirdPartyCookies', 'fingerprintProtect', 'cleanLinks', 'gpc', 'webrtcProtect', 'preconnect', 'searchEngine', 'searchSuggest', 'hyperWeb', 'siteStyles', 'uiCss'];
 async function backupData() {
   const r = await dialog.showSaveDialog(win, {
     title: 'Lesezeichen und Einstellungen sichern',
-    defaultPath: path.join(app.getPath('documents'), `Elektron-Sicherung-${new Date().toISOString().slice(0, 10)}.json`),
-    filters: [{ name: 'Elektron-Sicherung', extensions: ['json'] }]
+    defaultPath: path.join(app.getPath('documents'), `Volt-Sicherung-${new Date().toISOString().slice(0, 10)}.json`),
+    filters: [{ name: 'Volt-Sicherung', extensions: ['json'] }]
   });
   if (r.canceled || !r.filePath) return;
-  const data = { app: 'Elektron', version: 1, created: new Date().toISOString(),
+  const data = { app: 'Volt', version: 1, created: new Date().toISOString(),
     bookmarks: store.bookmarks().map(b => ({ url: b.url, title: b.title })),
     settings: Object.fromEntries(BACKUP_KEYS.map(k => [k, settings[k]])) };
   fs.writeFileSync(r.filePath, JSON.stringify(data, null, 2));
@@ -2279,14 +2394,16 @@ async function backupData() {
 async function restoreData() {
   const r = await dialog.showOpenDialog(win, {
     title: 'Sicherung wiederherstellen', properties: ['openFile'],
-    filters: [{ name: 'Elektron-Sicherung', extensions: ['json'] }]
+    filters: [{ name: 'Volt-Sicherung', extensions: ['json'] }]
   });
   if (r.canceled || !r.filePaths[0]) return;
   try {
     const data = JSON.parse(fs.readFileSync(r.filePaths[0], 'utf8'));
-    if (data.app !== 'Elektron' && data.app !== 'Elektron GX') throw new Error('keine Elektron-Sicherung');
+    if (!['Volt', 'Elektron', 'Elektron GX'].includes(data.app)) throw new Error('keine Volt-Sicherung');
     const added = store.importBookmarks(Array.isArray(data.bookmarks) ? data.bookmarks : []);
     for (const k of BACKUP_KEYS) if (data.settings && k in data.settings && typeof data.settings[k] === typeof DEFAULTS[k]) settings[k] = data.settings[k];
+    cleanStyles();
+    applyAllStyles();
     saveSettings();
     bookmarksChanged();
     lookChanged();
@@ -2297,7 +2414,7 @@ async function restoreData() {
 }
 
 // ------------------------------------------------------------------ Eigene Seiten
-// ------------------------------------------------------------------ Elektron Studio
+// ------------------------------------------------------------------ Volt Studio (früher Elektron Studio)
 // Bilder aus dem Internet für den Shader-Editor laden (ohne Cookies, nur echte Bilder, max. 25 MB)
 async function studioFetchImage(url) {
   let u;
@@ -2462,6 +2579,14 @@ ipcMain.handle('internal', async (e, name, ...args) => {
       return true;
     }
     case 'look': return lookInfo();
+    case 'hyper.info': return hyperInfo();
+    case 'design.get': return { sites: settings.siteStyles, ui: settings.uiCss };
+    case 'design.save': return saveSiteStyle(String(args[0] || ''), String(args[1] || ''));
+    case 'design.ui': settings.uiCss = String(args[0] || '').slice(0, STYLE_MAX); saveSettings(); applyUiStyle(); return true;
+    case 'hyper.resolve': { const u = toURL(String(args[0] || '').slice(0, 2000)); return u && /^(https?:|elektron:\/\/start\/)/i.test(u) ? (hyper.calc(String(args[0])) !== null ? 'elektron://start/search.html?q=' + encodeURIComponent(String(args[0]).trim()) : u) : null; }
+    case 'hyper.setWeb': if (WEB_ENGINES.includes(args[0])) { settings.hyperWeb = args[0]; saveSettings(); } return hyperInfo();
+    case 'hyper.wiki': return hyperWiki(String(args[0] || '').slice(0, 300));
+    case 'hyper.summary': return hyperSummary(String(args[0] || '').slice(0, 300));
     case 'steam.games': return extras.steamGames();
     case 'steam.play': {
       const id = String(args[0]);
@@ -2535,9 +2660,55 @@ const SEARCH_ENGINES = {
   google: { name: 'Google', url: 'https://www.google.com/search?q=', suggest: () => `https://suggestqueries.google.com/complete/search?client=firefox&hl=${encodeURIComponent(i18n.current().code)}&q=` },
   duckduckgo: { name: 'DuckDuckGo', url: 'https://duckduckgo.com/?q=', suggest: 'https://duckduckgo.com/ac/?type=list&q=' },
   brave: { name: 'Brave Search', url: 'https://search.brave.com/search?q=', suggest: 'https://search.brave.com/api/suggest?q=' },
-  startpage: { name: 'Startpage', url: 'https://www.startpage.com/sp/search?query=', suggest: null }
+  startpage: { name: 'Startpage', url: 'https://www.startpage.com/sp/search?query=', suggest: null },
+  // HyperSearch X: eigene Suchseite mit Sofort-Antworten, Wikipedia-Wissen und Websuche ohne Tracking
+  hyper: { name: 'HyperSearch X', url: 'elektron://start/search.html?q=', suggest: () => `https://${hyper.wikiLang(i18n.current().code)}.wikipedia.org/w/api.php?action=opensearch&limit=6&namespace=0&format=json&search=` }
 };
+const WEB_ENGINES = ['duckduckgo', 'brave', 'startpage', 'google'];
 function engine() { return SEARCH_ENGINES[settings.searchEngine] || SEARCH_ENGINES.google; }
+
+// ------------------------------------------------------------------ HyperSearch X (start/search.html)
+function hyperInfo() {
+  return {
+    lang: hyper.wikiLang(i18n.current().code),
+    web: settings.hyperWeb,
+    engines: WEB_ENGINES.map(k => ({ id: k, name: SEARCH_ENGINES[k].name, url: SEARCH_ENGINES[k].url })),
+    extra: [['yt', 'YouTube'], ['map', 'Karte'], ['gh', 'GitHub'], ['st', 'Steam']].map(([k, n]) => ({ id: k, name: n, url: hyper.BANGS[k].url })),
+    bangs: Object.fromEntries(Object.entries(hyper.BANGS).map(([k, b]) => [k, typeof b.url === 'function' ? b.url(hyper.wikiLang(i18n.current().code)) : b.url]))
+  };
+}
+const hyperCache = new Map();
+async function hyperGet(url) {
+  if (hyperCache.has(url)) return hyperCache.get(url);
+  const p = mainSes.fetch(url, { headers: { 'Api-User-Agent': 'Volt-Browser HyperSearchX' } }).then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+  hyperCache.set(url, p);
+  p.catch(() => hyperCache.delete(url));
+  if (hyperCache.size > 200) hyperCache.delete(hyperCache.keys().next().value);
+  return p;
+}
+async function hyperWiki(q) {
+  if (!q.trim()) return { total: 0, hits: [] };
+  const lang = hyper.wikiLang(i18n.current().code);
+  const d = await hyperGet(`https://${lang}.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(q)}&srlimit=10&srprop=snippet&utf8=1&format=json`);
+  const strip = (h) => String(h || '').replace(/<[^>]+>/g, '').replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&#0?39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+  return {
+    lang,
+    total: (d.query && d.query.searchinfo && d.query.searchinfo.totalhits) || 0,
+    hits: ((d.query && d.query.search) || []).map(h => ({
+      title: String(h.title), snippet: strip(h.snippet),
+      url: `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(String(h.title).replace(/ /g, '_'))}`
+    }))
+  };
+}
+async function hyperSummary(title) {
+  if (!title.trim()) return null;
+  const lang = hyper.wikiLang(i18n.current().code);
+  const s = await hyperGet(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`);
+  if (!s || !s.extract) return null;
+  const img = s.thumbnail && /^https:\/\/upload\.wikimedia\.org\//.test(s.thumbnail.source) ? s.thumbnail.source : null;
+  return { title: String(s.title || title), description: String(s.description || ''), extract: String(s.extract), image: img,
+    url: (s.content_urls && s.content_urls.desktop && s.content_urls.desktop.page) || `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title)}` };
+}
 function searchUrl(q) { return engine().url + encodeURIComponent(q); }
 function googleSearch(q) { return searchUrl(q); }
 
@@ -2546,7 +2717,9 @@ function baseSuggestItems(q) {
   const isSearch = target === googleSearch(q.trim());
   const first = isSearch ? { kind: 'search', title: q.trim(), url: target } : { kind: 'go', title: target, url: target };
   const local = store.suggest(q, 5).filter(x => x.url !== target).map(x => ({ kind: x.kind, title: x.title, url: x.url }));
-  return [first, ...local];
+  const r = hyper.calc(q);
+  const calcItem = r === null ? [] : [{ kind: 'calc', title: `${q.trim()} = ${r.toLocaleString(i18n.current().code, { maximumFractionDigits: 10 })}`, url: 'elektron://start/search.html?q=' + encodeURIComponent(q.trim()) }];
+  return [...calcItem, first, ...local];
 }
 
 async function updateSuggest(query, rect) {
@@ -2733,6 +2906,7 @@ function createWindow() {
   uiView.webContents.on('before-input-event', (e, input) => { if (handleShortcut(input)) e.preventDefault(); });
   uiView.webContents.on('will-navigate', (e) => e.preventDefault());
   uiView.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
+  uiView.webContents.on('dom-ready', () => applyUiStyle());
   uiView.webContents.once('dom-ready', () => {
     perf('ui-shown');
     win.show();
@@ -2846,6 +3020,7 @@ app.whenReady().then(async () => {
       const t = createTab(HOME, { activate: false });
       t.title = 'GeForce NOW'; t.discarded = true; destroyView(t.view); t.view = null;
       if (process.env.ELEKTRON_TEST === 'gx') togglePanel('gx');
+      if (process.env.ELEKTRON_TEST === 'volt') voltTest();
       if (process.env.ELEKTRON_TEST === 'gaming') { togglePanel('gx'); setGamingMode(true); }
       if (process.env.ELEKTRON_TEST === 'split') { startSplit(tabs[tabs.length - 2].id); setSplitRatio(0.55); }
       if (process.env.ELEKTRON_TEST === 'float') { startSplit(tabs[tabs.length - 2].id); const ft = createTab(HOME, { activate: false }); setTimeout(() => floatTab(ft.id), 800); setTimeout(async () => { for (const f of floatsByBar.values()) console.log('FLOAT-BAR', f.bar.webContents.getURL(), await f.bar.webContents.executeJavaScript('document.querySelector("#fav") ? document.querySelector("#fav").naturalWidth : -1')); }, 6000); }
@@ -3118,3 +3293,76 @@ app.on('before-quit', (e) => {
 });
 
 app.on('window-all-closed', () => app.quit());
+
+// ------------------------------------------------------------------ Test für Volt 4.0 (ELEKTRON_TEST=volt, Bilder nach ELEKTRON_SHOTDIR)
+async function voltTest() {
+  const dir = process.env.ELEKTRON_SHOTDIR || app.getPath('temp');
+  const wait = (ms) => new Promise(r => setTimeout(r, ms));
+  const shot = async (wc, name) => { try { const img = await wc.capturePage(); fs.writeFileSync(path.join(dir, name + '.png'), img.toPNG()); } catch (e) { console.log('SHOT-FEHLER', name, e.message); } };
+  const log = (...a) => console.log('VOLT-TEST', ...a);
+  log('bang', toURL('!yt minecraft'), '|', toURL('minecraft !st'), '|', toURL('orf.at'));
+  setSetting('searchEngine', 'hyper');
+  log('suche', toURL('Rakete'));
+  log('vorschlaege', JSON.stringify(baseSuggestItems('(12+8)*3').slice(0, 2)));
+  log('design-speichern', saveSiteStyle('https://www.Example.com/pfad', 'body { outline: 5px solid #f2ff3d; }'), JSON.stringify(settings.siteStyles));
+  log('design-unterseite', !!siteCss('https://m.example.com/x'), 'fremd', !!siteCss('https://example.org/'));
+  log('design-ungueltig', saveSiteStyle('nicht gültig', 'x'));
+  // Suchseite
+  const s = createTab('elektron://start/search.html?q=' + encodeURIComponent('(12+8)*3'));
+  await wait(3500);
+  await shot(s.view.webContents, '1-suche');
+  log('suchseite', await s.view.webContents.executeJavaScript("document.getElementById('calc-r').textContent + ' | ' + document.title"));
+  // Designs
+  const d = createTab('elektron://start/design.html?host=example.com');
+  await wait(2500);
+  await shot(d.view.webContents, '2-design');
+  // Zweiter Virenscanner: Fund simulieren
+  const f = path.join(app.getPath('temp'), 'volt-test-virus.exe');
+  fs.writeFileSync(f, 'X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR');
+  const realScan = hashscan.scanFile;
+  hashscan.scanFile = async () => ({ result: 'threat', percent: 72 });
+  store.addDownload({ id: 'vt1', name: 'volt-test-virus.exe', path: f, url: 'https://example.com/virus.exe', state: 'completed', received: 40, total: 40, started: Date.now(), speed: 0 });
+  await scanDownload('vt1', 'volt-test-virus.exe', f);
+  hashscan.scanFile = async () => ({ result: 'clean' });
+  const f2 = path.join(app.getPath('temp'), 'volt-test-ok.zip');
+  fs.writeFileSync(f2, 'ok');
+  store.addDownload({ id: 'vt2', name: 'volt-test-ok.zip', path: f2, url: 'https://example.com/ok.zip', state: 'completed', received: 2, total: 2, started: Date.now(), speed: 0 });
+  await scanDownload('vt2', 'volt-test-ok.zip', f2);
+  hashscan.scanFile = realScan;
+  const rec = store.downloads().find(x => x.id === 'vt1');
+  log('quarantaene', rec.state, rec.virusBy, !fs.existsSync(f), !!(rec.quarantine && fs.existsSync(rec.quarantine)));
+  openInternal('downloads');
+  await wait(2500);
+  await shot(activeTab().view.webContents, '3-downloads');
+  // Startseite mit neuem Logo
+  const h = createTab(HOME);
+  await wait(2500);
+  await shot(h.view.webContents, '4-start');
+  // GX Control: Schutz und Limiter
+  togglePanel('gx');
+  await wait(1500);
+  await uiView.webContents.executeJavaScript("document.querySelector('[data-setting=cloudScan]').closest('.card').scrollIntoView({block:'center'})");
+  await wait(600);
+  await shot(uiView.webContents, '5-gx-schutz');
+  await uiView.webContents.executeJavaScript("document.getElementById('r-sleep').closest('.card').scrollIntoView({block:'center'})");
+  await wait(600);
+  await shot(uiView.webContents, '6-gx-schlaf');
+  await uiView.webContents.executeJavaScript("document.getElementById('design-btn').closest('.card').scrollIntoView({block:'center'})");
+  await wait(600);
+  await shot(uiView.webContents, '7-gx-design');
+  // Auto-Schlaf: alter Hintergrund-Tab wird schlafen gelegt
+  const old = createTab('elektron://start/history.html', { activate: false });
+  await wait(1500);
+  activateTab(h.id);
+  old.lastActive = Date.now() - 2 * 3600 * 1000;
+  await wait(2500);
+  log('auto-schlaf', old.discarded === true);
+  // Oberflächen-Design
+  settings.uiCss = ':root { --bg-0: #000; }';
+  await applyUiStyle();
+  log('ui-css', !!uiView.webContents.__voltCss);
+  settings.uiCss = '';
+  await applyUiStyle();
+  log('fertig');
+  setTimeout(() => app.exit(0), 500);
+}

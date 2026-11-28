@@ -32,7 +32,7 @@
 31	Sýna öll {0}
 32	Velja allt
 33	Eyða öllu og byrja upp á nýtt?
-34	Allt sem þú getur stillt í Elektron.
+34	Allt sem þú getur stillt í Volt.
 35	Vista sem mynd (PNG)
 36	Gera að sjálfgefnum vafra …
 37	Nota sem bakgrunn upphafssíðu
@@ -191,12 +191,12 @@
 190	Stillingar
 191	Ekki tókst að vista stillingar:
 192	Bæta atriðum við hægrismellivalmyndina
-193	Elektron-vernd · Greining eftirlíkinga beint í tölvunni þinni
-194	Elektron-vernd · Listar frá Phishing.Database og URLhaus (abuse.ch)
-195	Elektron Studio (skyggjar og flæði)
-196	Elektron stöðvaði þessa síðu því hún er á lista yfir þekktar svikasíður.
-197	Elektron leitar reglulega að nýjum útgáfum.
-198	Mæla með Elektron
+193	Volt-vernd · Greining eftirlíkinga beint í tölvunni þinni
+194	Volt-vernd · Listar frá Phishing.Database og URLhaus (abuse.ch)
+195	Volt Studio (skyggjar og flæði)
+196	Volt stöðvaði þessa síðu því hún er á lista yfir þekktar svikasíður.
+197	Volt leitar reglulega að nýjum útgáfum.
+198	Mæla með Volt
 199	Mælt með
 200	Fjarlægja
 201	Fjarlægir rakningarfæribreytur eins og utm_, fbclid og gclid, sleppir framsendingarrekjurum Google og Facebook og opnar AMP-síður í upprunalegri mynd.
@@ -213,7 +213,7 @@
 212	Búðu fyrst til mynd – ekkert berst enn í „Úttak“.
 213	Bæta við viðbót
 214	Viðbætur
-215	Viðbætur koma úr Chrome Web Store og virka í Elektron eins og í Chrome. Sumar mjög stórar viðbætur nota Chrome-eiginleika sem eru ekki til hér – þá virka þær aðeins að hluta. Claude og ChatGPT finnurðu líka beint í hliðarstikunni vinstra megin.
+215	Viðbætur koma úr Chrome Web Store og virka í Volt eins og í Chrome. Sumar mjög stórar viðbætur nota Chrome-eiginleika sem eru ekki til hér – þá virka þær aðeins að hluta. Claude og ChatGPT finnurðu líka beint í hliðarstikunni vinstra megin.
 216	Viðbætur eru uppfærðar
 217	Viðbótastika ekki tiltæk:
 218	„Úttak“-hnútinn vantar.
@@ -298,7 +298,7 @@
 297	Skrifa á klippiborðið
 298	Opna í nýjum flipa
 299	Opna í einkaflipa
-300	Á hvaða tungumáli á Elektron að tala við þig? Fánarnir sýna löndin þar sem tungumálið er talað.
+300	Á hvaða tungumáli á Volt að tala við þig? Fánarnir sýna löndin þar sem tungumálið er talað.
 301	Loka á efni á vefsíðum
 302	Setja upp og byrja
 303	Uppsett
@@ -615,7 +615,7 @@
 614	Vírus fannst – Windows Defender fjarlægði skrána
 615	Allur skjárinn
 616	Frá
-617	Vírusum eða öðrum spilliforritum hefur verið dreift frá þessari síðu. Elektron stöðvaði þau áður en nokkuð barst í tölvuna þína.
+617	Vírusum eða öðrum spilliforritum hefur verið dreift frá þessari síðu. Volt stöðvaði þau áður en nokkuð barst í tölvuna þína.
 618	Áfram
 619	Áfram (Alt+→)
 620	Fyrri samsvörun (Shift+F3)
@@ -657,7 +657,7 @@
 656	Endurheimta …
 657	Endurtaka (flísar)
 658	Velkomin(n)
-659	Velkomin(n) í Elektron
+659	Velkomin(n) í Volt
 660	Windows Defender fannst ekki
 661	Horn
 662	Þegar farið er yfir mörkin sofna þeir flipar sem lengst hafa verið ónotaðir.
@@ -698,7 +698,7 @@
 697	ekki tókst að lesa bókamerkjaskrána.
 698	klippiborðið
 699	engin mörk
-700	ekki öryggisafrit frá Elektron
+700	ekki öryggisafrit frá Volt
 701	lesa og breyta
 702	ekki leyft
 703	aðeins í uppsettu útgáfunni
@@ -743,7 +743,7 @@
 742	Fjarlægja „{0}“?
 743	„{0}“ hefur verið hlaðið.
 744	„{0}“ var bætt við
-745	Bæta „{0}“ við Elektron?
+745	Bæta „{0}“ við Volt?
 746	… er slökkt
 747	… er kveikt
 748	← Upprunaleg síða
@@ -752,3 +752,77 @@
 751	🎮 Gaming
 752	frystir
 753	sofandi
+754	Second virus scanner
+755	Also checks every download against the Malware Hash Registry – more than 30 antivirus databases. Only a fingerprint of the file is looked up, never the file itself.
+756	Put tabs to sleep automatically
+757	Tabs you haven't used for a while free up their memory. Tabs playing sound never sleep.
+758	Designs & customisation
+759	Designs & customisation …
+760	Your own look for every website and for Volt itself – with templates like dark mode or your own CSS.
+761	Open …
+762	HyperSearch X, DuckDuckGo, Brave Search and Startpage don't build a profile of you. HyperSearch X calculates instantly, shows knowledge from Wikipedia and understands shortcuts like
+763	after {0} min
+764	after {0} h
+765	{0} is done – 2 virus scanners: no virus found
+766	Malware detected in {0} – Volt moved the file to quarantine
+767	Malware detected in {0} – do not open it, please delete it
+768	Design for this site …
+769	Malware detected (Malware Hash Registry) – moved to quarantine
+770	Malware detected (Malware Hash Registry) – do not open!
+771	· ✓ no virus (2 virus scanners)
+772	· ✓ no virus (Malware Hash Registry)
+773	Search, calculate or !yt for YouTube …
+774	Search
+775	● No tracking
+776	Ctrl + Enter: search the whole web
+777	Search the whole web:
+778	Knowledge
+779	Source: Wikipedia
+780	Knowledge · {0} results
+781	What can HyperSearch X do?
+782	Calculate
+783	– e.g.
+784	or
+785	Shortcuts
+786	Wikipedia,
+787	– answers from Wikipedia right on the page
+788	Web search without tracking
+789	– with DuckDuckGo, Brave or Startpage
+790	Searching …
+791	Read the full article
+792	See the result above.
+793	No knowledge results – try the web search above.
+794	Knowledge currently unavailable
+795	Wikipedia is currently unavailable – use the web search above.
+796	Right-click: set as default for web search
+797	Map
+798	Websites
+799	Browser interface
+800	Add a site, e.g. youtube.com
+801	Save (Ctrl+S)
+802	Remove design
+803	No site yet
+804	custom design active
+805	no design yet
+806	Change the colours and font of Volt itself. Please don't change the heights and spacing of the bars. If something goes wrong: remove the design – or start Volt with “--ohne-design”.
+807	Takes effect right after saving.
+808	Give every website your own look – with templates or your own CSS. A design for youtube.com also applies to m.youtube.com. Everything stays on your PC.
+809	Pick a site on the left or add one
+810	Open tabs of this site change immediately.
+811	not saved
+812	Please save or remove first
+813	Saved – active immediately
+814	Design removed
+815	Please enter an address like youtube.com
+816	+ Force dark mode
+817	+ Larger text
+818	+ Reading width
+819	+ No animations
+820	+ Hide images
+821	+ Custom font
+822	+ Accent-coloured links
+823	+ Midnight
+824	+ OLED black
+825	+ Volt yellow
+826	+ Bahnschrift font
+827	+ No glow

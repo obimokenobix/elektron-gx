@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data:; style-src 'self'; script-src 'self'">
+  <title>Designs & Anpassungen</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <div class="wrap dsg">
+    <header class="page">
+      <h1>Designs &amp; Anpassungen</h1>
+      <div class="spacer"></div>
+      <div class="dsg-tabs" role="tablist">
+        <button class="btn" data-mode="sites" type="button">Webseiten</button>
+        <button class="btn" data-mode="ui" type="button">Browser-Oberfläche</button>
+      </div>
+    </header>
+    <p class="dsg-intro" id="intro"></p>
+
+    <div class="dsg-grid">
+      <aside class="dsg-side" id="side">
+        <form id="add" class="search" autocomplete="off">
+          <input id="newHost" placeholder="Seite hinzufügen, z. B. youtube.com" spellcheck="false">
+        </form>
+        <div class="list" id="sites"></div>
+      </aside>
+
+      <section class="dsg-edit">
+        <div class="dsg-head">
+          <h2 id="title">–</h2>
+          <span class="dsg-status" id="status"></span>
+        </div>
+        <div class="dsg-presets" id="presets"></div>
+        <textarea id="css" spellcheck="false" placeholder="/* Eigenes CSS – z. B. */&#10;body { font-size: 18px !important; }"></textarea>
+        <div class="dsg-actions">
+          <button class="btn primary" id="save" type="button">Speichern (Strg+S)</button>
+          <button class="btn danger" id="remove" type="button">Design entfernen</button>
+          <span class="dsg-hint" id="hint"></span>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="internal.js"></script>
+  <script src="design.js"></script>
+</body>
+</html>

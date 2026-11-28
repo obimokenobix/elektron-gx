@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://upload.wikimedia.org; style-src 'self'; script-src 'self'">
+  <title>HyperSearch X</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="internal.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+  <div class="wrap hsx">
+    <header class="hsx-top">
+      <a class="hsx-brand" href="search.html" title="HyperSearch X">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><path d="M18 5 9 18h6l-2 9 10-14h-6z"/></svg>
+        <span>HyperSearch <b>X</b></span>
+      </a>
+      <form id="f" class="hsx-form" autocomplete="off">
+        <input id="q" type="search" placeholder="Suchen, rechnen oder !yt für YouTube …" spellcheck="false" aria-label="Suche">
+        <button class="btn primary" type="submit">Suchen</button>
+      </form>
+    </header>
+
+    <div class="hsx-meta"><span id="speed"></span><span class="ok">● Kein Tracking</span><span>Strg + Enter: im ganzen Web suchen</span></div>
+
+    <section class="hsx-calc" id="calc" hidden data-no-i18n>
+      <small id="calc-q"></small>
+      <strong id="calc-r"></strong>
+    </section>
+
+    <section class="hsx-web">
+      <span>Im ganzen Web suchen:</span>
+      <div id="web"></div>
+    </section>
+
+    <div class="hsx-grid">
+      <section>
+        <div class="hsx-head"><span id="count">Wissen</span><span>Quelle: Wikipedia</span></div>
+        <div id="list"></div>
+      </section>
+      <aside class="hsx-card" id="card" hidden data-no-i18n></aside>
+    </div>
+
+    <section class="hsx-home" id="home" hidden>
+      <h2>Was kann HyperSearch X?</h2>
+      <ul>
+        <li><b>Rechnen</b> – z. B. <code>(12+8)*3</code> oder <code>20 % * 50</code></li>
+        <li><b>Abkürzungen</b> – <code>!yt</code> YouTube, <code>!w</code> Wikipedia, <code>!gh</code> GitHub, <code>!st</code> Steam, <code>!map</code> Karte, <code>!r</code> Reddit, <code>!tw</code> Twitch</li>
+        <li><b>Wissen</b> – Antworten aus Wikipedia direkt auf der Seite</li>
+        <li><b>Websuche ohne Tracking</b> – mit DuckDuckGo, Brave oder Startpage</li>
+      </ul>
+    </section>
+  </div>
+  <script src="internal.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

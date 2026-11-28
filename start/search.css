@@ -1,0 +1,46 @@
+/* HyperSearch X – Suchseite von Volt */
+.hsx { width: min(1100px, 100% - 32px); }
+.hsx-top { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 10px; }
+.hsx-brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 800; font-size: 19px; white-space: nowrap; }
+.hsx-brand svg { width: 30px; height: 30px; }
+.hsx-brand circle { fill: var(--card); stroke: var(--accent); stroke-width: 2; }
+.hsx-brand path { fill: var(--accent); }
+.hsx-brand b { color: var(--accent); }
+.hsx-form { flex: 1; min-width: 260px; display: flex; gap: 8px; align-items: center; height: 48px; padding: 0 6px 0 18px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 24px; }
+.hsx-form:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+.hsx-form input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 16px; }
+.hsx-form .btn { border-radius: 18px; }
+.hsx-meta { display: flex; gap: 16px; flex-wrap: wrap; color: var(--text-3); font-size: 12px; margin: 0 4px 18px; }
+.hsx-meta .ok { color: #4ade80; }
+#speed b { color: #4ade80; font-weight: 600; }
+.hsx-calc { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; margin-bottom: 16px; }
+.hsx-calc small { display: block; color: var(--text-3); font-size: 13px; }
+.hsx-calc strong { display: block; font-size: 36px; line-height: 1.2; color: var(--accent); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.hsx-web { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; color: var(--text-2); font-size: 13px; }
+#web { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { display: inline-flex; align-items: center; height: 32px; padding: 0 14px; border-radius: 16px; border: 1px solid var(--line);
+  background: var(--card); color: var(--text-2); text-decoration: none; font-size: 13px; cursor: pointer; }
+.chip:hover { color: var(--text); border-color: var(--text-3); }
+.chip.def { border-color: var(--accent); color: var(--text); }
+.chip.def::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 8px; }
+.hsx-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 26px; align-items: start; }
+@media (max-width: 860px) { .hsx-grid { grid-template-columns: 1fr; } }
+.hsx-head { display: flex; justify-content: space-between; color: var(--text-3); font-size: 12px; margin: 0 2px 6px; }
+.hit { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+.hit a { color: var(--text); text-decoration: none; font-size: 17px; font-weight: 600; }
+.hit a:hover { color: var(--accent); text-decoration: underline; }
+.hit .u { color: #4ade80; font-size: 12px; margin: 2px 0 4px; overflow-wrap: anywhere; }
+.hit p { margin: 0; color: var(--text-2); font-size: 14px; }
+.hit mark { background: none; color: var(--text); font-weight: 700; }
+.hsx-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.hsx-card img { display: block; width: 100%; max-height: 220px; object-fit: cover; background: var(--card-2); }
+.hsx-card .in { padding: 14px 18px 18px; }
+.hsx-card h2 { margin: 0 0 2px; font-size: 21px; line-height: 1.25; }
+.hsx-card .d { color: var(--text-3); font-size: 13px; margin-bottom: 8px; }
+.hsx-card p { margin: 0 0 12px; color: var(--text-2); font-size: 14px; }
+.hsx-card a { color: var(--accent); }
+.hsx-home { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; }
+.hsx-home h2 { margin: 0 0 8px; font-size: 18px; }
+.hsx-home ul { margin: 0; padding-left: 20px; color: var(--text-2); line-height: 1.9; }
+.hsx-home code { background: var(--card-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; color: var(--text); }

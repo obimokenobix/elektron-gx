@@ -1,6 +1,8 @@
-# Elektron – der Gaming-Browser
+# Volt – der schnelle, sichere Gaming-Browser
 
-![Elektron](docs/img/og.png)
+*Volt hieß bis Version 3 „Elektron“ – Elektron bleibt der Name der Marke dahinter.*
+
+![Volt](docs/img/og.png)
 
 **Kostenloser Browser für PC-Gamer auf Chromium-Basis.** Gaming-Modus, RAM-/CPU-/Netzwerk-Limiter, Split-Screen, schwebende Fenster, Werbeblocker inkl. YouTube, Chrome-Erweiterungen, Claude & ChatGPT in der Seitenleiste.
 
@@ -43,10 +45,20 @@
 - **Willkommensseite beim ersten Start** mit empfohlenen Erweiterungen (Malwarebytes Browser Guard, Bitwarden, optional Avast) zum Ankreuzen
 - **Automatische Updates** über GitHub Releases; als Standardbrowser auswählbar
 
+**Neu in 4.0 – Volt**
+
+- **Neuer Name: Volt** – mit neuem Logo. Lesezeichen, Verlauf, Einstellungen und Standardbrowser-Eintrag bleiben erhalten, Updates laufen nahtlos weiter (die Programmdatei heißt intern weiterhin `Elektron.exe`)
+- **Zweiter Virenscanner** (`hashscan.js`): Jeder Download wird zusätzlich zum Microsoft Defender mit der [Malware Hash Registry](https://hash.cymru.com/) von Team Cymru abgeglichen (über 30 Antivirus-Datenbanken). Übertragen wird nur der SHA-1-Fingerabdruck per DNS, nie die Datei. Erkannte Schadsoftware wird in `%APPDATA%\Elektron GX\Quarantaene` verschoben
+- **HyperSearch X** (`hyper.js`, `start/search.html`): eigene Suche mit Sofort-Rechner (`(12+8)*3`), Wissen aus Wikipedia mit Infokarte, Websuche über DuckDuckGo/Brave/Startpage/Google ohne Tracking. Als Suchmaschine wählbar
+- **Abkürzungen (Bangs) in der Adressleiste** für jede Suchmaschine: `!yt`, `!w`, `!gh`, `!st`, `!map`, `!r`, `!tw`, `!d`, `!b`, `!sp`, `!g`
+- **Rechner in der Adressleiste**: Rechnungen zeigen das Ergebnis schon in den Vorschlägen
+- **Designs & Anpassungen** (`start/design.html`, Menü oder Rechtsklick → „Design für diese Seite …“): eigenes CSS für jede Webseite (gilt auch für Unterseiten) und für die Browser-Oberfläche, mit Vorlagen (Dunkelmodus erzwingen, größere Schrift, Animationen aus, OLED-Schwarz …). Notausgang: `Elektron.exe --ohne-design`
+- **Tabs automatisch schlafen legen**: unbenutzte Tabs geben nach 5 Min. bis 4 Std. (Standard 30 Min.) ihren Arbeitsspeicher frei, Tabs mit Ton nie
+
 **Neu in 3.0 – Elektron Studio und neuer Name**
 
 - Der Browser heißt jetzt **Elektron** (Daten bleiben im bisherigen Ordner `%APPDATA%\Elektron GX`, Updates laufen nahtlos weiter)
-- **Elektron Studio** (Strg+Umschalt+E, `start/studio.html`): Node-Editor wie in Unreal Engine
+- **Volt Studio** (Strg+Umschalt+E, `start/studio.html`): Node-Editor wie in Unreal Engine
   - **Shader & Bilder**: Bild aus dem Internet oder vom PC, Verlauf, Rauschen, Muster, Plasma → Effekte (Helligkeit, Farbton, Unschärfe, Pixel, Glitch, Wellen, Neon-Kanten, Kaleidoskop …) → Mischen/Maske → eigener GLSL-Shader → Live-Vorschau (WebGL 2), als PNG speichern oder als Startseiten-Hintergrund setzen
   - **Abläufe** (wie Blueprints): Auslöser (Start, Seite geöffnet, Uhrzeit, Intervall, Strg+Alt+1–9, Gaming-Modus, Download) → Bedingungen → Aktionen (Tab öffnen, Gaming-Modus, Werbeblocker, Hinweis, Ton, Screenshot, Seitenleiste, Hintergrund, Stil, Warten …); läuft im Hauptprozess (`flows.js`), nur eingebaute, sichere Aktionen
 
@@ -88,7 +100,7 @@
 - **8 Hintergründe** für die Startseite (Neon, Schlicht, Nebel, Galaxie, Retro, Polarlicht, Wellen, eigenes Bild)
 - **Deine Steam-Spiele** auf der Startseite, Start mit einem Klick
 - **Grafikkarten-Anzeige** in GX Control (Auslastung, Temperatur, VRAM, Watt) über `nvidia-smi` bei NVIDIA-Karten
-- **Screenshots** (Strg+Umschalt+X, auch ganze Seite) – gespeichert unter Bilder\Elektron und in die Zwischenablage kopiert
+- **Screenshots** (Strg+Umschalt+X, auch ganze Seite) – gespeichert unter Bilder\Volt und in die Zwischenablage kopiert
 - **Lesemodus** (F9 oder Buch-Symbol): nur Text, ohne Werbung und Menüs
 - **KI per Rechtsklick**: Seite zusammenfassen, Markiertes erklären (Claude oder ChatGPT)
 - **Übersetzen** von Seiten und markiertem Text (Google Übersetzer)
@@ -153,15 +165,17 @@ Neue Chromium-Sicherheitsupdates kommen durch eine neuere Electron-Version: `npm
 - `store.js` – Lesezeichen, Verlauf, Downloads (JSON im Benutzerordner)
 - `extensions.js` – Chrome-Erweiterungen und Chrome Web Store
 - `installer.nsh` – Registrierung als Browser bei Windows
+- `hashscan.js` – zweiter Virenscanner (Malware Hash Registry, nur Fingerabdruck per DNS)
+- `hyper.js` – HyperSearch X: Rechner, Abkürzungen (!yt …), Wikipedia-Sprache
 - `preload-ui.js` – sichere Brücke zwischen Oberfläche und Hauptprozess
 - `preload-float.js`, `ui/float.*` – Leiste der schwebenden Fenster
 - `ui/` – Browser-Oberfläche (Tabs, Adressleiste, Seitenleiste, GX Control)
-- `start/` – Startseite und Fehlerseite (`elektron://start/`)
+- `start/` – Startseite, Fehlerseite, HyperSearch X (`search.html`) und Designs (`design.html`) unter `elektron://start/`
 - `assets/` – Logo und Icons
 
 ## Microsoft Store
 
-1. Kostenloses Entwicklerkonto unter https://storedeveloper.microsoft.com anlegen und den Namen „Elektron“ reservieren.
+1. Kostenloses Entwicklerkonto unter https://storedeveloper.microsoft.com anlegen und den Namen „Volt“ reservieren.
 2. Im Partner Center unter *Produktidentität* die Werte *Package/Identity/Name*, *Package/Identity/Publisher* und *PublisherDisplayName* in `package.json` → `build.appx` eintragen (`identityName`, `publisher`, `publisherDisplayName`).
 3. Auf GitHub unter *Actions → Microsoft Store → Run workflow* das Paket bauen und die `.appx` aus den Artefakten im Partner Center hochladen.
 4. Datenschutz-Adresse für den Store: https://obimokenobix.github.io/elektron-gx/datenschutz.html

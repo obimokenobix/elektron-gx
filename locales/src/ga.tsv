@@ -32,7 +32,7 @@
 31	Taispeáin gach ceann de {0}
 32	Roghnaigh gach rud
 33	Gach rud a scriosadh agus tosú as an nua?
-34	Gach rud is féidir leat a shocrú in Elektron.
+34	Gach rud is féidir leat a shocrú in Volt.
 35	Sábháil mar íomhá (PNG)
 36	Socraigh mar bhrabhsálaí réamhshocraithe …
 37	Socraigh mar chúlra an leathanaigh tosaigh
@@ -191,12 +191,12 @@
 190	Socruithe
 191	Níorbh fhéidir na socruithe a shábháil:
 192	Cuir míreanna leis an roghchlár deaschliceála
-193	Cosaint Elektron · Brath seoltaí bréige díreach ar do ríomhaire
-194	Cosaint Elektron · Liostaí ó Phishing.Database agus URLhaus (abuse.ch)
-195	Elektron Studio (scáthóirí agus sreafaí)
-196	Chuir Elektron stop leis an suíomh seo mar go bhfuil sé ar liosta de shuíomhanna calaoise aitheanta.
-197	Seiceálann Elektron go rialta le haghaidh leaganacha nua.
-198	Mol Elektron
+193	Cosaint Volt · Brath seoltaí bréige díreach ar do ríomhaire
+194	Cosaint Volt · Liostaí ó Phishing.Database agus URLhaus (abuse.ch)
+195	Volt Studio (scáthóirí agus sreafaí)
+196	Chuir Volt stop leis an suíomh seo mar go bhfuil sé ar liosta de shuíomhanna calaoise aitheanta.
+197	Seiceálann Volt go rialta le haghaidh leaganacha nua.
+198	Mol Volt
 199	Molta
 200	Bain
 201	Baineann sé paraiméadair rianaithe mar utm_, fbclid agus gclid, scipeálann sé rianaitheoirí atreoraithe Google agus Facebook agus osclaíonn sé leathanaigh AMP sa bhunleagan.
@@ -213,7 +213,7 @@
 212	Cruthaigh íomhá ar dtús – níl aon rud ag teacht chuig “Aschur” fós.
 213	Cuir eisínteacht leis
 214	Eisínteachtaí
-215	Tagann eisínteachtaí ó Chrome Web Store agus oibríonn siad in Elektron díreach mar a oibríonn siad in Chrome. Úsáideann roinnt eisínteachtaí an-mhóra gnéithe Chrome nach bhfuil anseo – ní oibríonn siad ach go páirteach ansin. Tá Claude agus ChatGPT ar fáil freisin sa bharra taoibh ar chlé.
+215	Tagann eisínteachtaí ó Chrome Web Store agus oibríonn siad in Volt díreach mar a oibríonn siad in Chrome. Úsáideann roinnt eisínteachtaí an-mhóra gnéithe Chrome nach bhfuil anseo – ní oibríonn siad ach go páirteach ansin. Tá Claude agus ChatGPT ar fáil freisin sa bharra taoibh ar chlé.
 216	Tá na heisínteachtaí cothrom le dáta
 217	Níl barra na n-eisínteachtaí ar fáil:
 218	Tá an nód “Aschur” ar iarraidh.
@@ -298,7 +298,7 @@
 297	Scríobh chuig an ngearrthaisce
 298	Oscail i gcluaisín nua
 299	Oscail i gcluaisín príobháideach
-300	Cén teanga ar chóir do Elektron labhairt leat? Taispeánann na bratacha na tíortha ina labhraítear an teanga.
+300	Cén teanga ar chóir do Volt labhairt leat? Taispeánann na bratacha na tíortha ina labhraítear an teanga.
 301	Bac ábhar ar shuíomhanna gréasáin
 302	Suiteáil agus tosaigh
 303	Suiteáilte
@@ -615,7 +615,7 @@
 614	Víreas aimsithe – bhain Windows Defender an comhad
 615	Lánscáileán
 616	Ó
-617	Scaipeadh víris nó bogearraí mailíseacha eile ón suíomh seo. Chuir Elektron stop leo sular shroich aon rud do ríomhaire.
+617	Scaipeadh víris nó bogearraí mailíseacha eile ón suíomh seo. Chuir Volt stop leo sular shroich aon rud do ríomhaire.
 618	Ar aghaidh
 619	Ar aghaidh (Alt+→)
 620	An mheaitseáil roimhe seo (Shift+F3)
@@ -657,7 +657,7 @@
 656	Athchóirigh …
 657	Athdhéan (tíleanna)
 658	Fáilte
-659	Fáilte go Elektron
+659	Fáilte go Volt
 660	Níor aimsíodh Windows Defender
 661	Uillinn
 662	Nuair a sháraítear an teorainn, téann na cluaisíní nár úsáideadh le fada a chodladh.
@@ -698,7 +698,7 @@
 697	níorbh fhéidir comhad na leabharmharcanna a léamh.
 698	an ghearrthaisce
 699	gan teorainn
-700	ní cúltaca Elektron é
+700	ní cúltaca Volt é
 701	léamh agus athrú
 702	ní cheadaítear
 703	sa leagan suiteáilte amháin
@@ -743,7 +743,7 @@
 742	“{0}” a bhaint?
 743	Lódáladh “{0}”.
 744	Cuireadh “{0}” leis
-745	“{0}” a chur le Elektron?
+745	“{0}” a chur le Volt?
 746	… múchta
 747	… curtha ar siúl
 748	← Bunleathanach
@@ -752,3 +752,77 @@
 751	🎮 Gaming
 752	reoite
 753	ina gcodladh
+754	Second virus scanner
+755	Also checks every download against the Malware Hash Registry – more than 30 antivirus databases. Only a fingerprint of the file is looked up, never the file itself.
+756	Put tabs to sleep automatically
+757	Tabs you haven't used for a while free up their memory. Tabs playing sound never sleep.
+758	Designs & customisation
+759	Designs & customisation …
+760	Your own look for every website and for Volt itself – with templates like dark mode or your own CSS.
+761	Open …
+762	HyperSearch X, DuckDuckGo, Brave Search and Startpage don't build a profile of you. HyperSearch X calculates instantly, shows knowledge from Wikipedia and understands shortcuts like
+763	after {0} min
+764	after {0} h
+765	{0} is done – 2 virus scanners: no virus found
+766	Malware detected in {0} – Volt moved the file to quarantine
+767	Malware detected in {0} – do not open it, please delete it
+768	Design for this site …
+769	Malware detected (Malware Hash Registry) – moved to quarantine
+770	Malware detected (Malware Hash Registry) – do not open!
+771	· ✓ no virus (2 virus scanners)
+772	· ✓ no virus (Malware Hash Registry)
+773	Search, calculate or !yt for YouTube …
+774	Search
+775	● No tracking
+776	Ctrl + Enter: search the whole web
+777	Search the whole web:
+778	Knowledge
+779	Source: Wikipedia
+780	Knowledge · {0} results
+781	What can HyperSearch X do?
+782	Calculate
+783	– e.g.
+784	or
+785	Shortcuts
+786	Wikipedia,
+787	– answers from Wikipedia right on the page
+788	Web search without tracking
+789	– with DuckDuckGo, Brave or Startpage
+790	Searching …
+791	Read the full article
+792	See the result above.
+793	No knowledge results – try the web search above.
+794	Knowledge currently unavailable
+795	Wikipedia is currently unavailable – use the web search above.
+796	Right-click: set as default for web search
+797	Map
+798	Websites
+799	Browser interface
+800	Add a site, e.g. youtube.com
+801	Save (Ctrl+S)
+802	Remove design
+803	No site yet
+804	custom design active
+805	no design yet
+806	Change the colours and font of Volt itself. Please don't change the heights and spacing of the bars. If something goes wrong: remove the design – or start Volt with “--ohne-design”.
+807	Takes effect right after saving.
+808	Give every website your own look – with templates or your own CSS. A design for youtube.com also applies to m.youtube.com. Everything stays on your PC.
+809	Pick a site on the left or add one
+810	Open tabs of this site change immediately.
+811	not saved
+812	Please save or remove first
+813	Saved – active immediately
+814	Design removed
+815	Please enter an address like youtube.com
+816	+ Force dark mode
+817	+ Larger text
+818	+ Reading width
+819	+ No animations
+820	+ Hide images
+821	+ Custom font
+822	+ Accent-coloured links
+823	+ Midnight
+824	+ OLED black
+825	+ Volt yellow
+826	+ Bahnschrift font
+827	+ No glow
