@@ -1,7 +1,7 @@
 'use strict';
 /*
  * Wird von electron-builder nach dem Packen aufgerufen.
- * Schreibt Firma, Beschreibung, Version und das Elektron-Icon in die Windows-.exe
+ * Schreibt Firma, Beschreibung, Version und das Volt-Icon in die Windows-.exe
  * (ohne Wine – reines JavaScript über "resedit").
  */
 const path = require('path');
@@ -9,8 +9,8 @@ const fs = require('fs');
 
 const INFO = {
   CompanyName: 'Elektron',
-  FileDescription: 'Elektron',
-  ProductName: 'Elektron',
+  FileDescription: 'Volt',
+  ProductName: 'Volt',
   InternalName: 'Elektron',
   OriginalFilename: 'Elektron.exe',
   LegalCopyright: '© 2026 Elektron'
@@ -51,10 +51,12 @@ async function setExeInfo(exePath, version, iconPath) {
 
 module.exports = async function afterPack(context) {
   if (context.electronPlatformName !== 'win32') return;
-  const exe = path.join(context.appOutDir, `${context.packager.appInfo.productFilename}.exe`);
+  // Die .exe heißt weiterhin Elektron.exe (build.executableName) – so bleiben Standardbrowser-Einträge und Updates gültig
+  const name = (context.packager.config && context.packager.config.executableName) || context.packager.appInfo.productFilename;
+  const exe = path.join(context.appOutDir, `${name}.exe`);
   const icon = path.join(context.packager.projectDir, 'assets', 'icon.ico');
   await setExeInfo(exe, context.packager.appInfo.version, icon);
-  console.log(`  • Elektron: Firma "${INFO.CompanyName}" und Icon in ${path.basename(exe)} eingetragen`);
+  console.log(`  • Volt: Firma "${INFO.CompanyName}" und Icon in ${path.basename(exe)} eingetragen`);
 };
 
 module.exports.setExeInfo = setExeInfo;

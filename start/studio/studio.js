@@ -190,7 +190,7 @@ function renderFull() {
 }
 $('sh-png').addEventListener('click', () => {
   if (!renderFull()) { showError('Erst ein Bild bauen – es kommt noch nichts bei „Ausgabe“ an.'); return; }
-  canvas.toBlob((blob) => { download(blob, `Elektron-Studio ${stamp()}.png`); schedule(); }, 'image/png');
+  canvas.toBlob((blob) => { download(blob, `Volt-Studio ${stamp()}.png`); schedule(); }, 'image/png');
 });
 $('sh-bg').addEventListener('click', async () => {
   if (!renderFull()) { showError('Erst ein Bild bauen – es kommt noch nichts bei „Ausgabe“ an.'); return; }

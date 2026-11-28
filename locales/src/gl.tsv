@@ -32,7 +32,7 @@
 31	Amosar os {0}
 32	Seleccionar todo
 33	Borrar todo e comezar de novo?
-34	Todo o que podes axustar en Elektron.
+34	Todo o que podes axustar en Volt.
 35	Gardar como imaxe (PNG)
 36	Definir como navegador predeterminado …
 37	Definir como fondo da páxina de inicio
@@ -191,12 +191,12 @@
 190	Configuración
 191	Non se puido gardar a configuración:
 192	Engadir elementos ao menú do clic dereito
-193	Protección Elektron · Detección de dobres directamente no teu ordenador
-194	Protección Elektron · Listas de Phishing.Database e URLhaus (abuse.ch)
-195	Elektron Studio (sombreadores e fluxos)
-196	Elektron detivo este sitio porque está nunha lista de sitios fraudulentos coñecidos.
-197	Elektron busca versións novas regularmente.
-198	Recomendar Elektron
+193	Protección Volt · Detección de dobres directamente no teu ordenador
+194	Protección Volt · Listas de Phishing.Database e URLhaus (abuse.ch)
+195	Volt Studio (sombreadores e fluxos)
+196	Volt detivo este sitio porque está nunha lista de sitios fraudulentos coñecidos.
+197	Volt busca versións novas regularmente.
+198	Recomendar Volt
 199	Recomendado
 200	Quitar
 201	Elimina engadidos de rastrexo como utm_, fbclid e gclid, salta os redireccionadores de rastrexo de Google e Facebook e abre as páxinas AMP no orixinal.
@@ -213,7 +213,7 @@
 212	Primeiro crea unha imaxe – aínda non chega nada a «Saída».
 213	Engadir extensión
 214	Extensións
-215	As extensións veñen de Chrome Web Store e funcionan en Elektron coma en Chrome. Algunhas extensións moi grandes usan funcións de Chrome que aquí non existen – entón só funcionan en parte. Claude e ChatGPT tamén os atopas directamente na barra lateral esquerda.
+215	As extensións veñen de Chrome Web Store e funcionan en Volt coma en Chrome. Algunhas extensións moi grandes usan funcións de Chrome que aquí non existen – entón só funcionan en parte. Claude e ChatGPT tamén os atopas directamente na barra lateral esquerda.
 216	As extensións están actualizadas
 217	A barra de extensións non está dispoñible:
 218	Falta o nodo «Saída».
@@ -298,7 +298,7 @@
 297	Escribir no portapapeis
 298	Abrir nunha lapela nova
 299	Abrir nunha lapela privada
-300	En que lingua queres que Elektron fale contigo? As bandeiras amosan os países onde se fala.
+300	En que lingua queres que Volt fale contigo? As bandeiras amosan os países onde se fala.
 301	Bloquear contido en sitios web
 302	Instalar e comezar
 303	Instalado
@@ -615,7 +615,7 @@
 614	Atopouse un virus – Windows Defender eliminou o ficheiro
 615	Pantalla completa
 616	Desde
-617	Desde este sitio espalláronse virus ou outros programas maliciosos. Elektron detívoos antes de que chegase nada ao teu ordenador.
+617	Desde este sitio espalláronse virus ou outros programas maliciosos. Volt detívoos antes de que chegase nada ao teu ordenador.
 618	Adiante
 619	Adiante (Alt+→)
 620	Coincidencia anterior (Shift+F3)
@@ -657,7 +657,7 @@
 656	Restaurar …
 657	Repetir (mosaico)
 658	Benvido
-659	Benvido a Elektron
+659	Benvido a Volt
 660	Non se atopou Windows Defender
 661	Ángulo
 662	Se se supera o límite, as lapelas que máis tempo levan sen usarse quedan durmindo.
@@ -698,7 +698,7 @@
 697	non se puido ler o ficheiro de marcadores.
 698	ao portapapeis
 699	sen límite
-700	non é unha copia de seguranza de Elektron
+700	non é unha copia de seguranza de Volt
 701	ler e cambiar
 702	non permitido
 703	só na versión instalada
@@ -743,7 +743,7 @@
 742	Quitar «{0}»?
 743	Cargouse «{0}».
 744	Engadiuse «{0}»
-745	Engadir «{0}» a Elektron?
+745	Engadir «{0}» a Volt?
 746	… se desactiva
 747	… se activa
 748	← Páxina orixinal
@@ -752,3 +752,77 @@
 751	🎮 Gaming
 752	conxeladas
 753	durmindo
+754	Second virus scanner
+755	Also checks every download against the Malware Hash Registry – more than 30 antivirus databases. Only a fingerprint of the file is looked up, never the file itself.
+756	Put tabs to sleep automatically
+757	Tabs you haven't used for a while free up their memory. Tabs playing sound never sleep.
+758	Designs & customisation
+759	Designs & customisation …
+760	Your own look for every website and for Volt itself – with templates like dark mode or your own CSS.
+761	Open …
+762	HyperSearch X, DuckDuckGo, Brave Search and Startpage don't build a profile of you. HyperSearch X calculates instantly, shows knowledge from Wikipedia and understands shortcuts like
+763	after {0} min
+764	after {0} h
+765	{0} is done – 2 virus scanners: no virus found
+766	Malware detected in {0} – Volt moved the file to quarantine
+767	Malware detected in {0} – do not open it, please delete it
+768	Design for this site …
+769	Malware detected (Malware Hash Registry) – moved to quarantine
+770	Malware detected (Malware Hash Registry) – do not open!
+771	· ✓ no virus (2 virus scanners)
+772	· ✓ no virus (Malware Hash Registry)
+773	Search, calculate or !yt for YouTube …
+774	Search
+775	● No tracking
+776	Ctrl + Enter: search the whole web
+777	Search the whole web:
+778	Knowledge
+779	Source: Wikipedia
+780	Knowledge · {0} results
+781	What can HyperSearch X do?
+782	Calculate
+783	– e.g.
+784	or
+785	Shortcuts
+786	Wikipedia,
+787	– answers from Wikipedia right on the page
+788	Web search without tracking
+789	– with DuckDuckGo, Brave or Startpage
+790	Searching …
+791	Read the full article
+792	See the result above.
+793	No knowledge results – try the web search above.
+794	Knowledge currently unavailable
+795	Wikipedia is currently unavailable – use the web search above.
+796	Right-click: set as default for web search
+797	Map
+798	Websites
+799	Browser interface
+800	Add a site, e.g. youtube.com
+801	Save (Ctrl+S)
+802	Remove design
+803	No site yet
+804	custom design active
+805	no design yet
+806	Change the colours and font of Volt itself. Please don't change the heights and spacing of the bars. If something goes wrong: remove the design – or start Volt with “--ohne-design”.
+807	Takes effect right after saving.
+808	Give every website your own look – with templates or your own CSS. A design for youtube.com also applies to m.youtube.com. Everything stays on your PC.
+809	Pick a site on the left or add one
+810	Open tabs of this site change immediately.
+811	not saved
+812	Please save or remove first
+813	Saved – active immediately
+814	Design removed
+815	Please enter an address like youtube.com
+816	+ Force dark mode
+817	+ Larger text
+818	+ Reading width
+819	+ No animations
+820	+ Hide images
+821	+ Custom font
+822	+ Accent-coloured links
+823	+ Midnight
+824	+ OLED black
+825	+ Volt yellow
+826	+ Bahnschrift font
+827	+ No glow

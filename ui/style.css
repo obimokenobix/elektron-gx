@@ -438,3 +438,7 @@ body.style-normal .pill-btn.on, body.style-normal #omnibox:focus-within { box-sh
 [dir=rtl] body, body[dir=rtl] { direction: rtl; }
 /* Zahlen mit Einheit (1,1 GB, 12 %) auch bei Rechts-nach-links-Sprachen in der gewohnten Reihenfolge */
 [dir=rtl] :is(#hud-cpu, #hud-ram, #m-ram, #m-cpu, #pc-cpu, #gpu-util, #o-ram, #o-cpu, #o-net, #sec-score, #zoom) { direction: ltr; unicode-bidi: isolate; }
+
+/* HyperSearch X als eigene Zeile über den anderen Suchmaschinen */
+.seg.seg5 { flex-wrap: wrap; gap: 3px; }
+.seg.seg5 button[data-v=hyper] { flex-basis: 100%; }

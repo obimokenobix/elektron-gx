@@ -1,7 +1,7 @@
 'use strict';
 // Dezimalzeichen passend zur Sprache (Komma oder Punkt)
 const DEC = () => ((1.5).toLocaleString(document.documentElement.lang || 'de-AT').includes(',') ? ',' : '.');
-/* Elektron – Browser-Oberfläche */
+/* Volt – Browser-Oberfläche */
 const $ = (s) => document.querySelector(s);
 /* global gx – kommt aus preload-ui.js */
 
@@ -472,7 +472,8 @@ function renderRail() {
 }
 
 // ---------------------------------------------------------------- GX Control
-const rRam = $('#r-ram'), rCpu = $('#r-cpu'), rNet = $('#r-net');
+const rRam = $('#r-ram'), rCpu = $('#r-cpu'), rNet = $('#r-net'), rSleep = $('#r-sleep');
+const SLEEP_STEPS = [5, 10, 15, 30, 60, 120, 240];
 
 document.querySelectorAll('input[data-setting]').forEach(inp => {
   inp.addEventListener('change', () => gx.cmd('setSetting', inp.dataset.setting, inp.checked));
@@ -492,11 +493,14 @@ function commitRange(range, key, mapFn) {
 commitRange(rRam, 'ramLimit.mb', i => RAM_STEPS[i]);
 commitRange(rCpu, 'cpuLimit.percent', v => v);
 commitRange(rNet, 'netLimit.kbs', i => NET_STEPS[i]);
+commitRange(rSleep, 'autoSleep.minutes', i => SLEEP_STEPS[i]);
 
 function updateRangeLabels() {
   $('#o-ram').textContent = fmtMB(RAM_STEPS[rRam.value]);
   $('#o-cpu').textContent = rCpu.value + ' %';
   $('#o-net').textContent = fmtKBs(NET_STEPS[rNet.value]);
+  const m = SLEEP_STEPS[rSleep.value];
+  $('#o-sleep').textContent = m >= 60 ? `nach ${m / 60} Std.` : `nach ${m} Min.`;
 }
 
 $('#clear-now').addEventListener('click', () => gx.cmd('clearData'));
@@ -516,12 +520,13 @@ function renderLanguage() {
   $('#lang-name').textContent = li.name + (state.settings.language === 'auto' ? ' · Auto' : '');
 }
 $('#lang-btn').addEventListener('click', () => gx.cmd('openLanguages'));
+$('#design-btn').addEventListener('click', () => gx.cmd('openInternal', 'design'));
 
 function renderStyle() {
   const normal = state.settings.style === 'normal';
   document.body.classList.toggle('style-normal', normal);
   $('.panel-head h1').textContent = normal ? 'Einstellungen' : 'GX Control';
-  $('.panel-head p').textContent = normal ? 'Alles, was du an Elektron einstellen kannst.' : 'Halte den Browser klein, damit dein Spiel die Leistung bekommt.';
+  $('.panel-head p').textContent = normal ? 'Alles, was du an Volt einstellen kannst.' : 'Halte den Browser klein, damit dein Spiel die Leistung bekommt.';
   const gxBtn = document.querySelector('.rail-btn[data-panel="gx"]');
   if (gxBtn) gxBtn.title = normal ? 'Einstellungen' : 'GX Control';
   document.querySelectorAll('.bgt').forEach(b => b.classList.toggle('active', b.dataset.bg === state.settings.background));
@@ -551,6 +556,7 @@ function renderProtect() {
     ['Warnung vor gefälschten Adressen', !!st.phishingProtect],
     ['Private Suchmaschine', st.searchEngine && st.searchEngine !== 'google', st.searchEngine === 'google' ? 'Google erstellt Profile – DuckDuckGo, Brave oder Startpage nicht' : ''],
     ['Downloads werden geprüft', !!st.scanDownloads && !!p.defender, p.defender ? '' : 'Windows Defender nicht gefunden'],
+    ['Zweiter Virenscanner', !!st.cloudScan, 'Malware Hash Registry'],
     ['Programm gehärtet', !!p.hardened, p.hardened ? '' : 'nur in der installierten Version']
   ];
   const ok = checks.filter(c => c[1]).length;
@@ -624,7 +630,8 @@ function renderPanel() {
   if (document.activeElement !== rRam) rRam.value = nearestIdx(RAM_STEPS, s.ramLimit.mb);
   if (document.activeElement !== rCpu) rCpu.value = s.cpuLimit.percent;
   if (document.activeElement !== rNet) rNet.value = nearestIdx(NET_STEPS, s.netLimit.kbs);
-  [rRam, rCpu, rNet].forEach(setFill);
+  if (document.activeElement !== rSleep && s.autoSleep) rSleep.value = nearestIdx(SLEEP_STEPS, s.autoSleep.minutes);
+  [rRam, rCpu, rNet, rSleep].forEach(setFill);
   updateRangeLabels();
   const ramL = $('#m-ram-limit'), cpuL = $('#m-cpu-limit');
   ramL.textContent = s.ramLimit.enabled ? 'Limit ' + fmtMB(s.ramLimit.mb) : 'kein Limit';
@@ -634,7 +641,7 @@ function renderPanel() {
   $('#restart').hidden = !state.needsRestart;
   sw.querySelectorAll('.swatch').forEach(b => b.classList.toggle('active', b.dataset.color.toLowerCase() === s.accent.toLowerCase()));
   const v = state.versions;
-  $('#about').textContent = `Elektron ${v.app} · Chromium ${v.chrome}`;
+  $('#about').textContent = `Volt ${v.app} · Chromium ${v.chrome}`;
 }
 
 // ---------------------------------------------------------------- Statistik & Diagramme

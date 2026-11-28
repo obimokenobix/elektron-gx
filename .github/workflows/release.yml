@@ -1,4 +1,4 @@
-# Baut Elektron auf einem echten Windows-Rechner von GitHub und veröffentlicht
+# Baut Volt (Elektron.exe) auf einem echten Windows-Rechner von GitHub und veröffentlicht
 # Installer + Update-Dateien als Release – automatisch, sobald in package.json
 # eine neue Versionsnummer steht (oder per Hand über "Run workflow").
 name: Release
@@ -106,7 +106,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unsigniert-installer
-          path: dist/Elektron-Setup-${{ steps.ver.outputs.version }}.exe
+          path: dist/Volt-Setup-${{ steps.ver.outputs.version }}.exe
 
       - name: Installer signieren (SignPath – Freigabe nötig)
         if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
@@ -126,9 +126,9 @@ jobs:
         if: steps.ver.outputs.exists == 'false' && env.SIGN == 'true'
         shell: pwsh
         run: |
-          Copy-Item "dist/signiert/Elektron-Setup-${{ steps.ver.outputs.version }}.exe" "dist/" -Force
+          Copy-Item "dist/signiert/Volt-Setup-${{ steps.ver.outputs.version }}.exe" "dist/" -Force
           node scripts/update-latest-yml.js dist
-          $sig = Get-AuthenticodeSignature "dist/Elektron-Setup-${{ steps.ver.outputs.version }}.exe"
+          $sig = Get-AuthenticodeSignature "dist/Volt-Setup-${{ steps.ver.outputs.version }}.exe"
           Write-Host "Signatur: $($sig.Status) – $($sig.SignerCertificate.Subject)"
           if ($sig.Status -ne 'Valid') { throw "Installer ist nicht gültig signiert" }
 
@@ -138,14 +138,14 @@ jobs:
         with:
           tag_name: v${{ steps.ver.outputs.version }}
           target_commitish: ${{ github.sha }}
-          name: Elektron ${{ steps.ver.outputs.version }}
+          name: Volt ${{ steps.ver.outputs.version }}
           make_latest: true
           body: |
-            **Installieren:** `Elektron-Setup-${{ steps.ver.outputs.version }}.exe` herunterladen und starten.
+            **Installieren:** `Volt-Setup-${{ steps.ver.outputs.version }}.exe` herunterladen und starten.
             ${{ env.SIGN == 'true' && 'Der Installer ist digital signiert (SignPath Foundation).' || 'Windows SmartScreen fragt evtl. nach → „Weitere Informationen“ → „Trotzdem ausführen“.' }}
 
             Bereits installierte Browser aktualisieren sich automatisch.
           files: |
-            dist/Elektron-Setup-*.exe
+            dist/Volt-Setup-*.exe
             dist/*.blockmap
             dist/latest.yml

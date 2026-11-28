@@ -1,0 +1,27 @@
+/* Volt – Designs & Anpassungen */
+.dsg { width: min(1100px, 100% - 32px); }
+.dsg-tabs { display: flex; gap: 6px; }
+.dsg-tabs .btn.on { border-color: var(--accent); color: var(--text); }
+.dsg-intro { color: var(--text-2); margin: -8px 2px 18px; max-width: 760px; }
+.dsg-grid { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 20px; align-items: start; }
+.dsg.ui-mode .dsg-grid { grid-template-columns: minmax(0, 1fr); }
+.dsg.ui-mode .dsg-side { display: none; }
+@media (max-width: 760px) { .dsg-grid { grid-template-columns: 1fr; } }
+.dsg-side .search { min-width: 0; margin-bottom: 10px; }
+.dsg-side .row { cursor: pointer; }
+.dsg-side .row.sel { background: var(--card-2); box-shadow: inset 3px 0 0 var(--accent); }
+.dsg-edit { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.dsg-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.dsg-head h2 { margin: 0; font-size: 18px; overflow-wrap: anywhere; }
+.dsg-status { color: #4ade80; font-size: 12px; }
+.dsg-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.dsg-presets .btn { height: 30px; font-size: 12px; }
+#css {
+  width: 100%; min-height: 360px; resize: vertical; padding: 12px 14px; border-radius: 10px;
+  background: #0d0d12; color: #e6e6f0; border: 1px solid var(--line); outline: 0;
+  font: 13px/1.55 "Cascadia Code", Consolas, monospace; tab-size: 2;
+}
+#css:focus { border-color: var(--accent); }
+#css:disabled { opacity: .5; }
+.dsg-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.dsg-hint { color: var(--text-3); font-size: 12px; }

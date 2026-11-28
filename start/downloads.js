@@ -9,9 +9,14 @@ function stateText(d) {
     const pct = d.total ? Math.floor(d.received / d.total * 100) + ' % · ' : '';
     return { text: `${pct}${bytes(d.received)}${d.total ? ' von ' + bytes(d.total) : ''}${d.speed ? ' · ' + bytes(d.speed) + '/s' : ''}`, cls: '' };
   }
-  if (d.state === 'virus') return { text: 'Virus gefunden – Windows Defender hat die Datei entfernt', cls: 'err' };
+  if (d.state === 'virus') {
+    if (d.virusBy === 'hash') return { text: d.quarantine ? 'Schadsoftware erkannt (Malware Hash Registry) – in Quarantäne verschoben' : 'Schadsoftware erkannt (Malware Hash Registry) – nicht öffnen!', cls: 'err' };
+    return { text: 'Virus gefunden – Windows Defender hat die Datei entfernt', cls: 'err' };
+  }
   if (d.state === 'completed') {
-    const scan = d.scan === 'scanning' ? ' · wird auf Viren geprüft …' : d.scan === 'clean' ? ' · ✓ kein Virus (Windows Defender)' : '';
+    const sc = d.scanners || ['defender'];
+    const by = sc.length === 2 ? '2 Virenscanner' : sc[0] === 'hash' ? 'Malware Hash Registry' : 'Windows Defender';
+    const scan = d.scan === 'scanning' ? ' · wird auf Viren geprüft …' : d.scan === 'clean' ? ` · ✓ kein Virus (${by})` : '';
     return { text: `${bytes(d.total || d.received)} · ${dayLabel(d.started)}, ${time(d.started)}${scan}`, cls: 'ok' };
   }
   if (d.state === 'cancelled') return { text: 'Abgebrochen', cls: 'err' };

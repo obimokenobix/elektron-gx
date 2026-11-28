@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: blob: crx:; style-src 'self' 'unsafe-inline'; script-src 'self'">
-  <title>Elektron</title>
+  <title>Volt</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Tab-Leiste -->
   <header id="tabstrip">
-    <div id="brand" title="Elektron"><img src="../assets/icon.png" alt=""></div>
+    <div id="brand" title="Volt"><img src="../assets/icon.png" alt=""></div>
     <div id="tabs" role="tablist"></div>
     <button id="newtab" class="icon-btn" title="Neuer Tab (Strg+T)"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
     <div class="drag-fill"></div>
@@ -183,6 +183,13 @@
       </div>
       <div class="card">
         <div class="row">
+          <div><h2>Tabs automatisch schlafen legen</h2><p>Tabs, die du länger nicht benutzt hast, geben ihren Arbeitsspeicher frei. Tabs mit Ton schlafen nie.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="autoSleep.enabled"><i></i></label>
+        </div>
+        <div class="slider"><input type="range" id="r-sleep" min="0" max="6" step="1"><output id="o-sleep"></output></div>
+      </div>
+      <div class="card">
+        <div class="row">
           <div><h2>CPU-Limiter</h2><p>Liegt der Browser über dem Limit, wird der hungrigste Hintergrund-Tab eingefroren.</p></div>
           <label class="switch"><input type="checkbox" data-setting="cpuLimit.enabled"><i></i></label>
         </div>
@@ -244,6 +251,12 @@
         <div class="row">
           <div><h2>Downloads auf Viren prüfen</h2><p id="scan-info">Jede heruntergeladene Datei wird mit dem Windows Defender geprüft.</p></div>
           <label class="switch"><input type="checkbox" data-setting="scanDownloads"><i></i></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><h2>Zweiter Virenscanner</h2><p>Gleicht jeden Download zusätzlich mit der Malware Hash Registry ab – über 30 Antivirus-Datenbanken. Es wird nur ein Fingerabdruck der Datei abgefragt, nie die Datei selbst.</p></div>
+          <label class="switch"><input type="checkbox" data-setting="cloudScan"><i></i></label>
         </div>
       </div>
       <div class="card">
@@ -363,7 +376,7 @@
       <h3 id="updates-anchor">Updates</h3>
       <div class="card">
         <div class="row">
-          <div><h2>Automatisch aktualisieren</h2><p id="update-status">Elektron sucht regelmäßig nach neuen Versionen.</p></div>
+          <div><h2>Automatisch aktualisieren</h2><p id="update-status">Volt sucht regelmäßig nach neuen Versionen.</p></div>
           <label class="switch"><input type="checkbox" data-setting="autoUpdate"><i></i></label>
         </div>
         <div class="update-bar" id="update-bar" hidden><i></i></div>
@@ -409,10 +422,16 @@
         <div id="swatches"></div>
       </div>
       <div class="card">
+        <div class="row">
+          <div><h2>Designs &amp; Anpassungen</h2><p>Eigenes Aussehen für jede Webseite und für Volt selbst – mit Vorlagen wie Dunkelmodus oder eigenem CSS.</p></div>
+          <button class="btn-small" id="design-btn" type="button">Öffnen …</button>
+        </div>
+      </div>
+      <div class="card">
         <h2>Suchmaschine</h2>
-        <p>DuckDuckGo, Brave Search und Startpage speichern keine Profile von dir. Startpage zeigt Google-Ergebnisse ohne Tracking.</p>
-        <div class="seg seg4" data-setting="searchEngine">
-          <button data-v="google">Google</button><button data-v="duckduckgo">DuckDuckGo</button><button data-v="brave">Brave</button><button data-v="startpage">Startpage</button>
+        <p>HyperSearch X, DuckDuckGo, Brave Search und Startpage speichern keine Profile von dir. HyperSearch X rechnet sofort, zeigt Wissen aus Wikipedia und versteht Abkürzungen wie <b>!yt</b>.</p>
+        <div class="seg seg4 seg5" data-setting="searchEngine">
+          <button data-v="hyper">⚡ HyperSearch X</button><button data-v="google">Google</button><button data-v="duckduckgo">DuckDuckGo</button><button data-v="brave">Brave</button><button data-v="startpage">Startpage</button>
         </div>
         <div class="row" style="margin-top:12px">
           <div><p>Suchvorschläge beim Tippen in die Adressleiste (werden an die Suchmaschine geschickt)</p></div>

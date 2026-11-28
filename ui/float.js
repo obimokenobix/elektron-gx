@@ -4,7 +4,7 @@ const $ = (s) => document.getElementById(s);
 
 floatApi.onInfo((info) => {
   document.documentElement.style.setProperty('--accent', info.accent);
-  $('title').textContent = info.title || 'Elektron';
+  $('title').textContent = info.title || 'Volt';
   $('fav').src = info.favicon || '../assets/icon.png';
   if (document.activeElement !== $('op')) $('op').value = info.opacity;
   $('pin').classList.toggle('on', info.pinned);
